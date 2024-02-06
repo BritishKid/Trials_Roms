@@ -1,0 +1,14 @@
+mapscripts GranitePeak_House3_MapScripts {}
+
+
+script GranitePeak_House3_Script_Little_Girl {
+    lock
+    msgbox(format("I'm so fast I'm like a Pikachu!"))
+    release
+}
+
+script GranitePeak_House3_Script_Mother {
+    lock
+    msgbox(format("My little girl always has so much energy to burn"))
+    release
+}

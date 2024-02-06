@@ -1,9 +1,9 @@
 {
-  "id": "MAP_FORTREE_CITY_HOUSE4",
+  "id": "MAP_CORAL_PORT_HOUSE4",
   "name": "FortreeCity_House4",
-  "layout": "LAYOUT_FORTREE_CITY_HOUSE2",
+  "layout": "LAYOUT_CORAL_PORT_HOUSE2",
   "music": "MUS_FORTREE",
-  "region_map_section": "MAPSEC_FORTREE_CITY",
+  "region_map_section": "MAPSEC_CORAL_PORT",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_INDOOR",
@@ -51,7 +51,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "FortreeCity_House4_EventScript_Wingull",
-      "flag": "FLAG_HIDE_FORTREE_CITY_HOUSE_4_WINGULL"
+      "flag": "FLAG_HIDE_CORAL_PORT_HOUSE_4_WINGULL"
     }
   ],
   "warp_events": [
@@ -59,14 +59,14 @@
       "x": 3,
       "y": 5,
       "elevation": 0,
-      "dest_map": "MAP_FORTREE_CITY",
+      "dest_map": "MAP_CORAL_PORT",
       "dest_warp_id": "6"
     },
     {
       "x": 4,
       "y": 5,
       "elevation": 0,
-      "dest_map": "MAP_FORTREE_CITY",
+      "dest_map": "MAP_CORAL_PORT",
       "dest_warp_id": "6"
     }
   ],

@@ -1,0 +1,23 @@
+mapscripts GranitePeak_POH_MapScripts {}
+
+script GranitePeak_HouseSeller {
+    lockall
+    msgbox(format("Hi.\nAre you interested in buying this house?"))
+    setvar(VAR_0x8005, 50000)
+    msgbox(format("You can buy it for 50,000"), MSGBOX_YESNO)
+    if(var(VAR_RESULT) == NO) {
+        msgbox(format("Maybe some other time"))
+    }
+    if (var(VAR_RESULT) == YES) {
+        specialvar(VAR_RESULT, IsEnoughForCostInVar0x8005)
+        if (var(VAR_RESULT)) {
+            special(SubtractMoneyFromVar0x8005)
+            msgbox(format("Congratulations you are now a home owner! Come visit me anytime in the estate agents to buy upgrades or furniture!"), MSGBOX_AUTOCLOSE)
+            setflag(FLAG_HOUSE_OWNED)
+        }
+        else {
+            msgbox(format("You cannot afford to buy the house currently."), MSGBOX_AUTOCLOSE)
+        }
+    }
+    releaseall
+}

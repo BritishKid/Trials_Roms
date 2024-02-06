@@ -1042,18 +1042,17 @@ static u8 Debug_CheckToggleFlags(u8 id)
             result = FlagGet(FLAG_SYS_B_DASH);
             break;
         case DEBUG_FLAGVAR_MENU_ITEM_TOGGLE_LOCATIONS:
-            result = FlagGet(FLAG_VISITED_LITTLEROOT_TOWN) &&
-                FlagGet(FLAG_VISITED_OLDALE_TOWN) &&
+            result = FlagGet(FLAG_VISITED_OLDALE_TOWN) &&
                 FlagGet(FLAG_VISITED_DEWFORD_TOWN) &&
                 FlagGet(FLAG_VISITED_LAVARIDGE_TOWN) &&
                 FlagGet(FLAG_VISITED_FALLARBOR_TOWN) &&
                 FlagGet(FLAG_VISITED_VERDANTURF_TOWN) &&
                 FlagGet(FLAG_VISITED_PACIFIDLOG_TOWN) &&
-                FlagGet(FLAG_VISITED_PETALBURG_CITY) &&
+                FlagGet(FLAG_VISITED_GRANITE_PEAK) &&
                 FlagGet(FLAG_VISITED_SLATEPORT_CITY) &&
                 FlagGet(FLAG_VISITED_MAUVILLE_CITY) &&
                 FlagGet(FLAG_VISITED_RUSTBORO_CITY) &&
-                FlagGet(FLAG_VISITED_FORTREE_CITY) &&
+                FlagGet(FLAG_VISITED_CORAL_PORT) &&
                 FlagGet(FLAG_VISITED_LILYCOVE_CITY) &&
                 FlagGet(FLAG_VISITED_MOSSDEEP_CITY) &&
                 FlagGet(FLAG_VISITED_SOOTOPOLIS_CITY) &&
@@ -1584,18 +1583,18 @@ static void DebugAction_Util_HealParty(u8 taskId)
 }
 static void DebugAction_Util_Fly(u8 taskId)
 {
-    FlagSet(FLAG_VISITED_LITTLEROOT_TOWN);
+    FlagSet(FLAG_VISITED_BEDROCK_TOWN);
     FlagSet(FLAG_VISITED_OLDALE_TOWN);
     FlagSet(FLAG_VISITED_DEWFORD_TOWN);
     FlagSet(FLAG_VISITED_LAVARIDGE_TOWN);
     FlagSet(FLAG_VISITED_FALLARBOR_TOWN);
     FlagSet(FLAG_VISITED_VERDANTURF_TOWN);
     FlagSet(FLAG_VISITED_PACIFIDLOG_TOWN);
-    FlagSet(FLAG_VISITED_PETALBURG_CITY);
+    FlagSet(FLAG_VISITED_GRANITE_PEAK);
     FlagSet(FLAG_VISITED_SLATEPORT_CITY);
     FlagSet(FLAG_VISITED_MAUVILLE_CITY);
     FlagSet(FLAG_VISITED_RUSTBORO_CITY);
-    FlagSet(FLAG_VISITED_FORTREE_CITY);
+    FlagSet(FLAG_VISITED_CORAL_PORT);
     FlagSet(FLAG_VISITED_LILYCOVE_CITY);
     FlagSet(FLAG_VISITED_MOSSDEEP_CITY);
     FlagSet(FLAG_VISITED_SOOTOPOLIS_CITY);
@@ -2380,18 +2379,18 @@ static void DebugAction_FlagsVars_ToggleFlyFlags(u8 taskId)
     {
         PlaySE(SE_PC_OFF);
 
-        FlagClear(FLAG_VISITED_LITTLEROOT_TOWN);
+        FlagClear(FLAG_VISITED_BEDROCK_TOWN);
         FlagClear(FLAG_VISITED_OLDALE_TOWN);
         FlagClear(FLAG_VISITED_DEWFORD_TOWN);
         FlagClear(FLAG_VISITED_LAVARIDGE_TOWN);
         FlagClear(FLAG_VISITED_FALLARBOR_TOWN);
         FlagClear(FLAG_VISITED_VERDANTURF_TOWN);
         FlagClear(FLAG_VISITED_PACIFIDLOG_TOWN);
-        FlagClear(FLAG_VISITED_PETALBURG_CITY);
+        FlagClear(FLAG_VISITED_GRANITE_PEAK);
         FlagClear(FLAG_VISITED_SLATEPORT_CITY);
         FlagClear(FLAG_VISITED_MAUVILLE_CITY);
         FlagClear(FLAG_VISITED_RUSTBORO_CITY);
-        FlagClear(FLAG_VISITED_FORTREE_CITY);
+        FlagClear(FLAG_VISITED_CORAL_PORT);
         FlagClear(FLAG_VISITED_LILYCOVE_CITY);
         FlagClear(FLAG_VISITED_MOSSDEEP_CITY);
         FlagClear(FLAG_VISITED_SOOTOPOLIS_CITY);
@@ -2403,18 +2402,18 @@ static void DebugAction_FlagsVars_ToggleFlyFlags(u8 taskId)
     {
         PlaySE(SE_PC_LOGIN);
 
-        FlagSet(FLAG_VISITED_LITTLEROOT_TOWN);
+        FlagSet(FLAG_VISITED_BEDROCK_TOWN);
         FlagSet(FLAG_VISITED_OLDALE_TOWN);
         FlagSet(FLAG_VISITED_DEWFORD_TOWN);
         FlagSet(FLAG_VISITED_LAVARIDGE_TOWN);
         FlagSet(FLAG_VISITED_FALLARBOR_TOWN);
         FlagSet(FLAG_VISITED_VERDANTURF_TOWN);
         FlagSet(FLAG_VISITED_PACIFIDLOG_TOWN);
-        FlagSet(FLAG_VISITED_PETALBURG_CITY);
+        FlagSet(FLAG_VISITED_GRANITE_PEAK);
         FlagSet(FLAG_VISITED_SLATEPORT_CITY);
         FlagSet(FLAG_VISITED_MAUVILLE_CITY);
         FlagSet(FLAG_VISITED_RUSTBORO_CITY);
-        FlagSet(FLAG_VISITED_FORTREE_CITY);
+        FlagSet(FLAG_VISITED_CORAL_PORT);
         FlagSet(FLAG_VISITED_LILYCOVE_CITY);
         FlagSet(FLAG_VISITED_MOSSDEEP_CITY);
         FlagSet(FLAG_VISITED_SOOTOPOLIS_CITY);
@@ -3827,7 +3826,7 @@ static void DebugAction_Sound_MUS_SelectId(u8 taskId)
     X(MUS_MT_CHIMNEY) \
     X(MUS_ENCOUNTER_FEMALE) \
     X(MUS_LILYCOVE) \
-    X(MUS_ROUTE111) \
+    X(MUS_DESERT) \
     X(MUS_HELP) \
     X(MUS_UNDERWATER) \
     X(MUS_VICTORY_TRAINER) \

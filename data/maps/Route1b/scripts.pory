@@ -1,0 +1,103 @@
+mapscripts Route1b_MapScripts {}
+
+
+script Route1b_BattleSalt7_FirstBattle {
+    trainerbattle_single(TRAINER_SALT7_ROUTE_1B_ENCOUNTER, Salt7_Intro, Salt7_Outro)
+    msgbox(PostBattle_Salt7, MSGBOX_AUTOCLOSE) //refactor so you dont have to talk to make var and flag set, should be post script
+    setflag(FLAG_SALT7_BEATEN_FIRST_ENCOUNTER)
+    // questmenu(QUEST_MENU_SET_ACTIVE, QUEST_SALT7_GYRADOS)
+    // subquestmenu(QUEST_MENU_COMPLETE_QUEST, QUEST_POKEMON_LEAGUE, SUB_QUEST_MET_SALT)
+    setvar(VAR_SALTS7_QUEST_STATE, 1)
+    waitmessage
+    end
+}
+
+script Route1b_Battle_NeetFirst {
+    trainerbattle_single(TRAINER_SHUT1NNEET_ROUTE_1B, Route1b_Neet_Intro, Route1b_Neet_Outro)
+    msgbox(PostBattle_Route1b_Neet, MSGBOX_AUTOCLOSE)
+    setvar(VAR_FIRST_TRAINERS_BEATEN_CHECK, VAR_FIRST_TRAINERS_BEATEN_CHECK+1)
+    waitmessage
+    end
+}
+
+script Route1b_TrainerLeroy {
+    trainerbattle_single(TRAINER_GIRLMAYA_ROUTE_1B, Girl_Maya_Intro, Girl_Maya_Outro)
+    msgbox(PostBattle_Maya, MSGBOX_AUTOCLOSE)
+    setvar(VAR_FIRST_TRAINERS_BEATEN_CHECK, VAR_FIRST_TRAINERS_BEATEN_CHECK+1)
+    waitmessage
+    end
+}
+
+script Route1b_BattlePicknickerLily {
+    trainerbattle_single(TRAINER_PICKNICKERLILY_ROUTE_1B, Picknicker_Lily_Intro, Picknicker_Lily_Outro)
+    msgbox(PostBattle_Lily, MSGBOX_AUTOCLOSE)
+    setvar(VAR_FIRST_TRAINERS_BEATEN_CHECK, VAR_FIRST_TRAINERS_BEATEN_CHECK+1)
+    waitmessage
+    end
+}
+
+script Route1b_Fisherman_PierTalk {
+    lock
+    msgbox(format("If I had a pokemon that could surf I could go over to that island!"), MSGBOX_DEFAULT)
+    release
+}
+
+script Route1b_FisherSign {
+    lockall
+    msgbox(format("Want to learn to fish? Come on in and get yourself a fishing rod"))
+    releaseall
+}
+
+script EventScript_Route1b_ItemBall_SuperPotion {
+    finditem(ITEM_SUPER_POTION)
+}
+
+//text scripts
+
+text Salt7_Intro {
+    format("The guy in that house there gave me an old rod! I'm going to use it to catch all the Gyrados I can find! I've already got some. Here let me show you")
+}
+
+text Salt7_Outro {
+    format("Alright so they aren't Gyrados yes, but I'll get more and become unstoppable! But just how do I evolve them.")
+}
+
+text PostBattle_Salt7 {
+    format("I remember reading something about a waterfall could make them evolve. I think there is one somewhere nearby")
+}
+
+text Route1b_Neet_Intro {
+    format("Have you seen a Totodile around here? I really want one.")
+}
+
+text Route1b_Neet_Outro {
+    format("I would of won if I had my Totodile!")
+}
+
+text PostBattle_Route1b_Neet {
+    format("I'll find a Totodile around here somehow, maybe I should get my boat")
+}
+
+text Girl_Maya_Intro {
+    format("I hope you're ready for a battle, because I'm itching for a fight.")
+}
+
+text Girl_Maya_Outro {
+    format("Your Pokémon are amazing!")
+}
+
+text PostBattle_Maya {
+    format("I need to catch some stronger Pokemon")
+}
+
+text Picknicker_Lily_Intro {
+    format("I'm going to become a champion one day!")
+}
+
+text Picknicker_Lily_Outro {
+    format("I got a long way to go still")
+}
+
+text PostBattle_Lily {
+    format("You can get the champion rank after getting every Triver badge and then beating league. It's an incredible challenge.")
+}

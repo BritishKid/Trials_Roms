@@ -1,0 +1,205 @@
+mapscripts GranitePeak_School_Moves_MapScripts {
+}
+
+script Granite_Peak_School_MoveClass_Teacher {
+    lockall
+    if(var(VAR_MOVE_ROOM_STUDENTS) <=2) {
+        msgbox(format("Making sure your Pokémon has the right moves is very important. A mix of strong attacking moves, a range of types and status could go a long way."))
+        msgbox(format("Speak to some of my students and laern what you can and when you are ready you can take my test."))
+    }
+    if (var(VAR_MOVE_ROOM_STUDENTS) == 3) {
+            msgbox(format("Oh it looks like you've learnt lots, are you ready for the test?"), MSGBOX_YESNO)
+            if(var(VAR_RESULT) == YES) {
+                msgbox(format("Fantastic let's begin."))
+                msgbox(format("WAIT I'M READY TO!"), MSGBOX_AUTOCLOSE)
+                applymovement(OBJ_EVENT_ID_PLAYER, Movement_Surprised_MoveClass)
+                waitmovement(OBJ_EVENT_ID_PLAYER)
+                applymovement(4, Movement_Surprised_MoveClass)
+                waitmovement(4)
+                addobject(5)
+                setobjectxy(5,6,10)
+                applymovement(5, Movement_MatAppearing_MoveClass)
+                waitmovement(5)
+                setvar(VAR_MOVE_ROOM_STUDENTS, 4)
+                msgbox(format("Thanks for waiting. I'm ready to take the quiz. I'll only need one more patch after this!"), MSGBOX_AUTOCLOSE)
+                call(GranitePeak_School_Move_Quiz)
+            }
+            if(var(VAR_RESULT) == NO) {
+                msgbox(format("No problem dear. Come back when you are ready."))
+            }
+    }
+     if (var(VAR_MOVE_ROOM_STUDENTS) == 4) {
+            msgbox(format("Ready to try the test again?"), MSGBOX_YESNO)
+            if(var(VAR_RESULT) == YES) {
+                msgbox(format("Fantastic let's begin."), MSGBOX_AUTOCLOSE)
+                call(GranitePeak_School_Move_Quiz)
+            }
+            if(var(VAR_RESULT) == NO) {
+                msgbox(format("No problem dear. Come back when you are ready."))
+            }
+    }
+    if (var(VAR_MOVE_ROOM_STUDENTS) == 5) {
+        msgbox(format("Knowing what different moves can do will help you become the very best."))
+    }
+    releaseall
+}
+
+script GranitePeak_School_Move_Quiz { //fill in the questions
+    setvar(VAR_PREVENT_LOOPS_SCHOOL, 0)
+    msgbox(format("Question 1. \n STAB will boost a moves power by 1.3x?"), MSGBOX_YESNO)
+    if(var(VAR_RESULT) == NO && var(VAR_PREVENT_LOOPS_SCHOOL) == 0) {
+        //correct
+        msgbox(format("That's false it's 50% stronger!"))
+        msgbox(format("That's right it will be 1.5x."))
+        msgbox(format("Question 2. \n Flying Press counts as two types?"), MSGBOX_YESNO) 
+        if(var(VAR_RESULT) == YES && var(VAR_PREVENT_LOOPS_SCHOOL) == 0) {
+            msgbox(format("It acts as both a Fighting and Flying type move!"))
+            msgbox(format("Correct! It kets you have double the attack choice with one single move slot."))
+            msgbox(format("Okay Final Question \n Grass Pokemon are immune to Powder moves?"), MSGBOX_YESNO)
+                    if(var(VAR_RESULT) == YES && var(VAR_PREVENT_LOOPS_SCHOOL) == 0) {
+                        //correct
+                        msgbox(format("Grass, Overcoat and pokemon with Safety Goggles"))
+                        msgbox(format("That's correct, there are lots of ways to be immune to powder moves."))
+                        msgbox(format("Good job to you both!"))
+                        call(GranitePeak_School_MoveQuiz_Passsed)
+                    }
+                    if(var(VAR_RESULT) == NO && var(VAR_PREVENT_LOOPS_SCHOOL) == 0) {
+                        //wrong
+                        msgbox(format("Of course not, only Pokemon with the Overcoat ability are immune."))
+                        msgbox(format("Not quite, but you're close. Keep learning you'll get there."))
+                        call(GranitePeak_School_MoveQuiz_Failed)
+                    }
+        }
+        if(var(VAR_RESULT) == NO && var(VAR_PREVENT_LOOPS_SCHOOL) == 0) {
+            //wrong
+            msgbox(format("How can a move have two types?"))
+            msgbox(format("Take a look into Hawlucha, it's got some incredible moves."))
+            call(GranitePeak_School_MoveQuiz_Failed)
+        }
+    }
+    if(var(VAR_RESULT) == YES && var(VAR_PREVENT_LOOPS_SCHOOL) == 0) {
+        //wrong
+        msgbox(format("It's twice as strong"))
+        msgbox(format("That's Incorrect. Only Adaptability Pokemon will gain twice the power"))
+        call(GranitePeak_School_MoveQuiz_Failed)
+    }
+}
+
+script GranitePeak_School_MoveQuiz_Failed {
+    msgbox(format("There are lots of resources you can use to study with."))
+    setvar(VAR_PREVENT_LOOPS_SCHOOL, 1)
+    releaseall
+}
+
+script GranitePeak_School_MoveQuiz_Passsed {
+    setvar(VAR_PREVENT_LOOPS_SCHOOL, 1)
+    msgbox(format("Congratulations to you both you've passed. Here take these."))
+    playfanfare(MUS_OBTAIN_ITEM)
+    msgbox(format("Recieved Move Patch. This shows you've passed the class."))
+    msgbox(format("Remember you need all patches to take part in the tournament."))
+    msgbox(format("Take this TM as well"))
+    playfanfare(MUS_OBTAIN_ITEM)
+    giveitem(ITEM_TM27)
+    setvar(VAR_MOVE_ROOM_STUDENTS, 5)
+    setflag(FLAG_MOVE_PATCH_EARNT)
+    // subquestmenu(QUEST_MENU_COMPLETE_QUEST, QUEST_POKEMON_LEAGUE, SUB_QUEST_SCHOOL_MOVE_PATCH)
+    msgbox(format("One more to go and then I can win the tournament"), MSGBOX_AUTOCLOSE)
+    applymovement(5, Movement_Mat_Leaves)
+    removeobject(5)
+    setflag(FLAG_HIDE_MOVES_ROOM)
+    releaseall
+}
+
+script GranitePeak_School_Mat_Move_Room {
+    lockall
+    msgbox(format("I've learnt so much to improve my team!"))
+    releaseall
+}
+
+//Trainer about uturn and volt switch and water one
+script GranitePeak_MoveClass_Girl1 {
+    trainerbattle_single(TRAINER_MOVEGIRL1, MoveGirl1_Intro, MoveGirl1_Outro, MoveStudent_Beaten)
+    msgbox(PostBattle_MoveGirl1, MSGBOX_AUTOCLOSE)
+}
+
+//trainer about baton pass
+script GranitePeak_MoveClass_Girl2 {
+    trainerbattle_single(TRAINER_MOVEGIRL2, MoveGirl2_Intro, MoveGirl2_Outro, MoveStudent_Beaten)
+    msgbox(PostBattle_MoveGirl2, MSGBOX_AUTOCLOSE)
+}
+
+//status moves
+script GranitePeak_MoveClass_Boy {
+    trainerbattle_single(TRAINER_MOVEBOY, MoveBoy_Intro, MoveBoy_Outro, MoveStudent_Beaten)
+    msgbox(PostBattle_MoveBoy, MSGBOX_AUTOCLOSE)
+}
+
+script MoveStudent_Beaten {
+    if (var(VAR_MOVE_ROOM_STUDENTS) == 2) {
+        setvar(VAR_MOVE_ROOM_STUDENTS, 3)
+    }
+    if (var(VAR_MOVE_ROOM_STUDENTS) == 1) {
+        setvar(VAR_MOVE_ROOM_STUDENTS, 2)
+    }
+    if (var(VAR_MOVE_ROOM_STUDENTS) == 0) {
+        setvar(VAR_MOVE_ROOM_STUDENTS, 1)
+    }
+}
+
+//movement scripts
+movement Movement_Surprised_MoveClass {
+    emote_exclamation_mark
+}
+
+movement Movement_MatAppearing_MoveClass {
+    walk_fast_up    
+    walk_fast_up
+    walk_fast_up
+    walk_fast_up
+    walk_fast_up
+}
+
+movement Movement_Mat_Leaves {
+    jump_in_place_down
+    walk_fast_down  
+    walk_fast_down  
+    walk_fast_down  
+    walk_fast_down 
+}
+
+//text scripts
+text MoveGirl1_Intro {
+    format("The right move is very important! I using them to stop the opponent from hitting back hard")
+}
+
+text MoveGirl1_Outro {
+    format("I just going to switch out of this class.")
+}
+
+text PostBattle_MoveGirl1 {
+    format("Switch out moves allow you to keep momentum going.")
+}
+
+text MoveGirl2_Intro {
+    format("I've worked out the perfect technique to win every fight.")
+}
+
+text MoveGirl2_Outro {
+    format("I just need more Pokémon to fill it out.")
+}
+
+text PostBattle_MoveGirl2 {
+    format("I'll become unstoppable I just need to catch more Pokémon.")
+}
+
+text MoveBoy_Intro {
+    format("Can't win if you're asleep!")
+}
+
+text MoveBoy_Outro {
+    format("Right, Okay....")
+}
+
+text PostBattle_MoveBoy {
+    format("I need to find a mushroom Pokémon so I can use Spore.")
+}

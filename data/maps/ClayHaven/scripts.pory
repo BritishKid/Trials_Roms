@@ -1,0 +1,57 @@
+mapscripts ClayHaven_MapScripts {
+	
+}
+
+script Town2_Platefall_Block {
+    lockall
+    applymovement(4, Movement_Town2_LeftGuardMove)
+    waitmovement(4)
+    msgbox(format("Hey it's dangerous in there we can't just let you in!"))
+    trainerbattle_single(TRAINER_TOWN2_PLATEFALL_GUARD, Town2_Guard_Intro, Town2_Guard_Outro, Town2_Guards_Beaten)
+    releaseall
+}
+
+script Town2_Guards_Beaten {
+    msgbox("Go on in, just be careful", MSGBOX_AUTOCLOSE)
+    setvar(VAR_PLATEFALL_ACCESSIBLE, 1)
+	setvar(VAR_FIRST_TRAINERS_BEATEN_CHECK, VAR_FIRST_TRAINERS_BEATEN_CHECK+1)
+}
+
+script Town2_Guard {
+    lockall
+    msgbox(format("The plate artifact that once landed here has been stolen! It was taken in the night and they left no evidence, it's a travesty."))
+    releaseall
+}
+
+script ClayHaven_Girl_EventScript {
+    lockall
+    msgbox(format("Lots of strong trainers come here to explore the mountains. Apparently lots of rare pokemon can be found there."))
+    releaseall
+}
+
+script ClayHaven_Girl2_EventScript {
+    lockall
+    msgbox(format("Pokemon can be used to make travelling easier like surfing on water. You just need 5 gym badges."))
+    releaseall
+}
+
+script Town2_Coming_Soon {
+    lockall
+    msgbox(format("COMING SOON. Join our discord to make suggestions"))
+    releaseall
+    }
+//movement scripts
+
+movement Movement_Town2_LeftGuardMove {
+    face_left
+}
+
+//text scripts
+
+text Town2_Guard_Intro {
+    format("Lot's of strong pokemon live here, I'll need to check you'll be okay")
+}
+
+text Town2_Guard_Outro{
+    format("Alright you're pretty tough. You should be okay.")
+}

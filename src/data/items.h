@@ -7756,7 +7756,7 @@ const struct Item gItems[] =
         .secondaryId = MOVE_OVERHEAT,
     },
 
-    [ITEM_TM51] =
+    [ITEM_TM51_PLUCK] =
     {
         .name = _("TM51"),
         .price = 3000,
@@ -7765,7 +7765,7 @@ const struct Item gItems[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_NONE, // Todo
+        .secondaryId = MOVE_PLUCK,
     },
 
     [ITEM_TM52] =
@@ -9646,5 +9646,44 @@ const struct Item gItems[] =
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 10,
+    },
+
+    //custom
+
+    
+    // [ITEM_LINK_STONE] =
+    // {
+    //     .name = _("Link Stone"),
+    //     .itemId = ITEM_LINK_STONE,
+    //     .price = 3000,
+    //     .description = sLinkStoneDesc,
+    //     .pocket = POCKET_ITEMS,
+    //     .type = ITEM_USE_PARTY_MENU,
+    //     .fieldUseFunc = ItemUseOutOfBattle_EvolutionStone,
+    //     .flingPower = 30,
+    // },
+
+    [ITEM_LEGENDS_PLATE] =
+    {
+        .name = _("Legends Plate"),
+        .price = 0,
+        .description = sLegendsPlateDesc,
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        // .secondaryId = // todo
+    },
+
+    [ITEM_HISTORY_BOOK] =
+    {
+        .name = _("History Book"),
+        .price = 0,
+        .description = sHistoryBookDesc,
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse, //todo make it readable?
+        // .secondaryId = //todo
     },
 };

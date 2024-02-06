@@ -1,0 +1,55 @@
+mapscripts Route3b_MapScripts {}
+
+script GBattleScript {
+    trainerbattle_single(ROUTE3G, G_Intro, G_Outro)
+    msgbox(G_PostBattle, MSGBOX_AUTOCLOSE)
+    end
+}
+
+script SurpirseBattleScript {
+    trainerbattle_single(ROUTE3_HIDDEN, Route3Hidden_Intro, Route3Hidden_Outro, SurpriseTrainerPostScript)
+    msgbox(Route3Hidden_PostBattle, MSGBOX_AUTOCLOSE)
+    end
+}   
+
+script SurpriseTrainerPostScript {
+    setvar(VAR_HIDDEN_MOUNTAIN_PASS, 1)
+    end
+}
+
+script CharmanderGrotto {
+    if (var(VAR_HIDDEN_MOUNTAIN_PASS) == 1) {
+        msgbox(format("You think you can see some pokemon running around."))
+        msgbox(format("Do you want to try and squeeze through the gap?"), MSGBOX_YESNO)
+        if (var(VAR_RESULT) == 1) { 
+            warp(MAP_CHARMANDER_GROTTO, 5, 9)
+        }
+    }
+}
+
+
+//Text Scripts
+
+text G_Intro {
+    format("I love being up in the mountains.")
+}
+
+text G_Outro {
+    format("I'll have to catch stronger Pokemon then.")
+}
+
+text G_PostBattle {
+    format("I've heard some really powerful Pokemon hide near the peak.")
+}
+
+text Route3Hidden_Intro {
+    format("I was told you can catch Charmander somewhere near here.")
+}
+
+text Route3Hidden_Outro {
+    format("It should be nearby")
+}
+
+text Route3Hidden_PostBattle {
+    format("Maybe I read the map wrong")
+}

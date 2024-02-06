@@ -144,11 +144,12 @@
 #define MAX_GIFT_RIBBON 64
 
 #define MIN_LEVEL 1
-#define MAX_LEVEL 100
+#define MAX_LEVEL 200 //max possible level, change when you fix it rob
 
 #define OT_ID_PLAYER_ID       0
 #define OT_ID_PRESET          1
 #define OT_ID_RANDOM_NO_SHINY 2
+#define OT_ID_RANDOM_SHINY 3
 
 #define MON_GIVEN_TO_PARTY      0
 #define MON_GIVEN_TO_PC         1
@@ -210,7 +211,7 @@
 #if I_VITAMIN_EV_CAP >= GEN_8
 #define EV_ITEM_RAISE_LIMIT MAX_PER_STAT_EVS
 #else
-#define EV_ITEM_RAISE_LIMIT 100
+#define EV_ITEM_RAISE_LIMIT 255
 #endif
 
 // Split defines.
@@ -284,6 +285,10 @@
 #define EVO_ITEM_DAY                      40     // specified item is used on Pokémon, is day
 #define EVO_ITEM_HOLD                     41     // Pokémon levels up, holds specified item
 #define EVO_LEVEL_FOG                     42     // Pokémon reaches the specified level during fog in the overworld
+#define EVO_ITEM_NIGHT                    39     // specified item is used on Pokémon, is night
+#define EVO_ITEM_DAY                      40     // specified item is used on Pokémon, is day
+#define EVO_ITEM_HOLD                     41     // Pokémon levels up, holds specified item
+#define EVO_LEVEL_FOG                     42     // Pokémon reaches the specified level during fog in the overworld
 
 #define EVOS_PER_MON 10
 
@@ -301,6 +306,7 @@
 
 // Most pokemon have 2 frames (a default and an alternate for their animation).
 // There are 4 exceptions:
+// - Castform has 4 frames, 1 for each form
 // - Deoxys has 2 frames, 1 for each form
 // - Spinda has 1 frame, presumably to avoid the work of animating its spots
 // - Unown has 1 frame, presumably to avoid the work of animating all 28 of its forms

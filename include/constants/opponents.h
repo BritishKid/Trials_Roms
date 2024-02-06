@@ -2,85 +2,85 @@
 #define GUARD_CONSTANTS_OPPONENTS_H
 
 #define TRAINER_NONE                          0
-#define TRAINER_SAWYER_1                      1
-#define TRAINER_GRUNT_AQUA_HIDEOUT_1          2
-#define TRAINER_GRUNT_AQUA_HIDEOUT_2          3
-#define TRAINER_GRUNT_AQUA_HIDEOUT_3          4
-#define TRAINER_GRUNT_AQUA_HIDEOUT_4          5
-#define TRAINER_GRUNT_SEAFLOOR_CAVERN_1       6
-#define TRAINER_GRUNT_SEAFLOOR_CAVERN_2       7
-#define TRAINER_GRUNT_SEAFLOOR_CAVERN_3       8
-#define TRAINER_GABRIELLE_1                   9
-#define TRAINER_GRUNT_PETALBURG_WOODS        10
-#define TRAINER_MARCEL                       11
-#define TRAINER_ALBERTO                      12
-#define TRAINER_ED                           13
-#define TRAINER_GRUNT_SEAFLOOR_CAVERN_4      14
-#define TRAINER_DECLAN                       15
-#define TRAINER_GRUNT_RUSTURF_TUNNEL         16
-#define TRAINER_GRUNT_WEATHER_INST_1         17
-#define TRAINER_GRUNT_WEATHER_INST_2         18
-#define TRAINER_GRUNT_WEATHER_INST_3         19
-#define TRAINER_GRUNT_MUSEUM_1               20
-#define TRAINER_GRUNT_MUSEUM_2               21
-#define TRAINER_GRUNT_SPACE_CENTER_1         22
-#define TRAINER_GRUNT_MT_PYRE_1              23
-#define TRAINER_GRUNT_MT_PYRE_2              24
-#define TRAINER_GRUNT_MT_PYRE_3              25
-#define TRAINER_GRUNT_WEATHER_INST_4         26
-#define TRAINER_GRUNT_AQUA_HIDEOUT_5         27
-#define TRAINER_GRUNT_AQUA_HIDEOUT_6         28
-#define TRAINER_FREDRICK                     29
-#define TRAINER_MATT                         30
-#define TRAINER_ZANDER                       31
-#define TRAINER_SHELLY_WEATHER_INSTITUTE     32
-#define TRAINER_SHELLY_SEAFLOOR_CAVERN       33
-#define TRAINER_ARCHIE                       34
-#define TRAINER_LEAH                         35
-#define TRAINER_DAISY                        36
-#define TRAINER_ROSE_1                       37
-#define TRAINER_FELIX                        38
-#define TRAINER_VIOLET                       39
-#define TRAINER_ROSE_2                       40
-#define TRAINER_ROSE_3                       41
-#define TRAINER_ROSE_4                       42
-#define TRAINER_ROSE_5                       43
-#define TRAINER_DUSTY_1                      44
-#define TRAINER_CHIP                         45
-#define TRAINER_FOSTER                       46
-#define TRAINER_DUSTY_2                      47
-#define TRAINER_DUSTY_3                      48
-#define TRAINER_DUSTY_4                      49
-#define TRAINER_DUSTY_5                      50
-#define TRAINER_GABBY_AND_TY_1               51
-#define TRAINER_GABBY_AND_TY_2               52
-#define TRAINER_GABBY_AND_TY_3               53
-#define TRAINER_GABBY_AND_TY_4               54
-#define TRAINER_GABBY_AND_TY_5               55
-#define TRAINER_GABBY_AND_TY_6               56
-#define TRAINER_LOLA_1                       57
-#define TRAINER_AUSTINA                      58
-#define TRAINER_GWEN                         59
-#define TRAINER_LOLA_2                       60
-#define TRAINER_LOLA_3                       61
-#define TRAINER_LOLA_4                       62
-#define TRAINER_LOLA_5                       63
-#define TRAINER_RICKY_1                      64
-#define TRAINER_SIMON                        65
-#define TRAINER_CHARLIE                      66
-#define TRAINER_RICKY_2                      67
-#define TRAINER_RICKY_3                      68
-#define TRAINER_RICKY_4                      69
-#define TRAINER_RICKY_5                      70
-#define TRAINER_RANDALL                      71
-#define TRAINER_PARKER                       72
-#define TRAINER_GEORGE                       73
-#define TRAINER_BERKE                        74
-#define TRAINER_BRAXTON                      75
-#define TRAINER_VINCENT                      76
-#define TRAINER_LEROY                        77
-#define TRAINER_WILTON_1                     78
-#define TRAINER_EDGAR                        79
+#define TRAINER_ROUTE2_TRAINER1               1 //Custom Route 2 Trainer 1
+#define TRAINER_ROUTE2_TRAINER2               2 //Custom Route 2 Trainer 2
+#define TRAINER_ROUTE2_TRAINER3               3 //Custom Route 2 Trainer 3
+#define TRAINER_MAHOGANYHILLS_BUGCATCHER_CHARLIE          4 //Custom trainer in Mahogany hill pre bridge kanto mons
+#define TRAINER_MAHOGANYHILLS_BUGCATCHER_RONALD          5 //Custom trainer in mahogany hill pre bridge johto mons
+#define TRAINER_MAHOGANYHILLS_BUGCATCHER_DEE  6 //Custom double battle in mahogany hill pre bridge hoenn mons
+#define TRAINER_MAHOGANYHILLS_BUGCATCHER_DENNIS       7 //Custom battle in mahogany hill pre bridge boss battle
+#define TRAINER_TOWN2_PLATEFALL_GUARD         8 //Custom battle blocking platefall acess
+#define TRAINER_GABRIELLE_1                   9 // rematch things are wierd so look into
+#define TRAINER_MAHOGANYHILLS_BUGCATCHER_FRANK        10 //Custom trainer in mh1
+#define TRAINER_MAHOGANYHILLS_TOUGH_TRAINER  11 //Custom trainer blocking items in mh1
+#define TRAINER_MAHOGANYHILLS_GYM_LEADER     12 //Custom Gym Leader for MH Gym
+#define MAHOGANYHILLSGYM_TRAINER_ANDY        13 //Custom Gym trainer for mh gym 1
+#define MAHOGANYHILLSGYM_TRAINER_OLLIE       14 //Custom gym trainer ollie in mh1
+#define MAHOGANYHILLSGYM_TRAINER_SKYE        15  //custom trainer in mh
+#define MAHOGANYHILLSGYM_TRAINER_WRIGHT      16 //Custom trainer in mh gym
+#define TRAINER_ROUTE2_GENKI                 17 // Trainer Genki route 2
+#define TRAINER_ROUTE2_ROBERT                18  //Custom first time battling Robert in Route 2
+#define TRAINER_FRONTPAGEROB_SECRET_BASE     19 //Custom trainer at top of route 3 hidden base 
+#define WIBBLYWOBBLY_BATTLE                  20 //Custom Trainer Wibbly Wobbly on beach
+#define ROUTE4_BUGCATCHER                    21 //Custom trainer blocking berries in route 4
+#define ROUTE3LASSALEX                       22 // Custom Trainer LAss Alex route 3
+#define ROUTE3HIKERHARRY                     23 //Custom Trainer route 3 hiker harry
+#define ROUTE3G                              24 //Custom Trainer route 3 G
+#define ROUTE4_GRASPINGPIE                   25 //Custom Trainer Route 4 Grasping Pie (MAKE REMATCH)
+#define ROUTE4_OSTRICHPUPPET                 26 //custom trainer route 4 Ostrich Puppet 
+#define ROUTE4_LIHSIR                        27 //Custom Trainer route 4 Lihsir
+#define ROUTE3_HIDDEN                        28 //Custom Trainer route 3 hidden under bridge
+#define TRAINER_EVOLUTIONBOY1                29 //Custom Trainer in evolution class room
+#define TRAINER_EVOLUTIONBOY2                30 //Custom Trainer in evolution class room
+#define TRAINER_EVOLUTIONGIRL                31 //Custom TRainer in evolution class room
+#define DAMON_BATTLE                         32 // Custom trainer damon in beach 1
+#define TRAINER_ITEMGIRL1                    33 //Custom Trainer in item class room
+#define TRAINER_ITEMGIRL2                    34 //Custom Trainer in item class room
+#define TRAINER_ITEMGIRL3                    35 //Custom Trainer in item class room
+#define TRAINER_MOVEGIRL1                    36 //Custom Trainer in move class room
+#define TRAINER_MOVEGIRL2                    37 //Custom Trainer in move class room
+#define TRAINER_MOVEBOY                      38 //Custom Trainer in move class room
+#define TRAINER_SCHOOLHALL_MAT1              39 //custom Trainer Mat in school hallway
+#define ROUTE4_SALTS7                        40 //Custom trainer Salt7 in route 4b
+#define GYM2ENTRANCE_JERICHO                 41 //Custom trainer Jericho outside of the second gym 
+#define TRAINER_SANDYCLIFFCOLIN              42 //Custom trainer Colin in sandy cliffs
+#define BEACHGYM_TRAINER_OLLIE                       43 //Custom trainer Ollie in beach gym 
+#define TRAINER_BEACH_GYM_LEADER                      44 //Custom gym leader for Beach Gym TRAINER_BEACH_GYM_LEADER
+#define TRAINER_SANDYSHORE_CITY_RIVAL_WATER                         45 //Custom rival battle at sandy shore city if player took water
+#define TRAINER_SANDYSHORE_CITY_RIVAL_GRASS                       46 //Custom Rival battle at sandy shore city is player took grass
+#define TRAINER_SANDYSHORE_CITY_RIVAL_FIRE                      47 // custom rival battle at sahdny shore city if player took fire
+#define TRAINER_ABILITYBOY1                      48 //custom trainer in ability class
+#define TRAINER_ABILITYBOY2                      49 //custom trainer in ability class
+#define TRAINER_ABILITYBOY3                      50 //custom trainer in ability class
+#define TRAINER_KATHERINE_OBSIDIAN_THICKET               51 //custom trainer in obisdian thicket
+#define TRAINER_KEVIN_GYMLEADER               52  //gym leader 3
+#define GYM_XP_DUMP               53 //fast xp
+#define TRAINER_ROUTE7b_RACHEL               54 //warning trainer on route 7b
+#define EMBERDUNE_CONOR               55 //conor in ember dunes
+#define TRAINER_RIVAL_ROUTE9               56 //Route 9 Rival
+#define TRAINER_WATERFALL_CAVE_BLACKBELT_1                       57 //blackbelt 1 in waterfall cave
+#define TRAINER_WATERFALL_CAVE_BLACKBELT_2                      58 //waterfall cave 3rd fight fight
+#define TRAINER_WATERFALL_CAVE_BLACKBELT_3                         59 //waterfall cave second fight
+#define TRAINER_WATERFALL_CAVE_EXPERT                       60  //waterfall boss
+#define TRAINER_DEREK_OBSIDIAN_THICKET                       61 //obsidian hill custom fight
+#define BEACH1_CLAIR_BATTLE                       62 //Beach 1 custom
+#define TRAINER_TESSA_GYM3                       63 //gym 3 trainer
+#define TRAINER_PABLO_GYM3                      64 //gym 3 trainer
+#define TRAINER_VICTOR_GYM3                        65 //gym 3 trainer
+#define TRAINER_CHLOE_GYM3                      66 //gym 3 trainer
+#define TRAINER_OLLIE_GYM3                      67 //gym 3 ollie
+#define ROUTE4_ODA_BLACKBELT                      68 //route 4 blackebelt
+#define EMBERDUNE_MANIAC                      69 //trainer blocking regirock route
+#define EMBERDUNE_JORDAN                      70 //trainer blocking the exit of emberdune 
+#define EMBERDUNE_CHARR                      71 //trainer blocking the exit of emberdunec double battle
+#define ROUTE9_MATTHEW                       72 //custom ttrainer on route 9
+#define ROUTE9_MATE                       73 //custom trainer route 9
+#define ROUTE9_BIDOOFCRAZEDMAN                        74 //custom bidoof trainer route 9
+#define TRAINER_SARAH_GYMLEADER                      75 //gym 4 sarah gym leader
+#define TRAINER_BITTERS_GYM4                      76 //gym 4 trainer Bitters
+#define TRAINER_TRAINER1_GYM4                        77 // gym 4 trainer 1
+#define TRAINER_AY_GYM4                     78 //gym 4 trainer Ay
+#define TRAINER_OLLIE_GYM4                        79 //gym 4 ollie fight
 #define TRAINER_ALBERT                       80
 #define TRAINER_SAMUEL                       81
 #define TRAINER_VITO                         82
@@ -521,32 +521,32 @@
 #define TRAINER_EDWIN_4                     517
 #define TRAINER_EDWIN_5                     518
 #define TRAINER_WALLY_VR_1                  519
-#define TRAINER_BRENDAN_ROUTE_103_MUDKIP    520
-#define TRAINER_BRENDAN_ROUTE_110_MUDKIP    521
+#define TRAINER_NATHAN_ROUTE_1B_SECRET_BASE 520 //Customer Trainer Nathan Route 1b
+#define TRAINER_RED_ROUTE_1A_FIRST          521 //Custom fight to get secret power
 #define TRAINER_BRENDAN_ROUTE_119_MUDKIP    522
-#define TRAINER_BRENDAN_ROUTE_103_TREECKO   523
-#define TRAINER_BRENDAN_ROUTE_110_TREECKO   524
+#define TRAINER_RIVAL_RIVAL_HOME_FIRST_TREECKO      523 //Custom Rival first time you battle rival in their home if you chose treecko
+#define TRAINER_RIVAL_MAHOGANYHILL_TREECKO          524 //Custom Rival Second time you battle on the bridge in mahogony hills if you chose treecko
 #define TRAINER_BRENDAN_ROUTE_119_TREECKO   525
-#define TRAINER_BRENDAN_ROUTE_103_TORCHIC   526
+#define TRAINER_GIRLMAYA_ROUTE_1B           526 //Custom Trainer Route 1b
 #define TRAINER_BRENDAN_ROUTE_110_TORCHIC   527
 #define TRAINER_BRENDAN_ROUTE_119_TORCHIC   528
-#define TRAINER_MAY_ROUTE_103_MUDKIP        529
-#define TRAINER_MAY_ROUTE_110_MUDKIP        530
-#define TRAINER_MAY_ROUTE_119_MUDKIP        531
-#define TRAINER_MAY_ROUTE_103_TREECKO       532
-#define TRAINER_MAY_ROUTE_110_TREECKO       533
-#define TRAINER_MAY_ROUTE_119_TREECKO       534
-#define TRAINER_MAY_ROUTE_103_TORCHIC       535
-#define TRAINER_MAY_ROUTE_110_TORCHIC       536
-#define TRAINER_MAY_ROUTE_119_TORCHIC       537
-#define TRAINER_ISAAC_1                     538
-#define TRAINER_DAVIS                       539
-#define TRAINER_MITCHELL                    540
-#define TRAINER_ISAAC_2                     541
-#define TRAINER_ISAAC_3                     542
-#define TRAINER_ISAAC_4                     543
-#define TRAINER_ISAAC_5                     544
-#define TRAINER_LYDIA_1                     545
+#define TRAINER_SHUT1NNEET_ROUTE_1B          529 //Custom Trainer Route 1b meet neet first time
+#define TRAINER_RIVAL_RIVAL_HOME_FIRST_CYNDAQUIL        530 //Custom Rival First time you battle rival in their home if you choose cyndaquil
+#define TRAINER_RIVAL_MAHOGANYHILL_CYNDAQUIL        531  //Custom Rival Second time you battle on the bridge in mahogony hills if you chose cyndaquil
+#define TRAINER_PICKNICKERLILY_ROUTE_1B     532//Custom Trainer Route 1b
+#define TRAINER_RIVAL_RIVAL_HOME_FIRST_SQUIRTLE       533 //Custom Rival First time you battle rival in their home if you choose Squirtle
+#define TRAINER_RIVAL_MAHOGANYHILL_SQUIRTLE       534 //Custom Rival Second time you battle on the bridge in mahogony hills if you chose Squirtle
+#define TRAINER_SALT7_ROUTE_1B_ENCOUNTER    535 //Salt7 First Encounter on Route 1b
+#define TRAINER_ENTRANCE_THUG       536 //Thug blocking entrance to town
+#define TRAINER_ENTRANCE_THUG_SECOND       537 //thug blocking entrance to town the second one
+#define BUGTRAINER_MARK                     538 //Obisidian Thicket Gauntlet
+#define GENTLEMAN_ARTHUR                       539 //Obisidian Thicket Gauntlet
+#define LASS_JESSICA                    540 //Obsidian Thicket Gauntlet
+#define EXPERT_HERBERT                     541 //Obsidian Thicket Gauntlet
+#define MATRON_ANGELA                     542 // Obsidian Thicket Final Fight
+#define TRAINERTHUG_PORT_ENTRANCE                     543  // Port Thug entrance
+#define THUG_PORT_COMMANDER                     544 // Port thug commander
+#define THUG_PORT_BOSS                     545 //THUG_PORT_BOSS
 #define TRAINER_HALLE                       546
 #define TRAINER_GARRISON                    547
 #define TRAINER_LYDIA_2                     548

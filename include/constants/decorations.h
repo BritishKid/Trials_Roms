@@ -2,7 +2,7 @@
 #define GUARD_CONSTANTS_DECORATIONS_H
 
 #define DECOR_NONE             0
-#define DECOR_SMALL_DESK       1
+#define DECOR_SMALL_DESK       1 //given when you get secret power
 #define DECOR_POKEMON_DESK     2
 #define DECOR_HEAVY_DESK       3
 #define DECOR_RAGGED_DESK      4
@@ -91,7 +91,7 @@
 #define DECOR_SMOOCHUM_DOLL    87
 #define DECOR_TREECKO_DOLL     88
 #define DECOR_TORCHIC_DOLL     89
-#define DECOR_MUDKIP_DOLL      90
+#define DECOR_MUDKIP_DOLL      90 //given by FPRob
 #define DECOR_DUSKULL_DOLL     91
 #define DECOR_WYNAUT_DOLL      92
 #define DECOR_BALTOY_DOLL      93
@@ -99,7 +99,7 @@
 #define DECOR_AZURILL_DOLL     95
 #define DECOR_SKITTY_DOLL      96
 #define DECOR_SWABLU_DOLL      97
-#define DECOR_GULPIN_DOLL      98
+#define DECOR_GULPIN_DOLL      98 //given by nathan
 #define DECOR_LOTAD_DOLL       99
 #define DECOR_SEEDOT_DOLL      100
 #define DECOR_PIKA_CUSHION     101

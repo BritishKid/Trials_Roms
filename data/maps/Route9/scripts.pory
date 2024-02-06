@@ -1,0 +1,58 @@
+mapscripts Route9_MapScripts {}
+
+//scripts
+script Route9_BattleScript_Matthew_Fisher {
+    trainerbattle_single(ROUTE9_MATTHEW, MatthewFisher_Intro, MatthewFisher_Outro)
+    msgbox(MatthewFisher_PostBattle, MSGBOX_AUTOCLOSE)
+    release
+}
+
+script Route9_BattleScript_Mate {
+    trainerbattle_single(ROUTE9_MATE, Mate_Intro, Mate_Outro)
+    msgbox(Mate_PostBattle, MSGBOX_AUTOCLOSE)
+    release
+}
+
+script Route9_BattleScript_Woodland {
+    trainerbattle_single(ROUTE9_BIDOOFCRAZEDMAN, Woodland_Intro, Woodland_Outro)
+    msgbox(Woodland_PostBattle, MSGBOX_AUTOCLOSE)
+    release
+}
+
+//text
+
+text MatthewFisher_Intro {
+    format("Hat! Look at your normal Pokemon! Mine is a shiny!")
+}
+
+text MatthewFisher_Outro {
+    format("Okay you got me, but shiny Pokemon are still the best")
+}
+
+text MatthewFisher_PostBattle {
+    format("I bet you've never seen a Red Gyrados before")
+}
+
+text Mate_Intro {
+    format("Say hello to my little friend")
+}
+
+text Mate_Outro {
+    format("Blastoise are okay")
+}
+
+text Mate_PostBattle {
+    format("")
+}
+
+text Woodland_Intro {
+    format("I'm unstoppable")
+}
+
+text Woodland_Outro {
+    format("How did you?-")
+}
+
+text Woodland_PostBattle {
+    format("I'm unstoppable")
+}

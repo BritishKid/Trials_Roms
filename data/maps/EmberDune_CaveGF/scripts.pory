@@ -1,0 +1,5 @@
+mapscripts EmberDune_CaveGF_MapScripts {}
+
+script EventScript_EmberDuneCave_ItemBall_TMSandstoerm {
+    finditem(ITEM_TM37)
+}

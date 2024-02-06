@@ -4979,7 +4979,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
     [MOVE_SECRET_POWER] =
     {
         .effect = EFFECT_SECRET_POWER,
-        .power = 70,
+        .power = 40,
         .type = TYPE_NORMAL,
         .accuracy = 100,
         .pp = 20,

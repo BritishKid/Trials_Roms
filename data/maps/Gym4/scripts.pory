@@ -1,0 +1,119 @@
+mapscripts Gym4_MapScripts {}
+
+script Gym4_EventScript_GymLeader_Sarah {
+    lockall
+    trainerbattle_single(TRAINER_SARAH_GYMLEADER, Gym4_Sarah_Intro, Gym4_Sarah_Outro, Gym4_Sarah_PostbattleScript)
+    msgbox(Gym4_Sarah_PostBattle, MSGBOX_AUTOCLOSE)
+    releaseall
+}
+
+script Gym4_Sarah_PostbattleScript {
+    msgbox(format("Fantastic! You're well on your way to becoming a champion.")) //todo change
+    playfanfare(MUS_OBTAIN_BADGE)
+    msgbox(format("You obtained the Ruin Badge."))
+    special(DoDomeConfetti)
+    // subquestmenu(QUEST_MENU_COMPLETE_QUEST, QUEST_POKEMON_LEAGUE, SUB_QUEST_RUIN_BADGE)
+    setflag(FLAG_BADGE04_GET)
+    msgbox(format("Also please take this TM it contains Shadow Ball"))
+    playfanfare(MUS_OBTAIN_ITEM)
+    giveitem(ITEM_TM30)
+    releaseall
+}
+
+script Gym4_EventScript_Greeter {
+    lockall
+    msgbox(format("Yo champ in the making! This gym specialises in Ghost types. Dark and other Ghost is the best way to take them out, but Normal types are immune!"))
+    if(!flag(FLAG_BADGE04_GET) && flag(FLAG_LEVEL_CAPS)) {
+        msgbox(format("Are you interested in getting some fast levels?"), MSGBOX_YESNO)
+         if(var(VAR_RESULT) == YES) {
+                trainerbattle_no_intro(GYM_XP_DUMP, GymXpDump_Outro)
+         }
+    }
+    releaseall
+}
+
+script Gym4_Trainer_Ollie {
+    trainerbattle_single(TRAINER_OLLIE_GYM4, Gym4_Ollie_Intro, Gym4_Ollie_Outro)
+    msgbox(Gym4_Ollie_PostBattle, MSGBOX_AUTOCLOSE)
+    releaseall
+}
+
+
+script Gym4_Trainer_Bitters {
+    trainerbattle_single(TRAINER_BITTERS_GYM4, Gym4_Bitter_Intro, Gym4_Bitter_Outro)
+    msgbox(Gym4_Bitter_PostBattle, MSGBOX_AUTOCLOSE)
+    releaseall
+}
+
+script Gym4_Trainer_GymTrainer1 {
+    trainerbattle_single(TRAINER_TRAINER1_GYM4, Gym4_Trainer1_Intro, Gym4_Trainer1_Outro)
+    msgbox(Gym4_Trainer1_PostBattle, MSGBOX_AUTOCLOSE)
+    releaseall
+}
+
+script Gym4_Trainer_Ay {
+    trainerbattle_single(TRAINER_AY_GYM4, Gym4_Ay_Intro, Gym4_Ay_Outro)
+    msgbox(Gym4_Ay_PostBattle, MSGBOX_AUTOCLOSE)
+    releaseall
+}
+//text
+
+text Gym4_Sarah_Intro {
+    format("")
+}
+
+text Gym4_Sarah_Outro {
+    format("")
+}
+
+text Gym4_Sarah_PostBattle {
+    format("")
+}
+
+text Gym4_Bitter_Intro {
+    format("Boo\nDid i get ya?")
+}
+
+text Gym4_Bitter_Outro {
+    format("Aww man didnt get ya")
+}
+
+text Gym4_Bitter_PostBattle {
+    format("")
+}
+
+text Gym4_Trainer1_Intro {
+    format("Boo\nDid i get ya?")
+}
+
+text Gym4_Trainer1_Outro {
+    format("Aww man didnt get ya")
+}
+
+text Gym4_Trainer1_PostBattle {
+    format("")
+}
+
+text Gym4_Ay_Intro {
+    format("Hey, looks like you've seen a ghost")
+}
+
+text Gym4_Ay_Outro {
+    format("")
+}
+
+text Gym4_Ay_PostBattle {
+    format("Welp...I've seen a ghost")
+}
+
+text Gym4_Ollie_Intro {
+    format("")
+}
+
+text Gym4_Ollie_Outro {
+    format("")
+}
+
+text Gym4_Ollie_PostBattle {
+    format("")
+}

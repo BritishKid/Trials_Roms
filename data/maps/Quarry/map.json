@@ -1,0 +1,55 @@
+{
+  "id": "MAP_QUARRY",
+  "name": "Quarry",
+  "layout": "LAYOUT_QUARRY",
+  "music": "MUS_ABANDONED_SHIP",
+  "region_map_section": "MAPSEC_BEDROCK_TOWN",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_NONE",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_ROUTE9B",
+      "offset": 0,
+      "direction": "right"
+    }
+  ],
+  "object_events": [
+
+  ],
+  "warp_events": [
+    {
+      "x": 19,
+      "y": 16,
+      "elevation": 0,
+      "dest_map": "MAP_DEEPER_QUARRY_GF",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 20,
+      "y": 17,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "DeeperQuarrySign"
+    },
+    {
+      "type": "hidden_item",
+      "x": 22,
+      "y": 29,
+      "elevation": 0,
+      "item": "ITEM_METAL_COAT",
+      "flag": "FLAG_HIDDEN_ITEM_QUARRY_METAL_COAT"
+    }
+  ]
+}

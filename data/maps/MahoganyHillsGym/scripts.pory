@@ -1,0 +1,139 @@
+mapscripts MahoganyHillsGym_MapScripts {
+}
+
+script MahoganyHillsGym_EventScript_PodiumText {
+    lockall
+    msgbox(format("Mahogany Hill Gym. Making trainers soar to new heights"))
+    msgbox(format("Certified Trainers"))
+    msgbox(format("Nathan, Tanski, KoraidonFan783, LimblessCarpet, Tapdabtap 84, The TC, BitBeads"))
+    if(flag(FLAG_BADGE01_GET)) {
+        msgbox(format("{PLAYER}$")) 
+    }
+    releaseall
+}
+
+script MahoganyHillsGym_EventScript_Greeter {
+    lockall
+    msgbox(format("Yo champ in the making! This gym specialises in flying types. Rock, Electric and Ice is the best way to take them out"))
+    if(!flag(FLAG_BADGE01_GET) && flag(FLAG_LEVEL_CAPS)) {
+        msgbox(format("Are you interested in getting some fast levels?"), MSGBOX_YESNO)
+         if(var(VAR_RESULT) == YES) {
+                trainerbattle_no_intro(GYM_XP_DUMP, GymXpDump_Outro)
+         }
+    }
+    releaseall
+}
+
+script MahoganyHillsGym_Trainer_Andy {
+    trainerbattle_single(MAHOGANYHILLSGYM_TRAINER_ANDY, MahoganyHillsGym_Andy_Intro, MahoganyHillsGym_Andy_Outro)
+    msgbox(MahoganyHillsGym_Andy_PostbattleScript, MSGBOX_AUTOCLOSE)
+    end
+}
+
+script MahoganyHillsGym_Trainer_Skye {
+    trainerbattle_single(MAHOGANYHILLSGYM_TRAINER_SKYE, MahoganyHillsGym_Skye_Intro, MahoganyHillsGym_Skye_Outro)
+    msgbox(MahoganyHillsGym_Skye_PostbattleScript, MSGBOX_AUTOCLOSE)
+    end
+}
+
+script MahoganyHillsGym_Trainer_Wright {
+    trainerbattle_single(MAHOGANYHILLSGYM_TRAINER_WRIGHT, MahoganyHillsGym_Wright_Intro, MahoganyHillsGym_Wright_Outro)
+    msgbox(MahoganyHillsGym_Wright_PostbattleScript, MSGBOX_AUTOCLOSE)
+    end
+}
+
+script MahoganyHillsGym_Trainer_Ollie {
+    trainerbattle_single(MAHOGANYHILLSGYM_TRAINER_OLLIE, MahoganyHillsGym_Ollie_Intro, MahoganyHillsGym_Ollie_Outro)
+    msgbox(MahoganyHillsGym_Ollie_PostbattleScript, MSGBOX_AUTOCLOSE)
+    end
+}
+
+script MahoganyHillsGym_EventScript_GymLeader {
+    lockall
+    trainerbattle_single(TRAINER_MAHOGANYHILLS_GYM_LEADER, MahoganyHillsGym_Gym_Leader_Intro, MahoganyHillsGym_Gym_Leader_Outro, MahoganyHillsGym_Gym_Leader_PostbattleScript)
+    msgbox(MahoganyHillsGym_Gym_Leader_PostBattle, MSGBOX_AUTOCLOSE)
+    releaseall
+}
+
+script MahoganyHillsGym_Gym_Leader_PostbattleScript {
+    msgbox(format("Well done for beating me, here take this badge to show you've proven yourself."))
+    playfanfare(MUS_OBTAIN_BADGE)
+    msgbox(format("You obtained the Gale Badge."))
+    special(DoDomeConfetti)
+    setflag(FLAG_BADGE01_GET)
+    // subquestmenu(QUEST_MENU_COMPLETE_QUEST, QUEST_POKEMON_LEAGUE, SUB_QUEST_GALE_BADGE)
+    msgbox(format("Also please take this TM"))
+    playfanfare(MUS_OBTAIN_ITEM)
+    giveitem(ITEM_TM51_PLUCK)
+    releaseall
+}
+
+//text scripts
+
+text MahoganyHillsGym_Gym_Leader_Intro {
+    format("Hi! My name is Jaiden! \n It seems you have come to fight.\n Be prepared to be gusted away by my Flying Types!")
+}
+
+text MahoganyHillsGym_Gym_Leader_Outro {
+    format("It appears you have the power of a tornado!")
+}
+
+text MahoganyHillsGym_Gym_Leader_PostBattle {
+    format("Good luck on getting the other badges, you'll be a champion in no time")
+}
+
+text MahoganyHillsGym_Andy_Intro {
+    format("I'm getting ready for the battle champion dojo!")
+}
+
+text MahoganyHillsGym_Andy_Outro {
+    format("Hawlucha no!")
+}
+
+text MahoganyHillsGym_Andy_PostbattleScript {
+    format("I'll have to keep training Hawlucha before the tournament starts.")
+}
+
+text MahoganyHillsGym_Ollie_Intro {
+    format("This gym is a great place for me to master the flying type")
+}
+
+text MahoganyHillsGym_Ollie_Outro {
+    format("Well that took the air out of my balloon")
+}
+
+text MahoganyHillsGym_Ollie_PostbattleScript {
+    format("I've learnt enough, time to learn about water pokemon")
+}
+
+text MahoganyHillsGym_Skye_Intro {
+    format("Welcome to Mahogany Hills Gym. You've got no chance against our leader Jaiden.")
+}
+
+text MahoganyHillsGym_Skye_Outro {
+    format("Oh maybe you do.")
+}
+
+text MahoganyHillsGym_Skye_PostbattleScript {
+    format("Jaiden comes from Peak City, they train the strongest flying type pokemon up there.")
+}
+
+text MahoganyHillsGym_Wright_Intro {
+    format("Have you ever been to Peak City?")
+}
+
+text MahoganyHillsGym_Wright_Outro {
+    format("It's meant to be amazing")
+}
+
+text MahoganyHillsGym_Wright_PostbattleScript {
+    format("I really can't wait to finally get to Peak City")
+}
+
+text GymXpDump_Intro {
+    format("Let's go then")
+}
+
+text GymXpDump_Outro {
+    format("Very good")
+}

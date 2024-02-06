@@ -346,7 +346,7 @@ static u16 GetRandomAlternateMove(u8 monId)
     learnset = gLevelUpLearnsets[species];
     j = 0;
 
-    if (PLAYER_APPRENTICE.lvlMode == APPRENTICE_LVL_MODE_50)
+        if (PLAYER_APPRENTICE.lvlMode == APPRENTICE_LVL_MODE_50)
         level = FRONTIER_MAX_LEVEL_50;
     else // == APPRENTICE_LVL_MODE_OPEN
         level = 60; // Despite being open level, level up moves are only read up to level 60
@@ -665,7 +665,7 @@ static void Task_ChooseAnswer(u8 taskId)
     case MENU_NOTHING_CHOSEN:
         return;
     case MENU_B_PRESSED:
-        // Only ever true. Answering Apprentice questions is required.
+// Only ever true. Answering Apprentice questions is required.
         if (tNoBButton)
             return;
 

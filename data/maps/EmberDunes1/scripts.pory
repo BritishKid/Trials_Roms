@@ -1,0 +1,77 @@
+mapscripts EmberDunes1_MapScripts {}
+
+script EmberDune_Conor_Battle {
+    trainerbattle_single(EMBERDUNE_CONOR, Conor_Intro, Conor_Outro)
+    msgbox(Conor_PostBattle, MSGBOX_AUTOCLOSE)
+    release
+}
+
+script EmberDune_Maniac_Battle {
+    trainerbattle_single(EMBERDUNE_MANIAC, Conor_Intro, Conor_Outro)
+    msgbox(Conor_PostBattle, MSGBOX_AUTOCLOSE)
+    release
+}
+
+script EmberDune_Jordan_AceTrainer {
+    trainerbattle_single(EMBERDUNE_JORDAN, Jordan_Intro, Jordan_Outro)
+    msgbox(Jordan_PostBattle, MSGBOX_AUTOCLOSE)
+    release
+}
+
+script EmberDune_Charr_AceTrainer {
+    trainerbattle_single(EMBERDUNE_CHARR, Charr_Intro, Charr_Outro)
+    msgbox(Charr_PostBattle, MSGBOX_AUTOCLOSE)
+    release
+}
+
+
+
+//text
+text DesertManiac_Intro {
+    format("I hope your ready because I've been training recently")
+}
+
+text DesertManiac_Outro {
+    format("Wow. I guess I need to get back to training")
+}
+
+text DesertManiac_PostBattle {
+    format("This is an amazing place to train.")
+}
+
+
+text Conor_Intro {
+    format("I hope your ready because I've been training recently")
+}
+
+text Conor_Outro {
+    format("Wow. I guess I need to get back to training")
+}
+
+text Conor_PostBattle {
+    format("This is an amazing place to train.")
+}
+
+text Jordan_Intro {
+    format("Well done for making it this far, but now your time ends")
+}
+
+text Jordan_Outro {
+    format("Seens you've bested me. Well done!")
+}
+
+text Jordan_PostBattle {
+    format("I'm going to follow the footsteps of a legendary trainer and become the very best")
+}
+
+text Charr_Intro {
+    format("Jordan is unstoppable, he trains so hard to be the best")
+}
+
+text Charr_Outro {
+    format("I didn't think he could lose!")
+}
+
+text Charr_PostBattle {
+    format("Jordan is going to keep training and we will beat you next time we see you.")
+}

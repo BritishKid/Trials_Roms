@@ -1,0 +1,67 @@
+mapscripts MahoganyHills_3_MapScripts {}
+
+
+script MahoganyHills3_EventScript_Darwin {
+    lockall
+    faceplayer
+    if(!flag(FLAG_CHOSE_FOSSIL)) {
+        msgbox(format("Oh hello. Are you interested in fossils to?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES) {
+            msgbox(format("That's brilliant here you should take one!"))
+            setvar(VAR_FIRST_FOSSIL_SELECTION, 1)
+        } else {
+            msgbox(format("Oh that's a shame. They are just fantastic."))
+        }
+    } else {
+        msgbox(format("Come find me and I'll revive that fossil for you."))
+    }
+    releaseall
+}
+
+script MahoganyHills3_EventScript_AnorithFossil {
+    lockall
+    if(!flag(FLAG_CHOSE_FOSSIL)) {
+        msgbox(format("Do you want to select the Claw fossil?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES) {
+            msgbox(format("{PLAYER} selected the Claw Fossil"))
+            giveitem(ITEM_CLAW_FOSSIL, 1)
+            setvar(VAR_FIRST_FOSSIL_SELECTION, 2)
+            setflag(FLAG_CHOSE_FOSSIL)
+            removeobject(2)
+        } else {
+            msgbox(format("Maybe not then"))
+        }
+    } else {
+        msgbox(format("I can't take both, that would be greedy"))
+    }
+    releaseall
+}
+
+script MahoganyHills3_EventScript_LileepFossil {
+    lockall
+    if(!flag(FLAG_CHOSE_FOSSIL)) {
+        msgbox(format("Do you want to select the Root fossil?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES) {
+            msgbox(format("{PLAYER} selected the Root Fossil"))
+            giveitem(ITEM_ROOT_FOSSIL, 1)
+            setvar(VAR_FIRST_FOSSIL_SELECTION, 3)
+            setflag(FLAG_CHOSE_FOSSIL)
+            removeobject(3)
+        } else {
+            msgbox(format("Maybe not then"))
+        }
+    } else {
+        msgbox(format("I can't take both, that would be greedy"))
+    }
+    releaseall
+}
+
+
+script Oshawott_Hidden_Grotto_Entrance {
+    if(flag(FLAG_CHOSE_FOSSIL)) {
+        msgbox(format("There seems to be a gap in the trees\nWould you like to squeeze through?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES) {
+            warp(MAP_OSHAWOTT_GROTTO, 10, 15)
+        }
+    }
+}

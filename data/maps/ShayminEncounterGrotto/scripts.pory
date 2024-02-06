@@ -1,0 +1,48 @@
+mapscripts ShayminEncounterGrotto_MapScripts {}
+
+script ShayminGrottoTriggerLeaving_DoesPlayerHaveGracideaFlower {
+    lockall
+    warp(MAP_SHAYMIN_GROTTO, 2, 1)
+    releaseall
+}
+
+
+script ShayminEncounter {
+    lockall
+    if(var(VAR_ROUTE_SHAYMIN_PROGRESS) == 1) {
+        settotemboost(1,1,1,1,1,1,1,1)
+        setwildbattle(SPECIES_SHAYMIN, 50, ITEM_SITRUS_BERRY) //todo create custom script to add custom moves
+        dowildbattle
+        settotemboost(1,1,1,1,1,1,1,1)
+        setwildbattle(SPECIES_SHAYMIN_SKY, 50, ITEM_YACHE_BERRY)
+        dowildbattle
+        setvar(VAR_ROUTE_SHAYMIN_PROGRESS, 2)
+    }
+    if(var(VAR_ROUTE_SHAYMIN_PROGRESS) == 2) {
+        givemon(SPECIES_SHAYMIN, 30)
+        playfanfare(MUS_OBTAIN_ITEM)
+        if (var(VAR_RESULT) == MON_GIVEN_TO_PARTY) {
+                msgbox("SHAYMIN JOINED YOUR PARTY")
+                call(NicknamePartyMon)
+            }
+            elif (var(VAR_RESULT) == MON_GIVEN_TO_PC) {
+                msgbox("SHAYMIN WENT INTO YOUR BOX")
+                call(NicknameBoxMonShaymin)
+            }
+            else {
+                msgbox(format("You don't have enough space. Come back and you get it soon."))
+        }
+        setvar(VAR_ROUTE_SHAYMIN_PROGRESS, 3)
+        setflag(FLAG_SHAYMIN_BEATEN)
+    }
+    releaseall
+}
+
+script NicknameBoxMonShaymin{
+    msgbox("Give it a nickname?", MSGBOX_YESNO)
+    hidemonpic
+    if(var(VAR_RESULT) == YES){
+        call(Common_EventScript_NameReceivedBoxMon)
+    }
+    call(Common_EventScript_TransferredToPC)
+}

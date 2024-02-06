@@ -1,0 +1,92 @@
+mapscripts ObsidianThicketGym_MapScripts {}
+
+
+script ObsidianThicket_GymGauntlet_BugTrainer {
+    trainerbattle_single(BUGTRAINER_MARK, BugTrainer_Mark_Intro, BugTrainer_Mark_Outro)
+    msgbox(Bugtrainer_Mark_PostBattle, MSGBOX_AUTOCLOSE)
+    end
+}
+
+script ObsidianThicket_GymGauntlet_Gentleman {
+    trainerbattle_single(GENTLEMAN_ARTHUR, GentlemanArthur_Intro, GentlemanArthur_Outro)
+    msgbox(GentlemanArthur_PostBattle, MSGBOX_AUTOCLOSE)
+    end
+}
+
+script ObsidianThicket_GymGauntlet_Lass {
+    trainerbattle_single(LASS_JESSICA, Lass_Jessica_Intro, Lass_Jessica_Outro)
+    msgbox(Lass_Jessica_PostBattle, MSGBOX_AUTOCLOSE)
+    end
+}
+
+script ObsidianThicket_Expert_Herbert {
+    trainerbattle_single(EXPERT_HERBERT, Expert_Herbert_Intro, Expert_Herbert_Outro)
+    msgbox(Expert_Herbert_PostBattle, MSGBOX_AUTOCLOSE)
+    end
+}
+
+script ObsidianThicket_Matron_Angela {
+    trainerbattle_single(MATRON_ANGELA, Matron_Angela_Intro, Matron_Angela_Outro)
+    msgbox(Matron_Angela_PostBattle, MSGBOX_AUTOCLOSE)
+    end
+}
+
+text BugTrainer_Mark_Intro {
+    format("TODO")
+}
+
+text BugTrainer_Mark_Outro {
+    format("TODO")
+}
+
+text Bugtrainer_Mark_PostBattle {
+    format("TODO")
+}
+
+text GentlemanArthur_Intro{
+    format("TODO")
+}
+
+text GentlemanArthur_Outro {
+    format("TODO")
+}
+
+text GentlemanArthur_PostBattle {
+    format("TODO")
+}
+
+text Lass_Jessica_Intro{
+    format("TODO")
+}
+
+text Lass_Jessica_Outro {
+    format("TODO")
+}
+
+text Lass_Jessica_PostBattle {
+    format("TODO")
+}
+
+text Expert_Herbert_Intro{
+    format("TODO")
+}
+
+text Expert_Herbert_Outro {
+    format("TODO")
+}
+
+text Expert_Herbert_PostBattle {
+    format("TODO")
+}
+
+text Matron_Angela_Intro{
+    format("TODO")
+}
+
+text Matron_Angela_Outro {
+    format("TODO")
+}
+
+text Matron_Angela_PostBattle {
+    format("TODO")
+}

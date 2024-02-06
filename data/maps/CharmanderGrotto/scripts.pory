@@ -1,0 +1,9 @@
+mapscripts CharmanderGrotto_MapScripts {}
+
+
+script LeavingCharmanderGrotto {
+    msgbox(format("Do you want to leave?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 1) { 
+        warp(MAP_ROUTE3B, 23, 5)
+    }
+}

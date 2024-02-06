@@ -672,7 +672,7 @@ const u32 *const gItemIconTable[ITEMS_COUNT + 1][2] =
     [ITEM_TM48] = {gItemIcon_TM, gItemIconPalette_PsychicTMHM},
     [ITEM_TM49] = {gItemIcon_TM, gItemIconPalette_DarkTMHM},
     [ITEM_TM50] = {gItemIcon_TM, gItemIconPalette_FireTMHM},
-    [ITEM_TM51] = {gItemIcon_TM, gItemIconPalette_NormalTMHM},  // Todo
+    [ITEM_TM51_PLUCK] = {gItemIcon_TM, gItemIconPalette_FlyingTMHM},  // Custom TM
     [ITEM_TM52] = {gItemIcon_TM, gItemIconPalette_NormalTMHM},  // Todo
     [ITEM_TM53] = {gItemIcon_TM, gItemIconPalette_NormalTMHM},  // Todo
     [ITEM_TM54] = {gItemIcon_TM, gItemIconPalette_NormalTMHM},  // Todo
@@ -844,6 +844,13 @@ const u32 *const gItemIconTable[ITEMS_COUNT + 1][2] =
     [ITEM_LINKING_CORD] = {gItemIcon_LinkingCord, gItemIconPalette_LinkingCord},
     [ITEM_PEAT_BLOCK] = {gItemIcon_PeatBlock, gItemIconPalette_PeatBlock},
     [ITEM_BERSERK_GENE] = {gItemIcon_BerserkGene, gItemIconPalette_BerserkGene},
+
+    //Custom Items
+    // [ITEM_LINK_STONE] = {gItemIcon_LeafStone, gItemIconPalette_LeafStone},
+    [ITEM_LEGENDS_PLATE] = {gItemIcon_IronPlate, gItemIconPalette_IronPlate},
+    [ITEM_HISTORY_BOOK] = {gItemIcon_Letter, gItemIconPalette_LavaCookieAndLetter},
+
+
     // Return to field arrow
     [ITEMS_COUNT] = {gItemIcon_ReturnToFieldArrow, gItemIconPalette_ReturnToFieldArrow},
 };

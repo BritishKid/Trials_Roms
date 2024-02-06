@@ -1,0 +1,42 @@
+mapscripts JokeMap_MapScripts {}
+
+
+script oldmanJoke {
+    lock
+    msgbox(format("THERE IS NO WAY OUT"))
+    fadescreen(FADE_TO_BLACK)
+    removeobject(1)
+    msgbox("YOU'RE HERE FOREVER")
+    fadescreen(FADE_FROM_BLACK)
+    release
+}
+
+script oldmanJoke2 {
+    lock
+    msgbox(format("No"))
+    fadescreen(FADE_TO_BLACK)
+    removeobject(2)
+    msgbox("NO MORE")
+    fadescreen(FADE_FROM_BLACK)
+    release
+}
+
+script grave1 {
+    lock
+    msgbox(format("It's the grave for your mother?"))
+    release
+}
+
+script grave2 {
+    lock
+    msgbox(format("Your father lies here?"))
+    release
+}
+
+script grave3 {
+    lock
+    msgbox(format("It's your grave?"))
+    fadescreen(FADE_TO_BLACK)
+    msgbox(format("..."))
+    release
+}

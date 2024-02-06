@@ -8,7 +8,7 @@
 #define MULTI_B_PRESSED  127
 
 // Multichoice Ids
-#define MULTI_BRINEY_ON_DEWFORD            0
+#define MULTI_NATURE_MINT_SELECTION        0 //Choose from all the nature mints
 #define MULTI_PC                           1 // Exit only, populated by CreatePCMultichoice
 #define MULTI_ENTERINFO                    2
 #define MULTI_CONTEST_INFO                 3

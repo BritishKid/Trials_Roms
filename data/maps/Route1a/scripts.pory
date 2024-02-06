@@ -1,0 +1,38 @@
+mapscripts Route1a_MapScripts {}
+
+script Route1a_GetSecret_Power {
+    lockall
+    if(!(flag(FLAG_RECEIVED_SECRET_POWER))) {
+            msgbox(format("Hey have you seen these trees all over the place? You can create secret bases inside them. \p It's illegal in most regions but we love doing it here."))
+            trainerbattle_single(TRAINER_RED_ROUTE_1A_FIRST, Red1a_Intro, Red1a_Outro, Red1a_Beaten)
+    }
+}
+
+text Red1a_Intro {
+    format("How about this, if you can beat me I'll teach you how to do it!")
+}
+
+text Red1a_Outro {
+    format("You're pretty tough, alright let me show you as I promised!")
+}
+
+script Red1a_Beaten {
+    msgbox(format("It's really easy just teach secret power to a pokemon then click on a tree like this and it'll open up. \p There are many other secret places you can make your base though, some are said to hide rare treasures"))
+    giveitem(ITEM_TM43)
+    playfanfare(MUS_OBTAIN_ITEM)
+    setflag(FLAG_RECEIVED_SECRET_POWER)
+    msgbox(format("Here take a desk to start decorating your house to!"))
+    givedecoration(DECOR_SMALL_DESK)
+    release
+}
+
+script EventScript_Route1a_LittleGirl {
+    lockall
+    if(!flag(FLAG_BEDROCK_RIVAL_HOUSE_RIVAL_BEATEN)) {
+        msgbox(format("Hi {PLAYER}! My brother was looking for you at home."))
+    }
+    else {
+        msgbox(format("My brother is going to be the best trainer ever!"))
+    }
+    releaseall
+}

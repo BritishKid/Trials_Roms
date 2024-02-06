@@ -1,0 +1,9 @@
+mapscripts MahogonyHill_SecretBase1_MapScripts {
+    
+}
+
+script MahogonyHills_PleaseSuggest {
+    lockall
+    msgbox(format("This is an empty hidden base, make a suggestion in the discord and I can add you here."))
+    releaseall
+}

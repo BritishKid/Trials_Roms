@@ -1,16 +1,16 @@
 {
   "map_sections": [
     {
-      "map_section": "MAPSEC_LITTLEROOT_TOWN",
-      "name": "LITTLEROOT TOWN",
+      "map_section": "MAPSEC_BEDROCK_TOWN",
+      "name": "BEDROCK TOWN",
       "x": 4,
       "y": 11,
       "width": 1,
       "height": 1
     },
     {
-      "map_section": "MAPSEC_OLDALE_TOWN",
-      "name": "OLDALE TOWN",
+      "map_section": "MAPSEC_CLAY_HAVEN",
+      "name": "CLAY HAVEN",
       "x": 4,
       "y": 9,
       "width": 1,
@@ -57,8 +57,8 @@
       "height": 1
     },
     {
-      "map_section": "MAPSEC_PETALBURG_CITY",
-      "name": "PETALBURG CITY",
+      "map_section": "MAPSEC_GRANITE_PEAK",
+      "name": "GRANITE PEAK",
       "x": 1,
       "y": 9,
       "width": 1,
@@ -89,8 +89,8 @@
       "height": 2
     },
     {
-      "map_section": "MAPSEC_FORTREE_CITY",
-      "name": "FORTREE CITY",
+      "map_section": "MAPSEC_CORAL_PORT",
+      "name": "SANDS COAST",
       "x": 12,
       "y": 0,
       "width": 1,
@@ -129,8 +129,8 @@
       "height": 2
     },
     {
-      "map_section": "MAPSEC_ROUTE_101",
-      "name": "ROUTE 101",
+      "map_section": "MAPSEC_MAHOGANY_HILLS",
+      "name": "MAHOGANY HILLS",
       "x": 4,
       "y": 10,
       "width": 1,
@@ -1708,6 +1708,14 @@
       "name": "TRAINER HILL",
       "x": 8,
       "y": 4,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "map_section": "MAPSEC_PLATEFALL_CAVE",
+      "name": "PLATEFALL CAVE",
+      "x": 0,
+      "y": 0,
       "width": 1,
       "height": 1
     }

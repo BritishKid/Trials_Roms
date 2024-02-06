@@ -1,0 +1,176 @@
+{
+  "id": "MAP_ROUTE4B",
+  "name": "Route4b",
+  "layout": "LAYOUT_ROUTE4B",
+  "music": "MUS_ROUTE104",
+  "region_map_section": "MAPSEC_ROUTE_4",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_NONE",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_DRAGON_LAKE",
+      "offset": 0,
+      "direction": "down"
+    },
+    {
+      "map": "MAP_SAND_CLIFF",
+      "offset": 36,
+      "direction": "left"
+    },
+    {
+      "map": "MAP_ROUTE4",
+      "offset": 15,
+      "direction": "up"
+    },
+    {
+      "map": "MAP_SAND_CLIFF",
+      "offset": 36,
+      "direction": "left"
+    }
+  ],
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MANIAC",
+      "x": 29,
+      "y": 2,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "OstrichPuppetBattleScript",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
+      "x": 32,
+      "y": 20,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "LihsirBattleScript",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ANABEL",
+      "x": 36,
+      "y": 23,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_ROUTE4B_SALTS_BEATEN"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_BLACK_BELT",
+      "x": 33,
+      "y": 38,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "4",
+      "script": "Route4_BlackbeltOda_BattleScript",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 21,
+      "y": 11,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EventScript_Route4_ItemBall_Ether",
+      "flag": "FLAG_ITEM_ROUTE_4_MAX_ETHER"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 1,
+      "y": 36,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 20,
+      "y": 1,
+      "elevation": 0,
+      "dest_map": "MAP_WATERFALL_CAVE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 29,
+      "y": 35,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE4_HOUSE",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 35,
+      "y": 16,
+      "elevation": 0,
+      "var": "VAR_SALTS7_QUEST_STATE",
+      "var_value": "1",
+      "script": "Route4b_Salt7_GyradosEncounterLeft"
+    },
+    {
+      "type": "trigger",
+      "x": 36,
+      "y": 16,
+      "elevation": 0,
+      "var": "VAR_SALTS7_QUEST_STATE",
+      "var_value": "1",
+      "script": "Route4b_Salt7_GyradosEncounterRight"
+    }
+  ],
+  "bg_events": [
+    {
+      "type": "secret_base",
+      "x": 41,
+      "y": 7,
+      "elevation": 0,
+      "secret_base_id": "SECRET_BASE_BROWN_CAVE4_1"
+    },
+    {
+      "type": "secret_base",
+      "x": 22,
+      "y": 14,
+      "elevation": 0,
+      "secret_base_id": "SECRET_BASE_TREE3_1"
+    },
+    {
+      "type": "secret_base",
+      "x": 23,
+      "y": 14,
+      "elevation": 0,
+      "secret_base_id": "SECRET_BASE_TREE3_2"
+    }
+  ]
+}

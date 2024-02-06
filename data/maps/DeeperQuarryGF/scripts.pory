@@ -1,0 +1,21 @@
+mapscripts DeeperQuarryGF_MapScripts {}
+
+
+script Trigger_Quarry_Entrance {
+    lockall
+    //Quarry Master/Worker comes out of the cave
+    
+    //notice the player and start speaking
+
+    //you shouldn't it very dangerous a giant pokemon has taken over the quarry its not safe right now
+
+    //play mon cry (need to change to orthenworm when we have added it)
+    playmoncry(SPECIES_STEELIX, CRY_MODE_ENCOUNTER)
+
+  //he  leaves
+
+    //set a variable for the state of the quarry
+    //set a flag to make all the workers invisible
+    //maybe start the quest
+    releaseall
+}

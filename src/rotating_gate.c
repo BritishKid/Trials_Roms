@@ -174,7 +174,7 @@ enum
 enum
 {
     PUZZLE_NONE,
-    PUZZLE_FORTREE_CITY_GYM,
+    PUZZLE_CORAL_PORT_GYM,
     PUZZLE_ROUTE110_TRICK_HOUSE_PUZZLE6,
 };
 
@@ -623,10 +623,10 @@ static EWRAM_DATA u8 sRotatingGate_PuzzleCount = 0;
 
 static s32 GetCurrentMapRotatingGatePuzzleType(void)
 {
-    if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(FORTREE_CITY_GYM) &&
-        gSaveBlock1Ptr->location.mapNum == MAP_NUM(FORTREE_CITY_GYM))
+    if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(CORAL_PORT_GYM) &&
+        gSaveBlock1Ptr->location.mapNum == MAP_NUM(CORAL_PORT_GYM))
     {
-        return PUZZLE_FORTREE_CITY_GYM;
+        return PUZZLE_CORAL_PORT_GYM;
     }
 
     if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ROUTE110_TRICK_HOUSE_PUZZLE6) &&
@@ -683,7 +683,7 @@ static void RotatingGate_LoadPuzzleConfig(void)
 
     switch (puzzleType)
     {
-    case PUZZLE_FORTREE_CITY_GYM:
+    case PUZZLE_CORAL_PORT_GYM:
         sRotatingGate_PuzzleConfig = sRotatingGate_FortreePuzzleConfig;
         sRotatingGate_PuzzleCount = ARRAY_COUNT(sRotatingGate_FortreePuzzleConfig);
         break;

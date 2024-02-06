@@ -1,0 +1,142 @@
+mapscripts Gym3_MapScripts {}
+
+script Hemlock_EventScript_GymLeader {
+    lockall
+    trainerbattle_single(TRAINER_KEVIN_GYMLEADER, HemlockGym_Kevin_Intro, HemlockGym_Kevin_Outro, HemlockGym_Kevin_PostbattleScript)
+    msgbox(HemlockGym_Kevin_Postbattle, MSGBOX_AUTOCLOSE)
+    releaseall
+}
+
+script HemlockGym_Kevin_PostbattleScript {
+    msgbox(format("Fantastic! You're well on your way to becoming a champion.")) //todo change
+    playfanfare(MUS_OBTAIN_BADGE)
+    msgbox(format("You obtained the Hemlock Badge."))
+    special(DoDomeConfetti)
+    // subquestmenu(QUEST_MENU_COMPLETE_QUEST, QUEST_POKEMON_LEAGUE, SUB_QUEST_PALOS_BADGE)
+    setflag(FLAG_BADGE03_GET)
+    msgbox(format("Also please take this TM it contains Sludge Bomb"))
+    playfanfare(MUS_OBTAIN_ITEM)
+    giveitem(ITEM_TM36)
+    releaseall
+}
+
+script Gym3_EventScript_Greeter {
+    lockall
+    msgbox(format("Yo champ in the making! This gym specialises in Poison types. Ground and Psychic is the best way to take them out"))
+    if(!flag(FLAG_BADGE03_GET) && flag(FLAG_LEVEL_CAPS)) {
+        msgbox(format("Are you interested in getting some fast levels?"), MSGBOX_YESNO)
+         if(var(VAR_RESULT) == YES) {
+                trainerbattle_no_intro(GYM_XP_DUMP, GymXpDump_Outro)
+         }
+    }
+    releaseall
+}
+
+script Hemlock_EventScript_Tessa {
+    lockall
+    trainerbattle_single(TRAINER_TESSA_GYM3, HemlockGym_Tessa_Intro, HemlockGym_Tessa_Outro)
+    msgbox(HemlockGym_Tessa_Postbattle, MSGBOX_AUTOCLOSE)
+    releaseall
+}
+
+script Hemlock_EventScript_Pablo {
+    lockall
+    trainerbattle_single(TRAINER_PABLO_GYM3, HemlockGym_Pablo_Intro, HemlockGym_Pablo_Outro)
+    msgbox(HemlockGym_PabloPostbattle, MSGBOX_AUTOCLOSE)
+    releaseall
+}
+
+script Hemlock_EventScript_Victor {
+    lockall
+    trainerbattle_single(TRAINER_VICTOR_GYM3, HemlockGym_Victor_Intro, HemlockGym_Victor_Outro)
+    msgbox(HemlockGym_Victor_Postbattle, MSGBOX_AUTOCLOSE)
+    releaseall
+}
+
+script Hemlock_EventScript_Chloe {
+    lockall
+    trainerbattle_single(TRAINER_CHLOE_GYM3, HemlockGym_Chloe_Intro, HemlockGym_Chloe_Outro)
+    msgbox(HemlockGym_Chloe_Postbattle, MSGBOX_AUTOCLOSE)
+    releaseall
+}
+
+script Hemlock_EventScript_Ollie {
+    lockall
+    trainerbattle_single(TRAINER_OLLIE_GYM3, HemlockGym_Ollie_Intro, HemlockGym_Ollie_Outro)
+    msgbox(HemlockGym_Ollie_Postbattle, MSGBOX_AUTOCLOSE)
+    releaseall
+}
+
+//text
+
+text HemlockGym_Ollie_Intro {
+    format("Poison pokemon are just incredible")
+}
+
+text HemlockGym_Ollie_Outro {
+    format("They got nothing on my steelix")
+}
+
+text HemlockGym_Ollie_Postbattle {
+    format("Time to go learn about ground pokemon")
+}
+
+text HemlockGym_Chloe_Intro {
+    format("TODO INTRO")
+}
+
+text HemlockGym_Chloe_Outro {
+    format("TODO OUTRO")
+}
+
+text HemlockGym_Chloe_Postbattle {
+    format("TODO OUTRO")
+}
+
+text HemlockGym_Kevin_Intro {
+    format("TODO INTRO")
+}
+
+text HemlockGym_Kevin_Outro {
+    format("TODO OUTRO")
+}
+
+text HemlockGym_Kevin_Postbattle {
+    format("TODO OUTRO")
+}
+
+text HemlockGym_Tessa_Intro {
+    format("TODO INTRO")
+}
+
+text HemlockGym_Tessa_Outro {
+    format("TODO OUTRO")
+}
+
+text HemlockGym_Tessa_Postbattle {
+    format("TODO OUTRO")
+}
+
+text HemlockGym_Pablo_Intro {
+    format("TODO INTRO")
+}
+
+text HemlockGym_Pablo_Outro {
+    format("TODO OUTRO")
+}
+
+text HemlockGym_PabloPostbattle {
+    format("TODO OUTRO")
+}
+
+text HemlockGym_Victor_Intro {
+    format("TODO INTRO")
+}
+
+text HemlockGym_Victor_Outro {
+    format("TODO OUTRO")
+}
+
+text HemlockGym_Victor_Postbattle {
+    format("TODO OUTRO")
+}

@@ -1,0 +1,92 @@
+mapscripts Nathans_Hidden_Base_MapScripts {}
+
+script Nathans_Computer {
+    lockall
+    msgbox(format("Thank you to Nathan for watching the streams and helping create the game!"))
+    releaseall
+}
+
+script Battle_NathanSecretBase {
+    if(!(flag(FLAG_NATHAN_BEATEN))) {
+        trainerbattle_single(TRAINER_NATHAN_ROUTE_1B_SECRET_BASE, Nathan_Intro, Nathan_Outro, Nathan_Beaten)
+    }
+    if(flag(FLAG_NATHAN_BEATEN) && !flag(FLAG_NATHAN_GAVE_DWEBBLE)){
+        call(Nathan_Gives_Dwebble)
+    }
+    if(flag(FLAG_NATHAN_BEATEN) && flag(FLAG_NATHAN_GAVE_DWEBBLE)) {
+        msgbox(PostBattle_Nathan, MSGBOX_AUTOCLOSE)
+        //add a tough rematch with nathan defining it
+    }
+    release
+    waitmessage
+    end
+}
+
+script Nathan_Beaten {
+    msgbox(Beat_Nathan, MSGBOX_AUTOCLOSE)
+    setflag(FLAG_NATHAN_BEATEN)
+    call(Nathan_Gives_Dwebble)
+    release
+}
+
+script NicknamePartyMon1b{
+    msgbox("Give it a nickname?", MSGBOX_YESNO)
+    hidemonpic
+    if(var(VAR_RESULT) == YES){
+        call(Common_EventScript_GetGiftMonPartySlot)
+        call(Common_EventScript_NameReceivedPartyMon)
+    }
+}
+
+script Nathan_Gives_Dwebble {
+    lock
+    showmonpic(SPECIES_DWEBBLE, 10, 3)
+    givemon(SPECIES_DWEBBLE, 5)
+    setflag(FLAG_NATHAN_GAVE_DWEBBLE)
+    playfanfare(MUS_OBTAIN_ITEM)
+    if (var(VAR_RESULT) == MON_GIVEN_TO_PARTY) {
+            msgbox("Recieved Dwebble")
+            call(NicknamePartyMon)
+        }
+        elif (var(VAR_RESULT) == MON_GIVEN_TO_PC) {
+            msgbox("Recieved Dwebble")
+            call(NicknameBoxMon)
+        }
+        else {
+            hidemonpic
+            msgbox(format("You don't have enough space. Come back and you get it soon."))
+    }
+}
+
+
+script Nathans_Hidden_Base_EventScript_Find_ChikoritaDoll {
+    lockall
+    if (!flag(FLAG_HIDDEN_BASE_COLLECTABLE_FOUND_GULPIN)) {
+        msgbox(format("It's Nathan's Gulpin Doll"))
+        adddecoration(DECOR_GULPIN_DOLL)
+        setflag(FLAG_HIDDEN_BASE_COLLECTABLE_FOUND_GULPIN)
+        // subquestmenu(QUEST_MENU_COMPLETE_QUEST, QUEST_POKEMON_LEAGUE, SUB_QUEST_GULPIN_DOLL)
+        msgbox(format("You've unlocked the CHIKORITA Doll for your secret base"))
+    }
+    else {
+        msgbox(format("It's Nathan's Gulpin Doll"))
+    }
+    releaseall
+}
+
+//text scripts
+text Nathan_Intro {
+    format("I found this pokemon in a far away land! It's so cool.")
+}
+
+text Nathan_Outro {
+    format("How did you manage that?")
+}
+
+text Beat_Nathan {
+    format("That was amazing, here have one yourself")
+}
+
+text PostBattle_Nathan {
+    format("I love Dwebble and Crustle. They are amazing.")
+}

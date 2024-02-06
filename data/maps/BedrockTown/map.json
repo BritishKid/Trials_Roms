@@ -1,0 +1,123 @@
+{
+  "id": "MAP_BEDROCK_TOWN",
+  "name": "BedrockTown",
+  "layout": "LAYOUT_BEDROCK_TOWN",
+  "music": "MUS_LITTLEROOT",
+  "region_map_section": "MAPSEC_BEDROCK_TOWN",
+  "requires_flash": false,
+  "weather": "WEATHER_SUNNY",
+  "map_type": "MAP_TYPE_TOWN",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_ROUTE1A",
+      "offset": 9,
+      "direction": "up"
+    }
+  ],
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 5,
+      "y": 3,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "BedrockTown_EventScript_ItemPokeBall",
+      "flag": "FLAG_BEDROCK_TOWN_POKEBALL"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_OLD_MAN",
+      "x": 17,
+      "y": 7,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 5,
+      "movement_range_y": 4,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "BedrockTown_EventScript_OldMan",
+      "flag": "0"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 9,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_LITTLEROOT_TOWN_MAYS_HOUSE_1F",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 11,
+      "y": 14,
+      "elevation": 0,
+      "dest_map": "MAP_PLAYERS_HOUSE_GF",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 21,
+      "y": 16,
+      "elevation": 0,
+      "dest_map": "MAP_BEDROCK_TOWN_PROFESSOR_HOLLY_LAB",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 19,
+      "y": 13,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "BedrockTown_EventScript_TownSign"
+    },
+    {
+      "type": "sign",
+      "x": 22,
+      "y": 17,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "BedrockTown_EventScript_HollyLabSign"
+    },
+    {
+      "type": "sign",
+      "x": 13,
+      "y": 14,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "BedrockTown_EventScript_PlayersHouse"
+    },
+    {
+      "type": "secret_base",
+      "x": 26,
+      "y": 5,
+      "elevation": 0,
+      "secret_base_id": "SECRET_BASE_TREE1_1"
+    },
+    {
+      "type": "secret_base",
+      "x": 27,
+      "y": 5,
+      "elevation": 0,
+      "secret_base_id": "SECRET_BASE_TREE4_1"
+    },
+    {
+      "type": "secret_base",
+      "x": 7,
+      "y": 3,
+      "elevation": 0,
+      "secret_base_id": "SECRET_BASE_RED_CAVE4_1"
+    }
+  ]
+}

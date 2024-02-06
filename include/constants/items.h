@@ -730,7 +730,7 @@
 #define ITEM_TM48 629
 #define ITEM_TM49 630
 #define ITEM_TM50 631
-#define ITEM_TM51 632
+#define ITEM_TM51_PLUCK 632 //Custom TMs start herez
 #define ITEM_TM52 633
 #define ITEM_TM53 634
 #define ITEM_TM54 635
@@ -914,7 +914,12 @@
 #define ITEM_PEAT_BLOCK 797
 #define ITEM_BERSERK_GENE 798
 
-#define ITEMS_COUNT 799
+//Adding in a custom item
+#define ITEM_LINK_STONE 799
+#define ITEM_LEGENDS_PLATE 800
+#define ITEM_HISTORY_BOOK 801
+
+#define ITEMS_COUNT 802
 #define ITEM_FIELD_ARROW ITEMS_COUNT
 
 // A special item id associated with "Cancel"/"Exit" etc. in a list of items or decorations

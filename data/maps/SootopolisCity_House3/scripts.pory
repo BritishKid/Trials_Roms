@@ -1,0 +1,29 @@
+mapscripts SootopolisCity_House3_MapScripts {}
+
+script SootopolisCity_House3_EventScript_Woman {
+    lock
+    faceplayer()
+    setvar(VAR_JOKES, 1)
+    msgbox(format("Oh you're finally here. Fantastic"))
+    msgbox(format("Now we can finally begin, let me set up the camera."))
+    msgbox(format("Go make yourself comfortable on the sofa and we will be over."))
+    release
+}
+
+script SofaJoke {
+    lock
+    applymovement(1, MoveToSofaJoke)
+    waitmovement(1)
+    msgbox(format("Okay ignore the camera and just do your thing"))
+    fadescreen(FADE_TO_BLACK)
+    msgbox(format("A respectable amount of time later"))
+    fadescreen(FADE_FROM_BLACK)
+    msgbox(format("Feel free to take a nap to get your energy back you're going to need it"))
+    fadescreen(FADE_TO_BLACK)
+    warp(MAP_MAHOGANY_HILLS_1, 17, 10)
+    release
+}
+
+movement MoveToSofaJoke {
+    walk_up
+}

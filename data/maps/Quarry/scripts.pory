@@ -1,0 +1,8 @@
+mapscripts Quarry_MapScripts {}
+
+
+script DeeperQuarrySign {
+    lockall
+    msgbox("WARNING: QUARRY WORK CLOSED TILL FURTHER NOTICE\n POKEMON HAVE BEEN DAMAGING MACHINERY")
+    releaseall
+}

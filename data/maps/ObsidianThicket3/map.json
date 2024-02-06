@@ -1,0 +1,40 @@
+{
+  "id": "MAP_OBSIDIAN_THICKET3",
+  "name": "ObsidianThicket3",
+  "layout": "LAYOUT_OBSIDIAN_THICKET3",
+  "music": "MUS_ABANDONED_SHIP",
+  "region_map_section": "MAPSEC_NONE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_ROUTE",
+  "allow_cycling": true,
+  "allow_escaping": true,
+  "allow_running": true,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_OBSIDIAN_THICKET2",
+      "offset": 0,
+      "direction": "up"
+    }
+  ],
+  "object_events": [
+
+  ],
+  "warp_events": [
+    {
+      "x": 13,
+      "y": 22,
+      "elevation": 0,
+      "dest_map": "MAP_OBSIDIAN_PATH",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ]
+}

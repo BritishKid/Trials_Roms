@@ -7,6 +7,7 @@
 #define gPaletteFade_submode          (gPaletteFade.multipurpose2) // fast fade
 
 #define PLTT_BUFFER_SIZE (PLTT_SIZE / sizeof(u16))
+#define PLTT_DECOMP_BUFFER_SIZE (PLTT_BUFFER_SIZE * 2)
 
 #define PALETTE_FADE_STATUS_DELAY 2
 #define PALETTE_FADE_STATUS_ACTIVE 1

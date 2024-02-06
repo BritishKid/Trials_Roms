@@ -1,0 +1,60 @@
+mapscripts CreepyForest2_MapScripts {}
+
+script hauntedGirlStep3 {
+    lockall
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_PlayerSurprisedRight_HauntedWoods)
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+    delay(30)
+    applymovement(1, Movement_CreepyGirlShock_FaceLeft)
+    waitmovement(1)
+    delay(30)    
+    call(creepygirlendingarea2)
+    releaseall
+}
+
+script creepygirlendingarea2 {
+    delay(30)    
+    applymovement(1, Movement_CreepygirlDirectionPoint_Up)
+    waitmovement(1)
+    delay(60)
+    removeobject(1)
+    fadescreen(FADE_TO_BLACK)
+    msgbox("LEAVE! HE WILL TAKE YOU TO")
+    setflag(FLAG_CREEPY_WOODS_1)
+    fadescreen(FADE_FROM_BLACK)
+    setvar(VAR_CREEPY_WOODS_STATE, 2)
+    releaseall
+}
+
+script hauntedGirlStep4 {
+    lockall
+    specialvar(VAR_RESULT, GetPlayerFacingDirection) //check which direction the player is facing
+    if(var(VAR_RESULT) == 5) {
+        fadescreen(FADE_TO_BLACK)
+        msgbox("HE WILL SEND THEM TO PROTECT ME")
+        setwildbattle(SPECIES_DRIFLOON, 35, ITEM_SITRUS_BERRY, SPECIES_DRIFLOON, 35, ITEM_SITRUS_BERRY)
+        call(doWildbattleCreepy)
+        clearflag(FLAG_CREEPY_WOODS_1)
+        // warp(MAP_CREEPY_FOREST3, 1, 10)
+    }
+    releaseall
+}
+
+script doWildbattleCreepy {
+    dowildbattle
+}
+
+##movement scripts
+movement Movement_PlayerSurprisedRight_HauntedWoods {
+    face_right
+    emote_question_mark
+}
+
+movement Movement_CreepyGirlShock_FaceLeft {
+    face_left
+    emote_exclamation_mark
+}
+
+movement Movement_CreepygirlDirectionPoint_Up {
+    face_up
+}

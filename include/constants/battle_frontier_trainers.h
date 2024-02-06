@@ -1,6 +1,14 @@
 #ifndef GUARD_CONSTANTS_BATTLE_FRONTIER_TRAINERS_H
 #define GUARD_CONSTANTS_BATTLE_FRONTIER_TRAINERS_H
 
+// #define SCHOOL_TRAINER_KIT              0
+// #define SCHOOL_TRAINER_SANCHO           1
+// #define SCHOOL_TRAINER_RICK             2
+// #define SCHOOL_TRAINER_ALEX             3
+// #define SCHOOL_TRAINER_DYLAN            4
+// #define SCHOOL_TRAINER_MATIAS           5
+// #define SCHOOL_TRAINER_TOM_B            6
+// #define SCHOOL_TRAINER_JACK             7
 #define FRONTIER_TRAINER_BRADY          0
 #define FRONTIER_TRAINER_CONNER         1
 #define FRONTIER_TRAINER_BRADLEY        2
@@ -8,13 +16,13 @@
 #define FRONTIER_TRAINER_RODETTE        4
 #define FRONTIER_TRAINER_PEGGY          5
 #define FRONTIER_TRAINER_KEITH          6
-#define FRONTIER_TRAINER_GRAYSON        7
+#define FRONTIER_TRAINER_GRAYSON        7 
 #define FRONTIER_TRAINER_GLENN          8
 #define FRONTIER_TRAINER_LILIANA        9
 #define FRONTIER_TRAINER_ELISE          10
 #define FRONTIER_TRAINER_ZOEY           11
 #define FRONTIER_TRAINER_MANUEL         12
-#define FRONTIER_TRAINER_RUSS           13
+#define FRONTIER_TRAINER_RUSS           13 // here
 #define FRONTIER_TRAINER_DUSTIN         14
 #define FRONTIER_TRAINER_TINA           15
 #define FRONTIER_TRAINER_GILLIAN1       16

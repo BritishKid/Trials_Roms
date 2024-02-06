@@ -1,0 +1,36 @@
+mapscripts ClayHaven_House3_MapScripts {
+}
+
+
+script Town2_EventScript_QuestStart {
+    lockall
+    faceplayer
+    if(var(VAR_TOWN_2_QUEST_STATE) == 0) {
+        msgbox(format("Have you seen my daughter? She should be back by now. \p She went down to Mahogany Hills to train her pokemon. I hope she is okay."))
+        msgbox(format("If you find her can you tell her to come back, I'm starting to worry."))
+        // questmenu(QUEST_MENU_SET_ACTIVE, QUEST_LOST_GIRL)
+        setvar(VAR_TOWN_2_QUEST_STATE, 1)
+    } 
+    if(var(VAR_TOWN_2_QUEST_STATE) == 1) {
+        msgbox(format("If you find her can you tell her to come back, I'm starting to worry."))
+    }
+    if (var(VAR_TOWN_2_QUEST_STATE) == 2) {
+        msgbox(format("Thank you for your help. She told me everything, she was lucky you found here."))
+        msgbox(format("Please take this as a thank you, it might help"))
+        special(DoDomeConfetti)
+        giveitem(ITEM_MYSTIC_WATER)
+        playfanfare(MUS_OBTAIN_ITEM)
+        setvar(VAR_TOWN_2_QUEST_STATE, 3)
+        // questmenu(QUEST_MENU_COMPLETE_QUEST, QUEST_LOST_GIRL)
+    }
+    if (var(VAR_TOWN_2_QUEST_STATE) == 3) {
+        msgbox(format("It'll be a while till I let her go out alone again.."))
+    }
+    releaseall
+}
+
+script Town2_House3_EventScript_Girl {
+    lockall
+    msgbox(format("Thank you for saving me."))
+    releaseall
+}

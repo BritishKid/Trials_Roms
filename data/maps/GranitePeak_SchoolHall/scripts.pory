@@ -1,0 +1,317 @@
+mapscripts GranitePeak_SchoolHall_MapScripts {
+	MAP_SCRIPT_ON_FRAME_TABLE [
+        VAR_CURRENT_SCHOOL_TOURNAMENT_STATE, 1: GranitePeak_BattleDomeLobby_EventScript_BeatChallenge //if player wins come back and run this script
+		VAR_SCHOOL_TEAM_RESET, 5: GranitePeak_BattleDomeLobby_EventScript_LostChallenge //if player loser and comes back run this script
+	]
+}
+
+script GranitePeak_BattleDomeLobby_EventScript_BeatChallenge {
+    lockall
+    turnobject(OBJ_EVENT_ID_PLAYER, DIR_NORTH)
+    setvar(VAR_CURRENT_SCHOOL_TOURNAMENT_STATE, 0) //Reset so you can redo challenge
+    msgbox(format("Congratulations you managed to beat the others! It was incredible to watch."))
+    // special(LoadPlayerParty) //should reload party
+    setvar(VAR_SCHOOL_TEAM_RESET, 0)
+	// setvar(VAR_0x8004, FRONTIER_UTIL_FUNC_SET_PARTY_ORDER)
+	// setvar(VAR_0x8005, FRONTIER_PARTY_SIZE)
+	// special (CallFrontierUtilFunc)
+	// frontier_checkairshow
+	// special(LoadPlayerParty)
+	// special(HealPlayerParty)
+    if(flag(FLAG_TRAINER_TOURNAMENT_WON)) { //repeatable rewards
+        addmoney(5000)
+        msgbox("Select your prize!")
+        waitmessage()
+        multichoice(21, 6, MULTI_NATURE_MINT_SELECTION, TRUE)
+        switch(var(VAR_RESULT)) {
+            case 0: goto(School_AdamantMint)
+            case 1: goto(School_BoldMint)
+            case 2: goto(School_ModestMint)
+            case 3: goto(School_CalmMint)
+            case 4: goto(School_TimidMint)
+            case 5: goto(School_JollyMint)
+        }
+    }
+    if(!flag(FLAG_TRAINER_TOURNAMENT_WON)) { //runs the first time
+        setflag(FLAG_TRAINER_TOURNAMENT_WON)
+        msgbox(format("For you success in the tournament take this trophy!"))
+        givedecoration(DECOR_SILVER_SHIELD)
+        // subquestmenu(QUEST_MENU_COMPLETE_QUEST, QUEST_POKEMON_LEAGUE, SUB_QUEST_SCHOOL_TOURNAMENT)
+        // questmenu(QUEST_MENU_COMPLETE_QUEST, QUEST_SCHOOL_TOURNAMENT)
+        addmoney(7500)
+        msgbox("Select your prize!")
+        waitmessage()
+        multichoice(21, 6, MULTI_NATURE_MINT_SELECTION, TRUE)
+        switch(var(VAR_RESULT)) {
+            case 0: goto(School_AdamantMint)
+            case 1: goto(School_BoldMint)
+            case 2: goto(School_ModestMint)
+            case 3: goto(School_CalmMint)
+            case 4: goto(School_TimidMint)
+            case 5: goto(School_JollyMint)
+        }
+    }
+    releaseall
+    end
+}
+
+script GranitePeak_BattleDomeLobby_EventScript_LostChallenge {
+	lockall
+	setvar(VAR_SCHOOL_TEAM_RESET, 0)
+	turnobject(OBJ_EVENT_ID_PLAYER, DIR_NORTH)
+	msgbox(format("Nice try better luck next time"))
+	// special(LoadPlayerParty) //should reload party
+	setvar(VAR_0x8004, FRONTIER_UTIL_FUNC_SET_PARTY_ORDER)
+	setvar(VAR_0x8005, FRONTIER_PARTY_SIZE)
+	special (CallFrontierUtilFunc)
+	// frontier_setpartyorder FRONTIER_PARTY_SIZE
+	frontier_checkairshow
+	// dome_set DOME_DATA_WIN_STREAK_ACTIVE, FALSE	we not going win streaks
+	// dome_set DOME_DATA_ATTEMPTED_CHALLENGE, TRUE
+	// special(LoadPlayerParty)
+	special(HealPlayerParty)
+// BattleFrontier_BattleDomeLobby_EventScript_AskRecordBattle::
+// 	dome_save 0
+// 	playse SE_SAVE
+// 	waitse
+// 	call BattleFrontier_EventScript_GetCantRecordBattle
+	// goto_if_eq VAR_RESULT, TRUE, BattleFrontier_BattleDomeLobby_EventScript_EndChallenge
+	// setvar VAR_TEMP_0, 255
+	// message BattleFrontier_BattleDomeLobby_Text_RecordLastMatch
+	// waitmessage
+	// multichoicedefault 20, 8, MULTI_YESNO, 1, FALSE
+	// switch VAR_RESULT
+	// case 1, BattleFrontier_BattleDomeLobby_EventScript_EndChallenge
+	// case 0, BattleFrontier_BattleDomeLobby_EventScript_RecordBattle
+	// case MULTI_B_PRESSED, BattleFrontier_BattleDomeLobby_EventScript_EndChallenge
+	releaseall
+	end
+}
+
+script GranitePeakEvolutionClassroomDoor {
+    lockall
+    msgbox(format("Evolution Class"))
+    msgbox(format("Do you want to enter?"), MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES) {
+        warp(MAP_GRANITE_PEAK_SCHOOL_EVOLUTION_CLASS, 5, 10)
+    }
+    releaseall
+}
+
+script GranitePeakItemsClassroomDoor {
+    lockall
+    msgbox(format("Items Class"))
+    msgbox(format("Do you want to enter?"), MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES) {
+        warp(MAP_GRANITE_PEAK_SCHOOL_ITEMS_CLASS, 5, 10)
+    }
+    releaseall
+}
+
+script GranitePeakMovesClassroomDoor {
+    lockall
+    msgbox(format("Moves Class"))
+    msgbox(format("Do you want to enter?"), MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES) {
+        warp(MAP_GRANITE_PEAK_SCHOOL_MOVES, 5, 10)
+    }
+    releaseall
+}
+
+script GranitePeakAbilitiesClassroomDoor {
+    lockall
+    msgbox(format("Abilities Class"))
+    msgbox(format("Do you want to enter?"), MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES) {
+        warp(MAP_GRANITE_PEAK_SCHOOL_ABILITIES_CLASS, 5, 10)
+    }
+    releaseall
+}
+
+script Petalburgcity_School_Enter_Right {
+    lockall
+    msgbox(format("So many amazing trainer came from this school, just look at all the names that have won the school pokemon tournament."))
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_MovePlayerLeftOnce)
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+    call(PetaburgCity_School_Mat_TrophyCase)
+    releaseall
+}
+
+script Petalburgcity_School_Enter_Left {
+    lockall
+    msgbox(format("So many amazing trainer came from this school, just look at all the names that have won the school pokemon tournament."))
+    call(PetaburgCity_School_Mat_TrophyCase)
+    releaseall
+}
+
+script PetaburgCity_School_Mat_TrophyCase {
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_MovePlayerToMat)
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+    applymovement(1, Movement_MatFaceDown)
+    waitmovement(1)
+    msgbox(format("One day my name will be on there!"))
+    msgbox(format("Hi I'm Mat and I'm going to become the very best!"))
+    applymovement(1, Movement_MatExclamation)
+    waitmovement(1)
+    msgbox(format("Oh you're a trainer. Let me show you how good the future school champion will be."))
+    trainerbattle_single(TRAINER_SCHOOLHALL_MAT1, Mat_Intro, Mat_Outro, Mat_Beaten)
+}
+
+script Mat_Beaten {
+    msgbox(format("I still have a lot to learn but this school is meant to be the best place to learn."))
+    msgbox(format("If I complete all four classes and get the four patches I can take part and win the school tournament."))
+    msgbox(format("Let's get going!"))
+    applymovement(1, Movement_MatIntoMoveRoom)
+    waitmovement(1)
+    removeobject(1)
+    setflag(FLAG_HIDE_MAT_SCHOOL_HALL)
+    setflag(FLAG_HIDE_MOVES_ROOM)
+    setvar(VAR_ENTERED_SCHOOL, 1)
+    // questmenu(QUEST_MENU_SET_ACTIVE, QUEST_SCHOOL_TOURNAMENT)
+}
+
+script GranitePeak_School_TrophyCase {
+    lockall
+    msgbox(format("It's the Petalburg School Trainer Trophy."))
+    msgbox(format("It's got all the previous winners etched into it..."))
+    msgbox(format("Pulsar"))
+    //check if the player has won the tournament their name can go on aswell
+    releaseall
+}
+
+script GranitePeak_School_TournamentTeacher_Hallway {
+    lock
+    faceplayer
+    if(flag(FLAG_ABILITY_PATCH_EARNT) && flag(FLAG_EVOLUTION_PATCH_EARNT) 
+    && flag(FLAG_MOVE_PATCH_EARNT) && flag(FLAG_ITEM_PATCH_EARNT)) {
+        msgbox(format("Oh fantastic you've completed all the classes and take part in the tournament"))
+        msgbox(format("Would you like to take part in the tournament?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES) {
+            //add a check for number of pokemon in party
+                getpartysize
+                if(var(VAR_RESULT) <= DOME_BATTLE_PARTY_SIZE) {
+                    setvar(VAR_FRONTIER_FACILITY, FRONTIER_FACILITY_DOME) //this is where we set the frontier to use the facility dome rules, this is the tournament structure
+                    setvar(VAR_FRONTIER_BATTLE_MODE, FRONTIER_MODE_SINGLES) //only one option so may not need these could hardcode or remove checks
+                    goto(GranitePeak_BattleDomeLobby_EventScript_AttendantWelcome)
+                    
+                }
+                else {
+                    msgbox(format("You can't enter with more than 3 Pokemon"))
+
+                }
+        } 
+        else {
+            msgbox(format("Maybe another time then"))
+        }
+    }
+    else {
+        msgbox(format("If you would like to join the school tournament you will need to complete all the classes first"))
+    }
+    release
+    end
+}
+
+script GranitePeak_BattleDomeLobby_EventScript_AttendantWelcome {
+        // special(SavePlayerParty) //saves the party which can be used to load back at the end
+	    call(GranitePeak_BattleDomeLobby_EventScript_TryEnterChallenge)
+}
+
+script GranitePeak_BattleDomeLobby_EventScript_TryEnterChallenge {
+    //could add other information from previous function
+	setvar(VAR_0x8004, FRONTIER_UTIL_FUNC_SET_DATA)
+	setvar(VAR_0x8005, FRONTIER_DATA_LVL_MODE) //choose which level
+	setvar(VAR_0x8006, FRONTIER_LVL_50) //set level of  we are hard coding to "50" but its actually 22
+	special(CallFrontierUtilFunc) //set everything up 
+    call(GranitePeak_BattleDomeLobby_EventScript_SaveBeforeChallenge)
+}
+
+script GranitePeak_BattleDomeLobby_EventScript_SaveBeforeChallenge {
+    setvar(VAR_TEMP_0, 0)
+	dome_init //
+    // special(LoadPlayerParty)
+    closemessage
+    delay(2) //we dont save do we want to?
+    setvar(VAR_TEMP_0, 255)
+    dome_inittrainers //creates trainers being used
+    call(GranitePeak_BattleDomeLobby_EventScript_EnterChallenge)
+}
+
+script GranitePeak_BattleDomeLobby_EventScript_EnterChallenge {
+    // special(SavePlayerParty)
+    dome_settrainers //picks trainers that are getting used
+    // special(HealPlayerParty)
+	warp(MAP_GRANITE_PEAK_TOURNAMENT_WAITING_ROOM, 6, 8) //teleport to waiting room
+	setvar(VAR_TEMP_0, 0)
+	waitstate
+	end
+}
+
+script School_AdamantMint {
+    giveitem(ITEM_ADAMANT_MINT)
+    releaseall
+    return
+}
+
+script School_BoldMint {
+    giveitem(ITEM_BOLD_MINT)
+    releaseall
+    return
+}
+
+script School_ModestMint {
+    giveitem(ITEM_MODEST_MINT)
+    releaseall
+    return
+}
+
+script School_CalmMint {
+    giveitem(ITEM_CALM_MINT)
+    releaseall
+    return
+}
+
+script School_TimidMint {
+    giveitem(ITEM_TIMID_MINT)
+    releaseall
+    return
+}
+
+script School_JollyMint {
+    giveitem(ITEM_JOLLY_MINT)
+    releaseall
+    return
+}
+
+//movement scripts
+
+movement Movement_MatExclamation {
+    emote_exclamation_mark
+}
+
+movement Movement_MatIntoMoveRoom {
+    walk_right
+    walk_right
+    walk_right
+    walk_right
+}
+
+movement  Movement_MovePlayerLeftOnce {
+    walk_left
+}
+
+movement Movement_MovePlayerToMat {
+    walk_up
+}
+//text scripts 
+
+text Mat_Intro {
+    format("I won't hold out on you!")
+}
+
+text Mat_Outro {
+    format("Okay I guess I'm not ready")
+}
+
+movement Movement_MatFaceDown {
+    face_down
+}

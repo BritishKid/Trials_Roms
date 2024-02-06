@@ -1,0 +1,14 @@
+mapscripts CoralPort_House1_MapScripts {
+	
+}
+script CoralPort_House1_EventScript_OldWoman {
+    msgbox(format("My Husband really wants to find some rare Pokemon but in our old age we can't go out and explore anymore."))
+}
+
+script CoralPort_House1_EventScript_OldMan {
+    msgbox(format("I've always wanted a Meowth but now I'm too old to get one."))
+    msgbox(format("Would you be willing to trade one for my Gossifluer?"), MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES) {
+        msgbox(format("Trades Coming Soon.."))
+    }
+}

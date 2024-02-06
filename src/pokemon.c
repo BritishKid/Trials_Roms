@@ -3659,7 +3659,7 @@ void CreateMonWithGenderNatureLetter(struct Pokemon *mon, u16 species, u8 level,
 }
 
 // This is only used to create Wally's Ralts.
-void CreateMaleMon(struct Pokemon *mon, u16 species, u8 level)
+void CreateShinyMon(struct Pokemon *mon, u16 species, u8 level)
 {
     u32 personality;
     u32 otId;
@@ -8692,4 +8692,22 @@ void UpdateMonPersonality(struct BoxPokemon *boxMon, u32 personality)
     *new3 = *old3;
     boxMon->checksum = CalculateBoxMonChecksum(boxMon);
     EncryptBoxMon(boxMon);
+}
+
+u8 GetCurrentLevelCap(void) //define level caps
+{
+    if(FlagGet(FLAG_LEVEL_CAPS)) {
+        if (!FlagGet(FLAG_BADGE01_GET))
+            return 15;
+        else if (!FlagGet(FLAG_BADGE02_GET))
+            return 24;
+        else if (!FlagGet(FLAG_BADGE03_GET))
+            return 31;
+        else if (!FlagGet(FLAG_BADGE04_GET))
+            return 38;
+        else
+            return 100;
+    }
+    else 
+        return 100;
 }

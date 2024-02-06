@@ -1,0 +1,33 @@
+mapscripts WaterfallCave_SubBasement_MapScripts {}
+
+script WatefallCave_SubBasement_LegendsDoor {
+    lock
+    if(flag(FLAG_LEGENDS_PLATE_FOUND)) {
+        msgbox(format("Do you want to travel to the altar?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES) {
+            call(EnterLegendsAltar)
+        }
+    }
+    if(!flag(FLAG_ALEX_INSECT_PLATE)) {
+        msgbox(format("There seems to be a lot of writing carved on the wall, but you can't understand it."))
+    }
+    if(flag(FLAG_ALEX_INSECT_PLATE) && !flag(FLAG_LEGENDS_PLATE_FOUND)) {
+        msgbox(format("There seems to be some ancient text carved on the wall, you get out the book Alex gave you to try and translate it."))
+        msgbox(format("ARCEUS - CREATOR OF ALL - MASTER OF EVERYTHING"))
+        msgbox(format("WHEN HUMAN AND POKEMON ARE BONDED TOGETHER YOU MAY ENTER"))
+        msgbox(format("You get out a Pokemon from their ball and you both tough the wall"))
+        call(EnterLegendsAltar)
+    }
+    release
+}
+
+script EnterLegendsAltar {
+    setvar(VAR_0x8004, 1) //horizontal
+    setvar(VAR_0x8005, 1) //vertical
+    setvar(VAR_0x8006, 8)  //number
+    setvar(VAR_0x8007, 0) //delay
+    special(ShakeCamera)
+    fadescreen(FADE_TO_BLACK)
+    warp(MAP_LEGENDS_ALTAR, 14, 26)
+    release
+}

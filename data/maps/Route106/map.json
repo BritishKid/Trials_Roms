@@ -88,7 +88,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Route106_EventScript_ItemProtein",
-      "flag": "FLAG_ITEM_ROUTE_106_PROTEIN"
+      "flag": "FLAG_ITEM_MAHOGANY_HILLS_POKEBALL_SHOCK_WAVE"
     }
   ],
   "warp_events": [
@@ -100,7 +100,9 @@
       "dest_warp_id": "0"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+
+  ],
   "bg_events": [
     {
       "type": "hidden_item",

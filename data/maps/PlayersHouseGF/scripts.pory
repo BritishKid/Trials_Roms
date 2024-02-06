@@ -1,0 +1,29 @@
+mapscripts PlayersHouseGF_MapScripts {
+        MAP_SCRIPT_ON_TRANSITION {
+        setrespawn(HEAL_LOCATION_PLAYERS_BEDROOM)
+    }
+}
+
+script PlayersHouseGF_EventScript_Fridge {
+    lockall
+    msgbox(format("I got eggs, butter and something that seems to be growing. \p Maybe its a new Pokemon species")) //give berries maybe?
+    releaseall
+}
+
+script PlayersHouseGF_EventScript_Sink {
+    lockall
+    msgbox(format("You turn on the tap too much and get your trousers wet. It looks like you've wet yourself."))
+    releaseall
+}
+
+script PlayersHouseGF_EventScript_GlassCase {
+    lockall
+    msgbox(format("It's all the awesome artwork BitBeads made you. You especially love the Inkay."))
+    releaseall
+}
+
+script PlayersHouseGF_EventScript_TV {
+    lockall
+    msgbox(format("Oh Bluey is on. It's full of life lessons, but I'm not going to listen to some cartoon dog."))
+    releaseall
+}

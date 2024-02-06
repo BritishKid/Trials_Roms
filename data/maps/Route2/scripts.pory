@@ -1,0 +1,106 @@
+mapscripts Route2_MapScripts {}
+
+script Route2_EventScript_BerryGirl {
+    lock
+    faceplayer
+    if(!flag(FLAG_RECEIVED_WAILMER_PAIL)) {
+        msgbox(format("Hey you must have seen all these berry patches aorund the place. \p They let you grow your berries so you can get more. \p Here take some!"))
+        giveitem(ITEM_CHERI_BERRY, 3)
+        giveitem(ITEM_ORAN_BERRY, 3)
+        giveitem(ITEM_PECHA_BERRY, 3)
+        giveitem(ITEM_LEPPA_BERRY, 3)
+        giveitem(ITEM_COBA_BERRY, 3)
+        giveitem(ITEM_PERSIM_BERRY, 3)
+        giveitem(ITEM_TANGA_BERRY, 3)
+        msgbox(format("If you plant them you can grow more. Hold on you'll need this though!"))
+        giveitem(ITEM_WAILMER_PAIL, 1)
+        setflag(FLAG_RECEIVED_WAILMER_PAIL)
+    }
+    msgbox(format("Berrys are just incredible, give them to a Pokemon to hold and they will use them when they are weak."))
+    releaseall
+}
+
+script Battle_Route2_Trainer1 {
+    trainerbattle_single(TRAINER_ROUTE2_TRAINER1, Route2_Trainer1_Intro, Route2_Trainer1_Outro)
+    msgbox(PostBattle_Route2_Trainer1, MSGBOX_AUTOCLOSE)
+    setvar(VAR_FIRST_TRAINERS_BEATEN_CHECK, VAR_FIRST_TRAINERS_BEATEN_CHECK+1)
+    waitmessage
+    end
+}
+
+script Battle_Route2_Trainer2 {
+    trainerbattle_single(TRAINER_ROUTE2_TRAINER2, Route2_Trainer2_Intro, Route2_Trainer2_Outro)
+    msgbox(PostBattle_Route2_Trainer2, MSGBOX_AUTOCLOSE)
+    setvar(VAR_FIRST_TRAINERS_BEATEN_CHECK, VAR_FIRST_TRAINERS_BEATEN_CHECK+1)
+    waitmessage
+    end
+}
+
+script Battle_Route2_Trainer3 {
+    trainerbattle_single(TRAINER_ROUTE2_TRAINER3, Route2_Trainer3_Intro, Route2_Trainer3_Outro)
+    msgbox(PostBattle_Route2_Trainer3, MSGBOX_AUTOCLOSE)
+    setvar(VAR_FIRST_TRAINERS_BEATEN_CHECK, VAR_FIRST_TRAINERS_BEATEN_CHECK+1)
+    waitmessage
+    end
+}
+
+script EventScript_Route2_ItemBall_QuickClaw {
+    finditem(ITEM_QUICK_CLAW)
+}
+
+//text scripts
+text Route2_Trainer1_Intro {
+    format("Mahogany Hills Gym is meant to be really tough!")
+}
+
+text Route2_Trainer1_Outro {
+    format("I don't think i'm ready to take it on yet")
+}
+
+text PostBattle_Route2_Trainer1 {
+    format("I heard the gym leader came from a city full of powerful flying types.")
+}
+
+text Route2_Trainer2_Intro {
+    format("I have the best Ratata in the world!")
+}
+
+text Route2_Trainer2_Outro {
+    format("I haven't finished training it yet.")
+}
+
+text PostBattle_Route2_Trainer2 {
+    format("It's going to be the best pokemon in the world one day")
+}
+
+text Route2_Trainer3_Intro {
+    format("My sister loves planting Berries, she travels all over the region to find more.")
+}
+
+text Route2_Trainer3_Outro {
+    format("Even with my sisters berries I was no good.")
+}
+
+text PostBattle_Route2_Trainer3 {
+    format("You should go speak to her, she would likely share some with you.")
+}
+
+text Route2_Genki_Intro {
+    format("Let's have a quackin' good time!.")
+}
+
+text Route2_Genki_Outro {
+    format("Ducks ducks.")
+}
+
+text PostBattle_Route2_Genki {
+    format("I'll have to go get more ducks.")
+}
+
+text Route2_Robert_Intro {
+    format("Alright then, prepare yourself.")
+}
+
+text Route2_Robert_Outro {
+    format("Damn you're good.")
+}

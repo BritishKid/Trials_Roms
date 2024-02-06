@@ -1,0 +1,7 @@
+mapscripts ObsidianThicket_Gym3_HiddenBase_MapScripts {}
+
+script ObsidianThicket_PleaseSuggest {
+    lockall
+    msgbox(format("This is an empty hidden base, make a suggestion in the discord and I can add you here."))
+    releaseall
+}

@@ -1,0 +1,13 @@
+mapscripts GranitePeak_EstateAgent_MapScripts {}
+
+script GranitePeak_Estate_Agent {
+    lock
+    msgbox(format("Feel free to ask me any questions on what we have for sale"))
+    release
+}
+
+script GranitePeak_ShopOption_One { //selling options for house
+    lock
+    msgbox(format("COMING SOON..."))
+    release
+}

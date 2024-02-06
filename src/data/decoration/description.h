@@ -187,9 +187,9 @@ const u8 DecorDesc_SAND_ORNAMENT[] = _(
         "touched.");
 
 const u8 DecorDesc_SILVER_SHIELD[] = _(
-    "Awarded for 50\n"
-        "straight wins at\n"
-        "the BATTLE TOWER.");
+    "Awarded for\n"
+        "winning the Slate Peak\n"
+        "School Tournament.");
 
 const u8 DecorDesc_GOLD_SHIELD[] = _(
     "Awarded for 100\n"

@@ -1,0 +1,22 @@
+mapscripts Gym2Entrance_MapScripts {}
+
+
+script Gym2Entrance_JerichoBattle {
+    trainerbattle_single(GYM2ENTRANCE_JERICHO, Jericho_Intro, Jericho_Outro)
+    msgbox(Jericho_PostBattle, MSGBOX_AUTOCLOSE)
+    end
+}
+
+//text scripts
+
+text Jericho_Intro {
+    format("Boo!")
+}
+
+text Jericho_Outro {
+    format("Gotta go fast")
+}
+
+text Jericho_PostBattle {
+    format("Gotta keep running, gotta keep fast")
+}

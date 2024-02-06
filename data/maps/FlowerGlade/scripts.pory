@@ -1,0 +1,71 @@
+mapscripts FlowerGlade_MapScripts {}
+
+
+script FlowerGlade_EventScript_MossyStone {
+    lock
+    msgbox(format("It's a very mossy rock."))
+    release
+}
+
+script FlowerGlade_EventScript_MossyStone_Grandson {
+    lock
+    msgbox(format("Interesting...is this it?"))    
+    // questmenu(QUEST_MENU_CHECK_ACTIVE, QUEST_EVOLUTION_STONE_MART)
+    if(!flag(FLAG_LEAF_STONE_SOURCE) && var(VAR_RESULT)) {
+        faceplayer
+        msgbox(format("Oh hi, so my grandfather sent you? He must be getting very impatient. I said it could take a while this is a big world."))
+        msgbox(format("Well you came at a good time, I could use your help. I need to harvest some of this rock to process into leaf stones but any attempt causes me to get attacked by wild pokemon."))
+        msgbox(format("Could you fight them off while when I start to harvest?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES) {
+            msgbox(format("Brilliant, prepare yourself I'm going to start to harvest now."))
+            setwildbattle(SPECIES_GLOOM, 25, ITEM_ORAN_BERRY)
+            call(StartLeafStoneBattle)
+            msgbox(format("Thank you, but I can see more coming!"))
+            setwildbattle(SPECIES_WEEPINBELL, 28, ITEM_ORAN_BERRY)
+            call(StartLeafStoneBattle)
+            msgbox(format("Great job but I think something bigger is coming"))
+            setwildbattle(SPECIES_SHIFTRY, 30, ITEM_ORAN_BERRY)
+            call(StartLeafStoneBattle)
+            msgbox(format("Okay we are good, thank you for that. I'll see you at the next one."))
+            msgbox(format("Also please take this."))
+            giveitem(ITEM_LEAF_STONE)
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox(format("It's the least I could do in return."))
+            setflag(FLAG_LEAF_STONE_SOURCE)    
+            if(flag(FLAG_LEAF_STONE_SOURCE) && flag(FLAG_WATER_STONE_SOURCE) && flag(FLAG_FIRE_STONE_SOURCE)){
+                msgbox(format("That's the leaf, fire and water stones sorted. I should return these back to my Grandad"))
+            }
+            // subquestmenu(QUEST_MENU_COMPLETE_QUEST, QUEST_POKEMON_LEAGUE, SUB_QUEST_LEAF_STONE)
+            applymovement(2, Movement_GrandsonLeavs)
+            waitmovement(2)
+            removeobject(2)
+        }
+        if(var(VAR_RESULT) == NO) {
+            msgbox(format("Well go prepare I don't think I can do this alone."))
+        }
+    }
+    release
+}
+
+script StartLeafStoneBattle {
+    dowildbattle
+}
+
+script BulbasaurGrottoEntrance {
+    lockall
+    warp(MAP_BULBASAUR, 0, 9, 0)
+    releaseall
+}
+
+//movement scripts
+
+movement Movement_GrandsonLeavs {
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+}

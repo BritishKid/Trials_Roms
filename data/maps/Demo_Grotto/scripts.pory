@@ -1,0 +1,22 @@
+mapscripts Demo_Grotto_MapScripts {}
+
+
+script Battle_TRAINER_TOWN2_PLATEFALL_GUARD {
+    trainerbattle_single(TRAINER_TOWN2_PLATEFALL_GUARD, Demo_Intro, Demo_Outro)
+    msgbox(PostBattle_Demo, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+
+text Demo_Intro {
+    format("Testing Tangela Triver")
+}
+
+text Demo_Outro {
+    format("Did it work")
+}
+
+text PostBattle_Demo {
+    format("Reset")
+}

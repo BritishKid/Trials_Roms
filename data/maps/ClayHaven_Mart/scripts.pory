@@ -1,0 +1,35 @@
+mapscripts ClayHaven_Mart_MapScripts {
+	
+}
+
+script ClayHaven_Mark_Event_Angel_Conversation {
+    lockall
+    msgbox(format("I love Squirtles! I'm just stocking up to go find out where they live!"))
+    releaseall
+}
+
+script ClayHaven_EventScript_MartClerk {
+	lockall
+	faceplayer
+	msgbox("How may I serve you")
+	waitmessage	
+	pokemart(ClayHavenMart_Items_NoBadges)
+	msgbox("Please Come Again.")
+	releaseall
+}
+
+script ClayHaven_EventScript_Woman {
+	lockall
+	faceplayer
+	msgbox(format("Many items are only available in certain towns."))
+	releaseall
+}
+
+//mart script
+mart ClayHavenMart_Items_NoBadges {
+	ITEM_POKE_BALL
+	ITEM_POTION
+	ITEM_ANTIDOTE
+	ITEM_PARALYZE_HEAL
+	ITEM_AWAKENING
+}

@@ -24,7 +24,7 @@ DewfordTown_EventScript_Briney::
 	goto_if_unset FLAG_DELIVERED_STEVEN_LETTER, DewfordTown_EventScript_ReturnToPetalburgPrompt
 	message DewfordTown_Text_WhereAreWeBound
 	waitmessage
-	multichoicedefault 21, 6, MULTI_BRINEY_ON_DEWFORD, 2, FALSE
+	multichoicedefault 21, 6, MULTI_NATURE_MINT_SELECTION, 2, FALSE
 	switch VAR_RESULT
 	case 0, DewfordTown_EventScript_ChoosePetalburg
 	case 1, DewfordTown_EventScript_ChooseSlateport

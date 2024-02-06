@@ -1,0 +1,160 @@
+mapscripts MauvilleCity_MapScripts {
+    
+}
+
+script ThugCity_Pyukumuku_Clean_Up_1 {
+    lock
+        msgbox(format("It's a Pyukumuku, you push it back into the water"))
+        fadescreen(FADE_TO_BLACK)
+        msgbox(format("SPLASH"))
+        fadescreen(FADE_FROM_BLACK)
+        removeobject(1)
+        setflag(FLAG_CLEANED_UP_THUGCITY_PYUKUMUKU_1)
+        call(IncrementNumber_Pyukumukus_Saved)
+    release
+}
+
+script ThugCity_Arrival_Trigger {
+    lock
+    msgbox(format("Hey! What do you think you're doing!"))
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_ThugCity_Player_Surprised)
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+    applymovement(2, Movement_Thug_On_Arrival) //meeting the thugs
+    waitmovement(2)
+    msgbox(format("A weakling like you can't come this way, turn back and leave!"), MSGBOX_YESNO) 
+    if(var(VAR_RESULT) == YES) {
+        applymovement(OBJ_EVENT_ID_PLAYER, Movement_ThugCity_Player_LeavingTown)
+        waitmovement(OBJ_EVENT_ID_PLAYER)
+        msgbox(format("That's it run away little kid!"))
+        applymovement(2, Movement_ThugCity_Top_Leaving)
+        waitmovement(2)
+    }
+    if(var(VAR_RESULT) == NO) {
+        msgbox(format("Oh really? Big kid aye?"))
+        msgbox(format("Fine, let me show you your place!"))
+        trainerbattle_no_intro(TRAINER_ENTRANCE_THUG, Thug_Entrance_Beaten)
+        call(ThugCity_FirstGuard_Beaten)
+    }
+    release
+}
+
+script ThugCity_FirstGuard_Beaten {
+    applymovement(2, Movement_Thug_1_Beaten)
+    waitmovement(2)
+    msgbox(format("Since when were kids so strong?"))
+    applymovement(3, Movement_Thug_On_Arrival_2) //meeting the thugs
+    waitmovement(3)
+    msgbox(format("Tony you're so useless, can't even get rid of a little kid"))
+    trainerbattle_no_intro(TRAINER_ENTRANCE_THUG_SECOND, Thug_Entrance_Second_Beaten)
+    call(ThugCity_SecondGuard_Beaten)
+}
+
+
+script ThugCity_SecondGuard_Beaten {
+    msgbox(format("I can't believe this!"))
+    msgbox(format("This is bad, i'm going to get the others!"))
+    applymovement(2, Movement_ThugCity_Top_Leaving)
+    waitmovement(2)
+    msgbox(format("You're in for it now, you've got no chance against the big guys!"))
+    applymovement(3, Movement_ThugCity_Top_Leaving)
+    waitmovement(3)
+    removeobject(2)
+    removeobject(3)
+    setflag(FLAG_THUG_ENTRANCE_BEATEN)
+    setvar(VAR_THUG_TOWN_STATE, 1)
+    // questmenu(QUEST_MENU_SET_ACTIVE, QUEST_THUG_TOWN)
+    release
+}
+
+script ThugCity_PortEntrance {
+    lock
+    msgbox(format("So you're the punk causing all this commotion!"))
+    addobject(9)
+    msgbox(format("We've got important work we are doing in here and you're just interupting the boss."))
+    trainerbattle_single(TRAINERTHUG_PORT_ENTRANCE, Thug_PortDoor_Intro, Thug_PortDoor_Outro, ThugCity_PortEntrance_Beaten)
+    release
+}
+
+script ThugCity_PortEntrance_Beaten {
+    msgbox(format("You can try to keep this up but our boss is much more powerful than us, you're not going to have a chance"))
+    removeobject(9) //needs improving
+    setvar(VAR_THUG_TOWN_STATE, 2)
+    release
+}
+
+script ThugCity_RandomThug {
+    lock
+    msgbox(format("The lady in this house is rich, when my buddies get here we are going to take everything from her!"))
+    release
+}
+
+script ThugCity_Locked {
+    lock
+    msgbox(format("The door is locked"))
+    release
+}
+
+//movement
+movement Movement_ThugCity_Player_Surprised {
+    emote_exclamation_mark
+}
+
+movement Movement_Thug_On_Arrival {
+    walk_left
+    walk_left
+    walk_left
+    walk_left
+    walk_left
+    walk_left
+    walk_left
+    face_down
+}
+
+movement Movement_Thug_On_Arrival_2 {
+    walk_left
+    walk_left
+    walk_left
+    walk_left
+    walk_left
+    walk_left
+    walk_left
+    walk_left
+}
+
+movement Movement_Thug_1_Beaten {
+    jump_up
+    face_down
+}
+
+movement Movement_ThugCity_Player_LeavingTown {
+    walk_down
+    walk_down
+    walk_down
+}
+
+movement Movement_ThugCity_Top_Leaving {
+    walk_right
+    walk_right
+    walk_right
+    walk_right
+    walk_right
+    walk_right
+    walk_right
+}
+
+//text
+text Thug_Entrance_Beaten {
+    format("Oh ho ho, you're stronger than you look.")
+}
+
+text Thug_Entrance_Second_Beaten {
+    format("How is this possible")
+}
+
+text Thug_PortDoor_Intro {
+    format("Let's send you back so we can get back to work")
+}
+
+text Thug_PortDoor_Outro {
+    format("Well that really going to peeve him off.")
+}

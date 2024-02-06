@@ -62,6 +62,7 @@ void GetFrontierTrainerName(u8 *dst, u16 trainerId);
 void FillFrontierTrainerParty(u8 monsCount);
 void FillFrontierTrainersParties(u8 monsCount);
 u16 GetRandomFrontierMonFromSet(u16 trainerId);
+u16 GetAllThreeSchoolMonFromSet(u16 trainerId, int number);
 void FrontierSpeechToString(const u16 *words);
 void DoSpecialTrainerBattle(void);
 void CalcEmeraldBattleTowerChecksum(struct EmeraldBattleTowerRecord *record);

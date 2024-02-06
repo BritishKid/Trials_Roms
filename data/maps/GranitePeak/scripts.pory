@@ -1,0 +1,23 @@
+mapscripts GranitePeak_MapScripts {}
+
+script GranitePeak_EventScript_PlayersHouse {
+    lockall
+    msgbox(format("For sale: Inquire within"))
+    releaseall
+}
+
+script GranitePeak_EventScript_CitySign {
+    lockall
+    msgbox(format("Granite Peak: Peaceful life below the clouds"))
+    releaseall
+}
+
+script GranitePeak_EstateAgent_Sign {
+    lockall
+    msgbox(format("Granite Peak Estate Agent\nMake a house a home"))
+    releaseall
+}
+
+script GranitePeak_ItemBall_Garden {
+    finditem(ITEM_BIG_ROOT, 1)
+}

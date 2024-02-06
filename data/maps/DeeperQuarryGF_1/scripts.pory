@@ -1,0 +1,21 @@
+mapscripts DeeperQuarryGF_1_MapScripts {}
+
+script Worker1 {
+    //hidden until post saving the quarry
+    msgbox(format("COMING SOON"))
+}
+
+script Worker2 {
+    //hidden until post saving the quarry
+    msgbox(format("COMING SOON"))
+}
+
+script StevePlaceholder {
+    //tough challenge for stealth rocks
+    msgbox(format("COMING SOON"))
+}
+
+script ItemBall_Secret_Area {
+    //tough challenge for the item
+    msgbox(format("COMING SOON"))
+}

@@ -1,0 +1,10 @@
+mapscripts  NavelRock_Exterior_MapScripts{
+    
+}
+
+
+script rob_says_no {
+        msgbox(format("No these Inkay aren't good enough, let's try somewhere else!"))
+        warp(MAP_BIRTH_ISLAND_EXTERIOR, 15, 23)
+    releaseall
+}

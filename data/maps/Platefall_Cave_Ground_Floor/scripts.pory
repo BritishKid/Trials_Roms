@@ -1,0 +1,71 @@
+mapscripts Platefall_Cave_Ground_Floor_MapScripts {}
+
+script Platefall_Puzzle_Wall {
+    lock
+    if(!flag(FLAG_ALEX_MET)) {
+        msgbox(format("It's a carving about the people who founded Clay Haven"))
+        msgbox(format("It shows a creature coming down from the heavens with many arms holding a plate like artifact"))
+        msgbox(format("18 beams of light are shooting out of it landing on a map of Triver."))
+        msgbox(format("You also can't help but notice the four holes in the wall."))
+        // questmenu(QUEST_MENU_SET_ACTIVE, QUEST_ARCEUS_PLATES)
+        msgbox(format("It's an interesting story don't you think?"))
+        applymovement(OBJ_EVENT_ID_PLAYER, Movement_ThugCity_Player_Surprised)
+        waitmovement(OBJ_EVENT_ID_PLAYER)
+        applymovement(1, Movement_AlexMovesToPlayer_Platefall)
+        waitmovement(1)
+        msgbox(format("The story of the ancient plates have always fascinated me, it's name Platefall references that this is where the first plates landed."))
+        msgbox(format("But that Pokemon at the top of the painting, the one with many arms. It's nothing like anything we've seen before."))
+        msgbox(format("Anyway I'm being rude. My name is Alex it's very nice to meet you. I'm an explorer looking into the ancient history of the Triver region"))
+        msgbox(format("These carvings here are found all over the region and I've been trying to decipher them. There is one just over in Mahogany Hills, although curiously this carving has a lot more spaces on it."))
+        msgbox(format("I've had a theory that if you can find the plates they picture this wall is actually a doorway to awaken that ancient Pokemon."))
+        msgbox(format("Although no-one has managed to find any yet, although half the fun is exploring!"))
+        msgbox(format("Anyway I'll be seeing you around!"))
+        applymovement(1, Movement_AlexLeavesPlayer_Platefall)
+        waitmovement(1)
+        removeobject(1)
+        setvar(VAR_PLATE_QUEST_STATE, 1)
+        setflag(FLAG_ALEX_MET)
+    }
+    //Add a check if the player has found 4 plates to open it up
+    else {
+        msgbox(format("There seem to be 4 unfilled plate sized holes in the wall."))
+    }
+    release
+}
+
+script Platefall_Cave_Alex_General {
+    lock
+    msgbox(format("I love this place, it's just full of ancient history."))
+    release
+}
+
+script Platefall_Cave_Maniac {
+    lock
+    msgbox(format("Lot's of history books talk about rare Pokemon hidden deep in these mountains, but they are very hard to traverse"))
+    release 
+}
+
+movement Movement_AlexMovesToPlayer_Platefall {
+    walk_up
+    walk_up
+    walk_up
+    walk_up
+    walk_up
+    walk_up
+}
+
+movement Movement_AlexLeavesPlayer_Platefall {
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+}
+
+script ComingSoon_Platefall {
+    lockall
+    msgbox(format("Coming soon"))
+    releaseall
+}

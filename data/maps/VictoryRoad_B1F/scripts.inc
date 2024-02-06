@@ -17,7 +17,7 @@ VictoryRoad_B1F_EventScript_Michelle::
 	end
 
 VictoryRoad_B1F_EventScript_Mitchell::
-	trainerbattle_single TRAINER_MITCHELL, VictoryRoad_B1F_Text_MitchellIntro, VictoryRoad_B1F_Text_MitchellDefeat
+	trainerbattle_single LASS_JESSICA, VictoryRoad_B1F_Text_MitchellIntro, VictoryRoad_B1F_Text_MitchellDefeat
 	msgbox VictoryRoad_B1F_Text_MitchellPostBattle, MSGBOX_AUTOCLOSE
 	end
 

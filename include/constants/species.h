@@ -1372,7 +1372,13 @@
 #define SPECIES_BASCULEGION_FEMALE           FORMS_START + 329
 
 #define FORMS_START SPECIES_ENAMORUS
-#define SPECIES_EGG SPECIES_BASCULEGION_FEMALE + 1
+
+//Triver Regional Forms
+#define SPECIES_TANGELA_TRIVER              FORMS_START + 330
+#define SPECIES_TANGROWTH_TRIVER            FORMS_START + 331
+
+#define SPECIES_EGG SPECIES_TANGROWTH_TRIVER + 1 //last mon + 1 gets total number of pokemon in game?
+
 
 #define NUM_SPECIES SPECIES_EGG
 

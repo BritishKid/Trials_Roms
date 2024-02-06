@@ -1,0 +1,171 @@
+mapscripts PlayersBedroom_MapScripts {}
+
+script PlayersBedroom_StarterPokemon_Pokeball {
+    lockall
+    msgbox(format("It's the Pokemon your father gave you."))
+    showmonpic(SPECIES_CHIKORITA,10,3)
+    msgbox("Is it a Chikorita?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES) {
+        givemon(SPECIES_CHIKORITA, 5, ITEM_ORAN_BERRY)
+        setvar(VAR_STARTER_MON, 0)
+        if (var(VAR_RESULT) == MON_GIVEN_TO_PARTY) {
+            msgbox("Recieved Chikorita")
+            call(ChosenStarterPokemon)
+        }
+        elif (var(VAR_RESULT) == MON_GIVEN_TO_PC) {
+            msgbox("Recieved Chikorita")
+            call(ChosenStarterPokemon)
+        }
+        else {
+            hidemonpic
+            msgbox("No more room")
+        }
+        waitmessage
+        releaseall
+        end    
+    }
+    else {
+        hidemonpic
+    }
+    showmonpic(SPECIES_TOTODILE,10,3)
+    msgbox("Is it a Totodile?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES) {
+        givemon(SPECIES_TOTODILE, 5, ITEM_ORAN_BERRY)
+            setvar(VAR_STARTER_MON, 2)
+        if (var(VAR_RESULT) == MON_GIVEN_TO_PARTY) {
+            msgbox("Recieved Totodile")
+            call(ChosenStarterPokemon)
+        }
+        elif (var(VAR_RESULT) == MON_GIVEN_TO_PC) {
+            msgbox("Recieved Totodile")
+            call(ChosenStarterPokemon)
+        }
+        else {
+            hidemonpic
+            msgbox("No more room")
+        }
+        waitmessage
+        releaseall
+        end      
+    }
+    else {
+        hidemonpic
+    }
+    showmonpic(SPECIES_CYNDAQUIL,10,3)
+    msgbox("Is it a Cyndaquil?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES) {
+        givemon(SPECIES_CYNDAQUIL, 5, ITEM_ORAN_BERRY)
+        setvar(VAR_STARTER_MON, 1)
+        if (var(VAR_RESULT) == MON_GIVEN_TO_PARTY) {
+            msgbox("Recieved Cyndaquil")
+            call(ChosenStarterPokemon)
+        }
+        elif (var(VAR_RESULT) == MON_GIVEN_TO_PC) {
+            msgbox("Recieved Cyndaquil")
+            call(ChosenStarterPokemon)
+        }
+        else {
+            hidemonpic
+            msgbox("No more room")
+        }
+        waitmessage
+        releaseall
+        end     
+    }
+    else {
+        hidemonpic
+        msgbox("It must of been one of them")
+    }
+    waitmessage
+    releaseall
+    end
+}
+
+script NicknamePartyMon{
+ 
+    msgbox("Give it a nickname?", MSGBOX_YESNO)
+    hidemonpic
+    if(var(VAR_RESULT) == YES){
+        call(Common_EventScript_GetGiftMonPartySlot)
+        call(Common_EventScript_NameReceivedPartyMon)
+    }
+}
+
+script ChosenStarterPokemon{
+        playfanfare(MUS_OBTAIN_ITEM)
+        removeobject(1)
+        setflag(FLAG_RECEIVED_STARTER)
+        call(GivePokedexAndUnlockPokemonMenu)
+        call(NicknamePartyMon)
+        call(FreeStarterPokeballs)
+}
+
+script GivePokedexAndUnlockPokemonMenu{
+    setflag(FLAG_SYS_POKEMON_GET)
+	setflag(FLAG_SYS_POKEDEX_GET)
+    setflag(FLAG_SYS_QUEST_MENU_GET)
+    setflag(FLAG_SYS_B_DASH)
+    // questmenu(QUEST_MENU_SET_ACTIVE, QUEST_POKEMON_LEAGUE)
+    // questmenu(QUEST_MENU_SET_ACTIVE, QUEST_HIDDEN_DOLLS)
+    special(EnableNationalPokedex)
+}
+
+script NicknameBoxMon{
+    msgbox("Give it a nickname?", MSGBOX_YESNO)
+    hidemonpic
+    if(var(VAR_RESULT) == YES){
+        call(Common_EventScript_NameReceivedBoxMon)
+    }
+    call(Common_EventScript_TransferredToPC)
+}
+
+script FreeStarterPokeballs{
+    msgbox("Have some Pokeballs to.")
+    giveitem(ITEM_POKE_BALL, 5)
+}
+
+script EventScript_PlayersBed_HealParty {
+    lockall
+    msgbox(format("Rest up a little while?"), MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES) {
+        special(HealPlayerParty)
+    }
+    releaseall
+}
+
+script OptionsBook {
+    lockall
+    // if(flag(FLAG_UNUSED_0x03D)) { //todo pick a good flag
+    msgbox("Options book")
+    if(!flag(FLAG_LEVEL_CAPS)){
+        msgbox(format("Do you want to turn on Level caps?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES){
+            setflag(FLAG_LEVEL_CAPS)
+        }
+    } else {
+        msgbox(format("Do you want to turn off Level caps?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES){
+            clearflag(FLAG_LEVEL_CAPS)
+        }
+    }
+
+    if(!flag(FLAG_SHINY_RATE_INCREASED)) {
+        msgbox(format("Do you want to increase shiny rate?"))
+        msgbox(format("This should give you atleast one shiny per playthrough."), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES){
+            setflag(FLAG_SHINY_RATE_INCREASED)
+        }
+    }  else {
+        msgbox(format("Do you want to decrease shiny rate?"))
+        msgbox(format("This will turn it to vanilla 1/8092."), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES){
+            clearflag(FLAG_SHINY_RATE_INCREASED)
+        }
+    }
+
+
+        // msgbox(format("Do you want wild Pokemon to scale with your party?")) //todo add these in
+
+    // }
+    releaseall
+}

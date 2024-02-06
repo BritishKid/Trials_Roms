@@ -1,0 +1,76 @@
+mapscripts LostPlates_MapScripts {}
+
+script InsectPlate_Altar {
+    lock
+    if(!flag(FLAG_INSECT_PLATE_FOUND)) {
+        msgbox(format("There is a plate with an ancient bug pokemon inscribed on it"))
+        msgbox(format("Do you want to take it?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES) {
+            msgbox(format("As you reach for the plate A giant Pokemon jumps out"))
+            settotemboost(1, 0, 1, 1, 0, 1, 0, 0)
+            setwildbattle(SPECIES_ACCELGOR, 40, ITEM_INSECT_PLATE)
+            call(StartPlateBattle)
+            msgbox(format("Accelgor retreats into the cave."))
+            msgbox(format("You pick up the Insect Plate"))
+            giveitem(ITEM_INSECT_PLATE)
+            playfanfare(MUS_OBTAIN_ITEM)
+            setflag(FLAG_INSECT_PLATE_FOUND)
+            // subquestmenu(QUEST_MENU_COMPLETE_QUEST, QUEST_POKEMON_LEAGUE, SUB_QUEST_INSECT_PLATE)
+        }
+    }
+    if(flag(FLAG_INSECT_PLATE_FOUND)) {
+        msgbox(format("You already have the insect plate"))//todo do more
+    }
+    release
+}
+
+script StonePlate_Altar {
+    lock
+    if(!flag(FLAG_ROCK_PLATE_FOUND)) {
+        msgbox(format("There is a plate with an ancient rock pokemon inscribed on it"))
+        msgbox(format("Do you want to take it?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES) {
+            msgbox(format("As you reach for the plate A giant Pokemon jumps out"))
+            settotemboost(1, 1, 1, 1, 0, 1, 0, 0)
+            setwildbattle(SPECIES_GIGALITH, 40, ITEM_STONE_PLATE)
+            call(StartPlateBattle)
+            msgbox(format("Gigalith retreats into the cave."))
+            msgbox(format("You pick up the Stone Plate"))
+            giveitem(ITEM_STONE_PLATE)
+            playfanfare(MUS_OBTAIN_ITEM)
+            setflag(FLAG_ROCK_PLATE_FOUND)
+            // subquestmenu(QUEST_MENU_COMPLETE_QUEST, QUEST_POKEMON_LEAGUE, SUB_QUEST_STONE_PLATE)
+        }
+    }
+    if(flag(FLAG_ROCK_PLATE_FOUND)) {
+        msgbox(format("You already have the stone plate"))//todo do more
+    }
+    release
+}
+
+script EarthPlate_Altar {
+    lock
+    if(!flag(FLAG_ROCK_PLATE_FOUND)) {
+        msgbox(format("There is a plate with an ancient ground pokemon inscribed on it"))
+        msgbox(format("Do you want to take it?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES) {
+            msgbox(format("As you reach for the plate A giant Pokemon jumps out"))
+            settotemboost(1, 1, 1, 1, 0, 1, 0, 0)
+            setwildbattle(SPECIES_HIPPOWDON, 40, ITEM_EARTH_PLATE)
+            call(StartPlateBattle)
+            msgbox(format("Hippowdon retreats into the cave."))
+            msgbox(format("You pick up the Earth Plate"))
+            giveitem(ITEM_EARTH_PLATE)
+            playfanfare(MUS_OBTAIN_ITEM)
+            setflag(FLAG_EARTH_PLATE_FOUND)
+            // subquestmenu(QUEST_MENU_COMPLETE_QUEST, QUEST_POKEMON_LEAGUE, SUB_QUEST_EARTH_PLATE)
+        }
+    }
+    if(flag(FLAG_ROCK_PLATE_FOUND)) {
+        msgbox(format("You already have the earth plate"))//todo do more
+    }
+    release
+}
+script StartPlateBattle {
+    dowildbattle
+}

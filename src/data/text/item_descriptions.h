@@ -3281,9 +3281,14 @@ static const u8 sTM50Desc[] = _(
     "attack, but sharply\n"
     "lowers Sp. Atk.");
 
-static const u8 sTM51Desc[] = _( // Todo
-    "?????");
-
+static const u8 sTM51Desc[] = _(
+    "The user attacks by\n"
+    "pecking the target.\n"
+    "If the target is\n"
+    "holding a Berry,\n"
+    "the user eats it\n"
+    "and gains its effect.");
+    
 static const u8 sTM52Desc[] = _( // Todo
     "?????");
 
@@ -3918,3 +3923,20 @@ static const u8 sBerserkGene[] = _(
     "Sharply boosts\n"
     "Attack, but causes\n"
     "lasting confusion.");
+
+//custom items
+// static const u8 sLinkStoneDesc[] = _(
+//     "Makes certain\n"
+//     "species of Pokémon\n"
+//     "evolve.");
+
+static const u8 sLegendsPlateDesc[] =_(
+    "An ancient plate\n"
+    "radiating a divine\n"
+    "heat.");
+
+ static const u8 sHistoryBookDesc[] =_(
+    "A book full of\n"
+    "ancient stories\n"
+    "and translations.");
+       

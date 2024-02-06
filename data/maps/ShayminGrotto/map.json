@@ -1,0 +1,70 @@
+{
+  "id": "MAP_SHAYMIN_GROTTO",
+  "name": "ShayminGrotto",
+  "layout": "LAYOUT_SHAYMIN_GROTTO",
+  "music": "MUS_RG_ROUTE24",
+  "region_map_section": "MAPSEC_NONE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_ROUTE",
+  "allow_cycling": true,
+  "allow_escaping": true,
+  "allow_running": true,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_FLOWER_GLADE",
+      "offset": -33,
+      "direction": "down"
+    },
+    {
+      "map": "MAP_SHAYMIN_GROTTO",
+      "offset": 0,
+      "direction": "up"
+    },
+    {
+      "map": "MAP_SHAYMIN_GROTTO",
+      "offset": 0,
+      "direction": "down"
+    }
+  ],
+  "object_events": [
+
+  ],
+  "warp_events": [
+
+  ],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 1,
+      "y": 0,
+      "elevation": 0,
+      "var": "VAR_ROUTE_SHAYMIN_PROGRESS",
+      "var_value": "1",
+      "script": "ShayminGrottoTrigger_DoesPlayerHaveGracideaFlower"
+    },
+    {
+      "type": "trigger",
+      "x": 2,
+      "y": 0,
+      "elevation": 0,
+      "var": "VAR_ROUTE_SHAYMIN_PROGRESS",
+      "var_value": "1",
+      "script": "ShayminGrottoTrigger_DoesPlayerHaveGracideaFlower"
+    },
+    {
+      "type": "trigger",
+      "x": 3,
+      "y": 0,
+      "elevation": 0,
+      "var": "VAR_ROUTE_SHAYMIN_PROGRESS",
+      "var_value": "1",
+      "script": "ShayminGrottoTrigger_DoesPlayerHaveGracideaFlower"
+    }
+  ],
+  "bg_events": [
+
+  ]
+}

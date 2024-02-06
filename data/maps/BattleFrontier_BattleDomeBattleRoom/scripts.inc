@@ -150,7 +150,7 @@ BattleFrontier_BattleDomeBattleRoom_EventScript_DefeatedOpponent::
 	switch VAR_RESULT
 	case DOME_ROUNDS_COUNT, BattleFrontier_BattleDomeBattleRoom_EventScript_WonTourney
 	setvar VAR_0x8006, 1
-	warp MAP_BATTLE_FRONTIER_BATTLE_DOME_PRE_BATTLE_ROOM, 5, 3
+	warp MAP_GRANITE_PEAK_TOURNAMENT_WAITING_ROOM, 6, 8
 	waitstate
 
 BattleFrontier_BattleDomeBattleRoom_EventScript_WonTourney::
@@ -170,6 +170,7 @@ BattleFrontier_BattleDomeBattleRoom_EventScript_CelebrateWin::
 	call BattleFrontier_BattleDomeBattleRoom_EventScript_AudienceLookAround
 	delay 60
 	frontier_set FRONTIER_DATA_CHALLENGE_STATUS, CHALLENGE_STATUS_WON
+	setvar VAR_CURRENT_SCHOOL_TOURNAMENT_STATE 1
 	goto BattleFrontier_BattleDomeBattleRoom_EventScript_WarpToLobby
 
 BattleFrontier_BattleDomeBattleRoom_EventScript_PlayerWon::
@@ -452,9 +453,9 @@ BattleFrontier_BattleDomeBattleRoom_EventScript_DoDomeBattle::
 	special DoSpecialTrainerBattle
 	waitstate
 	setvar VAR_TEMP_9, 0
-	dome_restorehelditems
-	special HealPlayerParty
-	dome_resetsketch
+	// dome_restorehelditems
+	// special HealPlayerParty
+	// dome_resetsketch
 	return
 
 BattleFrontier_BattleDomeBattleRoom_OnWarp:
@@ -855,7 +856,8 @@ BattleFrontier_BattleDomeBattleRoom_EventScript_AudienceLookAround::
 BattleFrontier_BattleDomeBattleRoom_EventScript_WarpToLobby::
 	copyvar VAR_RESULT, VAR_FRONTIER_BATTLE_MODE
 	goto_if_eq VAR_RESULT, FRONTIER_MODE_DOUBLES, BattleFrontier_BattleDomePreBattleRoom_EventScript_WarpToLobbyDoubles
-	warp MAP_BATTLE_FRONTIER_BATTLE_DOME_LOBBY, 5, 11
+	setvar VAR_SCHOOL_TEAM_RESET, 5
+	warp MAP_GRANITE_PEAK_SCHOOL_HALL, 8, 3
 	waitstate
 	end
 
@@ -943,7 +945,7 @@ BattleFrontier_BattleDomeBattleRoom_Text_TrainerIsWinner:
 	.string "Congratulations!$"
 
 BattleFrontier_BattleDomeBattleRoom_Text_PlayerIsLv50Champ:
-	.string "{PLAYER} is the Level 50\n"
+	.string "{PLAYER} is the Slate Peak School\n"
 	.string "Battle Tournament Champion!\p"
 	.string "Congratulations!$"
 

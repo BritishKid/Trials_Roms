@@ -1,0 +1,67 @@
+mapscripts DragonLake_MapScripts {        
+    MAP_SCRIPT_ON_TRANSITION {
+            setflag(FLAG_ROUTE_DRAGON_LAKE_HIDE_SALTS)
+        if (var(VAR_SALTS7_QUEST_STATE) == 2) {
+            clearflag(FLAG_ROUTE_DRAGON_LAKE_HIDE_SALTS)
+        }
+    }
+}
+
+script Salt7_MeetingRedGyrados {
+    lock
+    faceplayer
+    msgbox(format("Hi friend! I've heard word Dragon Lake is the best place to raise my Gyrados!"))
+    msgbox(format("One day I'm going to have a team of them so powerful that you'll never beat me!"))
+    applymovement(1, DragonLakeEmoteSurpirse)
+    waitmovement(1)
+    msgbox(format("What is that!"))
+    applymovement(2, Movement_RedGyrados)
+    waitmovement(2)
+    msgbox(format("They were right it's a Red Gyrados!"))
+    setflag(FLAG_FORCE_SHINY)
+    special(StartRedGyradosEncounter) //do tutorial to catch gyrados? //need to make shiny and we to stopp retalking
+    clearflag(FLAG_FORCE_SHINY)
+    removeobject(2)
+    setvar(VAR_SALTS7_QUEST_STATE, 3)
+    // subquestmenu(QUEST_MENU_COMPLETE_QUEST, QUEST_POKEMON_LEAGUE, SUB_QUEST_SALT_RED_GYRADOS)
+    msgbox(format("I did it. I caught a Red Gyrados!"))
+    msgbox(format("Who knew they came it such awesome colours. I need to explore the world and find all the different ones I can!"))
+    msgbox(format("See you next time!"))
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_DragonLake_MovePlayer)
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+    applymovement(1, Movement_Salt7_Leaving)
+    waitmovement(1)
+    removeobject(1)
+    release
+}
+
+movement DragonLakeEmoteSurpirse {
+    emote_exclamation_mark
+    face_right
+}
+
+movement Movement_RedGyrados {
+    walk_left
+    walk_left
+    walk_left
+    walk_left
+    walk_left
+}
+
+movement Movement_DragonLake_MovePlayer {
+    emote_exclamation_mark
+    jump_left
+}
+
+movement Movement_Salt7_Leaving {
+    walk_fast_left
+    walk_fast_left
+    walk_fast_down
+    walk_fast_down
+    walk_fast_down
+    walk_fast_down
+    walk_fast_down
+    walk_fast_down
+    walk_fast_down
+    walk_fast_down
+}

@@ -1,0 +1,216 @@
+{
+  "id": "MAP_MAHOGANY_HILLS_1",
+  "name": "MahoganyHills_1",
+  "layout": "LAYOUT_MAHOGANY_HILLS_1",
+  "music": "MUS_PETALBURG_WOODS",
+  "region_map_section": "MAPSEC_MAHOGANY_HILLS",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_ROUTE",
+  "allow_cycling": true,
+  "allow_escaping": true,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_MAHOGANY_HILLS_2",
+      "offset": 0,
+      "direction": "up"
+    }
+  ],
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MAN_3",
+      "x": 16,
+      "y": 7,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "1",
+      "script": "MahoganyTown_EventScript_Battle_Tough",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE",
+      "x": 18,
+      "y": 17,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EventScript_CutTree",
+      "flag": "FLAG_TEMP_13"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 20,
+      "y": 10,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "MahoganyTown_EventScript_ItemPokeBall_RockTomb",
+      "flag": "FLAG_ITEM_MAHOGANY_HILLS_POKEBALL_ROCK_TOMB"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 21,
+      "y": 11,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "MahoganyTown_EventScript_ItemPokeBall_ShockWave",
+      "flag": "FLAG_ITEM_MAHOGANY_HILLS_POKEBALL_SHOCK_WAVE"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_TWIN",
+      "x": 23,
+      "y": 31,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_MAHOGANY_HILLS_OBJECT"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER",
+      "x": 7,
+      "y": 9,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "4",
+      "script": "MahoganyTown_EventScript_Battle_Frank",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_POOCHYENA",
+      "x": 24,
+      "y": 31,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_MAHOGANY_HILLS_OBJECT"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 36,
+      "y": 22,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE2",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 37,
+      "y": 22,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE2",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 0,
+      "y": 21,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE2B",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 1,
+      "y": 21,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE2B",
+      "dest_warp_id": "1"
+    }
+  ],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 23,
+      "y": 22,
+      "elevation": 0,
+      "var": "VAR_TOWN_2_QUEST_STATE",
+      "var_value": "1",
+      "script": "MahoganyTown_EventScript_LostGirl_Right"
+    },
+    {
+      "type": "trigger",
+      "x": 22,
+      "y": 22,
+      "elevation": 0,
+      "var": "VAR_TOWN_2_QUEST_STATE",
+      "var_value": "1",
+      "script": "MahoganyTown_EventScript_LostGirl_Left"
+    },
+    {
+      "type": "trigger",
+      "x": 27,
+      "y": 26,
+      "elevation": 0,
+      "var": "VAR_TOWN_2_QUEST_STATE",
+      "var_value": "3",
+      "script": "MahoganyScript_EventScript_HiddenArea"
+    },
+    {
+      "type": "trigger",
+      "x": 28,
+      "y": 26,
+      "elevation": 0,
+      "var": "VAR_TOWN_2_QUEST_STATE",
+      "var_value": "3",
+      "script": "MahoganyScript_EventScript_HiddenArea"
+    },
+    {
+      "type": "trigger",
+      "x": 18,
+      "y": 10,
+      "elevation": 0,
+      "var": "VAR_JOKES",
+      "var_value": "1",
+      "script": "Joke_Script"
+    }
+  ],
+  "bg_events": [
+    {
+      "type": "secret_base",
+      "x": 7,
+      "y": 17,
+      "elevation": 0,
+      "secret_base_id": "SECRET_BASE_TREE4_1"
+    },
+    {
+      "type": "secret_base",
+      "x": 8,
+      "y": 17,
+      "elevation": 0,
+      "secret_base_id": "SECRET_BASE_TREE3_1"
+    },
+    {
+      "type": "sign",
+      "x": 18,
+      "y": 10,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Kidney_Easter_Egg"
+    }
+  ]
+}

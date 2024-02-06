@@ -1,0 +1,276 @@
+mapscripts GranitePeak_Tournament_WaitingRoom_MapScripts {
+    MAP_SCRIPT_ON_FRAME_TABLE [
+        VAR_TEMP_0, 0: GranitePeak_BattleDomePreBattleRoom_EventScript_EnterRoom //this runs at the end of fade in
+    ]
+    MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE [
+        VAR_TEMP_1, 0: GranitePeak_BattleDomePreBattleRoom_EventScript_TurnPlayerNorth //Runs before fade in finishes
+    ]
+}
+
+script GranitePeak_BattleDomePreBattleRoom_EventScript_TurnPlayerNorth {
+    setvar(VAR_TEMP_1, 1) //idk what this is used for yet
+    turnobject(OBJ_EVENT_ID_PLAYER, DIR_NORTH) //set a local variable and makes the player face north in wlalk in
+}
+
+script GranitePeak_BattleDomePreBattleRoom_EventScript_EnterRoom {
+    if(var(VAR_0x8006) == 1) {
+        call(GranitePeak_BattleDomePreBattleRoom_EventScript_ReturnFromBattle) //player is coming back from a battle
+    }
+    // frontier_set FRONTIER_DATA_RECORD_DISABLED, TRUE //wtF?
+    setvar(VAR_TEMP_0, 1)
+    lockall
+}
+
+
+script GranitePeak_BattleDomePreBattleRoom_EventScript_ReturnFromBattle {
+    setvar(VAR_TEMP_0, 1)
+    msgbox(format("Thank you for competing!"), MSGBOX_DEFAULT)
+    // special(LoadPlayerParty)
+    playfanfare(MUS_HEAL)
+    waitfanfare
+
+    // special(HealPlayerParty)
+    call(GranitePeak_BattleDomePreBattleRoom_EventScript_RoundCompleteMessage)
+    fadescreen(FADE_TO_BLACK)
+    dome_showstatictourneytree //huh? Tournament outcome?
+    waitstate
+    goto(GranitePeak_BattleDomePreBattleRoom_EventScript_AskReadyForNextRound)
+}
+
+script GranitePeak_BattleDomePreBattleRoom_EventScript_RoundCompleteMessage {
+    // this just shows text
+	switch(var(VAR_RESULT)) { //which round is the player in?
+        case DOME_ROUND2: goto(GranitePeak_BattleDomePreBattleRoom_EventScript_Round1Complete)
+        case DOME_SEMIFINAL: goto(GranitePeak_BattleDomePreBattleRoom_EventScript_Round2Complete)
+        case DOME_FINAL: goto(GranitePeak_BattleDomePreBattleRoom_EventScript_SemifinalsComplete)
+    }
+}
+
+script GranitePeak_BattleDomePreBattleRoom_EventScript_AskReadyForNextRound {
+    call(GranitePeak_BattleDomePreBattleRoom_EventScript_ReadyForNextRoundMessage)
+    waitmessage
+    multichoice(16, 0, MULTI_TOURNEY_NO_RECORD, TRUE) //some kind of choice box change MULTI_TOURNEY_WITH_RECORD to no record
+    if(var(VAR_RESULT) ==0) {
+        // msgbox("tournament options maybe?")
+    }
+	switch(var(VAR_RESULT)) {
+        case 0: goto(GranitePeak_BattleDomePreBattleRoom_EventScript_ShowOpponentInfo)
+        case 1: goto(GranitePeak_BattleDomePreBattleRoom_EventScript_ShowTourneyTree)
+        case 2: goto(GranitePeak_BattleDomePreBattleRoom_EventScript_ContinueChallenge)
+        case 3: goto(GranitePeak_BattleDomePreBattleRoom_EventScript_AskPauseChallenge) 
+        // case 4: goto(GranitePeak_BattleDomePreBattleRoom_EventScript_AskRetireChallenge)
+        case MULTI_B_PRESSED: goto(GranitePeak_BattleDomePreBattleRoom_EventScript_AskReadyForNextRound)
+    }
+}
+
+script GranitePeak_BattleDomePreBattleRoom_EventScript_AskPauseChallenge { //pauses challenge i think
+    msgbox(format("Would you like to leave? Your progress will be lost."), MSGBOX_YESNO)
+    if(var(VAR_RESULT) ==0) {
+        // msgbox("save and quit tournament?")
+    }
+    switch(var(VAR_RESULT)) {
+        case NO: goto(GranitePeak_BattleDomePreBattleRoom_EventScript_AskReadyForNextRound) //don't save go back
+        case YES: goto(GranitePeak_BattleDomePreBattleRoom_EventScript_PauseChallenge) //saves the current progress
+        case MULTI_B_PRESSED: goto(GranitePeak_BattleDomePreBattleRoom_EventScript_AskReadyForNextRound) //goes back
+    }
+}
+
+// script GranitePeak_BattleDomePreBattleRoom_EventScript_AskRetireChallenge{ //give up on tournament
+//     msgbox("Would you like to retire from your\nBattle Tournament challenge?", MSGBOX_YESNO)
+//     waitmessage
+//     if(var(VAR_RESULT) ==0) {
+//         msgbox("leaving?")
+//     }
+//     switch(var(VAR_RESULT)) {
+//         case 1: goto(GranitePeak_BattleDomePreBattleRoom_EventScript_AskReadyForNextRound)
+//         case 2: goto(GranitePeak_BattleDomePreBattleRoom_EventScript_RetireChallenge)
+//     }
+// // }
+
+// script GranitePeak_BattleDomePreBattleRoom_EventScript_RetireChallenge{
+//     setvar(VAR_0x8004, BATTLE_DOME_FUNC_RESOLVE_WINNERS)
+// 	setvar(VAR_0x8005, DOME_PLAYER_RETIRED)
+// 	special(CallBattleDomeFunction)
+// 	// dome_resolvewinners DOME_PLAYER_RETIRED //solve final outcome when player quits
+// 	call(GranitePeak_BattleDomeBattleRoom_EventScript_WarpToLobbyLost) //takes back to lobby as lost
+// }
+
+script GranitePeak_BattleDomeBattleRoom_EventScript_WarpToLobbyLost {    
+	setvar(VAR_0x8004, FRONTIER_UTIL_FUNC_SET_DATA)
+	setvar(VAR_0x8005, FRONTIER_DATA_CHALLENGE_STATUS)
+	setvar(VAR_0x8006, CHALLENGE_STATUS_LOST)
+	special(CallFrontierUtilFunc)
+	// frontier_set FRONTIER_DATA_CHALLENGE_STATUS CHALLENGE_STATUS_LOST
+	goto(GranitePeak_BattleDomeBattleRoom_EventScript_WarpToLobby)
+}
+
+script GranitePeak_BattleDomeBattleRoom_EventScript_WarpToLobby {
+    copyvar(VAR_RESULT, VAR_FRONTIER_BATTLE_MODE)
+    warp(MAP_GRANITE_PEAK_SCHOOL_HALL, 8, 3)
+	waitstate
+	end
+}
+	
+script GranitePeak_BattleDomePreBattleRoom_EventScript_PauseChallenge{
+    msgbox(format("I am saving your data.\n Please wait."))
+    waitmessage
+    setvar(VAR_0x8004, BATTLE_DOME_FUNC_SAVE)
+	setvar(VAR_0x8005, CHALLENGE_STATUS_PAUSED)
+	special(CallBattleDomeFunction)
+    // dome_save CHALLENGE_STATUS_PAUSED //something
+    playse(SE_SAVE)
+    waitse
+    fadescreen(FADE_TO_BLACK)
+    frontier_reset //guess this resets the jazz?
+    end
+}
+
+script GranitePeak_BattleDomePreBattleRoom_EventScript_ShowOpponentInfo{ //look at next players team
+    msgbox(format("{PLAYER}'s next opponent\n is this TRAINER."), MSGBOX_DEFAULT)
+    fadescreen(FADE_TO_BLACK)
+    setvar(VAR_0x8004, BATTLE_DOME_FUNC_SHOW_OPPONENT_INFO)
+	special(CallBattleDomeFunction)
+    // dome_showopponentinfo //info of opponent
+    waitstate
+    goto(GranitePeak_BattleDomePreBattleRoom_EventScript_AskReadyForNextRound)
+}
+
+script GranitePeak_BattleDomePreBattleRoom_EventScript_ShowTourneyTree{
+	call(GranitePeak_BattleDomePreBattleRoom_EventScript_ShowRoundMessage)
+	fadescreen(FADE_TO_BLACK)
+    setvar(VAR_0x8004, BATTLE_DOME_FUNC_SHOW_TOURNEY_TREE)
+	special(CallBattleDomeFunction)
+	// dome_showtourneytree //assume this shows the previous results
+	waitstate
+	goto(GranitePeak_BattleDomePreBattleRoom_EventScript_AskReadyForNextRound)
+}
+
+script GranitePeak_BattleDomePreBattleRoom_EventScript_ShowRoundMessage {
+    setvar(VAR_0x8004, FRONTIER_UTIL_FUNC_GET_DATA)
+	setvar(VAR_0x8005, FRONTIER_DATA_BATTLE_NUM)
+	special(CallFrontierUtilFunc)
+	// frontier_get FRONTIER_DATA_BATTLE_NUM
+    switch(var(VAR_RESULT)){
+        case DOME_ROUND1: call(GranitePeak_BattleDomePreBattleRoom_EventScript_TourneyInRound1)
+        case DOME_ROUND2: call(GranitePeak_BattleDomePreBattleRoom_EventScript_TourneyInRound2)
+        case DOME_SEMIFINAL: call(GranitePeak_BattleDomePreBattleRoom_EventScript_TourneyInSemifinals)
+        case DOME_FINAL: call(GranitePeak_BattleDomePreBattleRoom_EventScript_TourneyInFinals)
+    }
+    return
+}
+
+script GranitePeak_BattleDomePreBattleRoom_EventScript_TourneyInRound1{
+    msgbox(format("The tournament is in the 1st round."), MSGBOX_DEFAULT)
+    return
+}
+
+script GranitePeak_BattleDomePreBattleRoom_EventScript_TourneyInRound2{
+    msgbox(format("The tournament is in the 2nd round."), MSGBOX_DEFAULT)
+    return
+}
+script GranitePeak_BattleDomePreBattleRoom_EventScript_TourneyInSemifinals{
+    msgbox(format("The tournament is in the semifinals"), MSGBOX_DEFAULT)
+    return
+}
+script GranitePeak_BattleDomePreBattleRoom_EventScript_TourneyInFinals{
+    msgbox(format("The tournament is up to the final"), MSGBOX_DEFAULT)
+    return
+}
+
+script GranitePeak_BattleDomePreBattleRoom_EventScript_ContinueChallenge {
+    // message(format("Please choose the two POKéMON\n that are to appear in battle.")) //probably remove the selection
+    // waitmessage
+    // waitbuttonpress
+    fadescreen(FADE_TO_BLACK)
+    call(BattleFrontier_EventScript_GetLvlMode) //what this do?
+    copyvar(VAR_0x8004, VAR_RESULT) 
+    setvar(VAR_0x8005, DOME_BATTLE_PARTY_SIZE) // 2 of the 3 party mons are selected for battle
+    // special(ChoosePartyForBattleFrontier) //we don't want this probably we want freedom
+    // waitstate
+    // frontier_resetsketch //resets sketch moves to sketch but currently resets all moves, might just ban smeargle??
+    // if(var(VAR_RESULT) ==0) {
+    //     goto(GranitePeak_BattleDomePreBattleRoom_EventScript_AskReadyForNextRound)
+    // }
+    setvar(VAR_0x8004, BATTLE_DOME_FUNC_SET_DATA)
+	// setvar(VAR_0x8005, DOME_DATA_SELECTED_MONS)
+	setvar(VAR_0x8006, 0xFFFF)
+	special(CallBattleDomeFunction)
+	// dome_set DOME_DATA_SELECTED_MONS
+	// dome_reduceparty
+	dome_setopponent
+    msgbox(format("Let's go!"), MSGBOX_DEFAULT)
+    closemessage
+    warp(MAP_BATTLE_FRONTIER_BATTLE_DOME_BATTLE_ROOM, 9, 5) //warp them to correct room
+    setvar(VAR_TEMP_0, 0)
+    waitstate
+    end //player reaches new room
+}
+
+
+script GranitePeak_BattleDomePreBattleRoom_EventScript_ReadyForNextRoundMessage{
+    setvar(VAR_0x8004, FRONTIER_UTIL_FUNC_GET_DATA)
+	setvar(VAR_0x8005, FRONTIER_DATA_BATTLE_NUM) 
+	special(CallFrontierUtilFunc)
+    // frontier_get FRONTIER_DATA_BATTLE_NUM
+	switch(var(VAR_RESULT)){ //what round are we in
+        case DOME_ROUND1: goto(GranitePeak_BattleDomePreBattleRoom_EventScript_ReadyForRound1) //this just defines the text being said
+        case DOME_ROUND2: goto(GranitePeak_BattleDomePreBattleRoom_EventScript_ReadyForRound2)
+        case DOME_SEMIFINAL: goto(GranitePeak_BattleDomePreBattleRoom_EventScript_ReadyForSemifinals)
+        case DOME_FINAL: goto(GranitePeak_BattleDomePreBattleRoom_EventScript_ReadyForFinals)
+    }
+    return
+}
+
+script GranitePeak_BattleDomePreBattleRoom_EventScript_ReadyForFinals {
+    //turn off brain stuff
+    // frontier_getbrainstatus
+    // msgbox(format("FINALS? BUT WE DON'T WANT TUCKER"))
+    // switch VAR_RESULT
+	// case FRONTIER_BRAIN_SILVER, GranitePeak_BattleDomePreBattleRoom_EventScript_ReadyForTuckerSilver
+	// case FRONTIER_BRAIN_GOLD, GranitePeak_BattleDomePreBattleRoom_EventScript_ReadyForTuckerGold
+	// case FRONTIER_BRAIN_STREAK, GranitePeak_BattleDomePreBattleRoom_EventScript_ReadyForTuckerSilver
+	// case FRONTIER_BRAIN_STREAK_LONG, GranitePeak_BattleDomePreBattleRoom_EventScript_ReadyForTuckerGold
+	// message GranitePeak_BattleDomePreBattleRoom_Text_ReadyForFinals
+	return
+}
+	
+    
+script GranitePeak_BattleDomePreBattleRoom_EventScript_ReadyForRound1{
+    msgbox(format("Your 1st-round match is next.\n Are you ready?"))
+    return
+}
+
+script GranitePeak_BattleDomePreBattleRoom_EventScript_ReadyForRound2{
+    msgbox(format("Your 2nd-round match is next.\n Are you ready?"))
+	return
+}
+
+script GranitePeak_BattleDomePreBattleRoom_EventScript_ReadyForSemifinals{
+	msgbox(format("Your semifinal match is next.\nAre you ready?"))
+	return
+}
+
+// message GranitePeak_BattleDomePreBattleRoom_Text_ReadyForFinals{
+//     format("Your final match is next.\n Are you ready?")
+// }
+
+script GranitePeak_BattleDomePreBattleRoom_EventScript_Round1Complete {
+	msgbox("All 1st-round matches have been\n completed.\p These are the teams that advanced!", MSGBOX_DEFAULT)
+	return
+}
+
+
+script GranitePeak_BattleDomePreBattleRoom_EventScript_Round2Complete {
+	msgbox("All 2nd-round matches have been\n completed.\p These are the teams that advanced!", MSGBOX_DEFAULT)
+	return
+}
+
+script GranitePeak_BattleDomePreBattleRoom_EventScript_SemifinalsComplete {
+	msgbox("All 2nd-round matches have been\n completed.\p These are the teams that advanced!", MSGBOX_DEFAULT)
+	return
+}
+
+script what {
+	msgbox("All semifinal matches have been\n completed.\p These are the teams that advanced!", MSGBOX_DEFAULT)
+	return
+}
