@@ -13641,14 +13641,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
                                 {EVO_SPECIFIC_MAP, MAP_SHOAL_CAVE_LOW_TIDE_ICE_ROOM, SPECIES_GLACEON},
                                 {EVO_ITEM, ITEM_ICE_STONE, SPECIES_GLACEON},
                                 {EVO_FRIENDSHIP_MOVE_TYPE, TYPE_FAIRY, SPECIES_SYLVEON},
-                                {EVO_ITEM_HOLD, ITEM_METAL_COAT, SPECIES_EMPOLEON},
+                                {EVO_ITEM, ITEM_METAL_COAT, SPECIES_EMPOLEON},
                                 {EVO_ITEM_HOLD, ITEM_WATER_STONE, SPECIES_FINNEON},
                                 {EVO_ITEM_HOLD, ITEM_MYSTIC_WATER, SPECIES_LUMINEON},
                                 {EVO_ITEM, ITEM_UPGRADE, SPECIES_PORYGON2},
                                 {EVO_ITEM, ITEM_DUBIOUS_DISC, SPECIES_PORYGON_Z},
                                 {EVO_MAPSEC, MAPSEC_ROUTE_119, SPECIES_KECLEON},
                                 {EVO_ITEM_HOLD, ITEM_UPGRADE, SPECIES_PORYGON}),
-    },
     },
 
 #if P_GIGANTAMAX_FORMS
