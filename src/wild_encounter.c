@@ -550,50 +550,54 @@ static bool8 DoMassOutbreakEncounterTest(void)
 
 static bool8 EncounterOddsCheck(u16 encounterRate)
 {
-    if (Random() % MAX_ENCOUNTER_RATE < encounterRate)
-        return TRUE;
-    else
-        return FALSE;
+    // if (Random() % MAX_ENCOUNTER_RATE < encounterRate)
+    //     return TRUE;
+    // else
+    //     return FALSE;
+    return TRUE;
 }
 
 // Returns true if it will try to create a wild encounter.
 static bool8 WildEncounterCheck(u32 encounterRate, bool8 ignoreAbility)
 {
-    encounterRate *= 16;
-    if (TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_MACH_BIKE | PLAYER_AVATAR_FLAG_ACRO_BIKE))
-        encounterRate = encounterRate * 80 / 100;
-    ApplyFluteEncounterRateMod(&encounterRate);
-    ApplyCleanseTagEncounterRateMod(&encounterRate);
-    if (LURE_STEP_COUNT != 0)
-        encounterRate *= 2;
-    if (!ignoreAbility && !GetMonData(&gPlayerParty[0], MON_DATA_SANITY_IS_EGG))
-    {
-        u32 ability = GetMonAbility(&gPlayerParty[0]);
+    if(FALSE) {
+        encounterRate *= 16;
+            if (TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_MACH_BIKE | PLAYER_AVATAR_FLAG_ACRO_BIKE))
+                encounterRate = encounterRate * 80 / 100;
+            ApplyFluteEncounterRateMod(&encounterRate);
+            ApplyCleanseTagEncounterRateMod(&encounterRate);
+            if (LURE_STEP_COUNT != 0)
+                encounterRate *= 2;
+            if (!ignoreAbility && !GetMonData(&gPlayerParty[0], MON_DATA_SANITY_IS_EGG))
+            {
+                u32 ability = GetMonAbility(&gPlayerParty[0]);
 
-        if (ability == ABILITY_STENCH && gMapHeader.mapLayoutId == LAYOUT_BATTLE_FRONTIER_BATTLE_PYRAMID_FLOOR)
-            encounterRate = encounterRate * 3 / 4;
-        else if (ability == ABILITY_STENCH)
-            encounterRate /= 2;
-        else if (ability == ABILITY_ILLUMINATE && OW_ILLUMINATE < GEN_9)
-            encounterRate *= 2;
-        else if (ability == ABILITY_WHITE_SMOKE)
-            encounterRate /= 2;
-        else if (ability == ABILITY_ARENA_TRAP)
-            encounterRate *= 2;
-        else if (ability == ABILITY_SAND_VEIL && gSaveBlock1Ptr->weather == WEATHER_SANDSTORM)
-            encounterRate /= 2;
-        else if (ability == ABILITY_SNOW_CLOAK && gSaveBlock1Ptr->weather == WEATHER_SNOW)
-            encounterRate /= 2;
-        else if (ability == ABILITY_QUICK_FEET)
-            encounterRate /= 2;
-        else if (ability == ABILITY_INFILTRATOR && OW_INFILTRATOR == GEN_8)
-            encounterRate /= 2;
-        else if (ability == ABILITY_NO_GUARD)
-            encounterRate *= 2;
+                if (ability == ABILITY_STENCH && gMapHeader.mapLayoutId == LAYOUT_BATTLE_FRONTIER_BATTLE_PYRAMID_FLOOR)
+                    encounterRate = encounterRate * 3 / 4;
+                else if (ability == ABILITY_STENCH)
+                    encounterRate /= 2;
+                else if (ability == ABILITY_ILLUMINATE && OW_ILLUMINATE < GEN_9)
+                    encounterRate *= 2;
+                else if (ability == ABILITY_WHITE_SMOKE)
+                    encounterRate /= 2;
+                else if (ability == ABILITY_ARENA_TRAP)
+                    encounterRate *= 2;
+                else if (ability == ABILITY_SAND_VEIL && gSaveBlock1Ptr->weather == WEATHER_SANDSTORM)
+                    encounterRate /= 2;
+                else if (ability == ABILITY_SNOW_CLOAK && gSaveBlock1Ptr->weather == WEATHER_SNOW)
+                    encounterRate /= 2;
+                else if (ability == ABILITY_QUICK_FEET)
+                    encounterRate /= 2;
+                else if (ability == ABILITY_INFILTRATOR && OW_INFILTRATOR == GEN_8)
+                    encounterRate /= 2;
+                else if (ability == ABILITY_NO_GUARD)
+                    encounterRate *= 2;
+            }
+            if (encounterRate > MAX_ENCOUNTER_RATE)
+                encounterRate = MAX_ENCOUNTER_RATE;
+            return EncounterOddsCheck(encounterRate);
     }
-    if (encounterRate > MAX_ENCOUNTER_RATE)
-        encounterRate = MAX_ENCOUNTER_RATE;
-    return EncounterOddsCheck(encounterRate);
+    return TRUE;
 }
 
 // When you first step on a different type of metatile, there's a 40% chance it
@@ -986,7 +990,7 @@ static bool8 IsWildLevelAllowedByRepel(u8 wildLevel)
         if (GetMonData(&gPlayerParty[i], MON_DATA_HP) && !GetMonData(&gPlayerParty[i], MON_DATA_IS_EGG))
         {
             u8 ourLevel = GetMonData(&gPlayerParty[i], MON_DATA_LEVEL);
-
+            //TODO change repels to be level limited?
             if (wildLevel < ourLevel)
                 return FALSE;
             else

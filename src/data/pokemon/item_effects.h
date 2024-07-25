@@ -4,27 +4,27 @@ const u8 gItemEffect_Potion[7] = {
 };
 
 const u8 gItemEffect_Antidote[6] = {
-    [3] = ITEM3_POISON,
+    [3] = ITEM_EFFECT_NONE,
 };
 
 const u8 gItemEffect_BurnHeal[6] = {
-    [3] = ITEM3_BURN,
+    [3] = ITEM_EFFECT_NONE,
 };
 
 const u8 gItemEffect_IceHeal[6] = {
-    [3] = ITEM3_FREEZE,
+    [3] = ITEM_EFFECT_NONE,
 };
 
 const u8 gItemEffect_Awakening[6] = {
-    [3] = ITEM3_SLEEP,
+    [3] = ITEM_EFFECT_NONE,
 };
 
 const u8 gItemEffect_ParalyzeHeal[6] = {
-    [3] = ITEM3_PARALYSIS,
+    [3] = ITEM_EFFECT_NONE,
 };
 
 const u8 gItemEffect_FullRestore[7] = {
-    [3] = ITEM3_STATUS_ALL,
+    [3] = ITEM_EFFECT_NONE,
     [4] = ITEM4_HEAL_HP,
     [6] = ITEM6_HEAL_HP_FULL,
 };
@@ -45,7 +45,7 @@ const u8 gItemEffect_SuperPotion[7] = {
 };
 
 const u8 gItemEffect_FullHeal[6] = {
-    [3] = ITEM3_STATUS_ALL,
+    [3] = ITEM_EFFECT_NONE,
 };
 
 const u8 gItemEffect_Revive[7] = {
@@ -97,7 +97,7 @@ const u8 gItemEffect_EnergyRoot[10] = {
 };
 
 const u8 gItemEffect_HealPowder[9] = {
-    [3] = ITEM3_STATUS_ALL,
+    [3] = ITEM_EFFECT_NONE,
     [5] = ITEM5_FRIENDSHIP_ALL,
     [6] = -5,  // Friendship change, low
     [7] = -5,  // Friendship change, mid

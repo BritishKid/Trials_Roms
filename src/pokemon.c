@@ -6518,13 +6518,14 @@ void HealPokemon(struct Pokemon *mon)
 {
     u32 data;
 
-    data = GetMonData(mon, MON_DATA_MAX_HP);
+    data = GetMonData(mon, MON_DATA_MAX_HP) - 1;
     SetMonData(mon, MON_DATA_HP, &data);
 
-    data = STATUS1_NONE;
-    SetMonData(mon, MON_DATA_STATUS, &data);
-
-    MonRestorePP(mon);
+    if(GetMonData(mon, MON_DATA_STATUS) != STATUS1_PARALYSIS){ //means pokemon stay paralysed
+        data = STATUS1_NONE;
+        SetMonData(mon, MON_DATA_STATUS, &data);
+    }
+    // MonRestorePP(mon); //no pp restore
 }
 
 void HealBoxPokemon(struct BoxPokemon *boxMon)
@@ -6534,10 +6535,12 @@ void HealBoxPokemon(struct BoxPokemon *boxMon)
     data = 0;
     SetBoxMonData(boxMon, MON_DATA_HP_LOST, &data);
 
-    data = STATUS1_NONE;
-    SetBoxMonData(boxMon, MON_DATA_STATUS, &data);
+    if(GetBoxMonData(boxMon, MON_DATA_STATUS) != STATUS1_PARALYSIS){ //means pokemon stay paralysed
+        data = STATUS1_NONE;
+        SetBoxMonData(boxMon, MON_DATA_STATUS, &data);
+    }
 
-    BoxMonRestorePP(boxMon);
+    // BoxMonRestorePP(boxMon);
 }
 
 u16 GetCryIdBySpecies(u16 species)

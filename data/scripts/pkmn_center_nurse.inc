@@ -5,9 +5,32 @@ Common_EventScript_PkmnCenterNurse::
 	specialvar VAR_RESULT, CountPlayerTrainerStars
 	goto_if_eq VAR_RESULT, 4, EventScript_PkmnCenterNurse_GoldCard
 	msgbox gText_WouldYouLikeToRestYourPkmn, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, EventScript_PkmnCenterNurse_CheckMoney
 	goto_if_eq VAR_RESULT, YES, EventScript_PkmnCenterNurse_HealPkmn
 	goto_if_eq VAR_RESULT, NO, EventScript_PkmnCenterNurse_Goodbye
 	end
+
+EventScript_PkmnCenterNurse_CheckMoney::
+	checkmoney 500
+	compare VAR_RESULT, 0
+	goto_if_eq EventScript_PkmnCenterNurse_CheckMoney_2
+	compare VAR_RESULT, 0
+	goto_if_ne EventScript_PkmnCenterNurse_CheckMoney_4
+	return
+
+EventScript_PkmnCenterNurse_CheckMoney_2:
+	msgbox EventScript_PkmnCenterNurse_CheckMoney_Text_0
+	end
+
+EventScript_PkmnCenterNurse_CheckMoney_4:
+	removemoney 500
+	updatemoneybox
+	call EventScript_PkmnCenterNurse_HealPkmn
+	return
+
+EventScript_PkmnCenterNurse_CheckMoney_Text_0:
+	.string "You can't afford this.$"
+
 
 EventScript_PkmnCenterNurse_Goodbye::
 	message gText_WeHopeToSeeYouAgain
