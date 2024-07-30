@@ -67,6 +67,7 @@
 #include "constants/songs.h"
 #include "constants/trainer_hill.h"
 #include "constants/weather.h"
+#include "constants/heal_locations.h"
 
 struct CableClubPlayer
 {
@@ -361,8 +362,15 @@ void DoWhiteOut(void)
     RunScriptImmediately(EventScript_WhiteOut);
     if (B_WHITEOUT_MONEY == GEN_3)
         SetMoney(&gSaveBlock1Ptr->money, GetMoney(&gSaveBlock1Ptr->money) / 2);
+    ZeroPlayerPartyMons();
     HealPlayerParty();
     Overworld_ResetStateAfterWhiteOut();
+    if (gSaveBlock2Ptr->playerGender != MALE) {
+        SetLastHealLocationWarp(HEAL_LOCATION_LITTLEROOT_TOWN_MAYS_HOUSE_2F);
+     }
+     else {
+        SetLastHealLocationWarp(HEAL_LOCATION_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F);
+     }
     SetWarpDestinationToLastHealLocation();
     WarpIntoMap();
 }
