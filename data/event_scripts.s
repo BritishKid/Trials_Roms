@@ -583,6 +583,23 @@ gStdScripts_End::
 	.include "data/scripts/debug.inc"
 
 EventScript_WhiteOut::
+	cleartrainerflag 0x500
+	clearflag FLAG_DEFEATED_RUSTBORO_GYM
+	clearflag FLAG_BADGE01_GET
+	clearflag FLAG_BADGE02_GET
+	clearflag FLAG_BADGE03_GET
+	clearflag FLAG_BADGE04_GET
+	clearflag FLAG_BADGE05_GET
+	clearflag FLAG_BADGE06_GET
+	clearflag FLAG_BADGE07_GET
+	clearflag FLAG_BADGE08_GET
+	clearflag FLAG_DEFEATED_DEWFORD_GYM
+	clearflag FLAG_DEFEATED_MAUVILLE_GYM
+	clearflag FLAG_DEFEATED_LAVARIDGE_GYM
+	clearflag FLAG_DEFEATED_PETALBURG_GYM
+	clearflag FLAG_DEFEATED_FORTREE_GYM
+	clearflag FLAG_DEFEATED_MOSSDEEP_GYM
+	clearflag FLAG_DEFEATED_SOOTOPOLIS_GYM 
 	call EverGrandeCity_HallOfFame_EventScript_ResetEliteFour
 	goto EventScript_ResetMrBriney
 	end

@@ -1319,8 +1319,17 @@ void SetTrainerFlag(u16 trainerId)
 }
 
 void ClearTrainerFlag(u16 trainerId)
-{
-    FlagClear(TRAINER_FLAGS_START + trainerId);
+{   
+    if(trainerId == TRAINER_FLAGS_START)
+    {
+        for (int i = 0; i < TRAINERS_COUNT; i++) {
+            FlagClear(TRAINER_FLAGS_START + i);
+        }
+    }
+    else {
+        FlagClear(TRAINER_FLAGS_START + trainerId);    
+    }
+    
 }
 
 void BattleSetup_StartTrainerBattle(void)
