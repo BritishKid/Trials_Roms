@@ -663,6 +663,22 @@ LittlerootTown_ProfessorBirchsLab_EventScript_ScottAboardSSTidalCall::
 	releaseall
 	end
 
+Credits_TV::
+	msgbox Credits_TV_Text_0 MSGBOX_SIGN
+	msgbox Credits_TV_Text_1 MSGBOX_SIGN
+	return
+
+Credits_TV_Text_0:
+	.string "Thank you to everyone who suggested\n"
+	.string "ideas!$"
+
+Credits_TV_Text_1:
+	.string "jibber_the_jelly, iliketosleep222,\n"
+	.string "0_vappy_0, zokusodachi, yumiiko_pol.\l"
+	.string "1sgun, williwas1720, keilbaker,\l"
+	.string "hugh._._.janus, verygoodmusiclessons$"
+
+
 LittlerootTown_ProfessorBirchsLab_Text_BirchAwayOnFieldwork:
 	.string "Hunh? PROF. BIRCH?\p"
 	.string "The PROF's away on fieldwork.\n"

@@ -9,12 +9,22 @@ EventScript_CutTree::
 	buffermovename STR_VAR_2, MOVE_CUT
 	msgbox Text_WantToCut, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, EventScript_CancelCut
+	msgbox HmPrice_Text_0, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq VAR_RESULT, NO, EventScript_CancelCut
+	checkmoney 1000
+	goto_if_eq VAR_RESULT, FALSE, EventScript_CancelCut
+	removemoney 1000
 	msgbox Text_MonUsedFieldMove, MSGBOX_DEFAULT
 	closemessage
 	dofieldeffect FLDEFF_USE_CUT_ON_TREE
 	waitstate
 	goto EventScript_CutTreeDown
 	end
+
+HmPrice_Text_0:
+	.string "To use this HM will cost 1000, is this okay?$"
+	
 
 @ Use cut from party menu
 EventScript_UseCut::
@@ -68,6 +78,12 @@ EventScript_RockSmash::
 	buffermovename STR_VAR_2, MOVE_ROCK_SMASH
 	msgbox Text_WantToSmash, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, EventScript_CancelSmash
+	msgbox HmPrice_Text_0, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq VAR_RESULT, NO, EventScript_CancelSmash
+	checkmoney 1000
+	goto_if_eq VAR_RESULT, FALSE, EventScript_CancelSmash
+	removemoney 1000
 	msgbox Text_MonUsedFieldMove, MSGBOX_DEFAULT
 	closemessage
 	dofieldeffect FLDEFF_USE_ROCK_SMASH
@@ -130,6 +146,12 @@ EventScript_StrengthBoulder::
 	setfieldeffectargument 0, VAR_RESULT
 	msgbox Text_WantToStrength, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, EventScript_CancelStrength
+	msgbox HmPrice_Text_0, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq VAR_RESULT, NO, EventScript_CancelStrength
+	checkmoney 1000
+	goto_if_eq VAR_RESULT, FALSE, EventScript_CancelStrength
+	removemoney 1000
 	closemessage
 	dofieldeffect FLDEFF_USE_STRENGTH
 	waitstate
@@ -190,6 +212,12 @@ EventScript_UseWaterfall::
 	setfieldeffectargument 0, VAR_RESULT
 	msgbox Text_WantToWaterfall, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, EventScript_EndWaterfall
+	msgbox HmPrice_Text_0, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq VAR_RESULT, NO, EventScript_EndWaterfall
+	checkmoney 1000
+	goto_if_eq VAR_RESULT, FALSE, EventScript_EndWaterfall
+	removemoney 1000
 	msgbox Text_MonUsedWaterfall, MSGBOX_DEFAULT
 	dofieldeffect FLDEFF_USE_WATERFALL
 	goto EventScript_EndWaterfall
@@ -224,6 +252,12 @@ EventScript_UseDive::
 	setfieldeffectargument 1, 1
 	msgbox Text_WantToDive, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, EventScript_EndDive
+	msgbox HmPrice_Text_0, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq VAR_RESULT, NO, EventScript_EndDive
+	checkmoney 1000
+	goto_if_eq VAR_RESULT, FALSE, EventScript_EndDive
+	removemoney 1000
 	msgbox Text_MonUsedDive, MSGBOX_DEFAULT
 	dofieldeffect FLDEFF_USE_DIVE
 	goto EventScript_EndDive
@@ -247,6 +281,12 @@ EventScript_UseDiveUnderwater::
 	setfieldeffectargument 1, 1
 	msgbox Text_WantToSurface, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, EventScript_EndSurface
+	msgbox HmPrice_Text_0, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq VAR_RESULT, NO, EventScript_EndDive
+	checkmoney 1000
+	goto_if_eq VAR_RESULT, FALSE, EventScript_EndDive
+	removemoney 1000
 	msgbox Text_MonUsedDive, MSGBOX_DEFAULT
 	dofieldeffect FLDEFF_USE_DIVE
 	goto EventScript_EndSurface

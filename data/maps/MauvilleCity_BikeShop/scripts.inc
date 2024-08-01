@@ -39,13 +39,29 @@ MauvilleCity_BikeShop_EventScript_YesFar::
 	end
 
 MauvilleCity_BikeShop_EventScript_GetMachBike::
+	checkmoney 200000
+	compare VAR_RESULT, FALSE
+	goto_if_eq MauvilleCity_BikeShop_EventScript_Cantafford
+	removemoney 200000
 	msgbox MauvilleCity_BikeShop_Text_ChoseMachBike, MSGBOX_DEFAULT
 	giveitem ITEM_MACH_BIKE
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	goto MauvilleCity_BikeShop_EventScript_ComeBackToSwitchBikes
 	end
 
+MauvilleCity_BikeShop_EventScript_Cantafford::
+	msgbox MauvilleCity_BikeShop_EventScript_Cantafford_Text_0, MSGBOX_DEFAULT
+	end
+
+MauvilleCity_BikeShop_EventScript_Cantafford_Text_0:
+	.string "You can't afford the bike.$"
+
+
 MauvilleCity_BikeShop_EventScript_GetAcroBike::
+	checkmoney 200000
+	compare VAR_RESULT, FALSE
+	goto_if_eq MauvilleCity_BikeShop_EventScript_Cantafford
+	removemoney 200000
 	msgbox MauvilleCity_BikeShop_Text_ChoseAcroBike, MSGBOX_DEFAULT
 	giveitem ITEM_ACRO_BIKE
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
@@ -66,6 +82,10 @@ MauvilleCity_BikeShop_EventScript_AskSwitchBikes::
 
 @ If the player does not have a bike on them Rydel assumes its stored in the PC
 MauvilleCity_BikeShop_EventScript_SwitchBikes::
+	checkmoney 100000
+	compare VAR_RESULT, FALSE
+	goto_if_eq MauvilleCity_BikeShop_EventScript_Cantafford 
+	removemoney 100000
 	msgbox MauvilleCity_BikeShop_Text_IllSwitchBikes, MSGBOX_DEFAULT
 	checkitem ITEM_ACRO_BIKE
 	goto_if_eq VAR_RESULT, TRUE, MauvilleCity_BikeShop_EventScript_SwitchAcroForMach
@@ -213,7 +233,7 @@ MauvilleCity_BikeShop_Text_ExplainBikesChooseWhichOne:
 	.string "And an ACRO BIKE is for those who\n"
 	.string "prefer technical rides!\p"
 	.string "I'm a real sweetheart, so you can\n"
-	.string "have whichever one you like!\p"
+	.string "have one for 200,000.\p"
 	.string "Which one will you choose?$"
 
 MauvilleCity_BikeShop_Text_ChoseMachBike:
@@ -228,7 +248,7 @@ MauvilleCity_BikeShop_Text_ComeBackToSwitchBikes:
 
 MauvilleCity_BikeShop_Text_WantToSwitchBikes:
 	.string "RYDEL: Oh? Were you thinking about\n"
-	.string "switching BIKES?$"
+	.string "switching BIKES for 100,000?$"
 
 MauvilleCity_BikeShop_Text_IllSwitchBikes:
 	.string "RYDEL: Okay, no problem!\n"

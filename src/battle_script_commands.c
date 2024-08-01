@@ -1812,6 +1812,8 @@ static void Cmd_accuracycheck(void)
             GetBattlerHoldEffect(gBattlerTarget, TRUE)
         );
 
+        accuracy = accuracy * 0.5; //Lowers players accuracy
+
         if (!RandomPercentage(RNG_ACCURACY, accuracy))
         {
             gMoveResultFlags |= MOVE_RESULT_MISSED;

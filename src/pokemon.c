@@ -3751,8 +3751,10 @@ bool8 PokemonUseItemEffects(struct Pokemon *mon, u16 item, u8 partyIndex, u8 mov
 
                             if (targetSpecies != SPECIES_NONE)
                             {
-                                BeginEvolutionScene(mon, targetSpecies, FALSE, partyIndex);
-                                return FALSE;
+                                // if (!RandomPercentage(100, 75)) { //chance to fail evolution
+                                    BeginEvolutionScene(mon, targetSpecies, FALSE, partyIndex);
+                                    return FALSE;
+                                // }                             
                             }
                         }
                         break;
@@ -6345,7 +6347,9 @@ void TrySpecialOverworldEvo(void)
             if(gMain.callback2 == TrySpecialOverworldEvo) // This fixes small graphics glitches.
                 EvolutionScene(&gPlayerParty[i], targetSpecies, canStopEvo, i);
             else
-                BeginEvolutionScene(&gPlayerParty[i], targetSpecies, canStopEvo, i);
+                // if (!RandomPercentage(100, 75)) {
+                    BeginEvolutionScene(&gPlayerParty[i], targetSpecies, canStopEvo, i);
+                // }
             if (tryMultiple)
                 gCB2_AfterEvolution = TrySpecialOverworldEvo;
             else
