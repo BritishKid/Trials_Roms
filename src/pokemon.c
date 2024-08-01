@@ -6519,9 +6519,12 @@ void HealPokemon(struct Pokemon *mon)
     u32 data;
 
     data = GetMonData(mon, MON_DATA_MAX_HP) - 1;
+    if (GetMonData(mon, MON_DATA_STATUS) == STATUS1_POISON || GetMonData(mon, MON_DATA_STATUS) == STATUS1_TOXIC_POISON){
+        data = data / 2;
+    }
     SetMonData(mon, MON_DATA_HP, &data);
 
-    if(GetMonData(mon, MON_DATA_STATUS) != STATUS1_PARALYSIS){ //means pokemon stay paralysed
+    if(GetMonData(mon, MON_DATA_STATUS) != STATUS1_PARALYSIS && GetMonData(mon, MON_DATA_STATUS) != STATUS1_POISON && GetMonData(mon, MON_DATA_STATUS) == STATUS1_TOXIC_POISON){ //means pokemon stay paralysed
         data = STATUS1_NONE;
         SetMonData(mon, MON_DATA_STATUS, &data);
     }

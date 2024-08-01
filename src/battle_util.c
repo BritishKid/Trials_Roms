@@ -553,7 +553,8 @@ void HandleAction_Run(void)
     {
         if (GetBattlerSide(gBattlerAttacker) == B_SIDE_PLAYER)
         {
-            if (!TryRunFromBattle(gBattlerAttacker)) // failed to run away
+            // if (!TryRunFromBattle(gBattlerAttacker)) // failed to run away
+            if(TRUE)
             {
                 ClearVariousBattlerFlags(gBattlerAttacker);
                 gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_CANT_ESCAPE_2;

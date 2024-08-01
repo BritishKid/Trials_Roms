@@ -3,7 +3,7 @@ gText_WouldYouLikeToRestYourPkmn::
 	.string "the POKéMON CENTER.\p"
 	.string "We restore your tired POKéMON\n"
 	.string "to full health.\p"
-	.string "It will cost 500 to heal a team\n"
+	.string "It will cost to heal a team\n"
 	.string "Would you like to rest your POKéMON?$"
 
 gText_IllTakeYourPkmn::

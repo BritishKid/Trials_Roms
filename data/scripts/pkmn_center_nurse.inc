@@ -11,19 +11,143 @@ Common_EventScript_PkmnCenterNurse::
 	end
 
 EventScript_PkmnCenterNurse_CheckMoney::
+	goto_if_unset FLAG_DEFEATED_RUSTBORO_GYM, EventScript_PkmnCenterNurse_CheckMoney1
+	goto_if_unset FLAG_DEFEATED_RUSTBORO_GYM, EventScript_PkmnCenterNurse_CheckMoney2
+	goto_if_unset FLAG_DEFEATED_RUSTBORO_GYM, EventScript_PkmnCenterNurse_CheckMoney3
+	goto_if_unset FLAG_DEFEATED_RUSTBORO_GYM, EventScript_PkmnCenterNurse_CheckMoney4
+	goto_if_unset FLAG_DEFEATED_RUSTBORO_GYM, EventScript_PkmnCenterNurse_CheckMoney5
+	goto_if_unset FLAG_DEFEATED_RUSTBORO_GYM, EventScript_PkmnCenterNurse_CheckMoney6
+	goto_if_unset FLAG_DEFEATED_RUSTBORO_GYM, EventScript_PkmnCenterNurse_CheckMoney7
+	goto_if_unset FLAG_DEFEATED_RUSTBORO_GYM, EventScript_PkmnCenterNurse_CheckMoney8
+	goto EventScript_PkmnCenterNurse_CheckMoney9 
+	return
+
+EventScript_PkmnCenterNurse_CheckMoney1::
 	checkmoney 500
 	compare VAR_RESULT, 0
 	goto_if_eq EventScript_PkmnCenterNurse_CheckMoney_2
 	compare VAR_RESULT, 0
-	goto_if_ne EventScript_PkmnCenterNurse_CheckMoney_4
+	goto_if_ne EventScript_PkmnCenterNurse_CheckMoney_4_1
+	return
+
+EventScript_PkmnCenterNurse_CheckMoney2::
+	checkmoney 1000
+	compare VAR_RESULT, 0
+	goto_if_eq EventScript_PkmnCenterNurse_CheckMoney_2
+	compare VAR_RESULT, 0
+	goto_if_ne EventScript_PkmnCenterNurse_CheckMoney_4_2
+	return
+
+EventScript_PkmnCenterNurse_CheckMoney3::
+	checkmoney 2500
+	compare VAR_RESULT, 0
+	goto_if_eq EventScript_PkmnCenterNurse_CheckMoney_2
+	compare VAR_RESULT, 0
+	goto_if_ne EventScript_PkmnCenterNurse_CheckMoney_4_3
+	return
+
+EventScript_PkmnCenterNurse_CheckMoney4::
+	checkmoney 5000
+	compare VAR_RESULT, 0
+	goto_if_eq EventScript_PkmnCenterNurse_CheckMoney_2
+	compare VAR_RESULT, 0
+	goto_if_ne EventScript_PkmnCenterNurse_CheckMoney_4_4
+	return
+
+EventScript_PkmnCenterNurse_CheckMoney5::
+	checkmoney 10000
+	compare VAR_RESULT, 0
+	goto_if_eq EventScript_PkmnCenterNurse_CheckMoney_2
+	compare VAR_RESULT, 0
+	goto_if_ne EventScript_PkmnCenterNurse_CheckMoney_4_5
+	return
+
+EventScript_PkmnCenterNurse_CheckMoney6::
+	checkmoney 15000
+	compare VAR_RESULT, 0
+	goto_if_eq EventScript_PkmnCenterNurse_CheckMoney_2
+	compare VAR_RESULT, 0
+	goto_if_ne EventScript_PkmnCenterNurse_CheckMoney_4_6
+	return
+
+EventScript_PkmnCenterNurse_CheckMoney7::
+	checkmoney 25000
+	compare VAR_RESULT, 0
+	goto_if_eq EventScript_PkmnCenterNurse_CheckMoney_2
+	compare VAR_RESULT, 0
+	goto_if_ne EventScript_PkmnCenterNurse_CheckMoney_4_7
+	return
+
+EventScript_PkmnCenterNurse_CheckMoney8::
+	checkmoney 50000
+	compare VAR_RESULT, 0
+	goto_if_eq EventScript_PkmnCenterNurse_CheckMoney_2
+	compare VAR_RESULT, 0
+	goto_if_ne EventScript_PkmnCenterNurse_CheckMoney_4_8
+	return
+
+EventScript_PkmnCenterNurse_CheckMoney9::
+	checkmoney 100000
+	compare VAR_RESULT, 0
+	goto_if_eq EventScript_PkmnCenterNurse_CheckMoney_2
+	compare VAR_RESULT, 0
+	goto_if_ne EventScript_PkmnCenterNurse_CheckMoney_4_9
 	return
 
 EventScript_PkmnCenterNurse_CheckMoney_2:
 	msgbox EventScript_PkmnCenterNurse_CheckMoney_Text_0
 	end
 
-EventScript_PkmnCenterNurse_CheckMoney_4:
+EventScript_PkmnCenterNurse_CheckMoney_4_1:
 	removemoney 500
+	updatemoneybox
+	call EventScript_PkmnCenterNurse_HealPkmn
+	return
+
+EventScript_PkmnCenterNurse_CheckMoney_4_2:
+	removemoney 1000
+	updatemoneybox
+	call EventScript_PkmnCenterNurse_HealPkmn
+	return
+
+EventScript_PkmnCenterNurse_CheckMoney_4_3:
+	removemoney 2500
+	updatemoneybox
+	call EventScript_PkmnCenterNurse_HealPkmn
+	return
+
+EventScript_PkmnCenterNurse_CheckMoney_4_4:
+	removemoney 5000
+	updatemoneybox
+	call EventScript_PkmnCenterNurse_HealPkmn
+	return
+
+EventScript_PkmnCenterNurse_CheckMoney_4_5:
+	removemoney 10000
+	updatemoneybox
+	call EventScript_PkmnCenterNurse_HealPkmn
+	return
+
+EventScript_PkmnCenterNurse_CheckMoney_4_6:
+	removemoney 15000
+	updatemoneybox
+	call EventScript_PkmnCenterNurse_HealPkmn
+	return
+
+EventScript_PkmnCenterNurse_CheckMoney_4_7:
+	removemoney 25000
+	updatemoneybox
+	call EventScript_PkmnCenterNurse_HealPkmn
+	return
+
+EventScript_PkmnCenterNurse_CheckMoney_4_8:
+	removemoney 50000
+	updatemoneybox
+	call EventScript_PkmnCenterNurse_HealPkmn
+	return
+
+EventScript_PkmnCenterNurse_CheckMoney_4_9:
+	removemoney 100000
 	updatemoneybox
 	call EventScript_PkmnCenterNurse_HealPkmn
 	return
@@ -59,7 +183,7 @@ EventScript_PkmnCenterNurse_IllTakeYourPkmn2::
 EventScript_PkmnCenterNurse_TakeAndHealPkmn::
 	applymovement VAR_0x800B, Common_Movement_WalkInPlaceFasterLeft
 	waitmovement 0
-	delay 6000
+	delay 3000
 	dofieldeffect FLDEFF_POKECENTER_HEAL
 	waitfieldeffect FLDEFF_POKECENTER_HEAL
 	applymovement VAR_0x800B, Common_Movement_WalkInPlaceFasterDown
