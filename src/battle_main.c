@@ -2267,7 +2267,15 @@ u8 CreateNPCTrainerPartyFromTrainer(struct Pokemon *party, const struct Trainer 
             if (trainerClass == TRAINER_CLASS_RIVAL) {
                 reallevel = fixedLVL + 9;
                 CreateMon(&party[i], partyData[i].species, reallevel, 0, TRUE, personalityValue, otIdType, fixedOtId);
-                }
+            }
+            if (trainerClass == TRAINER_CLASS_LEADER || trainerClass == TRAINER_CLASS_MAGMA_LEADER || trainerClass == TRAINER_CLASS_AQUA_LEADER) {
+                reallevel = fixedLVL + 5;
+                CreateMon(&party[i], partyData[i].species, reallevel, 0, TRUE, personalityValue, otIdType, fixedOtId);
+            }
+            if (trainerClass == TRAINER_CLASS_ELITE_FOUR || trainerClass == TRAINER_CLASS_CHAMPION) {
+                reallevel = fixedLVL + 11;
+                CreateMon(&party[i], partyData[i].species, reallevel, 0, TRUE, personalityValue, otIdType, fixedOtId);
+            }
             else {
                 reallevel = fixedLVL + 1;
                 CreateMon(&party[i], partyData[i].species, reallevel, 0, TRUE, personalityValue, otIdType, fixedOtId);
