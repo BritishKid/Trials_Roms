@@ -69,14 +69,14 @@
   ],
   "warp_events": [
     {
-      "x": 7,
+      "x": 4,
       "y": 8,
       "elevation": 3,
       "dest_map": "MAP_RUSTBORO_CITY",
       "dest_warp_id": "3"
     },
     {
-      "x": 6,
+      "x": 5,
       "y": 8,
       "elevation": 3,
       "dest_map": "MAP_RUSTBORO_CITY",
