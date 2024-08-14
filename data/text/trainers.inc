@@ -2187,12 +2187,12 @@ Route116_Text_JoeyIntro:
 	.string "Check them out!$"
 
 Route116_Text_JoeyDefeat:
-	.string "Ouch! A scrape!\n"
-	.string "I have to put on a bandage!$"
+	.string "But it's in the top percentage\n"
+	.string "how did this happen!$"
 
 Route116_Text_JoeyPostBattle:
-	.string "Bandages are signs of toughness!\n"
-	.string "I've got another one!$"
+	.string "I'm going to keep training!\n"
+	.string "Stronger and stronger!$"
 
 Route116_Text_JoseIntro:
 	.string "My BUG POKéMON are tough!\n"

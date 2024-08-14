@@ -7711,14 +7711,16 @@ static void Cmd_getmoneyreward(void)
     CMD_ARGS();
 
     u32 money;
+    u32 taxes = 0;
     u8 sPartyLevel = 1;
 
     if (gBattleOutcome == B_OUTCOME_WON)
-    {
+    {   
         money = GetTrainerMoneyToGive(gTrainerBattleOpponent_A);
         if (gBattleTypeFlags & BATTLE_TYPE_TWO_OPPONENTS)
             money += GetTrainerMoneyToGive(gTrainerBattleOpponent_B);
-        AddMoney(&gSaveBlock1Ptr->money, money);
+            taxes = money / 10;
+        AddMoney(&gSaveBlock1Ptr->money, money - taxes);
     }
     else
     {
@@ -7742,6 +7744,7 @@ static void Cmd_getmoneyreward(void)
     }
 
     PREPARE_WORD_NUMBER_BUFFER(gBattleTextBuff1, 5, money);
+    PREPARE_WORD_NUMBER_BUFFER(gBattleTextBuff2, 5, taxes);
     gBattlescriptCurrInstr = cmd->nextInstr;
 }
 

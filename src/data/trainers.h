@@ -14900,12 +14900,12 @@ F_TRAINER_FEMALE |
         {
             {
 #line 6013
-            .species = SPECIES_MACHOP,
+            .species = SPECIES_RATTATA,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 6015
-            .iv = TRAINER_PARTY_IVS(0, 0, 0, 0, 0, 0),
+            .iv = TRAINER_PARTY_IVS(0, 252, 0, 252, 0, 0),
 #line 6014
-            .lvl = 9,
+            .lvl = 100,
             .nature = NATURE_HARDY,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             },
