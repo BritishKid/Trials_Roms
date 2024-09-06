@@ -1,0 +1,25 @@
+mapscripts  AdoptionCenter_MapScripts {
+    
+}
+
+script AdoptionCenter_EventScript_Lady {
+    lockall
+    msgbox(format("Welcome to the Adoption Center, would you like to adopt a Pokemon?"), MSGBOX_YESNO)
+    if(var(VAR_RESULT)== YES) {
+        msgbox(format("That's great! It will cost 5000 to adopt.\nIs this okay?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES) {
+            checkmoney(4000)
+            if(var(VAR_RESULT)) {
+                random(SPECIES_MIMIKYU_TOTEM_BUSTED)
+                givemon(VAR_RESULT, 15)
+                msgbox(format("You adopted a Pokemon!"))
+                playfanfare(MUS_OBTAIN_ITEM)
+            }
+            else {
+                msgbox(format("Sorry you can't afford it."))
+            }
+        }
+    }
+    msgbox(format("Come again soon!"))
+    releaseall
+}

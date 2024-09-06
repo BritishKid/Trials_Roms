@@ -1,0 +1,523 @@
+mapscripts OaksLab_MapScripts {
+    
+}
+
+script Prof_EventScript {
+    lockall
+    msgbox(format("Welcome to my lab!"))
+    if(flag(FLAG_CHOSEN_STARTER)) {
+        msgbox(format("Good luck in your journey"))
+    }
+    else {
+        msgbox(format("Pick a Pokemon and start your adventure!"))
+    }
+    releaseall
+}
+
+script StarterBallPokemon_Bulbasaur {
+    lockall
+    msgbox(format("You see a pile of Pokeballs containing Bulbasaur!"))
+    showmonpic(SPECIES_BULBASAUR, 10, 0)
+    if(!flag(FLAG_CHOSEN_STARTER)) {
+        msgbox(format("Take one?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES) {
+            givemon(SPECIES_BULBASAUR, 5)                
+            msgbox(format("You recieved Bulbasaur!"))
+            playfanfare(MUS_OBTAIN_ITEM)
+            setflag(FLAG_CHOSEN_STARTER)
+        }
+    }
+    hidemonpic
+    releaseall
+}
+
+script StarterBallPokemon_Charmander {
+    lockall
+    msgbox(format("You see a pile of Pokeballs containing Charmander!"))
+    showmonpic(SPECIES_CHARMANDER, 10, 0)
+    if(!flag(FLAG_CHOSEN_STARTER)) {
+        msgbox(format("Take one?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES) {
+            givemon(SPECIES_CHARMANDER, 5)                
+            msgbox(format("You received Charmander!"))
+            playfanfare(MUS_OBTAIN_ITEM)
+            setflag(FLAG_CHOSEN_STARTER)
+        }
+    }
+    hidemonpic
+    releaseall
+}
+
+script StarterBallPokemon_Squirtle {
+    lockall
+    msgbox(format("You see a pile of Pokeballs containing Squirtle!"))
+    showmonpic(SPECIES_SQUIRTLE, 10, 0)
+    if(!flag(FLAG_CHOSEN_STARTER)) {
+        msgbox(format("Take one?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES) {
+            givemon(SPECIES_SQUIRTLE, 5)                
+            msgbox(format("You received Squirtle!"))
+            playfanfare(MUS_OBTAIN_ITEM)
+            setflag(FLAG_CHOSEN_STARTER)
+        }
+    }
+    hidemonpic
+    releaseall
+}
+
+script StarterBallPokemon_Pikachu {
+    lockall
+    msgbox(format("You see a pile of Pokeballs containing Pikachu!"))
+    showmonpic(SPECIES_PIKACHU, 10, 0)
+    if(!flag(FLAG_CHOSEN_STARTER)) {
+        msgbox(format("Take one?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES) {
+            givemon(SPECIES_PIKACHU, 5)                
+            msgbox(format("You received Pikachu!"))
+            playfanfare(MUS_OBTAIN_ITEM)
+            setflag(FLAG_CHOSEN_STARTER)
+        }
+    }
+    hidemonpic
+    releaseall
+}
+
+script StarterBallPokemon_Eevee {
+    lockall
+    msgbox(format("You see a pile of Pokeballs containing Eevee!"))
+    showmonpic(SPECIES_EEVEE, 10, 0)
+    if(!flag(FLAG_CHOSEN_STARTER)) {
+        msgbox(format("Take one?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES) {
+            givemon(SPECIES_EEVEE, 5)                
+            msgbox(format("You received Eevee!"))
+            playfanfare(MUS_OBTAIN_ITEM)
+            setflag(FLAG_CHOSEN_STARTER)
+        }
+    }
+    hidemonpic
+    releaseall
+}
+
+script StarterBallPokemon_Chikorita {
+    lockall
+    msgbox(format("You see a pile of Pokeballs containing Chikorita!"))
+    showmonpic(SPECIES_CHIKORITA, 10, 0)
+    if(!flag(FLAG_CHOSEN_STARTER)) {
+        msgbox(format("Take one?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES) {
+            givemon(SPECIES_CHIKORITA, 5)                
+            msgbox(format("You received Chikorita!"))
+            playfanfare(MUS_OBTAIN_ITEM)
+            setflag(FLAG_CHOSEN_STARTER)
+        }
+    }
+    hidemonpic
+    releaseall
+}
+
+script StarterBallPokemon_Cyndaquil {
+    lockall
+    msgbox(format("You see a pile of Pokeballs containing Cyndaquil!"))
+    showmonpic(SPECIES_CYNDAQUIL, 10, 0)
+    if(!flag(FLAG_CHOSEN_STARTER)) {
+        msgbox(format("Take one?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES) {
+            givemon(SPECIES_CYNDAQUIL, 5)                
+            msgbox(format("You received Cyndaquil!"))
+            playfanfare(MUS_OBTAIN_ITEM)
+            setflag(FLAG_CHOSEN_STARTER)
+        }
+    }
+    hidemonpic
+    releaseall
+}
+
+script StarterBallPokemon_Totodile {
+    lockall
+    msgbox(format("You see a pile of Pokeballs containing Totodile!"))
+    showmonpic(SPECIES_TOTODILE, 10, 0)
+    if(!flag(FLAG_CHOSEN_STARTER)) {
+        msgbox(format("Take one?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES) {
+            givemon(SPECIES_TOTODILE, 5)                
+            msgbox(format("You received Totodile!"))
+            playfanfare(MUS_OBTAIN_ITEM)
+            setflag(FLAG_CHOSEN_STARTER)
+        }
+    }
+    hidemonpic
+    releaseall
+}
+
+script StarterBallPokemon_Treecko {
+    lockall
+    msgbox(format("You see a pile of Pokeballs containing Treecko!"))
+    showmonpic(SPECIES_TREECKO, 10, 0)
+    if(!flag(FLAG_CHOSEN_STARTER)) {
+        msgbox(format("Take one?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES) {
+            givemon(SPECIES_TREECKO, 5)                
+            msgbox(format("You received Treecko!"))
+            playfanfare(MUS_OBTAIN_ITEM)
+            setflag(FLAG_CHOSEN_STARTER)
+        }
+    }
+    hidemonpic
+    releaseall
+}
+
+script StarterBallPokemon_Torchic {
+    lockall
+    msgbox(format("You see a pile of Pokeballs containing Torchic!"))
+    showmonpic(SPECIES_TORCHIC, 10, 0)
+    if(!flag(FLAG_CHOSEN_STARTER)) {
+        msgbox(format("Take one?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES) {
+            givemon(SPECIES_TORCHIC, 5)                
+            msgbox(format("You received Torchic!"))
+            playfanfare(MUS_OBTAIN_ITEM)
+            setflag(FLAG_CHOSEN_STARTER)
+        }
+    }
+    hidemonpic
+    releaseall
+}
+
+script StarterBallPokemon_Mudkip {
+    lockall
+    msgbox(format("You see a pile of Pokeballs containing Mudkip!"))
+    showmonpic(SPECIES_MUDKIP, 10, 0)
+    if(!flag(FLAG_CHOSEN_STARTER)) {
+        msgbox(format("Take one?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES) {
+            givemon(SPECIES_MUDKIP, 5)                
+            msgbox(format("You received Mudkip!"))
+            playfanfare(MUS_OBTAIN_ITEM)
+            setflag(FLAG_CHOSEN_STARTER)
+        }
+    }
+    hidemonpic
+    releaseall
+}
+
+script StarterBallPokemon_Turtwig {
+    lockall
+    msgbox(format("You see a pile of Pokeballs containing Turtwig!"))
+    showmonpic(SPECIES_TURTWIG, 10, 0)
+    if(!flag(FLAG_CHOSEN_STARTER)) {
+        msgbox(format("Take one?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES) {
+            givemon(SPECIES_TURTWIG, 5)                
+            msgbox(format("You received Turtwig!"))
+            playfanfare(MUS_OBTAIN_ITEM)
+            setflag(FLAG_CHOSEN_STARTER)
+        }
+    }
+    hidemonpic
+    releaseall
+}
+
+script StarterBallPokemon_Chimchar {
+    lockall
+    msgbox(format("You see a pile of Pokeballs containing Chimchar!"))
+    showmonpic(SPECIES_CHIMCHAR, 10, 0)
+    if(!flag(FLAG_CHOSEN_STARTER)) {
+        msgbox(format("Take one?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES) {
+            givemon(SPECIES_CHIMCHAR, 5)                
+            msgbox(format("You received Chimchar!"))
+            playfanfare(MUS_OBTAIN_ITEM)
+            setflag(FLAG_CHOSEN_STARTER)
+        }
+    }
+    hidemonpic
+    releaseall
+}
+
+script StarterBallPokemon_Piplup {
+    lockall
+    msgbox(format("You see a pile of Pokeballs containing Piplup!"))
+    showmonpic(SPECIES_PIPLUP, 10, 0)
+    if(!flag(FLAG_CHOSEN_STARTER)) {
+        msgbox(format("Take one?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES) {
+            givemon(SPECIES_PIPLUP, 5)                
+            msgbox(format("You received Piplup!"))
+            playfanfare(MUS_OBTAIN_ITEM)
+            setflag(FLAG_CHOSEN_STARTER)
+        }
+    }
+    hidemonpic
+    releaseall
+}
+
+script StarterBallPokemon_Snivy {
+    lockall
+    msgbox(format("You see a pile of Pokeballs containing Snivy!"))
+    showmonpic(SPECIES_SNIVY, 10, 0)
+    if(!flag(FLAG_CHOSEN_STARTER)) {
+        msgbox(format("Take one?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES) {
+            givemon(SPECIES_SNIVY, 5)                
+            msgbox(format("You received Snivy!"))
+            playfanfare(MUS_OBTAIN_ITEM)
+            setflag(FLAG_CHOSEN_STARTER)
+        }
+    }
+    hidemonpic
+    releaseall
+}
+
+script StarterBallPokemon_Tepig {
+    lockall
+    msgbox(format("You see a pile of Pokeballs containing Tepig!"))
+    showmonpic(SPECIES_TEPIG, 10, 0)
+    if(!flag(FLAG_CHOSEN_STARTER)) {
+        msgbox(format("Take one?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES) {
+            givemon(SPECIES_TEPIG, 5)                
+            msgbox(format("You received Tepig!"))
+            playfanfare(MUS_OBTAIN_ITEM)
+            setflag(FLAG_CHOSEN_STARTER)
+        }
+    }
+    hidemonpic
+    releaseall
+}
+
+script StarterBallPokemon_Oshawott {
+    lockall
+    msgbox(format("You see a pile of Pokeballs containing Oshawott!"))
+    showmonpic(SPECIES_OSHAWOTT, 10, 0)
+    if(!flag(FLAG_CHOSEN_STARTER)) {
+        msgbox(format("Take one?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES) {
+            givemon(SPECIES_OSHAWOTT, 5)                
+            msgbox(format("You received Oshawott!"))
+            playfanfare(MUS_OBTAIN_ITEM)
+            setflag(FLAG_CHOSEN_STARTER)
+        }
+    }
+    hidemonpic
+    releaseall
+}
+
+script StarterBallPokemon_Chespin {
+    lockall
+    msgbox(format("You see a pile of Pokeballs containing Chespin!"))
+    showmonpic(SPECIES_CHESPIN, 10, 0)
+    if(!flag(FLAG_CHOSEN_STARTER)) {
+        msgbox(format("Take one?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES) {
+            givemon(SPECIES_CHESPIN, 5)                
+            msgbox(format("You received Chespin!"))
+            playfanfare(MUS_OBTAIN_ITEM)
+            setflag(FLAG_CHOSEN_STARTER)
+        }
+    }
+    hidemonpic
+    releaseall
+}
+
+script StarterBallPokemon_Fennekin {
+    lockall
+    msgbox(format("You see a pile of Pokeballs containing Fennekin!"))
+    showmonpic(SPECIES_FENNEKIN, 10, 0)
+    if(!flag(FLAG_CHOSEN_STARTER)) {
+        msgbox(format("Take one?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES) {
+            givemon(SPECIES_FENNEKIN, 5)                
+            msgbox(format("You received Fennekin!"))
+            playfanfare(MUS_OBTAIN_ITEM)
+            setflag(FLAG_CHOSEN_STARTER)
+        }
+    }
+    hidemonpic
+    releaseall
+}
+
+script StarterBallPokemon_Froakie {
+    lockall
+    msgbox(format("You see a pile of Pokeballs containing Froakie!"))
+    showmonpic(SPECIES_FROAKIE, 10, 0)
+    if(!flag(FLAG_CHOSEN_STARTER)) {
+        msgbox(format("Take one?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES) {
+            givemon(SPECIES_FROAKIE, 5)                
+            msgbox(format("You received Froakie!"))
+            playfanfare(MUS_OBTAIN_ITEM)
+            setflag(FLAG_CHOSEN_STARTER)
+        }
+    }
+    hidemonpic
+    releaseall
+}
+
+script StarterBallPokemon_Rowlet {
+    lockall
+    msgbox(format("You see a pile of Pokeballs containing Rowlet!"))
+    showmonpic(SPECIES_ROWLET, 10, 0)
+    if(!flag(FLAG_CHOSEN_STARTER)) {
+        msgbox(format("Take one?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES) {
+            givemon(SPECIES_ROWLET, 5)                
+            msgbox(format("You received Rowlet!"))
+            playfanfare(MUS_OBTAIN_ITEM)
+            setflag(FLAG_CHOSEN_STARTER)
+        }
+    }
+    hidemonpic
+    releaseall
+}
+
+script StarterBallPokemon_Litten {
+    lockall
+    msgbox(format("You see a pile of Pokeballs containing Litten!"))
+    showmonpic(SPECIES_LITTEN, 10, 0)
+    if(!flag(FLAG_CHOSEN_STARTER)) {
+        msgbox(format("Take one?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES) {
+            givemon(SPECIES_LITTEN, 5)                
+            msgbox(format("You received Litten!"))
+            playfanfare(MUS_OBTAIN_ITEM)
+            setflag(FLAG_CHOSEN_STARTER)
+        }
+    }
+    hidemonpic
+    releaseall
+}
+
+script StarterBallPokemon_Popplio {
+    lockall
+    msgbox(format("You see a pile of Pokeballs containing Popplio!"))
+    showmonpic(SPECIES_POPPLIO, 10, 0)
+    if(!flag(FLAG_CHOSEN_STARTER)) {
+        msgbox(format("Take one?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES) {
+            givemon(SPECIES_POPPLIO, 5)                
+            msgbox(format("You received Popplio!"))
+            playfanfare(MUS_OBTAIN_ITEM)
+            setflag(FLAG_CHOSEN_STARTER)
+        }
+    }
+    hidemonpic
+    releaseall
+}
+
+script StarterBallPokemon_Grookey {
+    lockall
+    msgbox(format("You see a pile of Pokeballs containing Grookey!"))
+    showmonpic(SPECIES_GROOKEY, 10, 0)
+    if(!flag(FLAG_CHOSEN_STARTER)) {
+        msgbox(format("Take one?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES) {
+            givemon(SPECIES_GROOKEY, 5)                
+            msgbox(format("You received Grookey!"))
+            playfanfare(MUS_OBTAIN_ITEM)
+            setflag(FLAG_CHOSEN_STARTER)
+        }
+    }
+    hidemonpic
+    releaseall
+}
+
+script StarterBallPokemon_Scorbunny {
+    lockall
+    msgbox(format("You see a pile of Pokeballs containing Scorbunny!"))
+    showmonpic(SPECIES_SCORBUNNY, 10, 0)
+    if(!flag(FLAG_CHOSEN_STARTER)) {
+        msgbox(format("Take one?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES) {
+            givemon(SPECIES_SCORBUNNY, 5)                
+            msgbox(format("You received Scorbunny!"))
+            playfanfare(MUS_OBTAIN_ITEM)
+            setflag(FLAG_CHOSEN_STARTER)
+        }
+    }
+    hidemonpic
+    releaseall
+}
+
+script StarterBallPokemon_Sobble {
+    lockall
+    msgbox(format("You see a pile of Pokeballs containing Sobble!"))
+    showmonpic(SPECIES_SOBBLE, 10, 0)
+    if(!flag(FLAG_CHOSEN_STARTER)) {
+        msgbox(format("Take one?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES) {
+            givemon(SPECIES_SOBBLE, 5)                
+            msgbox(format("You received Sobble!"))
+            playfanfare(MUS_OBTAIN_ITEM)
+            setflag(FLAG_CHOSEN_STARTER)
+        }
+    }
+    hidemonpic
+    releaseall
+}
+
+script StarterBallPokemon_Sprigatito {
+    lockall
+    msgbox(format("You see a pile of Pokeballs containing Sprigatito!"))
+    showmonpic(SPECIES_SPRIGATITO, 10, 0)
+    if(!flag(FLAG_CHOSEN_STARTER)) {
+        msgbox(format("Take one?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES) {
+            givemon(SPECIES_SPRIGATITO, 5)                
+            msgbox(format("You received Sprigatito!"))
+            playfanfare(MUS_OBTAIN_ITEM)
+            setflag(FLAG_CHOSEN_STARTER)
+        }
+    }
+    hidemonpic
+    releaseall
+}
+
+script StarterBallPokemon_Fuecoco {
+    lockall
+    msgbox(format("You see a pile of Pokeballs containing Fuecoco!"))
+    showmonpic(SPECIES_FUECOCO, 10, 0)
+    if(!flag(FLAG_CHOSEN_STARTER)) {
+        msgbox(format("Take one?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES) {
+            givemon(SPECIES_FUECOCO, 5)                
+            msgbox(format("You received Fuecoco!"))
+            playfanfare(MUS_OBTAIN_ITEM)
+            setflag(FLAG_CHOSEN_STARTER)
+        }
+    }
+    hidemonpic
+    releaseall
+}
+
+script StarterBallPokemon_Quaxly {
+    lockall
+    msgbox(format("You see a pile of Pokeballs containing Quaxly!"))
+    showmonpic(SPECIES_QUAXLY, 10, 0)
+    if(!flag(FLAG_CHOSEN_STARTER)) {
+        msgbox(format("Take one?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES) {
+            givemon(SPECIES_QUAXLY, 5)                
+            msgbox(format("You received Quaxly!"))
+            playfanfare(MUS_OBTAIN_ITEM)
+            setflag(FLAG_CHOSEN_STARTER)
+        }
+    }
+    hidemonpic
+    releaseall
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

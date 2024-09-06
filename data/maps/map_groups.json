@@ -623,6 +623,9 @@
     "Route124_DivingTreasureHuntersHouse"
   ],
   "gMapGroup_Custom": [
-    "StartArea"
+    "StartArea",
+    "AdoptionCenter",
+    "OaksLab",
+    "TescoOutside"
   ]
 }

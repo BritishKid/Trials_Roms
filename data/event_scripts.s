@@ -1076,3 +1076,9 @@ EventScript_VsSeekerChargingDone::
 	.include "data/text/birch_speech.inc"
 
 	.include "data/maps/StartArea/scripts.inc"
+
+	.include "data/maps/AdoptionCenter/scripts.inc"
+
+	.include "data/maps/OaksLab/scripts.inc"
+
+	.include "data/maps/TescoOutside/scripts.inc"

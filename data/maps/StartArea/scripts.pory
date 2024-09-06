@@ -1,0 +1,10 @@
+raw `StartArea_MapScripts::
+	.byte 0
+`
+
+script AdoptionSign {
+    lockall
+    msgbox(format("Pokemon Adoption Center"))
+    releaseall
+}
+

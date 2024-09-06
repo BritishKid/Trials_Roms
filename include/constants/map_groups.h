@@ -592,7 +592,10 @@
 #define MAP_ROUTE124_DIVING_TREASURE_HUNTERS_HOUSE (0 | (33 << 8))
 
 // gMapGroup_Custom
-#define MAP_START_AREA (0 | (34 << 8))
+#define MAP_START_AREA      (0 | (34 << 8))
+#define MAP_ADOPTION_CENTER (1 | (34 << 8))
+#define MAP_OAKS_LAB        (2 | (34 << 8))
+#define MAP_TESCO_OUTSIDE   (3 | (34 << 8))
 
 #define MAP_GROUPS_COUNT 35
 

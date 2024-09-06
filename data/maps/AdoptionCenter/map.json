@@ -1,9 +1,9 @@
 {
-  "id": "MAP_ROUTE117_POKEMON_DAY_CARE",
-  "name": "Route117_PokemonDayCare",
-  "layout": "LAYOUT_ROUTE117_POKEMON_DAY_CARE",
-  "music": "MUS_RUSTBORO",
-  "region_map_section": "MAPSEC_ROUTE_117",
+  "id": "MAP_ADOPTION_CENTER",
+  "name": "AdoptionCenter",
+  "layout": "LAYOUT_ADOPTION_CENTER",
+  "music": "MUS_RG_OAK_LAB",
+  "region_map_section": "MAPSEC_ROUTE_1",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_INDOOR",
@@ -18,13 +18,13 @@
       "graphics_id": "OBJ_EVENT_GFX_OLD_WOMAN",
       "x": 2,
       "y": 2,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Route117_PokemonDayCare_EventScript_DaycareWoman",
+      "script": "AdoptionCenter_EventScript_Lady",
       "flag": "0"
     }
   ],
@@ -33,14 +33,14 @@
       "x": 2,
       "y": 8,
       "elevation": 0,
-      "dest_map": "MAP_ROUTE117",
+      "dest_map": "MAP_START_AREA",
       "dest_warp_id": "0"
     },
     {
       "x": 3,
       "y": 8,
       "elevation": 0,
-      "dest_map": "MAP_ROUTE117",
+      "dest_map": "MAP_START_AREA",
       "dest_warp_id": "0"
     }
   ],
