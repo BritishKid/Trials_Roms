@@ -45,7 +45,7 @@
     "MossdeepCity",
     "SootopolisCity",
     "EverGrandeCity",
-    "LittlerootTown",
+    "BedrockTown",
     "OldaleTown",
     "DewfordTown",
     "LavaridgeTown",
@@ -95,11 +95,11 @@
     "Underwater_Route125"
   ],
   "gMapGroup_IndoorLittleroot": [
-    "LittlerootTown_BrendansHouse_1F",
-    "LittlerootTown_BrendansHouse_2F",
-    "LittlerootTown_MaysHouse_1F",
-    "LittlerootTown_MaysHouse_2F",
-    "LittlerootTown_ProfessorBirchsLab"
+    "BedrockTown_BrendansHouse_1F",
+    "BedrockTown_BrendansHouse_2F",
+    "BedrockTown_MaysHouse_1F",
+    "BedrockTown_MaysHouse_2F",
+    "BedrockTown_ProfessorBirchsLab"
   ],
   "gMapGroup_IndoorOldale": [
     "OldaleTown_House1",
@@ -622,7 +622,7 @@
     "Route124_DivingTreasureHuntersHouse"
   ],
   "connections_include_order": [
-    "LittlerootTown",
+    "BedrockTown",
     "OldaleTown",
     "DewfordTown",
     "LavaridgeTown",

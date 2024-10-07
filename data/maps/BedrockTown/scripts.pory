@@ -1,0 +1,41 @@
+mapscripts BedrockTown_MapScripts {
+	MAP_SCRIPT_ON_TRANSITION {
+		setflag(FLAG_VISITED_BEDROCK_TOWN)
+	}
+}
+
+script BedrockTown_EventScript_HollyLabSign {
+    lockall
+    msgbox(format("Professor Holly's Lab. \pStudying ancient Pokémon legends"))
+    releaseall
+}
+
+script BedrockTown_EventScript_TownSign {
+	lockall
+	faceplayer
+	msgbox(format("Bedrock Town. \p Once a deep lake is now a vibrant town."))
+	releaseall
+}
+
+script BedrockTown_EventScript_PlayersHouse {
+	lockall
+	msgbox(format("{PLAYER}'s House"))
+	releaseall
+}
+
+script BedrockTown_EventScript_ItemPokeBall {
+	finditem(ITEM_REPEL, 2)
+}
+
+script BedrockTown_EventScript_OldMan {
+	lockall
+	msgbox(format("Thousands of years ago this was a lake was created a mysterious Pokémon. It dried out as the water carved out a cavern underneath which allows us to have such a vibrant town!"))
+	releaseall
+}
+
+script BedrockTown_EventScript_Assistant {
+	lockall
+	faceplayer
+	msgbox(format("You'll need to speak to Professor Holly to go back here, it's full of dangerous powerful Pokémon"))
+	releaseall
+}
