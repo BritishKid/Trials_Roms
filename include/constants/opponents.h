@@ -1,6 +1,8 @@
 #ifndef GUARD_CONSTANTS_OPPONENTS_H
 #define GUARD_CONSTANTS_OPPONENTS_H
 
+#include "constants/battle_partner.h"
+
 #define TRAINER_NONE                          0
 #define TRAINER_ROUTE2_TRAINER1               1 //Custom Route 2 Trainer 1
 #define TRAINER_ROUTE2_TRAINER2               2 //Custom Route 2 Trainer 2
@@ -864,5 +866,6 @@
 
 #define TRAINERS_COUNT                      855
 #define MAX_TRAINERS_COUNT                  864
+#define TRAINER_PARTNER(partner)           (MAX_TRAINERS_COUNT + partner)
 
 #endif  // GUARD_CONSTANTS_OPPONENTS_H

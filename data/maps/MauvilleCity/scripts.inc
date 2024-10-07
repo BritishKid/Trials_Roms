@@ -188,8 +188,19 @@ ThugCity_Arrival_Trigger_Text_2:
 ThugCity_Arrival_Trigger_Text_3:
 	.string "Oh really? Big kid aye?$"
 
-ThugCity_Arrival_Trigger_Text_4:
-	.string "Fine, let me show you your place!$"
+MauvilleCity_EventScript_Wattson::
+	lock
+	faceplayer
+	goto_if_set FLAG_GOT_TM_THUNDERBOLT_FROM_WATTSON, MauvilleCity_EventScript_ReceivedThunderbolt
+	goto_if_eq VAR_NEW_MAUVILLE_STATE, 2, MauvilleCity_EventScript_CompletedNewMauville
+	goto_if_set FLAG_GOT_BASEMENT_KEY_FROM_WATTSON, MauvilleCity_EventScript_BegunNewMauville
+	msgbox MauvilleCity_Text_WattsonNeedFavorTakeKey, MSGBOX_DEFAULT
+	giveitem ITEM_BASEMENT_KEY
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	setflag FLAG_GOT_BASEMENT_KEY_FROM_WATTSON
+	msgbox MauvilleCity_Text_WattsonWontBeChallenge, MSGBOX_DEFAULT
+	release
+	end
 
 ThugCity_FirstGuard_Beaten_Text_0:
 	.string "Since when were kids so strong?$"
