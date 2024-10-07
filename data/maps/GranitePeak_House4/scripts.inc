@@ -3,109 +3,156 @@ GranitePeak_House4_MapScripts::
 
 
 GranitePeak_House4_OldMan_Quest::
+# 5 "data/maps/GranitePeak_House4/scripts.pory"
 	lock
+# 6 "data/maps/GranitePeak_House4/scripts.pory"
 	faceplayer
+# 7 "data/maps/GranitePeak_House4/scripts.pory"
 	msgbox GranitePeak_House4_OldMan_Quest_Text_0
+# 8 "data/maps/GranitePeak_House4/scripts.pory"
 	msgbox GranitePeak_House4_OldMan_Quest_Text_1, MSGBOX_YESNO
+# 9 "data/maps/GranitePeak_House4/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq GranitePeak_House4_OldMan_Quest_2
+# 18 "data/maps/GranitePeak_House4/scripts.pory"
 	msgbox GranitePeak_House4_OldMan_Quest_Text_8
 GranitePeak_House4_OldMan_Quest_1:
+# 20 "data/maps/GranitePeak_House4/scripts.pory"
 	release
 	return
 
 GranitePeak_House4_OldMan_Quest_2:
+# 10 "data/maps/GranitePeak_House4/scripts.pory"
 	msgbox GranitePeak_House4_OldMan_Quest_Text_2
+# 11 "data/maps/GranitePeak_House4/scripts.pory"
 	msgbox GranitePeak_House4_OldMan_Quest_Text_3
+# 12 "data/maps/GranitePeak_House4/scripts.pory"
 	msgbox GranitePeak_House4_OldMan_Quest_Text_4
+# 13 "data/maps/GranitePeak_House4/scripts.pory"
 	msgbox GranitePeak_House4_OldMan_Quest_Text_5
+# 14 "data/maps/GranitePeak_House4/scripts.pory"
 	msgbox GranitePeak_House4_OldMan_Quest_Text_6
+# 15 "data/maps/GranitePeak_House4/scripts.pory"
 	msgbox GranitePeak_House4_OldMan_Quest_Text_7
+# 16 "data/maps/GranitePeak_House4/scripts.pory"
 	questmenu QUEST_MENU_SET_ACTIVE, QUEST_LOCKED_GATEWAY
 	goto GranitePeak_House4_OldMan_Quest_1
 
 
 GranitePeak_House4_AdamantOrb_Book::
+# 25 "data/maps/GranitePeak_House4/scripts.pory"
 	lock
+# 26 "data/maps/GranitePeak_House4/scripts.pory"
 	msgbox GranitePeak_House4_AdamantOrb_Book_Text_0
+# 28 "data/maps/GranitePeak_House4/scripts.pory"
 	msgbox GranitePeak_House4_AdamantOrb_Book_Text_1
+# 30 "data/maps/GranitePeak_House4/scripts.pory"
 	msgbox GranitePeak_House4_AdamantOrb_Book_Text_2
+# 32 "data/maps/GranitePeak_House4/scripts.pory"
 	msgbox GranitePeak_House4_AdamantOrb_Book_Text_3
+# 33 "data/maps/GranitePeak_House4/scripts.pory"
 	msgbox GranitePeak_House4_AdamantOrb_Book_Text_4
+# 34 "data/maps/GranitePeak_House4/scripts.pory"
 	release
 	return
 
 
 GranitePeak_House4_LustrousOrb_Book::
+# 38 "data/maps/GranitePeak_House4/scripts.pory"
 	lock
+# 39 "data/maps/GranitePeak_House4/scripts.pory"
 	msgbox GranitePeak_House4_LustrousOrb_Book_Text_0
+# 41 "data/maps/GranitePeak_House4/scripts.pory"
 	msgbox GranitePeak_House4_LustrousOrb_Book_Text_1
+# 43 "data/maps/GranitePeak_House4/scripts.pory"
 	msgbox GranitePeak_House4_LustrousOrb_Book_Text_2
+# 45 "data/maps/GranitePeak_House4/scripts.pory"
 	msgbox GranitePeak_House4_LustrousOrb_Book_Text_3
+# 46 "data/maps/GranitePeak_House4/scripts.pory"
 	msgbox GranitePeak_House4_LustrousOrb_Book_Text_4
+# 47 "data/maps/GranitePeak_House4/scripts.pory"
 	release
 	return
 
 
 GranitePeak_House4_GriseousOrb_Book::
+# 51 "data/maps/GranitePeak_House4/scripts.pory"
 	lock
+# 52 "data/maps/GranitePeak_House4/scripts.pory"
 	msgbox GranitePeak_House4_GriseousOrb_Book_Text_0
+# 54 "data/maps/GranitePeak_House4/scripts.pory"
 	msgbox GranitePeak_House4_GriseousOrb_Book_Text_1
+# 56 "data/maps/GranitePeak_House4/scripts.pory"
 	msgbox GranitePeak_House4_GriseousOrb_Book_Text_2
+# 58 "data/maps/GranitePeak_House4/scripts.pory"
 	msgbox GranitePeak_House4_GriseousOrb_Book_Text_3
+# 59 "data/maps/GranitePeak_House4/scripts.pory"
 	release
 	return
 
 
 GranitePeak_House4_DistortionGateway_Book::
+# 63 "data/maps/GranitePeak_House4/scripts.pory"
 	lock
+# 64 "data/maps/GranitePeak_House4/scripts.pory"
 	msgbox GranitePeak_House4_DistortionGateway_Book_Text_0
+# 66 "data/maps/GranitePeak_House4/scripts.pory"
 	release
 	return
 
 
 GranitePeak_House4_OldMan_Quest_Text_0:
+# 7 "data/maps/GranitePeak_House4/scripts.pory"
 	.string "A hoy hoy, how are you doing young one.$"
 
 GranitePeak_House4_OldMan_Quest_Text_1:
+# 8 "data/maps/GranitePeak_House4/scripts.pory"
 	.string "Are you interested in learning about\n"
 	.string "the ancient orbs?$"
 
 GranitePeak_House4_OldMan_Quest_Text_2:
+# 10 "data/maps/GranitePeak_House4/scripts.pory"
 	.string "It has been said their are 3 orbs that\n"
 	.string "were created by the gods to seal away a\l"
 	.string "terrible power.$"
 
 GranitePeak_House4_OldMan_Quest_Text_3:
+# 11 "data/maps/GranitePeak_House4/scripts.pory"
 	.string "Each of the Orbs had the power from a\n"
 	.string "god siphoned into it to keep the\l"
 	.string "gateway sealed.$"
 
 GranitePeak_House4_OldMan_Quest_Text_4:
+# 12 "data/maps/GranitePeak_House4/scripts.pory"
 	.string "They got hidden deep away to prevent\n"
 	.string "anyone coming stumbling across them to\l"
 	.string "prevent anyone accidently releasing\l"
 	.string "the destructive Pokémon.$"
 
 GranitePeak_House4_OldMan_Quest_Text_5:
+# 13 "data/maps/GranitePeak_House4/scripts.pory"
 	.string "Many strong trainers are exploring the\n"
 	.string "world to try and find them to get this\l"
 	.string "power for themselves but to no avail.$"
 
 GranitePeak_House4_OldMan_Quest_Text_6:
+# 14 "data/maps/GranitePeak_House4/scripts.pory"
 	.string "I myself spent years hunting them down\n"
 	.string "but never found them.\n"
 	.string "Now I'm too old to continue searching.$"
 
 GranitePeak_House4_OldMan_Quest_Text_7:
+# 15 "data/maps/GranitePeak_House4/scripts.pory"
 	.string "Feel free to check out my memoirs I've\n"
 	.string "been writing down my lifes research in\l"
 	.string "there, maybe you'll have better luck.$"
 
 GranitePeak_House4_OldMan_Quest_Text_8:
+# 18 "data/maps/GranitePeak_House4/scripts.pory"
 	.string "Possibly another time then$"
 
 GranitePeak_House4_AdamantOrb_Book_Text_0:
+# 26 "data/maps/GranitePeak_House4/scripts.pory"
 	.string "My travels have led me to uncover\n"
 	.string "countless mysteries and mythical\l"
 	.string "legends. Yet, the fabled Adamant Orb\l"
@@ -119,6 +166,7 @@ GranitePeak_House4_AdamantOrb_Book_Text_0:
 	.string "Orb's secrets will finally be revealed.$"
 
 GranitePeak_House4_AdamantOrb_Book_Text_1:
+# 28 "data/maps/GranitePeak_House4/scripts.pory"
 	.string "Tales from seasoned travelers have\n"
 	.string "long suggested that the Adamant Orb\l"
 	.string "may find its sanctuary nestled amid\l"
@@ -133,6 +181,7 @@ GranitePeak_House4_AdamantOrb_Book_Text_1:
 	.string "testament to the strength it embodies?$"
 
 GranitePeak_House4_AdamantOrb_Book_Text_2:
+# 30 "data/maps/GranitePeak_House4/scripts.pory"
 	.string "The Adamant Orb is said to be watched\n"
 	.string "over by a formidable and vigilant\l"
 	.string "guardian, a legendary Pokémon whose\l"
@@ -149,6 +198,7 @@ GranitePeak_House4_AdamantOrb_Book_Text_2:
 	.string "sanctum.$"
 
 GranitePeak_House4_AdamantOrb_Book_Text_3:
+# 32 "data/maps/GranitePeak_House4/scripts.pory"
 	.string "Rumors persist of a tale surrounding\n"
 	.string "the Adamant Orb, a bond of friendship\l"
 	.string "that ties it to a specific Pokémon. Some\l"
@@ -162,6 +212,7 @@ GranitePeak_House4_AdamantOrb_Book_Text_3:
 	.string "place.$"
 
 GranitePeak_House4_AdamantOrb_Book_Text_4:
+# 33 "data/maps/GranitePeak_House4/scripts.pory"
 	.string "May the spirits of exploration and\n"
 	.string "curiosity guide your path, and may you\l"
 	.string "be the one to finally unravel the\l"
@@ -171,6 +222,7 @@ GranitePeak_House4_AdamantOrb_Book_Text_4:
 	.string "world.$"
 
 GranitePeak_House4_LustrousOrb_Book_Text_0:
+# 39 "data/maps/GranitePeak_House4/scripts.pory"
 	.string "In my lifelong pursuit of the hidden\n"
 	.string "gate I heard many rumours about the\l"
 	.string "legendary Lustrous Orb. Tales of its\l"
@@ -184,6 +236,7 @@ GranitePeak_House4_LustrousOrb_Book_Text_0:
 	.string "in others.$"
 
 GranitePeak_House4_LustrousOrb_Book_Text_1:
+# 41 "data/maps/GranitePeak_House4/scripts.pory"
 	.string "Legend speaks of the Lustrous Orb\n"
 	.string "being drawn to the serenity of the\l"
 	.string "celestial heavens. Its elusive presence\l"
@@ -195,6 +248,7 @@ GranitePeak_House4_LustrousOrb_Book_Text_1:
 	.string "the water's surface.$"
 
 GranitePeak_House4_LustrousOrb_Book_Text_2:
+# 43 "data/maps/GranitePeak_House4/scripts.pory"
 	.string "Among the whispers of sages, I've heard\n"
 	.string "tell of a guardian of the sea, an\l"
 	.string "ancient Pokémon whose connection to\l"
@@ -207,6 +261,7 @@ GranitePeak_House4_LustrousOrb_Book_Text_2:
 	.string "to unraveling the Lustrous Orb's riddle.$"
 
 GranitePeak_House4_LustrousOrb_Book_Text_3:
+# 45 "data/maps/GranitePeak_House4/scripts.pory"
 	.string "Ancient texts allude to the Lustrous\n"
 	.string "Orb's harmony with specific natural\l"
 	.string "phenomena. Seekers might find\l"
@@ -218,6 +273,7 @@ GranitePeak_House4_LustrousOrb_Book_Text_3:
 	.string "sanctuary.$"
 
 GranitePeak_House4_LustrousOrb_Book_Text_4:
+# 46 "data/maps/GranitePeak_House4/scripts.pory"
 	.string "In the tapestry of the Pokémon world,\n"
 	.string "every mystery is woven with threads of\l"
 	.string "wonder and awe. May you be the intrepid\l"
@@ -228,6 +284,7 @@ GranitePeak_House4_LustrousOrb_Book_Text_4:
 	.string "shared journey of discovery.$"
 
 GranitePeak_House4_GriseousOrb_Book_Text_0:
+# 52 "data/maps/GranitePeak_House4/scripts.pory"
 	.string "The strangest artifact from the\n"
 	.string "ancient years still puzzles me, the\l"
 	.string "elusive Griseous Orb. Tales of its\l"
@@ -240,6 +297,7 @@ GranitePeak_House4_GriseousOrb_Book_Text_0:
 	.string "others on a path of discovery.$"
 
 GranitePeak_House4_GriseousOrb_Book_Text_1:
+# 54 "data/maps/GranitePeak_House4/scripts.pory"
 	.string "Whispers from old maps and forgotten\n"
 	.string "lore suggest that the Griseous Orb's\l"
 	.string "sanctuary might dwell in a realm where\l"
@@ -252,6 +310,7 @@ GranitePeak_House4_GriseousOrb_Book_Text_1:
 	.string "the mind.$"
 
 GranitePeak_House4_GriseousOrb_Book_Text_2:
+# 56 "data/maps/GranitePeak_House4/scripts.pory"
 	.string "Wandering among forsaken places, I've\n"
 	.string "encountered echoes of lost souls,\l"
 	.string "mournful whispers of those who once\l"
@@ -262,6 +321,7 @@ GranitePeak_House4_GriseousOrb_Book_Text_2:
 	.string "who sought them.$"
 
 GranitePeak_House4_GriseousOrb_Book_Text_3:
+# 58 "data/maps/GranitePeak_House4/scripts.pory"
 	.string "As I etch my final musings upon\n"
 	.string "parchment, I pass the torch of\l"
 	.string "exploration to the next brave soul who\l"
@@ -273,6 +333,7 @@ GranitePeak_House4_GriseousOrb_Book_Text_3:
 	.string "realm.$"
 
 GranitePeak_House4_DistortionGateway_Book_Text_0:
+# 64 "data/maps/GranitePeak_House4/scripts.pory"
 	.string "In the annals of Pokémon lore, a\n"
 	.string "mysterious tale is whispered among the\l"
 	.string "wise, a story of a longlost gateway\l"
