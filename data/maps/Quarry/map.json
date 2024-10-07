@@ -1,0 +1,89 @@
+{
+  "id": "MAP_QUARRY",
+  "name": "Quarry",
+  "layout": "LAYOUT_QUARRY",
+  "music": "MUS_RG_ROUTE11",
+  "region_map_section": "MAPSEC_PATTERN_BUSH",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_NONE",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_ROUTE9B",
+      "offset": 0,
+      "direction": "right"
+    }
+  ],
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_FISHERMAN",
+      "x": 30,
+      "y": 30,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDING_SALTS"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 19,
+      "y": 16,
+      "elevation": 0,
+      "dest_map": "MAP_DEEPER_QUARRY_GF",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 41,
+      "y": 12,
+      "elevation": 0,
+      "dest_map": "MAP_QUARRY_WORKER_HOUSING",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 45,
+      "y": 12,
+      "elevation": 0,
+      "dest_map": "MAP_QUARRY_FOREMAN_HOUSE",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 36,
+      "y": 29,
+      "elevation": 0,
+      "var": "VAR_SALTS7_QUEST_STATE",
+      "var_value": "3",
+      "script": "Quarry_MeetingSalt7"
+    }
+  ],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 20,
+      "y": 17,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "DeeperQuarrySign"
+    },
+    {
+      "type": "hidden_item",
+      "x": 22,
+      "y": 29,
+      "elevation": 0,
+      "item": "ITEM_METAL_COAT",
+      "flag": "FLAG_HIDDEN_ITEM_QUARRY_METAL_COAT"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+mapscripts VerdanturfTown_House_MapScripts {
+
+}
+
+script VerdanturfTown_House_EventScript_Crafter {
+    lockall
+    faceplayer
+    msgbox(format("Come back in a future update and I will held you craft items"))
+    releaseall
+}
+
+script VerdanturfTown_House_EventScript_Crafter_Student {
+    lockall
+    faceplayer
+    msgbox(format("My master is an incredible crafter, he can make powerful held items from the junk you find battling wild Pokémon"))
+    releaseall
+}

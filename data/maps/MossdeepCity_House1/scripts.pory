@@ -1,0 +1,46 @@
+mapscripts MossdeepCity_House1_MapScripts {
+    
+}
+
+script MossdeepCity_House1_EventScript_BlackBelt {
+    lockall
+    faceplayer
+    if(var(VAR_ROUTE4_BRAWLEY) > 0 && !flag(FLAG_RECEIVED_HM06)) {
+        msgbox(format("Oh wow! You beat Master Brawley? You are pretty tough, why don't you take this."))
+        giveitem(ITEM_HM06)
+        playfanfare(MUS_OBTAIN_ITEM)
+        setflag(FLAG_RECEIVED_HM06)
+    } 
+    if(var(VAR_ROUTE4_BRAWLEY) > 0 && flag(FLAG_RECEIVED_HM06)) {
+        msgbox(format("You should check up some of the dojos hidden in the mountains near Granite Peak, there is one near the waterfall."))
+    }    
+    else {
+        msgbox(format("Why aren't you small! I could train you up if I had the time."))
+    }releaseall
+}
+
+
+script MossdeepCity_House1_EventScript_Woman {
+    lockall
+    faceplayer
+    msgbox(format("My husband used to run a Dojo at Granite Peak but he had we moved here when we adopted our daughter"))
+    releaseall
+}
+
+script MossdeepCity_House1_EventScript_Kid {
+    lockall
+    faceplayer
+    msgbox(format("HYAH! HYRAH! \nOne day I'm going to take over my Dads old Dojo! I just need to be strong enough to smash through the rocks!\n HYAH"))
+    releaseall
+}
+
+// the below is used to find pokeblock Pokémon eats in case we dont wanna lose
+	// lock
+	// faceplayer
+	// bufferleadmonspeciesname STR_VAR_1
+	// msgbox MossdeepCity_House1_Text_HmmYourPokemon, MSGBOX_DEFAULT
+	// specialvar VAR_RESULT, GetPokeblockNameByMonNature
+	// goto_if_eq VAR_RESULT, 0, MossdeepCity_House1_EventScript_NeutralNature
+	// msgbox MossdeepCity_House1_Text_ItLikesXPokeblocks, MSGBOX_DEFAULT
+	// release
+	// end

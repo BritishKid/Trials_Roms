@@ -1,0 +1,22 @@
+mapscripts Route1_OldRod_House_MapScripts {}
+
+script Route1b_Fisherman_GetOldRod {
+    lockall
+    faceplayer
+    if(!(flag(FLAG_RECEIVED_OLD_ROD))) {
+    msgbox(format("Hey do you like to fish?"), MSGBOX_YESNO)
+      if(var(VAR_RESULT) == YES){
+        msgbox(format("Yeah you do! Have this fishing rod."))
+        giveitem(ITEM_OLD_ROD, 1)
+        playfanfare(MUS_OBTAIN_ITEM)
+        setflag(FLAG_RECEIVED_OLD_ROD)
+      }
+      else{
+        msgbox(format("Oh that's a shame"))
+      }
+    }
+    else {
+        msgbox(format("Different rods attract different Pokémon"), MSGBOX_DEFAULT)
+    }
+    release
+}

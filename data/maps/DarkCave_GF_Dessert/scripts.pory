@@ -1,0 +1,45 @@
+mapscripts DarkCave_GF_Dessert_MapScripts {}
+
+
+
+script DarkCave_Steven_Encounter { //todo blue stone something
+    lockall
+    faceplayer
+    msgbox(format("Come back in a future update"))
+    releaseall
+}
+//Blue stones can be found deeper in, they give an item that can be sold? or used to craft
+//maybe ties to diancie?
+
+
+script DarkCave_B2F_AceTrainer {
+    trainerbattle_single(TRAINER_DARKCAVE_ACE, Ace_Intro, Ace_Outro, Increase_Trainers_Beaten)
+    msgbox(Ace_PostBattle, MSGBOX_AUTOCLOSE)
+    end
+}
+
+script DarkCave_B1F_EventScript_RockInsence {
+    finditem(ITEM_ROCK_INCENSE)
+}
+
+
+//text 
+
+text Ace_Intro {
+    format("People used to make lots of money selling the blue stones found in this cave.")
+}
+
+text Ace_Outro {
+    format("If I had more money I would be able to buy what I need to beat you")
+}
+
+text Ace_PostBattle {
+    format("I'm hoping to go deep into the caves to find some stones that haven't been mined")
+}
+
+//blue stone scripts
+script DarkCave_DepletedBlueStone {
+    lockall
+    msgbox(format("It's been depleted"))
+    releaseall
+}

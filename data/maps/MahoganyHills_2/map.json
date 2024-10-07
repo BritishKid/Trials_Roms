@@ -1,0 +1,248 @@
+{
+  "id": "MAP_MAHOGANY_HILLS_2",
+  "name": "MahoganyHills_2",
+  "layout": "LAYOUT_MAHOGANY_HILLS_2",
+  "music": "MUS_PETALBURG_WOODS",
+  "region_map_section": "MAPSEC_ROUTE_102",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_ROUTE",
+  "allow_cycling": true,
+  "allow_escaping": true,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_MAHOGANY_HILLS_4",
+      "offset": 0,
+      "direction": "left"
+    },
+    {
+      "map": "MAP_MAHOGANY_HILLS_1",
+      "offset": 0,
+      "direction": "down"
+    },
+    {
+      "map": "MAP_MAHOGANY_HILLS_GYM_ENTRANCE",
+      "offset": 8,
+      "direction": "up"
+    },
+    {
+      "map": "MAP_MAHOGANY_HILLS_3",
+      "offset": 0,
+      "direction": "right"
+    },
+    {
+      "map": "MAP_MAHOGANY_HILLS_6",
+      "offset": 21,
+      "direction": "left"
+    }
+  ],
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER",
+      "x": 25,
+      "y": 21,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "1",
+      "script": "MahoganyHills2_Battle_BugCatcher_Deandra",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER",
+      "x": 23,
+      "y": 18,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "2",
+      "script": "MahoganyHills2_Battle_BugCatcher_Dennis",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER",
+      "x": 23,
+      "y": 22,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "2",
+      "script": "MahoganyHills2_Battle_BugCatcher_Ronald",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER",
+      "x": 25,
+      "y": 27,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "1",
+      "script": "MahoganyHills2_Battle_BugCatcher_Charlie",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_BRANDON",
+      "x": 24,
+      "y": 5,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_MAHOGANY_TOWN_RIVAL_BEATEN"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ROXANNE",
+      "x": 36,
+      "y": 2,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_MAHOGANY_HILLS_ROXANNE"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_PUSHABLE_BOULDER",
+      "x": 36,
+      "y": 31,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "MahoganyHills_LegendaryDungeon",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 32,
+      "y": 28,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "MahongayHill2_ItemBall_SunStone",
+      "flag": "FLAG_ITEM_MAHOGANYHILLS_SUNSTONE"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 14,
+      "y": 25,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "MahongayHill2_EventScript_ItemPPUp",
+      "flag": "FLAG_ITEM_MH2_PP_UP"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 36,
+      "y": 2,
+      "elevation": 0,
+      "dest_map": "MAP_MAHOGANY_HILLS_TREEHOUSE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 0,
+      "y": 15,
+      "elevation": 0,
+      "dest_map": "MAP_MAHOGONY_HILL_SECRET_BASE1",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 23,
+      "y": 12,
+      "elevation": 0,
+      "var": "VAR_RIVAL_FIGHT_2",
+      "var_value": "0",
+      "script": "MahoganyHills_Bridge_Meet_Rival2"
+    },
+    {
+      "type": "trigger",
+      "x": 24,
+      "y": 12,
+      "elevation": 0,
+      "var": "VAR_RIVAL_FIGHT_2",
+      "var_value": "0",
+      "script": "MahoganyHills_Bridge_Meet_Rival1"
+    },
+    {
+      "type": "trigger",
+      "x": 24,
+      "y": 18,
+      "elevation": 0,
+      "var": "VAR_BUGCATCHERS_BEATEN_MAHOGANY_HILLS",
+      "var_value": "3",
+      "script": "MahoganyHills2_Trigger_Bugcatcher_Prize"
+    },
+    {
+      "type": "trigger",
+      "x": 25,
+      "y": 18,
+      "elevation": 0,
+      "var": "VAR_BUGCATCHERS_BEATEN_MAHOGANY_HILLS",
+      "var_value": "3",
+      "script": "MahoganyHills2_Trigger_Bugcatcher_Prize"
+    },
+    {
+      "type": "trigger",
+      "x": 36,
+      "y": 4,
+      "elevation": 0,
+      "var": "VAR_MAHOGANYHILLS_FOSSIL_ROXANNE",
+      "var_value": "0",
+      "script": "MahoganyHills_MeetRoxanne"
+    }
+  ],
+  "bg_events": [
+    {
+      "type": "secret_base",
+      "x": 5,
+      "y": 3,
+      "elevation": 0,
+      "secret_base_id": "SECRET_BASE_SHRUB1_3"
+    },
+    {
+      "type": "secret_base",
+      "x": 1,
+      "y": 15,
+      "elevation": 0,
+      "secret_base_id": "SECRET_BASE_RED_CAVE1_1"
+    },
+    {
+      "type": "hidden_item",
+      "x": 17,
+      "y": 18,
+      "elevation": 0,
+      "item": "ITEM_HARD_STONE",
+      "flag": "FLAG_HIDDEN_ITEM_MH2_HARD_STONE"
+    }
+  ]
+}

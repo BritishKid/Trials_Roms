@@ -1,0 +1,21 @@
+mapscripts CoralPort_Port_MapScripts {}
+
+
+script Island1_TravelByBoat {
+    lockall
+    if(flag(FLAG_RECEIVED_SS_TICKET)) {    
+        msgbox(format("Would you like to travel to Island 2?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES) {
+            if(!flag(FLAG_COAST_TOWN_SAVED)) {
+                warp(MAP_ROUTE7, 31, 5)
+            }
+            if(flag(FLAG_COAST_TOWN_SAVED)) {
+                warp(MAP_MAUVILLE_CITY_PORT, 5, 11)
+            }
+        }
+    }
+    if(!flag(FLAG_RECEIVED_SS_TICKET)) {
+        msgbox(format("You need to have a ticket if you wish to travel on this boat."))
+    }
+    releaseall
+}

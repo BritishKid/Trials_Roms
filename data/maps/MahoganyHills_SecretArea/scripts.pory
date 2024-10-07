@@ -1,0 +1,26 @@
+mapscripts MahoganyHills_SecretArea_MapScripts {}
+
+script MahoganyHills_SecretArea_EventScript_SecretDome1 {
+    lockall
+    if(!flag(FLAG_MAHOGANY_HILLS_BUTTON_1_PRESSED)) {
+        msgbox(format("It's covered in moss but you can make out a button on it.\p Press the button?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES) {
+            msgbox(format("You press the button"))
+            setvar(VAR_MAHOGANCYHILLS_BUTTONS_PRESSED, VAR_MAHOGANCYHILLS_BUTTONS_PRESSED+1)
+            setflag(FLAG_MAHOGANY_HILLS_BUTTON_1_PRESSED)
+        }
+        if(var(VAR_RESULT) == NO) {
+            msgbox(format("Probably the smart choice."))
+        }
+    }
+    else {
+        msgbox(format("I've already pressed this button. I wonder why I did that."))
+    }
+    releaseall
+}
+
+script MahoganyScript_EventScript_HiddenArea_Leaving {
+    lockall
+    warp(MAP_MAHOGANY_HILLS_1, 27, 26)
+    releaseall
+}

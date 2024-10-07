@@ -22,11 +22,6 @@
       "map": "MAP_ROUTE120",
       "offset": -80,
       "direction": "left"
-    },
-    {
-      "map": "MAP_LILYCOVE_CITY",
-      "offset": -10,
-      "direction": "right"
     }
   ],
   "object_events": [
@@ -299,8 +294,8 @@
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "Route121_EventScript_ItemCarbos",
+      "trainer_sight_or_berry_tree_id": "ITEM_CARBOS",
+      "script": "Common_EventScript_FindItem",
       "flag": "FLAG_ITEM_ROUTE_121_CARBOS"
     },
     {
@@ -390,8 +385,8 @@
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "Route121_EventScript_ItemRevive",
+      "trainer_sight_or_berry_tree_id": "ITEM_REVIVE",
+      "script": "Common_EventScript_FindItem",
       "flag": "FLAG_ITEM_ROUTE_121_REVIVE"
     },
     {
@@ -403,8 +398,8 @@
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "Route121_EventScript_ItemZinc",
+      "trainer_sight_or_berry_tree_id": "ITEM_ZINC",
+      "script": "Common_EventScript_FindItem",
       "flag": "FLAG_ITEM_ROUTE_121_ZINC"
     }
   ],
@@ -506,7 +501,7 @@
       "y": 10,
       "elevation": 3,
       "item": "ITEM_HP_UP",
-      "flag": "FLAG_HIDDEN_ITEM_ROUTE_121_HP_UP"
+      "flag": "FLAG_HIDDEN_ITEM_BEACH_1_HP_UP"
     },
     {
       "type": "hidden_item",

@@ -1,0 +1,16 @@
+mapscripts MauvilleCity_BikeLady_MapScripts {}
+
+
+script GiveAcroBike {
+    lock
+    faceplayer
+    if(!flag(FLAG_RECEIVED_ACRO_BIKE)) {
+        msgbox(format("Oh you're the one who managed to clear out the thugs who drove us out.\pPlease take this as a thank you!"))
+        giveitem(ITEM_ACRO_BIKE)
+        setflag(FLAG_RECEIVED_ACRO_BIKE)
+    }
+    else {
+        msgbox(format("How are you enjoying the bike? Me and my sister used to ride them all over the islands. Her bikes were always much faster though."))
+    }
+    release
+}

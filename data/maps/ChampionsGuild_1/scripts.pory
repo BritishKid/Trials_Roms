@@ -1,0 +1,135 @@
+mapscripts ChampionsGuild_1_MapScripts {}
+
+script ChampionGuildGuide {
+    lockall
+    msgbox(format("Welcome to the Champions Guild! If you found here please come to our discord and suggest a team to be added here. This will be a very late post game area but feel free to start having a taste of it now!"))
+    msgbox(format("Would you like to go back to your home?"), MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES ){
+            warp(MAP_PLAYERS_BEDROOM, 4, 5)
+    }
+    releaseall
+}
+
+script ChampionsGuildGauntletDoor_ComingSoon {
+    lockall
+    msgbox(format("COMING SOON"))
+    msgbox(format("Behind this door will be the Champions Guild Gauntlet\nYou will be able to take on every champion in back to back battles without a break between. It will be the ultimate challenge!"))
+    releaseall
+}
+
+script ChampionsGuildTournamentDoor_ComingSoon {
+    lockall
+    msgbox(format("COMING SOON"))
+    msgbox(format("Behind this door will be the Champions Guild Tournament"))
+    releaseall
+}
+
+script ChampionsGuild_Mat {
+    lockall
+    trainerbattle_single(CHAMPION_MAT, ChampionMat_Intro, ChampionMat_Outro)
+    msgbox(ChampionMat_PostBattle, MSGBOX_AUTOCLOSE)
+    releaseall
+}
+
+script ChampionsGuild_Ollie {
+    lockall
+    trainerbattle_single(TRAINER_OLLIE_CHAMPION, ChampionOllie_Intro, ChampionOllie_Outro)
+    msgbox(ChampionOllie_PostBattle, MSGBOX_AUTOCLOSE)
+    releaseall
+}
+
+script ChampionsGuild_Alex {
+    lockall
+    trainerbattle_single(TRAINER_ALEX_CHAMPION, ChampionAlex_Intro, ChampionAlex_Outro)
+    msgbox(ChampionAlex_PostBattle, MSGBOX_AUTOCLOSE)
+    releaseall
+}
+
+script ChampionsGuild_Gatto {
+    lockall
+    trainerbattle_single(TRAINER_GATTO_CHAMPION, ChampionGatto_Intro, ChampionGatto_Outro)
+    msgbox(ChampionGatto_PostBattle, MSGBOX_AUTOCLOSE)
+    releaseall
+}
+
+script ChampionsGuild_Pulsar {
+    lockall
+    trainerbattle_single(TRAINER_PULSAR_CHAMPION, ChampionPulsar_Intro, ChampionPulsar_Outro)
+    msgbox(ChampionPulsar_PostBattle, MSGBOX_AUTOCLOSE)
+    releaseall
+}
+
+script ChampionShop_Clerk {
+    lockall
+    faceplayer
+    msgbox(format("Feel free to buy any items that might help you here"))
+    pokemart(ChampionGuildMart_Items)
+    releaseall
+}
+
+//text
+
+text ChampionMat_Intro {
+    format("Hey it's me Mat! Bet you never thought I could beat the Elite 4!")
+}
+
+text ChampionMat_Outro {
+    format("Well you still have lots to teach me still")
+}
+
+text ChampionMat_PostBattle {
+    format("It's all good though! I'll still win the tournament!")
+}
+
+text ChampionOllie_Intro {
+    format("Doing the gym challenge let me create the perfect team!")
+}
+
+text ChampionOllie_Outro {
+    format("PERFECTION CAN BE MORE PERFECTIONERER")
+}
+
+text ChampionOllie_PostBattle {
+    format("Steelix can't lose?")
+}
+
+text ChampionAlex_Intro {
+    format("Oh yeah I'm a Champion, I probably should of told you")
+}
+
+text ChampionAlex_Outro {
+    format("I'm a little out of practice")
+}
+
+text ChampionAlex_PostBattle {
+    format("I became a Champion after my first few expeditions, I thought why not I should be strong enough.")
+}
+
+text ChampionGatto_Intro {
+    format("TODO")
+}
+
+text ChampionGatto_Outro {
+    format("TODO")
+}
+
+text ChampionGatto_PostBattle {
+    format("TODO")
+}
+
+text ChampionPulsar_Intro {
+    format("Are you truly ready for this test?")
+}
+
+text ChampionPulsar_Outro {
+    format("Hmmph")
+}
+
+text ChampionPulsar_PostBattle {
+    format("Well. Good job. Overconfidence was my downfall.")
+}
+
+//mart
+mart ChampionGuildMart_Items {
+    ITEM_RARE_CANDY
+}

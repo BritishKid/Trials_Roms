@@ -1,0 +1,24 @@
+mapscripts MossdeepCity_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION {
+        setflag(FLAG_VISITED_MOSSDEEP_CITY)
+    }
+}
+
+script SwampTown_KingsRock_Boy {
+    lock
+    faceplayer
+    msgbox(format("This is the one place in Triver you can get King's Rocks"))
+    if(!flag(FLAG_RECEIVED_KINGS_ROCK)){
+        msgbox(format("Here have this one"))
+        giveitem(ITEM_KINGS_ROCK)
+        playfanfare(MUS_OBTAIN_ITEM)
+    }
+    release
+}
+
+script SwampTown_NudgeTowardsRockSmash {
+    lockall
+    faceplayer
+    msgbox(format("There is a karate man in that house who says he can teach Pokémon to smash rocks. That must be a very strong move!"))
+    releaseall
+}

@@ -1,0 +1,193 @@
+mapscripts Gym2_MapScripts {}
+
+script gym2_button1_script {
+    lockall
+    if(var(VAR_GYM2_QUESTIONS) == 0){
+        msgbox(format("Answer this question or suffer defeat!"))
+        msgbox(format("Only water Pokémon can learn the move SURF?"), MSGBOX_YESNO)
+        if (var(VAR_RESULT) == 1) {
+            //wrong answer
+            msgbox(format("Incorrect"))
+            msgbox(format("A giant Pokémon leaps out the water"))
+            setvar(VAR_GYM2_QUESTIONS, 1)
+            setflag(FLAG_CANT_CATCH_MON)
+            settotemboost(1,1,1,1,1,1,1,1)
+            setwildbattle(SPECIES_WAILMER, 24)
+            call(gymTotemBattle)
+            removeobject(1)
+            setvar(VAR_GYM2_QUESTIONS, 2)
+            setflag(FLAG_GYM2_STATUE1)
+            clearflag(FLAG_CANT_CATCH_MON)
+        }
+        if (var(VAR_RESULT) == 0) {
+            //correct answer
+            msgbox(format("Correct"))
+            setvar(VAR_GYM2_QUESTIONS, 2)
+            removeobject(1)
+            setflag(FLAG_GYM2_STATUE1)
+        }
+    }
+    if(var(VAR_GYM2_QUESTIONS) == 1){
+        setflag(FLAG_CANT_CATCH_MON)
+        settotemboost(1,1,1,1,1,1,1,1)
+        setwildbattle(SPECIES_WAILMER, 24)
+        call(gymTotemBattle)
+        removeobject(1)
+        setvar(VAR_GYM2_QUESTIONS, 2)
+        setflag(FLAG_GYM2_STATUE1)
+        clearflag(FLAG_CANT_CATCH_MON)
+
+    }
+    releaseall
+}
+
+script gym2_button2_script {
+    lockall
+    if(var(VAR_GYM2_QUESTIONS) == 2){
+        msgbox(format("Answer this question or suffer defeat!"))
+        msgbox(format("Ice Moves are always Not Very Effective against water Pokémon?"), MSGBOX_YESNO)
+        if (var(VAR_RESULT) == 1) {
+            //wrong answer
+            msgbox(format("Incorrect"))
+            msgbox(format("A giant Pokémon leaps out the water"))
+            setvar(VAR_GYM2_QUESTIONS, 3)
+            setflag(FLAG_CANT_CATCH_MON)
+            settotemboost(1,1,1,1,1,1,1,1)
+            setwildbattle(SPECIES_CARVANHA, 24)
+            call(gymTotemBattle)
+            removeobject(2)
+            setvar(VAR_GYM2_QUESTIONS, 4)
+            setflag(FLAG_GYM2_STATUE2)
+            clearflag(FLAG_CANT_CATCH_MON)
+
+        }
+        if (var(VAR_RESULT) == 0) {
+            //correct answer
+            msgbox(format("Correct"))
+            setvar(VAR_GYM2_QUESTIONS, 4)
+            removeobject(2)
+            setflag(FLAG_GYM2_STATUE2)
+        }
+    }
+    if(var(VAR_GYM2_QUESTIONS) == 3){
+        setflag(FLAG_CANT_CATCH_MON)
+        settotemboost(1,1,1,1,1,1,1,1)
+        setwildbattle(SPECIES_CARVANHA, 24)
+        call(gymTotemBattle)
+        removeobject(2)
+        setvar(VAR_GYM2_QUESTIONS, 4)
+        setflag(FLAG_GYM2_STATUE2)
+        clearflag(FLAG_CANT_CATCH_MON)
+    }
+    releaseall
+}
+
+script gym2_button3_script {
+    lockall
+    if(var(VAR_GYM2_QUESTIONS) == 4){
+        msgbox(format("Answer this question or suffer defeat!"))
+        msgbox(format("Is the Water type weak to 2 types?"), MSGBOX_YESNO)
+        if (var(VAR_RESULT) == 0) {
+            //wrong answer
+            msgbox(format("Incorrect"))
+            msgbox(format("A giant Pokémon leaps out the water"))
+            setvar(VAR_GYM2_QUESTIONS, 5)
+            setflag(FLAG_CANT_CATCH_MON)
+            settotemboost(1,1,1,1,1,1,1,1)
+            setwildbattle(SPECIES_CARVANHA, 24)
+            call(gymTotemBattle)
+            removeobject(3)
+            setvar(VAR_GYM2_QUESTIONS, 6)
+            setflag(FLAG_GYM2_STATUE3)
+            clearflag(FLAG_CANT_CATCH_MON)
+        }
+        if (var(VAR_RESULT) == 1) {
+            //correct answer
+            msgbox(format("Correct"))
+            setvar(VAR_GYM2_QUESTIONS, 6)
+            removeobject(3)
+            setflag(FLAG_GYM2_STATUE3)
+        }
+    }
+    if(var(VAR_GYM2_QUESTIONS) == 5){
+        setflag(FLAG_CANT_CATCH_MON)
+        settotemboost(1,1,1,1,1,1,1,1)
+        setwildbattle(SPECIES_WISHIWASHI, 24)
+        call(gymTotemBattle)
+        removeobject(3)
+        setvar(VAR_GYM2_QUESTIONS, 6)
+        setflag(FLAG_GYM2_STATUE3)
+        clearflag(FLAG_CANT_CATCH_MON)
+    }
+    releaseall
+}
+
+script gymTotemBattle {
+    dowildbattle
+}
+
+script BeachGym_EventScript_GymLeader {
+    lockall
+    trainerbattle_single(TRAINER_BEACH_GYM_LEADER, BeachGym_Gym_Leader_Intro, BeachGym_Gym_Leader_Outro, BeachGym_Gym_Leader_PostbattleScript) //no repeatable
+    msgbox(BeachGym_Gym_Leader_PostBattle, MSGBOX_AUTOCLOSE)
+    releaseall
+}
+
+script BeachGym_Gym_Leader_PostbattleScript {
+    msgbox(format("Fantastic! You're well on your way to becoming a champion."))
+    playfanfare(MUS_OBTAIN_BADGE)
+    msgbox(format("You obtained the Shoal Badge."))
+    special(DoDomeConfetti)
+    subquestmenu(QUEST_MENU_COMPLETE_QUEST, QUEST_POKEMON_LEAGUE, SUB_QUEST_SHOAL_BADGE)
+    setflag(FLAG_BADGE02_GET)
+    setvar(VAR_RIVAL_FIGHT_2, 2)
+    msgbox(format("Also please take this TM"))
+    playfanfare(MUS_OBTAIN_ITEM)
+    giveitem(ITEM_TM03)
+    releaseall
+}
+
+script BeachGym_Trainer_Ollie {
+    trainerbattle_single(BEACHGYM_TRAINER_OLLIE, BeachGym_Ollie_Intro, BeachGym_Ollie_Outro, Increase_Trainers_Beaten)
+    msgbox(BeachGym_Ollie_PostbattleScript, MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Gym2_EventScript_Greeter {
+    lockall
+    faceplayer
+    msgbox(format("Yo champ in the making! This gym specialises in water types. Grass amd Electric is the best way to take them out"))
+    if(!flag(FLAG_BADGE02_GET) && flag(FLAG_LEVEL_CAPS)) {
+        msgbox(format("Are you interested in getting some fast levels?"), MSGBOX_YESNO)
+         if(var(VAR_RESULT) == YES) {
+                trainerbattle_no_intro(GYM_XP_DUMP, GymXpDump_Outro)
+         }
+    }
+    releaseall
+}
+
+//text scripts
+
+text BeachGym_Gym_Leader_Intro {
+    format("Why well done you've made it! Welcome to my cavern, carved with the incredible power of water! I am Marina a water of water type Pokémon.")
+}
+
+text BeachGym_Gym_Leader_Outro {
+    format("Incredible! You've washed me away")
+}
+
+text BeachGym_Gym_Leader_PostBattle {
+    format("You've been making good progress on your journey but this was just the start.")
+}
+
+text BeachGym_Ollie_Intro {
+    format("This gym is a great place for me to master the water type")
+}
+
+text BeachGym_Ollie_Outro {
+    format("Rocks shouldn't be bad in water. Rocks surround the water")
+}
+
+text BeachGym_Ollie_PostbattleScript {
+    format("I've learnt enough, time to learn about poison Pokémon")
+}

@@ -1,0 +1,333 @@
+mapscripts MahoganyHills_2_MapScripts {}
+
+script MahoganyHills_Bridge_Meet_Rival1 {
+	lockall
+	msgbox("Hey you're finally here!")
+	applymovement(5, Movement_Rival_To_Bridge_MahoganyHill1)
+	waitmovement(5)
+    if(!flag(FLAG_BEDROCK_RIVAL_HOUSE_RIVAL_BEATEN)) {
+        msgbox(format("You finally decided to join me then! I thought you'd never get out of bed. You remember the bet you made last year?\p First one to become A champion wins."))
+        setflag(FLAG_BEDROCK_RIVAL_HOUSE_RIVAL_BEATEN)
+    }
+    call(MahoganyHills_Rival_Battle)
+}
+
+script MahoganyHills_Bridge_Meet_Rival2 {
+	lockall
+	msgbox("Hey you're finally here!")
+	applymovement(5, Movement_Rival_To_Bridge_MahoganyHill2)
+	waitmovement(5)
+    call(MahoganyHills_Rival_Battle)
+}
+
+script MahoganyHills2_Battle_BugCatcher_Charlie {
+    trainerbattle_single(TRAINER_MAHOGANYHILLS_BUGCATCHER_CHARLIE, MahoganyHills2_BugCatcher_Charlie_Intro, MahoganyHills2_BugCatcher_Charlie_Outro, Bugcatcher_Trainer_Beaten)
+    msgbox(PostBattle_MahoganyHills2_BugCatcher_Charlie, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+script MahoganyHills2_Battle_BugCatcher_Ronald {
+    trainerbattle_single(TRAINER_MAHOGANYHILLS_BUGCATCHER_RONALD, MahoganyHills2_BugCatcher_Ronald_Intro, MahoganyHills2_BugCatcher_Ronald_Outro, Bugcatcher_Trainer_Beaten)
+    msgbox(PostBattle_MahoganyHills2_BugCatcher_Ronald, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+script MahoganyHills2_Battle_BugCatcher_Deandra {
+    trainerbattle_double(TRAINER_MAHOGANYHILLS_BUGCATCHER_DEE, MahoganyHills2_BugCatcher_Dee_Intro, MahoganyHills2_BugCatcher_Dee_Outro, MahoganyHills2_BugCatcher_Dee_NotEnoughMons, Bugcatcher_Trainer_Beaten)
+    msgbox(PostBattle_MahoganyHills2_BugCatcher_Dee, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+script MahoganyHills2_Battle_BugCatcher_Dennis {
+    lockall
+    if(var(VAR_BUGCATCHERS_BEATEN_MAHOGANY_HILLS) == 4) {
+        msgbox(format("Ready for a real challenge then?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES) {
+            call(Bugcatch_Dennis_MH2_Battle)
+        } else {
+            msgbox(format("Maybe another time then"))
+        }
+    }
+    if(var(VAR_BUGCATCHERS_BEATEN_MAHOGANY_HILLS) == 5) {
+        call(PostDennis_MH_Reward)
+    }
+    if(var(VAR_BUGCATCHERS_BEATEN_MAHOGANY_HILLS) == 6) {
+        msgbox(format("Never expected to find someone so strong here."))
+    }
+    else {
+        msgbox(format("Move along, you don't have a chance against me."))
+    }
+    releaseall
+}
+
+script MahoganyHills2_Trigger_Bugcatcher_Prize {
+    lockall
+    msgbox("Hey!")
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Face_Dennis) 
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+    msgbox(format("Well done on beating the others. You deserve a reward."))
+    giveitem(ITEM_SILVER_POWDER)
+    playfanfare(MUS_OBTAIN_ITEM)
+    setvar(VAR_BUGCATCHERS_BEATEN_MAHOGANY_HILLS, 4)
+    msgbox(format("If you want a real challenge you can try and beat me! \p Think you have what it takes?"), MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES) {
+        call(Bugcatch_Dennis_MH2_Battle)
+    } else {
+        msgbox(format("Maybe another time then"))
+    }
+    releaseall
+}
+
+script Bugcatcher_Trainer_Beaten {
+    if (var(VAR_BUGCATCHERS_BEATEN_MAHOGANY_HILLS) == 2) {
+        setvar(VAR_BUGCATCHERS_BEATEN_MAHOGANY_HILLS, 3)
+    }
+    if (var(VAR_BUGCATCHERS_BEATEN_MAHOGANY_HILLS) == 1) {
+        setvar(VAR_BUGCATCHERS_BEATEN_MAHOGANY_HILLS, 2)
+    }
+    if (var(VAR_BUGCATCHERS_BEATEN_MAHOGANY_HILLS) == 0) {
+        setvar(VAR_BUGCATCHERS_BEATEN_MAHOGANY_HILLS, 1)
+    }
+}
+
+script Bugcatch_Dennis_MH2_Battle {
+    trainerbattle_single(TRAINER_MAHOGANYHILLS_BUGCATCHER_DENNIS, MahoganyHills2_BugCatcher_Dennis_Intro, MahoganyHills2_BugCatcher_Dennis_Outro, Bugcatcher_Dennis_Beaten)
+}
+
+script Bugcatcher_Dennis_Beaten {
+    setvar(VAR_BUGCATCHERS_BEATEN_MAHOGANY_HILLS, 5)
+    setvar(VAR_TRAINERS_BEATEN_CHECK, VAR_TRAINERS_BEATEN_CHECK+1)
+    msgbox(format("That was crazy. Take this as a reward!"))
+    releaseall
+}
+
+script PostDennis_MH_Reward {
+    showmonpic(SPECIES_SCYTHER, 10, 3)
+    givemon(SPECIES_SCYTHER, 5)
+    playfanfare(MUS_OBTAIN_ITEM)
+    if (var(VAR_RESULT) == MON_GIVEN_TO_PARTY) {
+            msgbox("Recieved Scyther")
+            call(NicknamePartyMon)
+            setvar(VAR_BUGCATCHERS_BEATEN_MAHOGANY_HILLS, 6)
+        }
+        elif (var(VAR_RESULT) == MON_GIVEN_TO_PC) {
+            msgbox("Recieved Scyther")
+            call(NicknamePartyMon)
+            setvar(VAR_BUGCATCHERS_BEATEN_MAHOGANY_HILLS, 6)
+        }
+        else {
+            hidemonpic
+            msgbox(format("You don't have enough space. Come back and you get it soon."))
+    }
+}
+
+script MahoganyHills_Rival_Battle {
+    msgbox(format("You're so slow, I've already got myself a badge. It was a breeze. My Pokémon barely broke a sweat. In fact I bet they could beat you here!"))
+    switch(var(VAR_STARTER_MON)){
+        case 0:
+            trainerbattle_single(TRAINER_RIVAL_MAHOGANYHILL_TREECKO, MahoganyHills_Rival_Battle_Intro, MahoganyHills_Rival_Battle_Outro, MahoganyHills_RivalBeaten)
+        case 1:
+            trainerbattle_single(TRAINER_RIVAL_MAHOGANYHILL_CYNDAQUIL, MahoganyHills_Rival_Battle_Intro, MahoganyHills_Rival_Battle_Outro, MahoganyHills_RivalBeaten)
+        case 2:
+            trainerbattle_single(TRAINER_RIVAL_MAHOGANYHILL_SQUIRTLE, MahoganyHills_Rival_Battle_Intro, MahoganyHills_Rival_Battle_Outro, MahoganyHills_RivalBeaten)
+    }
+}
+script MahoganyHills_RivalBeaten {
+    setvar(VAR_RIVAL_FIGHT_2, 1)
+    setflag(FLAG_MAHOGANY_TOWN_RIVAL_BEATEN)
+    msgbox(format("You may have won but I'm still the one with the most badges!"))
+    msgbox(format("The badge let's me use cut now, here take the HM so you can catch up if you can beat the gym!"))
+    giveitem(ITEM_HM01, 1)
+    playfanfare(MUS_OBTAIN_ITEM)
+    setflag(FLAG_RECEIVED_HM01)
+	if(!flag(FLAG_RECEIVED_EXP_SHARE)){
+        msgbox(format("Also here is an extra gift for you, it should come in useful!"))
+        giveitem(ITEM_EXP_SHARE, 1) //Exp share for now, replace with something else when modern xp share added
+	    setflag(FLAG_RECEIVED_EXP_SHARE) //do we want it on from start or given here
+    }
+    msgbox(format("Seeya Slowpoke"))
+    applymovement(5, Movement_Rival_Off_Bridge_MahoganyHill)
+    waitmovement(5)
+    removeobject(5)
+    releaseall
+}
+
+script MahoganyHills_MeetRoxanne {
+    lockall
+    addobject(6)
+    setobjectxy(6, 36, 2)
+    applymovement(6, Movement_Roxanne_Appearing)
+    waitmovement(6)
+    msgbox(format("Oh hi there. I was just visiting Darwin and his incredible collection of fossils. Apparently Mahogany Hills is one of the best places to find them."))
+    trainerbattle_single(TRAINER_ROXANNE_1, MahoganyHills_Roxanne_Battle_Intro, MahoganyHills_Roxanne_Battle_Outro, MahoganyHills_RoxanneBeaten)
+    releaseall
+}
+
+script MahoganyHills_RoxanneBeaten {
+    lockall
+    msgbox(format("Well you are pretty tough! You would be a Hoenn Champion in no time if you where over there."))
+    msgbox(format("Take this as well!"))
+    giveitem(ITEM_TM37)
+    playfanfare(MUS_OBTAIN_ITEM)
+    setflag(FLAG_ITEM_MAHOGANY_HILLS_POKEBALL_ROCK_TOMB)
+    msgbox(format("I hope to see you again!"))
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_PlayerLeft)
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+    applymovement(6, Movement_Roxanne_Leaving)
+    waitmovement(6)
+    removeobject(6)
+    setvar(VAR_MAHOGANYHILLS_FOSSIL_ROXANNE, 1)
+    releaseall
+}
+
+script MahoganyHills_LegendaryDungeon {
+    lockall
+    if(var(VAR_MAHOGANCYHILLS_BUTTONS_PRESSED) == 4) {
+        msgbox(format("The boulder looks like it can be moved. Do you want to push it?"), MSGBOX_YESNO) 
+        if(var(VAR_RESULT) == YES ){
+            msgbox(format("COMING SOON"))
+            // warp() //warp to make where legendary is probably wochien
+        }
+    }
+    else {
+        msgbox(format("It won't budge."))
+    }
+    releaseall
+}
+
+script MahongayHill2_ItemBall_SunStone {
+    finditem(ITEM_SUN_STONE)
+}
+
+script MahongayHill2_EventScript_ItemPPUp {
+    finditem(ITEM_PP_UP)
+}
+
+//movement scripts
+movement Movement_Rival_To_Bridge_MahoganyHill1 {
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+}
+
+movement Movement_Rival_To_Bridge_MahoganyHill2 {
+    walk_left
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+}
+
+movement Movement_Rival_Off_Bridge_MahoganyHill {
+    face_up
+    walk_up
+    walk_up
+    face_left
+    walk_left
+    walk_left
+    walk_left
+    walk_left
+    walk_left
+    walk_left
+    walk_left
+}
+
+movement Movement_Face_Dennis {
+    face_left
+}
+
+movement  Movement_Roxanne_Appearing {
+    walk_down    
+}
+
+movement Movement_PlayerLeft {
+    walk_left
+    face_right
+}
+
+movement Movement_Roxanne_Leaving {
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+    walk_down    
+}
+
+//text scripts
+text MahoganyHills_Rival_Battle_Intro {
+    format("Don't worry if you lose it's only natural")
+}
+
+text MahoganyHills_Rival_Battle_Outro {
+    format("Well that wasn't expected. Guess you'll have no issue in the gym.")
+}
+
+text MahoganyHills2_BugCatcher_Charlie_Intro {
+    format("This is an amazing place to find some night crawlers.")
+}
+
+text MahoganyHills2_BugCatcher_Charlie_Outro {
+    format("I'll just go play it at home instead, atleast I've got a chance")
+}
+
+text PostBattle_MahoganyHills2_BugCatcher_Charlie {
+    format("Have you seen Frank anywhere? He get's lost in the tall grass easily.")
+}
+
+text MahoganyHills2_BugCatcher_Ronald_Intro {
+    format("Hey you, I'm gonna fight ya!")
+}
+
+text MahoganyHills2_BugCatcher_Ronald_Outro {
+    format("God dammit dude")
+}
+
+text PostBattle_MahoganyHills2_BugCatcher_Ronald {
+    format("Need to tack on more mass to have a chance, get something huge.")
+}
+
+text MahoganyHills2_BugCatcher_Dee_Intro {
+    format("I ran out of things to say so we will fix this later")
+}
+
+text MahoganyHills2_BugCatcher_Dee_Outro {
+    format("Something something funny outro")
+}
+
+text MahoganyHills2_BugCatcher_Dee_NotEnoughMons {
+    format("You need two Pokémon to battle")
+}
+
+text PostBattle_MahoganyHills2_BugCatcher_Dee {
+    format("You must have been cheating...")
+}
+
+text MahoganyHills2_BugCatcher_Dennis_Intro {
+    format("Alright then, you're going to regret this")
+}
+
+text MahoganyHills2_BugCatcher_Dennis_Outro {
+    format("...")
+}
+
+text PostBattle_MahoganyHills2_BugCatcher_Dennis {
+    format("I haven't even begun to peak.")
+}
+
+text MahoganyHills_Roxanne_Battle_Intro {
+    format("Oh you're a Pokémon trainer. I could go for a battle before I head off.")
+}
+
+text MahoganyHills_Roxanne_Battle_Outro {
+    format("Incredible")
+}

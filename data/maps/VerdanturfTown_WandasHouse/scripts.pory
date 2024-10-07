@@ -1,0 +1,13 @@
+script VerdanturfTown_WandasHouse_MapScripts {
+    
+}
+
+script VerdanturfTown_WandasHouse_EventScript_Wally {
+    lockall
+    faceplayer
+    msgbox(format("I moved here from Hoenn to take on a new challenge!"))
+    msgbox(format("Come back in a future update for more")) //todo battle wally at power for something? maybe mega gallade
+    releaseall
+}
+
+//5 npcs and wally - could have him moved here to grow and he now got a family? using his max team from hoenn and could give mega gallade stone

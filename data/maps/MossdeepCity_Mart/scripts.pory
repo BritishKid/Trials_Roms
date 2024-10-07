@@ -1,0 +1,67 @@
+mapscripts MossdeepCity_Mart_MapScripts {
+    
+}
+
+script MossdeepCity_Mart_EventScript_Clerk {
+    lockall
+	faceplayer
+	msgbox("How may I serve you")
+	waitmessage	
+	if(!flag(FLAG_BADGE03_GET)) {
+		pokemart(MossdeepCityMart_Items_LessThanThreeBadges)	
+	}
+    else {
+        pokemart(MossdeepCityMart_Items_LessThanSixBadges)
+    }
+	msgbox("Please Come Again.")
+	releaseall
+}
+
+script MossdeepCity_Mart_EventScript_Woman{
+    lockall
+    faceplayer
+    msgbox(format("Many towns have unique items, it's always worth checking them when you are around"))
+    releaseall
+}
+
+script MossdeepCity_Mart_EventScript_Sailor{
+    lockall
+    faceplayer
+    msgbox(format("I know we have the big super market on this island but you just can't beat net balls for certain Pokémon"))
+    releaseall
+}
+
+script MossdeepCity_Mart_EventScript_Boy{
+    lockall
+    faceplayer
+    msgbox(format("I heard there is a crazy strong Pokémon inside the Obsidian Peak volcano!"))
+    releaseall
+}
+
+//mart items
+mart MossdeepCityMart_Items_LessThanThreeBadges {
+	ITEM_POKE_BALL
+    ITEM_GREAT_BALL
+    ITEM_NET_BALL
+	ITEM_POTION
+	ITEM_ANTIDOTE
+	ITEM_PARALYZE_HEAL
+	ITEM_AWAKENING
+	ITEM_REPEL
+	ITEM_ESCAPE_ROPE
+}
+
+mart MossdeepCityMart_Items_LessThanSixBadges {
+    ITEM_POKE_BALL
+    ITEM_GREAT_BALL
+    ITEM_NET_BALL
+	ITEM_POTION
+    ITEM_SUPER_POTION
+	ITEM_ANTIDOTE
+	ITEM_PARALYZE_HEAL
+	ITEM_AWAKENING
+    ITEM_FULL_HEAL
+	ITEM_REPEL
+    ITEM_SUPER_REPEL
+	ITEM_ESCAPE_ROPE
+}

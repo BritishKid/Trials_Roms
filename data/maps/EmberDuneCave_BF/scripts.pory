@@ -1,0 +1,22 @@
+mapscripts EmberDuneCave_BF_MapScripts {}
+
+script EmberDuneCave_EarthPlate_Script {
+    lock
+    msgbox(format("There is a carving of many rock like Pokémon crawling over a plate."))
+    if(flag(FLAG_LEGENDS_PLATE_FOUND) && !flag(FLAG_EARTH_PLATE_FOUND)) {
+        msgbox(format("Do you want to put the LEGENDS PLATE in the slot?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES){
+            setvar(VAR_0x8004, 1) //horizontal
+            setvar(VAR_0x8005, 1) //vertical
+            setvar(VAR_0x8006, 8)  //number
+            setvar(VAR_0x8007, 0) //delay
+            special(ShakeCamera)
+            fadescreen(FADE_TO_BLACK)
+            warp(MAP_LOST_PLATES, 6, 12)
+        }   
+    }
+    if(flag(FLAG_ALEX_INSECT_PLATE) && !flag(FLAG_LEGENDS_PLATE_FOUND)) {
+        msgbox(format("There seems to be a slot for something. Maybe it's the Plate Key which Alex mentioned"))
+    }
+    release
+}

@@ -1,0 +1,19 @@
+mapscripts HauntedMansionGF_MapScripts {}
+
+
+script HauntedMansion_RotomEncounter {
+    lockall
+    setwildbattle(SPECIES_ROTOM, 25)
+    dowildbattle
+    releaseall
+}
+
+script HauntedHouse_FirstSwitch {
+    lockall
+    msgbox(format("You find a switch behind the poster. Press it?"), MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES) {
+        msgbox(format("You press the switch"))
+        //todo add the counter
+    }
+    releaseall
+}

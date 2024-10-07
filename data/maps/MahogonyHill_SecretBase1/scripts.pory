@@ -1,0 +1,92 @@
+mapscripts MahogonyHill_SecretBase1_MapScripts {
+    
+}
+
+script MahoganyHills_SecretBase_LotadDoll {
+    lockall
+    if (!flag(FLAG_HIDDEN_BASE_COLLECTABLE_FOUND_LOTAD)) {
+        msgbox(format("It's A Lotad Doll"))
+        adddecoration(DECOR_LOTAD_DOLL)
+        setflag(FLAG_HIDDEN_BASE_COLLECTABLE_FOUND_LOTAD)
+        subquestmenu(QUEST_MENU_COMPLETE_QUEST, QUEST_POKEMON_LEAGUE, SUB_QUEST_LOTAD_DOLL)
+        msgbox(format("You've unlocked the LOTAD Doll for your secret base"))
+    }
+    else {
+        msgbox(format("It's Nathan's Gulpin Doll"))
+    }
+    releaseall
+}
+
+script MahoganyHills_SecretBase_PinsirBattle {
+    lockall
+    faceplayer
+    if(!(flag(FLAG_BEATEN_PINSIR_BASE))) {
+        trainerbattle_single(TRAINER_HIDDEN_BASE_PINSIR, Dale_Intro, Dale_Outro, Dale_Beaten)
+    }
+    if(flag(FLAG_BEATEN_PINSIR_BASE)) {
+        msgbox(PostBattle_Dale, MSGBOX_AUTOCLOSE)
+        //add a tough rematch with nathan defining it
+    }
+    releaseall
+}
+
+script MahoganyHills_SecretBase_HeracrossBattle {
+    lockall
+    faceplayer
+    if(!(flag(FLAG_BEATEN_HERACROSS_BASE))) {
+        trainerbattle_single(TRAINER_HIDDEN_BASE_HERACROSS, Garrison_Intro, Garrison_Outro, Garrison_Beaten)
+    }
+    if(flag(FLAG_BEATEN_HERACROSS_BASE)) {
+        msgbox(PostBattle_Garrison, MSGBOX_AUTOCLOSE)
+        //add a tough rematch with nathan defining it
+    }
+    releaseall
+}
+
+script Dale_Beaten {
+    msgbox(format("My brother is an idiot and doesn't realise how strong Pinsir really is. Why don't you take this and go show him!"))
+    giveitem(ITEM_PINSIRITE) //todo maybe change?
+    playfanfare(MUS_OBTAIN_ITEM)
+    setflag(FLAG_BEATEN_PINSIR_BASE)
+    releaseall
+}
+
+script Garrison_Beaten {
+    msgbox(format("My brother is an idiot and doesn't realise how strong Heracross really is. Why don't you take this and go show him!"))
+    giveitem(ITEM_HERACRONITE) //todo maybe change?
+    playfanfare(MUS_OBTAIN_ITEM)
+    setflag(FLAG_BEATEN_HERACROSS_BASE)
+    releaseall
+}
+
+script MahoganyHills_SecretBase_Laptop {
+    lockall
+    msgbox(format("Looks like they are trying to play some space game against little aliens. He is playing as the big green robot from Fortnite."))
+    releaseall
+}
+
+//text
+
+text Dale_Intro {
+    format("Pinsir is the best bug Pokémon!")
+}
+
+text Dale_Outro {
+    format("You only one cause you had more than just bugs")
+}
+
+text PostBattle_Dale {
+    format("Pinsir is the best Pokémon to mega evolve")
+}
+
+text Garrison_Intro {
+    format("Heracross is the best bug Pokémon!")
+}
+
+text Garrison_Outro {
+    format("No fair you must of cheated")
+}
+
+text PostBattle_Garrison {
+    format("Heracross is the best Pokémon to mega evolve")
+}

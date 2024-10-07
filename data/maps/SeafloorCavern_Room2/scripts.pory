@@ -1,0 +1,12 @@
+mapscripts SeafloorCavern_Room2_MapScripts {
+    
+}
+
+//todo rename this correctly to the Granite Peak Dojo stuff
+
+script GranitePeakDojoComingSoon {
+    lockall
+    faceplayer
+    msgbox(format("This will be where the dojos will be hidden for you to find, coming soon!"))
+    releaseall
+}

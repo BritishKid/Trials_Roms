@@ -1,0 +1,47 @@
+{
+  "id": "MAP_OBSIDIAN_PEAK",
+  "name": "ObsidianPeak",
+  "layout": "LAYOUT_OBSIDIAN_PEAK",
+  "music": "SE_M_EMBER",
+  "region_map_section": "MAPSEC_MT_EMBER",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_UNDERGROUND",
+  "allow_cycling": true,
+  "allow_escaping": true,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_OBSIDIAN_PEAK_BASE_CAMP",
+      "offset": 0,
+      "direction": "left"
+    }
+  ],
+  "object_events": [
+
+  ],
+  "warp_events": [
+    {
+      "x": 6,
+      "y": 2,
+      "elevation": 0,
+      "dest_map": "MAP_OBSIDIAN_PATH",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 44,
+      "y": 2,
+      "elevation": 0,
+      "dest_map": "MAP_FIERY_PATH",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ]
+}

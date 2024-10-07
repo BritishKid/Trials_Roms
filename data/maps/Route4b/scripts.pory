@@ -1,0 +1,147 @@
+mapscripts Route4b_MapScripts {
+        MAP_SCRIPT_ON_TRANSITION {
+            setflag(FLAG_HIDING_SALTS)
+        if (var(VAR_SALTS7_QUEST_STATE) == 1) {
+            clearflag(FLAG_HIDING_SALTS)
+        }
+    }
+}
+
+script OstrichPuppetBattleScript {
+    trainerbattle_single(ROUTE4_OSTRICHPUPPET, OstrichPuppet_Intro, OstrichPuppet_Outro, Increase_Trainers_Beaten)
+    msgbox(OstrichPuppet_PostBattle, MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Route4_BlackbeltOda_BattleScript {
+    trainerbattle_single(ROUTE4_ODA_BLACKBELT, Route4_Blackbelt_Intro, Route4_Blackbelt_Outro, Increase_Trainers_Beaten)
+    msgbox(Route4_Blackbelt_PostBattle, MSGBOX_AUTOCLOSE)
+    end
+}
+
+script LihsirBattleScript {
+    trainerbattle_single(ROUTE4_LIHSIR, Lihsir_Intro, Lihsir_Outro, Increase_Trainers_Beaten)
+    msgbox(Lihsir_PostBattle, MSGBOX_AUTOCLOSE)
+    end
+}
+script Route4b_Salt7_GyradosEncounterLeft {
+    lockall
+    msgbox(format("Hey it's you ${PLAYER}"))
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_PlayerSurprised_Route4b)
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+    applymovement(3, Movement_Salts7Route4b_ReachingPlayerLeft)
+    waitmovement(3)
+    call(Route4b_Salts7Battle)
+    releaseall
+}
+
+
+script Route4b_Salt7_GyradosEncounterRight {
+    lockall
+    msgbox(format("Hey it's you ${PLAYER}"))
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_PlayerSurprised_Route4b)
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+    applymovement(3, Movement_Salts7Route4b_ReachingPlayerRight)
+    waitmovement(3)
+    releaseall
+}
+
+script Route4b_Salts7Battle {
+    msgbox(format("I've brought my Magikarps here to climb the waterfall so they can evolve eh!"))
+    trainerbattle_single(ROUTE4_SALTS7, Salts7Route4b_Intro, Salts7Route4b_Outro, Route4b_Salt7_PostBattle)
+}
+
+script Route4b_Salt7_PostBattle {
+    msgbox(format("You're getting powerful! But have you heard about Dragon Lake?"))
+    msgbox(format("It's home to the most powerful Dragon Pokémon and that must mean it's perfect to tarin my Gyrados! I'll be unstoppable soon enough!"))
+    applymovement(3, Movement_Route4b_Salts7_MoveAway)
+    waitmovement(3)
+    removeobject(3)
+    setflag(FLAG_HIDING_SALTS)
+    subquestmenu(QUEST_MENU_COMPLETE_QUEST, QUEST_POKEMON_LEAGUE, SUB_QUEST_SALT_EVOLVING)
+    setvar(VAR_SALTS7_QUEST_STATE, 2)
+    releaseall
+}
+
+script EventScript_Route4_ItemBall_Ether {
+    finditem(ITEM_THUNDER_STONE)
+}
+
+//movement scripts
+movement Movement_PlayerSurprised_Route4b {
+    emote_question_mark
+}
+
+movement Movement_Salts7Route4b_ReachingPlayerRight {
+    walk_up
+    walk_up
+    walk_up
+    walk_up
+    walk_up
+    walk_up
+}
+
+movement Movement_Salts7Route4b_ReachingPlayerLeft {
+    walk_left
+    walk_up
+    walk_up
+    walk_up
+    walk_up
+    walk_up
+    walk_up
+}
+movement Movement_Route4b_Salts7_MoveAway {
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+}
+
+//Text Scripts
+
+text OstrichPuppet_Intro {
+    format("I've heard there is a powerful trainer somewhere nearby")
+}
+
+text OstrichPuppet_Outro {
+    format("You're strong but it's not you")
+}
+
+text OstrichPuppet_PostBattle {
+    format("I just need an ACRO BIKE to cross over")
+}
+
+text Salts7Route4b_Intro {
+    format("Let me show you how great my team of Gyrados is!")
+}
+
+text Salts7Route4b_Outro {
+    format("Sorry, I guess I still need to evolve the rest")
+}
+
+text Route4_Blackbelt_Intro {
+    format("I'm helping Brawly set up a new mountain hut")
+}
+
+text Route4_Blackbelt_Outro {
+    format("It's going to be incredible")
+}
+
+text Route4_Blackbelt_PostBattle {
+    format("Martial artists from all over the world are going to come here to explore the old dojos")
+}
+
+//ai genned
+text Lihsir_Intro {
+    format("Greetings, trainer! I am Lihsir, drawn to the serene flow of the river for a Pokémon battle. Shall we let our spirits dance with the current?")
+}
+
+text Lihsir_Outro {
+    format("A beautiful battle, indeed! Your skills flow gracefully like the river. May your journey be as harmonious and serene.")
+}
+
+text Lihsir_PostBattle {
+    format("A wonderful battle! If you ever want to share the tranquility of river-side battles or simply converse by the water, find me along your journey.")
+}

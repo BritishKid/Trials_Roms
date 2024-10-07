@@ -1,0 +1,169 @@
+{
+  "id": "MAP_FLOWER_GLADE",
+  "name": "FlowerGlade",
+  "layout": "LAYOUT_FLOWER_GLADE",
+  "music": "MUS_RG_ROUTE24",
+  "region_map_section": "MAPSEC_DOTTED_HOLE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_ROUTE",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_ROUTE8",
+      "offset": -6,
+      "direction": "left"
+    },
+    {
+      "map": "MAP_SHAYMIN_GROTTO",
+      "offset": 33,
+      "direction": "up"
+    }
+  ],
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE",
+      "x": 11,
+      "y": 9,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MANIAC",
+      "x": 39,
+      "y": 11,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "FlowerGlade_EventScript_MossyStone_Grandson",
+      "flag": "FLAG_LEAF_STONE_SOURCE"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_WOMAN_4",
+      "x": 7,
+      "y": 18,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "FlowerGlade_BattleScript_Rosemary",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_WOMAN_2",
+      "x": 30,
+      "y": 22,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN_AND_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "FlowerGlade_BattleScript_Lily",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 22,
+      "y": 25,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "FlowerGlade_ItemBall_TM",
+      "flag": "FLAG_ITEM_FLOWERGLADE_TM22"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 13,
+      "y": 16,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "FlowerGlade_ItemBall",
+      "flag": "FLAG_ITEM_FLOWERGLADE_ABSORB_BULB"
+    }
+  ],
+  "warp_events": [
+
+  ],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 32,
+      "y": 8,
+      "elevation": 0,
+      "var": "VAR_ROUTE4_BRAWLEY",
+      "var_value": "1",
+      "script": "BulbasaurGrottoEntrance"
+    }
+  ],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 38,
+      "y": 10,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "FlowerGlade_EventScript_MossyStone"
+    },
+    {
+      "type": "sign",
+      "x": 39,
+      "y": 10,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "FlowerGlade_EventScript_MossyStone"
+    },
+    {
+      "type": "hidden_item",
+      "x": 0,
+      "y": 24,
+      "elevation": 0,
+      "item": "ITEM_MIRACLE_SEED",
+      "flag": "FLAG_HIDDEN_ITEM_FLOWERGLADE_MIRACLE_SEED"
+    },
+    {
+      "type": "hidden_item",
+      "x": 26,
+      "y": 15,
+      "elevation": 0,
+      "item": "ITEM_GRASSY_SEED",
+      "flag": "FLAG_HIDDEN_ITEM_FLOWERGLADE_GRASSY_SEED"
+    },
+    {
+      "type": "secret_base",
+      "x": 0,
+      "y": 16,
+      "elevation": 0,
+      "secret_base_id": "SECRET_BASE_TREE1_2"
+    },
+    {
+      "type": "secret_base",
+      "x": 1,
+      "y": 16,
+      "elevation": 0,
+      "secret_base_id": "SECRET_BASE_TREE1_1"
+    }
+  ]
+}

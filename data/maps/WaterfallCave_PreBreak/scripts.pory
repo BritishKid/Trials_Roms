@@ -1,0 +1,43 @@
+mapscripts WaterfallCave_PreBreak_MapScripts {}
+
+script WaterfallCave_PreBreak_BlackBelt {
+    lock
+    msgbox(format("Best of luck!"))
+    release
+}
+
+script WaterfallCave_Master_PreBreak {
+    lock
+    msgbox(format("So you're the one who's manage to beat my pupils. You've done very well, but now are you able to defeat me?"))
+    trainerbattle_no_intro(TRAINER_WATERFALL_CAVE_EXPERT, Waterfallcave_Expert_Outro)
+    call(WaterfallCave_Master_Beaten)
+    release
+}
+
+script WaterfallCave_Master_Beaten {
+    msgbox(format("You've done very well! I haven't had to fight that hard in a long time. It felt like the entire earth was shaking"))
+    clearflag(FLAG_HIDE_PRE_BATTLE_1_THING)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_WaterfallCave_Shock)
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+    //sound?
+    setvar(VAR_0x8004, 1) //horizontal
+	setvar(VAR_0x8005, 1) //vertical
+	setvar(VAR_0x8006, 8)  //number
+	setvar(VAR_0x8007, 0) //delay
+    special(ShakeCamera)
+    fadescreen(FADE_TO_BLACK)
+    msgbox(format("The floor collapses beneath you"))
+    warp(MAP_WATERFALL_CAVE_SUB_BASEMENT, 5, 5)
+}
+
+//movement
+
+movement Movement_WaterfallCave_Shock {
+    emote_exclamation_mark
+}
+
+//text
+
+text Waterfallcave_Expert_Outro {
+    format("You've really proved yourself")
+}

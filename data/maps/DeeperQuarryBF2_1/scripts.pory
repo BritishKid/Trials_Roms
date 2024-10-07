@@ -1,0 +1,11 @@
+raw `
+DeeperQuarryBF2_1_MapScripts::
+	map_script MAP_SCRIPT_ON_RESUME, Quarry_BF2_SetHoleWarp
+	.byte 0
+
+Quarry_BF2_SetHoleWarp::
+	setstepcallback STEP_CB_CRACKED_FLOOR
+	setholewarp MAP_DEEPER_QUARRY_END
+	end
+
+` //above to force the cracked floor

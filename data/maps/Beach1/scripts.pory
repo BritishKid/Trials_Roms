@@ -1,0 +1,72 @@
+mapscripts Beach1_MapScripts {}
+
+script SandyGhastEncounter {
+    lockall
+    setwildbattle(SPECIES_SANDYGAST, 20)
+    dowildbattle
+    release
+}
+
+
+script WillyWombyBattleScript {
+    trainerbattle_single(WIBBLYWOBBLY_BATTLE, Beach1_WillyWomby_Intro, Beach1_WillyWomby_Outro, Increase_Trainers_Beaten)
+    msgbox(Beach1_WillyWomby_PostBattle, MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Trainer_Damon {
+    trainerbattle_single(DAMON_BATTLE, Beach1_Damon_Intro, Beach1_Damon_Outro, Increase_Trainers_Beaten)
+    msgbox(Beach1_Damon_PostBattle, MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Trainer_Beach1_Clair {
+    trainerbattle_single(BEACH1_CLAIR_BATTLE, Beach1_Clair_Intro, Beach1_Clair_Outro, Increase_Trainers_Beaten)
+    msgbox(Beach1_Clair_PostBattle, MSGBOX_AUTOCLOSE)
+    end
+}
+
+script SquirtleHiddenGrotto_Entrance {
+    lock
+    if(flag(FLAG_ROUTE_DRAGON_LAKE_HIDE_SALTS)) {
+        warp(MAP_SQUIRTLE_GROTTO, 10, 15)
+    }
+    release
+}
+
+//Text Scripts
+text Beach1_WillyWomby_Intro {
+    format("I was given a wierd blue egg from some guy!")
+}
+
+text Beach1_WillyWomby_Outro {
+    format("The Pokémon that hatched is cute, I wonder where he got it")
+}
+
+text Beach1_WillyWomby_PostBattle {
+    format("He got on the ferry to cross the channel.")
+}
+
+text Beach1_Damon_Intro {
+    format("Have you seen how many awesome purple Pokémon I have?!")
+}
+
+text Beach1_Damon_Outro {
+    format("OH NO!")
+}
+
+text Beach1_Damon_PostBattle {
+    format("I'm going to make them soo strong.")
+}
+
+text Beach1_Clair_Intro {
+    format("I feel a presence around here!")
+}
+
+text Beach1_Clair_Outro {
+    format("It's getting closer!")
+}
+
+text Beach1_Clair_PostBattle {
+    format("Nevermind it was just gas.")
+}

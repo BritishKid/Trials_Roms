@@ -1,0 +1,203 @@
+{
+  "id": "MAP_CLAY_HAVEN",
+  "name": "ClayHaven",
+  "layout": "LAYOUT_CLAY_HAVEN",
+  "music": "MUS_OLDALE",
+  "region_map_section": "MAPSEC_CLAY_HAVEN",
+  "requires_flash": false,
+  "weather": "WEATHER_SUNNY",
+  "map_type": "MAP_TYPE_TOWN",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_ROUTE1B",
+      "offset": 4,
+      "direction": "right"
+    },
+    {
+      "map": "MAP_MAHOGANY_HILLS_5",
+      "offset": 17,
+      "direction": "left"
+    },
+    {
+      "map": "MAP_ROUTE2",
+      "offset": 4,
+      "direction": "down"
+    },
+    {
+      "map": "MAP_MAHOGANY_HILLS_5",
+      "offset": 17,
+      "direction": "left"
+    }
+  ],
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_GIRL_3",
+      "x": 31,
+      "y": 11,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ClayHaven_Girl_EventScript",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_EXPERT_M",
+      "x": 29,
+      "y": 7,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Town2_Guard",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ANABEL",
+      "x": 17,
+      "y": 24,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ClayHaven_Girl2_EventScript",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 9,
+      "y": 19,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ClayerHaven_ItemBall_PokeBall",
+      "flag": "FLAG_ITEM_CLAYHAVEN_NETBALL"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 24,
+      "y": 26,
+      "elevation": 0,
+      "dest_map": "MAP_CLAY_HAVEN_HOUSE1",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 38,
+      "y": 26,
+      "elevation": 0,
+      "dest_map": "MAP_CLAY_HAVEN_HOUSE2",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 31,
+      "y": 26,
+      "elevation": 0,
+      "dest_map": "MAP_CLAY_HAVEN_POKEMON_CENTER_1F",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 14,
+      "y": 13,
+      "elevation": 0,
+      "dest_map": "MAP_CLAY_HAVEN_MART",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 28,
+      "y": 6,
+      "elevation": 0,
+      "dest_map": "MAP_PLATEFALL_CAVE_GROUND_FLOOR",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 38,
+      "y": 10,
+      "elevation": 0,
+      "dest_map": "MAP_PACIFIDLOG_TOWN",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 42,
+      "y": 14,
+      "elevation": 0,
+      "dest_map": "MAP_CLAY_HAVEN_HOUSE3",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 28,
+      "y": 7,
+      "elevation": 0,
+      "var": "VAR_PLATEFALL_ACCESSIBLE",
+      "var_value": "0",
+      "script": "Town2_Platefall_Block"
+    }
+  ],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 34,
+      "y": 26,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Town2_Coming_Soon"
+    },
+    {
+      "type": "sign",
+      "x": 32,
+      "y": 26,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "Common_EventScript_ShowPokemonCenterSign"
+    },
+    {
+      "type": "sign",
+      "x": 15,
+      "y": 13,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "Common_EventScript_ShowPokemartSign"
+    },
+    {
+      "type": "sign",
+      "x": 33,
+      "y": 26,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "Common_EventScript_ShowPokemonCenterSign"
+    },
+    {
+      "type": "sign",
+      "x": 16,
+      "y": 13,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "Common_EventScript_ShowPokemartSign"
+    },
+    {
+      "type": "sign",
+      "x": 38,
+      "y": 11,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Town2_Coming_Soon"
+    }
+  ]
+}

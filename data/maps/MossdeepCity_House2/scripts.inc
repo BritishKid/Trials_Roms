@@ -1,70 +1,43 @@
-.set LOCALID_WINGULL, 3
-
 MossdeepCity_House2_MapScripts::
 	.byte 0
 
-MossdeepCity_House2_EventScript_Man::
-	msgbox MossdeepCity_House2_Text_SisterMailsBoyfriendInFortree, MSGBOX_NPC
-	end
 
-MossdeepCity_House2_EventScript_Twin::
-	msgbox MossdeepCity_House2_Text_PokemonCarriesMailBackAndForth, MSGBOX_NPC
-	end
-
-MossdeepCity_House2_EventScript_Wingull::
-	lock
+HemlockCity_Child_InHouse2::
+	lockall
 	faceplayer
-	waitse
-	playmoncry SPECIES_WINGULL, CRY_MODE_NORMAL
-	msgbox MossdeepCity_House2_Text_Wingull, MSGBOX_DEFAULT
-	waitmoncry
-	closemessage
-	setflag FLAG_WINGULL_DELIVERED_MAIL
-	clearflag FLAG_HIDE_FORTREE_CITY_HOUSE_4_WINGULL
-	call_if_eq VAR_FACING, DIR_NORTH, MossdeepCity_House2_EventScript_WingullExitNorth
-	call_if_eq VAR_FACING, DIR_WEST, MossdeepCity_House2_EventScript_WingullExitWest
-	removeobject LOCALID_WINGULL
-	release
-	end
-
-MossdeepCity_House2_EventScript_WingullExitNorth::
-	applymovement LOCALID_WINGULL, MossdeepCity_House2_Movement_WingullExitNorth
-	waitmovement 0
+	msgbox HemlockCity_Child_InHouse2_Text_0
+	msgbox HemlockCity_Child_InHouse2_Text_1
+	releaseall
 	return
 
-MossdeepCity_House2_EventScript_WingullExitWest::
-	applymovement LOCALID_WINGULL, MossdeepCity_House2_Movement_WingullExitEast
-	waitmovement 0
+
+HemlockCity_ManInHouse2::
+	lockall
+	faceplayer
+	msgbox HemlockCity_ManInHouse2_Text_0
+	releaseall
 	return
 
-MossdeepCity_House2_Movement_WingullExitNorth:
-	walk_fast_right
-	walk_fast_down
-	walk_fast_down
-	walk_fast_left
-	walk_fast_down
-	delay_8
-	step_end
 
-MossdeepCity_House2_Movement_WingullExitEast:
-	walk_fast_down
-	walk_fast_down
-	walk_fast_down
-	delay_8
-	step_end
+HemlockBlockerSoon::
+	lockall
+	msgbox HemlockBlockerSoon_Text_0
+	releaseall
+	return
 
-MossdeepCity_House2_Text_SisterMailsBoyfriendInFortree:
-	.string "My little sister exchanges MAIL with\n"
-	.string "her boyfriend in FORTREE.\p"
-	.string "I don't envy her one bit at all.$"
 
-MossdeepCity_House2_Text_PokemonCarriesMailBackAndForth:
-	.string "Even though I can't see my friend in\n"
-	.string "FORTREE, my POKéMON carries MAIL\l"
-	.string "back and forth for us.\p"
-	.string "I'm not lonesome, even though we're\n"
-	.string "apart.$"
+HemlockCity_Child_InHouse2_Text_0:
+	.string "Have you seen the gooey Pokémon Goomy\n"
+	.string "nearby? Would you trade one for my\l"
+	.string "Mudbray?$"
 
-MossdeepCity_House2_Text_Wingull:
-	.string "WINGULL: Pihyoh!$"
+HemlockCity_Child_InHouse2_Text_1:
+	.string "TRADE COMING SOON$"
 
+HemlockCity_ManInHouse2_Text_0:
+	.string "The Hemlock gym uses powerful Poison\n"
+	.string "type Pokémon. Ground Pokémon are great\l"
+	.string "against them.$"
+
+HemlockBlockerSoon_Text_0:
+	.string "I don't have permission to go upstairs$"

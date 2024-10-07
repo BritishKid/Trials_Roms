@@ -1,0 +1,7 @@
+mapscripts MahoganyHillsCave_WoChien_MapScripts {}
+
+script MahoganyHillsCave_WoChien {
+    lockall
+    msgbox(format("WO CHIEN? COMING SOON"))
+    releaseall
+}

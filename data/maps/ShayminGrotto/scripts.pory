@@ -1,0 +1,7 @@
+mapscripts ShayminGrotto_MapScripts {}
+
+script ShayminGrottoTrigger_DoesPlayerHaveGracideaFlower {
+    lockall
+    warp(MAP_SHAYMIN_ENCOUNTER_GROTTO, 9, 15)
+    releaseall
+}

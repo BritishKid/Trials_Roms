@@ -95,7 +95,7 @@ SlateportCity_EventScript_ScottScene::
 	waitfanfare
 	closemessage
 	delay 30
-	setflag FLAG_ENABLE_SCOTT_MATCH_CALL
+	setflag FLAG_BRAD_GIVES_SHINY_AXEW
 	msgbox SlateportCity_Text_KeepEyeOnTrainersBeSeeingYou, MSGBOX_DEFAULT
 	closemessage
 	applymovement LOCALID_SCOTT, SlateportCity_Movement_ScottExit
@@ -566,8 +566,8 @@ SlateportCity_EventScript_PowerTMClerk::
 
 	.align 2
 SlateportCity_Pokemart_PowerTMs:
-	.2byte ITEM_TM_HIDDEN_POWER
-	.2byte ITEM_TM_SECRET_POWER
+	.2byte ITEM_TM10  @ Hidden Power
+	.2byte ITEM_TM43  @ Secret Power
 	.2byte ITEM_NONE
 	release
 	end

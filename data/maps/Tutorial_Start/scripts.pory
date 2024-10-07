@@ -1,0 +1,83 @@
+mapscripts Tutorial_Start_MapScripts {}
+
+
+script ChooseStarterPokemon1 {
+    lockall
+    if(flag(FLAG_RECIEVED_LIGHT_BALL)){    
+        msgbox(format("Don't be greedy you already chose your starter"))
+    }
+    if(!flag(FLAG_RECIEVED_LIGHT_BALL)){    
+        showmonpic(SPECIES_INKAY, 10, 3)
+        msgbox(format("Do you want to choose Inkay"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == NO) {
+            msgbox(format("I'll choose another Pokémon"))
+        }
+        if(var(VAR_RESULT) == YES) {
+            givemon(SPECIES_INKAY, 5, ITEM_ORAN_BERRY)
+            playfanfare(MUS_OBTAIN_ITEM)
+            setflag(FLAG_RECIEVED_LIGHT_BALL)
+            setvar(VAR_ROUTE101_STATE, 1)
+        }
+        hidemonpic
+    }
+    releaseall
+}
+
+script ChooseStarterPokemon2 {
+    lockall
+    if(flag(FLAG_RECIEVED_LIGHT_BALL)){    
+        msgbox(format("Don't be greedy you already chose your starter"))
+    }
+    if(!flag(FLAG_RECIEVED_LIGHT_BALL)){    
+        showmonpic(SPECIES_SABLEYE, 10, 3)
+        msgbox(format("Do you want to choose Sableye"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == NO) {
+            msgbox(format("I'll choose another Pokémon"))
+        }
+        if(var(VAR_RESULT) == YES) {
+            givemon(SPECIES_SABLEYE, 5, ITEM_ORAN_BERRY)
+            playfanfare(MUS_OBTAIN_ITEM)
+            setflag(FLAG_RECIEVED_LIGHT_BALL)
+            setvar(VAR_ROUTE101_STATE, 2)
+        }
+        hidemonpic
+    }
+    releaseall
+}
+
+script ChooseStarterPokemon3 {
+    lockall
+    if(flag(FLAG_RECIEVED_LIGHT_BALL)){    
+        msgbox(format("Don't be greedy you already chose your starter"))
+    }
+    if(!flag(FLAG_RECIEVED_LIGHT_BALL)){   
+        showmonpic(SPECIES_STEELIX, 10, 3)
+        msgbox(format("Do you want to choose Steelix"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == NO) {
+            msgbox(format("I'll choose another Pokémon"))
+        }
+        if(var(VAR_RESULT) == YES) {
+            givemon(SPECIES_STEELIX, 5, ITEM_ORAN_BERRY)
+            playfanfare(MUS_OBTAIN_ITEM)
+            setflag(FLAG_RECIEVED_LIGHT_BALL)
+            setvar(VAR_ROUTE101_STATE, 3)
+        }
+        hidemonpic
+    }
+    releaseall
+}
+
+script GiveTrainerItemFromPokeball {
+    finditem(ITEM_POKE_BALL, 5)
+}
+
+script GiveHiddenItem {
+    lockall
+    if(!flag(FLAG_RECIEVED_LIGHT_BALL)) {
+        msgbox(format("Hey i've something hidden in the rocks"))
+        giveitem(ITEM_POTION, 2)
+        playfanfare(MUS_OBTAIN_ITEM)
+        setflag(FLAG_RECIEVED_LIGHT_BALL)
+    }
+    releaseall
+}

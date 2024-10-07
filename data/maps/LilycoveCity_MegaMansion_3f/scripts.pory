@@ -1,0 +1,122 @@
+mapscripts LilycoveCity_MegaMansion_3f_MapScripts {}
+
+script MegaMansion_Secret3 {
+    lockall
+    if(var(VAR__MEGA_MANSION_STATE) == 3) {
+        setvar(VAR__MEGA_MANSION_STATE, 4)
+        msgbox(format("It's a fully grown bonsai tree"))
+    }
+    releaseall
+}
+
+
+script MegaMansion_Trainer6 {
+    trainerbattle_single(MEGAMANSION_TRAINER6, MegaMansion_Trainer6_Intro, MegaMansion_Trainer6_Outro, MegaMansion_Trainer_PostbattleScript)
+    msgbox(MegaMansion_Trainer6_Postbattle, MSGBOX_AUTOCLOSE)
+    release
+}
+
+script MegaMansion_Mat_Left {
+    msgbox(format("It must be somewhere, or am I missing a step. Let me go back to the bottom"))
+    applymovement(2, Movement_MegaMansion_MatTowardsPlayer_Left)
+    waitmovement(2)
+    msgbox(format("Oh hey it's you! You look like you've been getting stronger since the school. Are you here to get your Mega Ring aswell?"))
+    msgbox(format("I almost have enough stars to be in the top 8 so I thought I could spend some time looking for the secret garden but it's so hard to find."))
+    msgbox(format("Before I do that let me take you on and get that last star. I've got so much stronger since last time we faced that this will be easy!"))
+    trainerbattle_no_intro(MEGAMANSION_MATBATTLE, MegaMansion_Mat_Outro)
+    msgbox(format("You're still a tough trainer to fight, but when I get my Mega Ring you've got no chance!"))
+    applymovement(2, Movement_MegaMansion_MatLeaves1_Left)
+    waitmovement(2)
+    removeobject(2)
+    setvar(VAR_MAT_STATE, 2)
+    setflag(FLAG_HIDE_MAT_MEGA_MANSION)
+}
+
+script MegaMansion_Mat_Right {
+    msgbox(format("It must be somewhere, or am I missing a step. Let me go back to the bottom"))
+    applymovement(2, Movement_MegaMansion_MatTowardsPlayer_Right)
+    waitmovement(2)
+    msgbox(format("Oh hey it's you! You look like you've been getting stronger since the school. Are you here to get your Mega Ring aswell?"))
+    msgbox(format("I almost have enough stars to be in the top 8 so I thought I could spend some time looking for the secret garden but it's so hard to find."))
+    msgbox(format("Before I do that let me take you on and get that last star. I've got so much stronger since last time we faced that this will be easy!"))
+    trainerbattle_no_intro(MEGAMANSION_MATBATTLE, MegaMansion_Mat_Outro)
+    msgbox(format("You're still a tough trainer to fight, but when I get my Mega Ring you've got no chance!"))
+    call(MegaMansion_Trainer_PostbattleScript)
+    applymovement(2, Movement_MegaMansion_MatLeaves1_Right)
+    waitmovement(2)
+    removeobject(2)
+    setvar(VAR_MAT_STATE, 2)
+    setflag(FLAG_HIDE_MAT_MEGA_MANSION)
+}
+
+//text
+text MegaMansion_Trainer6_Intro {
+    format("I can't wait to get my Mega Ring")
+}
+
+text MegaMansion_Trainer6_Outro {
+    format("Although I doubt I'll win the tournament")
+}
+
+text MegaMansion_Trainer6_Postbattle {
+    format("You're tough, you might be able to get the bonus prize for being the top trainer!")
+}
+
+text MegaMansion_Mat_Outro {
+    format("You kept getting stronger to.")
+}
+
+//movement
+movement Movement_MegaMansion_MatTowardsPlayer_Left {
+    walk_fast_right
+    walk_fast_right
+    walk_fast_right
+    walk_fast_right
+    walk_fast_right
+    walk_fast_right
+    walk_fast_right
+    walk_fast_right
+    walk_fast_right
+    face_down
+    emote_exclamation_mark
+}
+
+movement Movement_MegaMansion_MatLeaves1_Left {
+    walk_right
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+    walk_right
+    walk_right
+    walk_right
+    walk_right
+}
+
+movement Movement_MegaMansion_MatTowardsPlayer_Right {
+    walk_fast_right
+    walk_fast_right
+    walk_fast_right
+    walk_fast_right
+    walk_fast_right
+    walk_fast_right
+    walk_fast_right
+    walk_fast_right
+    walk_fast_right
+    walk_fast_right
+    face_down
+    emote_exclamation_mark
+}
+
+movement Movement_MegaMansion_MatLeaves1_Right {
+    walk_left
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+    walk_right
+    walk_right
+    walk_right
+    walk_right
+    walk_right
+}

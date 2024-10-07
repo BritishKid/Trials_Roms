@@ -1,0 +1,106 @@
+mapscripts Route3_MapScripts {}
+
+
+script LassAlexBattleScript {
+    trainerbattle_single(ROUTE3LASSALEX, LassAlex_Intro, LassAlex_Outro, Increase_Trainers_Beaten)
+    msgbox(LassAlex_PostBattle, MSGBOX_AUTOCLOSE)
+    end
+}
+
+script HikerHarryBattleScript {
+    trainerbattle_single(ROUTE3HIKERHARRY, HikerHarry_Intro, HikerHarry_Outro, Increase_Trainers_Beaten)
+    msgbox(HikerHarry_PostBattle, MSGBOX_AUTOCLOSE)
+    end
+}
+
+script EventScript_Route3_ItemBall_Pokeball {
+	finditem(ITEM_HEART_SCALE, 2)
+}
+
+script Route3_EventScript_FireStone {
+    lock
+    msgbox(format("Heat seems to be emanating from the rock."))
+    release
+}
+
+script Route3_EventScript_FireStone_Grandson {
+    lock
+    msgbox(format("Interesting...is this it?"))
+    questmenu(QUEST_MENU_CHECK_ACTIVE, QUEST_EVOLUTION_STONE_MART)
+    if(!flag(FLAG_FIRE_STONE_SOURCE) && var(VAR_RESULT)) {
+        faceplayer
+        msgbox(format("Oh hi, so my grandfather sent you? He must be getting very impatient. I said it could take a while this is a big world.")) //change th chat slightly based on if its first or not
+        msgbox(format("Well you came at a good time, I could use your help. I need to harvest some of this rock to process into water stones but any attempt causes me to get attacked by wild Pokémon."))
+        msgbox(format("Could you fight them off while when I start to harvest?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES) {
+            msgbox(format("Brilliant, prepare yourself I'm going to start to harvest now."))
+            setwildbattle(SPECIES_GROWLITHE, 25, ITEM_ORAN_BERRY)
+            call(StartWaterStoneBattle)
+            msgbox(format("Thank you, but I can see more coming!"))
+            setwildbattle(SPECIES_VULPIX, 28, ITEM_ORAN_BERRY)
+            call(StartWaterStoneBattle)
+            msgbox(format("Great job but I think something bigger is coming"))
+            setwildbattle(SPECIES_ARCANINE, 30, ITEM_ORAN_BERRY)
+            call(StartWaterStoneBattle)
+            msgbox(format("Okay we are good, thank you for that. I'll see you at the next one."))
+            msgbox(format("Also please take this."))
+            giveitem(ITEM_FIRE_STONE)
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox(format("It's the least I could do in return."))
+            setflag(FLAG_FIRE_STONE_SOURCE)    
+            if(flag(FLAG_LEAF_STONE_SOURCE) && flag(FLAG_WATER_STONE_SOURCE) && flag(FLAG_FIRE_STONE_SOURCE)){
+                msgbox(format("That's the leaf, fire and water stones sorted. I should return these back to my Grandad"))
+            }
+            subquestmenu(QUEST_MENU_COMPLETE_QUEST, QUEST_POKEMON_LEAGUE, SUB_QUEST_FIRE_STONE)
+            applymovement(4, Movement_GrandsonLeaves_FireStone)
+            waitmovement(4)
+            removeobject(4)
+        }
+        if(var(VAR_RESULT) == NO) {
+            msgbox(format("Well go prepare I don't think I can do this alone."))
+        }
+    }
+    release
+}
+
+script Route3_EventScript_MiracleSeed {
+    finditem(ITEM_MIRACLE_SEED)
+}
+
+//Text Scripts
+
+//ai genned to fix
+text LassAlex_Intro {
+    format("Hey there! I'm Lass Alex, braving the heights for a mountainous Pokémon battle. Ready to take on the challenge?")
+}
+
+text LassAlex_Outro {
+    format("Wow, you really conquered the summit of this battle! Your skills shine like the mountain peak. Keep that determination on your journey!")
+}
+
+text LassAlex_PostBattle {
+    format("Fantastic battle! If you ever want to climb to new heights in Pokémon battles or just chat, find me along your mountainous journey.")
+}
+
+text HikerHarry_Intro {
+    format("Greetings, trainer! I'm Hiker Harry, scaling these rocky heights for a sturdy Pokémon duel. Ready to test your mettle?")
+}
+
+text HikerHarry_Outro {
+    format("You're tougher than the mountain rocks! Your skills resonate like an echoing peak. Keep that rock-solid determination on your journey!")
+}
+
+text HikerHarry_PostBattle {
+    format("Solid battle! If you ever want to navigate the rocky terrain of Pokémon battles together or share mountain tales, you know where to find me.")
+}
+
+//movement
+movement Movement_GrandsonLeaves_FireStone {
+    walk_up
+    walk_up
+    walk_up
+    walk_up
+    walk_up
+    walk_up
+
+}

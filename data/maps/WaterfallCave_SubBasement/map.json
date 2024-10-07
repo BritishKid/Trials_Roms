@@ -1,0 +1,60 @@
+{
+  "id": "MAP_WATERFALL_CAVE_SUB_BASEMENT",
+  "name": "WaterfallCave_SubBasement",
+  "layout": "LAYOUT_WATERFALL_CAVE_SUB_BASEMENT",
+  "music": "MUS_FALLARBOR",
+  "region_map_section": "MAPSEC_NONE",
+  "requires_flash": true,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_NONE",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": 0,
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_EXPERT_M",
+      "x": 4,
+      "y": 7,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "FirstMaster_Fallen",
+      "flag": "FLAG_WATERFALL_CAVE_CLEARED"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 16,
+      "y": 18,
+      "elevation": 0,
+      "dest_map": "MAP_WATERFALL_CAVE_POST_BREAK",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 17,
+      "y": 2,
+      "elevation": 0,
+      "dest_map": "MAP_WATERFALL_CAVE_SUB_BASEMENT",
+      "dest_warp_id": "1"
+    }
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 17,
+      "y": 1,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "WatefallCave_SubBasement_LegendsDoor"
+    }
+  ]
+}

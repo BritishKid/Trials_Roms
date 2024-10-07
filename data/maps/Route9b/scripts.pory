@@ -1,0 +1,14 @@
+mapscripts Route9b_MapScripts {}
+
+
+script TepigGrottoEntrance {
+    lockall
+    if(flag(FLAG_BADGE03_GET)) { //todo possibly use a different flag 
+        msgbox(format("You think you can see some Pokémon in the trees."))
+        msgbox(format("Do you want to go through?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES) {
+            warp(MAP_TEPIG_GROTTO, 0, 4, 0)
+        }
+    }
+    releaseall
+}

@@ -1,0 +1,84 @@
+mapscripts Rob_Hidden_Base_Route3_MapScripts {}
+
+
+script FrontPageRob_Hidden_Base_EventScript_PC {
+    lockall
+    msgbox(format("Thank you to FrontPageRob for the support in making this game!"))
+    releaseall
+}
+
+script FrontPageRob_Hidden_Base_EventScript_Find_MagnemiteDoll {
+    lockall
+    faceplayer
+    if (!flag(FLAG_HIDDEN_BASE_COLLECTABLE_FOUND_MUDKIP)) {
+        msgbox(format("It's FrontPageRob's Mudkip Doll"))
+        adddecoration(DECOR_MUDKIP_DOLL) //todo make this magnemite doll
+        setflag(FLAG_HIDDEN_BASE_COLLECTABLE_FOUND_MUDKIP)
+        subquestmenu(QUEST_MENU_COMPLETE_QUEST, QUEST_POKEMON_LEAGUE, SUB_QUEST_MUDKIP_DOLL)
+        msgbox(format("You've unlocked the Mudkip Doll for your secret base"))
+    }
+    else {
+        msgbox(format("It's FrontPageRob's Mudkip Doll"))
+    }
+    releaseall
+}
+
+script FrontPageRob_HiddenBase_EventScript_Battle {
+    if(!flag(FLAG_FRONTPAGEROB_BEATEN)){
+        trainerbattle_single(TRAINER_FRONTPAGEROB_SECRET_BASE, FrontPageRob_Intro, FrontPageRob_Outro, FrontPageRob_Beaten)
+    }    
+    if(flag(FLAG_FRONTPAGEROB_BEATEN) && !flag(FLAG_FRONTPAGEROB_GAVE_HONEGE)){
+        call(Rob_GivesHonege)
+    }
+    if(flag(FLAG_FRONTPAGEROB_BEATEN) && flag(FLAG_FRONTPAGEROB_GAVE_HONEGE)) {
+        msgbox(PostBattle_FrontPageRob, MSGBOX_AUTOCLOSE)
+        //add a tough rematch with FPR defining it
+    }
+    release
+    waitmessage
+    end
+}
+
+script FrontPageRob_Beaten {
+    msgbox(Beat_FrontPageRob, MSGBOX_AUTOCLOSE)
+    setflag(FLAG_FRONTPAGEROB_BEATEN)
+    call(Rob_GivesHonege)
+    release
+}
+
+script Rob_GivesHonege {
+    lock
+    showmonpic(SPECIES_HONEDGE, 10, 3)
+    givemon(SPECIES_HONEDGE, 5)
+    setflag(FLAG_FRONTPAGEROB_GAVE_HONEGE)
+    playfanfare(MUS_OBTAIN_ITEM)
+    if (var(VAR_RESULT) == MON_GIVEN_TO_PARTY) {
+            msgbox("Recieved Honedge")
+            call(NicknamePartyMon)
+        }
+        elif (var(VAR_RESULT) == MON_GIVEN_TO_PC) {
+            msgbox("Recieved Honedge")
+            call(NicknameBoxMon)
+        }
+        else {
+            hidemonpic
+            msgbox(format("You don't have enough space. Come back and you get it soon."))
+    }
+}
+
+//text scripts
+text FrontPageRob_Intro {
+    format("Physics puns are no joke. It's a relatively dark matter")
+}
+
+text FrontPageRob_Outro {
+    format("Clearly I've been studying frequency too much, now my brain Hertz")
+}
+
+text PostBattle_FrontPageRob {
+    format("")
+}
+
+text Beat_FrontPageRob {
+    format("Well that didn't go right. Here take this sword I found")
+}

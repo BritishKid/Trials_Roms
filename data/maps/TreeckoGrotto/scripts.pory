@@ -1,0 +1,10 @@
+mapscripts TreeckoGrotto_MapScripts {}
+
+script TreeckoGrotto_Leave {
+    lockall
+    msgbox(format("Do you want to leave?"), MSGBOX_YESNO) 
+    if(var(VAR_RESULT) == YES) {
+        warp(MAP_OBSIDIAN_THICKET_GYM, 10, 8)
+    }
+    releaseall
+}

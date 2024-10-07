@@ -29,7 +29,9 @@
       "direction": "emerge"
     }
   ],
-  "object_events": [],
+  "object_events": [
+
+  ],
   "warp_events": [
     {
       "x": 45,
@@ -39,7 +41,9 @@
       "dest_warp_id": "0"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+
+  ],
   "bg_events": [
     {
       "type": "hidden_item",
@@ -47,7 +51,7 @@
       "y": 17,
       "elevation": 3,
       "item": "ITEM_HEART_SCALE",
-      "flag": "FLAG_HIDDEN_ITEM_UNDERWATER_126_HEART_SCALE"
+      "flag": "FLAG_HIDDEN_ITEM_CORAL_CLIFF_LEAF_STONE"
     },
     {
       "type": "hidden_item",
@@ -55,7 +59,7 @@
       "y": 19,
       "elevation": 3,
       "item": "ITEM_ULTRA_BALL",
-      "flag": "FLAG_HIDDEN_ITEM_UNDERWATER_126_ULTRA_BALL"
+      "flag": "FLAG_HIDDEN_ITEM_DARKCAVE_ULTRA_BALL"
     },
     {
       "type": "hidden_item",
@@ -63,7 +67,7 @@
       "y": 19,
       "elevation": 3,
       "item": "ITEM_STARDUST",
-      "flag": "FLAG_HIDDEN_ITEM_UNDERWATER_126_STARDUST"
+      "flag": "FLAG_HIDDEN_ITEM_DARKCAVE_ROCK_GEM"
     },
     {
       "type": "hidden_item",
@@ -71,7 +75,7 @@
       "y": 36,
       "elevation": 3,
       "item": "ITEM_PEARL",
-      "flag": "FLAG_HIDDEN_ITEM_UNDERWATER_126_PEARL"
+      "flag": "FLAG_HIDDEN_ITEM_DARKCAVE_HEART_SCALE"
     },
     {
       "type": "hidden_item",
@@ -87,7 +91,7 @@
       "y": 35,
       "elevation": 3,
       "item": "ITEM_YELLOW_SHARD",
-      "flag": "FLAG_HIDDEN_ITEM_UNDERWATER_126_YELLOW_SHARD"
+      "flag": "FLAG_HIDDEN_ITEM_LILYCOVE_CITY_CELL_BATTERY"
     },
     {
       "type": "hidden_item",
@@ -103,7 +107,7 @@
       "y": 77,
       "elevation": 3,
       "item": "ITEM_BLUE_SHARD",
-      "flag": "FLAG_HIDDEN_ITEM_UNDERWATER_126_BLUE_SHARD"
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE2_STARDUST"
     }
   ]
 }

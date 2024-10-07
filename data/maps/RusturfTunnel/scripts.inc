@@ -10,12 +10,12 @@ RusturfTunnel_MapScripts::
 	.byte 0
 
 RusturfTunnel_OnFrame:
-	map_script_2 VAR_RUSTURF_TUNNEL_STATE, 4, RusturfTunnel_EventScript_ClearTunnelScene
-	map_script_2 VAR_RUSTURF_TUNNEL_STATE, 5, RusturfTunnel_EventScript_ClearTunnelScene
+	map_script_2 VAR_EMBERDUNES_BUTTONS_PRESSED, 4, RusturfTunnel_EventScript_ClearTunnelScene
+	map_script_2 VAR_EMBERDUNES_BUTTONS_PRESSED, 5, RusturfTunnel_EventScript_ClearTunnelScene
 	.2byte 0
 
 RusturfTunnel_OnTransition:
-	call_if_eq VAR_RUSTURF_TUNNEL_STATE, 2, RusturfTunnel_EventScript_SetAquaGruntAndPeekoPos
+	call_if_eq VAR_EMBERDUNES_BUTTONS_PRESSED, 2, RusturfTunnel_EventScript_SetAquaGruntAndPeekoPos
 	end
 
 RusturfTunnel_EventScript_SetAquaGruntAndPeekoPos::
@@ -62,8 +62,8 @@ RusturfTunnel_EventScript_ClearTunnelScene::
 	msgbox RusturfTunnel_Text_YouShatteredBoulderTakeHM, MSGBOX_DEFAULT
 	call_if_eq VAR_TEMP_1, 2, RusturfTunnel_EventScript_WandasBoyfriendApproachPlayer
 	call_if_eq VAR_TEMP_1, 3, RusturfTunnel_EventScript_WandasBoyfriendApproachPlayer
-	giveitem ITEM_HM_STRENGTH
-	setflag FLAG_RECEIVED_HM_STRENGTH
+	giveitem ITEM_HM04
+	setflag FLAG_RECEIVED_HM04
 	msgbox RusturfTunnel_Text_ExplainStrength, MSGBOX_DEFAULT
 	closemessage
 	call_if_eq VAR_TEMP_1, 1, RusturfTunnel_EventScript_BoyfriendApproachWanda1
@@ -281,7 +281,7 @@ RusturfTunnel_EventScript_AquaGruntBackUp::
 	waitmovement 0
 	copyobjectxytoperm LOCALID_GRUNT
 	copyobjectxytoperm LOCALID_PEEKO
-	setvar VAR_RUSTURF_TUNNEL_STATE, 3
+	setvar VAR_EMBERDUNES_BUTTONS_PRESSED, 3
 	releaseall
 	end
 
@@ -306,9 +306,9 @@ RusturfTunnel_EventScript_Grunt::
 	faceplayer
 	playbgm MUS_ENCOUNTER_AQUA, FALSE
 	msgbox RusturfTunnel_Text_GruntIntro, MSGBOX_DEFAULT
-	trainerbattle_no_intro TRAINER_GRUNT_RUSTURF_TUNNEL, RusturfTunnel_Text_GruntDefeat
+	trainerbattle_no_intro MAHOGANYHILLSGYM_TRAINER_WRIGHT, RusturfTunnel_Text_GruntDefeat
 	msgbox RusturfTunnel_Text_GruntTakePackage, MSGBOX_DEFAULT
-	giveitem ITEM_DEVON_GOODS
+	giveitem ITEM_DEVON_PARTS
 	closemessage
 	applymovement OBJ_EVENT_ID_PLAYER, RusturfTunnel_Movement_PushPlayerAsideForGrunt
 	applymovement LOCALID_GRUNT, RusturfTunnel_Movement_GruntEscape
@@ -337,8 +337,8 @@ RusturfTunnel_EventScript_Grunt::
 	waitmovement 0
 	removeobject LOCALID_BRINEY
 	removeobject LOCALID_PEEKO
-	clearflag FLAG_DEVON_GOODS_STOLEN
-	setflag FLAG_RECOVERED_DEVON_GOODS
+	clearflag FLAG_MAT_ID
+	setflag FLAG_MAT_ID_RETURNED
 	setvar VAR_RUSTBORO_CITY_STATE, 4
 	setvar VAR_BRINEY_HOUSE_STATE, 1
 	setflag FLAG_HIDE_ROUTE_116_MR_BRINEY

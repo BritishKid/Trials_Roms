@@ -1,0 +1,68 @@
+mapscripts GranitePeak_Mart_MapScripts {
+}
+
+script GranitePeak_EventScript_MartClerk {
+	lockall
+	faceplayer
+	msgbox("How may I serve you")
+	waitmessage	
+	if(!flag(FLAG_BADGE03_GET)) {
+		pokemart(GranitePeakMart_Items_LessThanThreeBadges)	
+	}
+    else {
+        pokemart(GranitePeakMart_Items_LessThanSixBadges)	
+    }
+	msgbox("Please Come Again.")
+	releaseall
+}
+
+script GranitePeak_Mart_EventScript_Boy {
+    lockall
+    faceplayer
+    msgbox(format("Did you know as you get more badges they can sell you better items?"))
+    releaseall
+}
+
+script GranitePeak_Mart_EventScript_Man {
+    lockall
+    faceplayer
+    msgbox(format("I'm buying lots of Pokeballs to try and get some Electric Pokémon. They are really good against the water gym leader by the coast."))
+    releaseall
+}
+
+script GranitePeak_Mart_EventScript_Woman {
+    lockall
+    faceplayer
+    msgbox(format("The market is expensive, sometimes it's just better to grow berries."))
+    releaseall
+}
+
+//mart items
+mart GranitePeakMart_Items_LessThanThreeBadges {
+	ITEM_POKE_BALL
+    ITEM_GREAT_BALL
+    ITEM_LEVEL_BALL
+    ITEM_NEST_BALL
+	ITEM_POTION
+	ITEM_ANTIDOTE
+	ITEM_PARALYZE_HEAL
+	ITEM_AWAKENING
+	ITEM_REPEL
+	ITEM_ESCAPE_ROPE
+}
+
+mart GranitePeakMart_Items_LessThanSixBadges {
+    ITEM_POKE_BALL
+    ITEM_GREAT_BALL
+    ITEM_LEVEL_BALL
+    ITEM_NEST_BALL
+	ITEM_POTION
+    ITEM_SUPER_POTION
+	ITEM_ANTIDOTE
+	ITEM_PARALYZE_HEAL
+	ITEM_AWAKENING
+    ITEM_FULL_HEAL
+	ITEM_REPEL
+    ITEM_SUPER_REPEL
+	ITEM_ESCAPE_ROPE
+}

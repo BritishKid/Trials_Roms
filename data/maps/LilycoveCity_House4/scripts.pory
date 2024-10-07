@@ -1,0 +1,18 @@
+mapscripts LilycoveCity_House4_MapScripts {
+
+}
+
+script LilycoveCity_House4_EventScript_Man2 {
+    lockall
+    faceplayer
+    msgbox(format("Triver is known for it's 3 large islands but there is hundreds of smaller ones full of rare Pokémon. It's why lots of people came here thousands of years ago."))
+    releaseall
+}
+
+
+script LilycoveCity_House4_EventScript_Man1 {
+    lockall
+    faceplayer
+    msgbox(format("I was once a trainer but I retired not long after the set up the Mega Mansion. So many strong trainers started coming from all over the world I couldn't keep up!"))
+    releaseall
+}

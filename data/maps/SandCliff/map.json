@@ -1,0 +1,64 @@
+{
+  "id": "MAP_SAND_CLIFF",
+  "name": "SandCliff",
+  "layout": "LAYOUT_SAND_CLIFF",
+  "music": "MUS_SLATEPORT",
+  "region_map_section": "MAPSEC_SLATEPORT_CITY",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_ROUTE",
+  "allow_cycling": true,
+  "allow_escaping": true,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_CORAL_PORT",
+      "offset": 0,
+      "direction": "down"
+    },
+    {
+      "map": "MAP_DRAGON_LAKE",
+      "offset": 15,
+      "direction": "right"
+    },
+    {
+      "map": "MAP_ROUTE4B",
+      "offset": -36,
+      "direction": "right"
+    }
+  ],
+  "object_events": [
+
+  ],
+  "warp_events": [
+    {
+      "x": 29,
+      "y": 5,
+      "elevation": 0,
+      "dest_map": "MAP_SANDY_CLIFF_BASE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 14,
+      "y": 6,
+      "elevation": 0,
+      "dest_map": "MAP_SANDY_CLIFF_BASE",
+      "dest_warp_id": "1"
+    }
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+    {
+      "type": "hidden_item",
+      "x": 5,
+      "y": 6,
+      "elevation": 0,
+      "item": "ITEM_LEAF_STONE",
+      "flag": "FLAG_HIDDEN_ITEM_CORAL_CLIFF_LEAF_STONE"
+    }
+  ]
+}

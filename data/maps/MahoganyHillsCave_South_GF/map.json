@@ -1,0 +1,48 @@
+{
+  "id": "MAP_MAHOGANY_HILLS_CAVE_SOUTH_GF",
+  "name": "MahoganyHillsCave_South_GF",
+  "layout": "LAYOUT_MAHOGANY_HILLS_CAVE_SOUTH_GF",
+  "music": "MUS_PETALBURG_WOODS",
+  "region_map_section": "MAPSEC_ROUTE_102",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_UNDERGROUND",
+  "allow_cycling": true,
+  "allow_escaping": true,
+  "allow_running": true,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": 0,
+  "object_events": [
+
+  ],
+  "warp_events": [
+    {
+      "x": 3,
+      "y": 15,
+      "elevation": 0,
+      "dest_map": "MAP_MAHOGANY_HILLS_CAVE_B1F",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 36,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_MAHOGANY_HILLS_6",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 26,
+      "y": 1,
+      "elevation": 0,
+      "dest_map": "MAP_MAHOGANY_HILLS_CAVE_WO_CHIEN",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ]
+}

@@ -1,0 +1,16 @@
+mapscripts BirthIsland_Harbor_MapScripts {
+    
+}
+
+script BirthIsland_Harbor_EventScript_Sailor {
+        msgbox(format("YES THAT'S IT! I LOVE IT"))
+        msgbox(format("No you've proven yourself to be useful I need one more thing from you"))
+        msgbox(format("Do you want to be my BEST MAN for my wedding?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES ) {
+            msgbox(format("FANTASTIC let's get you back"))
+            warp(MAP_MAHOGANY_HILLS_GYM_ENTRANCE, 17, 19)
+        } 
+        if(var(VAR_RESULT) == NO) {
+            msgbox("Oh")
+        }
+}

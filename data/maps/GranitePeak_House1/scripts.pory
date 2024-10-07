@@ -1,0 +1,27 @@
+mapscripts GranitePeak_House1_MapScripts {
+    
+}
+
+script GranitePeak_House1_EventScript_Man {
+    lock
+    faceplayer
+    msgbox(format("My Daughter loves Pokémon but it just seems so unsafe out there"))
+    release
+}
+
+script GranitePeak_House1_EventScript_Woman {
+    lock
+    faceplayer
+    msgbox(format("You have so many cool Pokémon! \n I wish I could explore but my dad won't let me.\p")) //trade
+    //todo implement trade
+    // if(!flag(FLAG_GRANITE_PEAK_NPC_TRADE_COMPLETED)) {
+    //     msgbox(format("You have so many cool Pokémon! \n I wish I could explore but my dad won't let me.\p")) //trade
+    //     msgbox(formaT("If you had a Corvisquire I'd love to trade one for my Skitty."), MSGBOX_YESNO)
+    //     if(var(VAR_RESULT) == YES) {
+
+    //     } else {
+    //         msgbox(format("Oh that's a shame"))
+    //     }
+    // }  
+    release
+}

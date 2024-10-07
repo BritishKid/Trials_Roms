@@ -1,0 +1,48 @@
+mapscripts Route7b_MapScripts {}
+
+script Route7b_Pyukumuku_Clean_Up_1 {
+    lock
+        msgbox(format("It's a Pyukumuku, you push it back into the water"))
+        fadescreen(FADE_TO_BLACK)
+        msgbox(format("SPLASH"))
+        fadescreen(FADE_FROM_BLACK)
+        removeobject(2)
+        setflag(FLAG_CLEANED_UP_ROUTE7b_PYUKUMUKU_1)
+        call(IncrementNumber_Pyukumukus_Saved)
+    release
+}
+
+script Route7b_Pyukumuku_Clean_Up_2 {
+    lock
+        msgbox(format("It's a Pyukumuku, you push it back into the water"))
+        fadescreen(FADE_TO_BLACK)
+        msgbox(format("SPLASH"))
+        fadescreen(FADE_FROM_BLACK)
+        removeobject(3)
+        setflag(FLAG_CLEANED_UP_ROUTE7b_PYUKUMUKU_2)
+        call(IncrementNumber_Pyukumukus_Saved)
+    release
+}
+
+script Route7b_WarningTrainer{
+    trainerbattle_single(TRAINER_ROUTE7b_RACHEL, Route7b_Rachel_Intro, Route7b_Rachel_Outro)
+    msgbox(Route7b_Rachel_Postbattle, MSGBOX_AUTOCLOSE)
+}
+
+script EventScript_7b_ItemBall_TMDig{
+    finditem(ITEM_TM28)
+}
+
+//text
+
+text Route7b_Rachel_Intro {
+    format("I wouldn't go further east, some thugs have taken over the town and they are very strong. Not even Gym Leader Kevin could beat them.")
+}
+
+text Route7b_Rachel_Outro {
+    format("You're strong, but I'm not sure you're stronger than Kevin")
+}
+
+text Route7b_Rachel_Postbattle {
+    format("You're welcome to try to beat them but without beating Hemlock Gym you won't stand a chance.")
+}

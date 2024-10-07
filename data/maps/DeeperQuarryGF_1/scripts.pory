@@ -1,0 +1,76 @@
+mapscripts DeeperQuarryGF_1_MapScripts {}
+
+script Quarry_Worker1 {
+    trainerbattle_single(QUARRY_WORKER1, Quarry_Worker1_Intro, Quarry_Worker1_Outro, Increase_Trainers_Beaten)
+    msgbox(Quarry_Worker1_Postbattle, MSGBOX_AUTOCLOSE)
+    release
+}
+
+script Quarry_Worker2 {
+    trainerbattle_single(QUARRY_WORKER2, Quarry_Worker2_Intro, Quarry_Worker2_Outro, Increase_Trainers_Beaten)
+    msgbox(Quarry_Worker2_Postbattle, MSGBOX_AUTOCLOSE)
+    release
+}
+
+script StevePlaceholder {
+    trainerbattle_single(QUARRY_FISHERMAN, Quarry_Fisherman_Intro, Quarry_Fisherman_Outro, Increase_Trainers_Beaten)
+    msgbox(Quarry_Fisherman_Postbattle, MSGBOX_AUTOCLOSE)
+    release
+}
+
+script ItemBall_Secret_Area {
+    finditem(ITEM_TM47)
+}
+
+script ItemBall_QuarryDeeper1f_Ball1 {
+    finditem(ITEM_KINGS_ROCK)
+}
+
+script Trigger_OfSteelix {
+    lockall
+    setvar(VAR_0x8004, 1) //horizontal
+    setvar(VAR_0x8005, 1) //vertical
+    setvar(VAR_0x8006, 8)  //number
+    setvar(VAR_0x8007, 0) //delay
+    special(ShakeCamera)
+    playmoncry(SPECIES_STEELIX, CRY_MODE_ENCOUNTER)
+    setvar(VAR_QUARRY_STATE, 2)
+    releaseall
+}
+
+//text 
+text Quarry_Worker1_Intro {
+    format("It's great to get back to work, but I can have a break and beat you")
+}
+
+text Quarry_Worker1_Outro {
+    format("Not the best way to spend a break")
+}
+
+text Quarry_Worker1_Postbattle {
+    format("This quarry gets shut down often due to wild Pokémon")
+}
+
+text Quarry_Worker2_Intro {
+    format("I've lost my helmet, it should be nearby!")
+}
+
+text Quarry_Worker2_Outro {
+    format("I guess I won't be quitting my day job")
+}
+
+text Quarry_Worker2_Postbattle {
+    format("I'm a good miner, but a rubbish trainer")
+}
+
+text Quarry_Fisherman_Intro {
+    format("So many cool fish Poekmon can be found in caves")
+}
+
+text Quarry_Fisherman_Outro {
+    format("This is why I need to find stronger Pokémon")
+}
+
+text Quarry_Fisherman_Postbattle {
+    format("I might be lost I can't find any water")
+}

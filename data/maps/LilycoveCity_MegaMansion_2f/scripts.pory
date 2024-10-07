@@ -1,0 +1,72 @@
+mapscripts LilycoveCity_MegaMansion_2f_MapScripts {}
+
+
+script MegaMansion_Secret2 {
+    lockall
+    if(var(VAR__MEGA_MANSION_STATE) == 2) {
+        setvar(VAR__MEGA_MANSION_STATE, 3)
+        msgbox(format("It's a half grown bonsai tree"))
+    }
+    releaseall
+}
+
+script MegaMansion_Trainer3 {
+    trainerbattle_single(MEGAMANSION_TRAINER3, MegaMansion_Trainer3_Intro, MegaMansion_Trainer3_Outro, MegaMansion_Trainer_PostbattleScript)
+    msgbox(MegaMansion_Trainer3_Postbattle, MSGBOX_AUTOCLOSE)
+    release
+}
+
+script MegaMansion_Trainer5 {
+    trainerbattle_single(MEGAMANSION_TRAINER5, MegaMansion_Trainer5_Intro, MegaMansion_Trainer5_Outro, MegaMansion_Trainer_PostbattleScript)
+    msgbox(MegaMansion_Trainer5_Postbattle, MSGBOX_AUTOCLOSE)
+    release
+}
+
+
+script MegaMansion_Trainer7 {
+    trainerbattle_single(MEGAMANSION_TRAINER7, MegaMansion_Trainer7_Intro, MegaMansion_Trainer7_Outro, MegaMansion_Trainer_PostbattleScript)
+    msgbox(MegaMansion_Trainer7_Postbattle, MSGBOX_AUTOCLOSE)
+    release
+}
+
+script MegaMansion_RareCandy {
+    finditem(ITEM_RARE_CANDY, 4)
+}
+
+//text
+
+text MegaMansion_Trainer3_Intro {
+    format("Time to learn your abc's")
+}
+
+text MegaMansion_Trainer3_Outro {
+    format("abcdefghijklose")
+}
+
+text MegaMansion_Trainer3_Postbattle {
+    format("You mastered the Pokémon and the english alphabet")
+}
+
+text MegaMansion_Trainer5_Intro {
+    format("You are getting INTIMIDATED")
+}
+
+text MegaMansion_Trainer5_Outro {
+    format("You got INTIMIDATED")
+}
+
+text MegaMansion_Trainer5_Postbattle {
+    format("My self esteem fell one stage")
+}
+
+text MegaMansion_Trainer7_Intro {
+    format("My Mouwam will destroy you!")
+}
+
+text MegaMansion_Trainer7_Outro {
+    format("MOUWAM NO!")
+}
+
+text MegaMansion_Trainer7_Postbattle {
+    format("hmph")
+}

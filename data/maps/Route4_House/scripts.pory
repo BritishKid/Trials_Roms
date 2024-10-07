@@ -1,0 +1,51 @@
+mapscripts Route4_House_MapScripts {}
+
+
+script Brawley_Route4_Battle {
+    lock
+    msgbox(format("Where is that delivery, how hard can it be to get furniture up here."))
+    applymovement(1, Movement_Brawley_Surprise)
+    waitmovement(1)
+    msgbox(format("Are you here with my delivery?"), MSGBOX_YESNO)
+    if(var(VAR_RESULT) == NO){
+        msgbox(format("So you just walked into this house without knocking?\nThis isn't just some zelda game where you can get away with that"))
+    } else {
+        msgbox(format("Wait you don't have the uniform on, is this some prank kid?"))
+    }
+    msgbox(format("You're lucky you got me in a good mood, we are almost finished here."))
+    msgbox(format("Soon this house will be open for martial artists all around the world to come to these mountain ranges said to be the best place to train your mind and body."))
+    msgbox(format("Many ancient masters are said to have dojos and reside somewhere and we are going to make it easier to find and join them"))
+    msgbox(format("Anyway I can't help but notice your a trainer, and like me you're itching to fight.\nNo more talk, lets battle"))
+    trainerbattle_no_intro(TRAINER_BRAWLY_1, Brawley_Route4_Outro)
+    setvar(VAR_ROUTE4_BRAWLEY, 1)
+    msgbox(format("Well done kid, you might have what it takes to became a black belt."))
+    //build up something about hidden dojos?
+    //waterfall dojo is one
+    release
+}
+
+script Brawly_General {
+    //brawley gives you a belt based on how many dojos you find, beat them all to get black belt, leads to a legendary??
+    lock
+    faceplayer
+    msgbox(format("Have you found any hidden dojos yet?"))
+    if(flag(FLAG_WATERFALL_CAVE_CLEARED)){
+        msgbox(format("Oh wow there was a dojo behind the waterfall?"))
+        msgbox(format("FUTURE IMPLEMENTATION COME BACK IN A FUTURE VERSION"))
+        //go up a stage
+    }
+    release
+}
+
+//movement
+
+movement Movement_Brawley_Surprise {
+    emote_exclamation_mark
+    face_down
+}
+
+//text
+
+text Brawley_Route4_Outro {
+    format("Damn kid")
+}

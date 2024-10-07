@@ -1,0 +1,365 @@
+GranitePeak_Tournament_WaitingRoom_MapScripts::
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, GranitePeak_Tournament_WaitingRoom_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE
+	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, GranitePeak_Tournament_WaitingRoom_MapScripts_MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE
+	.byte 0
+
+GranitePeak_Tournament_WaitingRoom_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE:
+	map_script_2 VAR_TEMP_0, 0, GranitePeak_BattleDomePreBattleRoom_EventScript_EnterRoom
+	.2byte 0
+
+GranitePeak_Tournament_WaitingRoom_MapScripts_MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE:
+	map_script_2 VAR_TEMP_1, 0, GranitePeak_BattleDomePreBattleRoom_EventScript_TurnPlayerNorth
+	.2byte 0
+
+
+GranitePeak_BattleDomePreBattleRoom_EventScript_TurnPlayerNorth::
+	setvar VAR_TEMP_1, 1
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
+	return
+
+
+GranitePeak_BattleDomePreBattleRoom_EventScript_EnterRoom::
+	compare VAR_0x8006, 1
+	goto_if_eq GranitePeak_BattleDomePreBattleRoom_EventScript_EnterRoom_2
+GranitePeak_BattleDomePreBattleRoom_EventScript_EnterRoom_1:
+	setvar VAR_TEMP_0, 1
+	lockall
+	return
+
+GranitePeak_BattleDomePreBattleRoom_EventScript_EnterRoom_2:
+	call GranitePeak_BattleDomePreBattleRoom_EventScript_ReturnFromBattle
+	goto GranitePeak_BattleDomePreBattleRoom_EventScript_EnterRoom_1
+
+
+GranitePeak_BattleDomePreBattleRoom_EventScript_ReturnFromBattle::
+	setvar VAR_TEMP_0, 1
+	msgbox GranitePeak_BattleDomePreBattleRoom_EventScript_ReturnFromBattle_Text_0, MSGBOX_DEFAULT
+	playfanfare MUS_HEAL
+	waitfanfare
+	call GranitePeak_BattleDomePreBattleRoom_EventScript_RoundCompleteMessage
+	fadescreen FADE_TO_BLACK
+	dome_showstatictourneytree
+	waitstate
+	goto GranitePeak_BattleDomePreBattleRoom_EventScript_AskReadyForNextRound
+	return
+
+
+GranitePeak_BattleDomePreBattleRoom_EventScript_RoundCompleteMessage::
+	switch VAR_RESULT
+	case DOME_ROUND2, GranitePeak_BattleDomePreBattleRoom_EventScript_RoundCompleteMessage_2
+	case DOME_SEMIFINAL, GranitePeak_BattleDomePreBattleRoom_EventScript_RoundCompleteMessage_3
+	case DOME_FINAL, GranitePeak_BattleDomePreBattleRoom_EventScript_RoundCompleteMessage_4
+	return
+
+GranitePeak_BattleDomePreBattleRoom_EventScript_RoundCompleteMessage_2:
+	goto GranitePeak_BattleDomePreBattleRoom_EventScript_Round1Complete
+	return
+
+GranitePeak_BattleDomePreBattleRoom_EventScript_RoundCompleteMessage_3:
+	goto GranitePeak_BattleDomePreBattleRoom_EventScript_Round2Complete
+	return
+
+GranitePeak_BattleDomePreBattleRoom_EventScript_RoundCompleteMessage_4:
+	goto GranitePeak_BattleDomePreBattleRoom_EventScript_SemifinalsComplete
+	return
+
+
+GranitePeak_BattleDomePreBattleRoom_EventScript_AskReadyForNextRound::
+	call GranitePeak_BattleDomePreBattleRoom_EventScript_ReadyForNextRoundMessage
+	waitmessage
+	multichoice 16, 0, MULTI_TOURNEY_NO_RECORD, TRUE
+	compare VAR_RESULT, 0
+	goto_if_eq GranitePeak_BattleDomePreBattleRoom_EventScript_AskReadyForNextRound_2
+GranitePeak_BattleDomePreBattleRoom_EventScript_AskReadyForNextRound_1:
+	switch VAR_RESULT
+	case 0, GranitePeak_BattleDomePreBattleRoom_EventScript_AskReadyForNextRound_5
+	case 1, GranitePeak_BattleDomePreBattleRoom_EventScript_AskReadyForNextRound_6
+	case 2, GranitePeak_BattleDomePreBattleRoom_EventScript_AskReadyForNextRound_7
+	case 3, GranitePeak_BattleDomePreBattleRoom_EventScript_AskReadyForNextRound_8
+	case MULTI_B_PRESSED, GranitePeak_BattleDomePreBattleRoom_EventScript_AskReadyForNextRound_9
+	return
+
+GranitePeak_BattleDomePreBattleRoom_EventScript_AskReadyForNextRound_2:
+	goto GranitePeak_BattleDomePreBattleRoom_EventScript_AskReadyForNextRound_1
+
+GranitePeak_BattleDomePreBattleRoom_EventScript_AskReadyForNextRound_5:
+	goto GranitePeak_BattleDomePreBattleRoom_EventScript_ShowOpponentInfo
+	return
+
+GranitePeak_BattleDomePreBattleRoom_EventScript_AskReadyForNextRound_6:
+	goto GranitePeak_BattleDomePreBattleRoom_EventScript_ShowTourneyTree
+	return
+
+GranitePeak_BattleDomePreBattleRoom_EventScript_AskReadyForNextRound_7:
+	goto GranitePeak_BattleDomePreBattleRoom_EventScript_ContinueChallenge
+	return
+
+GranitePeak_BattleDomePreBattleRoom_EventScript_AskReadyForNextRound_8:
+	goto GranitePeak_BattleDomePreBattleRoom_EventScript_AskPauseChallenge
+	return
+
+GranitePeak_BattleDomePreBattleRoom_EventScript_AskReadyForNextRound_9:
+	goto GranitePeak_BattleDomePreBattleRoom_EventScript_AskReadyForNextRound
+	return
+
+
+GranitePeak_BattleDomePreBattleRoom_EventScript_AskPauseChallenge::
+	msgbox GranitePeak_BattleDomePreBattleRoom_EventScript_AskPauseChallenge_Text_0, MSGBOX_YESNO
+	compare VAR_RESULT, 0
+	goto_if_eq GranitePeak_BattleDomePreBattleRoom_EventScript_AskPauseChallenge_2
+GranitePeak_BattleDomePreBattleRoom_EventScript_AskPauseChallenge_1:
+	switch VAR_RESULT
+	case NO, GranitePeak_BattleDomePreBattleRoom_EventScript_AskPauseChallenge_5
+	case YES, GranitePeak_BattleDomePreBattleRoom_EventScript_AskPauseChallenge_6
+	case MULTI_B_PRESSED, GranitePeak_BattleDomePreBattleRoom_EventScript_AskPauseChallenge_7
+	return
+
+GranitePeak_BattleDomePreBattleRoom_EventScript_AskPauseChallenge_2:
+	goto GranitePeak_BattleDomePreBattleRoom_EventScript_AskPauseChallenge_1
+
+GranitePeak_BattleDomePreBattleRoom_EventScript_AskPauseChallenge_5:
+	goto GranitePeak_BattleDomePreBattleRoom_EventScript_AskReadyForNextRound
+	return
+
+GranitePeak_BattleDomePreBattleRoom_EventScript_AskPauseChallenge_6:
+	goto GranitePeak_BattleDomePreBattleRoom_EventScript_PauseChallenge
+	return
+
+GranitePeak_BattleDomePreBattleRoom_EventScript_AskPauseChallenge_7:
+	goto GranitePeak_BattleDomePreBattleRoom_EventScript_AskReadyForNextRound
+	return
+
+
+GranitePeak_BattleDomeBattleRoom_EventScript_WarpToLobbyLost::
+	setvar VAR_0x8004, FRONTIER_UTIL_FUNC_SET_DATA
+	setvar VAR_0x8005, FRONTIER_DATA_CHALLENGE_STATUS
+	setvar VAR_0x8006, CHALLENGE_STATUS_LOST
+	special CallFrontierUtilFunc
+	goto GranitePeak_BattleDomeBattleRoom_EventScript_WarpToLobby
+	return
+
+
+GranitePeak_BattleDomeBattleRoom_EventScript_WarpToLobby::
+	copyvar VAR_RESULT, VAR_FRONTIER_BATTLE_MODE
+	warp MAP_GRANITE_PEAK_SCHOOL_HALL, 8, 3
+	waitstate
+	end
+
+
+GranitePeak_BattleDomePreBattleRoom_EventScript_PauseChallenge::
+	msgbox GranitePeak_BattleDomePreBattleRoom_EventScript_PauseChallenge_Text_0
+	waitmessage
+	setvar VAR_0x8004, BATTLE_DOME_FUNC_SAVE
+	setvar VAR_0x8005, CHALLENGE_STATUS_PAUSED
+	special CallBattleDomeFunction
+	playse SE_SAVE
+	waitse
+	fadescreen FADE_TO_BLACK
+	frontier_reset
+	end
+
+
+GranitePeak_BattleDomePreBattleRoom_EventScript_ShowOpponentInfo::
+	msgbox GranitePeak_BattleDomePreBattleRoom_EventScript_ShowOpponentInfo_Text_0, MSGBOX_DEFAULT
+	fadescreen FADE_TO_BLACK
+	setvar VAR_0x8004, BATTLE_DOME_FUNC_SHOW_OPPONENT_INFO
+	special CallBattleDomeFunction
+	waitstate
+	goto GranitePeak_BattleDomePreBattleRoom_EventScript_AskReadyForNextRound
+	return
+
+
+GranitePeak_BattleDomePreBattleRoom_EventScript_ShowTourneyTree::
+	call GranitePeak_BattleDomePreBattleRoom_EventScript_ShowRoundMessage
+	fadescreen FADE_TO_BLACK
+	setvar VAR_0x8004, BATTLE_DOME_FUNC_SHOW_TOURNEY_TREE
+	special CallBattleDomeFunction
+	waitstate
+	goto GranitePeak_BattleDomePreBattleRoom_EventScript_AskReadyForNextRound
+	return
+
+
+GranitePeak_BattleDomePreBattleRoom_EventScript_ShowRoundMessage::
+	setvar VAR_0x8004, FRONTIER_UTIL_FUNC_GET_DATA
+	setvar VAR_0x8005, FRONTIER_DATA_BATTLE_NUM
+	special CallFrontierUtilFunc
+	switch VAR_RESULT
+	case DOME_ROUND1, GranitePeak_BattleDomePreBattleRoom_EventScript_ShowRoundMessage_3
+	case DOME_ROUND2, GranitePeak_BattleDomePreBattleRoom_EventScript_ShowRoundMessage_4
+	case DOME_SEMIFINAL, GranitePeak_BattleDomePreBattleRoom_EventScript_ShowRoundMessage_5
+	case DOME_FINAL, GranitePeak_BattleDomePreBattleRoom_EventScript_ShowRoundMessage_6
+GranitePeak_BattleDomePreBattleRoom_EventScript_ShowRoundMessage_1:
+	return
+
+GranitePeak_BattleDomePreBattleRoom_EventScript_ShowRoundMessage_3:
+	call GranitePeak_BattleDomePreBattleRoom_EventScript_TourneyInRound1
+	goto GranitePeak_BattleDomePreBattleRoom_EventScript_ShowRoundMessage_1
+
+GranitePeak_BattleDomePreBattleRoom_EventScript_ShowRoundMessage_4:
+	call GranitePeak_BattleDomePreBattleRoom_EventScript_TourneyInRound2
+	goto GranitePeak_BattleDomePreBattleRoom_EventScript_ShowRoundMessage_1
+
+GranitePeak_BattleDomePreBattleRoom_EventScript_ShowRoundMessage_5:
+	call GranitePeak_BattleDomePreBattleRoom_EventScript_TourneyInSemifinals
+	goto GranitePeak_BattleDomePreBattleRoom_EventScript_ShowRoundMessage_1
+
+GranitePeak_BattleDomePreBattleRoom_EventScript_ShowRoundMessage_6:
+	call GranitePeak_BattleDomePreBattleRoom_EventScript_TourneyInFinals
+	goto GranitePeak_BattleDomePreBattleRoom_EventScript_ShowRoundMessage_1
+
+
+GranitePeak_BattleDomePreBattleRoom_EventScript_TourneyInRound1::
+	msgbox GranitePeak_BattleDomePreBattleRoom_EventScript_TourneyInRound1_Text_0, MSGBOX_DEFAULT
+	return
+
+
+GranitePeak_BattleDomePreBattleRoom_EventScript_TourneyInRound2::
+	msgbox GranitePeak_BattleDomePreBattleRoom_EventScript_TourneyInRound2_Text_0, MSGBOX_DEFAULT
+	return
+
+
+GranitePeak_BattleDomePreBattleRoom_EventScript_TourneyInSemifinals::
+	msgbox GranitePeak_BattleDomePreBattleRoom_EventScript_TourneyInSemifinals_Text_0, MSGBOX_DEFAULT
+	return
+
+
+GranitePeak_BattleDomePreBattleRoom_EventScript_TourneyInFinals::
+	msgbox GranitePeak_BattleDomePreBattleRoom_EventScript_TourneyInFinals_Text_0, MSGBOX_DEFAULT
+	return
+
+
+GranitePeak_BattleDomePreBattleRoom_EventScript_ContinueChallenge::
+	fadescreen FADE_TO_BLACK
+	call BattleFrontier_EventScript_GetLvlMode
+	copyvar VAR_0x8004, VAR_RESULT
+	setvar VAR_0x8005, DOME_BATTLE_PARTY_SIZE
+	setvar VAR_0x8004, BATTLE_DOME_FUNC_SET_DATA
+	setvar VAR_0x8006, 0xFFFF
+	special CallBattleDomeFunction
+	dome_setopponent
+	msgbox GranitePeak_BattleDomePreBattleRoom_EventScript_ContinueChallenge_Text_0, MSGBOX_DEFAULT
+	closemessage
+	warp MAP_BATTLE_FRONTIER_BATTLE_DOME_BATTLE_ROOM, 9, 5
+	setvar VAR_TEMP_0, 0
+	waitstate
+	end
+
+
+GranitePeak_BattleDomePreBattleRoom_EventScript_ReadyForNextRoundMessage::
+	setvar VAR_0x8004, FRONTIER_UTIL_FUNC_GET_DATA
+	setvar VAR_0x8005, FRONTIER_DATA_BATTLE_NUM
+	special CallFrontierUtilFunc
+	switch VAR_RESULT
+	case DOME_ROUND1, GranitePeak_BattleDomePreBattleRoom_EventScript_ReadyForNextRoundMessage_3
+	case DOME_ROUND2, GranitePeak_BattleDomePreBattleRoom_EventScript_ReadyForNextRoundMessage_4
+	case DOME_SEMIFINAL, GranitePeak_BattleDomePreBattleRoom_EventScript_ReadyForNextRoundMessage_5
+	case DOME_FINAL, GranitePeak_BattleDomePreBattleRoom_EventScript_ReadyForNextRoundMessage_6
+GranitePeak_BattleDomePreBattleRoom_EventScript_ReadyForNextRoundMessage_1:
+	return
+
+GranitePeak_BattleDomePreBattleRoom_EventScript_ReadyForNextRoundMessage_3:
+	goto GranitePeak_BattleDomePreBattleRoom_EventScript_ReadyForRound1
+	goto GranitePeak_BattleDomePreBattleRoom_EventScript_ReadyForNextRoundMessage_1
+
+GranitePeak_BattleDomePreBattleRoom_EventScript_ReadyForNextRoundMessage_4:
+	goto GranitePeak_BattleDomePreBattleRoom_EventScript_ReadyForRound2
+	goto GranitePeak_BattleDomePreBattleRoom_EventScript_ReadyForNextRoundMessage_1
+
+GranitePeak_BattleDomePreBattleRoom_EventScript_ReadyForNextRoundMessage_5:
+	goto GranitePeak_BattleDomePreBattleRoom_EventScript_ReadyForSemifinals
+	goto GranitePeak_BattleDomePreBattleRoom_EventScript_ReadyForNextRoundMessage_1
+
+GranitePeak_BattleDomePreBattleRoom_EventScript_ReadyForNextRoundMessage_6:
+	goto GranitePeak_BattleDomePreBattleRoom_EventScript_ReadyForFinals
+	goto GranitePeak_BattleDomePreBattleRoom_EventScript_ReadyForNextRoundMessage_1
+
+
+GranitePeak_BattleDomePreBattleRoom_EventScript_ReadyForFinals::
+	return
+
+
+GranitePeak_BattleDomePreBattleRoom_EventScript_ReadyForRound1::
+	msgbox GranitePeak_BattleDomePreBattleRoom_EventScript_ReadyForRound1_Text_0
+	return
+
+
+GranitePeak_BattleDomePreBattleRoom_EventScript_ReadyForRound2::
+	msgbox GranitePeak_BattleDomePreBattleRoom_EventScript_ReadyForRound2_Text_0
+	return
+
+
+GranitePeak_BattleDomePreBattleRoom_EventScript_ReadyForSemifinals::
+	msgbox GranitePeak_BattleDomePreBattleRoom_EventScript_ReadyForSemifinals_Text_0
+	return
+
+
+GranitePeak_BattleDomePreBattleRoom_EventScript_Round1Complete::
+	msgbox GranitePeak_BattleDomePreBattleRoom_EventScript_Round1Complete_Text_0, MSGBOX_DEFAULT
+	return
+
+
+GranitePeak_BattleDomePreBattleRoom_EventScript_Round2Complete::
+	msgbox GranitePeak_BattleDomePreBattleRoom_EventScript_Round2Complete_Text_0, MSGBOX_DEFAULT
+	return
+
+
+GranitePeak_BattleDomePreBattleRoom_EventScript_SemifinalsComplete::
+	msgbox GranitePeak_BattleDomePreBattleRoom_EventScript_Round2Complete_Text_0, MSGBOX_DEFAULT
+	return
+
+
+what::
+	msgbox what_Text_0, MSGBOX_DEFAULT
+	return
+
+
+GranitePeak_BattleDomePreBattleRoom_EventScript_ReturnFromBattle_Text_0:
+	.string "Thank you for competing!$"
+
+GranitePeak_BattleDomePreBattleRoom_EventScript_AskPauseChallenge_Text_0:
+	.string "Would you like to leave? Your progress\n"
+	.string "will be lost.$"
+
+GranitePeak_BattleDomePreBattleRoom_EventScript_PauseChallenge_Text_0:
+	.string "I am saving your data.\n"
+	.string "Please wait.$"
+
+GranitePeak_BattleDomePreBattleRoom_EventScript_ShowOpponentInfo_Text_0:
+	.string "{PLAYER}'s next opponent\n"
+	.string "is this TRAINER.$"
+
+GranitePeak_BattleDomePreBattleRoom_EventScript_TourneyInRound1_Text_0:
+	.string "The tournament is in the 1st round.$"
+
+GranitePeak_BattleDomePreBattleRoom_EventScript_TourneyInRound2_Text_0:
+	.string "The tournament is in the 2nd round.$"
+
+GranitePeak_BattleDomePreBattleRoom_EventScript_TourneyInSemifinals_Text_0:
+	.string "The tournament is in the semifinals$"
+
+GranitePeak_BattleDomePreBattleRoom_EventScript_TourneyInFinals_Text_0:
+	.string "The tournament is up to the final$"
+
+GranitePeak_BattleDomePreBattleRoom_EventScript_ContinueChallenge_Text_0:
+	.string "Let's go!$"
+
+GranitePeak_BattleDomePreBattleRoom_EventScript_ReadyForRound1_Text_0:
+	.string "Your 1st-round match is next.\n"
+	.string "Are you ready?$"
+
+GranitePeak_BattleDomePreBattleRoom_EventScript_ReadyForRound2_Text_0:
+	.string "Your 2nd-round match is next.\n"
+	.string "Are you ready?$"
+
+GranitePeak_BattleDomePreBattleRoom_EventScript_ReadyForSemifinals_Text_0:
+	.string "Your semifinal match is next.\n"
+	.string "Are you ready?$"
+
+GranitePeak_BattleDomePreBattleRoom_EventScript_Round1Complete_Text_0:
+	.string "All 1st-round matches have been\n completed.\p These are the teams that advanced!$"
+
+GranitePeak_BattleDomePreBattleRoom_EventScript_Round2Complete_Text_0:
+	.string "All 2nd-round matches have been\n completed.\p These are the teams that advanced!$"
+
+what_Text_0:
+	.string "All semifinal matches have been\n completed.\p These are the teams that advanced!$"

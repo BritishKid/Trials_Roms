@@ -1,0 +1,28 @@
+mapscripts ClayHaven_House2_MapScripts {}
+
+script Town2_House2_Woman {
+    lockall
+    faceplayer
+    msgbox(format("This town was founded thousand of years ago after some explorers found a strange plate in the mountains."))
+    msgbox(format("It was the reason why lots of rare Pokémon used to be found in these mountains but it's since been stolen."))
+    releaseall
+}
+
+script Town2_House2_Man {
+    lockall
+    faceplayer
+    msgbox(format("I heard that someone in this town can turn berries into juice."))
+    releaseall
+}
+
+script Town2_House2_TV {
+    lockall
+    msgbox(format("It's a show about the History of Triver. It talks about how the 3 main islands where created as gifts to ancient Pokémon"))
+    releaseall
+}
+
+script Town2_House2_Sink {
+    lockall
+    msgbox(format("I wouldn't sink so low as to look in here"))
+    releaseall
+}  

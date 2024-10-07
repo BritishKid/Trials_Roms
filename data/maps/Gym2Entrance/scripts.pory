@@ -1,0 +1,124 @@
+mapscripts Gym2Entrance_MapScripts {}
+
+
+script Gym2Entrance_JerichoBattle {
+    trainerbattle_single(GYM2ENTRANCE_JERICHO, Jericho_Intro, Jericho_Outro, Increase_Trainers_Beaten)
+    msgbox(Jericho_PostBattle, MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Gym2_Sign {
+    lockall
+    msgbox(format("Coral Gym: Can you handle the powerful torrent of the sea"))
+    lockall
+}
+
+script EventScript_Gym2_MeetRob {
+    lockall
+    msgbox(format("You made it!"))
+    removeobject(2)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_MahoganyHills_Robert_ExclamationMark)
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+    addobject(2)
+    setobjectxy(2,18,13)
+    applymovement(2, Movement_Gym2_Robert_Approaches)
+    waitmovement(2)
+    msgbox(format("You've been making huge wave as amongst the trainers on your way here."))
+    clearflag(FLAG_HIDE_SECOND_ENCOUNTER_ROB)
+    if(var(VAR_TRAINERS_BEATEN_CHECK) >= 30){ //todo work out how many to do
+        msgbox(format("Are you ready to go again?"), MSGBOX_YESNO)
+            if(var(VAR_RESULT) == YES) {
+                trainerbattle_single(TRAINER_SECOND_ENCOUNTER_ROBERT, MahoganyHills_Robert_Intro, MahoganyHills_Robert_Outro, EventScript_Gym2_RobertBeaten)
+            }
+            else{
+                msgbox(format("Oh that's a shame. I'll see you another time then."))
+                call(EventScript_Gym2_RobertMoves)
+            }
+    } else {
+        msgbox(format("Oh you've been slacking, you're not ready."))
+        call(EventScript_Gym2_RobertMoves)
+    }
+    releaseall
+}
+
+script EventScript_Gym2_RobertBeaten {
+    msgbox(format("Wow you're incredible, here take this!"))
+    giveitem(ITEM_ABILITY_PATCH, 1)
+    msgbox(format("You can use it to bring out the Hidden Ability for your Pokémon.\p It can make your Pokémon much stronger!"))
+    if(var(VAR_ROBERT_STATE) == 2)  {
+        msgbox(format("Anyway I'll catch you later!"))
+        call(EventScript_Gym2_RobertLeaves)
+    }
+    setvar(VAR_ROBERT_STATE, 4)
+    setflag(FLAG_HIDE_SECOND_ENCOUNTER_ROB)
+    releaseall
+}
+
+script EventScript_Gym2_RobertMoves {
+    applymovement(2, Movement_Gym2_RobertMoves)
+    waitmovement(2)
+    setobjectxy(2, 20, 7)
+    setvar(VAR_ROBERT_STATE, 3)
+}
+
+script EventScript_Gym2_RobertLeaves {
+    applymovement(2, Movement_Gym2_RobertLeaves)
+    waitmovement(2)
+}
+
+script EventScript_Gym2_Robert_FindLater {
+    if(var(VAR_ROBERT_STATE)==3) {
+        msgbox(format("Oh it's you.\n Hello"))
+        if(var(VAR_TRAINERS_BEATEN_CHECK) >= 30){ //Beat atleast 10 trainers to trigger meeting Robert
+        msgbox(format("Are you ready to go again?"), MSGBOX_YESNO)
+            if(var(VAR_RESULT) == YES) {
+                trainerbattle_single(TRAINER_SECOND_ENCOUNTER_ROBERT, MahoganyHills_Robert_Intro, MahoganyHills_Robert_Outro, EventScript_Gym2_RobertBeaten)
+            }
+        } else {
+            msgbox(format("Oh that's a shame. I'll see you another time then."))
+        }
+    } 
+    if(var(VAR_ROBERT_STATE) == 2) {
+        msgbox(format("I'll train some more and beat you by the Hemlock gym."))
+    }
+    releaseall
+}
+
+//text scripts
+
+text Jericho_Intro {
+    format("Boo!")
+}
+
+text Jericho_Outro {
+    format("Gotta go fast")
+}
+
+text Jericho_PostBattle {
+    format("Gotta keep running, gotta keep fast")
+}
+
+//movement
+movement Movement_Gym2_Robert_Approaches {
+    walk_up
+    walk_up
+    walk_up
+    walk_up
+    walk_up
+}
+
+movement Movement_Gym2_RobertMoves {
+    walk_right
+    walk_right
+    walk_up
+    face_down
+}
+
+movement Movement_Gym2_RobertLeaves {
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+}

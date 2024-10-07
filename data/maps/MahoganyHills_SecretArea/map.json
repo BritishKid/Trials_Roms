@@ -1,0 +1,52 @@
+{
+  "id": "MAP_MAHOGANY_HILLS_SECRET_AREA",
+  "name": "MahoganyHills_SecretArea",
+  "layout": "LAYOUT_MAHOGANY_HILLS_SECRET_AREA",
+  "music": "MUS_PETALBURG_WOODS",
+  "region_map_section": "MAPSEC_ROUTE_102",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_ROUTE",
+  "allow_cycling": true,
+  "allow_escaping": true,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": 0,
+  "object_events": [
+
+  ],
+  "warp_events": [
+
+  ],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 3,
+      "y": 16,
+      "elevation": 0,
+      "var": "VAR_TOWN_2_QUEST_STATE",
+      "var_value": "3",
+      "script": "MahoganyScript_EventScript_HiddenArea_Leaving"
+    },
+    {
+      "type": "trigger",
+      "x": 4,
+      "y": 16,
+      "elevation": 0,
+      "var": "VAR_TOWN_2_QUEST_STATE",
+      "var_value": "3",
+      "script": "MahoganyScript_EventScript_HiddenArea_Leaving"
+    }
+  ],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 13,
+      "y": 7,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "MahoganyHills_SecretArea_EventScript_SecretDome1"
+    }
+  ]
+}

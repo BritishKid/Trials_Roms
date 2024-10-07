@@ -50,10 +50,10 @@ NavelRock_Bottom_EventScript_Lugia::
 	delay 30
 	delay 50
 	waitse
-	playmoncry SPECIES_LUGIA, CRY_MODE_ENCOUNTER
+	playmoncry SPECIES_INKAY, CRY_MODE_ENCOUNTER
 	waitmoncry
 	delay 20
-	seteventmon SPECIES_LUGIA, 70
+	seteventmon SPECIES_STEELIX, 5
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
 	waitstate

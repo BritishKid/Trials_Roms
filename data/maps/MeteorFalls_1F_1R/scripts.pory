@@ -1,0 +1,55 @@
+mapscripts MeteorFalls_1F_1R_MapScripts {
+    
+}
+
+script MeteorFalls_1F_1R_EventScript_ItemMoonStone {
+    finditem(ITEM_MOON_STONE)
+}
+
+script MeteorFalls_1F_1R_EventScript_ItemPPUP {
+    finditem(ITEM_PP_UP)
+}
+
+script MeteorFalls_1F_1R_EventScript_ItemFullHeal {
+    finditem(ITEM_FULL_HEAL)
+}
+
+script MeteorFalls_1F_1R_EventScript_ItemTM23 {
+    finditem(ITEM_TM23)
+}
+
+script MeteorFalls_1F_1R_EventScript_StartingTheExpedition {
+    lockall
+    applymovement(6, Movement_Proffessor_InFalls_MovingOver)
+    waitmovement(6)
+    msgbox(format("You made it!"))
+    msgbox(format("I'm glad you are here, we really think you'll enjoy this!"))
+    msgbox(format("Bedrock used to be a vibrant lake but over millions of years the water from the mountains carved this expansive cave before it ended up draining the lake."))
+    msgbox(format("We believe many Pokémon adapted to the new conditions but possibly some Pokémon could of been preserved in their ancient state, we are hoping to find them."))
+    msgbox(format("We need your help to fend of some of the Pokémon while we look around, it gets very treacherous down here."))
+    setvar(VAR_METEOR_FALLS_STATE, 2)
+    setflag(FLAG_HIDE_METEOR_FALLS_1F_1R_COZMO)
+    releaseall
+}
+
+script MeteorFalls_1F_1R_EventScript_ProfHolly {
+    lockall
+    msgbox(format("We just need to get deeper"))
+    releaseall
+}
+
+script MeteorFalls_1F_1R_EventScript_ProfHollyAssisstant {
+    lockall
+    msgbox(format("With you here we might finally be able to go deeper it gets very treacherous"))
+    releaseall
+}
+
+
+//movement
+movement Movement_Proffessor_InFalls_MovingOver {
+    walk_right
+    walk_right
+    walk_right
+    walk_right
+    walk_right
+}

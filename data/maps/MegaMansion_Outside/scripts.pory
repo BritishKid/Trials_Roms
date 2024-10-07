@@ -1,0 +1,8 @@
+mapscripts MegaMansion_Outside_MapScripts {}
+
+script MegaMansion_Sign  {
+    lockall
+    msgbox(format("Mega Mansion: Are you strong enough to control a Mega Ring?"))
+    releaseall
+}
+

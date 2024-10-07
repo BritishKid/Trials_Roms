@@ -1,0 +1,7 @@
+mapscripts EmderDunes_MapScripts {}
+
+script Desert_ComingSoon {
+    lock
+    msgbox(format("Desert coming soon in next release, join us on discord to follow progress"))
+    release
+}

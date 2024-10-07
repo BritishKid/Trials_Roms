@@ -1,0 +1,21 @@
+mapscripts ObsidianThicket2_MapScripts {}
+
+script TrainerDude_ObsidianThicket1 {
+    trainerbattle_single(TRAINER_NOAH_OBSIDIAN_THICKET, Noah_ObisidianThicket_Intro, Noah_ObisidianThicket_Outro, Increase_Trainers_Beaten)
+    msgbox(PostBattle_Noah_ObisidianThicket, MSGBOX_AUTOCLOSE)
+}
+
+
+//text
+
+text Noah_ObisidianThicket_Intro {
+    format("I wish I could surf apparently some amazing Pokemon can be found in the volcano")
+}
+
+text Noah_ObisidianThicket_Outro {
+    format("I need to be a boat pass to reach the other island to get surf")
+}
+
+text PostBattle_Noah_ObisidianThicket {
+    format("You can get surf over on Island 3")
+}

@@ -1,0 +1,67 @@
+mapscripts Route7_MapScripts {}
+
+
+script marienieEncounter {
+    lock
+    setwildbattle(SPECIES_MAREANIE, 15)
+    dowildbattle()
+    release
+}
+
+script Route7_Pyukumuku_Clean_Up_1 {
+    lock
+        msgbox(format("It's a Pyukumuku, you push it back into the water"))
+        fadescreen(FADE_TO_BLACK)
+        msgbox(format("SPLASH"))
+        fadescreen(FADE_FROM_BLACK)
+        removeobject(4)
+        setflag(FLAG_CLEANED_UP_ROUTE7_PYUKUMUKU_1)
+        call(IncrementNumber_Pyukumukus_Saved)
+    release
+}
+
+script Route7_IslandBoat {
+    lockall
+    faceplayer
+    msgbox(format("Would you like to travel to Island 1?"), MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES) {
+        warp(MAP_CORAL_PORT_PORT, 8, 11)
+    }
+    releaseall
+}
+
+
+
+//common across mulitple places
+script IncrementNumber_Pyukumukus_Saved {
+    if (var(VAR_PYUKUMUKUS_SAVED) == 9) {
+        setvar(VAR_PYUKUMUKUS_SAVED, 10)
+    }
+    if (var(VAR_PYUKUMUKUS_SAVED) == 8) {
+        setvar(VAR_PYUKUMUKUS_SAVED, 9)
+    }
+    if (var(VAR_PYUKUMUKUS_SAVED) == 7) {
+        setvar(VAR_PYUKUMUKUS_SAVED, 8)
+    }
+    if (var(VAR_PYUKUMUKUS_SAVED) == 6) {
+        setvar(VAR_PYUKUMUKUS_SAVED, 7)
+    }
+    if (var(VAR_PYUKUMUKUS_SAVED) == 5) {
+        setvar(VAR_PYUKUMUKUS_SAVED, 6)
+    }
+    if (var(VAR_PYUKUMUKUS_SAVED) == 4) {
+        setvar(VAR_PYUKUMUKUS_SAVED, 5)
+    }
+    if (var(VAR_PYUKUMUKUS_SAVED) == 3) {
+        setvar(VAR_PYUKUMUKUS_SAVED, 4)
+    }
+    if (var(VAR_PYUKUMUKUS_SAVED) == 2) {
+        setvar(VAR_PYUKUMUKUS_SAVED, 3)
+    }
+    if (var(VAR_PYUKUMUKUS_SAVED) == 1) {
+        setvar(VAR_PYUKUMUKUS_SAVED, 2)
+    }
+    if (var(VAR_PYUKUMUKUS_SAVED) == 0) {
+        setvar(VAR_PYUKUMUKUS_SAVED, 1)
+    }
+}

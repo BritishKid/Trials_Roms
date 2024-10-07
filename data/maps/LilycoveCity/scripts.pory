@@ -1,0 +1,56 @@
+mapscripts LilycoveCity_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION {
+        setflag(FLAG_VISITED_LILYCOVE_CITY)
+    }
+}
+
+script ChampionGuildAccessAllowed {
+    lockall
+    faceplayer
+    if(flag(FLAG_BADGE01_GET) && flag(FLAG_BADGE02_GET) && flag(FLAG_BADGE03_GET) && flag(FLAG_BADGE04_GET)) {
+        msgbox(format("Oh fantastic please come in!"))
+        setflag(FLAG_CAN_ACCESS_CHAMPIONS_GUILD)
+        warp(MAP_CHAMPIONS_GUILD_1, 10, 20)
+    }
+    else {
+        msgbox(format("Sorry but you need all badges to be able to enter"))
+    }
+    releaseall
+}
+
+script Lilycove_HiddenGigaDrain {
+    finditem(ITEM_TM19)
+}
+
+
+script Lilycove_NPC_onanIsland {
+    lockall
+    faceplayer
+    msgbox(format("I will give you something in a future update!"))
+    releaseall
+}
+
+script LilycoveCity_ScratchOutSign {
+    lockall
+    msgbox(format("The old Town Sign has been sprayed over with"))
+    msgbox(format("Danger - Ghosts Ahead!"))
+    releaseall
+}
+
+script Lilycove_City_TownSign {
+    lockall
+    msgbox(format("Lilycove City - The city to be renamed"))
+    releaseall
+}
+
+script Lilycove_City_DirectionSign {
+    lockall
+    msgbox(format("More content coming soon! Join our discord to keep up to date on latest updates!"))
+    releaseall
+}
+
+script LilycyvoeTodo {
+    lockall
+    msgbox(fomrat("Coming soon!"))
+    releaseall
+}

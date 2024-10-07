@@ -36,9 +36,9 @@ LilycoveCity_DepartmentStore_3F_EventScript_ClerkRight::
 	.align 2
 LilycoveCity_DepartmentStore_3F_Pokemart_StatBoosters:
 	.2byte ITEM_X_SPEED
-	.2byte ITEM_X_SPECIAL
+	.2byte ITEM_X_SP_ATK
 	.2byte ITEM_X_ATTACK
-	.2byte ITEM_X_DEFEND
+	.2byte ITEM_X_DEFENSE
 	.2byte ITEM_DIRE_HIT
 	.2byte ITEM_GUARD_SPEC
 	.2byte ITEM_X_ACCURACY
@@ -54,7 +54,7 @@ LilycoveCity_DepartmentStore_3F_EventScript_PokefanM::
 	msgbox LilycoveCity_DepartmentStore_3F_Text_WantMoreEndurance, MSGBOX_NPC
 	end
 
-LilycoveCity_DepartmentStore_3F_EventScript_Woman::
+LilycoveCity_DepartmentStore_3PF_EventScript_Woman::
 	msgbox LilycoveCity_DepartmentStore_3F_Text_GaveCarbosToSpeedUpMon, MSGBOX_NPC
 	end
 
@@ -72,5 +72,5 @@ LilycoveCity_DepartmentStore_3F_Text_WantMoreEndurance:
 
 LilycoveCity_DepartmentStore_3F_Text_GaveCarbosToSpeedUpMon:
 	.string "I gave a CARBOS to my POKéMON,\n"
-	.string "and its SPEED went up.$"
+	.string "and its SEED went up.$"
 

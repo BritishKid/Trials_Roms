@@ -1,0 +1,85 @@
+mapscripts CoralPort_Mart_MapScripts {
+    
+}
+
+script CoralPort_Mart_EventScript_Clerk {
+    lockall
+	faceplayer
+	msgbox("How may I serve you")
+	waitmessage	
+	if(!flag(FLAG_BADGE03_GET)) {
+		pokemart(CoralPortMart_Items_LessThanThreeBadges)	
+	}
+    else {
+        pokemart(CoralPortMart_Items_LessThanSixBadges)
+    }
+	msgbox("Please Come Again.")
+	releaseall
+}
+
+script MatInTheCoralPokemonCenter {
+    lockall
+    faceplayer
+    if(flag(FLAG_MAT_ID) && flag(FLAG_MAT_ID_RETURNED) ) {
+        msgbox(format("Hey how it your adventure going?"))
+    }    
+    if(flag(FLAG_MAT_ID) && !flag(FLAG_MAT_ID_RETURNED) ) {
+        msgbox(format("Thanks for returning id must've dropped it in the pot when I jumped in here have this as a reward"))
+        giveitem(ITEM_MOON_STONE, 1)
+        playfanfare(MUS_OBTAIN_ITEM)
+        msgbox(format("You can use it on an Eevee to get an Umbreon! One of my favourites"))
+    }
+    if(!flag(FLAG_MAT_ID)) {
+        msgbox(format("Hey, how is your Pokémon adventure going"))
+    }
+    releaseall
+}
+
+script CoralPort_Mart_EventScript_Girl {
+    lockall
+    faceplayer
+    if(flag(FLAG_HIDE_THUG_TOWN)){
+        msgbox(format("Apparently the Mauville Port has been taken over so the boat has to drop off passengers on the beach. It's a real mess."))    
+    }
+    else {
+        msgbox(format("Someone finally dealt with the thugs!"))
+    }
+    releaseall
+}
+
+script CoralPort_Mart_EventScript_Woman {
+    lockall
+    faceplayer
+    msgbox(format("We see so many strong trainers come down from the school, many of them becomes champions!"))
+    releaseall
+}
+
+//mart items
+mart CoralPortMart_Items_LessThanThreeBadges {
+	ITEM_POKE_BALL
+    ITEM_GREAT_BALL
+    ITEM_LURE_BALL
+    ITEM_DIVE_BALL
+	ITEM_POTION
+	ITEM_ANTIDOTE
+	ITEM_PARALYZE_HEAL
+	ITEM_AWAKENING
+	ITEM_REPEL
+	ITEM_ESCAPE_ROPE
+}
+
+mart CoralPortMart_Items_LessThanSixBadges {
+    ITEM_POKE_BALL
+    ITEM_GREAT_BALL
+    ITEM_LURE_BALL
+    ITEM_DIVE_BALL
+	ITEM_POTION
+    ITEM_SUPER_POTION
+	ITEM_ANTIDOTE
+	ITEM_PARALYZE_HEAL
+	ITEM_AWAKENING
+    ITEM_FULL_HEAL
+	ITEM_REPEL
+    ITEM_SUPER_REPEL
+	ITEM_ESCAPE_ROPE
+}

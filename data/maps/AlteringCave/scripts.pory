@@ -1,0 +1,15 @@
+mapscripts AlteringCave_MapScripts {
+    
+}
+
+
+
+// think this is how we get altering cave to use cards
+// AlteringCave_MapScripts::
+// 	map_script MAP_SCRIPT_ON_TRANSITION, AlteringCave_OnTransition
+// 	.byte 0
+
+// AlteringCave_OnTransition:
+// 	setflag FLAG_LANDMARK_ALTERING_CAVE
+// 	end
+

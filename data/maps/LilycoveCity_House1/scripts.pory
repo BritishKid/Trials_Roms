@@ -1,0 +1,11 @@
+mapscripts LilycoveCity_House1_MapScripts {
+
+}
+
+script Lilycove_House1_Gamer1 {
+    lockall
+    faceplayer
+    msgbox(format("My housemate is an incredible trainer, but he would rather play video games instead of doing the gym challenge."))
+    releaseall
+}
+

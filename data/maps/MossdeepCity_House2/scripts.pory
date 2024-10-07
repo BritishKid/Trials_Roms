@@ -1,0 +1,24 @@
+mapscripts MossdeepCity_House2_MapScripts {
+    
+}
+
+script HemlockCity_Child_InHouse2 {
+    lockall
+    faceplayer
+    msgbox(format("Have you seen the gooey Pokémon Goomy nearby? Would you trade one for my Mudbray?"))
+    msgbox(format("TRADE COMING SOON"))
+    releaseall
+}
+
+script HemlockCity_ManInHouse2 {
+    lockall
+    faceplayer
+    msgbox(format("The Hemlock gym uses powerful Poison type Pokémon. Ground Pokémon are great against them."))
+    releaseall
+}
+
+script HemlockBlockerSoon {
+    lockall
+    msgbox(format("I don't have permission to go upstairs"))
+    releaseall
+}

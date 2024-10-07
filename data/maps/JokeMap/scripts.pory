@@ -1,0 +1,6 @@
+mapscripts JokeMap_MapScripts {}
+
+script RegigigigasEncounter {
+    setwildbattle(SPECIES_REGIGIGAS, 115)
+    dowildbattle()
+}

@@ -1,0 +1,24 @@
+mapscripts ClayHaven_House1_MapScripts {
+
+}
+
+script ClayHaven_House1_EventScript_Woman {
+    lockall
+    faceplayer
+    msgbox(format("Hi, I can turn your Oran Berry into Berry Juice for a small cost if you're interested?"), MSGBOX_YESNO)
+    if(var(VAR_RESULT) == NO ){
+        msgbox(format("Come back another time then"))
+    }  
+    else {
+        checkitem(ITEM_ORAN_BERRY)
+        if(var(VAR_RESULT) == TRUE) {
+            removeitem(ITEM_ORAN_BERRY)
+            giveitem(ITEM_BERRY_JUICE, 1)
+            msgbox(format("Enjoy"))
+        }
+        else {
+            msgbox(format("You don't have any Oran Berries right now."))
+        }
+    }
+    releaseall
+}

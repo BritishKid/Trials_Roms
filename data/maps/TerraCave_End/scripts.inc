@@ -31,11 +31,14 @@ TerraCave_End_EventScript_Groudon::
 	applymovement LOCALID_GROUDON, TerraCave_End_Movement_GroudonApproach
 	waitmovement 0
 	waitse
+	msgbox Joke_CrazyRat, MSGBOX_DEFAULT
+	msgbox Joke_CrazyRat2, MSGBOX_DEFAULT
+
 	playmoncry SPECIES_GROUDON, CRY_MODE_ENCOUNTER
 	delay 40
 	waitmoncry
 	setvar VAR_LAST_TALKED, LOCALID_GROUDON
-	setwildbattle SPECIES_GROUDON, 70
+	setwildbattle SPECIES_RATTATA, 70
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
 	waitstate
@@ -72,3 +75,10 @@ TerraCave_End_Movement_GroudonApproach:
 	walk_down_affine
 	step_end
 
+Joke_CrazyRat:
+	.string "Crazy? I Was Crazy Once.\n"
+	.string "They Locked Me In A Room\n"
+
+Joke_CrazyRat2:
+	.string "A Rubber Room. A Rubber Room With Rats.\n"
+	.string "And Rats Make Me Crazy.$"

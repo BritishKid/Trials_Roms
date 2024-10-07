@@ -1,0 +1,15 @@
+mapscripts LilycoveCity_MegaMansion_BF_MapScripts {}
+
+
+script MegaMansion_ComingSoon {
+    lockall
+    faceplayer
+    msgbox(format("This will become the mega mansion where you can learn about mega evolutions and get your mega bracelet"))
+    if(!flag(FLAG_RECIEVED_MEGA_BRACELET)) {
+        msgbox(format("Here take a mega ring to test for now"))
+        giveitem(ITEM_MEGA_RING)
+    }
+    releaseall
+}
+
+//back to back battles done here

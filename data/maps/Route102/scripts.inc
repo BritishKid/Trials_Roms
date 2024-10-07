@@ -1,14 +1,6 @@
 Route102_MapScripts::
 	.byte 0
 
-Route102_EventScript_LittleBoy::
-	msgbox Route102_Text_ImNotVeryTall, MSGBOX_NPC
-	end
-
-Route102_EventScript_RouteSignOldale::
-	msgbox Route102_Text_RouteSignOldale, MSGBOX_SIGN
-	end
-
 Route102_EventScript_RouteSignPetalburg::
 	msgbox Route102_Text_RouteSignPetalburg, MSGBOX_SIGN
 	end
@@ -100,9 +92,9 @@ Route102_Text_CatchWholeBunchOfPokemon:
 	.string "I'm going to catch a whole bunch of\n"
 	.string "POKéMON!$"
 
-Route102_Text_RouteSignOldale:
+Route102_Text_RouteSignClayHaven:
 	.string "ROUTE 102\n"
-	.string "{RIGHT_ARROW} OLDALE TOWN$"
+	.string "{RIGHT_ARROW} CLAY HAVEN$"
 
 Route102_Text_RouteSignPetalburg:
 	.string "ROUTE 102\n"

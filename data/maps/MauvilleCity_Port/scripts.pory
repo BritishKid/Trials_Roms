@@ -1,0 +1,99 @@
+mapscripts MauvilleCity_Port_MapScripts {}
+
+script Sailor_ThugTown {
+    msgbox(format("Would you like to travel to Island 1?"), MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES) {
+        warp(MAP_CORAL_PORT_PORT, 8, 11)
+    }
+}
+
+script ThugCity_Finale {
+    trainerbattle_single(THUG_PORT_COMMANDER, Thug_Port_Commander_Intro, Thug_Port_Commander_Outro ,Thug_Port_Commander_Beaten)
+}
+
+script Thug_Port_Commander_Beaten {
+    msgbox(format("I can't believe you beat me. No matter I think we are ready to go."))
+    msgbox(format("That's right Tommy"))
+    applymovement(3, Movement_ThugBoss_HeadingDown_Port)
+    waitmovement(3)
+    msgbox(format("We are done here, gather everyone onto the boat we are taking it with us."))
+    msgbox(format("Yes boss."))
+    applymovement(4, Movement_ThugOntoBoat_Port)
+    waitmovement(4)
+    removeobject(4)
+    msgbox(format("As for you let's stop you from getting in our way."))
+    trainerbattle_single(THUG_PORT_BOSS, Thug_Port_Boss_Intro, Thug_Port_Boss_Outro, Thug_Port_Boss_Beaten)
+}
+
+script Thug_Port_Boss_Beaten {
+    msgbox(format("Even with mega evolution I got beaten by some punk kid."))
+    msgbox(format("Let's just get out of here, we got the plans!"))
+    applymovement(3, Movement_ThugBoss_OntoBoat_Port)
+    waitmovement(3)
+    removeobject(4)
+    applymovement(2, Movement_Boat_Sails_Away_ThugPort)
+    waitmovement(2)
+    removeobject(2)
+    setvar(VAR_THUG_TOWN_STATE, 3)
+    setflag(FLAG_COAST_TOWN_SAVED)
+    clearflag(FLAG_HIDE_THUG_TOWN)
+    questmenu(QUEST_MENU_COMPLETE_QUEST, QUEST_THUG_TOWN)
+}
+
+script EventScript_ThugPort_ItemBall_TmThief {
+    finditem(ITEM_TM46)
+}
+
+//movement
+
+movement Movement_ThugBoss_HeadingDown_Port {
+    walk_down
+    walk_down
+}
+
+movement Movement_ThugOntoBoat_Port {
+    walk_down
+    walk_right
+    walk_right
+    walk_right
+    walk_up
+}
+
+movement Movement_ThugBoss_OntoBoat_Port {
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+    walk_right
+    walk_right
+    walk_right
+    walk_right
+    walk_up
+}
+
+movement Movement_Boat_Sails_Away_ThugPort {
+    walk_faster_right
+    walk_faster_right
+    walk_faster_right
+    walk_faster_right
+    walk_faster_right
+    walk_faster_right
+}
+
+//text
+
+text Thug_Port_Commander_Intro {
+    format("Stop there punk, you're not going any closer")
+}
+
+text Thug_Port_Commander_Outro {
+    format("It doesn't matter I managed to delay you long enough.")
+}
+
+text Thug_Port_Boss_Intro {
+    format("You might have beaten the rest of them, but let me show you how strong real trainers are")
+}
+
+text Thug_Port_Boss_Outro{
+    format("But...how?")
+}

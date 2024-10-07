@@ -1,0 +1,67 @@
+{
+  "id": "MAP_MAHOGANY_HILLS_GYM_ENTRANCE",
+  "name": "MahoganyHills_Gym_Entrance",
+  "layout": "LAYOUT_MAHOGANY_HILLS_GYM_ENTRANCE",
+  "music": "MUS_PETALBURG_WOODS",
+  "region_map_section": "MAPSEC_ROUTE_102",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_ROUTE",
+  "allow_cycling": true,
+  "allow_escaping": true,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_MAHOGANY_HILLS_2",
+      "offset": -8,
+      "direction": "down"
+    }
+  ],
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_BRENDAN_NORMAL",
+      "x": 18,
+      "y": 16,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EventScript_MahoganyHills_Robert_FindLater",
+      "flag": "FLAG_HIDE_FIRST_ENCOUNTER_ROB"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 16,
+      "y": 14,
+      "elevation": 0,
+      "dest_map": "MAP_MAHOGANY_HILLS_GYM",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 16,
+      "y": 15,
+      "elevation": 0,
+      "var": "VAR_ROBERT_STATE",
+      "var_value": "0",
+      "script": "EventScript_MahoganyHills_MeetRob"
+    }
+  ],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 19,
+      "y": 16,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Gym1_Sign"
+    }
+  ]
+}

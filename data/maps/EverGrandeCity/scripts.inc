@@ -35,3 +35,11 @@ EverGrandeCity_Text_CitySign:
 	.string "“The paradise of flowers, the sea,\n"
 	.string "and POKéMON.”$"
 
+regigiver::
+	givemon SPECIES_REGIROCK, 50
+	givemon SPECIES_REGICE, 50
+	givemon SPECIES_REGISTEEL, 50
+	givemon SPECIES_REGIDRAGO, 50
+	givemon SPECIES_REGIELEKI, 50
+	return
+

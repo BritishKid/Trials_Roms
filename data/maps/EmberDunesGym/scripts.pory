@@ -1,0 +1,126 @@
+mapscripts EmberDunesGym_MapScripts {}
+
+//TODO REFACTOR
+
+script Gym4_Sign {
+    lockall
+    msgbox(format("Ember Gym: Bone chilling under the sun")) //WHAT FUCK IS THIS? TODO BETTER
+    releaseall
+}
+
+
+script EventScript_Gym4_MeetRob_Right {
+    lockall
+    msgbox(format("You made it!"))
+    removeobject(1)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_MahoganyHills_Robert_ExclamationMark)
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+    addobject(1)
+    setobjectxy(1,11,13)
+    applymovement(1, Movement_Gym2_Robert_Approaches)
+    waitmovement(1)
+    msgbox(format("You've been making huge wave as amongst the trainers on your way here."))
+    clearflag(FLAG_HIDE_FOURTH_ENCOUNTER_ROB)
+    if(var(VAR_TRAINERS_BEATEN_CHECK) >= 60){ 
+        msgbox(format("Are you ready to go again?"), MSGBOX_YESNO)
+            if(var(VAR_RESULT) == YES) {
+                trainerbattle_single(TRAINER_FOURTH_ENCOUNTER_ROBERT, MahoganyHills_Robert_Intro, MahoganyHills_Robert_Outro, EventScript_Gym4_RobertBeaten)
+            }
+            else{
+                msgbox(format("Oh that's a shame. I'll see you another time then."))
+                call(EventScript_Gym4_RobertMoves_Right)
+            }
+    } else {
+        msgbox(format("Oh you've been slacking, you're not ready."))
+        call(EventScript_Gym4_RobertMoves_Right)
+    }
+    releaseall
+}
+
+script EventScript_Gym4_MeetRob_Left {
+    lockall
+    msgbox(format("You made it!"))
+    removeobject(1)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_MahoganyHills_Robert_ExclamationMark)
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+    addobject(1)
+    setobjectxy(1,10,13)
+    applymovement(1, Movement_Gym2_Robert_Approaches)
+    waitmovement(1)
+    msgbox(format("You've been making huge wave as amongst the trainers on your way here."))
+    clearflag(FLAG_HIDE_FOURTH_ENCOUNTER_ROB)
+    if(var(VAR_TRAINERS_BEATEN_CHECK) >= 60){ 
+        msgbox(format("Are you ready to go again?"), MSGBOX_YESNO)
+            if(var(VAR_RESULT) == YES) {
+                trainerbattle_single(TRAINER_FOURTH_ENCOUNTER_ROBERT, MahoganyHills_Robert_Intro, MahoganyHills_Robert_Outro, EventScript_Gym4_RobertBeaten)
+            }
+            else{
+                msgbox(format("Oh that's a shame. I'll see you another time then."))
+                call(EventScript_Gym4_RobertMoves_Left)
+            }
+    } else {
+        msgbox(format("Oh you've been slacking, you're not ready."))
+        call(EventScript_Gym4_RobertMoves_Left)
+    }
+    releaseall
+}
+
+script EventScript_Gym4_RobertBeaten {
+    msgbox(format("Wow you're incredible, here take this!"))
+    giveitem(ITEM_ABILITY_PATCH, 1) //todo improve
+    msgbox(format("You can use it to bring out the Hidden Ability for your Pokémon.\p It can make your Pokémon much stronger!"))
+    if(var(VAR_ROBERT_STATE) == 6)  {
+        msgbox(format("Anyway I'll catch you later!"))
+        call(EventScript_Gym3_RobertLeaves)
+    }
+    setvar(VAR_ROBERT_STATE, 8)
+    setflag(FLAG_HIDE_FOURTH_ENCOUNTER_ROB)
+    releaseall
+}
+
+script EventScript_Gym4_RobertMoves_Right {
+    applymovement(1, Movement_Gym4_RobertMoves_Right)
+    waitmovement(1)
+    setobjectxy(1, 12, 7)
+    setvar(VAR_ROBERT_STATE, 7)
+}
+
+script EventScript_Gym4_RobertMoves_Left {
+    applymovement(1, Movement_Gym4_RobertMoves_Left)
+    waitmovement(1)
+    setobjectxy(1, 12, 7)
+    setvar(VAR_ROBERT_STATE, 7)
+}
+
+script EventScript_Gym4_Robert_FindLater {
+    if(var(VAR_ROBERT_STATE)==7) {
+        msgbox(format("Oh it's you.\n Hello"))
+        if(var(VAR_TRAINERS_BEATEN_CHECK) >= 60){ 
+        msgbox(format("Are you ready to go again?"), MSGBOX_YESNO)
+            if(var(VAR_RESULT) == YES) {
+                trainerbattle_single(TRAINER_FOURTH_ENCOUNTER_ROBERT, MahoganyHills_Robert_Intro, MahoganyHills_Robert_Outro, EventScript_Gym2_RobertBeaten)
+            }
+        } else {
+            msgbox(format("Oh that's a shame. I'll see you another time then."))
+        }
+    } 
+    if(var(VAR_ROBERT_STATE) == 8) {
+        msgbox(format("I'll train some more and beat you by the next gym."))
+    }
+    releaseall
+}
+
+
+//movement
+movement Movement_Gym4_RobertMoves_Right {
+    walk_right
+    walk_up
+    face_down
+}
+
+movement Movement_Gym4_RobertMoves_Left {
+    walk_right
+    walk_right
+    walk_up
+    face_down
+}

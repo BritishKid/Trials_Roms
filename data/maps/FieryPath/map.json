@@ -12,7 +12,7 @@
   "allow_running": true,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": null,
+  "connections": 0,
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
@@ -23,26 +23,13 @@
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "FieryPath_EventScript_ItemTMToxic",
+      "trainer_sight_or_berry_tree_id": "ITEM_TM_TOXIC",
+      "script": "Common_EventScript_FindItem",
       "flag": "FLAG_ITEM_FIERY_PATH_TM_TOXIC"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_PUSHABLE_BOULDER",
-      "x": 10,
-      "y": 15,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "EventScript_StrengthBoulder",
-      "flag": "FLAG_TEMP_11"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_PUSHABLE_BOULDER",
-      "x": 17,
+      "x": 12,
       "y": 15,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
@@ -114,27 +101,31 @@
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "FieryPath_EventScript_ItemFireStone",
+      "trainer_sight_or_berry_tree_id": "ITEM_FIRE_STONE",
+      "script": "Common_EventScript_FindItem",
       "flag": "FLAG_ITEM_FIERY_PATH_FIRE_STONE"
     }
   ],
   "warp_events": [
     {
-      "x": 26,
-      "y": 36,
+      "x": 7,
+      "y": 34,
       "elevation": 3,
-      "dest_map": "MAP_ROUTE112",
-      "dest_warp_id": "4"
+      "dest_map": "MAP_OBSIDIAN_PEAK",
+      "dest_warp_id": "1"
     },
     {
       "x": 26,
       "y": 4,
       "elevation": 3,
-      "dest_map": "MAP_ROUTE112",
-      "dest_warp_id": "5"
+      "dest_map": "MAP_ROUTE9",
+      "dest_warp_id": "0"
     }
   ],
-  "coord_events": [],
-  "bg_events": []
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ]
 }

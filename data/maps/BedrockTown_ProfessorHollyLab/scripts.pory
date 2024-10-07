@@ -1,0 +1,34 @@
+mapscripts BedrockTown_ProfessorHollyLab_MapScripts {}
+
+script BedrockTownLab_EventScript_ProfessorHolly {
+    lockall
+    faceplayer
+    msgbox(format("Hi welcome to my lab. I'm Professor Holly. \p I'm currently putting together a team to do an expedition into the cave beneath the town."))
+    if(flag(FLAG_BADGE04_GET)) {  
+       msgbox(format("Oh well done you've managed to get 4 badges! Maybe you could assist me."))
+       setflag(FLAG_ACCESS_BEDROCK_LAKE_CAVE)
+       setvar(VAR_METEOR_FALLS_STATE, 1)
+       msgbox(format("Head through that door and come help me on an my next research expedition."))
+    } else {
+        msgbox(format("Prove you're strong enough by getting 4 badges and you can assist me."))
+    }
+    releaseall
+}
+
+script BedrockTownLab_EventScript_ProfessorAssistant {
+    lockall
+    faceplayer
+    msgbox(format("Professor Holly is doing incredible research into the legendary Pokémon that created the lakes. As this one has dried out revealing a deep cavern it makes it the easiest place to research."))
+    releaseall
+}
+
+script BedrockTownLab_EventScript_Exit {
+    lockall
+    if(flag(FLAG_ACCESS_BEDROCK_LAKE_CAVE)) {
+        warp(MAP_BEDROCK_TOWN, 24, 12)
+    }
+    else {
+        msgbox(format("I don't have permission to go back here yet.")) 
+    }
+    releaseall
+}

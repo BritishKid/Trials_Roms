@@ -1,0 +1,208 @@
+mapscripts LittlerootTown_MaysHouse_1F_MapScripts {
+	
+}
+
+script BedrockTown_RivalHouse_1F_Meet_Rival1 {
+	lockall
+	msgbox("Hey you're finally awake!")
+	applymovement(OBJ_EVENT_ID_PLAYER, Movement_PlayerToRivalTable1)
+	waitmovement(OBJ_EVENT_ID_PLAYER)
+	call(BedrockTown_MoveAndBattleRival)
+}
+
+script BedrockTown_RivalHouse_1F_Meet_Rival2 {
+	lockall
+	msgbox("Hey you're finally awake!")
+	applymovement(OBJ_EVENT_ID_PLAYER, Movement_PlayerToRivalTable2)
+	waitmovement(OBJ_EVENT_ID_PLAYER)
+	call(BedrockTown_MoveAndBattleRival)
+}
+
+script BedrockTown_RivalHouse_1F_Meet_Rival3 {
+	lockall
+	msgbox("Hey you're finally awake!")
+	applymovement(OBJ_EVENT_ID_PLAYER, Movement_PlayerToRivalTable3)
+	waitmovement(OBJ_EVENT_ID_PLAYER)
+	call(BedrockTown_MoveAndBattleRival)
+}
+
+script BedrockTown_RivalHouse_1F_Meet_Rival4 {
+	lockall
+	msgbox("Hey you're finally awake!")
+	applymovement(OBJ_EVENT_ID_PLAYER, Movement_PlayerToRivalTable4)
+	waitmovement(OBJ_EVENT_ID_PLAYER)
+	call(BedrockTown_MoveAndBattleRival)
+}
+
+script BedrockTown_MoveAndBattleRival {
+	msgbox(format("I see your dad finally gave you a Pokémon!It's about time. Now we can do that race we always wanted. First one to become a champion wins! That's all the badges and beating the elite 4."))
+	switch(var(VAR_STARTER_MON)) {
+		case 0: //player chose chikorita
+ 			trainerbattle_single(TRAINER_RIVAL_RIVAL_HOME_FIRST_TREECKO, RivalHouse_1f_Battle_Intro, RivalHouse_1f_Battle_Outro, BedrockTown_RivalBeaten)
+		case 1: //player chose cyndaquil
+ 			trainerbattle_single(TRAINER_RIVAL_RIVAL_HOME_FIRST_CYNDAQUIL, RivalHouse_1f_Battle_Intro, RivalHouse_1f_Battle_Outro, BedrockTown_RivalBeaten)
+		case 2: //player chose totodile
+			trainerbattle_single(TRAINER_RIVAL_RIVAL_HOME_FIRST_SQUIRTLE, RivalHouse_1f_Battle_Intro, RivalHouse_1f_Battle_Outro, BedrockTown_RivalBeaten)
+	}
+}
+
+script BedrockTown_RivalBeaten {
+	setvar(VAR_FIRST_TIME_RIVALS_HOUSE, 1)
+	msgbox(PostBattle_Rival_House_Fight, MSGBOX_AUTOCLOSE)
+	setflag(FLAG_BEDROCK_RIVAL_HOUSE_RIVAL_BEATEN)
+	releaseall
+}
+
+script BedrockTown_RivalHouse_1F_Rival_Gives_Gift_And_Leaves_Right {
+	lockall
+	msgbox("Hold on!")
+	applymovement(1, Movement_RivalToPlayerRivalHouseRight)
+	waitmovement(1)
+	msgbox("Take this it should help you")
+	giveitem(ITEM_EXP_SHARE, 1)
+	setflag(FLAG_RECEIVED_EXP_SHARE)
+	msgbox("Anyway see you later Slowpoke!")
+	applymovement(OBJ_EVENT_ID_PLAYER, Movement_PlayerToOutOfRivalWayHouse)
+	waitmovement(OBJ_EVENT_ID_PLAYER)
+	applymovement(1, Movement_RivalLeavesRivalHouseRight)
+	waitmovement(1)
+	removeobject(1)
+	setvar(VAR_FIRST_TIME_RIVALS_HOUSE, 2)
+	releaseall
+}
+
+script BedrockTown_RivalHouse_1F_Rival_Gives_Gift_And_Leaves_Left {
+	lockall
+	msgbox("Hold on!")
+	applymovement(1, Movement_RivalToPlayerRivalHouseLeft)
+	waitmovement(1)
+	msgbox("Take this it should help you")
+	giveitem(ITEM_EXP_SHARE, 1)
+	setflag(FLAG_RECEIVED_EXP_SHARE)
+
+	msgbox("Anyway see you later Slowpoke!")
+	applymovement(1, Movement_RivalLeavesRivalHouseRight)
+	waitmovement(1)
+	removeobject(1)
+	setvar(VAR_FIRST_TIME_RIVALS_HOUSE, 2)
+	releaseall
+}
+
+script BedrockTown_RivalHouse_RivalChat {
+	lockall
+	msgbox(format("You got lucky!"))
+	releaseall
+}
+
+//movement scripts
+movement Movement_PlayerToRivalTable1{
+	face_up
+	walk_up
+	walk_up
+	face_right
+	walk_right
+	walk_right
+}
+
+movement Movement_PlayerToRivalTable2{
+	face_up
+	walk_up
+	face_right
+	walk_right
+	walk_right
+	walk_right
+}
+
+movement Movement_PlayerToRivalTable3{
+	face_up
+	walk_up
+	face_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+}
+
+movement Movement_PlayerToRivalTable4{
+	face_up
+	walk_up
+	walk_up
+	face_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+}
+
+text RivalHouse_1f_Battle_Intro {
+	format("Anyway I gotta see how good that little runt of yours is, if you can't beat me you may as well give up now.")
+}
+
+text RivalHouse_1f_Battle_Outro{
+	format("Haha well done, but remember I went easy on you so you don't cry")
+}
+
+text PostBattle_Rival_House_Fight {
+	format("I'm just going to get everything together and then I'm going to go get my first badge!")
+}
+
+movement Movement_RivalToPlayerRivalHouseRight {
+	face_down
+	walk_down
+	walk_down
+	face_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+}
+
+movement Movement_RivalToPlayerRivalHouseLeft {
+	face_down
+	walk_down
+	walk_down
+	face_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+}
+
+
+movement Movement_PlayerToOutOfRivalWayHouse {
+	walk_left
+}
+
+movement  Movement_RivalLeavesRivalHouseRight {
+	walk_left
+	face_down
+	walk_down
+}
+
+movement  Movement_RivalLeavesRivalHouseLeft {
+	face_down
+	walk_down
+}
+
+//Interactive scripts
+script RivalHouseGF_EventScript_Fridge {
+	lockall
+	msgbox(format("Oh look it's Brendan's lunch. You add some hot sauce to it."))
+	releaseall
+}
+
+script RivalHouseGF_EventScript_GlassCase {
+	lockall
+	msgbox(format("It's full of Maps and books about Pokémon"))
+	releaseall
+}
+
+script RivalHouseGF_Comingsoon {
+	lockall
+	msgbox(format("COMING SOON Checkout Discord for latest updates or give suggestions"))
+	releaseall
+}

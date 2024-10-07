@@ -1,0 +1,21 @@
+mapscripts SandyCliffBase_MapScripts {}
+
+script SandyCliffBase_Colin {
+    trainerbattle_single(TRAINER_SANDYCLIFFCOLIN, SandyCliffColin_Intro, SandyCliffColin_Intro)
+    msgbox(PostBattle_EvolutionBoy1, MSGBOX_AUTOCLOSE)
+    end
+}
+
+//text scripts
+
+text SandyCliffColin_Intro {
+    format("Fossils are like gems, STURDY AND POWERFUL")
+}
+
+text SandyCliffColin_Outro {
+    format("MY GEMS!!")
+}
+
+text PostBattle_SandyCliffColin {
+    format("I'm always hunting for new and stronger fossil Pokémon.")
+}

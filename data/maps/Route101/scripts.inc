@@ -222,7 +222,6 @@ Route101_EventScript_BirchsBag::
 	lock
 	faceplayer
 	setflag FLAG_SYS_POKEMON_GET
-	setflag FLAG_RESCUED_BIRCH
 	fadescreen FADE_TO_BLACK
 	removeobject LOCALID_ZIGZAGOON
 	setobjectxy OBJ_EVENT_ID_PLAYER, 6, 13
@@ -235,25 +234,22 @@ Route101_EventScript_BirchsBag::
 	msgbox Route101_Text_YouSavedMe, MSGBOX_DEFAULT
 	special HealPlayerParty
 	setflag FLAG_HIDE_ROUTE_101_BIRCH_ZIGZAGOON_BATTLE
-	clearflag FLAG_HIDE_BEDROCK_TOWN_BIRCHS_LAB_BIRCH
-	setflag FLAG_HIDE_ROUTE_101_BIRCH_STARTERS_BAG
+	clearflag FLAG_HIDE_TOWN2_HOUSE3_GIRL
+	setflag FLAG_HIDE_QUARRY_MASTER_IN_QUARRY
 	setvar VAR_BIRCH_LAB_STATE, 2
 	setvar VAR_ROUTE101_STATE, 3
 	clearflag FLAG_HIDE_MAP_NAME_POPUP
 	checkplayergender
 	call_if_eq VAR_RESULT, MALE, Route101_EventScript_HideMayInBedroom
 	call_if_eq VAR_RESULT, FEMALE, Route101_EventScript_HideBrendanInBedroom
-	warp MAP_BEDROCK_TOWN_PROFESSOR_BIRCHS_LAB, 6, 5
 	waitstate
 	release
 	end
 
 Route101_EventScript_HideMayInBedroom::
-	setflag FLAG_HIDE_BEDROCK_TOWN_MAYS_HOUSE_RIVAL_BEDROOM
 	return
 
 Route101_EventScript_HideBrendanInBedroom::
-	setflag FLAG_HIDE_BEDROCK_TOWN_BRENDANS_HOUSE_RIVAL_BEDROOM
 	return
 
 Route101_Movement_BirchApproachPlayer:
@@ -287,7 +283,7 @@ Route101_Text_YouSavedMe:
 Route101_Text_TakeTiredPokemonToPokeCenter:
 	.string "If POKéMON get tired, take them to\n"
 	.string "a POKéMON CENTER.\p"
-	.string "There's a POKéMON CENTER in OLDALE\n"
+	.string "There's a POKéMON CENTER in CLAY HAVEN\n"
 	.string "TOWN right close by.$"
 
 Route101_Text_WildPokemonInTallGrass:
@@ -298,5 +294,5 @@ Route101_Text_WildPokemonInTallGrass:
 
 Route101_Text_RouteSign:
 	.string "ROUTE 101\n"
-	.string "{UP_ARROW} OLDALE TOWN$"
+	.string "{UP_ARROW} CLAY HAVEN$"
 

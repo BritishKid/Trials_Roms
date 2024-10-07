@@ -1,0 +1,7 @@
+mapscripts Platefall_Cave_DeeperGF_MapScripts {}
+
+script pfccombingson {
+    lockall
+    msgbox(format("Welcome to deeper into the cave, rewards coming probably"))
+    releaseall
+}

@@ -102,17 +102,17 @@ gStdScripts::
 	.4byte Std_MsgboxPokenav           @ MSGBOX_POKENAV
 gStdScripts_End::
 
-	.include "data/maps/PetalburgCity/scripts.inc"
+	.include "data/maps/GranitePeak/scripts.inc"
 	.include "data/maps/SlateportCity/scripts.inc"
 	.include "data/maps/MauvilleCity/scripts.inc"
 	.include "data/maps/RustboroCity/scripts.inc"
-	.include "data/maps/FortreeCity/scripts.inc"
+	.include "data/maps/CoralPort/scripts.inc"
 	.include "data/maps/LilycoveCity/scripts.inc"
 	.include "data/maps/MossdeepCity/scripts.inc"
 	.include "data/maps/SootopolisCity/scripts.inc"
 	.include "data/maps/EverGrandeCity/scripts.inc"
 	.include "data/maps/BedrockTown/scripts.inc"
-	.include "data/maps/OldaleTown/scripts.inc"
+	.include "data/maps/ClayHaven/scripts.inc"
 	.include "data/maps/DewfordTown/scripts.inc"
 	.include "data/maps/LavaridgeTown/scripts.inc"
 	.include "data/maps/FallarborTown/scripts.inc"
@@ -159,16 +159,15 @@ gStdScripts_End::
 	.include "data/maps/Underwater_Route129/scripts.inc"
 	.include "data/maps/Underwater_Route105/scripts.inc"
 	.include "data/maps/Underwater_Route125/scripts.inc"
-	.include "data/maps/BedrockTown_BrendansHouse_1F/scripts.inc"
-	.include "data/maps/BedrockTown_BrendansHouse_2F/scripts.inc"
-	.include "data/maps/BedrockTown_MaysHouse_1F/scripts.inc"
-	.include "data/maps/BedrockTown_MaysHouse_2F/scripts.inc"
-	.include "data/maps/BedrockTown_ProfessorBirchsLab/scripts.inc"
-	.include "data/maps/OldaleTown_House1/scripts.inc"
-	.include "data/maps/OldaleTown_House2/scripts.inc"
-	.include "data/maps/OldaleTown_PokemonCenter_1F/scripts.inc"
-	.include "data/maps/OldaleTown_PokemonCenter_2F/scripts.inc"
-	.include "data/maps/OldaleTown_Mart/scripts.inc"
+	.include "data/maps/LittlerootTown_BrendansHouse_1F/scripts.inc"
+	.include "data/maps/LittlerootTown_MaysHouse_1F/scripts.inc"
+	.include "data/maps/LittlerootTown_MaysHouse_2F/scripts.inc"
+	.include "data/maps/LittlerootTown_ProfessorBirchsLab/scripts.inc"
+	.include "data/maps/ClayHaven_House1/scripts.inc"
+	.include "data/maps/ClayHaven_House2/scripts.inc"
+	.include "data/maps/ClayHaven_PokemonCenter_1F/scripts.inc"
+	.include "data/maps/ClayHaven_PokemonCenter_2F/scripts.inc"
+	.include "data/maps/ClayHaven_Mart/scripts.inc"
 	.include "data/maps/DewfordTown_House1/scripts.inc"
 	.include "data/maps/DewfordTown_PokemonCenter_1F/scripts.inc"
 	.include "data/maps/DewfordTown_PokemonCenter_2F/scripts.inc"
@@ -206,13 +205,13 @@ gStdScripts_End::
 	.include "data/maps/PacifidlogTown_House3/scripts.inc"
 	.include "data/maps/PacifidlogTown_House4/scripts.inc"
 	.include "data/maps/PacifidlogTown_House5/scripts.inc"
-	.include "data/maps/PetalburgCity_WallysHouse/scripts.inc"
-	.include "data/maps/PetalburgCity_Gym/scripts.inc"
-	.include "data/maps/PetalburgCity_House1/scripts.inc"
-	.include "data/maps/PetalburgCity_House2/scripts.inc"
-	.include "data/maps/PetalburgCity_PokemonCenter_1F/scripts.inc"
-	.include "data/maps/PetalburgCity_PokemonCenter_2F/scripts.inc"
-	.include "data/maps/PetalburgCity_Mart/scripts.inc"
+	.include "data/maps/GranitePeak_WallysHouse/scripts.inc"
+	.include "data/maps/GranitePeak_Gym/scripts.inc"
+	.include "data/maps/GranitePeak_House1/scripts.inc"
+	.include "data/maps/GranitePeak_House2/scripts.inc"
+	.include "data/maps/GranitePeak_PokemonCenter_1F/scripts.inc"
+	.include "data/maps/GranitePeak_PokemonCenter_2F/scripts.inc"
+	.include "data/maps/GranitePeak_Mart/scripts.inc"
 	.include "data/maps/SlateportCity_SternsShipyard_1F/scripts.inc"
 	.include "data/maps/SlateportCity_SternsShipyard_2F/scripts.inc"
 	.include "data/maps/SlateportCity_BattleTentLobby/scripts.inc"
@@ -252,16 +251,14 @@ gStdScripts_End::
 	.include "data/maps/RustboroCity_Flat2_2F/scripts.inc"
 	.include "data/maps/RustboroCity_Flat2_3F/scripts.inc"
 	.include "data/maps/RustboroCity_House3/scripts.inc"
-	.include "data/maps/FortreeCity_House1/scripts.inc"
-	.include "data/maps/FortreeCity_Gym/scripts.inc"
-	.include "data/maps/FortreeCity_PokemonCenter_1F/scripts.inc"
-	.include "data/maps/FortreeCity_PokemonCenter_2F/scripts.inc"
-	.include "data/maps/FortreeCity_Mart/scripts.inc"
-	.include "data/maps/FortreeCity_House2/scripts.inc"
-	.include "data/maps/FortreeCity_House3/scripts.inc"
-	.include "data/maps/FortreeCity_House4/scripts.inc"
-	.include "data/maps/FortreeCity_House5/scripts.inc"
-	.include "data/maps/FortreeCity_DecorationShop/scripts.inc"
+	.include "data/maps/CoralPort_House1/scripts.inc"
+	.include "data/maps/CoralPort_Gym/scripts.inc"
+	.include "data/maps/CoralPort_PokemonCenter_1F/scripts.inc"
+	.include "data/maps/CoralPort_PokemonCenter_2F/scripts.inc"
+	.include "data/maps/CoralPort_Mart/scripts.inc"
+	.include "data/maps/CoralPort_House2/scripts.inc"
+	.include "data/maps/CoralPort_House4/scripts.inc"
+	.include "data/maps/CoralPort_DecorationShop/scripts.inc"
 	.include "data/maps/LilycoveCity_CoveLilyMotel_1F/scripts.inc"
 	.include "data/maps/LilycoveCity_CoveLilyMotel_2F/scripts.inc"
 	.include "data/maps/LilycoveCity_LilycoveMuseum_1F/scripts.inc"
@@ -454,7 +451,6 @@ gStdScripts_End::
 	.include "data/maps/RecordCorner/scripts.inc"
 	.include "data/maps/BattleColosseum_4P/scripts.inc"
 	.include "data/maps/ContestHall/scripts.inc"
-	.include "data/maps/InsideOfTruck/scripts.inc"
 	.include "data/maps/SSTidalCorridor/scripts.inc"
 	.include "data/maps/SSTidalLowerDeck/scripts.inc"
 	.include "data/maps/SSTidalRooms/scripts.inc"
@@ -564,7 +560,6 @@ gStdScripts_End::
 	.include "data/maps/Route110_TrickHousePuzzle7/scripts.inc"
 	.include "data/maps/Route110_TrickHousePuzzle8/scripts.inc"
 	.include "data/maps/Route110_SeasideCyclingRoadSouthEntrance/scripts.inc"
-	.include "data/maps/Route110_SeasideCyclingRoadNorthEntrance/scripts.inc"
 	.include "data/maps/Route113_GlassWorkshop/scripts.inc"
 	.include "data/maps/Route123_BerryMastersHouse/scripts.inc"
 	.include "data/maps/Route119_WeatherInstitute_1F/scripts.inc"
@@ -589,7 +584,7 @@ EventScript_ResetMrBriney::
 	end
 
 EventScript_MoveMrBrineyToHouse::
-	setflag FLAG_HIDE_MR_BRINEY_DEWFORD_TOWN
+	setflag FLAG_HIDE_MAHOGANY_HILLS_ROXANNE
 	setflag FLAG_HIDE_MR_BRINEY_BOAT_DEWFORD_TOWN
 	setflag FLAG_HIDE_ROUTE_109_MR_BRINEY
 	setflag FLAG_HIDE_ROUTE_109_MR_BRINEY_BOAT
@@ -605,7 +600,7 @@ EventScript_MoveMrBrineyToDewford::
 	setflag FLAG_HIDE_ROUTE_104_MR_BRINEY_BOAT
 	setflag FLAG_HIDE_BRINEYS_HOUSE_MR_BRINEY
 	setflag FLAG_HIDE_BRINEYS_HOUSE_PEEKO
-	clearflag FLAG_HIDE_MR_BRINEY_DEWFORD_TOWN
+	clearflag FLAG_HIDE_MAHOGANY_HILLS_ROXANNE
 	clearflag FLAG_HIDE_MR_BRINEY_BOAT_DEWFORD_TOWN
 	end
 
@@ -614,7 +609,7 @@ EventScript_MoveMrBrineyToRoute109::
 	setflag FLAG_HIDE_ROUTE_104_MR_BRINEY_BOAT
 	setflag FLAG_HIDE_BRINEYS_HOUSE_MR_BRINEY
 	setflag FLAG_HIDE_BRINEYS_HOUSE_PEEKO
-	setflag FLAG_HIDE_MR_BRINEY_DEWFORD_TOWN
+	setflag FLAG_HIDE_MAHOGANY_HILLS_ROXANNE
 	setflag FLAG_HIDE_MR_BRINEY_BOAT_DEWFORD_TOWN
 	clearflag FLAG_HIDE_ROUTE_109_MR_BRINEY
 	clearflag FLAG_HIDE_ROUTE_109_MR_BRINEY_BOAT
@@ -632,7 +627,7 @@ Common_EventScript_UpdateBrineyLocation::
 	goto_if_unset FLAG_RECEIVED_POKENAV, Common_EventScript_NopReturn
 	goto_if_set FLAG_DEFEATED_PETALBURG_GYM, Common_EventScript_NopReturn
 	goto_if_unset FLAG_HIDE_ROUTE_104_MR_BRINEY_BOAT, EventScript_SetBrineyLocation_House
-	goto_if_unset FLAG_HIDE_MR_BRINEY_DEWFORD_TOWN, EventScript_SetBrineyLocation_Dewford
+	goto_if_unset FLAG_HIDE_MAHOGANY_HILLS_ROXANNE, EventScript_SetBrineyLocation_Dewford
 	goto_if_unset FLAG_HIDE_ROUTE_109_MR_BRINEY, EventScript_SetBrineyLocation_Route109
 	return
 
@@ -762,7 +757,7 @@ Movement_FerryDepart:
 	step_end
 
 EventScript_HideMrBriney::
-	setflag FLAG_HIDE_MR_BRINEY_DEWFORD_TOWN
+	setflag FLAG_HIDE_MAHOGANY_HILLS_ROXANNE
 	setflag FLAG_HIDE_MR_BRINEY_BOAT_DEWFORD_TOWN
 	setflag FLAG_HIDE_ROUTE_109_MR_BRINEY
 	setflag FLAG_HIDE_ROUTE_109_MR_BRINEY_BOAT
@@ -778,7 +773,7 @@ RusturfTunnel_EventScript_SetRusturfTunnelOpen::
 	removeobject LOCALID_WANDA
 	clearflag FLAG_HIDE_VERDANTURF_TOWN_WANDAS_HOUSE_WANDAS_BOYFRIEND
 	clearflag FLAG_HIDE_VERDANTURF_TOWN_WANDAS_HOUSE_WANDA
-	setvar VAR_RUSTURF_TUNNEL_STATE, 6
+	setvar VAR_EMBERDUNES_BUTTONS_PRESSED, 6
 	setflag FLAG_RUSTURF_TUNNEL_OPENED
 	return
 
@@ -943,6 +938,10 @@ gText_PlayerFoundOneTMHM::
 	.string "{PLAYER} found one {STR_VAR_1}\n"
 	.string "{STR_VAR_2}!$"
 
+gText_PlayerFoundTMHMs::
+	.string "{PLAYER} found {STR_VAR_3} {STR_VAR_1}\n"
+	.string "{STR_VAR_2}!$"
+
 gText_Sudowoodo_Attacked::
 	.string "The weird tree doesn't like the\n"
 	.string "WAILMER PAIL!\p"
@@ -1001,6 +1000,13 @@ Common_EventScript_LegendaryFlewAway::
 	release
 	end
 
+EventScript_VsSeekerChargingDone::
+	special VsSeekerFreezeObjectsAfterChargeComplete
+	waitstate
+	special VsSeekerResetObjectMovementAfterChargeComplete
+	releaseall
+	end
+
 	.include "data/scripts/pc_transfer.inc"
 	.include "data/scripts/questionnaire.inc"
 	.include "data/scripts/abnormal_weather.inc"
@@ -1056,3 +1062,272 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/text/frontier_brain.inc"
 	.include "data/text/save.inc"
 	.include "data/text/birch_speech.inc"
+
+	.include "data/maps/PlayersBedroom/scripts.inc"
+
+	.include "data/maps/Route1a/scripts.inc"
+
+	.include "data/maps/Route1b/scripts.inc"
+
+	.include "data/maps/PlayersHouseGF/scripts.inc"
+
+	.include "data/maps/Nathans_Hidden_Base/scripts.inc"
+
+	.include "data/maps/Route2/scripts.inc"
+
+	.include "data/maps/Platefall_Cave_Ground_Floor/scripts.inc"
+
+	.include "data/maps/MahoganyHills_1/scripts.inc"
+
+	.include "data/maps/MahoganyHills_2/scripts.inc"
+
+	.include "data/maps/MahoganyHills_Gym_Entrance/scripts.inc"
+
+
+	.include "data/maps/MahogonyHill_SecretBase1/scripts.inc"
+
+	.include "data/maps/MahoganyHillsGym/scripts.inc"
+
+	.include "data/maps/Route1_OldRod_House/scripts.inc"
+
+	.include "data/maps/BedrockTown_ProfessorHollyLab/scripts.inc"
+
+	.include "data/maps/Demo_Grotto/scripts.inc"
+
+	.include "data/maps/RowlettGrotto/scripts.inc"
+
+	.include "data/maps/ClayHaven_House3/scripts.inc"
+
+	.include "data/maps/MahoganyHills_SecretArea/scripts.inc"
+
+	.include "data/maps/MahoganyHills_4/scripts.inc"
+
+	.include "data/maps/MahoganyHills_Treehouse/scripts.inc"
+
+	.include "data/maps/MahoganyHills_3/scripts.inc"
+
+	.include "data/maps/Route3/scripts.inc"
+
+	.include "data/maps/Route3b/scripts.inc"
+
+	.include "data/maps/Rob_Hidden_Base_Route3/scripts.inc"
+
+	.include "data/maps/MahoganyHills_5/scripts.inc"
+
+	.include "data/maps/Route2b/scripts.inc"
+
+	.include "data/maps/MahoganyHills_6/scripts.inc"
+
+	.include "data/maps/MahoganyHillsCave/scripts.inc"
+
+	.include "data/maps/Route4/scripts.inc"
+
+	.include "data/maps/Route4b/scripts.inc"
+
+	.include "data/maps/DragonLake/scripts.inc"
+
+	.include "data/maps/Route4c/scripts.inc"
+
+	.include "data/maps/SandyShoreCity/scripts.inc"
+
+	.include "data/maps/SandCliff/scripts.inc"
+
+	.include "data/maps/Beach1/scripts.inc"
+
+	.include "data/maps/Gym2Entrance/scripts.inc"
+
+	.include "data/maps/SandyCliffBase/scripts.inc"
+
+	.include "data/maps/Gym2/scripts.inc"
+
+	.include "data/maps/Beach2/scripts.inc"
+
+	.include "data/maps/CharmanderGrotto/scripts.inc"
+
+	.include "data/maps/GranitePeak_SchoolHall/scripts.inc"
+
+	.include "data/maps/GranitePeak_School_EvolutionClass/scripts.inc"
+
+	.include "data/maps/Granite_Peak_School_ItemsClass/scripts.inc"
+
+	.include "data/maps/GranitePeak_School_Moves/scripts.inc"
+
+	.include "data/maps/GranitePeak_School_Abilities_Class/scripts.inc"
+
+	.include "data/maps/SchoolTournamentField/scripts.inc"
+
+	.include "data/maps/GranitePeak_Tournament_WaitingRoom/scripts.inc"
+
+	.include "data/maps/Tutorial_Start/scripts.inc"
+
+	.include "data/maps/JokeMap/scripts.inc"
+
+	.include "data/maps/Route7/scripts.inc"
+
+	.include "data/maps/Route7b/scripts.inc"
+
+	.include "data/maps/ObsidianThicket/scripts.inc"
+
+	.include "data/maps/ObsidianThicket2/scripts.inc"
+
+	.include "data/maps/ObsidianThicket3/scripts.inc"
+
+	.include "data/maps/ObsidianThicketGym/scripts.inc"
+
+	.include "data/maps/Route8/scripts.inc"
+
+	.include "data/maps/Route7River/scripts.inc"
+
+	.include "data/maps/DarkCaveGf/scripts.inc"
+
+	.include "data/maps/DarkCave_B1F/scripts.inc"
+
+	.include "data/maps/MahoganyHillsCave_B1F/scripts.inc"
+
+	.include "data/maps/MahoganyHillsCave_South_GF/scripts.inc"
+
+	.include "data/maps/DarkCave_B2F/scripts.inc"
+
+	.include "data/maps/DarkCave_GF_Dessert/scripts.inc"
+
+	.include "data/maps/EmderDunes/scripts.inc"
+
+	.include "data/maps/EmberDunes1/scripts.inc"
+
+	.include "data/maps/EmberDunesGym/scripts.inc"
+
+	.include "data/maps/ObsidianPeak/scripts.inc"
+
+	.include "data/maps/ObsidianPath/scripts.inc"
+
+	.include "data/maps/GranitePeak_House3/scripts.inc"
+
+	.include "data/maps/GranitePeak_House4/scripts.inc"
+
+	.include "data/maps/GranitePeak_EstateAgent/scripts.inc"
+
+	.include "data/maps/Gym3/scripts.inc"
+
+	.include "data/maps/CoralPort_Port/scripts.inc"
+
+	.include "data/maps/ObsidianPeak_BaseCamp/scripts.inc"
+
+	.include "data/maps/ObsidianPeak_Ascent/scripts.inc"
+
+	.include "data/maps/SquirtleGrotto/scripts.inc"
+
+	.include "data/maps/MegaStone_Grottos/scripts.inc"
+
+	.include "data/maps/Route5/scripts.inc"
+
+	.include "data/maps/MauvilleCity_Port/scripts.inc"
+
+	.include "data/maps/MauvilleCity_House2_1F/scripts.inc"
+
+	.include "data/maps/WaterfallCave/scripts.inc"
+
+	.include "data/maps/WaterfallCave_PreBreak/scripts.inc"
+
+	.include "data/maps/WaterfallCave_PostBreak/scripts.inc"
+
+	.include "data/maps/WaterfallCave_SubBasement/scripts.inc"
+
+	.include "data/maps/LegendsAltar/scripts.inc"
+
+	.include "data/maps/LostPlates/scripts.inc"
+
+	.include "data/maps/TreeckoGrotto/scripts.inc"
+
+	.include "data/maps/Mossdeep_Orphanage/scripts.inc"
+
+	.include "data/maps/FlowerGlade/scripts.inc"
+
+	.include "data/maps/ShayminGrotto/scripts.inc"
+
+	.include "data/maps/Route9/scripts.inc"
+
+	.include "data/maps/Route9b/scripts.inc"
+
+	.include "data/maps/EmberDune_CaveGF/scripts.inc"
+
+	.include "data/maps/EmberDuneCave_BF/scripts.inc"
+
+	.include "data/maps/GreatPlane/scripts.inc"
+
+	.include "data/maps/Quarry/scripts.inc"
+
+	.include "data/maps/EmderDune_EntryHouse/scripts.inc"
+
+	.include "data/maps/EmberDune_ExitHouse/scripts.inc"
+
+	.include "data/maps/OshawottGrotto/scripts.inc"
+
+	.include "data/maps/Route4_House/scripts.inc"
+
+	.include "data/maps/CreepyForest1/scripts.inc"
+
+	.include "data/maps/CreepyForest2/scripts.inc"
+
+	.include "data/maps/HauntedMansionGF/scripts.inc"
+
+	.include "data/maps/DeeperQuarryGF/scripts.inc"
+
+	.include "data/maps/ShayminEncounterGrotto/scripts.inc"
+
+	.include "data/maps/Bulbasaur/scripts.inc"
+
+	.include "data/maps/GranitePeak_POH/scripts.inc"
+
+	.include "data/maps/ObsidianThicket_Gym3_HiddenBase/scripts.inc"
+
+	.include "data/maps/Gym4/scripts.inc"
+
+	.include "data/maps/DeeperQuarryGF_1/scripts.inc"
+
+	.include "data/maps/DeeoerQuarryBF1/scripts.inc"
+
+	.include "data/maps/DeeperQuarryBF2_1/scripts.inc"
+
+	.include "data/maps/DeeperQuarryEnd/scripts.inc"
+
+	.include "data/maps/MauvilleCity_BikeLady/scripts.inc"
+
+	.include "data/maps/GranitePeak_AlexHouse/scripts.inc"
+
+	.include "data/maps/ChampionsGuild_1/scripts.inc"
+
+	.include "data/maps/MahoganyHillsCave_WoChien/scripts.inc"
+
+	.include "data/maps/QuarrySecret/scripts.inc"
+
+	.include "data/maps/Platefall_Cave_DeeperGF/scripts.inc"
+
+	.include "data/maps/Route8_Hidden_Base/scripts.inc"
+
+	.include "data/maps/TepigGrotto/scripts.inc"
+
+	.include "data/maps/LilycoveCity_MegaMansion/scripts.inc"
+
+	.include "data/maps/LilycoveCity_MegaMansion_2f/scripts.inc"
+
+	.include "data/maps/LilycoveCity_MegaMansion_3f/scripts.inc"
+
+	.include "data/maps/LilycoveCity_MegaMansion_BF/scripts.inc"
+
+	.include "data/maps/MegaMansion_Outside/scripts.inc"
+
+	.include "data/maps/ObsidianPeak_2/scripts.inc"
+
+	.include "data/maps/EmderDunes_Larger/scripts.inc"
+
+	.include "data/maps/Quarry_ForemanHouse/scripts.inc"
+
+	.include "data/maps/Quarry_WorkerHousing/scripts.inc"
+
+	.include "data/maps/GranitePeak_Dojo1/scripts.inc"
+
+	.include "data/maps/Mossdeep_Orphanage_1F/scripts.inc"
+
+	.include "data/maps/LilycoveCity_House1_Upstairs/scripts.inc"
+
+	.include "data/maps/Brad_Hidden_base/scripts.inc"

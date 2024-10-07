@@ -1,0 +1,35 @@
+mapscripts LegendsAltar_MapScripts {}
+
+script LegendsAltar_AdamantOrb {
+    lock
+    msgbox(format("There seems to be a hole in the altar"))
+    release
+}
+
+script LegendsAltar_GriseousOrb {
+    lock
+    msgbox(format("There seems to be a hole in the altar"))
+    release
+}
+
+script LegendsAltar_LustrousOrb {
+    lock
+    msgbox(format("There seems to be a hole in the altar"))
+    release
+}
+
+script LegendsAltar_LegendsPlate {
+    lock
+    if(!flag(FLAG_LEGENDS_PLATE_FOUND)) {
+        msgbox(format("There seems to be a plate radiating warmth on the altar"))
+        giveitem(ITEM_LEGENDS_PLATE)
+        playfanfare(MUS_OBTAIN_ITEM)
+        subquestmenu(QUEST_MENU_COMPLETE_QUEST, QUEST_POKEMON_LEAGUE, SUB_QUEST_LEGENDS_PLATE)
+        setflag(FLAG_LEGENDS_PLATE_FOUND)
+        setvar(VAR_PLATE_QUEST_STATE, 3)
+    }
+    if(flag(FLAG_LEGENDS_PLATE_FOUND)) {
+        msgbox(format("There is a large gap from where you took the Legends Plate"))
+    }
+    release
+}

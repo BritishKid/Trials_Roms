@@ -1,0 +1,7 @@
+mapscripts Route7River_MapScripts {}
+
+script GiantPokemon_Route7River {
+    lockall
+    msgbox(format("COMING SOON"))
+    releaseall
+}
