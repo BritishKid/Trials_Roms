@@ -1409,12 +1409,12 @@ u8 TryUpdateRusturfTunnelState(void)
     {
         if (FlagGet(FLAG_HIDE_RUSTURF_TUNNEL_ROCK_1))
         {
-            VarSet(VAR_RUSTURF_TUNNEL_STATE, 4);
+            VarSet(VAR_EMBERDUNES_BUTTONS_PRESSED, 4);
             return TRUE;
         }
         else if (FlagGet(FLAG_HIDE_RUSTURF_TUNNEL_ROCK_2))
         {
-            VarSet(VAR_RUSTURF_TUNNEL_STATE, 5);
+            VarSet(VAR_EMBERDUNES_BUTTONS_PRESSED, 5);
             return TRUE;
         }
     }

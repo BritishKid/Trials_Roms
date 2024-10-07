@@ -1,0 +1,41 @@
+mapscripts VerdanturfTown_FriendshipRatersHouse_MapScripts {
+}
+
+script VerdanturfTown_FriendshipRatersHouse_EventScript_Pikachu {
+    lockall
+    faceplayer
+    playmoncry(SPECIES_PIKACHU, CRY_MODE_NORMAL)
+    msgbox(format("PIKACHU: Pika pika!"))
+    if(!flag(FLAG_RECIEVED_LIGHT_BALL)) {
+        msgbox(format("The Pikachu gives you something."))
+        giveitem(ITEM_LIGHT_BALL)
+        setflag(FLAG_RECIEVED_LIGHT_BALL)
+    }
+    releaseall
+}
+
+script VerdanturfTown_FriendshipRatersHouse_EventScript_Woman {
+    lockall
+    faceplayer
+    msgbox(format("Did you know a Pikachu holding a Light Ball has it's offensive powers improved!"))
+    releaseall
+}
+
+
+
+// This is how you do the name rating
+// VerdanturfTown_FriendshipRatersHouse_EventScript_FriendshipRater::
+// 	lock
+// 	faceplayer
+// 	msgbox VerdanturfTown_FriendshipRatersHouse_Text_SeeHowMuchPokemonLikesYou, MSGBOX_DEFAULT
+// 	specialvar VAR_RESULT, GetLeadMonFriendshipScore
+// 	switch VAR_RESULT
+// 	case FRIENDSHIP_NONE, VerdanturfTown_FriendshipRatersHouse_EventScript_DetestsYou
+// 	case FRIENDSHIP_1_TO_49, VerdanturfTown_FriendshipRatersHouse_EventScript_VeryWary
+// 	case FRIENDSHIP_50_TO_99, VerdanturfTown_FriendshipRatersHouse_EventScript_NotUsedToYou
+// 	case FRIENDSHIP_100_TO_149, VerdanturfTown_FriendshipRatersHouse_EventScript_GettingUsedToYou
+// 	case FRIENDSHIP_150_TO_199, VerdanturfTown_FriendshipRatersHouse_EventScript_LikesYouQuiteALot
+// 	case FRIENDSHIP_200_TO_254, VerdanturfTown_FriendshipRatersHouse_EventScript_VeryHappy
+// 	case FRIENDSHIP_MAX, VerdanturfTown_FriendshipRatersHouse_EventScript_AdoresYou
+// 	release
+// 	end

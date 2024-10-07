@@ -136,7 +136,7 @@ Bugcatch_Dennis_MH2_Battle::
 
 Bugcatcher_Dennis_Beaten::
 	setvar VAR_BUGCATCHERS_BEATEN_MAHOGANY_HILLS, 5
-	setvar VAR_FIRST_TRAINERS_BEATEN_CHECK, VAR_FIRST_TRAINERS_BEATEN_CHECK + 1
+	setvar VAR_TRAINERS_BEATEN_CHECK, VAR_TRAINERS_BEATEN_CHECK + 1
 	msgbox Bugcatcher_Dennis_Beaten_Text_0
 	releaseall
 	return
@@ -196,12 +196,20 @@ MahoganyHills_RivalBeaten::
 	giveitem ITEM_HM01, 1
 	playfanfare MUS_OBTAIN_ITEM
 	setflag FLAG_RECEIVED_HM01
-	msgbox MahoganyHills_RivalBeaten_Text_2
+	goto_if_unset FLAG_RECEIVED_EXP_SHARE, MahoganyHills_RivalBeaten_2
+MahoganyHills_RivalBeaten_1:
+	msgbox MahoganyHills_RivalBeaten_Text_3
 	applymovement 5, Movement_Rival_Off_Bridge_MahoganyHill
 	waitmovement 5
 	removeobject 5
 	releaseall
 	return
+
+MahoganyHills_RivalBeaten_2:
+	msgbox MahoganyHills_RivalBeaten_Text_2
+	giveitem ITEM_EXP_SHARE, 1
+	setflag FLAG_RECEIVED_EXP_SHARE
+	goto MahoganyHills_RivalBeaten_1
 
 
 MahoganyHills_MeetRoxanne::
@@ -220,6 +228,10 @@ MahoganyHills_RoxanneBeaten::
 	lockall
 	msgbox MahoganyHills_RoxanneBeaten_Text_0
 	msgbox MahoganyHills_RoxanneBeaten_Text_1
+	giveitem ITEM_TM37
+	playfanfare MUS_OBTAIN_ITEM
+	setflag FLAG_ITEM_MAHOGANY_HILLS_POKEBALL_ROCK_TOMB
+	msgbox MahoganyHills_RoxanneBeaten_Text_2
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_PlayerLeft
 	waitmovement OBJ_EVENT_ID_PLAYER
 	applymovement 6, Movement_Roxanne_Leaving
@@ -227,6 +239,36 @@ MahoganyHills_RoxanneBeaten::
 	removeobject 6
 	setvar VAR_MAHOGANYHILLS_FOSSIL_ROXANNE, 1
 	releaseall
+	return
+
+
+MahoganyHills_LegendaryDungeon::
+	lockall
+	compare VAR_MAHOGANCYHILLS_BUTTONS_PRESSED, 4
+	goto_if_eq MahoganyHills_LegendaryDungeon_2
+	msgbox MahoganyHills_LegendaryDungeon_Text_2
+MahoganyHills_LegendaryDungeon_1:
+	releaseall
+	return
+
+MahoganyHills_LegendaryDungeon_2:
+	msgbox MahoganyHills_LegendaryDungeon_Text_0, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq MahoganyHills_LegendaryDungeon_5
+	goto MahoganyHills_LegendaryDungeon_1
+
+MahoganyHills_LegendaryDungeon_5:
+	msgbox MahoganyHills_LegendaryDungeon_Text_1
+	goto MahoganyHills_LegendaryDungeon_1
+
+
+MahongayHill2_ItemBall_SunStone::
+	finditem ITEM_SUN_STONE
+	return
+
+
+MahongayHill2_EventScript_ItemPPUp::
+	finditem ITEM_PP_UP
 	return
 
 
@@ -333,7 +375,7 @@ PostDennis_MH_Reward_Text_1:
 
 MahoganyHills_Rival_Battle_Text_0:
 	.string "You're so slow, I've already got myself a\n"
-	.string "badge. It was a breeze. My Pokemon\l"
+	.string "badge. It was a breeze. My Pokémon\l"
 	.string "barely broke a sweat. In fact I bet\l"
 	.string "they could beat you here!$"
 
@@ -347,6 +389,10 @@ MahoganyHills_RivalBeaten_Text_1:
 	.string "can beat the gym!$"
 
 MahoganyHills_RivalBeaten_Text_2:
+	.string "Also here is an extra gift for you, it\n"
+	.string "should come in useful!$"
+
+MahoganyHills_RivalBeaten_Text_3:
 	.string "Seeya Slowpoke$"
 
 MahoganyHills_MeetRoxanne_Text_0:
@@ -361,7 +407,20 @@ MahoganyHills_RoxanneBeaten_Text_0:
 	.string "over there.$"
 
 MahoganyHills_RoxanneBeaten_Text_1:
+	.string "Take this as well!$"
+
+MahoganyHills_RoxanneBeaten_Text_2:
 	.string "I hope to see you again!$"
+
+MahoganyHills_LegendaryDungeon_Text_0:
+	.string "The boulder looks like it can be moved.\n"
+	.string "Do you want to push it?$"
+
+MahoganyHills_LegendaryDungeon_Text_1:
+	.string "COMING SOON$"
+
+MahoganyHills_LegendaryDungeon_Text_2:
+	.string "It won't budge.$"
 
 MahoganyHills_Rival_Battle_Intro::
 	.string "Don't worry if you lose it's only natural$"
@@ -400,7 +459,7 @@ MahoganyHills2_BugCatcher_Dee_Outro::
 	.string "Something something funny outro$"
 
 MahoganyHills2_BugCatcher_Dee_NotEnoughMons::
-	.string "You need two pokemon to battle$"
+	.string "You need two Pokémon to battle$"
 
 PostBattle_MahoganyHills2_BugCatcher_Dee::
 	.string "You must have been cheating...$"
@@ -416,7 +475,7 @@ PostBattle_MahoganyHills2_BugCatcher_Dennis::
 	.string "I haven't even begun to peak.$"
 
 MahoganyHills_Roxanne_Battle_Intro::
-	.string "Oh you're a Pokemon trainer. I could go\n"
+	.string "Oh you're a Pokémon trainer. I could go\n"
 	.string "for a battle before I head off.$"
 
 MahoganyHills_Roxanne_Battle_Outro::

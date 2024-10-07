@@ -3,7 +3,7 @@
   "name": "ObsidianPath",
   "layout": "LAYOUT_OBSIDIAN_PATH",
   "music": "SE_M_EMBER",
-  "region_map_section": "MAPSEC_MT_EMBER",
+  "region_map_section": "MAPSEC_FIERY_PATH",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_UNDERGROUND",

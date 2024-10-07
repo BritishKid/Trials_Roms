@@ -2,7 +2,7 @@
   "id": "MAP_NATHANS_HIDDEN_BASE",
   "name": "Nathans_Hidden_Base",
   "layout": "LAYOUT_NATHANS_HIDDEN_BASE",
-  "music": "MUS_RG_SEVII_CAVE",
+  "music": "MUS_FORTREE",
   "region_map_section": "MAPSEC_ROUTE_1",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

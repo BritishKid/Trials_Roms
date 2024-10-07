@@ -35,21 +35,21 @@
 // IDs for berry tree objects, indexes into berryTrees in SaveBlock1
 // Named for whatever berry is initially planted there on a new game
 // Those with no initial berry are named "soil"
-#define BERRY_TREE_ROUTE_102_PECHA    1
-#define BERRY_TREE_ROUTE_102_ORAN     2
-#define BERRY_TREE_ROUTE_104_SOIL_1   3
-#define BERRY_TREE_ROUTE_104_ORAN_1   4
-#define BERRY_TREE_ROUTE_103_CHERI_1  5
-#define BERRY_TREE_ROUTE_103_LEPPA    6
-#define BERRY_TREE_ROUTE_103_CHERI_2  7
-#define BERRY_TREE_ROUTE_104_CHERI_1  8
+#define BERRY_TREE_ROUTE_2_PECHA    1 //Route 2
+#define BERRY_TREE_ROUTE_2_TANGA     2 // Route 2
+#define BERRY_TREE_ROUTE_OBSIDIAN_THICKET_LIECHI   3 //Obsidian Thicket
+#define BERRY_TREE_ROUTE_OBSIDIAN_THICKET_PETAYA   4 //Obsidian Thicket
+#define BERRY_TREE_ROUTE_1B_ORAN  5 // route1 
+#define BERRY_TREE_ROUTE_1B_LEPPA    6 //route 1
+#define BERRY_TREE_ROUTE_1B_CHERI  7 //route 1
+#define BERRY_TREE_ROUTE_4_SALAC  8 //route 4
 #define BERRY_TREE_ROUTE_104_SOIL_2   9
-#define BERRY_TREE_ROUTE_104_LEPPA    10
-#define BERRY_TREE_ROUTE_104_ORAN_2   11
-#define BERRY_TREE_ROUTE_104_SOIL_3   12
-#define BERRY_TREE_ROUTE_104_PECHA    13
-#define BERRY_TREE_ROUTE_123_QUALOT_1 14
-#define BERRY_TREE_ROUTE_123_POMEG_1  15
+#define BERRY_TREE_ROUTE_GRANITE_PEAK_ASPEAR    10 //Granite Peak
+#define BERRY_TREE_ROUTE_GRANITE_PEAK_RAWST   11 //Granite Peak
+#define BERRY_TREE_ROUTE_GRANITE_PEAK_SOIL_1   12 //Granite Peak
+#define BERRY_TREE_ROUTE_GRANITE_PEAK_SOIL_2    13 // Granite Peak
+#define BERRY_TREE_ROUTE_8_KEBIA_BERRY 14 //route 8
+#define BERRY_TREE_ROUTE_8_KASIB_BERRY  15 //route 8
 #define BERRY_TREE_ROUTE_110_NANAB_1  16
 #define BERRY_TREE_ROUTE_110_NANAB_2  17
 #define BERRY_TREE_ROUTE_110_NANAB_3  18

@@ -64,20 +64,20 @@ script EvolutionTest {
         waitmovement(6)
         msgbox(format("And Snorunt"))
         msgbox(format("That's correct many Pokémon other than Eevee can evolve in different ways."))   
-        msgbox(format("Question 2. Are there any Pokemon that can evolve twice at once?"), MSGBOX_YESNO)
+        msgbox(format("Question 2. Are there any Pokémon that can evolve twice at once?"), MSGBOX_YESNO)
         if(var(VAR_RESULT) == YES && var(VAR_PREVENT_LOOPS_SCHOOL) == 0) {
             applymovement(5, Movement_Bounce)
             waitmovement(5)
             msgbox(format("Nincada!"))
             msgbox(format("That's correct, Nincada evolves into both Shedinja and Ninjask"))
             msgbox(format("You're doing great, okay final question"))
-            msgbox(format("Do some Pokemon only evolve through trade?"), MSGBOX_YESNO)
+            msgbox(format("Do some Pokémon only evolve through trade?"), MSGBOX_YESNO)
             if(var(VAR_RESULT) == YES && var(VAR_PREVENT_LOOPS_SCHOOL) == 0) {
                 msgbox(format("I'm sorry that's wrong. Keep reading up on evolution and you'll get there"))
                 call(FailedEvolutionTest)
             }
             if(var(VAR_RESULT) == NO && var(VAR_PREVENT_LOOPS_SCHOOL) == 0) {
-                msgbox(format("Correct with the discovery of a Link Stone you no longer have to trade certain pokemon."))
+                msgbox(format("Correct with the discovery of a Link Stone you no longer have to trade certain Pokémon."))
                 call(CompletedEvolutionTest)
             }
         }
@@ -107,7 +107,7 @@ script CompletedEvolutionTest {
     msgbox(format("Remember you need all patches to take part in the tournament."))
     setvar(VAR_EVOLUTION_ROOM_STUDENTS, 5)
     setflag(FLAG_EVOLUTION_PATCH_EARNT)
-    // subquestmenu(QUEST_MENU_COMPLETE_QUEST, QUEST_POKEMON_LEAGUE, SUB_QUEST_SCHOOL_EVOLUTION_PATCH)
+    subquestmenu(QUEST_MENU_COMPLETE_QUEST, QUEST_POKEMON_LEAGUE, SUB_QUEST_SCHOOL_EVOLUTION_PATCH)
     applymovement(5, Movement_Bounce)
     waitmovement(5)
     msgbox(format("Bet you're happy I was here, I carried you through that."))
@@ -150,7 +150,6 @@ script GranitePeak_EvolutionClass_Girl {
 script GranitePeak_GivePlayer_Eevee {
     showmonpic(SPECIES_EEVEE, 10, 3)
     givemon(SPECIES_EEVEE, 5)
-    setflag(FLAG_FRONTPAGEROB_GAVE_HONEGE)
     playfanfare(MUS_OBTAIN_ITEM)
     if (var(VAR_RESULT) == MON_GIVEN_TO_PARTY) {
             msgbox("Recieved Eevee")
@@ -177,6 +176,7 @@ script EvolutionStudent_Beaten {
     if (var(VAR_EVOLUTION_ROOM_STUDENTS) == 0) {
         setvar(VAR_EVOLUTION_ROOM_STUDENTS, 1)
     }
+    call(Increase_Trainers_Beaten)
 }
 
 //movement scripts

@@ -7,6 +7,12 @@ mapscripts DragonLake_MapScripts {
     }
 }
 
+script DragonLake_Camper {
+    trainerbattle_single(DRAGONLAKE_CAMPER, DragonLake_Camper_Intro, DragonLake_Camper_Outro, Increase_Trainers_Beaten)
+    msgbox(DragonLake_Camper_PostBattle, MSGBOX_AUTOCLOSE)
+    end
+}
+
 script Salt7_MeetingRedGyrados {
     lock
     faceplayer
@@ -18,12 +24,12 @@ script Salt7_MeetingRedGyrados {
     applymovement(2, Movement_RedGyrados)
     waitmovement(2)
     msgbox(format("They were right it's a Red Gyrados!"))
-    setflag(FLAG_FORCE_SHINY)
+    setflag(P_FLAG_FORCE_SHINY)
     special(StartRedGyradosEncounter) //do tutorial to catch gyrados? //need to make shiny and we to stopp retalking
-    clearflag(FLAG_FORCE_SHINY)
+    clearflag(P_FLAG_FORCE_SHINY)
     removeobject(2)
     setvar(VAR_SALTS7_QUEST_STATE, 3)
-    // subquestmenu(QUEST_MENU_COMPLETE_QUEST, QUEST_POKEMON_LEAGUE, SUB_QUEST_SALT_RED_GYRADOS)
+    subquestmenu(QUEST_MENU_COMPLETE_QUEST, QUEST_POKEMON_LEAGUE, SUB_QUEST_SALT_RED_GYRADOS)
     msgbox(format("I did it. I caught a Red Gyrados!"))
     msgbox(format("Who knew they came it such awesome colours. I need to explore the world and find all the different ones I can!"))
     msgbox(format("See you next time!"))
@@ -35,6 +41,42 @@ script Salt7_MeetingRedGyrados {
     release
 }
 
+script GiantGyradosScript {
+    lockall
+    questmenu(QUEST_MENU_CHECK_ACTIVE, QUEST_GIANT_FISH)
+    if(var(VAR_RESULT) && !flag(FLAG_GIANT_GYRADOS_BEATEN)){
+        msgbox(format("You see a giant Pokémon swimming under the surface, do you want to attempt to catch it?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES) {
+            setflag(FLAG_CANT_CATCH_MON)
+            setflag(FLAG_CANNOT_RUN_FROM_BATTLE)
+            msgbox(format("It leaps out at you"))
+            settotemboost(1, 1, 1, 1, 0, 1, 0, 0)
+            setwildbattle(SPECIES_GYARADOS, 35, ITEM_WACAN_BERRY)
+            dowildbattle()
+            subquestmenu(QUEST_MENU_COMPLETE_QUEST, QUEST_POKEMON_LEAGUE, SUB_QUEST_GIANT_FISH_1) //could not work?
+            msgbox(format("The Gyrados flees and leaves something behind"))
+            giveitem(ITEM_DRAGON_SCALE)
+            playfanfare(MUS_OBTAIN_ITEM)
+            setflag(FLAG_GIANT_GYRADOS_BEATEN)
+            clearflag(FLAG_CANT_CATCH_MON)
+            clearflag(FLAG_CANNOT_RUN_FROM_BATTLE)
+        }
+        else {
+            end
+        }
+    }
+    else {
+        msgbox(format("You see a giant Pokémon swimming under the surface"))
+    }
+    releaseall
+}
+
+script DragonLake_ItemBall_TM09 {
+    finditem(ITEM_TM09)
+}
+
+
+//movement scripts
 movement DragonLakeEmoteSurpirse {
     emote_exclamation_mark
     face_right
@@ -64,4 +106,19 @@ movement Movement_Salt7_Leaving {
     walk_fast_down
     walk_fast_down
     walk_fast_down
+}
+
+//text
+
+
+text DragonLake_Camper_Intro {
+    format("Lots of rare Pokemon can be found around here")
+}
+
+text DragonLake_Camper_Outro {
+    format("Have you already caught them?")
+}
+
+text DragonLake_Camper_PostBattle {
+    format("I'm sure if I find the original dragon I'll be able to beat you")
 }

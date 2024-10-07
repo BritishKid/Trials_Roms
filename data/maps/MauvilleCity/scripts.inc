@@ -1,5 +1,10 @@
 MauvilleCity_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, MauvilleCity_MapScripts_MAP_SCRIPT_ON_TRANSITION
 	.byte 0
+
+MauvilleCity_MapScripts_MAP_SCRIPT_ON_TRANSITION:
+	setflag FLAG_VISITED_MAUVILLE_CITY
+	return
 
 
 ThugCity_Pyukumuku_Clean_Up_1::
@@ -72,6 +77,7 @@ ThugCity_SecondGuard_Beaten::
 	removeobject 3
 	setflag FLAG_THUG_ENTRANCE_BEATEN
 	setvar VAR_THUG_TOWN_STATE, 1
+	questmenu QUEST_MENU_SET_ACTIVE, QUEST_THUG_TOWN
 	release
 	return
 
@@ -97,6 +103,13 @@ ThugCity_PortEntrance_Beaten::
 ThugCity_RandomThug::
 	lock
 	msgbox ThugCity_RandomThug_Text_0
+	release
+	return
+
+
+ThugCity_RandomThug2::
+	lock
+	msgbox ThugCity_RandomThug2_Text_0
 	release
 	return
 
@@ -213,6 +226,9 @@ ThugCity_RandomThug_Text_0:
 	.string "The lady in this house is rich, when my\n"
 	.string "buddies get here we are going to take\l"
 	.string "everything from her!$"
+
+ThugCity_RandomThug2_Text_0:
+	.string "This town is full of total dweebs!$"
 
 ThugCity_Locked_Text_0:
 	.string "The door is locked$"

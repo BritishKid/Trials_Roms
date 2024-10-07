@@ -16,16 +16,55 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 28,
-      "y": 5,
+      "x": 3,
+      "y": 15,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "EventScript_EmberDuneCave_ItemBall_TMSandstorm",
       "flag": "FLAG_ITEM_ROUTE_EMBERDUNE_TM37"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_PUSHABLE_BOULDER",
+      "x": 33,
+      "y": 6,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EventScript_StrengthBoulder",
+      "flag": "FLAG_TEMP_11"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_PUSHABLE_BOULDER",
+      "x": 33,
+      "y": 8,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EventScript_StrengthBoulder",
+      "flag": "FLAG_TEMP_11"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_PUSHABLE_BOULDER",
+      "x": 34,
+      "y": 7,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EventScript_StrengthBoulder",
+      "flag": "FLAG_TEMP_11"
     }
   ],
   "warp_events": [
@@ -58,6 +97,13 @@
       "dest_warp_id": "2"
     },
     {
+      "x": 11,
+      "y": 5,
+      "elevation": 0,
+      "dest_map": "MAP_EMBER_DUNE_CAVE_BF",
+      "dest_warp_id": "0"
+    },
+    {
       "x": 3,
       "y": 18,
       "elevation": 0,
@@ -65,10 +111,10 @@
       "dest_warp_id": "1"
     },
     {
-      "x": 11,
-      "y": 5,
+      "x": 43,
+      "y": 13,
       "elevation": 0,
-      "dest_map": "MAP_EMBER_DUNE_CAVE_BF",
+      "dest_map": "MAP_EMDER_DUNES_LARGER",
       "dest_warp_id": "0"
     }
   ],

@@ -412,11 +412,13 @@ void Overworld_ResetStateAfterDigEscRope(void)
         VarSet(B_VAR_WILD_AI_FLAGS,0);
     #endif
 
+
     FlagClear(B_FLAG_INVERSE_BATTLE);
     FlagClear(B_FLAG_FORCE_DOUBLE_WILD);
     FlagClear(B_SMART_WILD_AI_FLAG);
     FlagClear(B_FLAG_NO_BAG_USE);
     FlagClear(B_FLAG_NO_CATCHING);
+    FlagClear(FLAG_CANNOT_RUN_FROM_BATTLE);
 }
 #endif
 

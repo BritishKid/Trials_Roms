@@ -3,8 +3,8 @@
   "name": "SeafloorCavern_Room2",
   "layout": "LAYOUT_SEAFLOOR_CAVERN_ROOM2",
   "music": "MUS_MT_CHIMNEY",
-  "region_map_section": "MAPSEC_SEAFLOOR_CAVERN",
-  "requires_flash": false,
+  "region_map_section": "MAPSEC_GRANITE_CAVE",
+  "requires_flash": true,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_UNDERGROUND",
   "allow_cycling": true,
@@ -15,138 +15,95 @@
   "connections": 0,
   "object_events": [
     {
-      "graphics_id": "OBJ_EVENT_GFX_PUSHABLE_BOULDER",
-      "x": 13,
-      "y": 3,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "graphics_id": "OBJ_EVENT_GFX_ANABEL",
+      "x": 35,
+      "y": 15,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "EventScript_StrengthBoulder",
-      "flag": "FLAG_TEMP_12"
+      "script": "GranitePeakDojoComingSoon",
+      "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_PUSHABLE_BOULDER",
-      "x": 10,
-      "y": 3,
+      "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK",
+      "x": 35,
+      "y": 17,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "EventScript_StrengthBoulder",
-      "flag": "FLAG_TEMP_13"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_PUSHABLE_BOULDER",
-      "x": 13,
-      "y": 5,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "EventScript_StrengthBoulder",
-      "flag": "FLAG_TEMP_11"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_PUSHABLE_BOULDER",
-      "x": 4,
-      "y": 5,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "EventScript_StrengthBoulder",
-      "flag": "FLAG_TEMP_15"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_PUSHABLE_BOULDER",
-      "x": 7,
-      "y": 4,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "EventScript_StrengthBoulder",
+      "script": "EventScript_RockSmash",
       "flag": "FLAG_TEMP_16"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK",
-      "x": 8,
-      "y": 7,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "EventScript_RockSmash",
-      "flag": "FLAG_TEMP_18"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK",
-      "x": 9,
-      "y": 3,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "EventScript_RockSmash",
-      "flag": "FLAG_TEMP_19"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_PUSHABLE_BOULDER",
-      "x": 4,
-      "y": 8,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "EventScript_StrengthBoulder",
-      "flag": "FLAG_TEMP_17"
     }
   ],
   "warp_events": [
     {
-      "x": 10,
-      "y": 7,
-      "elevation": 3,
-      "dest_map": "MAP_SEAFLOOR_CAVERN_ROOM1",
+      "x": 26,
+      "y": 38,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE4B",
       "dest_warp_id": "2"
     },
     {
-      "x": 4,
-      "y": 10,
-      "elevation": 3,
-      "dest_map": "MAP_SEAFLOOR_CAVERN_ROOM4",
+      "x": 27,
+      "y": 29,
+      "elevation": 0,
+      "dest_map": "MAP_GRANITE_PEAK_DOJO1",
       "dest_warp_id": "0"
     },
     {
-      "x": 6,
-      "y": 1,
-      "elevation": 3,
-      "dest_map": "MAP_SEAFLOOR_CAVERN_ROOM6",
+      "x": 33,
+      "y": 29,
+      "elevation": 0,
+      "dest_map": "MAP_SEAFLOOR_CAVERN_ROOM2",
+      "dest_warp_id": "4"
+    },
+    {
+      "x": 7,
+      "y": 31,
+      "elevation": 0,
+      "dest_map": "MAP_SEAFLOOR_CAVERN_ROOM2",
+      "dest_warp_id": "8"
+    },
+    {
+      "x": 14,
+      "y": 23,
+      "elevation": 0,
+      "dest_map": "MAP_SEAFLOOR_CAVERN_ROOM2",
+      "dest_warp_id": "2"
+    },
+    {
+      "x": 19,
+      "y": 24,
+      "elevation": 0,
+      "dest_map": "MAP_SEAFLOOR_CAVERN_ROOM2",
+      "dest_warp_id": "6"
+    },
+    {
+      "x": 36,
+      "y": 22,
+      "elevation": 0,
+      "dest_map": "MAP_SEAFLOOR_CAVERN_ROOM2",
+      "dest_warp_id": "5"
+    },
+    {
+      "x": 38,
+      "y": 13,
+      "elevation": 0,
+      "dest_map": "MAP_SEAFLOOR_CAVERN_ROOM2",
       "dest_warp_id": "0"
     },
     {
-      "x": 11,
-      "y": 1,
-      "elevation": 3,
-      "dest_map": "MAP_SEAFLOOR_CAVERN_ROOM7",
-      "dest_warp_id": "0"
+      "x": 36,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_SEAFLOOR_CAVERN_ROOM2",
+      "dest_warp_id": "3"
     }
   ],
   "coord_events": [

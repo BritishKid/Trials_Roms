@@ -2,12 +2,20 @@ mapscripts GranitePeak_EstateAgent_MapScripts {}
 
 script GranitePeak_Estate_Agent {
     lock
+    faceplayer
     msgbox(format("Feel free to ask me any questions on what we have for sale"))
     release
 }
 
 script GranitePeak_ShopOption_One { //selling options for house
     lock
-    msgbox(format("COMING SOON..."))
+    if(!flag(FLAG_HOUSE_OWNED)){
+        msgbox(format("It's a catalog full of furniture, I have no need for this"))
+    }
+    else {
+        msgbox(format("It's a catalog of furniture I could buy for my house"))
+        //to learn this we need to work out how to do changing metatiles
+        msgbox(format("COMING SOON..."))
+    }
     release
 }

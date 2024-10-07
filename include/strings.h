@@ -3206,9 +3206,15 @@ extern const u8 gText_SubQuest1_SubMap7[];
 extern const u8 gText_SubQuest1_SubMap8[];
 extern const u8 gText_SubQuest1_SubMap9[];
 extern const u8 gText_SubQuest1_SubMap10[];
+
+//custom
 extern const u8 gText_SubQuest2_SubMap1[];
 extern const u8 gText_SubQuest2_SubMap2[];
 extern const u8 gText_SubQuest2_SubMap3[];
+extern const u8 gText_SubQuest2_SubMap4[];
+extern const u8 gText_SubQuest2_SubMap5[];
+extern const u8 gText_SubQuest2_SubMap6[];
+
 
 //salts sub quest
 extern const u8 gText_SubQuest4_Name1[];
@@ -3225,10 +3231,13 @@ extern const u8 gText_SubQuest9_Name5[];
 
 extern const u8 gText_SubQuest4_SubMap1[];
 extern const u8 gText_SubQuest4_SubMap2[];
+extern const u8 gText_SubQuest4_SubMap3[];
+extern const u8 gText_SubQuest4_SubMap4[];
 
 extern const u8 gText_SubQuest4_Desc1[];
 extern const u8 gText_SubQuest4_Desc2[];
 extern const u8 gText_SubQuest4_Desc3[];
+extern const u8 gText_SubQuest4_Desc4[];
 
 extern const u8 gText_SubQuest9_Desc1[];
 extern const u8 gText_SubQuest9_Desc2[];
@@ -3400,5 +3409,10 @@ extern const u8 gText_ModestMint[];
 extern const u8 gText_CalmMint[];
 extern const u8 gText_TimidMint[];
 extern const u8 gText_JollyMint[];
+
+//custom starter
+extern const u8 gText_Starter1[];
+extern const u8 gText_Starter2[];
+extern const u8 gText_Starter3[];
 
 #endif // GUARD_STRINGS_H

@@ -8,11 +8,11 @@ script Hemlock_EventScript_GymLeader {
 }
 
 script HemlockGym_Kevin_PostbattleScript {
-    msgbox(format("Fantastic! You're well on your way to becoming a champion.")) //todo change
+    msgbox(format("That was unexpected! You should come down to the orphanage and teach them some of your skills."))
     playfanfare(MUS_OBTAIN_BADGE)
     msgbox(format("You obtained the Hemlock Badge."))
     special(DoDomeConfetti)
-    // subquestmenu(QUEST_MENU_COMPLETE_QUEST, QUEST_POKEMON_LEAGUE, SUB_QUEST_PALOS_BADGE)
+    subquestmenu(QUEST_MENU_COMPLETE_QUEST, QUEST_POKEMON_LEAGUE, SUB_QUEST_PALOS_BADGE)
     setflag(FLAG_BADGE03_GET)
     msgbox(format("Also please take this TM it contains Sludge Bomb"))
     playfanfare(MUS_OBTAIN_ITEM)
@@ -34,35 +34,35 @@ script Gym3_EventScript_Greeter {
 
 script Hemlock_EventScript_Tessa {
     lockall
-    trainerbattle_single(TRAINER_TESSA_GYM3, HemlockGym_Tessa_Intro, HemlockGym_Tessa_Outro)
+    trainerbattle_single(TRAINER_TESSA_GYM3, HemlockGym_Tessa_Intro, HemlockGym_Tessa_Outro, Increase_Trainers_Beaten)
     msgbox(HemlockGym_Tessa_Postbattle, MSGBOX_AUTOCLOSE)
     releaseall
 }
 
 script Hemlock_EventScript_Pablo {
     lockall
-    trainerbattle_single(TRAINER_PABLO_GYM3, HemlockGym_Pablo_Intro, HemlockGym_Pablo_Outro)
+    trainerbattle_single(TRAINER_PABLO_GYM3, HemlockGym_Pablo_Intro, HemlockGym_Pablo_Outro, Increase_Trainers_Beaten)
     msgbox(HemlockGym_PabloPostbattle, MSGBOX_AUTOCLOSE)
     releaseall
 }
 
 script Hemlock_EventScript_Victor {
     lockall
-    trainerbattle_single(TRAINER_VICTOR_GYM3, HemlockGym_Victor_Intro, HemlockGym_Victor_Outro)
+    trainerbattle_single(TRAINER_VICTOR_GYM3, HemlockGym_Victor_Intro, HemlockGym_Victor_Outro, Increase_Trainers_Beaten)
     msgbox(HemlockGym_Victor_Postbattle, MSGBOX_AUTOCLOSE)
     releaseall
 }
 
 script Hemlock_EventScript_Chloe {
     lockall
-    trainerbattle_single(TRAINER_CHLOE_GYM3, HemlockGym_Chloe_Intro, HemlockGym_Chloe_Outro)
+    trainerbattle_single(TRAINER_CHLOE_GYM3, HemlockGym_Chloe_Intro, HemlockGym_Chloe_Outro, Increase_Trainers_Beaten)
     msgbox(HemlockGym_Chloe_Postbattle, MSGBOX_AUTOCLOSE)
     releaseall
 }
 
 script Hemlock_EventScript_Ollie {
     lockall
-    trainerbattle_single(TRAINER_OLLIE_GYM3, HemlockGym_Ollie_Intro, HemlockGym_Ollie_Outro)
+    trainerbattle_single(TRAINER_OLLIE_GYM3, HemlockGym_Ollie_Intro, HemlockGym_Ollie_Outro, Increase_Trainers_Beaten)
     msgbox(HemlockGym_Ollie_Postbattle, MSGBOX_AUTOCLOSE)
     releaseall
 }
@@ -70,7 +70,7 @@ script Hemlock_EventScript_Ollie {
 //text
 
 text HemlockGym_Ollie_Intro {
-    format("Poison pokemon are just incredible")
+    format("Poison Pokémon are just incredible")
 }
 
 text HemlockGym_Ollie_Outro {
@@ -78,65 +78,67 @@ text HemlockGym_Ollie_Outro {
 }
 
 text HemlockGym_Ollie_Postbattle {
-    format("Time to go learn about ground pokemon")
+    format("Time to go learn about ground Pokémon")
 }
 
 text HemlockGym_Chloe_Intro {
-    format("TODO INTRO")
+    format("This is a great job, but the work environment is toxic")
 }
 
 text HemlockGym_Chloe_Outro {
-    format("TODO OUTRO")
+    format("Fine don't laugh at my jokes")
 }
 
 text HemlockGym_Chloe_Postbattle {
-    format("TODO OUTRO")
+    format("Just go")
 }
 
 text HemlockGym_Kevin_Intro {
-    format("TODO INTRO")
+    format("Although my Pokémon are toxic I'd like to represent kindness. Now give it your all and make this a battle to remember")
 }
 
 text HemlockGym_Kevin_Outro {
-    format("TODO OUTRO")
+    format("So strong!")
 }
 
 text HemlockGym_Kevin_Postbattle {
-    format("TODO OUTRO")
+    format("Always remember to do good to others and your Pokémon. Remember not to judge a book by it's cover, even though they seem poisonous at first")
 }
 
+
+//Ai genned may want to change
 text HemlockGym_Tessa_Intro {
-    format("TODO INTRO")
+    format("Welcome to the Hemlock Gym! I'm Tessa, the guardian of these toxic waters. Prepare for a battle as murky as the swamp itself!")
 }
 
 text HemlockGym_Tessa_Outro {
-    format("TODO OUTRO")
+    format("You've bested me, trainer! The poison of the swamp couldn't hold you back. Keep that resilience on your journey.")
 }
 
 text HemlockGym_Tessa_Postbattle {
-    format("TODO OUTRO")
+    format("Impressive battling! The toxins may sting, but your victory is as clear as the moonlight on the swamp. If you ever need guidance, Hemlock Town's doors are always open.")
 }
 
 text HemlockGym_Pablo_Intro {
-    format("TODO INTRO")
+    format("Yo, trainer! I'm Pablo, the poison specialist in this gym. Get ready for a battle with a little extra venom!")
 }
 
 text HemlockGym_Pablo_Outro {
-    format("TODO OUTRO")
+    format("Whoa, you got me good! Your skills are sharper than a Beedrill's stinger. Keep that edge on your journey.")
 }
 
 text HemlockGym_PabloPostbattle {
-    format("TODO OUTRO")
+    format("Nice moves, trainer! The swamp may be poisonous, but you've got the antidote. If you ever want to swap battle strategies, find me in Hemlock Town!")
 }
 
 text HemlockGym_Victor_Intro {
-    format("TODO INTRO")
+    format("Greetings, challenger! I'm Victor, the gym's poison connoisseur. Let's see if you can handle the venomous power of my Pokémon!")
 }
 
 text HemlockGym_Victor_Outro {
-    format("TODO OUTRO")
+    format("Well played, trainer! The swamp's toxins couldn't slow you down. Keep that determination burning on your journey.")
 }
 
 text HemlockGym_Victor_Postbattle {
-    format("TODO OUTRO")
+    format("Outstanding battle! You've conquered the poison-infested waters. If you ever seek wisdom or just want to chat, find me in Hemlock Town.")
 }

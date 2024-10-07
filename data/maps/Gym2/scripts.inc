@@ -24,24 +24,28 @@ gym2_button1_script_7:
 	goto gym2_button1_script_1
 
 gym2_button1_script_5:
+	setflag FLAG_CANT_CATCH_MON
 	settotemboost 1, 1, 1, 1, 1, 1, 1, 1
 	setwildbattle SPECIES_WAILMER, 24
 	call gymTotemBattle
 	removeobject 1
 	setvar VAR_GYM2_QUESTIONS, 2
 	setflag FLAG_GYM2_STATUE1
+	clearflag FLAG_CANT_CATCH_MON
 	goto gym2_button1_script_4
 
 gym2_button1_script_8:
 	msgbox gym2_button1_script_Text_2
 	msgbox gym2_button1_script_Text_3
 	setvar VAR_GYM2_QUESTIONS, 1
+	setflag FLAG_CANT_CATCH_MON
 	settotemboost 1, 1, 1, 1, 1, 1, 1, 1
 	setwildbattle SPECIES_WAILMER, 24
 	call gymTotemBattle
 	removeobject 1
 	setvar VAR_GYM2_QUESTIONS, 2
 	setflag FLAG_GYM2_STATUE1
+	clearflag FLAG_CANT_CATCH_MON
 	goto gym2_button1_script_7
 
 gym2_button1_script_10:
@@ -74,24 +78,28 @@ gym2_button2_script_7:
 	goto gym2_button2_script_1
 
 gym2_button2_script_5:
+	setflag FLAG_CANT_CATCH_MON
 	settotemboost 1, 1, 1, 1, 1, 1, 1, 1
 	setwildbattle SPECIES_CARVANHA, 24
 	call gymTotemBattle
 	removeobject 2
 	setvar VAR_GYM2_QUESTIONS, 4
 	setflag FLAG_GYM2_STATUE2
+	clearflag FLAG_CANT_CATCH_MON
 	goto gym2_button2_script_4
 
 gym2_button2_script_8:
 	msgbox gym2_button1_script_Text_2
 	msgbox gym2_button1_script_Text_3
 	setvar VAR_GYM2_QUESTIONS, 3
+	setflag FLAG_CANT_CATCH_MON
 	settotemboost 1, 1, 1, 1, 1, 1, 1, 1
 	setwildbattle SPECIES_CARVANHA, 24
 	call gymTotemBattle
 	removeobject 2
 	setvar VAR_GYM2_QUESTIONS, 4
 	setflag FLAG_GYM2_STATUE2
+	clearflag FLAG_CANT_CATCH_MON
 	goto gym2_button2_script_7
 
 gym2_button2_script_10:
@@ -124,24 +132,28 @@ gym2_button3_script_7:
 	goto gym2_button3_script_1
 
 gym2_button3_script_5:
+	setflag FLAG_CANT_CATCH_MON
 	settotemboost 1, 1, 1, 1, 1, 1, 1, 1
 	setwildbattle SPECIES_WISHIWASHI, 24
 	call gymTotemBattle
 	removeobject 3
 	setvar VAR_GYM2_QUESTIONS, 6
 	setflag FLAG_GYM2_STATUE3
+	clearflag FLAG_CANT_CATCH_MON
 	goto gym2_button3_script_4
 
 gym2_button3_script_8:
 	msgbox gym2_button1_script_Text_2
 	msgbox gym2_button1_script_Text_3
 	setvar VAR_GYM2_QUESTIONS, 5
+	setflag FLAG_CANT_CATCH_MON
 	settotemboost 1, 1, 1, 1, 1, 1, 1, 1
 	setwildbattle SPECIES_CARVANHA, 24
 	call gymTotemBattle
 	removeobject 3
 	setvar VAR_GYM2_QUESTIONS, 6
 	setflag FLAG_GYM2_STATUE3
+	clearflag FLAG_CANT_CATCH_MON
 	goto gym2_button3_script_7
 
 gym2_button3_script_10:
@@ -170,6 +182,7 @@ BeachGym_Gym_Leader_PostbattleScript::
 	playfanfare MUS_OBTAIN_BADGE
 	msgbox BeachGym_Gym_Leader_PostbattleScript_Text_1
 	special DoDomeConfetti
+	subquestmenu QUEST_MENU_COMPLETE_QUEST, QUEST_POKEMON_LEAGUE, SUB_QUEST_SHOAL_BADGE
 	setflag FLAG_BADGE02_GET
 	setvar VAR_RIVAL_FIGHT_2, 2
 	msgbox BeachGym_Gym_Leader_PostbattleScript_Text_2
@@ -180,13 +193,14 @@ BeachGym_Gym_Leader_PostbattleScript::
 
 
 BeachGym_Trainer_Ollie::
-	trainerbattle_single BEACHGYM_TRAINER_OLLIE, BeachGym_Ollie_Intro, BeachGym_Ollie_Outro
+	trainerbattle_single BEACHGYM_TRAINER_OLLIE, BeachGym_Ollie_Intro, BeachGym_Ollie_Outro, Increase_Trainers_Beaten
 	msgbox BeachGym_Ollie_PostbattleScript, MSGBOX_AUTOCLOSE
 	end
 
 
 Gym2_EventScript_Greeter::
 	lockall
+	faceplayer
 	msgbox Gym2_EventScript_Greeter_Text_0
 	goto_if_unset FLAG_BADGE02_GET, Gym2_EventScript_Greeter_3
 Gym2_EventScript_Greeter_1:
@@ -212,21 +226,21 @@ gym2_button1_script_Text_0:
 	.string "Answer this question or suffer defeat!$"
 
 gym2_button1_script_Text_1:
-	.string "Only water Pokemon can learn the move\n"
+	.string "Only water Pokémon can learn the move\n"
 	.string "SURF?$"
 
 gym2_button1_script_Text_2:
 	.string "Incorrect$"
 
 gym2_button1_script_Text_3:
-	.string "A giant Pokemon leaps out the water$"
+	.string "A giant Pokémon leaps out the water$"
 
 gym2_button1_script_Text_4:
 	.string "Correct$"
 
 gym2_button2_script_Text_0:
 	.string "Ice Moves are always Not Very\n"
-	.string "Effective against water POKEMON?$"
+	.string "Effective against water Pokémon?$"
 
 gym2_button3_script_Text_0:
 	.string "Is the Water type weak to 2 types?$"
@@ -254,8 +268,8 @@ Gym2_EventScript_Greeter_Text_1:
 BeachGym_Gym_Leader_Intro::
 	.string "Why well done you've made it! Welcome to\n"
 	.string "my cavern, carved with the incredible\l"
-	.string "power of water! I am Marina a waster of\l"
-	.string "water type pokemon.$"
+	.string "power of water! I am Marina a water of\l"
+	.string "water type Pokémon.$"
 
 BeachGym_Gym_Leader_Outro::
 	.string "Incredible! You've washed me away$"
@@ -275,4 +289,4 @@ BeachGym_Ollie_Outro::
 
 BeachGym_Ollie_PostbattleScript::
 	.string "I've learnt enough, time to learn about\n"
-	.string "poison pokemon$"
+	.string "poison Pokémon$"

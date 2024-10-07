@@ -3,30 +3,30 @@ Route4b_MapScripts::
 	.byte 0
 
 Route4b_MapScripts_MAP_SCRIPT_ON_TRANSITION:
-	setflag FLAG_ROUTE4B_SALTS_BEATEN
+	setflag FLAG_HIDING_SALTS
 	compare VAR_SALTS7_QUEST_STATE, 1
 	goto_if_eq Route4b_MapScripts_MAP_SCRIPT_ON_TRANSITION_1
 	return
 
 Route4b_MapScripts_MAP_SCRIPT_ON_TRANSITION_1:
-	clearflag FLAG_ROUTE4B_SALTS_BEATEN
+	clearflag FLAG_HIDING_SALTS
 	return
 
 
 OstrichPuppetBattleScript::
-	trainerbattle_single ROUTE4_OSTRICHPUPPET, OstrichPuppet_Intro, OstrichPuppet_Outro
+	trainerbattle_single ROUTE4_OSTRICHPUPPET, OstrichPuppet_Intro, OstrichPuppet_Outro, Increase_Trainers_Beaten
 	msgbox OstrichPuppet_PostBattle, MSGBOX_AUTOCLOSE
 	end
 
 
 Route4_BlackbeltOda_BattleScript::
-	trainerbattle_single ROUTE4_ODA_BLACKBELT, Route4_Blackbelt_Intro, Route4_Blackbelt_Outro
+	trainerbattle_single ROUTE4_ODA_BLACKBELT, Route4_Blackbelt_Intro, Route4_Blackbelt_Outro, Increase_Trainers_Beaten
 	msgbox Route4_Blackbelt_PostBattle, MSGBOX_AUTOCLOSE
 	end
 
 
 LihsirBattleScript::
-	trainerbattle_single ROUTE4_LIHSIR, Lihsir_Intro, Lihsir_Outro
+	trainerbattle_single ROUTE4_LIHSIR, Lihsir_Intro, Lihsir_Outro, Increase_Trainers_Beaten
 	msgbox Lihsir_PostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -66,7 +66,8 @@ Route4b_Salt7_PostBattle::
 	applymovement 3, Movement_Route4b_Salts7_MoveAway
 	waitmovement 3
 	removeobject 3
-	setflag FLAG_ROUTE4B_SALTS_BEATEN
+	setflag FLAG_HIDING_SALTS
+	subquestmenu QUEST_MENU_COMPLETE_QUEST, QUEST_POKEMON_LEAGUE, SUB_QUEST_SALT_EVOLVING
 	setvar VAR_SALTS7_QUEST_STATE, 2
 	releaseall
 	return
@@ -122,7 +123,7 @@ Route4b_Salt7_PostBattle_Text_0:
 
 Route4b_Salt7_PostBattle_Text_1:
 	.string "It's home to the most powerful Dragon\n"
-	.string "Pokemon and that must mean it's\l"
+	.string "Pokémon and that must mean it's\l"
 	.string "perfect to tarin my Gyrados! I'll be\l"
 	.string "unstoppable soon enough!$"
 
@@ -135,15 +136,6 @@ OstrichPuppet_Outro::
 
 OstrichPuppet_PostBattle::
 	.string "I just need an ACRO BIKE to cross over$"
-
-Lihsir_Intro::
-	.string "TODO$"
-
-Lihsir_Outro::
-	.string "TODO$"
-
-Lihsir_PostBattle::
-	.string "TODO$"
 
 Salts7Route4b_Intro::
 	.string "Let me show you how great my team of\n"
@@ -162,5 +154,22 @@ Route4_Blackbelt_Outro::
 
 Route4_Blackbelt_PostBattle::
 	.string "Martial artists from all over the world\n"
-	.string "are goign to come here to explore the\l"
+	.string "are going to come here to explore the\l"
 	.string "old dojos$"
+
+Lihsir_Intro::
+	.string "Greetings, trainer! I am Lihsir, drawn to\n"
+	.string "the serene flow of the river for a\l"
+	.string "Pokémon battle. Shall we let our spirits\l"
+	.string "dance with the current?$"
+
+Lihsir_Outro::
+	.string "A beautiful battle, indeed! Your skills\n"
+	.string "flow gracefully like the river. May your\l"
+	.string "journey be as harmonious and serene.$"
+
+Lihsir_PostBattle::
+	.string "A wonderful battle! If you ever want to\n"
+	.string "share the tranquility of river-side\l"
+	.string "battles or simply converse by the\l"
+	.string "water, find me along your journey.$"

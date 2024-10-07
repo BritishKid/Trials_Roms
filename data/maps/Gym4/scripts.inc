@@ -15,6 +15,7 @@ Gym4_Sarah_PostbattleScript::
 	playfanfare MUS_OBTAIN_BADGE
 	msgbox Gym4_Sarah_PostbattleScript_Text_1
 	special DoDomeConfetti
+	subquestmenu QUEST_MENU_COMPLETE_QUEST, QUEST_POKEMON_LEAGUE, SUB_QUEST_RUIN_BADGE
 	setflag FLAG_BADGE04_GET
 	msgbox Gym4_Sarah_PostbattleScript_Text_2
 	playfanfare MUS_OBTAIN_ITEM

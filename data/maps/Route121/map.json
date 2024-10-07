@@ -501,7 +501,7 @@
       "y": 10,
       "elevation": 3,
       "item": "ITEM_HP_UP",
-      "flag": "FLAG_HIDDEN_ITEM_ROUTE_121_HP_UP"
+      "flag": "FLAG_HIDDEN_ITEM_BEACH_1_HP_UP"
     },
     {
       "type": "hidden_item",

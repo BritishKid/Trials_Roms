@@ -100,8 +100,8 @@ MahoganyHills3_EventScript_Darwin_Text_2:
 	.string "fantastic.$"
 
 MahoganyHills3_EventScript_Darwin_Text_3:
-	.string "Come find me and I'll revive that fossil\n"
-	.string "for you.$"
+	.string "Come find me at my lab in Lilycove and\n"
+	.string "I'll revive that fossil for you.$"
 
 MahoganyHills3_EventScript_AnorithFossil_Text_0:
 	.string "Do you want to select the Claw fossil?$"

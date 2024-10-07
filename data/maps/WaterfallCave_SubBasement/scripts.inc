@@ -52,6 +52,14 @@ EnterLegendsAltar::
 	return
 
 
+FirstMaster_Fallen::
+	lockall
+	msgbox FirstMaster_Fallen_Text_0
+	msgbox FirstMaster_Fallen_Text_1
+	releaseall
+	return
+
+
 WatefallCave_SubBasement_LegendsDoor_Text_0:
 	.string "Do you want to travel to the altar?$"
 
@@ -74,5 +82,12 @@ WatefallCave_SubBasement_LegendsDoor_Text_4:
 	.string "TOGETHER YOU MAY ENTER$"
 
 WatefallCave_SubBasement_LegendsDoor_Text_5:
-	.string "You get out a Pokemon from their ball\n"
+	.string "You get out a Pokémon from their ball\n"
 	.string "and you both tough the wall$"
+
+FirstMaster_Fallen_Text_0:
+	.string "....$"
+
+FirstMaster_Fallen_Text_1:
+	.string "The floor collapsed? How are we going\n"
+	.string "to get out of here?$"

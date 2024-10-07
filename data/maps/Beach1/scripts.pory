@@ -9,19 +9,19 @@ script SandyGhastEncounter {
 
 
 script WillyWombyBattleScript {
-    trainerbattle_single(WIBBLYWOBBLY_BATTLE, Beach1_WillyWomby_Intro, Beach1_WillyWomby_Outro)
+    trainerbattle_single(WIBBLYWOBBLY_BATTLE, Beach1_WillyWomby_Intro, Beach1_WillyWomby_Outro, Increase_Trainers_Beaten)
     msgbox(Beach1_WillyWomby_PostBattle, MSGBOX_AUTOCLOSE)
     end
 }
 
 script Trainer_Damon {
-    trainerbattle_single(DAMON_BATTLE, Beach1_Damon_Intro, Beach1_Damon_Outro)
+    trainerbattle_single(DAMON_BATTLE, Beach1_Damon_Intro, Beach1_Damon_Outro, Increase_Trainers_Beaten)
     msgbox(Beach1_Damon_PostBattle, MSGBOX_AUTOCLOSE)
     end
 }
 
 script Trainer_Beach1_Clair {
-    trainerbattle_single(BEACH1_CLAIR_BATTLE, Beach1_Clair_Intro, Beach1_Clair_Outro)
+    trainerbattle_single(BEACH1_CLAIR_BATTLE, Beach1_Clair_Intro, Beach1_Clair_Outro, Increase_Trainers_Beaten)
     msgbox(Beach1_Clair_PostBattle, MSGBOX_AUTOCLOSE)
     end
 }
@@ -40,7 +40,7 @@ text Beach1_WillyWomby_Intro {
 }
 
 text Beach1_WillyWomby_Outro {
-    format("The pokemon that hatched is cute, I wonder where he got it")
+    format("The Pokémon that hatched is cute, I wonder where he got it")
 }
 
 text Beach1_WillyWomby_PostBattle {
@@ -48,7 +48,7 @@ text Beach1_WillyWomby_PostBattle {
 }
 
 text Beach1_Damon_Intro {
-    format("Have you seen how many awesome purple Pokemon I have?!")
+    format("Have you seen how many awesome purple Pokémon I have?!")
 }
 
 text Beach1_Damon_Outro {

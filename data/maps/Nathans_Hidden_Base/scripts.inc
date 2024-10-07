@@ -10,6 +10,8 @@ Nathans_Computer::
 
 
 Battle_NathanSecretBase::
+	lockall
+	faceplayer
 	goto_if_unset FLAG_NATHAN_BEATEN, Battle_NathanSecretBase_2
 Battle_NathanSecretBase_1:
 	goto_if_set FLAG_NATHAN_BEATEN, Battle_NathanSecretBase_6
@@ -99,6 +101,7 @@ Nathans_Hidden_Base_EventScript_Find_ChikoritaDoll_2:
 	msgbox Nathans_Hidden_Base_EventScript_Find_ChikoritaDoll_Text_0
 	adddecoration DECOR_GULPIN_DOLL
 	setflag FLAG_HIDDEN_BASE_COLLECTABLE_FOUND_GULPIN
+	subquestmenu QUEST_MENU_COMPLETE_QUEST, QUEST_POKEMON_LEAGUE, SUB_QUEST_GULPIN_DOLL
 	msgbox Nathans_Hidden_Base_EventScript_Find_ChikoritaDoll_Text_1
 	goto Nathans_Hidden_Base_EventScript_Find_ChikoritaDoll_1
 
@@ -121,11 +124,11 @@ Nathans_Hidden_Base_EventScript_Find_ChikoritaDoll_Text_0:
 	.string "It's Nathan's Gulpin Doll$"
 
 Nathans_Hidden_Base_EventScript_Find_ChikoritaDoll_Text_1:
-	.string "You've unlocked the CHIKORITA Doll for\n"
+	.string "You've unlocked the GULPIN Doll for\n"
 	.string "your secret base$"
 
 Nathan_Intro::
-	.string "I found this pokemon in a far away land!\n"
+	.string "I found this Pokémon in a far away land!\n"
 	.string "It's so cool.$"
 
 Nathan_Outro::

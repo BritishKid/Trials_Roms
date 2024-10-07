@@ -2,19 +2,19 @@ mapscripts Route9_MapScripts {}
 
 //scripts
 script Route9_BattleScript_Matthew_Fisher {
-    trainerbattle_single(ROUTE9_MATTHEW, MatthewFisher_Intro, MatthewFisher_Outro)
+    trainerbattle_single(ROUTE9_MATTHEW, MatthewFisher_Intro, MatthewFisher_Outro, Increase_Trainers_Beaten)
     msgbox(MatthewFisher_PostBattle, MSGBOX_AUTOCLOSE)
     release
 }
 
 script Route9_BattleScript_Mate {
-    trainerbattle_single(ROUTE9_MATE, Mate_Intro, Mate_Outro)
+    trainerbattle_single(ROUTE9_MATE, Mate_Intro, Mate_Outro, Increase_Trainers_Beaten)
     msgbox(Mate_PostBattle, MSGBOX_AUTOCLOSE)
     release
 }
 
 script Route9_BattleScript_Woodland {
-    trainerbattle_single(ROUTE9_BIDOOFCRAZEDMAN, Woodland_Intro, Woodland_Outro)
+    trainerbattle_single(ROUTE9_BIDOOFCRAZEDMAN, Woodland_Intro, Woodland_Outro, Increase_Trainers_Beaten)
     msgbox(Woodland_PostBattle, MSGBOX_AUTOCLOSE)
     release
 }
@@ -22,11 +22,11 @@ script Route9_BattleScript_Woodland {
 //text
 
 text MatthewFisher_Intro {
-    format("Hat! Look at your normal Pokemon! Mine is a shiny!")
+    format("Hat! Look at your normal Pokémon! Mine is a shiny!")
 }
 
 text MatthewFisher_Outro {
-    format("Okay you got me, but shiny Pokemon are still the best")
+    format("Okay you got me, but shiny Pokémon are still the best")
 }
 
 text MatthewFisher_PostBattle {

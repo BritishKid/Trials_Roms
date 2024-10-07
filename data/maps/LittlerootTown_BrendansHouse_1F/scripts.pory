@@ -59,17 +59,11 @@ LittlerootTown_BrendansHouse_1F_EventScript_GoUpstairsToSetClock::
 	lockall
 	msgbox PlayersHouse_1F_Text_GoSetTheClock, MSGBOX_DEFAULT
 	closemessage
-	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_BrendansHouse_1F_Movement_PushTowardStairs
-	applymovement LOCALID_MOM, LittlerootTown_BrendansHouse_1F_Movement_PushTowardStairs
 	waitmovement 0
-	warp MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F, 7, 1
 	waitstate
 	releaseall
 	end
 
-LittlerootTown_BrendansHouse_1F_Movement_PushTowardStairs:
-	walk_up
-	step_end
 
 LittlerootTown_BrendansHouse_1F_EventScript_EnterHouseMovingIn::
 	lockall
@@ -96,8 +90,7 @@ LittlerootTown_BrendansHouse_1F_EventScript_YoureNewNeighbor::
 	applymovement LOCALID_RIVAL_MOM, LittlerootTown_BrendansHouse_1F_Movement_RivalMomApproach
 	waitmovement 0
 	special GetRivalSonDaughterString
-	msgbox RivalsHouse_1F_Text_OhYoureTheNewNeighbor, MSGBOX_DEFAULT
-	setflag FLAG_MET_RIVAL_MOM
+	setflag FLAG_BEATEN_PINSIR_BASE
 	setvar VAR_LITTLEROOT_HOUSES_STATE_MAY, 2
 	releaseall
 	end
@@ -153,8 +146,6 @@ LittlerootTown_BrendansHouse_1F_EventScript_MeetRival::
 	call_if_eq VAR_0x8008, 0, LittlerootTown_BrendansHouse_1F_EventScript_BrendanApproachPlayer0
 	call_if_eq VAR_0x8008, 1, LittlerootTown_BrendansHouse_1F_EventScript_BrendanApproachPlayer1
 	call_if_eq VAR_0x8008, 2, LittlerootTown_BrendansHouse_1F_EventScript_BrendanApproachPlayer2
-	msgbox RivalsHouse_1F_Text_BrendanWhoAreYou, MSGBOX_DEFAULT
-	closemessage
 	call_if_eq VAR_0x8008, 0, LittlerootTown_BrendansHouse_1F_EventScript_BrendanGoUpstairs0
 	call_if_eq VAR_0x8008, 1, LittlerootTown_BrendansHouse_1F_EventScript_BrendanGoUpstairs1
 	call_if_eq VAR_0x8008, 2, LittlerootTown_BrendansHouse_1F_EventScript_BrendanGoUpstairs2
@@ -164,7 +155,7 @@ LittlerootTown_BrendansHouse_1F_EventScript_MeetRival::
 	setflag FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F_POKE_BALL
 	clearflag FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_RIVAL_BEDROOM
 	delay 30
-	setvar VAR_LITTLEROOT_RIVAL_STATE, 3
+	setvar VAR_QUARRY_STATE, 3
 	savebgm MUS_DUMMY
 	fadedefaultbgm
 	releaseall
@@ -435,24 +426,3 @@ PlayersHouse_1F_Text_StillUnknownPokemon:
 	.string "MOM: Well, isn't that something!\n"
 	.string "There are still unknown POKéMON.$"
 `
-
-script Route1b_Fisherman_GetOldRod {
-    lockall
-    faceplayer
-    if(!(flag(FLAG_RECEIVED_OLD_ROD))) {
-    msgbox(format("Hey do you like to fish?"), MSGBOX_YESNO)
-      if(var(VAR_RESULT) == YES){
-        msgbox(format("Yeah you do! Have this fishing rod."))
-        giveitem(ITEM_OLD_ROD, 1)
-        playfanfare(MUS_OBTAIN_ITEM)
-        setflag(FLAG_RECEIVED_OLD_ROD)
-      }
-      else{
-        msgbox(format("Oh that's a shame"))
-      }
-    }
-    else {
-        msgbox(format("Different rods attract different Pokemon"), MSGBOX_DEFAULT)
-    }
-    release
-}

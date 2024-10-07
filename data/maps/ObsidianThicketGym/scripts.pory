@@ -2,91 +2,235 @@ mapscripts ObsidianThicketGym_MapScripts {}
 
 
 script ObsidianThicket_GymGauntlet_BugTrainer {
-    trainerbattle_single(BUGTRAINER_MARK, BugTrainer_Mark_Intro, BugTrainer_Mark_Outro)
+    trainerbattle_single(BUGTRAINER_MARK, BugTrainer_Mark_Intro, BugTrainer_Mark_Outro, Increase_Trainers_Beaten)
     msgbox(Bugtrainer_Mark_PostBattle, MSGBOX_AUTOCLOSE)
     end
 }
 
 script ObsidianThicket_GymGauntlet_Gentleman {
-    trainerbattle_single(GENTLEMAN_ARTHUR, GentlemanArthur_Intro, GentlemanArthur_Outro)
+    trainerbattle_single(GENTLEMAN_ARTHUR, GentlemanArthur_Intro, GentlemanArthur_Outro, Increase_Trainers_Beaten)
     msgbox(GentlemanArthur_PostBattle, MSGBOX_AUTOCLOSE)
     end
 }
 
 script ObsidianThicket_GymGauntlet_Lass {
-    trainerbattle_single(LASS_JESSICA, Lass_Jessica_Intro, Lass_Jessica_Outro)
+    trainerbattle_single(LASS_JESSICA, Lass_Jessica_Intro, Lass_Jessica_Outro, Increase_Trainers_Beaten)
     msgbox(Lass_Jessica_PostBattle, MSGBOX_AUTOCLOSE)
     end
 }
 
 script ObsidianThicket_Expert_Herbert {
-    trainerbattle_single(EXPERT_HERBERT, Expert_Herbert_Intro, Expert_Herbert_Outro)
+    trainerbattle_single(EXPERT_HERBERT, Expert_Herbert_Intro, Expert_Herbert_Outro, Increase_Trainers_Beaten)
     msgbox(Expert_Herbert_PostBattle, MSGBOX_AUTOCLOSE)
     end
 }
 
 script ObsidianThicket_Matron_Angela {
-    trainerbattle_single(MATRON_ANGELA, Matron_Angela_Intro, Matron_Angela_Outro)
+    trainerbattle_single(MATRON_ANGELA, Matron_Angela_Intro, Matron_Angela_Outro, Increase_Trainers_Beaten)
     msgbox(Matron_Angela_PostBattle, MSGBOX_AUTOCLOSE)
     end
 }
 
+script TreeckoHunting {
+    lockall
+    faceplayer
+    msgbox(format("I'm going to catch so many Treeckos!"))
+    releaseall
+}
+
+script TreeckoSecretGrotto_Entrance {
+    lockall
+    if(flag(FLAG_TREECKO_BATTLE_BEATEN)) {
+        msgbox(format("You think you can see some movement behind the trees, do you want to go in?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT)) {
+            warp(MAP_TREECKO_GROTTO, 2, 11)
+        }
+    }
+    questmenu(QUEST_MENU_CHECK_ACTIVE, QUEST_FINDING_TREECKO) 
+    if(var(VAR_RESULT)) {
+        msgbox(format("You think you can se e some Treeckos in the trees, do you want to disturb them?"))
+        setflag(FLAG_CANT_CATCH_MON)
+        setwildbattle(SPECIES_TREECKO, 15, ITEM_SITRUS_BERRY, SPECIES_TREECKO, 15, ITEM_SITRUS_BERRY)
+        dowildbattle()
+        //little girl appears and talks about them
+        msgbox(format("WOW WAS THAT WAS SO COOL!"))
+        //have her appear
+        applymovement(7, ChildMoving_Over) //to do add and dissapear sometime
+        waitmovement(7)
+        msgbox(format("Sorry, I followed you I had to see where they were hiding out."))
+        msgbox(format("My mum used to have a Treecko before she died and it was always so fun to play with"))
+        msgbox(format("She had to release it when she got ill as he was getting to big for us to care for."))
+        msgbox(format("I always hope one day to find him again"))
+        msgbox(format("He didn't look like these Treecko though."))
+        msgbox(format("I hear more coming!")) //entire thing needs better writing
+        //sceptile jumps out and battles
+        settotemboost(1, 2, 1, 1, 2, 1, 0, 0)
+        setwildbattle(SPECIES_SCEPTILE, 30, ITEM_SITRUS_BERRY, SPECIES_GROVYLE, 25, ITEM_SITRUS_BERRY)
+        dowildbattle()
+        setflag(FLAG_TREECKO_BATTLE_BEATEN)
+        msgbox(format("Wow that was such a strong Pokémon! You are an incredible trainer, I want to get strong myself and be like you!"))
+        msgbox(format("My mother gave me this, I think it would help you more than me"))
+        giveitem(ITEM_TM54_GRASS_KNOT)
+        playfanfare(MUS_OBTAIN_ITEM)
+        msgbox(format("That sceptile reminded me a lot about our old Treecko, but it was a different colour."))
+        questmenu(QUEST_MENU_COMPLETE_QUEST, QUEST_FINDING_TREECKO)
+        clearflag(FLAG_CANT_CATCH_MON)
+    } 
+    else {
+        msgbox(format("You can hear something in the trees but can't make your way in."))
+        playmoncry(SPECIES_TREECKO, CRY_MODE_ENCOUNTER)
+    }
+    releaseall
+}
+
+script Gym3_Sign {
+    lockall
+    msgbox(format("Hemlock Gym: Can you navigate the toxic landscape"))
+    lockall
+}
+
+script EventScript_Gym3_MeetRob {
+    lockall
+    msgbox(format("You made it!"))
+    removeobject(8)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_MahoganyHills_Robert_ExclamationMark)
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+    addobject(8)
+    setobjectxy(8,19,26)
+    applymovement(8, Movement_Gym2_Robert_Approaches)
+    waitmovement(8)
+    msgbox(format("You've been making huge wave as amongst the trainers on your way here."))
+    clearflag(FLAG_HIDE_THIRD_ENCOUNTER_ROB)
+    if(var(VAR_TRAINERS_BEATEN_CHECK) >= 40){ 
+        msgbox(format("Are you ready to go again?"), MSGBOX_YESNO)
+            if(var(VAR_RESULT) == YES) {
+                trainerbattle_single(TRAINER_THIRD_ENCOUNTER_ROBERT, MahoganyHills_Robert_Intro, MahoganyHills_Robert_Outro, EventScript_Gym2_RobertBeaten)
+            }
+            else{
+                msgbox(format("Oh that's a shame. I'll see you another time then."))
+                call(EventScript_Gym3_RobertMoves)
+            }
+    } else {
+        msgbox(format("Oh you've been slacking, you're not ready."))
+        call(EventScript_Gym3_RobertMoves)
+    }
+    releaseall
+}
+
+script EventScript_Gym3_RobertBeaten {
+    msgbox(format("Wow you're incredible, here take this!"))
+    giveitem(ITEM_ABILITY_PATCH, 1) //todo improve
+    msgbox(format("You can use it to bring out the Hidden Ability for your Pokémon.\p It can make your Pokémon much stronger!"))
+    if(var(VAR_ROBERT_STATE) == 4)  {
+        msgbox(format("Anyway I'll catch you later!"))
+        call(EventScript_Gym3_RobertLeaves)
+    }
+    setvar(VAR_ROBERT_STATE, 6)
+    setflag(FLAG_HIDE_THIRD_ENCOUNTER_ROB)
+    releaseall
+}
+
+script EventScript_Gym3_RobertMoves {
+    applymovement(8, Movement_Gym2_RobertMoves)
+    waitmovement(8)
+    setobjectxy(8, 21, 20)
+    setvar(VAR_ROBERT_STATE, 5)
+}
+
+script EventScript_Gym3_RobertLeaves {
+    applymovement(8, Movement_Gym2_RobertLeaves)
+    waitmovement(8)
+}
+
+script EventScript_Gym3_Robert_FindLater {
+    if(var(VAR_ROBERT_STATE)==5) {
+        msgbox(format("Oh it's you.\n Hello"))
+        if(var(VAR_TRAINERS_BEATEN_CHECK) >= 40){ 
+        msgbox(format("Are you ready to go again?"), MSGBOX_YESNO)
+            if(var(VAR_RESULT) == YES) {
+                trainerbattle_single(TRAINER_THIRD_ENCOUNTER_ROBERT, MahoganyHills_Robert_Intro, MahoganyHills_Robert_Outro, EventScript_Gym2_RobertBeaten)
+            }
+        } else {
+            msgbox(format("Oh that's a shame. I'll see you another time then."))
+        }
+    } 
+    if(var(VAR_ROBERT_STATE) == 6) {
+        msgbox(format("I'll train some more and beat you by the Ember gym."))
+    }
+    releaseall
+}
+
+//text
+
+//ai genned will need to update
 text BugTrainer_Mark_Intro {
-    format("TODO")
+    format("Hey there, Bug Trainer Mark here! Ready for a bug-tastic battle? Let's see if you can keep up with the swarm!")
 }
 
 text BugTrainer_Mark_Outro {
-    format("TODO")
+    format("A tough battle, indeed! Your skills cut through my bug defenses. Keep that edge sharp on your journey!")
 }
 
 text Bugtrainer_Mark_PostBattle {
-    format("TODO")
+    format("Great battle! The bug types may be small, but their bite is mighty. If you ever want to swap bug-catching stories, I'm around!")
 }
 
-text GentlemanArthur_Intro{
-    format("TODO")
+text GentlemanArthur_Intro {
+    format("Greetings, good sir! I am Gentleman Arthur, well-versed in the art of gentlemanly Pokémon battles. Shall we engage in a courteous duel?")
 }
 
 text GentlemanArthur_Outro {
-    format("TODO")
+    format("A most exquisite battle, my friend! Your skills shine brightly. May your journey be as refined as our encounter!")
 }
 
 text GentlemanArthur_PostBattle {
-    format("TODO")
+    format("Splendid battle! If ever you seek gentlemanly advice or simply wish to converse, you can find me along your journey.")
 }
 
-text Lass_Jessica_Intro{
-    format("TODO")
+text Lass_Jessica_Intro {
+    format("Hiya! I'm Lass Jessica, ready to bring some fun into battle! Hope you're ready for a lively showdown!")
 }
 
 text Lass_Jessica_Outro {
-    format("TODO")
+    format("Wow, you're good! Your energy outshone mine in this battle. Keep that enthusiasm burning on your journey!")
 }
 
 text Lass_Jessica_PostBattle {
-    format("TODO")
+    format("Such a fun battle! If you ever want to have another lively match or just chat, find me along your journey, okay?")
 }
 
-text Expert_Herbert_Intro{
-    format("TODO")
+text Expert_Herbert_Intro {
+    format("Greetings, young trainer! I am Expert Herbert, here to test your skills against a seasoned Pokémon veteran. Are you up for the challenge?")
 }
 
 text Expert_Herbert_Outro {
-    format("TODO")
+    format("Impressive battle, my young friend! Your potential shines brightly. May your journey be filled with continued growth and success!")
 }
 
 text Expert_Herbert_PostBattle {
-    format("TODO")
+    format("A battle worthy of an expert! If you ever seek advice or wish to test your skills again, you know where to find me on your journey.")
 }
 
-text Matron_Angela_Intro{
-    format("TODO")
+text Matron_Angela_Intro {
+    format("Hello, dear! I'm Matron Angela, and I'm here to share a warm and nurturing battle with you. Let's see what we can learn from each other!")
 }
 
 text Matron_Angela_Outro {
-    format("TODO")
+    format("What a delightful battle, sweetheart! Your skills blossomed beautifully. May your journey be filled with warmth and kindness.")
 }
 
 text Matron_Angela_PostBattle {
-    format("TODO")
+    format("Such a heartwarming battle! If you ever need a nurturing presence or simply want to chat, you can find me along your journey.")
+}
+
+//movement
+
+movement ChildMoving_Over {
+    walk_left
+    walk_left
+    walk_left
+    walk_left
+    walk_left
+    walk_left
+    face_up
 }

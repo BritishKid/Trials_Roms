@@ -1,26 +1,16 @@
 LilycoveCity_House1_MapScripts::
 	.byte 0
 
-LilycoveCity_House1_EventScript_ExpertM::
-	msgbox LilycoveCity_House1_Text_PokemonPartnersNotTools, MSGBOX_NPC
-	end
 
-LilycoveCity_House1_EventScript_Kecleon::
-	lock
+Lilycove_House1_Gamer1::
+	lockall
 	faceplayer
-	waitse
-	playmoncry SPECIES_KECLEON, CRY_MODE_NORMAL
-	msgbox LilycoveCity_House1_Text_Kecleon, MSGBOX_DEFAULT
-	waitmoncry
-	release
-	end
+	msgbox Lilycove_House1_Gamer1_Text_0
+	releaseall
+	return
 
-LilycoveCity_House1_Text_PokemonPartnersNotTools:
-	.string "POKéMON are partners to people.\n"
-	.string "They aren't our tools.\p"
-	.string "Unfortunately, there are some people\n"
-	.string "who fail to understand that…$"
 
-LilycoveCity_House1_Text_Kecleon:
-	.string "KECLEON: Ruroro?$"
-
+Lilycove_House1_Gamer1_Text_0:
+	.string "My housemate is an incredible trainer,\n"
+	.string "but he would rather play video games\l"
+	.string "instead of doing the gym challenge.$"

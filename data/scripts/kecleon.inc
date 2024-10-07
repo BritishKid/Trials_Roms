@@ -19,7 +19,7 @@ Route120_EventScript_Kecleon3::
 	goto EventScript_Kecleon
 	end
 
-Route120_EventScript_Kecleon4::
+Route9_EventScript_Kecleon::
 	lock
 	faceplayer
 	setvar VAR_0x8009, 4

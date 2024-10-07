@@ -1,8 +1,86 @@
-mapscripts Quarry_MapScripts {}
-
+mapscripts Quarry_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION {
+        setflag(FLAG_HIDING_SALTS)
+        if (var(VAR_SALTS7_QUEST_STATE) == 3) {
+            clearflag(FLAG_HIDING_SALTS)
+        }
+    }
+}
 
 script DeeperQuarrySign {
     lockall
-    msgbox("WARNING: QUARRY WORK CLOSED TILL FURTHER NOTICE\n POKEMON HAVE BEEN DAMAGING MACHINERY")
+    msgbox("WARNING: QUARRY WORK CLOSED TILL FURTHER NOTICE\n Pokémon HAVE BEEN DAMAGING MACHINERY")
     releaseall
+}
+
+script Quarry_MeetingSalt7 {
+    lockall
+    msgbox(format("Hey it's you ${PLAYER}"))
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_PlayerSurprised_Quarry)
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+    applymovement(1, Movement_Salts_Quarry_Arriving)
+    waitmovement(1)
+    call(Quarry_SaltBattle)
+    releaseall
+}
+
+script Quarry_SaltBattle {
+    trainerbattle_single(QUARRY_SALTS7, Salts7Quarry_Intro, Salts7Quarry_Outro, Quarry_Salt7_PostBattle)
+}
+
+script Quarry_Salt7_PostBattle {
+    msgbox(format("I've been seeing pictures about an incredibly strong Green Gyrados that can bet even the strongest Pokémon, I've heard about the Draconid people that know all about this Gyrados so i'm heading to their village on Island 3 to meet them"))
+    msgbox(format("I'll see you again!"))
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Player_Quarry_MoveAway)
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+    applymovement(1, Movement_Salts_Quarry_Leaving)
+    waitmovement(1)
+    removeobject(1)
+    setflag(FLAG_HIDING_SALTS)
+    subquestmenu(QUEST_MENU_COMPLETE_QUEST, QUEST_POKEMON_LEAGUE, SUB_QUEST_SALT7_QUARRY)
+    setvar(VAR_SALTS7_QUEST_STATE, 4)
+}
+
+//text
+text Salts7Quarry_Intro {
+    format("I've found a ton of different coloured Gyrados! Let me show you how strong I've gotten.")
+}
+
+text Salts7Quarry_Outro {
+    format("I'm missing some still Gyrados")
+}
+
+
+//movement
+movement Movement_PlayerSurprised_Quarry {
+    emote_question_mark
+}
+
+movement Movement_Salts_Quarry_Arriving {
+    walk_right
+    walk_right
+    walk_right
+    walk_right
+    walk_right
+    walk_right
+    face_up
+}
+
+movement Movement_Player_Quarry_MoveAway {
+    walk_up
+    walk_up
+    face_down
+}
+
+movement Movement_Salts_Quarry_Leaving {
+    walk_up
+    walk_up
+    walk_right
+    walk_right
+    walk_up
+    walk_up
+    walk_up
+    walk_up
+    walk_up
+    walk_up
 }

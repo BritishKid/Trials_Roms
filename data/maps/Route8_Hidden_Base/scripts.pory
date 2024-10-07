@@ -1,0 +1,25 @@
+mapscripts Route8_Hidden_Base_MapScripts {}
+
+
+script Tapadap_SecretBase {
+    lockall
+    faceplayer
+    msgbox(format("Hi I'm Tapadapbadadap"))
+    msgbox(format("Battle coming soon!"))
+    releaseall
+}
+
+script Taps_Hidden_Base_EventScript_Find_MeowthDoll {
+    lockall
+    if (!flag(FLAG_HIDDEN_BASE_COLLECTABLE_FOUND_MEOWTH)) {
+        msgbox(format("It's Tap's Meowth Doll"))
+        adddecoration(DECOR_MEOWTH_DOLL)
+        setflag(FLAG_HIDDEN_BASE_COLLECTABLE_FOUND_MEOWTH)
+        subquestmenu(QUEST_MENU_COMPLETE_QUEST, QUEST_POKEMON_LEAGUE, SUB_QUEST_MEOWTH_DOLL)
+        msgbox(format("You've unlocked the MEOWTH Doll for your secret base"))
+    }
+    else {
+        msgbox(format("It's Tap's Meowth Doll"))
+    }
+    releaseall
+}

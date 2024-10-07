@@ -98,7 +98,7 @@
 #define DECOR_KECLEON_DOLL     94
 #define DECOR_AZURILL_DOLL     95
 #define DECOR_SKITTY_DOLL      96
-#define DECOR_SWABLU_DOLL      97
+#define DECOR_SWABLU_DOLL      97 //given by brad
 #define DECOR_GULPIN_DOLL      98 //given by nathan
 #define DECOR_LOTAD_DOLL       99
 #define DECOR_SEEDOT_DOLL      100

@@ -2,43 +2,44 @@ mapscripts Route1b_MapScripts {}
 
 
 script Route1b_BattleSalt7_FirstBattle {
-    trainerbattle_single(TRAINER_SALT7_ROUTE_1B_ENCOUNTER, Salt7_Intro, Salt7_Outro)
-    msgbox(PostBattle_Salt7, MSGBOX_AUTOCLOSE) //refactor so you dont have to talk to make var and flag set, should be post script
-    setflag(FLAG_SALT7_BEATEN_FIRST_ENCOUNTER)
-    // questmenu(QUEST_MENU_SET_ACTIVE, QUEST_SALT7_GYRADOS)
-    // subquestmenu(QUEST_MENU_COMPLETE_QUEST, QUEST_POKEMON_LEAGUE, SUB_QUEST_MET_SALT)
-    setvar(VAR_SALTS7_QUEST_STATE, 1)
-    waitmessage
+    trainerbattle_single(TRAINER_SALT7_ROUTE_1B_ENCOUNTER, Salt7_Intro, Salt7_Outro, Salt7_PostBattleScript)
+    msgbox(PostBattle_Salt7, MSGBOX_AUTOCLOSE)
     end
 }
 
+script Salt7_PostBattleScript {
+    setflag(FLAG_SALT7_BEATEN_FIRST_ENCOUNTER)
+    questmenu(QUEST_MENU_SET_ACTIVE, QUEST_SALT7_GYRADOS)
+    subquestmenu(QUEST_MENU_COMPLETE_QUEST, QUEST_POKEMON_LEAGUE, SUB_QUEST_MET_SALT)
+    setvar(VAR_SALTS7_QUEST_STATE, 1)
+    waitmessage
+}
+
 script Route1b_Battle_NeetFirst {
-    trainerbattle_single(TRAINER_SHUT1NNEET_ROUTE_1B, Route1b_Neet_Intro, Route1b_Neet_Outro)
+    trainerbattle_single(TRAINER_SHUT1NNEET_ROUTE_1B, Route1b_Neet_Intro, Route1b_Neet_Outro, Increase_Trainers_Beaten)
     msgbox(PostBattle_Route1b_Neet, MSGBOX_AUTOCLOSE)
-    setvar(VAR_FIRST_TRAINERS_BEATEN_CHECK, VAR_FIRST_TRAINERS_BEATEN_CHECK+1)
     waitmessage
     end
 }
 
 script Route1b_TrainerLeroy {
-    trainerbattle_single(TRAINER_GIRLMAYA_ROUTE_1B, Girl_Maya_Intro, Girl_Maya_Outro)
+    trainerbattle_single(TRAINER_GIRLMAYA_ROUTE_1B, Girl_Maya_Intro, Girl_Maya_Outro, Increase_Trainers_Beaten)
     msgbox(PostBattle_Maya, MSGBOX_AUTOCLOSE)
-    setvar(VAR_FIRST_TRAINERS_BEATEN_CHECK, VAR_FIRST_TRAINERS_BEATEN_CHECK+1)
     waitmessage
     end
 }
 
 script Route1b_BattlePicknickerLily {
-    trainerbattle_single(TRAINER_PICKNICKERLILY_ROUTE_1B, Picknicker_Lily_Intro, Picknicker_Lily_Outro)
+    trainerbattle_single(TRAINER_PICKNICKERLILY_ROUTE_1B, Picknicker_Lily_Intro, Picknicker_Lily_Outro, Increase_Trainers_Beaten)
     msgbox(PostBattle_Lily, MSGBOX_AUTOCLOSE)
-    setvar(VAR_FIRST_TRAINERS_BEATEN_CHECK, VAR_FIRST_TRAINERS_BEATEN_CHECK+1)
     waitmessage
     end
 }
 
 script Route1b_Fisherman_PierTalk {
     lock
-    msgbox(format("If I had a pokemon that could surf I could go over to that island!"), MSGBOX_DEFAULT)
+    faceplayer
+    msgbox(format("If I had a Pokémon that could surf I could go over to that island!"), MSGBOX_DEFAULT)
     release
 }
 
@@ -87,7 +88,7 @@ text Girl_Maya_Outro {
 }
 
 text PostBattle_Maya {
-    format("I need to catch some stronger Pokemon")
+    format("I need to catch some stronger Pokémon")
 }
 
 text Picknicker_Lily_Intro {
@@ -100,4 +101,11 @@ text Picknicker_Lily_Outro {
 
 text PostBattle_Lily {
     format("You can get the champion rank after getting every Triver badge and then beating league. It's an incredible challenge.")
+}
+
+
+//common 
+
+script Increase_Trainers_Beaten {
+    setvar(VAR_TRAINERS_BEATEN_CHECK, VAR_TRAINERS_BEATEN_CHECK+1)
 }

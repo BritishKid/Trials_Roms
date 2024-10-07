@@ -138,12 +138,29 @@ GranitePeak_School_ItemQuiz_Passsed::
 	msgbox GranitePeak_School_ItemQuiz_Passsed_Text_0
 	playfanfare MUS_OBTAIN_ITEM
 	setflag FLAG_ITEM_PATCH_EARNT
+	subquestmenu QUEST_MENU_COMPLETE_QUEST, QUEST_POKEMON_LEAGUE, SUB_QUEST_SCHOOL_ITEM_PATCH
 	msgbox GranitePeak_School_ItemQuiz_Passsed_Text_1
 	playfanfare MUS_OBTAIN_ITEM
-	giveitem ITEM_GRASS_GEM, 1
+	switch VAR_STARTER_MON
+	case 0, GranitePeak_School_ItemQuiz_Passsed_3
+	case 1, GranitePeak_School_ItemQuiz_Passsed_4
+	case 2, GranitePeak_School_ItemQuiz_Passsed_5
+GranitePeak_School_ItemQuiz_Passsed_1:
 	giveitem ITEM_ELECTRIC_GEM, 1
 	msgbox GranitePeak_School_ItemQuiz_Passsed_Text_2
 	return
+
+GranitePeak_School_ItemQuiz_Passsed_3:
+	giveitem ITEM_GRASS_GEM, 1
+	goto GranitePeak_School_ItemQuiz_Passsed_1
+
+GranitePeak_School_ItemQuiz_Passsed_4:
+	giveitem ITEM_FIRE_GEM, 1
+	goto GranitePeak_School_ItemQuiz_Passsed_1
+
+GranitePeak_School_ItemQuiz_Passsed_5:
+	giveitem ITEM_WATER_GEM, 1
+	goto GranitePeak_School_ItemQuiz_Passsed_1
 
 
 GranitePeak_ItemClass_Girl1::
@@ -172,7 +189,9 @@ ItemStudent_Beaten_1:
 	goto_if_eq ItemStudent_Beaten_5
 ItemStudent_Beaten_4:
 	compare VAR_ITEM_ROOM_STUDENTS, 0
-	goto_if_eq ItemStudent_Beaten_7
+	goto_if_eq ItemStudent_Beaten_8
+ItemStudent_Beaten_7:
+	call Increase_Trainers_Beaten
 	return
 
 ItemStudent_Beaten_2:
@@ -183,9 +202,9 @@ ItemStudent_Beaten_5:
 	setvar VAR_ITEM_ROOM_STUDENTS, 2
 	goto ItemStudent_Beaten_4
 
-ItemStudent_Beaten_7:
+ItemStudent_Beaten_8:
 	setvar VAR_ITEM_ROOM_STUDENTS, 1
-	return
+	goto ItemStudent_Beaten_7
 
 
 GranitePeak_ItemClass_Teacher_Text_0:
@@ -232,11 +251,11 @@ GranitePeak_School_Item_Quiz_Text_3:
 GranitePeak_School_Item_Quiz_Text_4:
 	.string "Okay Final Question\n"
 	.string "A held items benefits are the same for\l"
-	.string "all Pokemon?$"
+	.string "all Pokémon?$"
 
 GranitePeak_School_Item_Quiz_Text_5:
 	.string "Yes, some items only work on certain\n"
-	.string "Pokemon.$"
+	.string "Pokémon.$"
 
 GranitePeak_School_Item_Quiz_Text_6:
 	.string "Incredible! You passed with ease$"

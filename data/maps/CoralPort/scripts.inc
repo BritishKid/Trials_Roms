@@ -1,15 +1,11 @@
 CoralPort_MapScripts::
-	map_script MAP_SCRIPT_ON_TRANSITION, CoralPort_OnTransition
-	map_script MAP_SCRIPT_ON_RESUME, CoralPort_OnResume
+	map_script MAP_SCRIPT_ON_TRANSITION, CoralPort_MapScripts_MAP_SCRIPT_ON_TRANSITION
 	.byte 0
 
-CoralPort_OnTransition:
+CoralPort_MapScripts_MAP_SCRIPT_ON_TRANSITION:
 	setflag FLAG_VISITED_CORAL_PORT
-	end
+	return
 
-CoralPort_OnResume:
-	setstepcallback STEP_CB_FORTREE_BRIDGE
-	end
 
 CoralPort_EventScript_Kecleon::
 	lock
@@ -80,23 +76,16 @@ ForetreeCity_BeachLady::
 	return
 
 
-CoralPort_EventScript_Woman_Market::
-	lockall
-	msgbox CoralPort_EventScript_Woman_Market_Text_0
-	waitmessage
-	msgbox CoralPort_EventScript_Woman_Market_Text_1
-	releaseall
-	return
-
-
 CoralPort_EventScript_OldMan_Market::
 	lockall
+	questmenu QUEST_MENU_CHECK_ACTIVE, QUEST_EVOLUTION_STONE_MART
 	compare VAR_RESULT, 0
 	goto_if_eq CoralPort_EventScript_OldMan_Market_2
 CoralPort_EventScript_OldMan_Market_1:
 	goto_if_set FLAG_LEAF_STONE_SOURCE, CoralPort_EventScript_OldMan_Market_8
 CoralPort_EventScript_OldMan_Market_6:
-	msgbox CoralPort_EventScript_OldMan_Market_Text_3
+	msgbox CoralPort_EventScript_OldMan_Market_Text_6
+	msgbox CoralPort_EventScript_OldMan_Market_Text_7
 CoralPort_EventScript_OldMan_Market_4:
 	releaseall
 	return
@@ -104,13 +93,16 @@ CoralPort_EventScript_OldMan_Market_4:
 CoralPort_EventScript_OldMan_Market_2:
 	msgbox CoralPort_EventScript_OldMan_Market_Text_0
 	msgbox CoralPort_EventScript_OldMan_Market_Text_1
+	msgbox CoralPort_EventScript_OldMan_Market_Text_2
+	questmenu QUEST_MENU_SET_ACTIVE, QUEST_EVOLUTION_STONE_MART
 	goto CoralPort_EventScript_OldMan_Market_1
 
 CoralPort_EventScript_OldMan_Market_5:
-	msgbox CoralPort_EventScript_OldMan_Market_Text_2
+	msgbox CoralPort_EventScript_OldMan_Market_Text_3
 	waitmessage
 	pokemart CoastalTown_EvolutionStoneMarket_Elemental
-	msgbox CoralPort_EventScript_Woman_Market_Text_1
+	msgbox CoralPort_EventScript_OldMan_Market_Text_4
+	msgbox CoralPort_EventScript_OldMan_Market_Text_5
 	goto CoralPort_EventScript_OldMan_Market_4
 
 CoralPort_EventScript_OldMan_Market_7:
@@ -122,27 +114,35 @@ CoralPort_EventScript_OldMan_Market_8:
 	goto CoralPort_EventScript_OldMan_Market_6
 
 
-CoralPort_EventScript_Man_Market::
+CoralPort_EventScript_Woman_Market::
 	lockall
 	msgbox CoralPort_EventScript_Woman_Market_Text_0
 	waitmessage
-	msgbox CoralPort_EventScript_Woman_Market_Text_1
+	pokemart CoralPort_Market_Items
 	releaseall
 	return
 
 
 CoralPort_EventScript_Fishman_Market::
 	lockall
-	msgbox CoralPort_EventScript_Fishman_Market_Text_0, MSGBOX_YESNO
-	compare VAR_RESULT, NO
+	questmenu QUEST_MENU_CHECK_ACTIVE, QUEST_GIANT_FISH
+	compare VAR_RESULT, 0
 	goto_if_eq CoralPort_EventScript_Fishman_Market_2
-	msgbox CoralPort_EventScript_Fishman_Market_Text_2
-	msgbox CoralPort_EventScript_Fishman_Market_Text_3
+	msgbox CoralPort_EventScript_Fishman_Market_Text_4
 CoralPort_EventScript_Fishman_Market_1:
 	releaseall
 	return
 
 CoralPort_EventScript_Fishman_Market_2:
+	msgbox CoralPort_EventScript_Fishman_Market_Text_0, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq CoralPort_EventScript_Fishman_Market_5
+	msgbox CoralPort_EventScript_Fishman_Market_Text_2
+	msgbox CoralPort_EventScript_Fishman_Market_Text_3
+	questmenu QUEST_MENU_SET_ACTIVE, QUEST_GIANT_FISH
+	goto CoralPort_EventScript_Fishman_Market_1
+
+CoralPort_EventScript_Fishman_Market_5:
 	msgbox CoralPort_EventScript_Fishman_Market_Text_1
 	goto CoralPort_EventScript_Fishman_Market_1
 
@@ -232,45 +232,67 @@ CoastalTown_EvolutionStoneMarket_Elemental:
 	.2byte ITEM_WATER_STONE
 	.2byte ITEM_NONE
 
+	.align 2
+CoralPort_Market_Items:
+	.2byte ITEM_HP_UP
+	.2byte ITEM_PROTEIN
+	.2byte ITEM_IRON
+	.2byte ITEM_CALCIUM
+	.2byte ITEM_ZINC
+	.2byte ITEM_CARBOS
+	.2byte ITEM_PP_UP
+	.2byte ITEM_NONE
+
 CoralPort_TuberF_OnBeach_Text_0:
 	.string "Over the water you can reach the other\n"
 	.string "islands of Triver!$"
 
 CoralPort_TuberM_OnBeach_Text_0:
 	.string "Mummy says Triver has millions of\n"
-	.string "islands! That's like a gazillion Pokemon\l"
+	.string "islands! That's like a gazillion Pokémon\l"
 	.string "to find!$"
 
 ForetreeCity_BeachLady_Text_0:
 	.string "There is a boat that connects all the\n"
 	.string "islands together but if you have a\l"
-	.string "strong Pokemon you can surf between\l"
+	.string "strong Pokémon you can surf between\l"
 	.string "them.$"
 
-CoralPort_EventScript_Woman_Market_Text_0:
-	.string "How may I serve you$"
-
-CoralPort_EventScript_Woman_Market_Text_1:
-	.string "Please Come Again.$"
-
 CoralPort_EventScript_OldMan_Market_Text_0:
-	.string "Hi. Sorry we aren't open right now. We\n"
-	.string "recently ran out of stock that we\l"
+	.string "Hi.\n"
+	.string "Sorry we aren't open right now.$"
+
+CoralPort_EventScript_OldMan_Market_Text_1:
+	.string "We recently ran out of stock that we\n"
 	.string "bought with us and my Grandson is out\l"
 	.string "trying to find a source for us over\l"
 	.string "here.$"
 
-CoralPort_EventScript_OldMan_Market_Text_1:
+CoralPort_EventScript_OldMan_Market_Text_2:
 	.string "You're welcome to try and find him$"
 
-CoralPort_EventScript_OldMan_Market_Text_2:
+CoralPort_EventScript_OldMan_Market_Text_3:
 	.string "Thanks to you we are able to start\n"
 	.string "selling stones again! We greatly\l"
 	.string "appreciate it.$"
 
-CoralPort_EventScript_OldMan_Market_Text_3:
+CoralPort_EventScript_OldMan_Market_Text_4:
+	.string "Keep an eye out for my Grandson he is\n"
+	.string "still loooking for more stone sources$"
+
+CoralPort_EventScript_OldMan_Market_Text_5:
+	.string "Please Come Again.$"
+
+CoralPort_EventScript_OldMan_Market_Text_6:
 	.string "Hi, have you had any luck finding my\n"
 	.string "Grandson?$"
+
+CoralPort_EventScript_OldMan_Market_Text_7:
+	.string "He should be around somewhere looking\n"
+	.string "for the source of the evolution stones$"
+
+CoralPort_EventScript_Woman_Market_Text_0:
+	.string "Hey would you like some items to help you in your battles?$"
 
 CoralPort_EventScript_Fishman_Market_Text_0:
 	.string "Hi do you like fishing?$"
@@ -283,10 +305,14 @@ CoralPort_EventScript_Fishman_Market_Text_2:
 	.string "That's what I like to hear.$"
 
 CoralPort_EventScript_Fishman_Market_Text_3:
-	.string "There are rumours of giant fish Pokemon\n"
+	.string "There are rumours of giant fish Pokémon\n"
 	.string "lurking around Triver. If you can find\l"
 	.string "and catch them with your lure I'll be\l"
 	.string "sure to reward you.$"
+
+CoralPort_EventScript_Fishman_Market_Text_4:
+	.string "How are you doing finding the giant\n"
+	.string "fish?$"
 
 SandyShoreCity_RivalBlocking_Boat_Text_0:
 	.string "Hey {PLAYER} you've finally managed\n"

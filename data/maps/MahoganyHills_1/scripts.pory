@@ -1,26 +1,20 @@
 mapscripts MahoganyHills_1_MapScripts {
 }
 
-script MahoganyTown_EventScript_ItemPokeBall_RockTomb {
-    finditem(ITEM_TM39)
-}
-
 script MahoganyTown_EventScript_ItemPokeBall_ShockWave {
     finditem(ITEM_TM34)
 }
 
 script MahoganyTown_EventScript_Battle_Frank {
-    trainerbattle_single(TRAINER_MAHOGANYHILLS_BUGCATCHER_FRANK, MahoganyHills2_BugCatcher_Frank_Intro, MahoganyHills2_BugCatcher_Frank_Outro)
+    trainerbattle_single(TRAINER_MAHOGANYHILLS_BUGCATCHER_FRANK, MahoganyHills2_BugCatcher_Frank_Intro, MahoganyHills2_BugCatcher_Frank_Outro, Increase_Trainers_Beaten)
     msgbox(PostBattle_MahoganyHills2_BugCatcher_Frank, MSGBOX_AUTOCLOSE)
-    setvar(VAR_FIRST_TRAINERS_BEATEN_CHECK, VAR_FIRST_TRAINERS_BEATEN_CHECK+1)
     waitmessage
     end
 }
 
 script MahoganyTown_EventScript_Battle_Tough {
-    trainerbattle_single(TRAINER_MAHOGANYHILLS_TOUGH_TRAINER, MahoganyHills2_ToughTrainer_Intro, MahoganyHills2_ToughTrainer_Outro)
+    trainerbattle_single(TRAINER_MAHOGANYHILLS_TOUGH_TRAINER, MahoganyHills2_ToughTrainer_Intro, MahoganyHills2_ToughTrainer_Outro, Increase_Trainers_Beaten)
     msgbox(PostBattle_MahoganyHills1_ToughTrainer)
-    setvar(VAR_FIRST_TRAINERS_BEATEN_CHECK, VAR_FIRST_TRAINERS_BEATEN_CHECK+1)
     waitmessage
     end
 }
@@ -64,6 +58,7 @@ script MahoganyScript_EventScript_Monster_Setup {
     applymovement(7, Movement_Child_Being_Chased)
     waitmovement(7)
     msgbox(format("A giant Poochyena charges up to you!"))
+    setflag(FLAG_CANT_CATCH_MON)
     settotemboost(1,1,1,1,0,0,0,0)
     setwildbattle(SPECIES_POOCHYENA, 12, ITEM_BERRY_JUICE)
     dowildbattle
@@ -71,6 +66,7 @@ script MahoganyScript_EventScript_Monster_Setup {
 
 script MahoganyScript_EventScript_Monster_Beaten {
     removeobject(7)
+    clearflag(FLAG_CANT_CATCH_MON)
     msgbox("Oh wow you did it!")
     msgbox(format("What my dad want's me back? I should rush home. Thanks again!"))
     applymovement(5, Movement_Child_Being_Chased)
@@ -147,13 +143,13 @@ text PostBattle_MahoganyHills2_BugCatcher_Frank {
 }
 
 text MahoganyHills2_ToughTrainer_Intro {
-    format("I keep seeing this guy appear and take a nap nearby.")
+    format("Let's start this battle.")
 }
 
 text MahoganyHills2_ToughTrainer_Outro {
-    format("I might have been in the sun too long.")
+    format("You're an amazing battler")
 }
 
 text PostBattle_MahoganyHills1_ToughTrainer {
-    format("They keep appearing and yelling something about his kidneys")
+    format("I'm going to train harder to be just like you")
 }

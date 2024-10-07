@@ -132,6 +132,7 @@ GranitePeak_School_AbilityQuiz_Passed::
 	msgbox GranitePeak_School_AbilityQuiz_Passed_Text_0
 	playfanfare MUS_OBTAIN_ITEM
 	setflag FLAG_ABILITY_PATCH_EARNT
+	subquestmenu QUEST_MENU_COMPLETE_QUEST, QUEST_POKEMON_LEAGUE, SUB_QUEST_SCHOOL_ABILITY_PATCH
 	msgbox GranitePeak_School_AbilityQuiz_Passed_Text_1
 	playfanfare MUS_OBTAIN_ITEM
 	giveitem ITEM_ABILITY_CAPSULE, 2
@@ -171,7 +172,9 @@ AbilityStudent_Beaten_1:
 	goto_if_eq AbilityStudent_Beaten_5
 AbilityStudent_Beaten_4:
 	compare VAR_ABILITY_ROOM_STUDENTS, 0
-	goto_if_eq AbilityStudent_Beaten_7
+	goto_if_eq AbilityStudent_Beaten_8
+AbilityStudent_Beaten_7:
+	call Increase_Trainers_Beaten
 	return
 
 AbilityStudent_Beaten_2:
@@ -182,13 +185,13 @@ AbilityStudent_Beaten_5:
 	setvar VAR_ABILITY_ROOM_STUDENTS, 2
 	goto AbilityStudent_Beaten_4
 
-AbilityStudent_Beaten_7:
+AbilityStudent_Beaten_8:
 	setvar VAR_ABILITY_ROOM_STUDENTS, 1
-	return
+	goto AbilityStudent_Beaten_7
 
 
 GranitePeak_AbilityClass_Teacher_Text_0:
-	.string "Abilities are what make some Pokemon\n"
+	.string "Abilities are what make some Pokémon\n"
 	.string "stronger than others.$"
 
 GranitePeak_AbilityClass_Teacher_Text_1:
@@ -213,7 +216,7 @@ GranitePeak_AbilityClass_Teacher_Text_5:
 
 GranitePeak_School_Ability_Quiz_Text_0:
 	.string "Question 1.\n"
-	.string "When Pokemon evolve they always keep\l"
+	.string "When Pokémon evolve they always keep\l"
 	.string "their ability?$"
 
 GranitePeak_School_Ability_Quiz_Text_1:
@@ -246,7 +249,7 @@ GranitePeak_School_Ability_Quiz_Text_8:
 	.string "That's Incorrect.$"
 
 GranitePeak_School_Ability_Quiz_Text_9:
-	.string "Sorry that's wrong, sometimes Pokemon\n"
+	.string "Sorry that's wrong, sometimes Pokémon\n"
 	.string "don't share abilities with their\l"
 	.string "evolutions.$"
 
@@ -264,7 +267,7 @@ GranitePeak_School_AbilityQuiz_Failed_Text_0:
 	.string "Talk to some students and reach some resources. Then come back and try again$"
 
 AbilityBoy1_Intro::
-	.string "Abilities can allow pokemon to gain new\n"
+	.string "Abilities can allow Pokémon to gain new\n"
 	.string "resitences or immunities$"
 
 AbilityBoy1_Outro::

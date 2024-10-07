@@ -3,13 +3,13 @@ Route3b_MapScripts::
 
 
 GBattleScript::
-	trainerbattle_single ROUTE3G, G_Intro, G_Outro
+	trainerbattle_single ROUTE3G, G_Intro, G_Outro, Increase_Trainers_Beaten
 	msgbox G_PostBattle, MSGBOX_AUTOCLOSE
 	end
 
 
 SurpirseBattleScript::
-	trainerbattle_single ROUTE3_HIDDEN, Route3Hidden_Intro, Route3Hidden_Outro, SurpriseTrainerPostScript
+	trainerbattle_single ROUTE3_HIDDEN, Route3Hidden_Intro, Route3Hidden_Outro, SurpriseTrainerPostScript, Increase_Trainers_Beaten
 	msgbox Route3Hidden_PostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -36,8 +36,13 @@ CharmanderGrotto_3:
 	return
 
 
+Route3b_Itemball_ChoiceBand::
+	finditem ITEM_CHOICE_BAND
+	return
+
+
 CharmanderGrotto_Text_0:
-	.string "You think you can see some pokemon\n"
+	.string "You think you can see some Pokémon\n"
 	.string "running around.$"
 
 CharmanderGrotto_Text_1:
@@ -48,11 +53,11 @@ G_Intro::
 	.string "I love being up in the mountains.$"
 
 G_Outro::
-	.string "I'll have to catch stronger Pokemon\n"
+	.string "I'll have to catch stronger Pokémon\n"
 	.string "then.$"
 
 G_PostBattle::
-	.string "I've heard some really powerful Pokemon\n"
+	.string "I've heard some really powerful Pokémon\n"
 	.string "hide near the peak.$"
 
 Route3Hidden_Intro::
@@ -60,7 +65,8 @@ Route3Hidden_Intro::
 	.string "somewhere near here.$"
 
 Route3Hidden_Outro::
-	.string "It should be nearby$"
+	.string "That explosion blew the band right off\n"
+	.string "my Graveller$"
 
 Route3Hidden_PostBattle::
 	.string "Maybe I read the map wrong$"

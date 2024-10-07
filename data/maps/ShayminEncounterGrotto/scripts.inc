@@ -21,6 +21,7 @@ ShayminEncounter_4:
 	return
 
 ShayminEncounter_2:
+	setflag FLAG_CANT_CATCH_MON
 	settotemboost 1, 1, 1, 1, 1, 1, 1, 1
 	setwildbattle SPECIES_SHAYMIN, 50, ITEM_SITRUS_BERRY
 	dowildbattle
@@ -31,6 +32,7 @@ ShayminEncounter_2:
 	goto ShayminEncounter_1
 
 ShayminEncounter_5:
+	clearflag FLAG_CANT_CATCH_MON
 	givemon SPECIES_SHAYMIN, 30
 	playfanfare MUS_OBTAIN_ITEM
 	compare VAR_RESULT, MON_GIVEN_TO_PARTY

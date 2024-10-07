@@ -19,7 +19,7 @@ AquaHideout_B1F_OnTransition:
 	end
 
 AquaHideout_B1F_EventScript_ShowElectrode1::
-	clearflag FLAG_HIDE_AQUA_HIDEOUT_B1F_ELECTRODE_1
+	clearflag FLAG_HIDE_MAT_MEGA_MANSION
 	return
 
 AquaHideout_B1F_EventScript_ShowElectrode2::

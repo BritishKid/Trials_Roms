@@ -1,1 +1,50 @@
 mapscripts Mossdeep_Orphanage_MapScripts {}
+
+
+script Orphanage_LostTreecko {
+    lockall
+    faceplayer
+    questmenu(QUEST_MENU_CHECK_COMPLETE, QUEST_FINDING_TREECKO) 
+    if(var(VAR_RESULT)){
+        msgbox(format("I have to go catch my own Treecko!"))
+        end
+    }
+    questmenu(QUEST_MENU_CHECK_ACTIVE, QUEST_FINDING_TREECKO) 
+    if(!var(VAR_RESULT)){
+        msgbox(format("My mum used to talk about how cool Treecko was but I never got to see one before she died."))
+        msgbox(format("You have lots Pokémon are you able to show me one?"))
+        questmenu(QUEST_MENU_SET_ACTIVE, QUEST_FINDING_TREECKO)
+        msgbox(format("Oh you haven't seen one, please find one for me."))
+    }
+    if(var(VAR_RESULT) && !flag(FLAG_TREECKO_BATTLE_BEATEN)) {
+        msgbox(format("I would love to see Treecko"))
+    }
+    releaseall
+}
+
+script Orphanage_Lady {
+    lockall
+    faceplayer
+    msgbox(format("It's hard looking after all these children, but it's so rewarding teaching them."))
+    releaseall
+}
+
+script Orpahanage_ChildInKitchen {
+    lockall
+    faceplayer
+    msgbox(format("I'm learning to cook! It'll make me such a ladies man when I'm older."))
+    releaseall
+}
+
+script Orphanage_Leftovers {
+    lockall
+
+    msgbox(format("It's a sink"))
+    if(!flag(FLAG_LEFTOVERS_ORPHANAGE)) {
+        msgbox(format("There is some food in the sink you think you could use."))
+        giveitem(ITEM_LEFTOVERS, 1)
+        setflag(FLAG_LEFTOVERS_ORPHANAGE)
+        playfanfare(MUS_OBTAIN_ITEM)
+    }
+    releaseall
+}

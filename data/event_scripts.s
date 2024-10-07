@@ -162,7 +162,6 @@ gStdScripts_End::
 	.include "data/maps/Underwater_Route105/scripts.inc"
 	.include "data/maps/Underwater_Route125/scripts.inc"
 	.include "data/maps/LittlerootTown_BrendansHouse_1F/scripts.inc"
-	.include "data/maps/LittlerootTown_BrendansHouse_2F/scripts.inc"
 	.include "data/maps/LittlerootTown_MaysHouse_1F/scripts.inc"
 	.include "data/maps/LittlerootTown_MaysHouse_2F/scripts.inc"
 	.include "data/maps/LittlerootTown_ProfessorBirchsLab/scripts.inc"
@@ -779,7 +778,7 @@ RusturfTunnel_EventScript_SetRusturfTunnelOpen::
 	removeobject LOCALID_WANDA
 	clearflag FLAG_HIDE_VERDANTURF_TOWN_WANDAS_HOUSE_WANDAS_BOYFRIEND
 	clearflag FLAG_HIDE_VERDANTURF_TOWN_WANDAS_HOUSE_WANDA
-	setvar VAR_RUSTURF_TUNNEL_STATE, 6
+	setvar VAR_EMBERDUNES_BUTTONS_PRESSED, 6
 	setflag FLAG_RUSTURF_TUNNEL_OPENED
 	return
 
@@ -1278,3 +1277,51 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/maps/Gym4/scripts.inc"
 
 	.include "data/maps/DeeperQuarryGF_1/scripts.inc"
+
+	.include "data/maps/DeeoerQuarryBF1/scripts.inc"
+
+	.include "data/maps/DeeperQuarryBF2_1/scripts.inc"
+
+	.include "data/maps/DeeperQuarryEnd/scripts.inc"
+
+	.include "data/maps/MauvilleCity_BikeLady/scripts.inc"
+
+	.include "data/maps/GranitePeak_AlexHouse/scripts.inc"
+
+	.include "data/maps/ChampionsGuild_1/scripts.inc"
+
+	.include "data/maps/MahoganyHillsCave_WoChien/scripts.inc"
+
+	.include "data/maps/QuarrySecret/scripts.inc"
+
+	.include "data/maps/Platefall_Cave_DeeperGF/scripts.inc"
+
+	.include "data/maps/Route8_Hidden_Base/scripts.inc"
+
+	.include "data/maps/TepigGrotto/scripts.inc"
+
+	.include "data/maps/LilycoveCity_MegaMansion/scripts.inc"
+
+	.include "data/maps/LilycoveCity_MegaMansion_2f/scripts.inc"
+
+	.include "data/maps/LilycoveCity_MegaMansion_3f/scripts.inc"
+
+	.include "data/maps/LilycoveCity_MegaMansion_BF/scripts.inc"
+
+	.include "data/maps/MegaMansion_Outside/scripts.inc"
+
+	.include "data/maps/ObsidianPeak_2/scripts.inc"
+
+	.include "data/maps/EmderDunes_Larger/scripts.inc"
+
+	.include "data/maps/Quarry_ForemanHouse/scripts.inc"
+
+	.include "data/maps/Quarry_WorkerHousing/scripts.inc"
+
+	.include "data/maps/GranitePeak_Dojo1/scripts.inc"
+
+	.include "data/maps/Mossdeep_Orphanage_1F/scripts.inc"
+
+	.include "data/maps/LilycoveCity_House1_Upstairs/scripts.inc"
+
+	.include "data/maps/Brad_Hidden_base/scripts.inc"

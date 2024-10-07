@@ -4,6 +4,7 @@ GranitePeak_House3_MapScripts::
 
 GranitePeak_House3_Script_Little_Girl::
 	lock
+	faceplayer
 	msgbox GranitePeak_House3_Script_Little_Girl_Text_0
 	release
 	return
@@ -11,6 +12,7 @@ GranitePeak_House3_Script_Little_Girl::
 
 GranitePeak_House3_Script_Mother::
 	lock
+	faceplayer
 	msgbox GranitePeak_House3_Script_Mother_Text_0
 	release
 	return

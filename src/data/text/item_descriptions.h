@@ -3289,14 +3289,28 @@ static const u8 sTM51Desc[] = _(
     "the user eats it\n"
     "and gains its effect.");
     
-static const u8 sTM52Desc[] = _( // Todo
-    "?????");
-
+static const u8 sTM52Desc[] = _(
+    "The user attacks by\n"
+    "shooting boiling hot\n"
+    "water at the target.\n"
+    "This may also leave\n"
+    "the target with a burn.");
+    
 static const u8 sTM53Desc[] = _( // Todo
-    "?????");
+    "Large boulders are\n"
+    "hurled at opposing\n"
+    "Pokémon to inflict\n"
+    "damage. This may\n"
+    "also make the opposing\n"
+    "Pokémon flinch.");
 
 static const u8 sTM54Desc[] = _( // Todo
-    "?????");
+    "The user snares the\n"
+    "target with grass\n"
+    "and trips it. The\n"
+    "heavier the target,\n"
+    "the greater the\n"
+    "move's power.");
 
 static const u8 sTM55Desc[] = _( // Todo
     "?????");

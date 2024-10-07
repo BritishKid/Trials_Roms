@@ -45,9 +45,8 @@ LavaridgeTown_Gym_SetGymTrainers::
 	return
 
 GranitePeak_Gym_SetGymTrainers::
-	settrainerflag TRAINER_MARY
-	settrainerflag TRAINER_ALEXIA
-	settrainerflag TRAINER_JODY
+	settrainerflag MEGAMANSION_TRAINER1
+	settrainerflag MEGAMANSION_TRAINER3
 	return
 
 CoralPort_Gym_SetGymTrainers::
@@ -84,5 +83,5 @@ SootopolisCity_Gym_SetGymTrainers::
 	settrainerflag TRAINER_TIFFANY
 	settrainerflag TRAINER_BETHANY
 	settrainerflag TRAINER_ANNIKA
-	settrainerflag TRAINER_DAPHNE
+	settrainerflag TRAINER_SECOND_ENCOUNTER_ROBERT
 	return

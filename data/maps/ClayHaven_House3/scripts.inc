@@ -23,6 +23,7 @@ Town2_EventScript_QuestStart_10:
 Town2_EventScript_QuestStart_2:
 	msgbox Town2_EventScript_QuestStart_Text_0
 	msgbox Town2_EventScript_QuestStart_Text_1
+	questmenu QUEST_MENU_SET_ACTIVE, QUEST_LOST_GIRL
 	setvar VAR_TOWN_2_QUEST_STATE, 1
 	goto Town2_EventScript_QuestStart_1
 
@@ -37,6 +38,7 @@ Town2_EventScript_QuestStart_8:
 	giveitem ITEM_MYSTIC_WATER
 	playfanfare MUS_OBTAIN_ITEM
 	setvar VAR_TOWN_2_QUEST_STATE, 3
+	questmenu QUEST_MENU_COMPLETE_QUEST, QUEST_LOST_GIRL
 	goto Town2_EventScript_QuestStart_7
 
 Town2_EventScript_QuestStart_11:
@@ -46,6 +48,7 @@ Town2_EventScript_QuestStart_11:
 
 Town2_House3_EventScript_Girl::
 	lockall
+	faceplayer
 	msgbox Town2_House3_EventScript_Girl_Text_0
 	releaseall
 	return
@@ -55,7 +58,7 @@ Town2_EventScript_QuestStart_Text_0:
 	.string "Have you seen my daughter? She should\n"
 	.string "be back by now.\p"
 	.string "She went down to Mahogany Hills to\n"
-	.string "train her pokemon. I hope she is okay.$"
+	.string "train her Pokémon. I hope she is okay.$"
 
 Town2_EventScript_QuestStart_Text_1:
 	.string "If you find her can you tell her to come\n"

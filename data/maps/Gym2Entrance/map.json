@@ -2,15 +2,15 @@
   "id": "MAP_GYM2ENTRANCE",
   "name": "Gym2Entrance",
   "layout": "LAYOUT_GYM2ENTRANCE",
-  "music": "MUS_ABANDONED_SHIP",
-  "region_map_section": "MAPSEC_BEDROCK_TOWN",
+  "music": "MUS_ROUTE110",
+  "region_map_section": "MAPSEC_ONE_ISLAND",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_NONE",
   "allow_cycling": false,
   "allow_escaping": false,
   "allow_running": false,
-  "show_map_name": true,
+  "show_map_name": false,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
@@ -32,6 +32,19 @@
       "trainer_sight_or_berry_tree_id": "3",
       "script": "Gym2Entrance_JerichoBattle",
       "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_BRENDAN_NORMAL",
+      "x": 20,
+      "y": 7,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EventScript_Gym2_Robert_FindLater",
+      "flag": "FLAG_HIDE_SECOND_ENCOUNTER_ROB"
     }
   ],
   "warp_events": [
@@ -44,9 +57,24 @@
     }
   ],
   "coord_events": [
-
+    {
+      "type": "trigger",
+      "x": 18,
+      "y": 7,
+      "elevation": 0,
+      "var": "VAR_ROBERT_STATE",
+      "var_value": "2",
+      "script": "EventScript_Gym2_MeetRob"
+    }
   ],
   "bg_events": [
-
+    {
+      "type": "sign",
+      "x": 21,
+      "y": 7,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Gym2_Sign"
+    }
   ]
 }

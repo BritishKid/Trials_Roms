@@ -2,7 +2,7 @@ mapscripts DarkCave_B2F_MapScripts {}
 
 script DarkCave_Rock_Plate_Script {
     lock
-    msgbox(format("There is a carving of many rock like Pokemon crawling over a plate."))
+    msgbox(format("There is a carving of many rock like Pokémon crawling over a plate."))
     if(flag(FLAG_LEGENDS_PLATE_FOUND) && !flag(FLAG_ROCK_PLATE_FOUND)) {
         msgbox(format("Do you want to put the LEGENDS PLATE in the slot?"), MSGBOX_YESNO)
         if(var(VAR_RESULT) == YES){
@@ -12,7 +12,7 @@ script DarkCave_Rock_Plate_Script {
             setvar(VAR_0x8007, 0) //delay
             special(ShakeCamera)
             fadescreen(FADE_TO_BLACK)
-            warp(MAP_LOST_PLATES, 20, 14)
+            warp(MAP_LOST_PLATES, 20, 12)
         }   
     }
     if(flag(FLAG_ALEX_INSECT_PLATE) && !flag(FLAG_LEGENDS_PLATE_FOUND)) {

@@ -2,28 +2,21 @@ MahoganyHills_1_MapScripts::
 	.byte 0
 
 
-MahoganyTown_EventScript_ItemPokeBall_RockTomb::
-	finditem ITEM_TM39
-	return
-
-
 MahoganyTown_EventScript_ItemPokeBall_ShockWave::
 	finditem ITEM_TM34
 	return
 
 
 MahoganyTown_EventScript_Battle_Frank::
-	trainerbattle_single TRAINER_MAHOGANYHILLS_BUGCATCHER_FRANK, MahoganyHills2_BugCatcher_Frank_Intro, MahoganyHills2_BugCatcher_Frank_Outro
+	trainerbattle_single TRAINER_MAHOGANYHILLS_BUGCATCHER_FRANK, MahoganyHills2_BugCatcher_Frank_Intro, MahoganyHills2_BugCatcher_Frank_Outro, Increase_Trainers_Beaten
 	msgbox PostBattle_MahoganyHills2_BugCatcher_Frank, MSGBOX_AUTOCLOSE
-	setvar VAR_FIRST_TRAINERS_BEATEN_CHECK, VAR_FIRST_TRAINERS_BEATEN_CHECK + 1
 	waitmessage
 	end
 
 
 MahoganyTown_EventScript_Battle_Tough::
-	trainerbattle_single TRAINER_MAHOGANYHILLS_TOUGH_TRAINER, MahoganyHills2_ToughTrainer_Intro, MahoganyHills2_ToughTrainer_Outro
+	trainerbattle_single TRAINER_MAHOGANYHILLS_TOUGH_TRAINER, MahoganyHills2_ToughTrainer_Intro, MahoganyHills2_ToughTrainer_Outro, Increase_Trainers_Beaten
 	msgbox PostBattle_MahoganyHills1_ToughTrainer
-	setvar VAR_FIRST_TRAINERS_BEATEN_CHECK, VAR_FIRST_TRAINERS_BEATEN_CHECK + 1
 	waitmessage
 	end
 
@@ -70,6 +63,7 @@ MahoganyScript_EventScript_Monster_Setup::
 	applymovement 7, Movement_Child_Being_Chased
 	waitmovement 7
 	msgbox MahoganyScript_EventScript_Monster_Setup_Text_1
+	setflag FLAG_CANT_CATCH_MON
 	settotemboost 1, 1, 1, 1, 0, 0, 0, 0
 	setwildbattle SPECIES_POOCHYENA, 12, ITEM_BERRY_JUICE
 	dowildbattle
@@ -78,6 +72,7 @@ MahoganyScript_EventScript_Monster_Setup::
 
 MahoganyScript_EventScript_Monster_Beaten::
 	removeobject 7
+	clearflag FLAG_CANT_CATCH_MON
 	msgbox MahoganyScript_EventScript_Monster_Beaten_Text_0
 	msgbox MahoganyScript_EventScript_Monster_Beaten_Text_1
 	applymovement 5, Movement_Child_Being_Chased
@@ -185,12 +180,11 @@ PostBattle_MahoganyHills2_BugCatcher_Frank::
 	.string "Just toss me into the garbage$"
 
 MahoganyHills2_ToughTrainer_Intro::
-	.string "I keep seeing this guy appear and take\n"
-	.string "a nap nearby.$"
+	.string "Let's start this battle.$"
 
 MahoganyHills2_ToughTrainer_Outro::
-	.string "I might have been in the sun too long.$"
+	.string "You're an amazing battler$"
 
 PostBattle_MahoganyHills1_ToughTrainer::
-	.string "They keep appearing and yelling\n"
-	.string "something about his kidneys$"
+	.string "I'm going to train harder to be just like\n"
+	.string "you$"

@@ -22,83 +22,106 @@ GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_4:
 	end
 
 GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_2:
-	addmoney 5000
+	goto_if_unset FLAG_BADGE02_GET, GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_8
+	goto_if_unset FLAG_BADGE03_GET, GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_9
+	goto_if_unset FLAG_BADGE04_GET, GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_10
+	goto_if_unset FLAG_BADGE05_GET, GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_11
+	addmoney 10000
+GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_7:
 	msgbox GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_Text_1
 	waitmessage
 	multichoice 21, 6, MULTI_NATURE_MINT_SELECTION, TRUE
 	switch VAR_RESULT
-	case 0, GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_8
-	case 1, GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_9
-	case 2, GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_10
-	case 3, GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_11
-	case 4, GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_12
-	case 5, GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_13
+	case 0, GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_25
+	case 1, GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_26
+	case 2, GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_27
+	case 3, GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_28
+	case 4, GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_29
+	case 5, GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_30
 	goto GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_1
 
 GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_5:
 	setflag FLAG_TRAINER_TOURNAMENT_WON
 	msgbox GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_Text_2
 	givedecoration DECOR_SILVER_SHIELD
+	subquestmenu QUEST_MENU_COMPLETE_QUEST, QUEST_POKEMON_LEAGUE, SUB_QUEST_SCHOOL_TOURNAMENT
+	questmenu QUEST_MENU_COMPLETE_QUEST, QUEST_SCHOOL_TOURNAMENT
 	addmoney 7500
 	msgbox GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_Text_1
 	waitmessage
 	multichoice 21, 6, MULTI_NATURE_MINT_SELECTION, TRUE
 	switch VAR_RESULT
-	case 0, GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_15
-	case 1, GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_16
-	case 2, GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_17
-	case 3, GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_18
-	case 4, GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_19
-	case 5, GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_20
+	case 0, GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_18
+	case 1, GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_19
+	case 2, GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_20
+	case 3, GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_21
+	case 4, GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_22
+	case 5, GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_23
 	goto GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_4
 
 GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_8:
-	goto School_AdamantMint
-	goto GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_1
+	addmoney 5000
+	goto GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_7
 
 GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_9:
-	goto School_BoldMint
-	goto GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_1
+	addmoney 6000
+	goto GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_7
 
 GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_10:
-	goto School_ModestMint
-	goto GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_1
+	addmoney 7000
+	goto GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_7
 
 GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_11:
-	goto School_CalmMint
-	goto GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_1
-
-GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_12:
-	goto School_TimidMint
-	goto GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_1
-
-GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_13:
-	goto School_JollyMint
-	goto GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_1
-
-GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_15:
-	goto School_AdamantMint
-	goto GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_4
-
-GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_16:
-	goto School_BoldMint
-	goto GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_4
-
-GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_17:
-	goto School_ModestMint
-	goto GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_4
+	addmoney 8000
+	goto GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_7
 
 GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_18:
-	goto School_CalmMint
+	goto School_AdamantMint
 	goto GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_4
 
 GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_19:
-	goto School_TimidMint
+	goto School_BoldMint
 	goto GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_4
 
 GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_20:
+	goto School_ModestMint
+	goto GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_4
+
+GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_21:
+	goto School_CalmMint
+	goto GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_4
+
+GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_22:
+	goto School_TimidMint
+	goto GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_4
+
+GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_23:
 	goto School_JollyMint
 	goto GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_4
+
+GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_25:
+	goto School_AdamantMint
+	goto GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_1
+
+GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_26:
+	goto School_BoldMint
+	goto GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_1
+
+GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_27:
+	goto School_ModestMint
+	goto GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_1
+
+GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_28:
+	goto School_CalmMint
+	goto GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_1
+
+GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_29:
+	goto School_TimidMint
+	goto GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_1
+
+GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_30:
+	goto School_JollyMint
+	goto GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_1
 
 
 GranitePeak_BattleDomeLobby_EventScript_LostChallenge::
@@ -216,7 +239,10 @@ Mat_Beaten::
 	removeobject 1
 	setflag FLAG_HIDE_MAT_SCHOOL_HALL
 	setflag FLAG_HIDE_MOVES_ROOM
-	setvar VAR_ENTERED_SCHOOL, 1
+	setvar VAR_MAT_STATE, 1
+	clearflag FLAG_HIDE_MAT_MEGA_MANSION
+	questmenu QUEST_MENU_SET_ACTIVE, QUEST_SCHOOL_TOURNAMENT
+	call Increase_Trainers_Beaten
 	return
 
 
@@ -279,6 +305,12 @@ GranitePeak_BattleDomeLobby_EventScript_AttendantWelcome::
 
 
 GranitePeak_BattleDomeLobby_EventScript_TryEnterChallenge::
+	goto_if_unset FLAG_BADGE02_GET, GranitePeak_BattleDomeLobby_EventScript_TryEnterChallenge_2
+	goto_if_unset FLAG_BADGE03_GET, GranitePeak_BattleDomeLobby_EventScript_TryEnterChallenge_3
+	goto_if_unset FLAG_BADGE04_GET, GranitePeak_BattleDomeLobby_EventScript_TryEnterChallenge_4
+	goto_if_unset FLAG_BADGE05_GET, GranitePeak_BattleDomeLobby_EventScript_TryEnterChallenge_5
+	setvar FRONTIER_MAX_LEVEL_50, 50
+GranitePeak_BattleDomeLobby_EventScript_TryEnterChallenge_1:
 	setvar VAR_0x8004, FRONTIER_UTIL_FUNC_SET_DATA
 	setvar VAR_0x8005, FRONTIER_DATA_LVL_MODE
 	setvar VAR_0x8006, FRONTIER_LVL_50
@@ -286,20 +318,39 @@ GranitePeak_BattleDomeLobby_EventScript_TryEnterChallenge::
 	call GranitePeak_BattleDomeLobby_EventScript_SaveBeforeChallenge
 	return
 
+GranitePeak_BattleDomeLobby_EventScript_TryEnterChallenge_2:
+	setvar FRONTIER_MAX_LEVEL_50, 22
+	goto GranitePeak_BattleDomeLobby_EventScript_TryEnterChallenge_1
+
+GranitePeak_BattleDomeLobby_EventScript_TryEnterChallenge_3:
+	setvar FRONTIER_MAX_LEVEL_50, 28
+	goto GranitePeak_BattleDomeLobby_EventScript_TryEnterChallenge_1
+
+GranitePeak_BattleDomeLobby_EventScript_TryEnterChallenge_4:
+	setvar FRONTIER_MAX_LEVEL_50, 35
+	goto GranitePeak_BattleDomeLobby_EventScript_TryEnterChallenge_1
+
+GranitePeak_BattleDomeLobby_EventScript_TryEnterChallenge_5:
+	setvar FRONTIER_MAX_LEVEL_50, 40
+	goto GranitePeak_BattleDomeLobby_EventScript_TryEnterChallenge_1
+
 
 GranitePeak_BattleDomeLobby_EventScript_SaveBeforeChallenge::
 	setvar VAR_TEMP_0, 0
-	dome_init
+	setvar VAR_0x8004, BATTLE_DOME_FUNC_INIT
+	special CallBattleDomeFunction
 	closemessage
 	delay 2
 	setvar VAR_TEMP_0, 255
-	dome_inittrainers
+	setvar VAR_0x8004, BATTLE_DOME_FUNC_INIT_TRAINERS
+	special CallBattleDomeFunction
 	call GranitePeak_BattleDomeLobby_EventScript_EnterChallenge
 	return
 
 
 GranitePeak_BattleDomeLobby_EventScript_EnterChallenge::
-	dome_settrainers
+	setvar VAR_0x8004, BATTLE_DOME_FUNC_SET_TRAINERS
+	special CallBattleDomeFunction
 	warp MAP_GRANITE_PEAK_TOURNAMENT_WAITING_ROOM, 6, 8
 	setvar VAR_TEMP_0, 0
 	waitstate
@@ -342,15 +393,36 @@ School_JollyMint::
 	return
 
 
+MatEasterEgg::
+	lockall
+	goto_if_set FLAG_MAT_ID, MatEasterEgg_2
+MatEasterEgg_1:
+	goto_if_unset FLAG_MAT_ID, MatEasterEgg_5
+MatEasterEgg_4:
+	releaseall
+	return
+
+MatEasterEgg_2:
+	msgbox MatEasterEgg_Text_0
+	goto MatEasterEgg_1
+
+MatEasterEgg_5:
+	msgbox MatEasterEgg_Text_1
+	setflag FLAG_MAT_ID
+	goto MatEasterEgg_4
+
+
 Movement_MatExclamation:
 	emote_exclamation_mark
 	step_end
 
 Movement_MatIntoMoveRoom:
-	walk_right
-	walk_right
-	walk_right
-	walk_right
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	face_up
 	step_end
 
 Movement_MovePlayerLeftOnce:
@@ -397,7 +469,7 @@ GranitePeakAbilitiesClassroomDoor_Text_0:
 Petalburgcity_School_Enter_Right_Text_0:
 	.string "So many amazing trainer came from this\n"
 	.string "school, just look at all the names that\l"
-	.string "have won the school pokemon\l"
+	.string "have won the school Pokémon\l"
 	.string "tournament.$"
 
 PetaburgCity_School_Mat_TrophyCase_Text_0:
@@ -433,7 +505,7 @@ GranitePeak_School_TrophyCase_Text_1:
 	.string "etched into it...$"
 
 GranitePeak_School_TrophyCase_Text_2:
-	.string "Pulsar$"
+	.string "Pulsar, Jordan$"
 
 GranitePeak_School_TournamentTeacher_Hallway_Text_0:
 	.string "Oh fantastic you've completed all the\n"
@@ -446,7 +518,7 @@ GranitePeak_School_TournamentTeacher_Hallway_Text_1:
 
 GranitePeak_School_TournamentTeacher_Hallway_Text_2:
 	.string "You can't enter with more than 3\n"
-	.string "Pokemon$"
+	.string "Pokémon$"
 
 GranitePeak_School_TournamentTeacher_Hallway_Text_3:
 	.string "Maybe another time then$"
@@ -455,6 +527,14 @@ GranitePeak_School_TournamentTeacher_Hallway_Text_4:
 	.string "If you would like to join the school\n"
 	.string "tournament you will need to complete\l"
 	.string "all the classes first$"
+
+MatEasterEgg_Text_0:
+	.string "It's empty$"
+
+MatEasterEgg_Text_1:
+	.string "You find someones student ID in the\n"
+	.string "pot:\n"
+	.string "It belongs to Mat$"
 
 Mat_Intro::
 	.string "I won't hold out on you!$"

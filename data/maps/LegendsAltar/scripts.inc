@@ -36,6 +36,7 @@ LegendsAltar_LegendsPlate_2:
 	msgbox LegendsAltar_LegendsPlate_Text_0
 	giveitem ITEM_LEGENDS_PLATE
 	playfanfare MUS_OBTAIN_ITEM
+	subquestmenu QUEST_MENU_COMPLETE_QUEST, QUEST_POKEMON_LEAGUE, SUB_QUEST_LEGENDS_PLATE
 	setflag FLAG_LEGENDS_PLATE_FOUND
 	setvar VAR_PLATE_QUEST_STATE, 3
 	goto LegendsAltar_LegendsPlate_1

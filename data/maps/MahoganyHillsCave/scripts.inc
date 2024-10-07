@@ -39,7 +39,7 @@ MahoganyHillsCave_Insect_Plate_Script_11:
 	setvar VAR_0x8007, 0
 	special ShakeCamera
 	fadescreen FADE_TO_BLACK
-	warp MAP_LOST_PLATES, 6, 14
+	warp MAP_LOST_PLATES, 6, 12
 	goto MahoganyHillsCave_Insect_Plate_Script_1
 
 MahoganyHillsCave_Insect_Plate_Script_14:
@@ -91,7 +91,7 @@ Movement_MHCave_AlexLeaves:
 
 MahoganyHillsCave_Insect_Plate_Script_Text_0:
 	.string "There is a carving of many small bug like\n"
-	.string "Pokemon crawling over a plate.$"
+	.string "Pokémon crawling over a plate.$"
 
 MahoganyHillsCave_Insect_Plate_Script_Text_1:
 	.string "Do you want to put the LEGENDS PLATE in\n"

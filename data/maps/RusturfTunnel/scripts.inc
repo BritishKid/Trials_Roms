@@ -10,12 +10,12 @@ RusturfTunnel_MapScripts::
 	.byte 0
 
 RusturfTunnel_OnFrame:
-	map_script_2 VAR_RUSTURF_TUNNEL_STATE, 4, RusturfTunnel_EventScript_ClearTunnelScene
-	map_script_2 VAR_RUSTURF_TUNNEL_STATE, 5, RusturfTunnel_EventScript_ClearTunnelScene
+	map_script_2 VAR_EMBERDUNES_BUTTONS_PRESSED, 4, RusturfTunnel_EventScript_ClearTunnelScene
+	map_script_2 VAR_EMBERDUNES_BUTTONS_PRESSED, 5, RusturfTunnel_EventScript_ClearTunnelScene
 	.2byte 0
 
 RusturfTunnel_OnTransition:
-	call_if_eq VAR_RUSTURF_TUNNEL_STATE, 2, RusturfTunnel_EventScript_SetAquaGruntAndPeekoPos
+	call_if_eq VAR_EMBERDUNES_BUTTONS_PRESSED, 2, RusturfTunnel_EventScript_SetAquaGruntAndPeekoPos
 	end
 
 RusturfTunnel_EventScript_SetAquaGruntAndPeekoPos::
@@ -281,7 +281,7 @@ RusturfTunnel_EventScript_AquaGruntBackUp::
 	waitmovement 0
 	copyobjectxytoperm LOCALID_GRUNT
 	copyobjectxytoperm LOCALID_PEEKO
-	setvar VAR_RUSTURF_TUNNEL_STATE, 3
+	setvar VAR_EMBERDUNES_BUTTONS_PRESSED, 3
 	releaseall
 	end
 
@@ -337,8 +337,8 @@ RusturfTunnel_EventScript_Grunt::
 	waitmovement 0
 	removeobject LOCALID_BRINEY
 	removeobject LOCALID_PEEKO
-	clearflag FLAG_DEVON_GOODS_STOLEN
-	setflag FLAG_RECOVERED_DEVON_GOODS
+	clearflag FLAG_MAT_ID
+	setflag FLAG_MAT_ID_RETURNED
 	setvar VAR_RUSTBORO_CITY_STATE, 4
 	setvar VAR_BRINEY_HOUSE_STATE, 1
 	setflag FLAG_HIDE_ROUTE_116_MR_BRINEY

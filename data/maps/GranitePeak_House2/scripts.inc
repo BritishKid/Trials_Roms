@@ -4,6 +4,7 @@ GranitePeak_House2_MapScripts::
 
 GranitePeak_House2_EventScript_SchoolKid::
 	lock
+	faceplayer
 	msgbox GranitePeak_House2_EventScript_SchoolKid_Text_0
 	goto_if_set FLAG_TRAINER_TOURNAMENT_WON, GranitePeak_House2_EventScript_SchoolKid_3
 GranitePeak_House2_EventScript_SchoolKid_1:
@@ -21,6 +22,7 @@ GranitePeak_House2_EventScript_SchoolKid_2:
 	msgbox GranitePeak_House2_EventScript_SchoolKid_Text_4
 	giveitem ITEM_TM10
 	setflag FLAG_RECEIVED_TM10
+	msgbox GranitePeak_House2_EventScript_SchoolKid_Text_5
 	goto GranitePeak_House2_EventScript_SchoolKid_1
 
 GranitePeak_House2_EventScript_SchoolKid_3:
@@ -28,7 +30,7 @@ GranitePeak_House2_EventScript_SchoolKid_3:
 	goto GranitePeak_House2_EventScript_SchoolKid_1
 
 GranitePeak_House2_EventScript_SchoolKid_7:
-	msgbox GranitePeak_House2_EventScript_SchoolKid_Text_5
+	msgbox GranitePeak_House2_EventScript_SchoolKid_Text_6
 	goto GranitePeak_House2_EventScript_SchoolKid_6
 
 GranitePeak_House2_EventScript_SchoolKid_8:
@@ -36,15 +38,19 @@ GranitePeak_House2_EventScript_SchoolKid_8:
 	goto GranitePeak_House2_EventScript_SchoolKid_6
 
 GranitePeak_House2_EventScript_SchoolKid_12:
-	msgbox GranitePeak_House2_EventScript_SchoolKid_Text_6
+	msgbox GranitePeak_House2_EventScript_SchoolKid_Text_7
 	goto GranitePeak_House2_EventScript_SchoolKid_11
 
 
 GranitePeak_House2_EventScript_Woman::
+	lockall
+	faceplayer
 	msgbox GranitePeak_House2_EventScript_Woman_Text_0
 	goto_if_unset FLAG_RECIEVE_CHARCOAL, GranitePeak_House2_EventScript_Woman_2
 GranitePeak_House2_EventScript_Woman_1:
-	goto_if_set FLAG_RECIEVE_CHARCOAL, GranitePeak_House2_EventScript_Woman_4
+	goto_if_set FLAG_RECIEVE_CHARCOAL, GranitePeak_House2_EventScript_Woman_5
+GranitePeak_House2_EventScript_Woman_4:
+	releaseall
 	return
 
 GranitePeak_House2_EventScript_Woman_2:
@@ -54,9 +60,9 @@ GranitePeak_House2_EventScript_Woman_2:
 	setflag FLAG_RECIEVE_CHARCOAL
 	goto GranitePeak_House2_EventScript_Woman_1
 
-GranitePeak_House2_EventScript_Woman_4:
+GranitePeak_House2_EventScript_Woman_5:
 	msgbox GranitePeak_House2_EventScript_Woman_Text_2
-	return
+	goto GranitePeak_House2_EventScript_Woman_4
 
 
 GranitePeak_House2_EventScript_SchoolKid_Text_0:
@@ -81,9 +87,13 @@ GranitePeak_House2_EventScript_SchoolKid_Text_4:
 	.string "use for it.$"
 
 GranitePeak_House2_EventScript_SchoolKid_Text_5:
-	.string "I'm training every day to improve$"
+	.string "It's Hidden Power, a move that changes\n"
+	.string "for every Pokémon!$"
 
 GranitePeak_House2_EventScript_SchoolKid_Text_6:
+	.string "I'm training every day to improve$"
+
+GranitePeak_House2_EventScript_SchoolKid_Text_7:
 	.string "Only the best trainers could win.$"
 
 GranitePeak_House2_EventScript_Woman_Text_0:

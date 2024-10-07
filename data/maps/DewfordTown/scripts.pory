@@ -1,0 +1,84 @@
+mapscripts DewfordTown_MapScripts {
+	MAP_SCRIPT_ON_TRANSITION {
+	    setflag(FLAG_VISITED_DEWFORD_TOWN)
+    }
+}
+
+
+script DewfordTown_RivalEncounter {
+    lockall
+	applymovement(1, Movement_RivalIsland3_Arriving)
+	waitmovement(1)
+	msgbox(format("Finally made it then ${PLAYER}. Took you long enough."))
+	if(!flag(FLAG_RECIEVED_MEGA_BRACELET)) {
+		msgbox(format("It's not surprise you're not even strong enough to get your Mega Braclet yet!"))
+		msgbox(format("You know you can go north of Lilycove City and get one?"))
+	}
+	msgbox(format("I've heard so many strong Pokémon can be found on this Island and I'm going to catch them all and get the last badges to become a champion."))
+	switch (var(VAR_STARTER_MON)) {
+        case 0: //chikorita selected
+            	trainerbattle_single(TRAINER_RIVAL_DEWFORD_TOWN_CYNDAQUIL, Dewford_Rival_Intro, Dewford_Rival_Outro, Dewford_Rival_Postscript)
+        case 1: //cyndaquil selected
+            	trainerbattle_single(TRAINER_RIVAL_DEWFORD_TOWN_TOTODILE, Dewford_Rival_Intro, Dewford_Rival_Outro, Dewford_Rival_Postscript)
+        case 2: // totodile selected
+            	trainerbattle_single(TRAINER_RIVAL_DEWFORD_TOWN_CHIKORITA, Dewford_Rival_Intro, Dewford_Rival_Outro, Dewford_Rival_Postscript)
+    }
+    releaseall
+}
+
+script Dewford_Rival_Postscript {
+	msgbox(format("You keep surprising me, for such a weakling you keep beating me..."))
+	msgbox(format("Whatever I'll still become a champion first!"))
+	msgbox(format("I also saw your Dad he gave me this to give to you when I found you"))
+	giveitem(ITEM_HM04)
+	playfanfare(MUS_OBTAIN_ITEM)
+	msgbox(format("Good luck keeping up!"))
+	applymovement(1, Movement_Rivalisland3_Leaving)
+	waitmovement(1)
+	removeobject(1)
+	setvar(VAR_RIVAL_FIGHT_2, 5)
+	setflag(FLAG_RIVAL_LEFT_DEWFORD)
+
+	msgbox(format("This is the end of Demo 1! We hope you enjoyed, come over to our discord to see update information and feel free to challenge the Champions guild and finish the side quests while you wait")) //todo 
+	releaseall
+}
+
+script Town_Sign_Dewford {
+		msgbox(format("This is the end of Demo 1! We hope you enjoyed, come over to our discord to see update information and feel free to challenge the Champions guild and finish the side quests while you wait")) //todo remove
+}
+
+
+//movement
+movement Movement_RivalIsland3_Arriving {
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	face_down
+	emote_exclamation_mark
+	walk_down
+	walk_down
+}
+
+movement Movement_Rivalisland3_Leaving {
+	walk_fast_up
+	walk_fast_up
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+}
+
+//text 
+
+text Dewford_Rival_Intro {
+	format("Here let me show you how much you've fallen behind!")
+}
+
+text Dewford_Rival_Outro {
+	format("How do you keep doing this?")
+}

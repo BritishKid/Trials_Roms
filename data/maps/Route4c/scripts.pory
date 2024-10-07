@@ -1,1 +1,7 @@
 mapscripts Route4c_MapScripts {}
+
+script breedingplacecsomethingorother {
+    lockall
+    msgbox(format("This might be the area for the shiny and high ev/iv things"))
+    releaseall
+}

@@ -19,7 +19,6 @@ Route2_EventScript_BerryGirl_2:
 	giveitem ITEM_LEPPA_BERRY, 3
 	giveitem ITEM_COBA_BERRY, 3
 	giveitem ITEM_PERSIM_BERRY, 3
-	giveitem ITEM_TANGA_BERRY, 3
 	msgbox Route2_EventScript_BerryGirl_Text_1
 	giveitem ITEM_WAILMER_PAIL, 1
 	setflag FLAG_RECEIVED_WAILMER_PAIL
@@ -29,23 +28,21 @@ Route2_EventScript_BerryGirl_2:
 Battle_Route2_Trainer1::
 	trainerbattle_single TRAINER_ROUTE2_TRAINER1, Route2_Trainer1_Intro, Route2_Trainer1_Outro
 	msgbox PostBattle_Route2_Trainer1, MSGBOX_AUTOCLOSE
-	setvar VAR_FIRST_TRAINERS_BEATEN_CHECK, VAR_FIRST_TRAINERS_BEATEN_CHECK + 1
+	setvar VAR_TRAINERS_BEATEN_CHECK, VAR_TRAINERS_BEATEN_CHECK + 1
 	waitmessage
 	end
 
 
 Battle_Route2_Trainer2::
-	trainerbattle_single TRAINER_ROUTE2_TRAINER2, Route2_Trainer2_Intro, Route2_Trainer2_Outro
+	trainerbattle_single TRAINER_ROUTE2_TRAINER2, Route2_Trainer2_Intro, Route2_Trainer2_Outro, Increase_Trainers_Beaten
 	msgbox PostBattle_Route2_Trainer2, MSGBOX_AUTOCLOSE
-	setvar VAR_FIRST_TRAINERS_BEATEN_CHECK, VAR_FIRST_TRAINERS_BEATEN_CHECK + 1
 	waitmessage
 	end
 
 
 Battle_Route2_Trainer3::
-	trainerbattle_single TRAINER_ROUTE2_TRAINER3, Route2_Trainer3_Intro, Route2_Trainer3_Outro
+	trainerbattle_single TRAINER_ROUTE2_TRAINER3, Route2_Trainer3_Intro, Route2_Trainer3_Outro, Increase_Trainers_Beaten
 	msgbox PostBattle_Route2_Trainer3, MSGBOX_AUTOCLOSE
-	setvar VAR_FIRST_TRAINERS_BEATEN_CHECK, VAR_FIRST_TRAINERS_BEATEN_CHECK + 1
 	waitmessage
 	end
 
@@ -68,7 +65,7 @@ Route2_EventScript_BerryGirl_Text_1:
 
 Route2_EventScript_BerryGirl_Text_2:
 	.string "Berrys are just incredible, give them to\n"
-	.string "a Pokemon to hold and they will use them\l"
+	.string "a Pokémon to hold and they will use them\l"
 	.string "when they are weak.$"
 
 Route2_Trainer1_Intro::
@@ -89,7 +86,7 @@ Route2_Trainer2_Outro::
 	.string "I haven't finished training it yet.$"
 
 PostBattle_Route2_Trainer2::
-	.string "It's going to be the best pokemon in\n"
+	.string "It's going to be the best Pokémon in\n"
 	.string "the world one day$"
 
 Route2_Trainer3_Intro::

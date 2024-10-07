@@ -3,12 +3,14 @@ mapscripts EmderDune_EntryHouse_MapScripts {}
 
 script ChattyHikerMan_FoundNearDesert_InThingRobMade {
     lockall
-    msgbox(format("Oh wow, it's rare we see many people come this way.\n These are the ember dunes, I've heard rumours about some powerful Pokemon hiding somewhere."))
+    faceplayer
+    msgbox(format("Oh wow, it's rare we see many people come this way.\n These are the ember dunes, I've heard rumours about some powerful Pokémon hiding somewhere."))
     releaseall
 }
 
 script ChattyBugTrainer_InDesert {
     lockall
+    faceplayer
     msgbox(format("It's tough bug trainer here, so many fire types are making me burn through my potions!"))
     releaseall
 }

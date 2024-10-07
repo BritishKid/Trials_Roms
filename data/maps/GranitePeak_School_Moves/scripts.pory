@@ -55,17 +55,17 @@ script GranitePeak_School_Move_Quiz { //fill in the questions
         if(var(VAR_RESULT) == YES && var(VAR_PREVENT_LOOPS_SCHOOL) == 0) {
             msgbox(format("It acts as both a Fighting and Flying type move!"))
             msgbox(format("Correct! It kets you have double the attack choice with one single move slot."))
-            msgbox(format("Okay Final Question \n Grass Pokemon are immune to Powder moves?"), MSGBOX_YESNO)
+            msgbox(format("Okay Final Question \n Grass Pokémon are immune to Powder moves?"), MSGBOX_YESNO)
                     if(var(VAR_RESULT) == YES && var(VAR_PREVENT_LOOPS_SCHOOL) == 0) {
                         //correct
-                        msgbox(format("Grass, Overcoat and pokemon with Safety Goggles"))
+                        msgbox(format("Grass, Overcoat and Pokémon with Safety Goggles"))
                         msgbox(format("That's correct, there are lots of ways to be immune to powder moves."))
                         msgbox(format("Good job to you both!"))
                         call(GranitePeak_School_MoveQuiz_Passsed)
                     }
                     if(var(VAR_RESULT) == NO && var(VAR_PREVENT_LOOPS_SCHOOL) == 0) {
                         //wrong
-                        msgbox(format("Of course not, only Pokemon with the Overcoat ability are immune."))
+                        msgbox(format("Of course not, only Pokémon with the Overcoat ability are immune."))
                         msgbox(format("Not quite, but you're close. Keep learning you'll get there."))
                         call(GranitePeak_School_MoveQuiz_Failed)
                     }
@@ -80,7 +80,7 @@ script GranitePeak_School_Move_Quiz { //fill in the questions
     if(var(VAR_RESULT) == YES && var(VAR_PREVENT_LOOPS_SCHOOL) == 0) {
         //wrong
         msgbox(format("It's twice as strong"))
-        msgbox(format("That's Incorrect. Only Adaptability Pokemon will gain twice the power"))
+        msgbox(format("That's Incorrect. Only Adaptability Pokémon will gain twice the power"))
         call(GranitePeak_School_MoveQuiz_Failed)
     }
 }
@@ -102,7 +102,7 @@ script GranitePeak_School_MoveQuiz_Passsed {
     giveitem(ITEM_TM27)
     setvar(VAR_MOVE_ROOM_STUDENTS, 5)
     setflag(FLAG_MOVE_PATCH_EARNT)
-    // subquestmenu(QUEST_MENU_COMPLETE_QUEST, QUEST_POKEMON_LEAGUE, SUB_QUEST_SCHOOL_MOVE_PATCH)
+    subquestmenu(QUEST_MENU_COMPLETE_QUEST, QUEST_POKEMON_LEAGUE, SUB_QUEST_SCHOOL_MOVE_PATCH)
     msgbox(format("One more to go and then I can win the tournament"), MSGBOX_AUTOCLOSE)
     applymovement(5, Movement_Mat_Leaves)
     removeobject(5)
@@ -144,6 +144,7 @@ script MoveStudent_Beaten {
     if (var(VAR_MOVE_ROOM_STUDENTS) == 0) {
         setvar(VAR_MOVE_ROOM_STUDENTS, 1)
     }
+    call(Increase_Trainers_Beaten)
 }
 
 //movement scripts

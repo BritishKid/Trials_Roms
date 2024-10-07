@@ -27,6 +27,7 @@ script Brawley_Route4_Battle {
 script Brawly_General {
     //brawley gives you a belt based on how many dojos you find, beat them all to get black belt, leads to a legendary??
     lock
+    faceplayer
     msgbox(format("Have you found any hidden dojos yet?"))
     if(flag(FLAG_WATERFALL_CAVE_CLEARED)){
         msgbox(format("Oh wow there was a dojo behind the waterfall?"))

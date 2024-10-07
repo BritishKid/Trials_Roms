@@ -731,9 +731,9 @@
 #define ITEM_TM49 630
 #define ITEM_TM50 631
 #define ITEM_TM51_PLUCK 632 //Custom TMs start herez
-#define ITEM_TM52 633
-#define ITEM_TM53 634
-#define ITEM_TM54 635
+#define ITEM_TM52_SCALD 633 //Scald
+#define ITEM_TM53_ROCK_SLIDE 634 //Rock Slide
+#define ITEM_TM54_GRASS_KNOT 635 //Grass Knot
 #define ITEM_TM55 636
 #define ITEM_TM56 637
 #define ITEM_TM57 638
@@ -781,14 +781,14 @@
 #define ITEM_TM99 680
 #define ITEM_TM100 681
 
-#define ITEM_HM01 682
-#define ITEM_HM02 683
-#define ITEM_HM03 684
-#define ITEM_HM04 685
-#define ITEM_HM05 686
-#define ITEM_HM06 687
-#define ITEM_HM07 688
-#define ITEM_HM08 689
+#define ITEM_HM01 682 //cut
+#define ITEM_HM02 683 // fly 
+#define ITEM_HM03 684 //surf
+#define ITEM_HM04 685 //strength
+#define ITEM_HM05 686 //flash
+#define ITEM_HM06 687 //rocksmash
+#define ITEM_HM07 688 //waterfall
+#define ITEM_HM08 689 //dive
 
 // Charms
 #define ITEM_OVAL_CHARM 690

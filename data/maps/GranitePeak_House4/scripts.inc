@@ -4,6 +4,7 @@ GranitePeak_House4_MapScripts::
 
 GranitePeak_House4_OldMan_Quest::
 	lock
+	faceplayer
 	msgbox GranitePeak_House4_OldMan_Quest_Text_0
 	msgbox GranitePeak_House4_OldMan_Quest_Text_1, MSGBOX_YESNO
 	compare VAR_RESULT, YES
@@ -20,6 +21,7 @@ GranitePeak_House4_OldMan_Quest_2:
 	msgbox GranitePeak_House4_OldMan_Quest_Text_5
 	msgbox GranitePeak_House4_OldMan_Quest_Text_6
 	msgbox GranitePeak_House4_OldMan_Quest_Text_7
+	questmenu QUEST_MENU_SET_ACTIVE, QUEST_LOCKED_GATEWAY
 	goto GranitePeak_House4_OldMan_Quest_1
 
 
@@ -83,7 +85,7 @@ GranitePeak_House4_OldMan_Quest_Text_4:
 	.string "They got hidden deep away to prevent\n"
 	.string "anyone coming stumbling across them to\l"
 	.string "prevent anyone accidently releasing\l"
-	.string "the destructive Pokemon.$"
+	.string "the destructive Pokémon.$"
 
 GranitePeak_House4_OldMan_Quest_Text_5:
 	.string "Many strong trainers are exploring the\n"

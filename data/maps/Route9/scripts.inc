@@ -3,32 +3,32 @@ Route9_MapScripts::
 
 
 Route9_BattleScript_Matthew_Fisher::
-	trainerbattle_single ROUTE9_MATTHEW, MatthewFisher_Intro, MatthewFisher_Outro
+	trainerbattle_single ROUTE9_MATTHEW, MatthewFisher_Intro, MatthewFisher_Outro, Increase_Trainers_Beaten
 	msgbox MatthewFisher_PostBattle, MSGBOX_AUTOCLOSE
 	release
 	return
 
 
 Route9_BattleScript_Mate::
-	trainerbattle_single ROUTE9_MATE, Mate_Intro, Mate_Outro
+	trainerbattle_single ROUTE9_MATE, Mate_Intro, Mate_Outro, Increase_Trainers_Beaten
 	msgbox Mate_PostBattle, MSGBOX_AUTOCLOSE
 	release
 	return
 
 
 Route9_BattleScript_Woodland::
-	trainerbattle_single ROUTE9_BIDOOFCRAZEDMAN, Woodland_Intro, Woodland_Outro
+	trainerbattle_single ROUTE9_BIDOOFCRAZEDMAN, Woodland_Intro, Woodland_Outro, Increase_Trainers_Beaten
 	msgbox Woodland_PostBattle, MSGBOX_AUTOCLOSE
 	release
 	return
 
 
 MatthewFisher_Intro::
-	.string "Hat! Look at your normal Pokemon! Mine\n"
+	.string "Hat! Look at your normal Pokémon! Mine\n"
 	.string "is a shiny!$"
 
 MatthewFisher_Outro::
-	.string "Okay you got me, but shiny Pokemon are\n"
+	.string "Okay you got me, but shiny Pokémon are\n"
 	.string "still the best$"
 
 MatthewFisher_PostBattle::

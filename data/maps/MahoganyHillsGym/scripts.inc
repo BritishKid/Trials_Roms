@@ -19,6 +19,7 @@ MahoganyHillsGym_EventScript_PodiumText_2:
 
 MahoganyHillsGym_EventScript_Greeter::
 	lockall
+	faceplayer
 	msgbox MahoganyHillsGym_EventScript_Greeter_Text_0
 	goto_if_unset FLAG_BADGE01_GET, MahoganyHillsGym_EventScript_Greeter_3
 MahoganyHillsGym_EventScript_Greeter_1:
@@ -41,25 +42,25 @@ MahoganyHillsGym_EventScript_Greeter_6:
 
 
 MahoganyHillsGym_Trainer_Andy::
-	trainerbattle_single MAHOGANYHILLSGYM_TRAINER_ANDY, MahoganyHillsGym_Andy_Intro, MahoganyHillsGym_Andy_Outro
+	trainerbattle_single MAHOGANYHILLSGYM_TRAINER_ANDY, MahoganyHillsGym_Andy_Intro, MahoganyHillsGym_Andy_Outro, Increase_Trainers_Beaten
 	msgbox MahoganyHillsGym_Andy_PostbattleScript, MSGBOX_AUTOCLOSE
 	end
 
 
 MahoganyHillsGym_Trainer_Skye::
-	trainerbattle_single MAHOGANYHILLSGYM_TRAINER_SKYE, MahoganyHillsGym_Skye_Intro, MahoganyHillsGym_Skye_Outro
+	trainerbattle_single MAHOGANYHILLSGYM_TRAINER_SKYE, MahoganyHillsGym_Skye_Intro, MahoganyHillsGym_Skye_Outro, Increase_Trainers_Beaten
 	msgbox MahoganyHillsGym_Skye_PostbattleScript, MSGBOX_AUTOCLOSE
 	end
 
 
 MahoganyHillsGym_Trainer_Wright::
-	trainerbattle_single MAHOGANYHILLSGYM_TRAINER_WRIGHT, MahoganyHillsGym_Wright_Intro, MahoganyHillsGym_Wright_Outro
+	trainerbattle_single MAHOGANYHILLSGYM_TRAINER_WRIGHT, MahoganyHillsGym_Wright_Intro, MahoganyHillsGym_Wright_Outro, Increase_Trainers_Beaten
 	msgbox MahoganyHillsGym_Wright_PostbattleScript, MSGBOX_AUTOCLOSE
 	end
 
 
 MahoganyHillsGym_Trainer_Ollie::
-	trainerbattle_single MAHOGANYHILLSGYM_TRAINER_OLLIE, MahoganyHillsGym_Ollie_Intro, MahoganyHillsGym_Ollie_Outro
+	trainerbattle_single MAHOGANYHILLSGYM_TRAINER_OLLIE, MahoganyHillsGym_Ollie_Intro, MahoganyHillsGym_Ollie_Outro, Increase_Trainers_Beaten
 	msgbox MahoganyHillsGym_Ollie_PostbattleScript, MSGBOX_AUTOCLOSE
 	end
 
@@ -78,6 +79,7 @@ MahoganyHillsGym_Gym_Leader_PostbattleScript::
 	msgbox MahoganyHillsGym_Gym_Leader_PostbattleScript_Text_1
 	special DoDomeConfetti
 	setflag FLAG_BADGE01_GET
+	subquestmenu QUEST_MENU_COMPLETE_QUEST, QUEST_POKEMON_LEAGUE, SUB_QUEST_GALE_BADGE
 	msgbox MahoganyHillsGym_Gym_Leader_PostbattleScript_Text_2
 	playfanfare MUS_OBTAIN_ITEM
 	giveitem ITEM_TM51_PLUCK
@@ -95,7 +97,7 @@ MahoganyHillsGym_EventScript_PodiumText_Text_1:
 MahoganyHillsGym_EventScript_PodiumText_Text_2:
 	.string "Nathan, Tanski, KoraidonFan783,\n"
 	.string "LimblessCarpet, Tapdabtap 84, The TC,\l"
-	.string "BitBeads$"
+	.string "BitBeads, Jordan, Robert$"
 
 MahoganyHillsGym_EventScript_PodiumText_Text_3:
 	.string "{PLAYER}$"
@@ -154,7 +156,7 @@ MahoganyHillsGym_Ollie_Outro::
 
 MahoganyHillsGym_Ollie_PostbattleScript::
 	.string "I've learnt enough, time to learn about\n"
-	.string "water pokemon$"
+	.string "water Pokémon$"
 
 MahoganyHillsGym_Skye_Intro::
 	.string "Welcome to Mahogany Hills Gym. You've\n"
@@ -166,7 +168,7 @@ MahoganyHillsGym_Skye_Outro::
 
 MahoganyHillsGym_Skye_PostbattleScript::
 	.string "Jaiden comes from Peak City, they train\n"
-	.string "the strongest flying type pokemon up\l"
+	.string "the strongest flying type Pokémon up\l"
 	.string "there.$"
 
 MahoganyHillsGym_Wright_Intro::

@@ -29,6 +29,7 @@ Brawley_Route4_Battle_2:
 
 Brawly_General::
 	lock
+	faceplayer
 	msgbox Brawly_General_Text_0
 	goto_if_set FLAG_WATERFALL_CAVE_CLEARED, Brawly_General_2
 Brawly_General_1:

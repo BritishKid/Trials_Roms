@@ -335,7 +335,7 @@ const u8 gTypeNames[NUMBER_OF_MON_TYPES][TYPE_NAME_LENGTH + 1] =
 // This is a factor in how much money you get for beating a trainer.
 const struct TrainerMoney gTrainerMoneyTable[] =
 {
-    {TRAINER_CLASS_TEAM_AQUA, 5},
+    {TRAINER_CLASS_ACE_TRAINER, 20},
     {TRAINER_CLASS_AQUA_ADMIN, 10},
     {TRAINER_CLASS_AQUA_LEADER, 20},
     {TRAINER_CLASS_AROMA_LADY, 10},
@@ -4012,6 +4012,11 @@ u8 IsRunningFromBattleImpossible(u32 battler)
         return BATTLE_RUN_FAILURE;
     }
 
+    // if (FLAG_CANNOT_RUN_FROM_BATTLE) {
+    //     gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_CANT_ESCAPE; //may have to check text
+    //     return BATTLE_RUN_FORBIDDEN; // not working
+    // }
+
     if (!CanBattlerEscape(battler))
     {
         gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_CANT_ESCAPE;
@@ -5245,7 +5250,7 @@ static void HandleEndTurn_BattleWon(void)
         case TRAINER_CLASS_CHAMPION:
             PlayBGM(MUS_VICTORY_LEAGUE);
             break;
-        case TRAINER_CLASS_TEAM_AQUA:
+        case TRAINER_CLASS_ACE_TRAINER:
         case TRAINER_CLASS_TEAM_MAGMA:
         case TRAINER_CLASS_AQUA_ADMIN:
         case TRAINER_CLASS_AQUA_LEADER:
@@ -5272,6 +5277,7 @@ static void HandleEndTurn_BattleWon(void)
 static void HandleEndTurn_BattleLost(void)
 {
     gCurrentActionFuncId = 0;
+    // Flagclear(FLAG_CANT_CATCH_MON); //when you lost the battle we want to make sure they can catch pokemon again
 
     if (gBattleTypeFlags & (BATTLE_TYPE_LINK | BATTLE_TYPE_RECORDED_LINK))
     {
@@ -5401,7 +5407,7 @@ static void HandleEndTurn_FinishBattle(void)
         BeginFastPaletteFade(3);
         FadeOutMapMusic(5);
     #if B_TRAINERS_KNOCK_OFF_ITEMS == TRUE || B_RESTORE_HELD_BATTLE_ITEMS == TRUE
-            TryRestoreHeldItems();
+            TryRestoreHeldItems(); //use elsewhere
     #endif
         for (i = 0; i < PARTY_SIZE; i++)
         {

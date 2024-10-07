@@ -50,8 +50,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
+      "script": "EventScript_RockSmash",
+      "flag": "FLAG_TEMP_11"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ROUND_CUSHION",
@@ -107,12 +107,24 @@
     }
   ],
   "warp_events": [
-
+    {
+      "x": 9,
+      "y": 19,
+      "elevation": 0,
+      "dest_map": "MAP_ALTERING_CAVE",
+      "dest_warp_id": "0"
+    }
   ],
   "coord_events": [
 
   ],
   "bg_events": [
-
+    {
+      "type": "secret_base",
+      "x": 0,
+      "y": 12,
+      "elevation": 0,
+      "secret_base_id": "SECRET_BASE_RED_CAVE2_3"
+    }
   ]
 }

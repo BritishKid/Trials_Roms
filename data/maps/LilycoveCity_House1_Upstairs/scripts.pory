@@ -1,0 +1,29 @@
+mapscripts LilycoveCity_House1_Upstairs_MapScripts {}
+
+
+script LilycoveCity_House1_Upstairs_Gamer {
+    trainerbattle_single(LILYCOVE_GAMER, Lilycove_Gamer_Intro, Lilycove_Gamer_Intro, Lilycove_Game_PostScript)
+    msgbox(Lilycove_Gamer_Postbattle, MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Lilycove_Game_PostScript {
+    msgbox(format("Game rules mean you should have a prize for beating me, but I've only got this."))
+    giveitem(ITEM_UPGRADE)
+    playfanfare(MUS_OBTAIN_ITEM)
+    releaseall
+}
+
+//text
+
+text Lilycove_Gamer_Intro {
+    format("I prefer staying inside, I hate the feeling of grass")
+}
+
+text Lilycove_Gamer_Outro {
+    format("Well it's been a while since I've been beaten")
+}
+
+text Lilycove_Gamer_Postbattle {
+    format("Maybe I'll train up after this match.")
+}

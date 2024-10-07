@@ -10,14 +10,15 @@ script FlowerGlade_EventScript_MossyStone {
 script FlowerGlade_EventScript_MossyStone_Grandson {
     lock
     msgbox(format("Interesting...is this it?"))    
-    // questmenu(QUEST_MENU_CHECK_ACTIVE, QUEST_EVOLUTION_STONE_MART)
+    questmenu(QUEST_MENU_CHECK_ACTIVE, QUEST_EVOLUTION_STONE_MART)
     if(!flag(FLAG_LEAF_STONE_SOURCE) && var(VAR_RESULT)) {
         faceplayer
         msgbox(format("Oh hi, so my grandfather sent you? He must be getting very impatient. I said it could take a while this is a big world."))
-        msgbox(format("Well you came at a good time, I could use your help. I need to harvest some of this rock to process into leaf stones but any attempt causes me to get attacked by wild pokemon."))
+        msgbox(format("Well you came at a good time, I could use your help. I need to harvest some of this rock to process into leaf stones but any attempt causes me to get attacked by wild Pokémon."))
         msgbox(format("Could you fight them off while when I start to harvest?"), MSGBOX_YESNO)
         if(var(VAR_RESULT) == YES) {
             msgbox(format("Brilliant, prepare yourself I'm going to start to harvest now."))
+            setflag(FLAG_CANT_CATCH_MON)
             setwildbattle(SPECIES_GLOOM, 25, ITEM_ORAN_BERRY)
             call(StartLeafStoneBattle)
             msgbox(format("Thank you, but I can see more coming!"))
@@ -26,6 +27,7 @@ script FlowerGlade_EventScript_MossyStone_Grandson {
             msgbox(format("Great job but I think something bigger is coming"))
             setwildbattle(SPECIES_SHIFTRY, 30, ITEM_ORAN_BERRY)
             call(StartLeafStoneBattle)
+            clearflag(FLAG_CANT_CATCH_MON)
             msgbox(format("Okay we are good, thank you for that. I'll see you at the next one."))
             msgbox(format("Also please take this."))
             giveitem(ITEM_LEAF_STONE)
@@ -35,7 +37,7 @@ script FlowerGlade_EventScript_MossyStone_Grandson {
             if(flag(FLAG_LEAF_STONE_SOURCE) && flag(FLAG_WATER_STONE_SOURCE) && flag(FLAG_FIRE_STONE_SOURCE)){
                 msgbox(format("That's the leaf, fire and water stones sorted. I should return these back to my Grandad"))
             }
-            // subquestmenu(QUEST_MENU_COMPLETE_QUEST, QUEST_POKEMON_LEAGUE, SUB_QUEST_LEAF_STONE)
+            subquestmenu(QUEST_MENU_COMPLETE_QUEST, QUEST_POKEMON_LEAGUE, SUB_QUEST_LEAF_STONE)
             applymovement(2, Movement_GrandsonLeavs)
             waitmovement(2)
             removeobject(2)
@@ -51,14 +53,34 @@ script StartLeafStoneBattle {
     dowildbattle
 }
 
-script BulbasaurGrottoEntrance {
+script BulbasaurGrottoEntrance { //todo fix this as we expand brawley
     lockall
     warp(MAP_BULBASAUR, 0, 9, 0)
     releaseall
 }
 
-//movement scripts
+script FlowerGlade_BattleScript_Rosemary {
+    trainerbattle_single(FLOWERGLADE_FLORAL_TRAINER, FloralTrainer_Intro, FloralTrainer_Outro)
+    msgbox(FloralTrainer_PostBattle, MSGBOX_AUTOCLOSE)
+    release
+}
 
+script FlowerGlade_BattleScript_Lily {
+    trainerbattle_single(FLOWERGLADE_FLORAL_TRAINER_LILY, LilyGarden_Intro, LilyGarden_Outro)
+    msgbox(LilyGarden_PostBattle, MSGBOX_AUTOCLOSE)
+    release
+}
+
+script FlowerGlade_ItemBall {
+    finditem(ITEM_ABSORB_BULB)
+}
+
+script FlowerGlade_ItemBall_TM {
+    finditem(ITEM_TM22)
+}
+
+
+//movement scripts
 movement Movement_GrandsonLeavs {
     walk_down
     walk_down
@@ -68,4 +90,29 @@ movement Movement_GrandsonLeavs {
     walk_down
     walk_down
     walk_down
+}
+
+//text
+text FloralTrainer_Intro {
+    format("Welcome to the Flower Glade! Let the petals dance in our battle!")
+}
+
+text FloralTrainer_Outro {
+    format("Oh, your Pokémon are as resilient as flowers in sunlight. Well done!")
+}
+
+text FloralTrainer_PostBattle {
+    format("The fragrance of victory lingers in the air. Keep blooming on your journey!")
+}
+
+text LilyGarden_Intro {
+    format("Welcome to my garden! Let the soothing aroma of nature guide us in our battle!")
+}
+
+text LilyGarden_Outro {
+    format("Your Pokémon's spirit is as radiant as a sunflower. Well played!")
+}
+
+text LilyGarden_PostBattle {
+    format("May your journey continue to blossom with victories. Farewell!")
 }

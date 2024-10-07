@@ -1,0 +1,8 @@
+mapscripts EmderDunes_Larger_MapScripts {}
+
+script Edtd {
+    lockall
+    msgbox(format("This will be a larger expanse of the desert to explore!"))
+    msgbox(format("Rare Pokémon, hidden bases and large ruins to explore and find"))
+    releaseall
+}

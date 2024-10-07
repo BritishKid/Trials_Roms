@@ -4,7 +4,7 @@ MegaStone_Grottos_MapScripts::
 
 MegaStone_Grotto_EventScript_Blastoise_MegaStone::
 	lock
-	goto_if_set FLAG_BLASTOISE_MEGASTONE_FOUND, MegaStone_Grotto_EventScript_Blastoise_MegaStone_2
+	goto_if_unset FLAG_BLASTOISE_MEGASTONE_FOUND, MegaStone_Grotto_EventScript_Blastoise_MegaStone_2
 	msgbox MegaStone_Grotto_EventScript_Blastoise_MegaStone_Text_2
 MegaStone_Grotto_EventScript_Blastoise_MegaStone_1:
 	release
@@ -25,6 +25,7 @@ MegaStone_Grotto_EventScript_Blastoise_MegaStone_2:
 
 BlastoiseMegaBattle::
 	settotemboost 1, 0, 2, 0, 1, 2, 0, 0
+	setflag FLAG_CANT_CATCH_MON
 	setwildbattle SPECIES_BLASTOISE_MEGA, 45
 	dowildbattle
 	return
@@ -32,6 +33,7 @@ BlastoiseMegaBattle::
 
 BlastoiseMegaBeaten::
 	removeobject 1
+	clearflag FLAG_CANT_CATCH_MON
 	msgbox BlastoiseMegaBeaten_Text_0
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_MegaStoneGrotto_FaceUpPlayer
 	msgbox BlastoiseMegaBeaten_Text_1
@@ -42,7 +44,7 @@ BlastoiseMegaBeaten::
 
 MegaStone_Grotto_EventScript_Charizard_MegaStone::
 	lock
-	goto_if_set FLAG_CHARIZARD_Y_MEGASTONE_FOUND, MegaStone_Grotto_EventScript_Charizard_MegaStone_2
+	goto_if_unset FLAG_CHARIZARD_Y_MEGASTONE_FOUND, MegaStone_Grotto_EventScript_Charizard_MegaStone_2
 	msgbox MegaStone_Grotto_EventScript_Blastoise_MegaStone_Text_2
 MegaStone_Grotto_EventScript_Charizard_MegaStone_1:
 	release
@@ -60,6 +62,7 @@ MegaStone_Grotto_EventScript_Charizard_MegaStone_2:
 
 
 CharizardMegaBattle::
+	setflag FLAG_CANT_CATCH_MON
 	settotemboost 1, 0, 1, 1, 2, 1, 0, 0
 	setwildbattle SPECIES_CHARIZARD_MEGA_Y, 45
 	dowildbattle
@@ -68,6 +71,7 @@ CharizardMegaBattle::
 
 CharizardMegaBeaten::
 	removeobject 1
+	clearflag FLAG_CANT_CATCH_MON
 	msgbox CharizardMegaBeaten_Text_0
 	msgbox BlastoiseMegaBeaten_Text_1
 	giveitem ITEM_CHARIZARDITE_Y

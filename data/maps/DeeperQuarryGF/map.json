@@ -3,7 +3,7 @@
   "name": "DeeperQuarryGF",
   "layout": "LAYOUT_DEEPER_QUARRY_GF",
   "music": "MUS_MT_CHIMNEY",
-  "region_map_section": "MAPSEC_NONE",
+  "region_map_section": "MAPSEC_PATTERN_BUSH",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_UNDERGROUND",
@@ -17,7 +17,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_HIKER",
       "x": 4,
-      "y": 0,
+      "y": 1,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -25,7 +25,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "FLAG_HIDE_QUARRY_MASTER_IN_QUARRY"
     }
   ],
   "warp_events": [
@@ -47,21 +47,12 @@
   "coord_events": [
     {
       "type": "trigger",
-      "x": 3,
-      "y": 5,
-      "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "NULL"
-    },
-    {
-      "type": "trigger",
       "x": 4,
-      "y": 5,
+      "y": 6,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
+      "var": "VAR_QUARRY_STATE",
       "var_value": "0",
-      "script": "NULL"
+      "script": "Trigger_Quarry_Entrance"
     }
   ],
   "bg_events": [
@@ -70,7 +61,7 @@
       "x": 6,
       "y": 5,
       "elevation": 0,
-      "item": "ITEM_LINK_STONE",
+      "item": "ITEM_LINKING_CORD",
       "flag": "FLAG_HIDDEN_ITEM_QUARRY_ENTRANCE_HIDDEN_ITEM"
     }
   ]

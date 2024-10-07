@@ -10,6 +10,7 @@ script ShayminGrottoTriggerLeaving_DoesPlayerHaveGracideaFlower {
 script ShayminEncounter {
     lockall
     if(var(VAR_ROUTE_SHAYMIN_PROGRESS) == 1) {
+        setflag(FLAG_CANT_CATCH_MON)
         settotemboost(1,1,1,1,1,1,1,1)
         setwildbattle(SPECIES_SHAYMIN, 50, ITEM_SITRUS_BERRY) //todo create custom script to add custom moves
         dowildbattle
@@ -19,6 +20,7 @@ script ShayminEncounter {
         setvar(VAR_ROUTE_SHAYMIN_PROGRESS, 2)
     }
     if(var(VAR_ROUTE_SHAYMIN_PROGRESS) == 2) {
+        clearflag(FLAG_CANT_CATCH_MON)
         givemon(SPECIES_SHAYMIN, 30)
         playfanfare(MUS_OBTAIN_ITEM)
         if (var(VAR_RESULT) == MON_GIVEN_TO_PARTY) {

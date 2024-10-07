@@ -1,0 +1,142 @@
+mapscripts LilycoveCity_MegaMansion_MapScripts {}
+
+script MegaMansion_Secret1 {
+    lockall
+    if(var(VAR__MEGA_MANSION_STATE) == 1) {
+        setvar(VAR__MEGA_MANSION_STATE, 2)
+        msgbox(format("It's a bonsai tree that was just planted"))
+    }
+    releaseall
+}
+
+script MegaMansion_Trainer1 {
+    trainerbattle_single(MEGAMANSION_TRAINER1, MegaMansion_Trainer1_Intro, MegaMansion_Trainer1_Outro, MegaMansion_Trainer_PostbattleScript)
+    msgbox(MegaMansion_Trainer1_Postbattle, MSGBOX_AUTOCLOSE)
+    release
+}
+
+script MegaMansion_Trainer2 {
+    trainerbattle_single(MEGAMANSION_TRAINER2, MegaMansion_Trainer2_Intro, MegaMansion_Trainer2_Outro, MegaMansion_Trainer_PostbattleScript)
+    msgbox(MegaMansion_Trainer2_Postbattle, MSGBOX_AUTOCLOSE)
+    release
+}
+
+script MegaMansion_Trainer4 {
+    trainerbattle_single(MEGAMANSION_TRAINER4, MegaMansion_Trainer4_Intro, MegaMansion_Trainer4_Outro, MegaMansion_Trainer_PostbattleScript)
+    msgbox(MegaMansion_Trainer4_Postbattle, MSGBOX_AUTOCLOSE)
+    release
+}
+
+script MegaMansion_Trainer_PostbattleScript {
+    msgbox(format("Well as you won you get a star from me"))
+    if (var(VAR_MEGAMANSION_STARS) == 9) {
+        setvar(VAR_MEGAMANSION_STARS, 10)
+    }
+    if (var(VAR_MEGAMANSION_STARS) == 8) {
+        setvar(VAR_MEGAMANSION_STARS, 9)
+    }
+    if (var(VAR_MEGAMANSION_STARS) == 7) {
+        setvar(VAR_MEGAMANSION_STARS, 8)
+    }
+    if (var(VAR_MEGAMANSION_STARS) == 6) {
+        setvar(VAR_MEGAMANSION_STARS, 7)
+    }
+    if (var(VAR_MEGAMANSION_STARS) == 5) {
+        setvar(VAR_MEGAMANSION_STARS, 6)
+    }
+    if (var(VAR_MEGAMANSION_STARS) == 4) {
+        setvar(VAR_MEGAMANSION_STARS, 5)
+    }
+    if (var(VAR_MEGAMANSION_STARS) == 3) {
+        setvar(VAR_MEGAMANSION_STARS, 4)
+    }
+    if (var(VAR_MEGAMANSION_STARS) == 2) {
+        setvar(VAR_MEGAMANSION_STARS, 3)
+    }
+    if (var(VAR_MEGAMANSION_STARS) == 1) {
+        setvar(VAR_MEGAMANSION_STARS, 2)
+    }
+    if (var(VAR_MEGAMANSION_STARS) == 0) {
+        setvar(VAR_MEGAMANSION_STARS, 1)
+    }
+}
+
+script MegaMansion_Leaderbaord {
+    lockall
+    msgbox(format("COMING SOON"))
+    //todo make this show a list of trainers and strength
+    releaseall
+}
+
+script MegaMansion_TrapDoor {
+    lockall
+        msgbox(format("It's a trapdoor"))
+        msgbox(format("..."))
+    if(var(VAR_MEGAMANSION_STARS) == 4) {
+        msgbox(format("You open it and climb in"))
+        // warp() //TODO secret garden with some rare encounters?
+    }
+    else {
+        msgbox(format("It's locked"))
+    }
+    releaseall
+}
+
+script MegaMansion_StarCheck {
+    lockall
+    faceplayer
+    msgbox(format("To reach the top 8 you need to get atleast 10 Stars."))
+    if(var(VAR_MEGAMANSION_STARS) > 10 ) {
+        msgbox(format("Sorry you are still short some stars, keep battling!"))
+    }
+    else {
+        //todo complete this
+        //start tournament and give prize
+    }
+    releaseall
+}
+
+script MegaMansion_EntranceStart {
+    lockall
+    msgbox(format("This is the Mega Mansion! It is currently still in development but feel free to explore this early vesion and supply feedback"))
+    setvar(VAR__MEGA_MANSION_STATE, 1)
+    releaseall
+}
+
+//text
+
+text MegaMansion_Trainer1_Intro {
+    format("I've almost got enough stars to get the Mega Ring, you're just another speed bump")
+}
+
+text MegaMansion_Trainer1_Outro {
+    format("Wow, you're a massive speed bump")
+}
+
+text MegaMansion_Trainer1_Postbattle {
+    format("Once I get my Mega Ring i'm going to mega evolve my Centiskorch!")
+}
+
+text MegaMansion_Trainer2_Intro {
+    format("With this team, I'm sure to take you by surprise, type wise!")
+}
+
+text MegaMansion_Trainer2_Outro {
+    format("I see you managed to make sense of these typings.")
+}
+
+text MegaMansion_Trainer2_Postbattle {
+    format("I made a team of Pokémon with types no other family has... not that doing that made it the best.")
+}
+
+text MegaMansion_Trainer4_Intro {
+    format("I can't wait to get my mega bracelet!")
+}
+
+text MegaMansion_Trainer4_Outro {
+    format("Once I get my mega I will be the strongest")
+}
+
+text MegaMansion_Trainer4_Postbattle {
+    format("Once I get my mega I will be the strongest")
+}

@@ -1,1 +1,49 @@
 mapscripts DarkCave_B1F_MapScripts {}
+
+
+script DarkCave_B1F_Hiker1 {
+    trainerbattle_single(TRAINER_DARKCAVE_HIKER1, Hiker1_Intro, Hiker1_Outro, Increase_Trainers_Beaten)
+    msgbox(Hiker1_PostBattle, MSGBOX_AUTOCLOSE)
+    end
+}
+
+script DarkCave_B1F_Hiker2 {
+    trainerbattle_single(TRAINER_DARKCAVE_HIKER2, Hiker2_Intro, Hiker2_Outro, Increase_Trainers_Beaten)
+    msgbox(Hiker2_PostBattle, MSGBOX_AUTOCLOSE)
+    end
+}
+
+
+script DarkCave_B1F_EventScript_ItemPPMax {
+    finditem(ITEM_PP_MAX)
+}
+
+script DarkCave_B1F_EventScript_TM05 {
+    finditem(ITEM_TM05)
+}
+
+//text
+
+text Hiker1_Intro {
+    format("It's so dark in here!")
+}
+
+text Hiker1_Outro {
+    format("It's easy to win when I can't see whats happening")
+}
+
+text Hiker1_PostBattle {
+    format("I should of brought flash")
+}
+
+text Hiker2_Intro {
+    format("I had to turn back to Ember Dunes, I don't have an Acro Bike")
+}
+
+text Hiker2_Outro {
+    format("Good thing I brought lots of water.")
+}
+
+text Hiker2_PostBattle {
+    format("I wanted to get Rock Smash from the master in Hemlock")
+}

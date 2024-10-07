@@ -7605,7 +7605,7 @@ u16 GetBattleBGM(void)
         case TRAINER_CLASS_AQUA_LEADER:
         case TRAINER_CLASS_MAGMA_LEADER:
             return MUS_VS_AQUA_MAGMA_LEADER;
-        case TRAINER_CLASS_TEAM_AQUA:
+        case TRAINER_CLASS_ACE_TRAINER:
         case TRAINER_CLASS_TEAM_MAGMA:
         case TRAINER_CLASS_AQUA_ADMIN:
         case TRAINER_CLASS_MAGMA_ADMIN:
@@ -8705,6 +8705,8 @@ u8 GetCurrentLevelCap(void) //define level caps
             return 31;
         else if (!FlagGet(FLAG_BADGE04_GET))
             return 38;
+        else if (!FlagGet(FLAG_BADGE05_GET))
+            return 45;
         else
             return 100;
     }

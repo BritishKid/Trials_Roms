@@ -33,10 +33,10 @@ script GranitePeak_School_Item_Quiz {
         msgbox(format("Question 2. \n Held items can harm the holder?"), MSGBOX_YESNO) 
         if(var(VAR_RESULT) == YES && var(VAR_PREVENT_LOOPS_SCHOOL) == 0) {
             msgbox(format("Correct! Sometimes you want to use Fling or Trick to give your opponent items that could harm them."))
-            msgbox(format("Okay Final Question \n A held items benefits are the same for all Pokemon?"), MSGBOX_YESNO)
+            msgbox(format("Okay Final Question \n A held items benefits are the same for all Pokémon?"), MSGBOX_YESNO)
                     if(var(VAR_RESULT) == NO && var(VAR_PREVENT_LOOPS_SCHOOL) == 0) {
                         //correct
-                        msgbox(format("Yes, some items only work on certain Pokemon."))
+                        msgbox(format("Yes, some items only work on certain Pokémon."))
                         msgbox(format("Incredible! You passed with ease"))
                         call(GranitePeak_School_ItemQuiz_Passsed)
                     }
@@ -70,10 +70,17 @@ script GranitePeak_School_ItemQuiz_Passsed {
     msgbox(format("Congratulations to you all you've passed. Here take these."))
     playfanfare(MUS_OBTAIN_ITEM)
     setflag(FLAG_ITEM_PATCH_EARNT)
-    // subquestmenu(QUEST_MENU_COMPLETE_QUEST, QUEST_POKEMON_LEAGUE, SUB_QUEST_SCHOOL_ITEM_PATCH)
+    subquestmenu(QUEST_MENU_COMPLETE_QUEST, QUEST_POKEMON_LEAGUE, SUB_QUEST_SCHOOL_ITEM_PATCH)
     msgbox(format("I think you should also have these!"))
     playfanfare(MUS_OBTAIN_ITEM)
-    giveitem(ITEM_GRASS_GEM, 1)
+    switch (var(VAR_STARTER_MON)) {
+        case 0: //chikorita selected
+            giveitem(ITEM_GRASS_GEM, 1)
+        case 1: //cyndaquil selected
+            giveitem(ITEM_FIRE_GEM, 1)
+        case 2: // totodile selected
+            giveitem(ITEM_WATER_GEM, 1)
+        }
     giveitem(ITEM_ELECTRIC_GEM, 1)
     msgbox(format("Good luck collecting the other patches"))
 }
@@ -106,6 +113,7 @@ script ItemStudent_Beaten {
     if (var(VAR_ITEM_ROOM_STUDENTS) == 0) {
         setvar(VAR_ITEM_ROOM_STUDENTS, 1)
     }
+    call(Increase_Trainers_Beaten)
 }
 
 //text script

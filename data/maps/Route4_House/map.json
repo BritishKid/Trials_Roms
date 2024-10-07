@@ -48,7 +48,16 @@
     {
       "type": "trigger",
       "x": 3,
-      "y": 7,
+      "y": 6,
+      "elevation": 0,
+      "var": "VAR_ROUTE4_BRAWLEY",
+      "var_value": "0",
+      "script": "Brawley_Route4_Battle"
+    },
+    {
+      "type": "trigger",
+      "x": 4,
+      "y": 6,
       "elevation": 0,
       "var": "VAR_ROUTE4_BRAWLEY",
       "var_value": "0",

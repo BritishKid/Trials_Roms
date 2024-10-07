@@ -1,8 +1,17 @@
-mapscripts GranitePeak_MapScripts {}
+mapscripts GranitePeak_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION {
+	    setflag(FLAG_VISITED_GRANITE_PEAK)
+    }
+}
 
 script GranitePeak_EventScript_PlayersHouse {
     lockall
-    msgbox(format("For sale: Inquire within"))
+    if(!flag(FLAG_HOUSE_OWNED)) {
+        msgbox(format("For sale: Inquire within"))    
+    }
+    else {
+        msgbox(format("{PLAYER}'s home "))
+    }
     releaseall
 }
 

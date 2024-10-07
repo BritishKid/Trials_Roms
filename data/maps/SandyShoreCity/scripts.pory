@@ -1,2 +1,7 @@
 mapscripts SandyShoreCity_MapScripts {}
 
+script HauntedMansion_Sign {
+    lockall
+    msgbox(format("This area is unfinished, you can explore and catch some ghost Pokémon for now though"))
+    releaseall
+}

@@ -1,0 +1,27 @@
+mapscripts DeeoerQuarryBF1_MapScripts {}
+
+
+script QuarryWorker_Stuck1 {
+    lockall
+    if(flag(FLAG_HIDE_QUARRY_WORKERS)) { //this flag is true when quarry still in danger
+        msgbox(format("Is it safe? I had to dive out the way when a giant Pokémon came burrowing through"))    
+    } else {
+        trainerbattle_single(TRAINER_QUARRYWORKER_STUCK1 ,QuarryWorker_Stuck1_Intro, QuarryWorker_Stuck1_Outro, Increase_Trainers_Beaten)
+        msgbox(QuarryWorker_Stuck1_PostBattle, MSGBOX_AUTOCLOSE)
+    }
+    releaseall
+}
+
+//text
+
+text QuarryWorker_Stuck1_Intro {
+    format("I heard you managed to take out that massive Pokémon! My word you must be strong")
+}
+
+text QuarryWorker_Stuck1_Outro {
+    format("You really are awesome!")
+}
+
+text QuarryWorker_Stuck1_PostBattle {
+    format("Have you spoken to the boss? I'm sure he could reward you for getting the quarry up again")
+}

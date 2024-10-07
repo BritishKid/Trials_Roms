@@ -36,7 +36,7 @@ Route119_WeatherInstitute_2F_EventScript_Grunt5::
 	end
 
 Route119_WeatherInstitute_2F_EventScript_Grunt2::
-	trainerbattle_single TRAINER_ROUTE2_ROBERT, Route119_WeatherInstitute_2F_Text_Grunt2Intro, Route119_WeatherInstitute_2F_Text_Grunt2Defeat
+	trainerbattle_single TRAINER_FIRST_ENCOUNTER_ROBERT, Route119_WeatherInstitute_2F_Text_Grunt2Intro, Route119_WeatherInstitute_2F_Text_Grunt2Defeat
 	msgbox Route119_WeatherInstitute_2F_Text_Grunt2PostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -127,7 +127,7 @@ Route119_WeatherInstitute_2F_EventScript_ReceivedCastformFanfare::
 
 Route119_WeatherInstitute_2F_EventScript_ExplainCastform::
 	msgbox Route119_WeatherInstitute_2F_Text_PokemonChangesWithWeather, MSGBOX_DEFAULT
-	setflag FLAG_RECEIVED_CASTFORM
+	setflag FLAG_RECEIVED_TYROGUE
 	release
 	end
 
@@ -206,7 +206,7 @@ Route119_WeatherInstitute_2F_Movement_ScientistApproachPlayer:
 Route119_WeatherInstitute_2F_EventScript_WeatherScientist::
 	lock
 	faceplayer
-	goto_if_set FLAG_RECEIVED_CASTFORM, Route119_WeatherInstitute_2F_EventScript_ScientistMentionWeather
+	goto_if_set FLAG_RECEIVED_TYROGUE, Route119_WeatherInstitute_2F_EventScript_ScientistMentionWeather
 	goto Route119_WeatherInstitute_2F_EventScript_ReceiveCastform
 	end
 

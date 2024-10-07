@@ -7,6 +7,8 @@ script Nathans_Computer {
 }
 
 script Battle_NathanSecretBase {
+    lockall
+    faceplayer
     if(!(flag(FLAG_NATHAN_BEATEN))) {
         trainerbattle_single(TRAINER_NATHAN_ROUTE_1B_SECRET_BASE, Nathan_Intro, Nathan_Outro, Nathan_Beaten)
     }
@@ -65,8 +67,8 @@ script Nathans_Hidden_Base_EventScript_Find_ChikoritaDoll {
         msgbox(format("It's Nathan's Gulpin Doll"))
         adddecoration(DECOR_GULPIN_DOLL)
         setflag(FLAG_HIDDEN_BASE_COLLECTABLE_FOUND_GULPIN)
-        // subquestmenu(QUEST_MENU_COMPLETE_QUEST, QUEST_POKEMON_LEAGUE, SUB_QUEST_GULPIN_DOLL)
-        msgbox(format("You've unlocked the CHIKORITA Doll for your secret base"))
+        subquestmenu(QUEST_MENU_COMPLETE_QUEST, QUEST_POKEMON_LEAGUE, SUB_QUEST_GULPIN_DOLL)
+        msgbox(format("You've unlocked the GULPIN Doll for your secret base"))
     }
     else {
         msgbox(format("It's Nathan's Gulpin Doll"))
@@ -76,7 +78,7 @@ script Nathans_Hidden_Base_EventScript_Find_ChikoritaDoll {
 
 //text scripts
 text Nathan_Intro {
-    format("I found this pokemon in a far away land! It's so cool.")
+    format("I found this Pokémon in a far away land! It's so cool.")
 }
 
 text Nathan_Outro {

@@ -24,7 +24,7 @@ script LegendsAltar_LegendsPlate {
         msgbox(format("There seems to be a plate radiating warmth on the altar"))
         giveitem(ITEM_LEGENDS_PLATE)
         playfanfare(MUS_OBTAIN_ITEM)
-        // subquestmenu(QUEST_MENU_COMPLETE_QUEST, QUEST_POKEMON_LEAGUE, SUB_QUEST_LEGENDS_PLATE)
+        subquestmenu(QUEST_MENU_COMPLETE_QUEST, QUEST_POKEMON_LEAGUE, SUB_QUEST_LEGENDS_PLATE)
         setflag(FLAG_LEGENDS_PLATE_FOUND)
         setvar(VAR_PLATE_QUEST_STATE, 3)
     }

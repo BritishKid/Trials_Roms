@@ -5,8 +5,11 @@ Platefall_Cave_Ground_Floor_MapScripts::
 Platefall_Puzzle_Wall::
 	lock
 	goto_if_unset FLAG_ALEX_MET, Platefall_Puzzle_Wall_2
-	msgbox Platefall_Puzzle_Wall_Text_12
 Platefall_Puzzle_Wall_1:
+	compare VAR_PLATES_FOUND, 3
+	goto_if_gt Platefall_Puzzle_Wall_5
+	msgbox Platefall_Puzzle_Wall_Text_13
+Platefall_Puzzle_Wall_4:
 	release
 	return
 
@@ -15,6 +18,7 @@ Platefall_Puzzle_Wall_2:
 	msgbox Platefall_Puzzle_Wall_Text_1
 	msgbox Platefall_Puzzle_Wall_Text_2
 	msgbox Platefall_Puzzle_Wall_Text_3
+	questmenu QUEST_MENU_SET_ACTIVE, QUEST_ARCEUS_PLATES
 	msgbox Platefall_Puzzle_Wall_Text_4
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_ThugCity_Player_Surprised
 	waitmovement OBJ_EVENT_ID_PLAYER
@@ -34,9 +38,15 @@ Platefall_Puzzle_Wall_2:
 	setflag FLAG_ALEX_MET
 	goto Platefall_Puzzle_Wall_1
 
+Platefall_Puzzle_Wall_5:
+	msgbox Platefall_Puzzle_Wall_Text_12
+	warp MAP_PLATEFALL_CAVE_DEEPER_GF, 4, 6
+	goto Platefall_Puzzle_Wall_4
+
 
 Platefall_Cave_Alex_General::
 	lock
+	faceplayer
 	msgbox Platefall_Cave_Alex_General_Text_0
 	release
 	return
@@ -44,6 +54,7 @@ Platefall_Cave_Alex_General::
 
 Platefall_Cave_Maniac::
 	lock
+	faceplayer
 	msgbox Platefall_Cave_Maniac_Text_0
 	release
 	return
@@ -103,7 +114,7 @@ Platefall_Puzzle_Wall_Text_5:
 	.string "the first plates landed.$"
 
 Platefall_Puzzle_Wall_Text_6:
-	.string "But that Pokemon at the top of the\n"
+	.string "But that Pokémon at the top of the\n"
 	.string "painting, the one with many arms. It's\l"
 	.string "nothing like anything we've seen\l"
 	.string "before.$"
@@ -125,7 +136,7 @@ Platefall_Puzzle_Wall_Text_9:
 	.string "I've had a theory that if you can find\n"
 	.string "the plates they picture this wall is\l"
 	.string "actually a doorway to awaken that\l"
-	.string "ancient Pokemon.$"
+	.string "ancient Pokémon.$"
 
 Platefall_Puzzle_Wall_Text_10:
 	.string "Although no-one has managed to find\n"
@@ -136,8 +147,11 @@ Platefall_Puzzle_Wall_Text_11:
 	.string "Anyway I'll be seeing you around!$"
 
 Platefall_Puzzle_Wall_Text_12:
-	.string "There seem to be 4 unfilled plate sized\n"
-	.string "holes in the wall.$"
+	.string "You put the 4 plates into the slots$"
+
+Platefall_Puzzle_Wall_Text_13:
+	.string "There seem to be 4 plate sized holes in\n"
+	.string "the wall.$"
 
 Platefall_Cave_Alex_General_Text_0:
 	.string "I love this place, it's just full of\n"
@@ -145,7 +159,7 @@ Platefall_Cave_Alex_General_Text_0:
 
 Platefall_Cave_Maniac_Text_0:
 	.string "Lot's of history books talk about rare\n"
-	.string "Pokemon hidden deep in these\l"
+	.string "Pokémon hidden deep in these\l"
 	.string "mountains, but they are very hard to\l"
 	.string "traverse$"
 

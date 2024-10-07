@@ -24,6 +24,8 @@ Route7_Pyukumuku_Clean_Up_1::
 
 
 Route7_IslandBoat::
+	lockall
+	faceplayer
 	msgbox Route7_IslandBoat_Text_0, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq Route7_IslandBoat_2

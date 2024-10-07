@@ -73,7 +73,7 @@
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "02",
+      "trainer_sight_or_berry_tree_id": "2",
       "script": "Battle_Route2_Trainer3",
       "flag": "0"
     },
@@ -112,7 +112,7 @@
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "BERRY_TREE_ROUTE_102_PECHA",
+      "trainer_sight_or_berry_tree_id": "BERRY_TREE_ROUTE_2_PECHA",
       "script": "BerryTreeScript",
       "flag": "0"
     },
@@ -125,7 +125,7 @@
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "BERRY_TREE_ROUTE_102_ORAN",
+      "trainer_sight_or_berry_tree_id": "BERRY_TREE_ROUTE_2_TANGA",
       "script": "BerryTreeScript",
       "flag": "0"
     },
@@ -174,15 +174,7 @@
     }
   ],
   "coord_events": [
-    {
-      "type": "trigger",
-      "x": -24,
-      "y": 31,
-      "elevation": 0,
-      "var": "VAR_ROBERT_STATE",
-      "var_value": "0",
-      "script": "EventScript_Route2_MeetRob"
-    }
+
   ],
   "bg_events": [
     {
@@ -191,6 +183,22 @@
       "y": 32,
       "elevation": 0,
       "secret_base_id": "SECRET_BASE_RED_CAVE1_1"
+    },
+    {
+      "type": "hidden_item",
+      "x": 8,
+      "y": 20,
+      "elevation": 0,
+      "item": "ITEM_SUPER_REPEL",
+      "flag": "FLAG_HIDDEN_ITEM_MAHOGANY_HILLS_1_SUPER_REPEL"
+    },
+    {
+      "type": "hidden_item",
+      "x": 35,
+      "y": 17,
+      "elevation": 0,
+      "item": "ITEM_STARDUST",
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE2_STARDUST"
     }
   ]
 }

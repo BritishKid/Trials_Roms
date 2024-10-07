@@ -3,40 +3,44 @@ Route1b_MapScripts::
 
 
 Route1b_BattleSalt7_FirstBattle::
-	trainerbattle_single TRAINER_SALT7_ROUTE_1B_ENCOUNTER, Salt7_Intro, Salt7_Outro
+	trainerbattle_single TRAINER_SALT7_ROUTE_1B_ENCOUNTER, Salt7_Intro, Salt7_Outro, Salt7_PostBattleScript
 	msgbox PostBattle_Salt7, MSGBOX_AUTOCLOSE
-	setflag FLAG_SALT7_BEATEN_FIRST_ENCOUNTER
-	setvar VAR_SALTS7_QUEST_STATE, 1
-	waitmessage
 	end
 
 
+Salt7_PostBattleScript::
+	setflag FLAG_SALT7_BEATEN_FIRST_ENCOUNTER
+	questmenu QUEST_MENU_SET_ACTIVE, QUEST_SALT7_GYRADOS
+	subquestmenu QUEST_MENU_COMPLETE_QUEST, QUEST_POKEMON_LEAGUE, SUB_QUEST_MET_SALT
+	setvar VAR_SALTS7_QUEST_STATE, 1
+	waitmessage
+	return
+
+
 Route1b_Battle_NeetFirst::
-	trainerbattle_single TRAINER_SHUT1NNEET_ROUTE_1B, Route1b_Neet_Intro, Route1b_Neet_Outro
+	trainerbattle_single TRAINER_SHUT1NNEET_ROUTE_1B, Route1b_Neet_Intro, Route1b_Neet_Outro, Increase_Trainers_Beaten
 	msgbox PostBattle_Route1b_Neet, MSGBOX_AUTOCLOSE
-	setvar VAR_FIRST_TRAINERS_BEATEN_CHECK, VAR_FIRST_TRAINERS_BEATEN_CHECK + 1
 	waitmessage
 	end
 
 
 Route1b_TrainerLeroy::
-	trainerbattle_single TRAINER_GIRLMAYA_ROUTE_1B, Girl_Maya_Intro, Girl_Maya_Outro
+	trainerbattle_single TRAINER_GIRLMAYA_ROUTE_1B, Girl_Maya_Intro, Girl_Maya_Outro, Increase_Trainers_Beaten
 	msgbox PostBattle_Maya, MSGBOX_AUTOCLOSE
-	setvar VAR_FIRST_TRAINERS_BEATEN_CHECK, VAR_FIRST_TRAINERS_BEATEN_CHECK + 1
 	waitmessage
 	end
 
 
 Route1b_BattlePicknickerLily::
-	trainerbattle_single TRAINER_PICKNICKERLILY_ROUTE_1B, Picknicker_Lily_Intro, Picknicker_Lily_Outro
+	trainerbattle_single TRAINER_PICKNICKERLILY_ROUTE_1B, Picknicker_Lily_Intro, Picknicker_Lily_Outro, Increase_Trainers_Beaten
 	msgbox PostBattle_Lily, MSGBOX_AUTOCLOSE
-	setvar VAR_FIRST_TRAINERS_BEATEN_CHECK, VAR_FIRST_TRAINERS_BEATEN_CHECK + 1
 	waitmessage
 	end
 
 
 Route1b_Fisherman_PierTalk::
 	lock
+	faceplayer
 	msgbox Route1b_Fisherman_PierTalk_Text_0, MSGBOX_DEFAULT
 	release
 	return
@@ -54,8 +58,13 @@ EventScript_Route1b_ItemBall_SuperPotion::
 	return
 
 
+Increase_Trainers_Beaten::
+	setvar VAR_TRAINERS_BEATEN_CHECK, VAR_TRAINERS_BEATEN_CHECK + 1
+	return
+
+
 Route1b_Fisherman_PierTalk_Text_0:
-	.string "If I had a pokemon that could surf I\n"
+	.string "If I had a Pokémon that could surf I\n"
 	.string "could go over to that island!$"
 
 Route1b_FisherSign_Text_0:
@@ -97,7 +106,7 @@ Girl_Maya_Outro::
 	.string "Your Pokémon are amazing!$"
 
 PostBattle_Maya::
-	.string "I need to catch some stronger Pokemon$"
+	.string "I need to catch some stronger Pokémon$"
 
 Picknicker_Lily_Intro::
 	.string "I'm going to become a champion one day!$"

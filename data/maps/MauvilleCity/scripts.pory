@@ -1,5 +1,7 @@
 mapscripts MauvilleCity_MapScripts {
-    
+    MAP_SCRIPT_ON_TRANSITION {
+        setflag(FLAG_VISITED_MAUVILLE_CITY)
+    }
 }
 
 script ThugCity_Pyukumuku_Clean_Up_1 {
@@ -62,7 +64,7 @@ script ThugCity_SecondGuard_Beaten {
     removeobject(3)
     setflag(FLAG_THUG_ENTRANCE_BEATEN)
     setvar(VAR_THUG_TOWN_STATE, 1)
-    // questmenu(QUEST_MENU_SET_ACTIVE, QUEST_THUG_TOWN)
+    questmenu(QUEST_MENU_SET_ACTIVE, QUEST_THUG_TOWN)
     release
 }
 
@@ -85,6 +87,12 @@ script ThugCity_PortEntrance_Beaten {
 script ThugCity_RandomThug {
     lock
     msgbox(format("The lady in this house is rich, when my buddies get here we are going to take everything from her!"))
+    release
+}
+
+script ThugCity_RandomThug2 {
+    lock
+    msgbox(format("This town is full of total dweebs!"))
     release
 }
 

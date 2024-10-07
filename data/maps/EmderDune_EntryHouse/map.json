@@ -24,12 +24,12 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "ChattyHikerMan_FoundNearDesert_InThingRobMade",
       "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER",
-      "x": 6,
+      "x": 12,
       "y": 6,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -37,7 +37,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "ChattyBugTrainer_InDesert",
       "flag": "0"
     }
   ],
@@ -54,7 +54,7 @@
       "y": 7,
       "elevation": 0,
       "dest_map": "MAP_EMDER_DUNES",
-      "dest_warp_id": "0"
+      "dest_warp_id": "2"
     }
   ],
   "coord_events": [

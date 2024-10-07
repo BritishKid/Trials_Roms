@@ -1,19 +1,42 @@
 mapscripts PlayersBedroom_MapScripts {}
 
-script PlayersBedroom_StarterPokemon_Pokeball {
+script PlayersBedroom_StarterPokemon_Pokeball { //TODO REDO THIS TO MAKE IT BETTER
     lockall
-    msgbox(format("It's the Pokemon your father gave you."))
-    showmonpic(SPECIES_CHIKORITA,10,3)
-    msgbox("Is it a Chikorita?", MSGBOX_YESNO)
+    msgbox(format("You father left you a gift for your birthday."))
+    msgbox(format("Happy Birthday! Please take this Pokémon and become a Pokémon Master like you always dreamed!"))
+    msgbox(format("I'm sure you can guess which Pokémon I got you."))
+    multichoice(21, 6, MULTI_STARTER_SELECTION, TRUE)
+    switch(var(VAR_RESULT)) {
+        case 0: goto(Starter_Totodile)
+        case 1: goto(Starter_Chikorita)
+        case 2: goto(Starter_Cyndaquil)
+    }
+    waitmessage
+    releaseall
+    end
+}
+
+script NicknamePartyMon{
+    msgbox("Give it a nickname?", MSGBOX_YESNO)
+    hidemonpic
+    if(var(VAR_RESULT) == YES){
+        call(Common_EventScript_GetGiftMonPartySlot)
+        call(Common_EventScript_NameReceivedPartyMon)
+    }
+}
+
+script Starter_Cyndaquil {
+    showmonpic(SPECIES_CYNDAQUIL,10,3)
+    msgbox("Is it a Cyndaquil?", MSGBOX_YESNO)
     if(var(VAR_RESULT) == YES) {
-        givemon(SPECIES_CHIKORITA, 5, ITEM_ORAN_BERRY)
-        setvar(VAR_STARTER_MON, 0)
+        givemon(SPECIES_CYNDAQUIL, 5, ITEM_ORAN_BERRY)
+        setvar(VAR_STARTER_MON, 1)
         if (var(VAR_RESULT) == MON_GIVEN_TO_PARTY) {
-            msgbox("Recieved Chikorita")
+            msgbox("Recieved Cyndaquil")
             call(ChosenStarterPokemon)
         }
         elif (var(VAR_RESULT) == MON_GIVEN_TO_PC) {
-            msgbox("Recieved Chikorita")
+            msgbox("Recieved Cyndaquil")
             call(ChosenStarterPokemon)
         }
         else {
@@ -22,11 +45,11 @@ script PlayersBedroom_StarterPokemon_Pokeball {
         }
         waitmessage
         releaseall
-        end    
+        end     
     }
-    else {
-        hidemonpic
-    }
+}
+
+script Starter_Totodile {
     showmonpic(SPECIES_TOTODILE,10,3)
     msgbox("Is it a Totodile?", MSGBOX_YESNO)
     if(var(VAR_RESULT) == YES) {
@@ -51,17 +74,20 @@ script PlayersBedroom_StarterPokemon_Pokeball {
     else {
         hidemonpic
     }
-    showmonpic(SPECIES_CYNDAQUIL,10,3)
-    msgbox("Is it a Cyndaquil?", MSGBOX_YESNO)
+}
+
+script Starter_Chikorita {
+    showmonpic(SPECIES_CHIKORITA,10,3)
+    msgbox("Is it a Chikorita?", MSGBOX_YESNO)
     if(var(VAR_RESULT) == YES) {
-        givemon(SPECIES_CYNDAQUIL, 5, ITEM_ORAN_BERRY)
-        setvar(VAR_STARTER_MON, 1)
+        givemon(SPECIES_CHIKORITA, 5, ITEM_ORAN_BERRY)
+        setvar(VAR_STARTER_MON, 0)
         if (var(VAR_RESULT) == MON_GIVEN_TO_PARTY) {
-            msgbox("Recieved Cyndaquil")
+            msgbox("Recieved Chikorita")
             call(ChosenStarterPokemon)
         }
         elif (var(VAR_RESULT) == MON_GIVEN_TO_PC) {
-            msgbox("Recieved Cyndaquil")
+            msgbox("Recieved Chikorita")
             call(ChosenStarterPokemon)
         }
         else {
@@ -70,24 +96,10 @@ script PlayersBedroom_StarterPokemon_Pokeball {
         }
         waitmessage
         releaseall
-        end     
+        end    
     }
     else {
         hidemonpic
-        msgbox("It must of been one of them")
-    }
-    waitmessage
-    releaseall
-    end
-}
-
-script NicknamePartyMon{
- 
-    msgbox("Give it a nickname?", MSGBOX_YESNO)
-    hidemonpic
-    if(var(VAR_RESULT) == YES){
-        call(Common_EventScript_GetGiftMonPartySlot)
-        call(Common_EventScript_NameReceivedPartyMon)
     }
 }
 
@@ -105,8 +117,8 @@ script GivePokedexAndUnlockPokemonMenu{
 	setflag(FLAG_SYS_POKEDEX_GET)
     setflag(FLAG_SYS_QUEST_MENU_GET)
     setflag(FLAG_SYS_B_DASH)
-    // questmenu(QUEST_MENU_SET_ACTIVE, QUEST_POKEMON_LEAGUE)
-    // questmenu(QUEST_MENU_SET_ACTIVE, QUEST_HIDDEN_DOLLS)
+    questmenu(QUEST_MENU_SET_ACTIVE, QUEST_POKEMON_LEAGUE)
+    questmenu(QUEST_MENU_SET_ACTIVE, QUEST_HIDDEN_DOLLS)
     special(EnableNationalPokedex)
 }
 
@@ -136,6 +148,8 @@ script EventScript_PlayersBed_HealParty {
 script OptionsBook {
     lockall
     // if(flag(FLAG_UNUSED_0x03D)) { //todo pick a good flag
+
+    //TODO Speedrun mode that removes major text
     msgbox("Options book")
     if(!flag(FLAG_LEVEL_CAPS)){
         msgbox(format("Do you want to turn on Level caps?"), MSGBOX_YESNO)
@@ -149,23 +163,33 @@ script OptionsBook {
         }
     }
 
-    if(!flag(FLAG_SHINY_RATE_INCREASED)) {
-        msgbox(format("Do you want to increase shiny rate?"))
-        msgbox(format("This should give you atleast one shiny per playthrough."), MSGBOX_YESNO)
-        if(var(VAR_RESULT) == YES){
-            setflag(FLAG_SHINY_RATE_INCREASED)
-        }
-    }  else {
-        msgbox(format("Do you want to decrease shiny rate?"))
-        msgbox(format("This will turn it to vanilla 1/8092."), MSGBOX_YESNO)
-        if(var(VAR_RESULT) == YES){
-            clearflag(FLAG_SHINY_RATE_INCREASED)
-        }
-    }
+    // if(!flag(FLAG_SHINY_RATE_INCREASED)) {
+    //     msgbox(format("Do you want to increase shiny rate?"))
+    //     msgbox(format("This should give you atleast one shiny per playthrough."), MSGBOX_YESNO)
+    //     if(var(VAR_RESULT) == YES){
+    //         setflag(FLAG_SHINY_RATE_INCREASED)
+    //     }
+    // }  else {
+    //     msgbox(format("Do you want to decrease shiny rate?"))
+    //     msgbox(format("This will turn it to vanilla 1/8092."), MSGBOX_YESNO)
+    //     if(var(VAR_RESULT) == YES){
+    //         clearflag(FLAG_SHINY_RATE_INCREASED)
+    //     }
+    // }
 
-
-        // msgbox(format("Do you want wild Pokemon to scale with your party?")) //todo add these in
+    //TODO level scaling
+        // msgbox(format("Do you want wild Pokémon to scale with your party?"))
 
     // }
     releaseall
+}
+
+script PlayersHouse_2F_EventScript_GameCube {
+    lockall
+    msgbox(format("Who even still plays a GameCube?"))
+    releaseall
+}
+
+text Common_Text_LookCloserAtMap {
+    format("{PLAYER} took a closer look at the\nHOENN region map.")
 }

@@ -1,108 +1,13 @@
 mapscripts Route2b_MapScripts {}
 
 script Battle_Route2_Genki {
-    trainerbattle_single(TRAINER_ROUTE2_GENKI, Route2_Genki_Intro, Route2_Genki_Outro)
+    trainerbattle_single(TRAINER_ROUTE2_GENKI, Route2_Genki_Intro, Route2_Genki_Outro, Increase_Trainers_Beaten)
     msgbox(PostBattle_Route2_Genki, MSGBOX_AUTOCLOSE)
-    setvar(VAR_FIRST_TRAINERS_BEATEN_CHECK, VAR_FIRST_TRAINERS_BEATEN_CHECK+1)
     waitmessage
     end
 }
 
-script EventScript_Route2_MeetRob {
-    lockall
-    msgbox(format("So it's you!"))
-    removeobject(1)
-    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Route2_ExclamationMark)
-    waitmovement(OBJ_EVENT_ID_PLAYER)
-    addobject(1)
-    setobjectxy(1,10,24)
-    applymovement(1, Movement_Route2_Robert_Approaches)
-    waitmovement(1)
-    msgbox(format("I've been hearing word of a new training beating everyone."))
-    if(var(VAR_FIRST_TRAINERS_BEATEN_CHECK) >= 10){ //Beat atleast 10 trainers to trigger meeting Robert
-        msgbox(format("It must be you, everyones been saying about how you destroy them in battle. \p Well how about it, care to show me how strong you are?"), MSGBOX_YESNO)
-            if(var(VAR_RESULT) == YES) {
-                trainerbattle_single(TRAINER_ROUTE2_ROBERT, Route2_Robert_Intro, Route2_Robert_Outro, EventScript_Route2_RobertBeaten)
-            }
-            else{
-                msgbox(format("Oh that's a shame. I'll see you another time then."))
-                call(EventScript_Route2_RobertLeaves)
-            }
-    } else {
-        msgbox(format("But no it's not you, you're not the one they are talking about. \p If you find out who's been winning against all the trainers around here please come find me so I can see how strong they are."))
-        call(EventScript_Route2_RobertLeaves)
-    }
-    releaseall
-}
 
 script EventScript_Route2b_ItemBall_UltraBall {
-	finditem(ITEM_ULTRA_BALL, 3)
-}
-
-script EventScript_Route2_Robert_FindLater {
-    if(var(VAR_ROBERT_STATE)==1) {
-        msgbox(format("Oh it's you.\n Hello"))
-        if(var(VAR_FIRST_TRAINERS_BEATEN_CHECK) >= 10){ //Beat atleast 10 trainers to trigger meeting Robert
-            msgbox(format("I've heard you've been winning alot of battles.\p But do you think you're good enough to beat me?"), MSGBOX_YESNO)
-            if(var(VAR_RESULT) == YES) {
-                    trainerbattle_single(TRAINER_ROUTE2_ROBERT, Route2_Robert_Intro, Route2_Robert_Outro, EventScript_Route2_RobertBeaten)
-            }
-        } else {
-            msgbox(format("I'm still trying to find that strong trainer"))
-        }
-    } 
-    if(var(VAR_ROBERT_STATE) == 2) {
-        msgbox(format("I'll train some more and beat you next time we meet."))
-    }
-    releaseall
-}
-
-script EventScript_Route2_RobertBeaten{ 
-    msgbox(format("Wow you're incredible, here take this!"))
-    giveitem(ITEM_ABILITY_PATCH, 1)
-    msgbox(format("You can use it to bring out the Hidden Ability for your Pokemon.\p It can make your pokemon much stronger!"))
-    if(var(VAR_ROBERT_STATE) == 0)  {
-        msgbox(format("Anyway I'll catch you later!"))
-        call(EventScript_Route2_RobertLeaves)
-    }
-    setvar(VAR_ROBERT_STATE, 2)
-    releaseall
-}
-
-script EventScript_Route2_RobertLeaves {
-    applymovement(1, Movement_Route2_Robert_Leaves)
-    waitmovement(1)
-    setobjectxy(1, 12, 0)
-    setvar(VAR_ROBERT_STATE, 1)
-}
-
-script EventScript_Route2_Unfinished {
-    lockall
-    msgbox(format("End of the current ROM. Please make suggestsion for more to be added"))
-    releaseall
-}
-//movement scripts
-movement Movement_Route2_ExclamationMark {
-    emote_exclamation_mark
-}
-
-movement Movement_Route2_Robert_Approaches {
-    face_down
-    walk_down
-    walk_down
-    walk_down
-    walk_down
-    walk_down
-    walk_down
-}
-
-movement Movement_Route2_Robert_Leaves {
-    face_up
-    walk_up
-    walk_up
-    walk_up
-    walk_up
-    walk_up
-    walk_up
-    face_right
+	finditem(ITEM_SUN_STONE, 1)
 }

@@ -3449,6 +3449,7 @@ static const struct LevelUpMove sIgglybuffLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 5, MOVE_POUND),
     LEVEL_UP_MOVE( 9, MOVE_SWEET_KISS),
     LEVEL_UP_MOVE(11, MOVE_COPYCAT),
+    LEVEL_UP_MOVE(12, MOVE_COVET),
     LEVEL_UP_END
 };
 

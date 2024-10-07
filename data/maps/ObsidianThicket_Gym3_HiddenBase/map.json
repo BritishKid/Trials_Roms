@@ -29,7 +29,13 @@
     }
   ],
   "warp_events": [
-
+    {
+      "x": 4,
+      "y": 15,
+      "elevation": 0,
+      "dest_map": "MAP_OBSIDIAN_THICKET_GYM",
+      "dest_warp_id": "1"
+    }
   ],
   "coord_events": [
 

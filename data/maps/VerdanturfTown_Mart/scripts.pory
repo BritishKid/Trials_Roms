@@ -1,0 +1,67 @@
+mapscripts VerdanturfTown_Mart_MapScripts {
+    
+}
+
+script VerdanturfTown_Mart_EventScript_Clerk {
+    lockall
+	faceplayer
+	msgbox("How may I serve you")
+	waitmessage	
+	if(!flag(FLAG_BADGE03_GET)) {
+		pokemart(VerdanturfTownMart_Items_LessThanThreeBadges)	
+	}
+    else {
+        pokemart(VerdanturfTownMart_Items_LessThanSixBadges)
+    }
+	msgbox("Please Come Again.")
+	releaseall
+}
+
+script VerdanturfTown_Mart_EventScript_Lass {
+    lockall
+    faceplayer
+    msgbox(format("Theres a bunch of nerds who breed crazy strong Pokémon nearby, but if it's not perfect they release them."))
+    releaseall
+}
+
+script VerdanturfTown_Mart_EventScript_Boy {
+    lockall
+    faceplayer
+    msgbox(format("So many people find shiny Pokémon here because of the nearby breeders"))
+    releaseall
+}
+
+script VerdanturfTown_Mart_EventScript_ExpertF {
+    lockall
+    faceplayer
+    msgbox(format("Ember Dunes is a very big dangerous area, I spent my life trying to solve the mystery of a lost powerful Pokémon in there."))
+    releaseall
+}
+
+//mart items
+mart VerdanturfTownMart_Items_LessThanThreeBadges {
+    ITEM_POKE_BALL
+    ITEM_GREAT_BALL
+    ITEM_DUSK_BALL
+	ITEM_POTION
+	ITEM_ANTIDOTE
+	ITEM_PARALYZE_HEAL
+	ITEM_AWAKENING
+	ITEM_REPEL
+	ITEM_ESCAPE_ROPE
+}
+
+mart VerdanturfTownMart_Items_LessThanSixBadges {
+    ITEM_POKE_BALL
+    ITEM_GREAT_BALL
+    ITEM_DUSK_BALL
+	ITEM_POTION
+    ITEM_SUPER_POTION
+	ITEM_ANTIDOTE
+	ITEM_PARALYZE_HEAL
+	ITEM_AWAKENING
+    ITEM_FULL_HEAL
+	ITEM_REPEL
+    ITEM_SUPER_REPEL
+	ITEM_ESCAPE_ROPE
+}

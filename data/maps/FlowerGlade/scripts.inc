@@ -12,6 +12,7 @@ FlowerGlade_EventScript_MossyStone::
 FlowerGlade_EventScript_MossyStone_Grandson::
 	lock
 	msgbox FlowerGlade_EventScript_MossyStone_Grandson_Text_0
+	questmenu QUEST_MENU_CHECK_ACTIVE, QUEST_EVOLUTION_STONE_MART
 	goto_if_unset FLAG_LEAF_STONE_SOURCE, FlowerGlade_EventScript_MossyStone_Grandson_3
 FlowerGlade_EventScript_MossyStone_Grandson_1:
 	release
@@ -36,6 +37,7 @@ FlowerGlade_EventScript_MossyStone_Grandson_3:
 
 FlowerGlade_EventScript_MossyStone_Grandson_7:
 	msgbox FlowerGlade_EventScript_MossyStone_Grandson_Text_4
+	setflag FLAG_CANT_CATCH_MON
 	setwildbattle SPECIES_GLOOM, 25, ITEM_ORAN_BERRY
 	call StartLeafStoneBattle
 	msgbox FlowerGlade_EventScript_MossyStone_Grandson_Text_5
@@ -44,6 +46,7 @@ FlowerGlade_EventScript_MossyStone_Grandson_7:
 	msgbox FlowerGlade_EventScript_MossyStone_Grandson_Text_6
 	setwildbattle SPECIES_SHIFTRY, 30, ITEM_ORAN_BERRY
 	call StartLeafStoneBattle
+	clearflag FLAG_CANT_CATCH_MON
 	msgbox FlowerGlade_EventScript_MossyStone_Grandson_Text_7
 	msgbox FlowerGlade_EventScript_MossyStone_Grandson_Text_8
 	giveitem ITEM_LEAF_STONE
@@ -52,6 +55,7 @@ FlowerGlade_EventScript_MossyStone_Grandson_7:
 	setflag FLAG_LEAF_STONE_SOURCE
 	goto_if_set FLAG_LEAF_STONE_SOURCE, FlowerGlade_EventScript_MossyStone_Grandson_14
 FlowerGlade_EventScript_MossyStone_Grandson_11:
+	subquestmenu QUEST_MENU_COMPLETE_QUEST, QUEST_POKEMON_LEAGUE, SUB_QUEST_LEAF_STONE
 	applymovement 2, Movement_GrandsonLeavs
 	waitmovement 2
 	removeobject 2
@@ -86,6 +90,30 @@ BulbasaurGrottoEntrance::
 	return
 
 
+FlowerGlade_BattleScript_Rosemary::
+	trainerbattle_single FLOWERGLADE_FLORAL_TRAINER, FloralTrainer_Intro, FloralTrainer_Outro
+	msgbox FloralTrainer_PostBattle, MSGBOX_AUTOCLOSE
+	release
+	return
+
+
+FlowerGlade_BattleScript_Lily::
+	trainerbattle_single FLOWERGLADE_FLORAL_TRAINER_LILY, LilyGarden_Intro, LilyGarden_Outro
+	msgbox LilyGarden_PostBattle, MSGBOX_AUTOCLOSE
+	release
+	return
+
+
+FlowerGlade_ItemBall::
+	finditem ITEM_ABSORB_BULB
+	return
+
+
+FlowerGlade_ItemBall_TM::
+	finditem ITEM_TM22
+	return
+
+
 Movement_GrandsonLeavs:
 	walk_down
 	walk_down
@@ -113,7 +141,7 @@ FlowerGlade_EventScript_MossyStone_Grandson_Text_2:
 	.string "your help. I need to harvest some of\l"
 	.string "this rock to process into leaf stones\l"
 	.string "but any attempt causes me to get\l"
-	.string "attacked by wild pokemon.$"
+	.string "attacked by wild Pokémon.$"
 
 FlowerGlade_EventScript_MossyStone_Grandson_Text_3:
 	.string "Could you fight them off while when I\n"
@@ -148,3 +176,27 @@ FlowerGlade_EventScript_MossyStone_Grandson_Text_10:
 FlowerGlade_EventScript_MossyStone_Grandson_Text_11:
 	.string "Well go prepare I don't think I can do\n"
 	.string "this alone.$"
+
+FloralTrainer_Intro::
+	.string "Welcome to the Flower Glade! Let the\n"
+	.string "petals dance in our battle!$"
+
+FloralTrainer_Outro::
+	.string "Oh, your Pokémon are as resilient as\n"
+	.string "flowers in sunlight. Well done!$"
+
+FloralTrainer_PostBattle::
+	.string "The fragrance of victory lingers in the\n"
+	.string "air. Keep blooming on your journey!$"
+
+LilyGarden_Intro::
+	.string "Welcome to my garden! Let the soothing\n"
+	.string "aroma of nature guide us in our battle!$"
+
+LilyGarden_Outro::
+	.string "Your Pokémon's spirit is as radiant as a\n"
+	.string "sunflower. Well played!$"
+
+LilyGarden_PostBattle::
+	.string "May your journey continue to blossom\n"
+	.string "with victories. Farewell!$"

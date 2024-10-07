@@ -1,0 +1,79 @@
+mapscripts Brad_Hidden_base_MapScripts {}
+
+script VictoryRoad_Brad_SwabluDoll {
+    lockall
+    if (!flag(FLAG_HIDDEN_BASE_COLLECTABLE_FOUND_SWABLU)) {
+        msgbox(format("It's Brad's Swablu Doll"))
+        givedecoration(DECOR_SWABLU_DOLL)
+        setflag(FLAG_HIDDEN_BASE_COLLECTABLE_FOUND_SWABLU)
+        subquestmenu(QUEST_MENU_COMPLETE_QUEST, QUEST_POKEMON_LEAGUE, SUB_QUEST_SWABLU_DOLL) //todo finish this
+        msgbox(format("You've unlocked the Swablu Doll for your secret base"))
+    }
+    else {
+        msgbox(format("It's Brad's Swablu Doll"))
+    }
+    releaseall
+}
+
+script VictoryRoad_Brad_EventScript_Battle {
+    if(!flag(FLAG_BRAD_BEATEN)){
+        trainerbattle_single(TRAINER_BRAD_HIDDEN_BASE, Brad_HiddenBase_Intro, Brad_HiddenBase_Outro, FrontPageRob_Beaten)
+    }    
+    if(flag(FLAG_BRAD_BEATEN) && !flag(FLAG_BRAD_GIVES_SHINY_AXEW)){
+        call(Brad_Gives_Axew)
+    }
+    if(flag(FLAG_BRAD_BEATEN) && flag(FLAG_BRAD_GIVES_SHINY_AXEW)) {
+        msgbox(Brad_HiddenBase_PostBattle, MSGBOX_AUTOCLOSE)
+    }
+    release
+    waitmessage
+    end
+}
+
+script VictoryRoad_Brad_Beaten {
+    msgbox(Beat_FrontPageRob, MSGBOX_AUTOCLOSE)
+    setflag(FLAG_BRAD_BEATEN)
+    call(Brad_Gives_Axew)
+    release
+}
+
+script Brad_Gives_Axew {
+    lock
+    setflag(P_FLAG_FORCE_SHINY)
+    showmonpic(SPECIES_AXEW, 10, 3)
+    givemon(SPECIES_AXEW, 5)
+    setflag(FLAG_BRAD_GIVES_SHINY_AXEW)
+    clearflag(P_FLAG_FORCE_SHINY)
+    playfanfare(MUS_OBTAIN_ITEM)
+    if (var(VAR_RESULT) == MON_GIVEN_TO_PARTY) {
+            msgbox("Recieved Axew")
+            call(NicknamePartyMon)
+        }
+        elif (var(VAR_RESULT) == MON_GIVEN_TO_PC) {
+            msgbox("Recieved Axew")
+            call(NicknameBoxMon)
+        }
+        else {
+            hidemonpic
+            msgbox(format("You don't have enough space. Come back and you get it soon."))
+    }
+}
+
+
+//text
+
+text Brad_HiddenBase_Intro {
+    format("Let's show the elite four who the strongest trainers really are!")
+}
+
+text Brad_HiddenBase_Outro {
+    format("Go ahead and become the champ!")
+}
+
+text Brad_HiddenBase_PostBattle {
+    format("")
+}
+
+text Brad_Beaten_Text {
+    format("Here take this awesome Pokémon, it should help you with the Elite 4")
+}

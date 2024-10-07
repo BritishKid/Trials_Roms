@@ -275,9 +275,9 @@ LittlerootTown_ProfessorBirchsLab_EventScript_Aide::
 	lock
 	faceplayer
 	goto_if_ge VAR_BIRCH_LAB_STATE, 3, LittlerootTown_ProfessorBirchsLab_EventScript_AideReceivedStarter
-	goto_if_set FLAG_BIRCH_AIDE_MET, LittlerootTown_ProfessorBirchsLab_EventScript_AideAlreadyMet
+	goto_if_set FLAG_BEATEN_HERACROSS_BASE, LittlerootTown_ProfessorBirchsLab_EventScript_AideAlreadyMet
 	msgbox LittlerootTown_ProfessorBirchsLab_Text_BirchAwayOnFieldwork, MSGBOX_DEFAULT
-	setflag FLAG_BIRCH_AIDE_MET
+	setflag FLAG_BEATEN_HERACROSS_BASE
 	release
 	end
 
@@ -521,7 +521,7 @@ LittlerootTown_ProfessorBirchsLab_EventScript_GivePokedex::
 	call_if_eq VAR_RESULT, FEMALE, LittlerootTown_ProfessorBirchsLab_EventScript_BrendanGivePokeBalls
 	setvar VAR_BIRCH_LAB_STATE, 5
 	setflag FLAG_ADVENTURE_STARTED
-	setvar VAR_LITTLEROOT_RIVAL_STATE, 4
+	setvar VAR_QUARRY_STATE, 4
 	releaseall
 	end
 

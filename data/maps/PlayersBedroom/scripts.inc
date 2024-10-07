@@ -5,97 +5,29 @@ PlayersBedroom_MapScripts::
 PlayersBedroom_StarterPokemon_Pokeball::
 	lockall
 	msgbox PlayersBedroom_StarterPokemon_Pokeball_Text_0
-	showmonpic SPECIES_CHIKORITA, 10, 3
-	msgbox PlayersBedroom_StarterPokemon_Pokeball_Text_1, MSGBOX_YESNO
-	compare VAR_RESULT, YES
-	goto_if_eq PlayersBedroom_StarterPokemon_Pokeball_2
-	hidemonpic
-	showmonpic SPECIES_TOTODILE, 10, 3
-	msgbox PlayersBedroom_StarterPokemon_Pokeball_Text_4, MSGBOX_YESNO
-	compare VAR_RESULT, YES
-	goto_if_eq PlayersBedroom_StarterPokemon_Pokeball_6
-	hidemonpic
-	showmonpic SPECIES_CYNDAQUIL, 10, 3
-	msgbox PlayersBedroom_StarterPokemon_Pokeball_Text_6, MSGBOX_YESNO
-	compare VAR_RESULT, YES
-	goto_if_eq PlayersBedroom_StarterPokemon_Pokeball_16
-	hidemonpic
-	msgbox PlayersBedroom_StarterPokemon_Pokeball_Text_8
-	waitmessage
-	releaseall
-	end
-
-PlayersBedroom_StarterPokemon_Pokeball_2:
-	givemon SPECIES_CHIKORITA, 5, ITEM_ORAN_BERRY
-	setvar VAR_STARTER_MON, 0
-	compare VAR_RESULT, MON_GIVEN_TO_PARTY
-	goto_if_eq PlayersBedroom_StarterPokemon_Pokeball_10
-	compare VAR_RESULT, MON_GIVEN_TO_PC
-	goto_if_eq PlayersBedroom_StarterPokemon_Pokeball_11
-	hidemonpic
-	msgbox PlayersBedroom_StarterPokemon_Pokeball_Text_3
-PlayersBedroom_StarterPokemon_Pokeball_9:
-	waitmessage
-	releaseall
-	end
-
-PlayersBedroom_StarterPokemon_Pokeball_6:
-	givemon SPECIES_TOTODILE, 5, ITEM_ORAN_BERRY
-	setvar VAR_STARTER_MON, 2
-	compare VAR_RESULT, MON_GIVEN_TO_PARTY
-	goto_if_eq PlayersBedroom_StarterPokemon_Pokeball_20
-	compare VAR_RESULT, MON_GIVEN_TO_PC
-	goto_if_eq PlayersBedroom_StarterPokemon_Pokeball_21
-	hidemonpic
-	msgbox PlayersBedroom_StarterPokemon_Pokeball_Text_3
-PlayersBedroom_StarterPokemon_Pokeball_19:
-	waitmessage
-	releaseall
-	end
-
-PlayersBedroom_StarterPokemon_Pokeball_10:
+	msgbox PlayersBedroom_StarterPokemon_Pokeball_Text_1
 	msgbox PlayersBedroom_StarterPokemon_Pokeball_Text_2
-	call ChosenStarterPokemon
-	goto PlayersBedroom_StarterPokemon_Pokeball_9
-
-PlayersBedroom_StarterPokemon_Pokeball_11:
-	msgbox PlayersBedroom_StarterPokemon_Pokeball_Text_2
-	call ChosenStarterPokemon
-	goto PlayersBedroom_StarterPokemon_Pokeball_9
-
-PlayersBedroom_StarterPokemon_Pokeball_16:
-	givemon SPECIES_CYNDAQUIL, 5, ITEM_ORAN_BERRY
-	setvar VAR_STARTER_MON, 1
-	compare VAR_RESULT, MON_GIVEN_TO_PARTY
-	goto_if_eq PlayersBedroom_StarterPokemon_Pokeball_26
-	compare VAR_RESULT, MON_GIVEN_TO_PC
-	goto_if_eq PlayersBedroom_StarterPokemon_Pokeball_27
-	hidemonpic
-	msgbox PlayersBedroom_StarterPokemon_Pokeball_Text_3
-PlayersBedroom_StarterPokemon_Pokeball_25:
+	multichoice 21, 6, MULTI_STARTER_SELECTION, TRUE
+	switch VAR_RESULT
+	case 0, PlayersBedroom_StarterPokemon_Pokeball_3
+	case 1, PlayersBedroom_StarterPokemon_Pokeball_4
+	case 2, PlayersBedroom_StarterPokemon_Pokeball_5
+PlayersBedroom_StarterPokemon_Pokeball_1:
 	waitmessage
 	releaseall
 	end
 
-PlayersBedroom_StarterPokemon_Pokeball_20:
-	msgbox PlayersBedroom_StarterPokemon_Pokeball_Text_5
-	call ChosenStarterPokemon
-	goto PlayersBedroom_StarterPokemon_Pokeball_19
+PlayersBedroom_StarterPokemon_Pokeball_3:
+	goto Starter_Totodile
+	goto PlayersBedroom_StarterPokemon_Pokeball_1
 
-PlayersBedroom_StarterPokemon_Pokeball_21:
-	msgbox PlayersBedroom_StarterPokemon_Pokeball_Text_5
-	call ChosenStarterPokemon
-	goto PlayersBedroom_StarterPokemon_Pokeball_19
+PlayersBedroom_StarterPokemon_Pokeball_4:
+	goto Starter_Chikorita
+	goto PlayersBedroom_StarterPokemon_Pokeball_1
 
-PlayersBedroom_StarterPokemon_Pokeball_26:
-	msgbox PlayersBedroom_StarterPokemon_Pokeball_Text_7
-	call ChosenStarterPokemon
-	goto PlayersBedroom_StarterPokemon_Pokeball_25
-
-PlayersBedroom_StarterPokemon_Pokeball_27:
-	msgbox PlayersBedroom_StarterPokemon_Pokeball_Text_7
-	call ChosenStarterPokemon
-	goto PlayersBedroom_StarterPokemon_Pokeball_25
+PlayersBedroom_StarterPokemon_Pokeball_5:
+	goto Starter_Cyndaquil
+	goto PlayersBedroom_StarterPokemon_Pokeball_1
 
 
 NicknamePartyMon::
@@ -109,6 +41,104 @@ NicknamePartyMon_1:
 	call Common_EventScript_GetGiftMonPartySlot
 	call Common_EventScript_NameReceivedPartyMon
 	return
+
+
+Starter_Cyndaquil::
+	showmonpic SPECIES_CYNDAQUIL, 10, 3
+	msgbox Starter_Cyndaquil_Text_0, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq Starter_Cyndaquil_1
+	return
+
+Starter_Cyndaquil_1:
+	givemon SPECIES_CYNDAQUIL, 5, ITEM_ORAN_BERRY
+	setvar VAR_STARTER_MON, 1
+	compare VAR_RESULT, MON_GIVEN_TO_PARTY
+	goto_if_eq Starter_Cyndaquil_4
+	compare VAR_RESULT, MON_GIVEN_TO_PC
+	goto_if_eq Starter_Cyndaquil_5
+	hidemonpic
+	msgbox Starter_Cyndaquil_Text_2
+Starter_Cyndaquil_3:
+	waitmessage
+	releaseall
+	end
+
+Starter_Cyndaquil_4:
+	msgbox Starter_Cyndaquil_Text_1
+	call ChosenStarterPokemon
+	goto Starter_Cyndaquil_3
+
+Starter_Cyndaquil_5:
+	msgbox Starter_Cyndaquil_Text_1
+	call ChosenStarterPokemon
+	goto Starter_Cyndaquil_3
+
+
+Starter_Totodile::
+	showmonpic SPECIES_TOTODILE, 10, 3
+	msgbox Starter_Totodile_Text_0, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq Starter_Totodile_1
+	hidemonpic
+	return
+
+Starter_Totodile_1:
+	givemon SPECIES_TOTODILE, 5, ITEM_ORAN_BERRY
+	setvar VAR_STARTER_MON, 2
+	compare VAR_RESULT, MON_GIVEN_TO_PARTY
+	goto_if_eq Starter_Totodile_5
+	compare VAR_RESULT, MON_GIVEN_TO_PC
+	goto_if_eq Starter_Totodile_6
+	hidemonpic
+	msgbox Starter_Cyndaquil_Text_2
+Starter_Totodile_4:
+	waitmessage
+	releaseall
+	end
+
+Starter_Totodile_5:
+	msgbox Starter_Totodile_Text_1
+	call ChosenStarterPokemon
+	goto Starter_Totodile_4
+
+Starter_Totodile_6:
+	msgbox Starter_Totodile_Text_1
+	call ChosenStarterPokemon
+	goto Starter_Totodile_4
+
+
+Starter_Chikorita::
+	showmonpic SPECIES_CHIKORITA, 10, 3
+	msgbox Starter_Chikorita_Text_0, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq Starter_Chikorita_1
+	hidemonpic
+	return
+
+Starter_Chikorita_1:
+	givemon SPECIES_CHIKORITA, 5, ITEM_ORAN_BERRY
+	setvar VAR_STARTER_MON, 0
+	compare VAR_RESULT, MON_GIVEN_TO_PARTY
+	goto_if_eq Starter_Chikorita_5
+	compare VAR_RESULT, MON_GIVEN_TO_PC
+	goto_if_eq Starter_Chikorita_6
+	hidemonpic
+	msgbox Starter_Cyndaquil_Text_2
+Starter_Chikorita_4:
+	waitmessage
+	releaseall
+	end
+
+Starter_Chikorita_5:
+	msgbox Starter_Chikorita_Text_1
+	call ChosenStarterPokemon
+	goto Starter_Chikorita_4
+
+Starter_Chikorita_6:
+	msgbox Starter_Chikorita_Text_1
+	call ChosenStarterPokemon
+	goto Starter_Chikorita_4
 
 
 ChosenStarterPokemon::
@@ -126,6 +156,8 @@ GivePokedexAndUnlockPokemonMenu::
 	setflag FLAG_SYS_POKEDEX_GET
 	setflag FLAG_SYS_QUEST_MENU_GET
 	setflag FLAG_SYS_B_DASH
+	questmenu QUEST_MENU_SET_ACTIVE, QUEST_POKEMON_LEAGUE
+	questmenu QUEST_MENU_SET_ACTIVE, QUEST_HIDDEN_DOLLS
 	special EnableNationalPokedex
 	return
 
@@ -170,76 +202,69 @@ OptionsBook::
 	goto_if_unset FLAG_LEVEL_CAPS, OptionsBook_2
 	msgbox OptionsBook_Text_2, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto_if_eq OptionsBook_11
+	goto_if_eq OptionsBook_7
 OptionsBook_1:
-	goto_if_unset FLAG_SHINY_RATE_INCREASED, OptionsBook_6
-	msgbox OptionsBook_Text_5
-	msgbox OptionsBook_Text_6, MSGBOX_YESNO
-	compare VAR_RESULT, YES
-	goto_if_eq OptionsBook_15
-OptionsBook_5:
 	releaseall
 	return
 
 OptionsBook_2:
 	msgbox OptionsBook_Text_1, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto_if_eq OptionsBook_9
+	goto_if_eq OptionsBook_5
 	goto OptionsBook_1
 
-OptionsBook_6:
-	msgbox OptionsBook_Text_3
-	msgbox OptionsBook_Text_4, MSGBOX_YESNO
-	compare VAR_RESULT, YES
-	goto_if_eq OptionsBook_13
-	goto OptionsBook_5
-
-OptionsBook_9:
+OptionsBook_5:
 	setflag FLAG_LEVEL_CAPS
 	goto OptionsBook_1
 
-OptionsBook_11:
+OptionsBook_7:
 	clearflag FLAG_LEVEL_CAPS
 	goto OptionsBook_1
 
-OptionsBook_13:
-	setflag FLAG_SHINY_RATE_INCREASED
-	goto OptionsBook_5
 
-OptionsBook_15:
-	clearflag FLAG_SHINY_RATE_INCREASED
-	goto OptionsBook_5
+PlayersHouse_2F_EventScript_GameCube::
+	lockall
+	msgbox PlayersHouse_2F_EventScript_GameCube_Text_0
+	releaseall
+	return
 
 
 PlayersBedroom_StarterPokemon_Pokeball_Text_0:
-	.string "It's the Pokemon your father gave you.$"
+	.string "You father left you a gift for your\n"
+	.string "birthday.$"
 
 PlayersBedroom_StarterPokemon_Pokeball_Text_1:
-	.string "Is it a Chikorita?$"
+	.string "Happy Birthday! Please take this\n"
+	.string "Pokémon and become a Pokémon Master\l"
+	.string "like you always dreamed!$"
 
 PlayersBedroom_StarterPokemon_Pokeball_Text_2:
-	.string "Recieved Chikorita$"
-
-PlayersBedroom_StarterPokemon_Pokeball_Text_3:
-	.string "No more room$"
-
-PlayersBedroom_StarterPokemon_Pokeball_Text_4:
-	.string "Is it a Totodile?$"
-
-PlayersBedroom_StarterPokemon_Pokeball_Text_5:
-	.string "Recieved Totodile$"
-
-PlayersBedroom_StarterPokemon_Pokeball_Text_6:
-	.string "Is it a Cyndaquil?$"
-
-PlayersBedroom_StarterPokemon_Pokeball_Text_7:
-	.string "Recieved Cyndaquil$"
-
-PlayersBedroom_StarterPokemon_Pokeball_Text_8:
-	.string "It must of been one of them$"
+	.string "I'm sure you can guess which Pokémon I\n"
+	.string "got you.$"
 
 NicknamePartyMon_Text_0:
 	.string "Give it a nickname?$"
+
+Starter_Cyndaquil_Text_0:
+	.string "Is it a Cyndaquil?$"
+
+Starter_Cyndaquil_Text_1:
+	.string "Recieved Cyndaquil$"
+
+Starter_Cyndaquil_Text_2:
+	.string "No more room$"
+
+Starter_Totodile_Text_0:
+	.string "Is it a Totodile?$"
+
+Starter_Totodile_Text_1:
+	.string "Recieved Totodile$"
+
+Starter_Chikorita_Text_0:
+	.string "Is it a Chikorita?$"
+
+Starter_Chikorita_Text_1:
+	.string "Recieved Chikorita$"
 
 FreeStarterPokeballs_Text_0:
 	.string "Have some Pokeballs to.$"
@@ -256,15 +281,9 @@ OptionsBook_Text_1:
 OptionsBook_Text_2:
 	.string "Do you want to turn off Level caps?$"
 
-OptionsBook_Text_3:
-	.string "Do you want to increase shiny rate?$"
+PlayersHouse_2F_EventScript_GameCube_Text_0:
+	.string "Who even still plays a GameCube?$"
 
-OptionsBook_Text_4:
-	.string "This should give you atleast one shiny\n"
-	.string "per playthrough.$"
-
-OptionsBook_Text_5:
-	.string "Do you want to decrease shiny rate?$"
-
-OptionsBook_Text_6:
-	.string "This will turn it to vanilla 1/8092.$"
+Common_Text_LookCloserAtMap::
+	.string "{PLAYER} took a closer look at the\n"
+	.string "HOENN region map.$"

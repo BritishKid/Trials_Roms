@@ -3,7 +3,7 @@
   "name": "MahoganyHills_2",
   "layout": "LAYOUT_MAHOGANY_HILLS_2",
   "music": "MUS_PETALBURG_WOODS",
-  "region_map_section": "MAPSEC_MAHOGANY_HILLS",
+  "region_map_section": "MAPSEC_ROUTE_102",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_ROUTE",
@@ -13,6 +13,11 @@
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
+    {
+      "map": "MAP_MAHOGANY_HILLS_4",
+      "offset": 0,
+      "direction": "left"
+    },
     {
       "map": "MAP_MAHOGANY_HILLS_1",
       "offset": 0,
@@ -27,11 +32,6 @@
       "map": "MAP_MAHOGANY_HILLS_3",
       "offset": 0,
       "direction": "right"
-    },
-    {
-      "map": "MAP_MAHOGANY_HILLS_4",
-      "offset": 0,
-      "direction": "left"
     },
     {
       "map": "MAP_MAHOGANY_HILLS_6",
@@ -117,6 +117,45 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
       "flag": "FLAG_HIDE_MAHOGANY_HILLS_ROXANNE"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_PUSHABLE_BOULDER",
+      "x": 36,
+      "y": 31,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "MahoganyHills_LegendaryDungeon",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 32,
+      "y": 28,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "MahongayHill2_ItemBall_SunStone",
+      "flag": "FLAG_ITEM_MAHOGANYHILLS_SUNSTONE"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 14,
+      "y": 25,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "MahongayHill2_EventScript_ItemPPUp",
+      "flag": "FLAG_ITEM_MH2_PP_UP"
     }
   ],
   "warp_events": [
@@ -196,6 +235,14 @@
       "y": 15,
       "elevation": 0,
       "secret_base_id": "SECRET_BASE_RED_CAVE1_1"
+    },
+    {
+      "type": "hidden_item",
+      "x": 17,
+      "y": 18,
+      "elevation": 0,
+      "item": "ITEM_HARD_STONE",
+      "flag": "FLAG_HIDDEN_ITEM_MH2_HARD_STONE"
     }
   ]
 }

@@ -88,7 +88,7 @@
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "BERRY_TREE_ROUTE_103_CHERI_1",
+      "trainer_sight_or_berry_tree_id": "BERRY_TREE_ROUTE_1B_ORAN",
       "script": "BerryTreeScript",
       "flag": "0"
     },
@@ -101,7 +101,7 @@
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "BERRY_TREE_ROUTE_103_LEPPA",
+      "trainer_sight_or_berry_tree_id": "BERRY_TREE_ROUTE_1B_LEPPA",
       "script": "BerryTreeScript",
       "flag": "0"
     },
@@ -114,7 +114,7 @@
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "BERRY_TREE_ROUTE_103_CHERI_2",
+      "trainer_sight_or_berry_tree_id": "BERRY_TREE_ROUTE_1B_CHERI",
       "script": "BerryTreeScript",
       "flag": "0"
     },
@@ -156,19 +156,6 @@
       "trainer_sight_or_berry_tree_id": "5",
       "script": "Route103_EventScript_Miguel",
       "flag": "0"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 5,
-      "y": 9,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
-      "movement_range_x": 1,
-      "movement_range_y": 1,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "Route103_EventScript_ItemGuardSpec",
-      "flag": "FLAG_ITEM_ROUTE_103_GUARD_SPEC"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE",
@@ -247,19 +234,6 @@
       "trainer_sight_or_berry_tree_id": "5",
       "script": "Route103_EventScript_Pete",
       "flag": "0"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 2,
-      "y": 5,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
-      "movement_range_x": 1,
-      "movement_range_y": 1,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "Route103_EventScript_ItemPPUp",
-      "flag": "FLAG_ITEM_ROUTE_103_PP_UP"
     }
   ],
   "warp_events": [

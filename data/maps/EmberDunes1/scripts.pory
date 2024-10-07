@@ -1,30 +1,84 @@
 mapscripts EmberDunes1_MapScripts {}
 
 script EmberDune_Conor_Battle {
-    trainerbattle_single(EMBERDUNE_CONOR, Conor_Intro, Conor_Outro)
+    trainerbattle_single(EMBERDUNE_CONOR, Conor_Intro, Conor_Outro, Increase_Trainers_Beaten)
     msgbox(Conor_PostBattle, MSGBOX_AUTOCLOSE)
     release
 }
 
 script EmberDune_Maniac_Battle {
-    trainerbattle_single(EMBERDUNE_MANIAC, Conor_Intro, Conor_Outro)
+    trainerbattle_single(EMBERDUNE_MANIAC, Conor_Intro, Conor_Outro, Increase_Trainers_Beaten)
     msgbox(Conor_PostBattle, MSGBOX_AUTOCLOSE)
     release
 }
 
 script EmberDune_Jordan_AceTrainer {
-    trainerbattle_single(EMBERDUNE_JORDAN, Jordan_Intro, Jordan_Outro)
+    trainerbattle_double(EMBERDUNE_JORDAN, Jordan_Intro, Jordan_Outro, JordanNotEnoughMons, Increase_Trainers_Beaten)
     msgbox(Jordan_PostBattle, MSGBOX_AUTOCLOSE)
     release
 }
 
-script EmberDune_Charr_AceTrainer {
-    trainerbattle_single(EMBERDUNE_CHARR, Charr_Intro, Charr_Outro)
+script EMBERDUNE_JORDAN_SECRET_BASE_AceTrainer {
+    trainerbattle_double(EMBERDUNE_JORDAN, Charr_Intro, Charr_Outro,JordanNotEnoughMons, Increase_Trainers_Beaten)
     msgbox(Charr_PostBattle, MSGBOX_AUTOCLOSE)
     release
 }
 
+script EmberDune_SunnyDay {
+    finditem(ITEM_TM11)
+}
 
+script EmberDunesButtonAccessArea_LegendaryEntrance {
+    if(var(VAR_EMBERDUNES_BUTTONS_PRESSED) == 4 ){
+        msgbox(format("You see an entrance you can get through, would you like to try?"), MSGBOX_YESNO) 
+        if(var(VAR_RESULT) == YES ){
+            //todo finish
+            // warp() //ting lu map
+        }
+        //only 2 buttons are hidden so far the others need to be added as more access to ember dunes is available
+    }
+    else {
+        msgbox(format("You see a crack along the rock face, maybe you could open it?"))
+    }
+}
+
+script EmberDunes_1_EventScript_SecretButton1 {
+    lockall
+    if(!flag(FLAG_EMBER_DUNES_BUTTON_1_PRESSED)) {
+        msgbox(format("It's covered in sand but you can make out a button on it.\p Press the button?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES) {
+            msgbox(format("You press the button"))
+            setvar(VAR_EMBERDUNES_BUTTONS_PRESSED, VAR_EMBERDUNES_BUTTONS_PRESSED+1)
+            setflag(FLAG_EMBER_DUNES_BUTTON_1_PRESSED)
+        }
+        if(var(VAR_RESULT) == NO) {
+            msgbox(format("Probably the smart choice."))
+        }
+    }
+    else {
+        msgbox(format("I've already pressed this button. I wonder why I did that."))
+    }
+    releaseall
+}
+
+script EmberDunes_1_EventScript_SecretButton2 {
+    lockall
+    if(!flag(FLAG_EMBER_DUNES_BUTTON_2_PRESSED)) {
+        msgbox(format("It's covered in sand but you can make out a button on it.\p Press the button?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES) {
+            msgbox(format("You press the button"))
+            setvar(VAR_EMBERDUNES_BUTTONS_PRESSED, VAR_EMBERDUNES_BUTTONS_PRESSED+1)
+            setflag(FLAG_EMBER_DUNES_BUTTON_2_PRESSED)
+        }
+        if(var(VAR_RESULT) == NO) {
+            msgbox(format("Probably the smart choice."))
+        }
+    }
+    else {
+        msgbox(format("I've already pressed this button. I wonder why I did that."))
+    }
+    releaseall
+}
 
 //text
 text DesertManiac_Intro {
@@ -74,4 +128,8 @@ text Charr_Outro {
 
 text Charr_PostBattle {
     format("Jordan is going to keep training and we will beat you next time we see you.")
+}
+
+text JordanNotEnoughMons {
+    format("Shame you don't have enough Pokémon")
 }

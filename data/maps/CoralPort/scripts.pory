@@ -1,17 +1,10 @@
+mapscripts CoralPort_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION {
+	    setflag(FLAG_VISITED_CORAL_PORT)
+    }
+}
+
 raw `
-CoralPort_MapScripts::
-	map_script MAP_SCRIPT_ON_TRANSITION, CoralPort_OnTransition
-	map_script MAP_SCRIPT_ON_RESUME, CoralPort_OnResume
-	.byte 0
-
-CoralPort_OnTransition:
-	setflag FLAG_VISITED_CORAL_PORT
-	end
-
-CoralPort_OnResume:
-	setstepcallback STEP_CB_FORTREE_BRIDGE
-	end
-
 CoralPort_EventScript_Kecleon::
 	lock
 	faceplayer
@@ -69,67 +62,64 @@ script CoralPort_TuberF_OnBeach {
 
 script CoralPort_TuberM_OnBeach {
     lockall
-    msgbox(format("Mummy says Triver has millions of islands! That's like a gazillion Pokemon to find!"))
+    msgbox(format("Mummy says Triver has millions of islands! That's like a gazillion Pokémon to find!"))
     releaseall
 }
 
 script ForetreeCity_BeachLady {
     lockall
-    msgbox(format("There is a boat that connects all the islands together but if you have a strong Pokemon you can surf between them."))
-    releaseall
-}
-
-
-//todo add market items
-script CoralPort_EventScript_Woman_Market {
-    //market shop selling something
-    lockall
-    msgbox("How may I serve you")
-	waitmessage	
-	// pokemart(FortreeMarket_Items_TMs)
-	msgbox("Please Come Again.")
+    msgbox(format("There is a boat that connects all the islands together but if you have a strong Pokémon you can surf between them."))
     releaseall
 }
 
 script CoralPort_EventScript_OldMan_Market  {
     //marketshop selling evo stones player can unlock
     lockall
-    // questmenu(QUEST_MENU_CHECK_ACTIVE, QUEST_EVOLUTION_STONE_MART)
+    questmenu(QUEST_MENU_CHECK_ACTIVE, QUEST_EVOLUTION_STONE_MART) //this may be wrong
     if(!var(VAR_RESULT)){
-        msgbox(format("Hi. Sorry we aren't open right now. We recently ran out of stock that we bought with us and my Grandson is out trying to find a source for us over here."))
+        msgbox(format("Hi.\nSorry we aren't open right now."))
+        msgbox(format("We recently ran out of stock that we bought with us and my Grandson is out trying to find a source for us over here."))
         msgbox(format("You're welcome to try and find him"))
-        // questmenu(QUEST_MENU_SET_ACTIVE, QUEST_EVOLUTION_STONE_MART)
+        questmenu(QUEST_MENU_SET_ACTIVE, QUEST_EVOLUTION_STONE_MART)
     }
     if(flag(FLAG_LEAF_STONE_SOURCE) && flag(FLAG_WATER_STONE_SOURCE) && flag(FLAG_FIRE_STONE_SOURCE)){
         msgbox(format("Thanks to you we are able to start selling stones again! We greatly appreciate it."))
         waitmessage	
         pokemart(CoastalTown_EvolutionStoneMarket_Elemental)
+        msgbox(format("Keep an eye out for my Grandson he is still loooking for more stone sources"))
         msgbox("Please Come Again.")
     } else {
         msgbox(format("Hi, have you had any luck finding my Grandson?"))
+        msgbox(format("He should be around somewhere looking for the source of the evolution stones"))
     }
     releaseall
 }
 
-script CoralPort_EventScript_Man_Market {
+script CoralPort_EventScript_Woman_Market {
     //marketshop selling something   
     lockall
-    msgbox("How may I serve you")
+    msgbox("Hey would you like some items to help you in your battles?")
 	waitmessage	
-	// pokemart(FortreeMarket_Items_)
-	msgbox("Please Come Again.")
+	pokemart(CoralPort_Market_Items)
     releaseall
 }
 
 script CoralPort_EventScript_Fishman_Market {
     lockall
-    msgbox(format("Hi do you like fishing?"), MSGBOX_YESNO)
-    if(var(VAR_RESULT) == NO ) {
-        msgbox(format("Then why did you come to a fishing village?"))
-    } else {
-        msgbox(format("That's what I like to hear."))
-        msgbox(format("There are rumours of giant fish Pokemon lurking around Triver. If you can find and catch them with your lure I'll be sure to reward you."))
-        // questmenu(QUEST_MENU_SET_ACTIVE, QUEST_GIANT_FISH)
+    questmenu(QUEST_MENU_CHECK_ACTIVE, QUEST_GIANT_FISH)
+    if(!var(VAR_RESULT)){
+            msgbox(format("Hi do you like fishing?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == NO ) {
+            msgbox(format("Then why did you come to a fishing village?"))
+        } else {
+            msgbox(format("That's what I like to hear."))
+            msgbox(format("There are rumours of giant fish Pokémon lurking around Triver. If you can find and catch them with your lure I'll be sure to reward you."))
+            questmenu(QUEST_MENU_SET_ACTIVE, QUEST_GIANT_FISH)
+        }
+    }
+    else {
+        msgbox(format("How are you doing finding the giant fish?"))
+        //todo check over what ones have been found etc
     }
     releaseall
 }
@@ -180,7 +170,6 @@ mart FortreeMarket_Items_TMs {
     
 }
 
-
 //movement script
 movement  Movement_RivalAppearing_BeachTown {
     walk_left
@@ -217,3 +206,14 @@ mart CoastalTown_EvolutionStoneMarket_Elemental {
     ITEM_LEAF_STONE
     ITEM_WATER_STONE
 } //more badges for shiny stone
+
+
+mart CoralPort_Market_Items {
+    ITEM_HP_UP
+    ITEM_PROTEIN
+    ITEM_IRON
+    ITEM_CALCIUM
+    ITEM_ZINC
+    ITEM_CARBOS
+    ITEM_PP_UP
+}

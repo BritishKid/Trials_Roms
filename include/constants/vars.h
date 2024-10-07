@@ -103,8 +103,8 @@
 #define VAR_LAVARIDGE_TOWN_STATE                         0x4053
 #define VAR_CURRENT_SECRET_BASE                          0x4054 // was probably allocated for VAR_FALLARBOR_TOWN_STATE at one point
 #define VAR_PYUKUMUKUS_SAVED                            0x4055 // Number of Pyukumus saved on island 2
-#define VAR_PACIFIDLOG_TOWN_STATE                        0x4056 // Unused Var
-#define VAR_GRANITE_PEAK_STATE                           0x4057
+#define VAR_TREECKO_QUEST_STATE                        0x4056 // unused
+#define VAR_GRANITE_PEAK_STATE                           0x4057 //custom
 #define VAR_SLATEPORT_CITY_STATE                         0x4058
 #define VAR_PLATE_QUEST_STATE                            0x4059 // Sate of quest 1 = met alex in platefall, 2 spoken to alex at insect plate location
 #define VAR_RUSTBORO_CITY_STATE                          0x405A
@@ -120,10 +120,10 @@
 #define VAR_ROUTE4_BRAWLEY                               0x4064 // set to 1 after battling and beating brawley
 #define VAR_CREEPY_WOODS_STATE                               0x4065 // set to 1 after entering
 #define VAR_ROUTE_SHAYMIN_PROGRESS                               0x4066 //If 1 Gracidea Flower Recieved
-#define VAR_ROUTE108_STATE                               0x4067 // Unused Var
-#define VAR_ROUTE109_STATE                               0x4068 // Unused Var
+#define VAR_QUARRY_STATE                               0x4067 //State of quarry, 1 means player entered
+#define VAR__MEGA_MANSION_STATE                               0x4068 // The hidden things in mansion to open gate
 #define VAR_ROUTE110_STATE                               0x4069
-#define VAR_ROUTE111_STATE                               0x406A // Unused Var
+#define VAR_MEGAMANSION_STARS                               0x406A // Number of trainers beaten in mega mansion
 #define VAR_ROUTE112_STATE                               0x406B // Unused Var
 #define VAR_ROUTE113_STATE                               0x406C // Unused Var
 #define VAR_ROUTE114_STATE                               0x406D // Unused Var
@@ -158,7 +158,7 @@
 #define VAR_CONTEST_PRIZE_PICKUP                         0x408A
 #define VAR_PLATEFALL_ACCESSIBLE                         0x408B // Custom Used when beaten guard blocking platefall cave
 #define VAR_LITTLEROOT_HOUSES_STATE_BRENDAN              0x408C
-#define VAR_LITTLEROOT_RIVAL_STATE                       0x408D
+#define VAR_PLATES_FOUND                       0x408D //number of plates found by player
 #define VAR_BOARD_BRINEY_BOAT_STATE                      0x408E
 #define VAR_DEVON_CORP_3F_STATE                          0x408F
 #define VAR_BRINEY_HOUSE_STATE                           0x4090
@@ -171,7 +171,7 @@
 #define VAR_INIT_SECRET_BASE                             0x4097
 #define VAR_PETALBURG_WOODS_STATE                        0x4098
 #define VAR_LILYCOVE_CONTEST_LOBBY_STATE                 0x4099
-#define VAR_RUSTURF_TUNNEL_STATE                         0x409A
+#define VAR_EMBERDUNES_BUTTONS_PRESSED                         0x409A //Custom var for number of buttons pressed
 #define VAR_MAHOGANCYHILLS_BUTTONS_PRESSED               0x409B // Custom var to conut the number of buttons pressed, all 4 does something?
 #define VAR_ELITE_4_STATE                                0x409C
 #define VAR_FIRST_FOSSIL_SELECTION                       0x409D //In mh3 sets state for selecting fossils 0 = no started 1 = means allowed to choose  2 = selected anorith 3 = selected lileep
@@ -179,13 +179,13 @@
 #define VAR_MOSSDEEP_SPACE_CENTER_STATE                  0x409F
 #define VAR_SLATEPORT_HARBOR_STATE                       0x40A0
 #define VAR_MAHOGANYHILLS_FOSSIL_ROXANNE                 0x40A1 // Custom var for getting fossil 1 = beaten roxanne
-#define VAR_SEAFLOOR_CAVERN_STATE                        0x40A2
+#define VAR_SCHOOL_TOURNAMENT_LEVEL                        0x40A2 //set the level of the school tournament
 #define VAR_CABLE_CAR_STATION_STATE                      0x40A3
 #define VAR_SAFARI_ZONE_STATE                            0x40A4  // 0: In or out of SZ, 1: Player exiting SZ, 2: Player entering SZ
 #define VAR_TRICK_HOUSE_BEING_WATCHED_STATE              0x40A5
 #define VAR_TRICK_HOUSE_FOUND_TRICK_MASTER               0x40A6
 #define VAR_TRICK_HOUSE_ENTRANCE_STATE                   0x40A7
-#define VAR_FIRST_TRAINERS_BEATEN_CHECK                  0x40A8 // Counts all trainers beaten early on
+#define VAR_TRAINERS_BEATEN_CHECK                  0x40A8 // Counts all trainers beaten early on
 #define VAR_CYCLING_CHALLENGE_STATE                      0x40A9
 #define VAR_SLATEPORT_MUSEUM_1F_STATE                    0x40AA
 #define VAR_TRICK_HOUSE_PUZZLE_1_STATE                   0x40AB
@@ -246,7 +246,7 @@
 #define VAR_GIFT_UNUSED_5                                0x40E2 // Var is written to, but never read
 #define VAR_GIFT_UNUSED_6                                0x40E3 // Var is written to, but never read
 #define VAR_GIFT_UNUSED_7                                0x40E4 // var is written to, but never read
-#define VAR_ENTERED_SCHOOL                               0x40E5 // Has the player entered the schhol 1 is yes
+#define VAR_MAT_STATE                               0x40E5 // Has the player entered the schhol 1 is yes
 #define VAR_DAILY_SLOTS                                  0x40E6
 #define VAR_DAILY_WILDS                                  0x40E7
 #define VAR_DAILY_BLENDER                                0x40E8
@@ -270,7 +270,7 @@
 #define VAR_MOVE_ROOM_STUDENTS                           0x40FA //  adds for each student beaten in move room
 #define VAR_ABILITY_ROOM_STUDENTS                        0x40FC // adds for each student beaten in ability room
 #define VAR_ROB_MET                                      0x40FD // Rob met for ollie
-#define VAR_SALTS7_QUEST_STATE                           0x40FE // 1 = beaten at route 1b, 2 is beaten at route 4b, 3 met red gyrados
+#define VAR_SALTS7_QUEST_STATE                           0x40FE // 1 = beaten at route 1b, 2 is beaten at route 4b, 3 met red gyrados, 4 he has some more in quarry
 #define VAR_SCHOOL_TEAM_RESET                                0x40FF // Used to reset team after battle school
 
 #define VARS_END                                         0x40FF

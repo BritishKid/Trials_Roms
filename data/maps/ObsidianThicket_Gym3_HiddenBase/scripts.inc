@@ -4,6 +4,7 @@ ObsidianThicket_Gym3_HiddenBase_MapScripts::
 
 ObsidianThicket_PleaseSuggest::
 	lockall
+	faceplayer
 	msgbox ObsidianThicket_PleaseSuggest_Text_0
 	releaseall
 	return

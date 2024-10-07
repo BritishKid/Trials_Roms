@@ -6,7 +6,7 @@ mapscripts PlayersHouseGF_MapScripts {
 
 script PlayersHouseGF_EventScript_Fridge {
     lockall
-    msgbox(format("I got eggs, butter and something that seems to be growing. \p Maybe its a new Pokemon species")) //give berries maybe?
+    msgbox(format("I got eggs, butter and something that seems to be growing. \p Maybe its a new Pokémon species")) //give berries maybe?
     releaseall
 }
 

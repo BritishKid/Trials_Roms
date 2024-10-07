@@ -22,6 +22,11 @@
       "map": "MAP_ROUTE9B",
       "offset": 20,
       "direction": "down"
+    },
+    {
+      "map": "MAP_ROUTE4C",
+      "offset": 0,
+      "direction": "up"
     }
   ],
   "object_events": [
@@ -63,10 +68,29 @@
       "trainer_sight_or_berry_tree_id": "2",
       "script": "Route9_BattleScript_Woodland",
       "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_KECLEON",
+      "x": 3,
+      "y": 36,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route9_EventScript_Kecleon",
+      "flag": "FLAG_HIDE_ROUTE_9_KECLEON"
     }
   ],
   "warp_events": [
-
+    {
+      "x": 4,
+      "y": 6,
+      "elevation": 0,
+      "dest_map": "MAP_FIERY_PATH",
+      "dest_warp_id": "1"
+    }
   ],
   "coord_events": [
 
@@ -75,16 +99,24 @@
     {
       "type": "secret_base",
       "x": 16,
-      "y": 21,
+      "y": 22,
       "elevation": 0,
       "secret_base_id": "SECRET_BASE_TREE1_1"
     },
     {
       "type": "secret_base",
       "x": 17,
-      "y": 21,
+      "y": 22,
       "elevation": 0,
       "secret_base_id": "SECRET_BASE_TREE1_3"
+    },
+    {
+      "type": "hidden_item",
+      "x": 7,
+      "y": 30,
+      "elevation": 0,
+      "item": "ITEM_NUGGET",
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE_9_NUGGET"
     }
   ]
 }

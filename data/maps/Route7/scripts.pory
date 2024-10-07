@@ -21,6 +21,8 @@ script Route7_Pyukumuku_Clean_Up_1 {
 }
 
 script Route7_IslandBoat {
+    lockall
+    faceplayer
     msgbox(format("Would you like to travel to Island 1?"), MSGBOX_YESNO)
     if(var(VAR_RESULT) == YES) {
         warp(MAP_CORAL_PORT_PORT, 8, 11)

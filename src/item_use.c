@@ -1007,7 +1007,10 @@ void Task_UseDigEscapeRopeOnField(u8 taskId)
 static void ItemUseOnFieldCB_EscapeRope(u8 taskId)
 {
     Overworld_ResetStateAfterDigEscRope();
-    #if I_KEY_ESCAPE_ROPE < GEN_8
+    #if FLAG_INFINITE_ESCAPEROPE == TRUE //can make infinite escape rope
+        CopyItemName(gSpecialVar_ItemId, gStringVar2);
+        StringExpandPlaceholders(gStringVar4, gText_PlayerUsedVar2);
+    #elif I_KEY_ESCAPE_ROPE < GEN_8
         RemoveUsedItem();
     #else
         CopyItemName(gSpecialVar_ItemId, gStringVar2);

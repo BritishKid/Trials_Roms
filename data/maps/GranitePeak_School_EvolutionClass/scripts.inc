@@ -195,6 +195,7 @@ CompletedEvolutionTest::
 	msgbox GranitePeak_EvolutionClass_Teacher_Text_0
 	setvar VAR_EVOLUTION_ROOM_STUDENTS, 5
 	setflag FLAG_EVOLUTION_PATCH_EARNT
+	subquestmenu QUEST_MENU_COMPLETE_QUEST, QUEST_POKEMON_LEAGUE, SUB_QUEST_SCHOOL_EVOLUTION_PATCH
 	applymovement 5, Movement_Bounce
 	waitmovement 5
 	msgbox CompletedEvolutionTest_Text_2
@@ -239,7 +240,6 @@ GranitePeak_EvolutionClass_Girl::
 GranitePeak_GivePlayer_Eevee::
 	showmonpic SPECIES_EEVEE, 10, 3
 	givemon SPECIES_EEVEE, 5
-	setflag FLAG_FRONTPAGEROB_GAVE_HONEGE
 	playfanfare MUS_OBTAIN_ITEM
 	compare VAR_RESULT, MON_GIVEN_TO_PARTY
 	goto_if_eq GranitePeak_GivePlayer_Eevee_2
@@ -270,7 +270,9 @@ EvolutionStudent_Beaten_1:
 	goto_if_eq EvolutionStudent_Beaten_5
 EvolutionStudent_Beaten_4:
 	compare VAR_EVOLUTION_ROOM_STUDENTS, 0
-	goto_if_eq EvolutionStudent_Beaten_7
+	goto_if_eq EvolutionStudent_Beaten_8
+EvolutionStudent_Beaten_7:
+	call Increase_Trainers_Beaten
 	return
 
 EvolutionStudent_Beaten_2:
@@ -281,9 +283,9 @@ EvolutionStudent_Beaten_5:
 	setvar VAR_EVOLUTION_ROOM_STUDENTS, 2
 	goto EvolutionStudent_Beaten_4
 
-EvolutionStudent_Beaten_7:
+EvolutionStudent_Beaten_8:
 	setvar VAR_EVOLUTION_ROOM_STUDENTS, 1
-	return
+	goto EvolutionStudent_Beaten_7
 
 
 Movement_TeacherSurprised:
@@ -360,7 +362,7 @@ EvolutionTest_Text_3:
 	.string "Eevee can evolve in different ways.$"
 
 EvolutionTest_Text_4:
-	.string "Question 2. Are there any Pokemon that\n"
+	.string "Question 2. Are there any Pokémon that\n"
 	.string "can evolve twice at once?$"
 
 EvolutionTest_Text_5:
@@ -374,7 +376,7 @@ EvolutionTest_Text_7:
 	.string "You're doing great, okay final question$"
 
 EvolutionTest_Text_8:
-	.string "Do some Pokemon only evolve through\n"
+	.string "Do some Pokémon only evolve through\n"
 	.string "trade?$"
 
 EvolutionTest_Text_9:
@@ -384,7 +386,7 @@ EvolutionTest_Text_9:
 EvolutionTest_Text_10:
 	.string "Correct with the discovery of a Link\n"
 	.string "Stone you no longer have to trade\l"
-	.string "certain pokemon.$"
+	.string "certain Pokémon.$"
 
 EvolutionTest_Text_11:
 	.string "That's stupid how can a Pokémon evolve\n"

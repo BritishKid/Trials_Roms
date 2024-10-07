@@ -37,13 +37,13 @@ EmberDuneCave_EarthPlate_Script_11:
 	setvar VAR_0x8007, 0
 	special ShakeCamera
 	fadescreen FADE_TO_BLACK
-	warp MAP_LOST_PLATES, 6, 14
+	warp MAP_LOST_PLATES, 6, 12
 	goto EmberDuneCave_EarthPlate_Script_1
 
 
 EmberDuneCave_EarthPlate_Script_Text_0:
 	.string "There is a carving of many rock like\n"
-	.string "Pokemon crawling over a plate.$"
+	.string "Pokémon crawling over a plate.$"
 
 EmberDuneCave_EarthPlate_Script_Text_1:
 	.string "Do you want to put the LEGENDS PLATE in\n"

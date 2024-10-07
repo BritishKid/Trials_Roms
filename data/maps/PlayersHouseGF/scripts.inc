@@ -38,7 +38,7 @@ PlayersHouseGF_EventScript_TV::
 PlayersHouseGF_EventScript_Fridge_Text_0:
 	.string "I got eggs, butter and something that\n"
 	.string "seems to be growing.\p"
-	.string "Maybe its a new Pokemon species$"
+	.string "Maybe its a new Pokémon species$"
 
 PlayersHouseGF_EventScript_Sink_Text_0:
 	.string "You turn on the tap too much and get\n"

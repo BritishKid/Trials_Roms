@@ -50,6 +50,13 @@
       "elevation": 0,
       "dest_map": "MAP_VICTORY_ROAD_1F",
       "dest_warp_id": "1"
+    },
+    {
+      "x": 8,
+      "y": 4,
+      "elevation": 0,
+      "dest_map": "MAP_JOKE_MAP",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [
@@ -193,6 +200,14 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
       "script": "Common_EventScript_ShowPokemonCenterSign"
+    },
+    {
+      "type": "sign",
+      "x": 21,
+      "y": 10,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "regigiver"
     }
   ]
 }

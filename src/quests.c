@@ -243,7 +243,7 @@ static const u8 sText_AZ[] = _(" A-Z");
 
 //Declaration of subquest structures. Edits to subquests are made here.
 #define sub_quest(i, n, d, m, s, st, t) {.id = i, .name = n, .desc = d, .map = m, .sprite = s, .spritetype = st, .type = t}
-static const struct SubQuest sSubQuests1[QUEST_1_SUB_COUNT] =
+static const struct SubQuest sSubQuests1[QUEST_POKEMON_LEAGUE_SUB_COUNT] =
 {
 	sub_quest(
 	      0,
@@ -270,7 +270,7 @@ static const struct SubQuest sSubQuests1[QUEST_1_SUB_COUNT] =
 	      gText_SubQuest1_Name3,
 	      gText_SubQuest1_Desc3,
 	      gText_SubQuest1_SubMap3,
-	      OBJ_EVENT_GFX_WALLY,
+	      OBJ_EVENT_GFX_WATTSON, 
 	      OBJECT,
 	      sText_Found
 	),
@@ -280,7 +280,7 @@ static const struct SubQuest sSubQuests1[QUEST_1_SUB_COUNT] =
 	      gText_SubQuest1_Name4,
 	      gText_SubQuest1_Desc4,
 	      gText_SubQuest1_SubMap4,
-	      OBJ_EVENT_GFX_WALLY,
+	      OBJ_EVENT_GFX_HEX_MANIAC,
 	      OBJECT,
 	      sText_Found
 	),
@@ -346,7 +346,7 @@ static const struct SubQuest sSubQuests1[QUEST_1_SUB_COUNT] =
 	),
 };
 
-static const struct SubQuest sSubQuests2[QUEST_2_SUB_COUNT] =
+static const struct SubQuest sSubQuests2[QUEST_HIDDEN_DOLLS_SUB_COUNT] =
 {
 	sub_quest(
 	      10,
@@ -382,8 +382,8 @@ static const struct SubQuest sSubQuests2[QUEST_2_SUB_COUNT] =
 	      13,
 	      gText_SubQuest2_Name4,
 	      gText_SubQuest2_Desc4,
-	      gText_SideQuestMap4,
-	      OBJ_EVENT_GFX_WALLY,
+	      gText_SubQuest2_SubMap4,
+	      OBJ_EVENT_GFX_LOTAD_DOLL,
 	      OBJECT,
 	      sText_Found
 	),
@@ -392,8 +392,8 @@ static const struct SubQuest sSubQuests2[QUEST_2_SUB_COUNT] =
 	      14,
 	      gText_SubQuest2_Name5,
 	      gText_SubQuest2_Desc5,
-	      gText_SideQuestMap5,
-	      OBJ_EVENT_GFX_WALLY,
+	      gText_SubQuest2_SubMap5,
+	      SUB_QUEST_MEOWTH_DOLL,
 	      OBJECT,
 	      sText_Found
 	),
@@ -402,8 +402,8 @@ static const struct SubQuest sSubQuests2[QUEST_2_SUB_COUNT] =
 	      15,
 	      gText_SubQuest2_Name6,
 	      gText_SubQuest2_Desc6,
-	      gText_SideQuestMap6,
-	      OBJ_EVENT_GFX_WALLY,
+	      gText_SubQuest2_SubMap6,
+	      SUB_QUEST_SWABLU_DOLL,
 	      OBJECT,
 	      sText_Found
 	),
@@ -577,9 +577,9 @@ static const struct SubQuest sSubQuests4[QUEST_SALT_SUB_COUNT] =
 	      32,
 	      gText_SubQuest4_Name3,
 	      gText_SubQuest4_Desc3,
-	      gText_SubQuest2_SubMap2,
-	      OBJ_EVENT_GFX_ANABEL,
-	      OBJECT,
+	      gText_SubQuest2_SubMap3,
+	      SPECIES_GYARADOS,
+	      PKMN,
 	      sText_Found
 	),
 
@@ -587,9 +587,9 @@ static const struct SubQuest sSubQuests4[QUEST_SALT_SUB_COUNT] =
 	      33,
 	      gText_SubQuest4_Name4,
 	      gText_SubQuest2_Desc4,
-	      gText_SideQuestMap4,
-	      OBJ_EVENT_GFX_ANABEL,
-	      OBJECT,
+	      gText_SubQuest2_SubMap4,
+	      SPECIES_ARBOK,
+	      PKMN,
 	      sText_Found
 	),
 
@@ -893,7 +893,7 @@ static const struct SubQuest sSubQuests6[QUEST_LOST_PLATES_SUB_COUNT] =
 		),
 };
 
-static const struct SubQuest sSubQuests10[QUEST_LOST_PLATES_SUB_COUNT] =
+static const struct SubQuest sSubQuests10[QUEST_EVOSTONE_SUB_COUNT] =
 {
 	sub_quest(
 			65,
@@ -996,14 +996,14 @@ static const struct SubQuest sSubQuests10[QUEST_LOST_PLATES_SUB_COUNT] =
 		),
 };
 
-static const struct SubQuest sSubQuests11[QUEST_GIANT_FISH_SUB_COUNT] =
+static const struct SubQuest sSubQuests11[QUEST_GIANT_FISH_SUB_COUNT] = //giant fish quest
 {
 	sub_quest(
 			76,
-			gText_SubQuest11_Name1,
+			gText_SubQuest11_Name1, 
 			gText_SubQuest11_Desc1,
 			gText_SubQuest11_SubMap1,
-			SPECIES_KYOGRE_PRIMAL,
+			SPECIES_GYARADOS,
 			PKMN,
 			sText_Found
 		),
@@ -1012,7 +1012,7 @@ static const struct SubQuest sSubQuests11[QUEST_GIANT_FISH_SUB_COUNT] =
 			gText_SubQuest11_Name2,
 			gText_SubQuest11_Desc2,
 			gText_SubQuest11_SubMap2,
-			SPECIES_KYOGRE_PRIMAL,
+			SPECIES_AZUMARILL,
 			PKMN,
 			sText_Found
 		),
@@ -1091,7 +1091,7 @@ static const struct SideQuest sSideQuests[QUEST_COUNT] =
 	      OBJ_EVENT_GFX_BRENDAN_NORMAL,
 	      OBJECT,
 	      sSubQuests1,
-	      QUEST_1_SUB_COUNT
+	      QUEST_POKEMON_LEAGUE_SUB_COUNT
 	),
 	side_quest(
 	      gText_SideQuestName_2,
@@ -1101,7 +1101,7 @@ static const struct SideQuest sSideQuests[QUEST_COUNT] =
 	      OBJ_EVENT_GFX_BRENDAN_NORMAL,
 	      OBJECT,
 	      sSubQuests2,
-	      QUEST_2_SUB_COUNT
+	      QUEST_HIDDEN_DOLLS_SUB_COUNT
 	),
 	side_quest(
 	      gText_SideQuestName_3,
@@ -1188,17 +1188,17 @@ static const struct SideQuest sSideQuests[QUEST_COUNT] =
 	      gText_SideQuestDesc_11,
 	      gText_SideQuestDoneDesc_11,
 	      gText_SideQuestMap11,
-	      OBJ_EVENT_GFX_WALLY,
+	      OBJ_EVENT_GFX_FISHERMAN,
 	      OBJECT,
-	      NULL,
-	      0
+	      sSubQuests11,
+	      QUEST_GIANT_FISH_SUB_COUNT
 	),
 	side_quest(
 	      gText_SideQuestName_12,
 	      gText_SideQuestDesc_12,
 	      gText_SideQuestDoneDesc_12,
 	      gText_SideQuestMap12,
-	      OBJ_EVENT_GFX_WALLY,
+	      OBJ_EVENT_GFX_LITTLE_GIRL,
 	      OBJECT,
 	      NULL,
 	      0

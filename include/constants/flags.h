@@ -69,7 +69,7 @@
 #define FLAG_HIDE_MOVES_ROOM    0x38 // Hides mat in evolution room
 #define FLAG_MOVE_PATCH_EARNT    0x39 // Player has completed move room at the school
 #define FLAG_ABILITY_PATCH_EARNT    0x3A // Player has compelted the ability room at the school
-#define FLAG_ROUTE4B_SALTS_BEATEN    0x3B // Beaten salts in the second encounter
+#define FLAG_HIDING_SALTS    0x3B // Beaten salts in the second encounter
 #define FLAG_ROUTE_DRAGON_LAKE_HIDE_SALTS    0x3C // Hide salts after seeing the red gyrados
 #define FLAG_LEVEL_CAPS    0x3D // Turn on for level caps
 #define FLAG_COAST_TOWN_SAVED    0x3E // Has the town on the coats in island 2 been saved
@@ -77,53 +77,53 @@
 #define FLAG_SHINY_RATE_INCREASED    0x40 // Higher Shiny rate flag
 #define FLAG_RECIEVE_CHARCOAL    0x41 // Custom flag for recieving Charcoal
 #define FLAG_HOUSE_OWNED    0x42 // Bought the house in Granite Peak
-#define FLAG_FORCE_SHINY    0x43 // Force Shiny
+#define FLAG_PYUKUMUKU_PRIZE_4    0x43 // Prize for finding all pykukumum
 #define FLAG_THUG_ENTRANCE_BEATEN    0x44 // beaten the thugs to open up the town entrance
 #define FLAG_ALEX_MET    0x45 // flag set when alex is met at platefall cave
 #define FLAG_ALEX_INSECT_PLATE    0x46 // spoken to alex near the insect plate
 #define FLAG_BEATEN_WATERFALLCAVE_BLACKBELTS    0x47 // allows access to the maste
 #define FLAG_WATERFALL_CAVE_CLEARED    0x48 // cleared waterfall cave
 #define FLAG_SHAYMIN_BEATEN    0x49 // BEATEN SHAYYMIN
-#define FLAG_UNUSED_0x04A    0x4A // Unused Flag
-#define FLAG_UNUSED_0x04B    0x4B // Unused Flag
-#define FLAG_UNUSED_0x04C    0x4C // Unused Flag
-#define FLAG_UNUSED_0x04D    0x4D // Unused Flag
-#define FLAG_UNUSED_0x04E    0x4E // Unused Flag
-#define FLAG_UNUSED_0x04F    0x4F // Unused Flag
+#define FLAG_PYUKUMUKU_PRIZE_1    0x4A // Prize for finding more than 3 pyukumukus
+#define FLAG_PYUKUMUKU_PRIZE_2    0x4B // Prize for finding more than 6 pyukumukus
+#define FLAG_PYUKUMUKU_PRIZE_3    0x4C // Prize for finding more than 9 pyukumukus
+#define FLAG_ACCESS_BEDROCK_LAKE_CAVE    0x4D // given access to the lake cave under bedrock
+#define FLAG_CANT_CATCH_MON    0x4E //This is used to make it so pokemon can't be caught during certain fights
+#define FLAG_SMART_WILD_AI    0x4F // Make ai for wild pokemon smart
 
 // Scripts
 #define FLAG_HIDE_SKY_PILLAR_TOP_RAYQUAZA_STILL  0x50
 #define FLAG_SET_WALL_CLOCK                      0x51
-#define FLAG_RESCUED_BIRCH                       0x52 //No longer used
+#define FLAG_TREECKO_BATTLE_BEATEN                       0x52 //Have we battled the tough treeckos
 #define FLAG_LEGENDARIES_IN_SOOTOPOLIS           0x53
 
-#define FLAG_UNUSED_0x054                    0x54  // Unused Flag
-#define FLAG_UNUSED_0x055                    0x55  // Unused Flag
+#define FLAG_XP_ALL_TURNED_ON                    0x54  // flag for state of xp all
+#define FLAG_INFINITE_ESCAPEROPE                    0x55  // flag for infinite escape rope
 
 #define FLAG_HIDE_CONTEST_POKE_BALL          0x56  // Always set after new game, object it hides is added directly
-#define FLAG_MET_RIVAL_MOM                   0x57  // UNUSUED deleted rivals mom
-#define FLAG_BIRCH_AIDE_MET                  0x58
-#define FLAG_DECLINED_BIKE                   0x59
-#define FLAG_RECEIVED_ACRO_BIKE                   0x5A
+#define FLAG_BEATEN_PINSIR_BASE                   0x57  // Used to define state of beating guy with pinsir in hidden base
+#define FLAG_BEATEN_HERACROSS_BASE                  0x58 //used to define state of beating guy with heracross in hidden base
+#define FLAG_GIANT_GYRADOS_BEATEN                   0x59 //giant gyrados beaten in dragon lake
+#define FLAG_RECEIVED_ACRO_BIKE                   0x5A //we use this
 #define FLAG_WATTSON_REMATCH_AVAILABLE       0x5B
 #define FLAG_COLLECTED_ALL_SILVER_SYMBOLS    0x5C
 #define FLAG_GOOD_LUCK_SAFARI_ZONE           0x5D // Set after talking to NPC blocking Safari Zone entrance/exit once.
 #define FLAG_RECEIVED_WAILMER_PAIL           0x5E //Custom used in route 2
 #define FLAG_RECEIVED_POKEBLOCK_CASE         0x5F
 #define FLAG_RECEIVED_SECRET_POWER           0x60 //Custom used in route 1a
-#define FLAG_MET_TEAM_AQUA_HARBOR            0x61
-#define FLAG_TV_EXPLAINED                    0x62
+#define FLAG_MET_TEAM_AQUA_HARBOR            0x61 
+#define FLAG_GIANT_AZUMARILL_BEATEN                    0x62 //giant azumarill in route 1 for plaice quest
 #define FLAG_MAUVILLE_GYM_BARRIERS_STATE     0x63
 #define FLAG_MOSSDEEP_GYM_SWITCH_1           0x64 // Leftover from the RS version of Mossdeep Gym, functionally unused
 #define FLAG_MOSSDEEP_GYM_SWITCH_2           0x65 //
 #define FLAG_MOSSDEEP_GYM_SWITCH_3           0x66 //
 #define FLAG_MOSSDEEP_GYM_SWITCH_4           0x67 //
 
-#define FLAG_UNUSED_0x068                    0x68  // used as a placeholder
+#define FLAG_RECIEVED_LIGHT_BALL                    0x68  //light orb given in ember dune
 
-#define FLAG_OCEANIC_MUSEUM_MET_REPORTER     0x69
+#define FLAG_LEFTOVERS_ORPHANAGE     0x69
 #define FLAG_RECEIVED_HM04                   0x6A
-#define FLAG_RECEIVED_HM06                   0x6B
+#define FLAG_RECEIVED_HM06                   0x6B //given by dude in the swamp
 #define FLAG_WHITEOUT_TO_LAVARIDGE           0x6C // Set after defeating Flannery, so the player cant white out from poison before receiving Go Goggles
 #define FLAG_RECEIVED_HM05                   0x6D
 #define FLAG_RECEIVED_HM02                   0x6E
@@ -139,7 +139,7 @@
 #define FLAG_CANCEL_BATTLE_ROOM_CHALLENGE    0x77
 
 #define FLAG_LANDMARK_MIRAGE_TOWER           0x78
-#define FLAG_RECEIVED_TM31                   0x79
+#define FLAG_RECEIVED_TM31                   0x79 //brick break
 #define FLAG_RECEIVED_HM03                   0x7A
 #define FLAG_RECEIVED_HM08                   0x7B
 #define FLAG_REGISTER_RIVAL_POKENAV          0x7C
@@ -160,8 +160,8 @@
 #define FLAG_DEFEATED_EVIL_TEAM_MT_CHIMNEY   0x8B
 #define FLAG_RECEIVED_6_SODA_POP             0x8C
 #define FLAG_DEFEATED_SEASHORE_HOUSE         0x8D
-#define FLAG_DEVON_GOODS_STOLEN              0x8E
-#define FLAG_RECOVERED_DEVON_GOODS           0x8F
+#define FLAG_MAT_ID              0x8E // for finding mats id
+#define FLAG_MAT_ID_RETURNED           0x8F //returned mats id
 #define FLAG_RETURNED_DEVON_GOODS            0x90
 #define FLAG_CAUGHT_LUGIA                    0x91
 #define FLAG_CAUGHT_HO_OH                    0x92
@@ -169,7 +169,7 @@
 #define FLAG_DOCK_REJECTED_DEVON_GOODS       0x94
 #define FLAG_DELIVERED_DEVON_GOODS           0x95
 #define FLAG_RECEIVED_CONTEST_PASS           0x96 // Unused, leftover from R/S
-#define FLAG_RECEIVED_CASTFORM               0x97
+#define FLAG_RECEIVED_TYROGUE               0x97 //used for tyrogue in waterfall cave
 #define FLAG_RECEIVED_SUPER_ROD              0x98
 #define FLAG_RUSTBORO_NPC_TRADE_COMPLETED    0x99
 #define FLAG_PACIFIDLOG_NPC_TRADE_COMPLETED  0x9A
@@ -183,14 +183,14 @@
 #define FLAG_CUTE_PAINTING_MADE              0xA2
 #define FLAG_SMART_PAINTING_MADE             0xA3
 #define FLAG_TOUGH_PAINTING_MADE             0xA4
-#define FLAG_RECEIVED_TM39                   0xA5
-#define FLAG_RECEIVED_TM08                   0xA6
-#define FLAG_RECEIVED_TM34                   0xA7
-#define FLAG_RECEIVED_TM50                   0xA8
-#define FLAG_RECEIVED_TM42                   0xA9
-#define FLAG_RECEIVED_TM40                   0xAA
-#define FLAG_RECEIVED_TM04                   0xAB
-#define FLAG_RECEIVED_TM03                   0xAC
+#define FLAG_RECEIVED_TM39                   0xA5 //rock tomb in mh from roxanne
+#define FLAG_RECEIVED_TM08                   0xA6 //bulk up (give from dojo)
+#define FLAG_RECEIVED_TM34                   0xA7 //shock wave (mh prize)
+#define FLAG_RECEIVED_TM50                   0xA8 //overheat
+#define FLAG_RECEIVED_TM42                   0xA9 //facade
+#define FLAG_RECEIVED_TM40                   0xAA //aerial ace
+#define FLAG_RECEIVED_TM04                   0xAB //calm mind
+#define FLAG_RECEIVED_TM03                   0xAC //waterpulse
 #define FLAG_HIDE_SECRET_BASE_TRAINER        0xAD
 #define FLAG_DECORATION_1                    0xAE
 #define FLAG_DECORATION_2                    0xAF
@@ -227,13 +227,13 @@
 #define FLAG_ENCOUNTERED_LATIAS_OR_LATIOS    0xCE
 #define FLAG_MET_ARCHIE_METEOR_FALLS         0xCF
 #define FLAG_GOT_BASEMENT_KEY_FROM_WATTSON   0xD0
-#define FLAG_GOT_TM24_FROM_WATTSON           0xD1
+#define FLAG_CAN_ACCESS_CHAMPIONS_GUILD           0xD1 //playter can access the guild
 #define FLAG_FAN_CLUB_STRENGTH_SHARED        0xD2 // Set when you rate the strength of another trainer in Lilycove's Trainer Fan Club.
 #define FLAG_DEFEATED_RIVAL_RUSTBORO         0xD3
 #define FLAG_RECEIVED_RED_OR_BLUE_ORB        0xD4
 #define FLAG_RECEIVED_PREMIER_BALL_RUSTBORO  0xD5
-#define FLAG_ENABLE_WALLY_MATCH_CALL         0xD6
-#define FLAG_ENABLE_SCOTT_MATCH_CALL         0xD7
+#define FLAG_BRAD_BEATEN         0xD6
+#define FLAG_BRAD_GIVES_SHINY_AXEW         0xD7
 #define FLAG_ENABLE_MOM_MATCH_CALL           0xD8
 #define FLAG_MET_DIVING_TREASURE_HUNTER      0xD9
 #define FLAG_MET_WAILMER_TRAINER             0xDA
@@ -244,22 +244,22 @@
 #define FLAG_RECEIVED_GO_GOGGLES             0xDD
 #define FLAG_WINGULL_SENT_ON_ERRAND          0xDE
 #define FLAG_RECEIVED_MENTAL_HERB            0xDF
-#define FLAG_WINGULL_DELIVERED_MAIL          0xE0
+#define FLAG_WINGULL_DELIVERED_MAIL          0xE0 //we can remove
 #define FLAG_RECEIVED_20_COINS               0xE1
 #define FLAG_RECEIVED_STARTER_DOLL           0xE2
 #define FLAG_RECEIVED_GOOD_ROD               0xE3
 #define FLAG_REGI_DOORS_OPENED               0xE4
-#define FLAG_UNUSED_0XE5                   0xE5 //CAN OVERIDE TM27 GIVEN WITHOUT USE OF FLAG
-#define FLAG_RECEIVED_TM36                   0xE6
-#define FLAG_RECEIVED_TM05                   0xE7
-#define FLAG_RECEIVED_TM19                   0xE8
+#define FLAG_INVERSE_BATTLE_ON                   0xE5 //CAN OVERIDE TM27 GIVEN WITHOUT USE OF FLAG
+#define FLAG_RECEIVED_TM36                   0xE6 //sludge bomb
+#define FLAG_RECEIVED_TM05                   0xE7 //roar in item ball in dark cave
+#define FLAG_RECEIVED_TM19                   0xE8 //Used in  its giga drain
 
-#define FLAG_UNUSED_0x0E9                    0xE9 // Unused Flag
+#define FLAG_RECIEVED_MEGA_BRACELET                    0xE9 // For recieving mega bracelet
 
-#define FLAG_RECEIVED_TM44                   0xEA
-#define FLAG_RECEIVED_TM45                   0xEB
+#define FLAG_RECEIVED_TM44                   0xEA // now used in route 8 rest
+#define FLAG_RECEIVED_TM45                   0xEB //atract
 #define FLAG_RECEIVED_GLASS_ORNAMENT         0xEC
-#define FLAG_RECEIVED_SILVER_SHIELD          0xED
+#define FLAG_RECEIVED_SILVER_SHIELD          0xED //silver shield is recieved without this being flagged
 #define FLAG_RECEIVED_GOLD_SHIELD            0xEE
 #define FLAG_USED_STORAGE_KEY                0xEF
 #define FLAG_USED_ROOM_1_KEY                 0xF0
@@ -282,19 +282,19 @@
 #define FLAG_RECEIVED_OLD_ROD_UNUSED         0x101 //Replaced with newer version
 #define FLAG_RECEIVED_COIN_CASE              0x102
 #define FLAG_RETURNED_RED_OR_BLUE_ORB        0x103
-#define FLAG_RECEIVED_TM49                   0x104
+#define FLAG_RECEIVED_TM49                   0x104 //snatch
 #define FLAG_RECEIVED_TM28                   0x105 //Dig tm
-#define FLAG_RECEIVED_TM09                   0x106
+#define FLAG_UNUSED_0x106                    0x106 //UNUSED!
 #define FLAG_ENTERED_ELITE_FOUR              0x107
-#define FLAG_RECEIVED_TM10                   0x108
-#define FLAG_RECEIVED_TM41                   0x109
+#define FLAG_RECEIVED_TM10                   0x108 //hidden power
+#define FLAG_RECEIVED_TM41                   0x109 //torment
 #define FLAG_RECEIVED_LAVARIDGE_EGG          0x10A
 #define FLAG_RECEIVED_REVIVED_FOSSIL_MON     0x10B
 #define FLAG_SECRET_BASE_REGISTRY_ENABLED    0x10C
-#define FLAG_RECEIVED_TM46                   0x10D //in thug port
+#define FLAG_RECEIVED_TM46                   0x10D //in thug port (thief)
 #define FLAG_CONTEST_SKETCH_CREATED          0x10E  // Set but never read
 #define FLAG_EVIL_TEAM_ESCAPED_STERN_SPOKE   0x10F
-#define FLAG_RECEIVED_EXP_SHARE              0x110
+#define FLAG_RECEIVED_EXP_SHARE              0x110 //used by me
 #define FLAG_POKERUS_EXPLAINED               0x111
 #define FLAG_RECEIVED_RUNNING_SHOES          0x112
 #define FLAG_RECEIVED_QUICK_CLAW             0x113
@@ -311,10 +311,10 @@
 #define FLAG_DECLINED_RIVAL_BATTLE_LILYCOVE  0x11E
 #define FLAG_MET_DEVON_EMPLOYEE              0x11F
 #define FLAG_MET_RIVAL_RUSTBORO              0x120
-#define FLAG_RECEIVED_SILK_SCARF             0x121
+#define FLAG_UNUSED_0x121             0x121 //UNUSED deleted the original use 
 #define FLAG_NOT_READY_FOR_BATTLE_ROUTE_120  0x122
-#define FLAG_RECEIVED_SS_TICKET              0x123
-#define FLAG_MET_RIVAL_LILYCOVE              0x124
+#define FLAG_RECEIVED_SS_TICKET              0x123 //used but needs new name
+#define FLAG_CANNOT_RUN_FROM_BATTLE              0x124 //cannot flee from battle flag
 #define FLAG_MET_RIVAL_IN_HOUSE_AFTER_LILYCOVE 0x125
 #define FLAG_EXCHANGED_SCANNER               0x126
 #define FLAG_KECLEON_FLED_FORTREE            0x127
@@ -323,7 +323,7 @@
 #define FLAG_RECEIVED_BELDUM                 0x12A
 #define FLAG_RECEIVED_FANCLUB_TM_THIS_WEEK   0x12B
 #define FLAG_MET_FANCLUB_YOUNGER_BROTHER     0x12C
-#define FLAG_RIVAL_LEFT_FOR_ROUTE103         0x12D
+#define FLAG_RIVAL_LEFT_DEWFORD              0x12D //met rival in island 3
 #define FLAG_OMIT_DIVE_FROM_STEVEN_LETTER    0x12E
 #define FLAG_HAS_MATCH_CALL                  0x12F
 #define FLAG_ADDED_MATCH_CALL_TO_POKENAV     0x130
@@ -339,8 +339,10 @@
 #define FLAG_RECEIVED_AURORA_TICKET          0x13A
 #define FLAG_RECEIVED_MYSTIC_TICKET          0x13B
 #define FLAG_RECEIVED_OLD_SEA_MAP            0x13C
-#define FLAG_WONDER_CARD_UNUSED_1            0x13D // These Wonder Card flags are referenced but never set
-#define FLAG_WONDER_CARD_UNUSED_2            0x13E
+
+//for the buttons!
+#define FLAG_EMBER_DUNES_BUTTON_1_PRESSED            0x13D //next 4 are hdidden buttons in ember dunes for ting lu
+#define FLAG_EMBER_DUNES_BUTTON_2_PRESSED            0x13E
 #define FLAG_WONDER_CARD_UNUSED_3            0x13F
 #define FLAG_WONDER_CARD_UNUSED_4            0x140
 #define FLAG_WONDER_CARD_UNUSED_5            0x141
@@ -544,20 +546,20 @@
 #define FLAG_HIDDEN_ITEM_ROUTE_3_HARD_STONE                  (FLAG_HIDDEN_ITEMS_START + 0x02) //Hideen item in route 3
 #define FLAG_HIDDEN_ITEM_QUARRY_METAL_COAT                     (FLAG_HIDDEN_ITEMS_START + 0x03) //Hidden item in the quarry
 #define FLAG_HIDDEN_ITEM_QUARRY_ENTRANCE_HIDDEN_ITEM                    (FLAG_HIDDEN_ITEMS_START + 0x04) //Hidden item in the start of quarry
-#define FLAG_HIDDEN_ITEM_ROUTE_119_CALCIUM                   (FLAG_HIDDEN_ITEMS_START + 0x05)
-#define FLAG_HIDDEN_ITEM_ROUTE_119_ULTRA_BALL                (FLAG_HIDDEN_ITEMS_START + 0x06)
-#define FLAG_HIDDEN_ITEM_ROUTE_123_SUPER_REPEL               (FLAG_HIDDEN_ITEMS_START + 0x07)
-#define FLAG_HIDDEN_ITEM_UNDERWATER_124_CARBOS               (FLAG_HIDDEN_ITEMS_START + 0x08)
-#define FLAG_HIDDEN_ITEM_UNDERWATER_124_GREEN_SHARD          (FLAG_HIDDEN_ITEMS_START + 0x09)
-#define FLAG_HIDDEN_ITEM_UNDERWATER_124_PEARL                (FLAG_HIDDEN_ITEMS_START + 0x0A)
-#define FLAG_HIDDEN_ITEM_UNDERWATER_124_BIG_PEARL            (FLAG_HIDDEN_ITEMS_START + 0x0B)
-#define FLAG_HIDDEN_ITEM_UNDERWATER_126_BLUE_SHARD           (FLAG_HIDDEN_ITEMS_START + 0x0C)
-#define FLAG_HIDDEN_ITEM_UNDERWATER_124_HEART_SCALE_1        (FLAG_HIDDEN_ITEMS_START + 0x0D)
-#define FLAG_HIDDEN_ITEM_UNDERWATER_126_HEART_SCALE          (FLAG_HIDDEN_ITEMS_START + 0x0E)
-#define FLAG_HIDDEN_ITEM_UNDERWATER_126_ULTRA_BALL           (FLAG_HIDDEN_ITEMS_START + 0x0F)
-#define FLAG_HIDDEN_ITEM_UNDERWATER_126_STARDUST             (FLAG_HIDDEN_ITEMS_START + 0x10)
-#define FLAG_HIDDEN_ITEM_UNDERWATER_126_PEARL                (FLAG_HIDDEN_ITEMS_START + 0x11)
-#define FLAG_HIDDEN_ITEM_UNDERWATER_126_YELLOW_SHARD         (FLAG_HIDDEN_ITEMS_START + 0x12)
+#define FLAG_HIDDEN_ITEM_QUARRY_DEEPER_MOON_STONE                   (FLAG_HIDDEN_ITEMS_START + 0x05)//custom at quarry
+#define FLAG_HIDDEN_ITEM_MAHOGANY_HILLS_1_REVIVE                (FLAG_HIDDEN_ITEMS_START + 0x06) //custom 
+#define FLAG_HIDDEN_ITEM_MAHOGANY_HILLS_1_SUPER_REPEL               (FLAG_HIDDEN_ITEMS_START + 0x07) //custom
+#define FLAG_HIDDEN_ITEM_FLOWERGLADE_MIRACLE_SEED               (FLAG_HIDDEN_ITEMS_START + 0x08) //CUSTOM FLOWER GLAD
+#define FLAG_HIDDEN_ITEM_FLOWERGLADE_GRASSY_SEED          (FLAG_HIDDEN_ITEMS_START + 0x09)//CUSTOM FLOWER GLAD
+#define FLAG_HIDDEN_ITEM_MEGAMANSION_OUTSIDE                (FLAG_HIDDEN_ITEMS_START + 0x0A) //hidden outside mega mansion
+#define FLAG_HIDDEN_ITEM_QUARRY_ROCKY_HELMET            (FLAG_HIDDEN_ITEMS_START + 0x0B) //quarry hidden item
+#define FLAG_HIDDEN_ITEM_ROUTE2_STARDUST           (FLAG_HIDDEN_ITEMS_START + 0x0C) //route 2 hidden stardust
+#define FLAG_HIDDEN_ITEM_MH2_HARD_STONE        (FLAG_HIDDEN_ITEMS_START + 0x0D) //mh2 hard stone
+#define FLAG_HIDDEN_ITEM_CORAL_CLIFF_LEAF_STONE          (FLAG_HIDDEN_ITEMS_START + 0x0E) //coral coast leaf stone
+#define FLAG_HIDDEN_ITEM_DARKCAVE_ULTRA_BALL           (FLAG_HIDDEN_ITEMS_START + 0x0F) //DARK CAVE
+#define FLAG_HIDDEN_ITEM_DARKCAVE_ROCK_GEM             (FLAG_HIDDEN_ITEMS_START + 0x10) //Dark cave
+#define FLAG_HIDDEN_ITEM_DARKCAVE_HEART_SCALE                (FLAG_HIDDEN_ITEMS_START + 0x11)//dark cave
+#define FLAG_HIDDEN_ITEM_LILYCOVE_CITY_CELL_BATTERY         (FLAG_HIDDEN_ITEMS_START + 0x12) //lilycove
 #define FLAG_HIDDEN_ITEM_UNDERWATER_126_IRON                 (FLAG_HIDDEN_ITEMS_START + 0x13)
 #define FLAG_HIDDEN_ITEM_UNDERWATER_126_BIG_PEARL            (FLAG_HIDDEN_ITEMS_START + 0x14)
 #define FLAG_HIDDEN_ITEM_UNDERWATER_127_STAR_PIECE           (FLAG_HIDDEN_ITEMS_START + 0x15)
@@ -567,7 +569,7 @@
 #define FLAG_HIDDEN_ITEM_UNDERWATER_128_PROTEIN              (FLAG_HIDDEN_ITEMS_START + 0x19)
 #define FLAG_HIDDEN_ITEM_UNDERWATER_128_PEARL                (FLAG_HIDDEN_ITEMS_START + 0x1A)
 #define FLAG_HIDDEN_ITEM_LILYCOVE_CITY_HEART_SCALE           (FLAG_HIDDEN_ITEMS_START + 0x1B)
-#define FLAG_HIDDEN_ITEM_FALLARBOR_TOWN_NUGGET               (FLAG_HIDDEN_ITEMS_START + 0x1C)
+#define FLAG_HIDDEN_ITEM_ROUTE_9_NUGGET               (FLAG_HIDDEN_ITEMS_START + 0x1C) //custom item route 9
 #define FLAG_HIDDEN_ITEM_MT_PYRE_EXTERIOR_ULTRA_BALL         (FLAG_HIDDEN_ITEMS_START + 0x1D)
 #define FLAG_HIDDEN_ITEM_ROUTE_113_TM32                      (FLAG_HIDDEN_ITEMS_START + 0x1E)
 #define FLAG_HIDDEN_ITEM_ABANDONED_SHIP_RM_1_KEY             (FLAG_HIDDEN_ITEMS_START + 0x1F)
@@ -578,7 +580,7 @@
 #define FLAG_HIDDEN_ITEM_UNDERWATER_124_CALCIUM              (FLAG_HIDDEN_ITEMS_START + 0x24)
 #define FLAG_HIDDEN_ITEM_ROUTE_104_POTION                    (FLAG_HIDDEN_ITEMS_START + 0x25)
 #define FLAG_HIDDEN_ITEM_UNDERWATER_124_HEART_SCALE_2        (FLAG_HIDDEN_ITEMS_START + 0x26)
-#define FLAG_HIDDEN_ITEM_ROUTE_121_HP_UP                     (FLAG_HIDDEN_ITEMS_START + 0x27)
+#define FLAG_HIDDEN_ITEM_BEACH_1_HP_UP                     (FLAG_HIDDEN_ITEMS_START + 0x27) //custom item in beach 1
 #define FLAG_HIDDEN_ITEM_ROUTE_121_NUGGET                    (FLAG_HIDDEN_ITEMS_START + 0x28)
 #define FLAG_HIDDEN_ITEM_ROUTE_123_REVIVE                    (FLAG_HIDDEN_ITEMS_START + 0x29)
 #define FLAG_HIDDEN_ITEM_ROUTE_114_REVIVE                    (FLAG_HIDDEN_ITEMS_START + 0x2A)
@@ -655,9 +657,9 @@
 //Flags for hidden base Dolls
 #define FLAG_HIDDEN_BASE_COLLECTABLE_FOUND_GULPIN  0x264 // Found gulpin  in the lost and found miniquest
 #define FLAG_HIDDEN_BASE_COLLECTABLE_FOUND_MUDKIP  0x265 // Found mudkip in the lost and found miniquest
-#define FLAG_UNUSED_0x266  0x266 // Unused Flag
-#define FLAG_UNUSED_0x267  0x267 // Unused Flag
-#define FLAG_UNUSED_0x268  0x268 // Unused Flag
+#define FLAG_HIDDEN_BASE_COLLECTABLE_FOUND_LOTAD  0x266 //Found lotad in the lost and found miniquest
+#define FLAG_HIDDEN_BASE_COLLECTABLE_FOUND_MEOWTH  0x267 // Found Meowth Doll
+#define FLAG_HIDDEN_BASE_COLLECTABLE_FOUND_SWABLU  0x268 // Found Swablu Doll
 #define FLAG_UNUSED_0x269  0x269 // Unused Flag
 #define FLAG_UNUSED_0x26A  0x26A // Unused Flag
 #define FLAG_UNUSED_0x26B  0x26B // Unused Flag
@@ -747,7 +749,7 @@
 #define FLAG_UNUSED_0x2BB  0x2BB // Pyukumuku cleaned up
 
 // Event Flags
-#define FLAG_HIDE_ROUTE_101_BIRCH_STARTERS_BAG                      0x2BC
+#define FLAG_HIDE_QUARRY_MASTER_IN_QUARRY                      0x2BC //hides master in first room
 #define FLAG_HIDE_APPRENTICE                                        0x2BD
 #define FLAG_HIDE_POKEMON_CENTER_2F_MYSTERY_GIFT_MAN                0x2BE
 #define FLAG_HIDE_UNION_ROOM_PLAYER_1                               0x2BF
@@ -764,7 +766,7 @@
 #define FLAG_HIDE_BATTLE_TOWER_MULTI_BATTLE_PARTNER_4               0x2CA
 #define FLAG_HIDE_BATTLE_TOWER_MULTI_BATTLE_PARTNER_5               0x2CB
 #define FLAG_HIDE_BATTLE_TOWER_MULTI_BATTLE_PARTNER_6               0x2CC
-#define FLAG_HIDE_SAFARI_ZONE_SOUTH_CONSTRUCTION_WORKERS            0x2CD
+#define FLAG_HIDE_PRE_BATTLE_1_THING            0x2CD //hides the guys from the legends plate nearby thingz
 #define FLAG_HIDE_MEW                                               0x2CE
 #define FLAG_HIDE_ROUTE_9_RIVAL                                   0x2CF
 #define FLAG_HIDE_ROUTE_101_BIRCH_ZIGZAGOON_BATTLE                  0x2D0
@@ -780,13 +782,13 @@
 #define FLAG_EXP_SHARE                                           0x2D9 // used to turn on xp all
 
 #define FLAG_HIDE_LILYCOVE_FAN_CLUB_INTERVIEWER                     0x2DA
-#define FLAG_HIDE_RUSTBORO_CITY_AQUA_GRUNT                          0x2DB
-#define FLAG_HIDE_RUSTBORO_CITY_DEVON_EMPLOYEE_1                    0x2DC
+#define FLAG_HIDE_QUARRY_WORKERS                          0x2DB //Hides all workers in quarry
+#define FLAG_HIDE_STEELIX                    0x2DC
 #define FLAG_HIDE_SEAFLOOR_CAVERN_ROOM_9_KYOGRE_ASLEEP              0x2DD
-#define FLAG_HIDE_PLAYERS_HOUSE_DAD                                 0x2DE
-#define FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_RIVAL_SIBLING      0x2DF
-#define FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_RIVAL_SIBLING          0x2E0
-#define FLAG_HIDE_MOSSDEEP_CITY_SPACE_CENTER_MAGMA_NOTE             0x2E1
+#define FLAG_HIDE_FIRST_ENCOUNTER_ROB                                 0x2DE //hides rob before gym 1
+#define FLAG_HIDE_SECOND_ENCOUNTER_ROB      0x2DF //hides rob before gym 2
+#define FLAG_HIDE_THIRD_ENCOUNTER_ROB          0x2E0 //rob gym 3?
+#define FLAG_HIDE_FOURTH_ENCOUNTER_ROB             0x2E1 //rob gym 4?
 #define FLAG_HIDE_ROUTE_104_MR_BRINEY                               0x2E2
 #define FLAG_HIDE_BRINEYS_HOUSE_MR_BRINEY                           0x2E3
 #define FLAG_HIDE_MAHOGANY_HILLS_ROXANNE                            0x2E4 // Hides roxanne in mh2
@@ -855,10 +857,10 @@
 #define FLAG_HIDE_SLATEPORT_CITY_CONTEST_REPORTER                   0x323
 #define FLAG_HIDE_MAUVILLE_CITY_WALLY                               0x324
 #define FLAG_HIDE_MAUVILLE_CITY_WALLYS_UNCLE                        0x325
-#define FLAG_HIDE_VERDANTURF_TOWN_WANDAS_HOUSE_WALLY                0x326
+#define FLAG_HIDE_VERDANTURF_TOWN_WANDAS_HOUSE_WALLY                0x326 //unused
 #define FLAG_HIDE_RUSTURF_TUNNEL_WANDAS_BOYFRIEND                   0x327
-#define FLAG_HIDE_VERDANTURF_TOWN_WANDAS_HOUSE_WANDAS_BOYFRIEND     0x328
-#define FLAG_HIDE_VERDANTURF_TOWN_WANDAS_HOUSE_WALLYS_UNCLE         0x329
+#define FLAG_HIDE_VERDANTURF_TOWN_WANDAS_HOUSE_WANDAS_BOYFRIEND     0x328 //unused
+#define FLAG_HIDE_VERDANTURF_TOWN_WANDAS_HOUSE_WALLYS_UNCLE         0x329 //unused
 #define FLAG_HIDE_SS_TIDAL_CORRIDOR_SCOTT                           0x32A
 #define FLAG_HIDE_LITTLEROOT_TOWN_BIRCHS_LAB_POKEBALL_CYNDAQUIL     0x32B
 #define FLAG_HIDE_LITTLEROOT_TOWN_BIRCHS_LAB_POKEBALL_TOTODILE      0x32C
@@ -982,7 +984,7 @@
 #define FLAG_HIDE_LAVARIDGE_TOWN_RIVAL_ON_BIKE                      0x3A2
 #define FLAG_HIDE_RUSTURF_TUNNEL_ROCK_1                             0x3A3
 #define FLAG_HIDE_RUSTURF_TUNNEL_ROCK_2                             0x3A4
-#define FLAG_HIDE_CORAL_PORT_HOUSE_4_WINGULL                      0x3A5
+#define FLAG_HIDE_CORAL_PORT_HOUSE_4_WINGULL                      0x3A5 //we can remove
 #define FLAG_HIDE_MOSSDEEP_CITY_HOUSE_2_WINGULL                     0x3A6
 #define FLAG_HIDE_REGIROCK                                          0x3A7
 #define FLAG_HIDE_REGICE                                            0x3A8
@@ -1026,7 +1028,7 @@
 #define FLAG_HIDE_NEW_MAUVILLE_VOLTORB_1                            0x3CE
 #define FLAG_HIDE_NEW_MAUVILLE_VOLTORB_2                            0x3CF
 #define FLAG_HIDE_NEW_MAUVILLE_VOLTORB_3                            0x3D0
-#define FLAG_HIDE_AQUA_HIDEOUT_B1F_ELECTRODE_1                      0x3D1
+#define FLAG_HIDE_MAT_MEGA_MANSION                      0x3D1
 #define FLAG_HIDE_AQUA_HIDEOUT_B1F_ELECTRODE_2                      0x3D2
 #define FLAG_HIDE_OLDALE_TOWN_RIVAL                                 0x3D3
 #define FLAG_HIDE_UNDERWATER_SEA_FLOOR_CAVERN_STOLEN_SUBMARINE      0x3D4
@@ -1036,7 +1038,7 @@
 #define FLAG_HIDE_VERDANTURF_TOWN_WANDAS_HOUSE_WANDA                0x3D8
 #define FLAG_HIDE_ROUTE_120_KECLEON_2                               0x3D9
 #define FLAG_HIDE_ROUTE_120_KECLEON_3                               0x3DA
-#define FLAG_HIDE_ROUTE_120_KECLEON_4                               0x3DB
+#define FLAG_HIDE_ROUTE_9_KECLEON                               0x3DB
 #define FLAG_HIDE_ROUTE_120_KECLEON_5                               0x3DC
 #define FLAG_HIDE_ROUTE_119_KECLEON_1                               0x3DD
 #define FLAG_HIDE_ROUTE_119_KECLEON_2                               0x3DE
@@ -1061,22 +1063,22 @@
 #define FLAG_ITEM_TUTORIAL_POKEBALL                                 0x3EF //Tutorial Item
 #define FLAG_ITEM_ROUTE_EMBERDUNE_TM37                                    0x3F0 //ember dune cave
 #define FLAG_ITEM_GRANITE_PEAK_BIGROOT                               0x3F1 //granite peak big root
-#define FLAG_ITEM_ROUTE_111_HP_UP                                   0x3F2
-#define FLAG_ITEM_ROUTE_112_NUGGET                                  0x3F3
+#define FLAG_ITEM_OBSIDIAN_THICKET_ITEMBALL1                                   0x3F2 //obsidian thickett
+#define FLAG_ITEM_ROUTE_2B_ULTRABALLS                                  0x3F3 //not used
 #define FLAG_ITEM_ROUTE_4_MAX_ETHER                               0x3F4 //Route4
-#define FLAG_ITEM_ROUTE_113_SUPER_REPEL                             0x3F5
-#define FLAG_ITEM_ROUTE_114_RARE_CANDY                              0x3F6
-#define FLAG_ITEM_ROUTE_114_PROTEIN                                 0x3F7
-#define FLAG_ITEM_ROUTE_115_SUPER_POTION                            0x3F8
-#define FLAG_ITEM_ROUTE_115_TM01                                    0x3F9
-#define FLAG_ITEM_ROUTE_115_IRON                                    0x3FA
-#define FLAG_ITEM_ROUTE_116_ETHER                                   0x3FB
-#define FLAG_ITEM_ROUTE_116_REPEL                                   0x3FC
-#define FLAG_ITEM_ROUTE_116_HP_UP                                   0x3FD
-#define FLAG_ITEM_ROUTE_117_GREAT_BALL                              0x3FE
-#define FLAG_ITEM_ROUTE_117_REVIVE                                  0x3FF
-#define FLAG_ITEM_ROUTE_119_SUPER_REPEL                             0x400
-#define FLAG_ITEM_ROUTE_119_ZINC                                    0x401
+#define FLAG_ITEM_ROUTE_1_LUMINOUS_MOSS                             0x3F5 //route 1 moss
+#define FLAG_ITEM_ROUTE_1B_CHOICE_BAND                              0x3F6 //Ruute 3b choice band behind exploding graveller
+#define FLAG_ITEM_QUARRY_KINGS_ROCK                                 0x3F7//quarry ball
+#define FLAG_ITEM_QUARRY_TM47                            0x3F8 //quarry tmball
+#define FLAG_ITEM_ROUTE3_HEART_SCALE                                    0x3F9 //route 3
+#define FLAG_ITEM_OBSIDIAN_THICKETT_BLACK_SLUDGE                                    0x3FA //obsidian thickett
+#define FLAG_ITEM_OBSIDIAN_THICKET_LINK_CORD                                   0x3FB
+#define FLAG_ITEM_FLOWERGLADE_TM22                                   0x3FC //tm2 flower glade
+#define FLAG_ITEM_FLOWERGLADE_ABSORB_BULB                                   0x3FD //flower glade
+#define FLAG_ITEM_ROUTE_4_TM_24                              0x3FE //hidden thunderbolt
+#define FLAG_ITEM_CLAYHAVEN_NETBALL                                  0x3FF //clayhaven netball
+#define FLAG_ITEM_MAHOGANYHILLS_SUNSTONE                             0x400 //mh2 sunstone
+#define FLAG_ITEM_MEGA_MANSION_RARE_CANDY                                    0x401 //Mega Mansion rare candies
 #define FLAG_ITEM_ROUTE_119_ELIXIR_1                                0x402
 #define FLAG_ITEM_ROUTE_119_LEAF_STONE                              0x403
 #define FLAG_ITEM_ROUTE_119_RARE_CANDY                              0x404
@@ -1130,7 +1132,7 @@
 #define FLAG_ITEM_NEW_MAUVILLE_ESCAPE_ROPE                          0x434
 #define FLAG_ITEM_ABANDONED_SHIP_HIDDEN_FLOOR_ROOM_6_LUXURY_BALL    0x435
 #define FLAG_ITEM_ABANDONED_SHIP_HIDDEN_FLOOR_ROOM_4_SCANNER        0x436
-#define FLAG_ITEM_SCORCHED_SLAB_TM11                                0x437
+#define FLAG_ITEM_EMBER_DUNES_TM11                                0x437 //custom
 #define FLAG_ITEM_METEOR_FALLS_B1F_2R_TM02                          0x438
 #define FLAG_ITEM_SHOAL_CAVE_ENTRANCE_BIG_PEARL                     0x439
 #define FLAG_ITEM_SHOAL_CAVE_INNER_ROOM_RARE_CANDY                  0x43A
@@ -1145,7 +1147,7 @@
 #define FLAG_ITEM_FIERY_PATH_TM06                                   0x443
 #define FLAG_ITEM_ROUTE_124_RED_SHARD                               0x444
 #define FLAG_ITEM_ROUTE_124_BLUE_SHARD                              0x445
-#define FLAG_ITEM_SAFARI_ZONE_NORTH_WEST_TM22                       0x446
+#define FLAG_ITEM_DRAGONLAKE_TM09                       0x446
 #define FLAG_ITEM_ABANDONED_SHIP_ROOMS_1F_HARBOR_MAIL               0x447
 #define FLAG_ITEM_ABANDONED_SHIP_ROOMS_B1F_ESCAPE_ROPE              0x448
 #define FLAG_ITEM_ABANDONED_SHIP_ROOMS_2_B1F_DIVE_BALL              0x449
@@ -1153,7 +1155,7 @@
 #define FLAG_ITEM_ABANDONED_SHIP_ROOMS_2_1F_REVIVE                  0x44B
 #define FLAG_ITEM_ABANDONED_SHIP_CAPTAINS_OFFICE_STORAGE_KEY        0x44C
 #define FLAG_ITEM_ABANDONED_SHIP_HIDDEN_FLOOR_ROOM_3_WATER_STONE    0x44D
-#define FLAG_ITEM_ABANDONED_SHIP_HIDDEN_FLOOR_ROOM_1_TM18           0x44E
+#define FLAG_STEEL_GEM_GIVEN           0x44E //Given steel gem in quarry
 #define FLAG_ITEM_ROUTE_121_CARBOS                                  0x44F
 #define FLAG_ITEM_ROUTE_123_ULTRA_BALL                              0x450
 #define FLAG_ITEM_ROUTE_126_GREEN_SHARD                             0x451
@@ -1165,7 +1167,7 @@
 #define FLAG_ITEM_FIERY_PATH_FIRE_STONE                             0x457
 #define FLAG_ITEM_SHOAL_CAVE_ICE_ROOM_TM07                          0x458
 #define FLAG_ITEM_SHOAL_CAVE_ICE_ROOM_NEVER_MELT_ICE                0x459
-#define FLAG_ITEM_ROUTE_103_GUARD_SPEC                              0x45A
+#define FLAG_ITEM_ROUTE_3_MIRACLE_SEED                              0x45A //route 3
 #define FLAG_ITEM_ROUTE_104_X_ACCURACY                              0x45B
 #define FLAG_ITEM_MAUVILLE_CITY_X_SPEED                             0x45C
 #define FLAG_ITEM_PETALBURG_WOODS_PARALYZE_HEAL                     0x45D
@@ -1181,14 +1183,14 @@
 #define FLAG_ITEM_OLD_MAGMA_HIDEOUT_B2F_NEST_BALL                   0x467 // Unused Flag, leftover from the Ruby Magma hideout
 #define FLAG_UNUSED_0x468                                           0x468 // Unused Flag
 #define FLAG_ITEM_MT_PYRE_2F_ULTRA_BALL                             0x469
-#define FLAG_ITEM_MT_PYRE_4F_SEA_INCENSE                            0x46A
+#define FLAG_ITEM_DARK_CAVE_ROCK_INSENCE                            0x46A //dark cave
 #define FLAG_ITEM_SAFARI_ZONE_SOUTH_WEST_MAX_REVIVE                 0x46B
 #define FLAG_ITEM_AQUA_HIDEOUT_B1F_NUGGET                           0x46C
 #define FLAG_ITEM_MOSSDEEP_STEVENS_HOUSE_HM08                       0x46D // Unused Flag, leftover from R/S. HM08 is given to the player directly in Emerald
 #define FLAG_ITEM_ROUTE_119_NUGGET                                  0x46E
 #define FLAG_ITEM_ROUTE_104_POTION                                  0x46F
 #define FLAG_UNUSED_0x470                                           0x470 // Unused Flag
-#define FLAG_ITEM_ROUTE_103_PP_UP                                   0x471
+#define FLAG_ITEM_MH2_PP_UP                                   0x471 // hidden
 #define FLAG_UNUSED_0x472                                           0x472 // Unused Flag
 #define FLAG_ITEM_ROUTE_108_STAR_PIECE                              0x473
 #define FLAG_ITEM_ROUTE_109_POTION                                  0x474
@@ -1218,7 +1220,7 @@
 #define FLAG_ITEM_MAGMA_HIDEOUT_2F_2R_MAX_ELIXIR                    0x48C
 #define FLAG_ITEM_MAGMA_HIDEOUT_2F_2R_FULL_RESTORE                  0x48D
 #define FLAG_ITEM_MAGMA_HIDEOUT_3F_1R_NUGGET                        0x48E
-#define FLAG_ITEM_MAGMA_HIDEOUT_3F_2R_PP_MAX                        0x48F
+#define FLAG_ITEM_DARK_CAVE_B1F_PP_MAX                        0x48F
 #define FLAG_ITEM_MAGMA_HIDEOUT_4F_MAX_REVIVE                       0x490
 #define FLAG_ITEM_SAFARI_ZONE_NORTH_EAST_NUGGET                     0x491
 #define FLAG_ITEM_SAFARI_ZONE_SOUTH_EAST_BIG_PEARL                  0x492
@@ -1305,7 +1307,7 @@
 #define FLAG_INSECT_PLATE_FOUND                                           0x4DF // Found insect plate
 #define FLAG_ROCK_PLATE_FOUND                                           0x4E0 // Found rock plate
 #define FLAG_EARTH_PLATE_FOUND                                           0x4E1 // found earth plate
-#define FLAG_UNUSED_0x4E2                                           0x4E2 // Unused Flag
+#define FLAG_IRON_PLATE_FOUND                                           0x4E2 // found iron plate
 #define FLAG_UNUSED_0x4E3                                           0x4E3 // Unused Flag
 #define FLAG_UNUSED_0x4E4                                           0x4E4 // Unused Flag
 #define FLAG_UNUSED_0x4E5                                           0x4E5 // Unused Flag
@@ -1372,7 +1374,7 @@
 
 // Towns and Cities
 #define FLAG_VISITED_BEDROCK_TOWN                (SYSTEM_FLAGS + 0xF)
-#define FLAG_VISITED_OLDALE_TOWN                    (SYSTEM_FLAGS + 0x10)
+#define FLAG_VISITED_CLAY_HAVEN                    (SYSTEM_FLAGS + 0x10)
 #define FLAG_VISITED_DEWFORD_TOWN                   (SYSTEM_FLAGS + 0x11)
 #define FLAG_VISITED_LAVARIDGE_TOWN                 (SYSTEM_FLAGS + 0x12)
 #define FLAG_VISITED_FALLARBOR_TOWN                 (SYSTEM_FLAGS + 0x13)
@@ -1391,8 +1393,10 @@
 #define FLAG_IS_CHAMPION                            (SYSTEM_FLAGS + 0x1F) // Seems to be related to linking.
 #define FLAG_NURSE_UNION_ROOM_REMINDER              (SYSTEM_FLAGS + 0x20)
 
-#define FLAG_UNUSED_0x881                           (SYSTEM_FLAGS + 0x21) // Unused Flag
-#define FLAG_UNUSED_0x882                           (SYSTEM_FLAGS + 0x22) // Unused Flag
+
+//Items for hm items
+#define FLAG_RECIEVED_SHEARS                           (SYSTEM_FLAGS + 0x21) // Can use cut without HM
+#define FLAG_RECIEVED_PICKAXE                           (SYSTEM_FLAGS + 0x22) // Can use rock smash without HM
 #define FLAG_UNUSED_0x883                           (SYSTEM_FLAGS + 0x23) // Unused Flag
 #define FLAG_UNUSED_0x884                           (SYSTEM_FLAGS + 0x24) // Unused Flag
 #define FLAG_UNUSED_0x885                           (SYSTEM_FLAGS + 0x25) // Unused Flag

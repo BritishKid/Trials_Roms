@@ -18,12 +18,11 @@ GranitePeak_Gym_OnLoad:
 GranitePeak_Gym_EventScript_OpenUnlockedDoors::
 	setvar VAR_0x8005, 1
 	call GranitePeak_Gym_EventScript_OpenGymEntranceDoors
-	call_if_defeated EMBERDUNE_CHARR, GranitePeak_Gym_EventScript_OpenSpeedRoomDoors
-	call_if_defeated TRAINER_MARY, GranitePeak_Gym_EventScript_OpenAccuracyRoomDoors
+	call_if_defeated EMBERDUNE_JORDAN_SECRET_BASE, GranitePeak_Gym_EventScript_OpenSpeedRoomDoors
+	call_if_defeated MEGAMANSION_TRAINER1, GranitePeak_Gym_EventScript_OpenAccuracyRoomDoors
 	call_if_defeated ROUTE9_MATTHEW, GranitePeak_Gym_EventScript_OpenConfusionRoomDoors
-	call_if_defeated TRAINER_ALEXIA, GranitePeak_Gym_EventScript_OpenDefenseRoomDoors
 	call_if_defeated ROUTE9_MATE, GranitePeak_Gym_EventScript_OpenRecoveryRoomDoors
-	call_if_defeated TRAINER_JODY, GranitePeak_Gym_EventScript_OpenStrengthRoomDoors
+	call_if_defeated MEGAMANSION_TRAINER3, GranitePeak_Gym_EventScript_OpenStrengthRoomDoors
 	call_if_defeated ROUTE9_BIDOOFCRAZEDMAN, GranitePeak_Gym_EventScript_OpenOHKORoomDoors
 	end
 
@@ -774,7 +773,7 @@ GranitePeak_Gym_EventScript_AccuracyRoomDoor::
 
 GranitePeak_Gym_EventScript_ConfusionRoomDoor::
 	lockall
-	goto_if_not_defeated EMBERDUNE_CHARR, GranitePeak_Gym_EventScript_DoorLocked
+	goto_if_not_defeated EMBERDUNE_JORDAN_SECRET_BASE, GranitePeak_Gym_EventScript_DoorLocked
 	setvar VAR_0x8008, 7
 	setvar VAR_0x8009, 46
 	msgbox GranitePeak_Gym_Text_EnterConfusionRoom, MSGBOX_YESNO
@@ -784,7 +783,7 @@ GranitePeak_Gym_EventScript_ConfusionRoomDoor::
 
 GranitePeak_Gym_EventScript_LeftDefenseRoomDoor::
 	lockall
-	goto_if_not_defeated EMBERDUNE_CHARR, GranitePeak_Gym_EventScript_DoorLocked
+	goto_if_not_defeated EMBERDUNE_JORDAN_SECRET_BASE, GranitePeak_Gym_EventScript_DoorLocked
 	setvar VAR_0x8008, 1
 	setvar VAR_0x8009, 59
 	msgbox GranitePeak_Gym_Text_EnterDefenseRoom, MSGBOX_YESNO
@@ -794,7 +793,7 @@ GranitePeak_Gym_EventScript_LeftDefenseRoomDoor::
 
 GranitePeak_Gym_EventScript_RightDefenseRoomDoor::
 	lockall
-	goto_if_not_defeated TRAINER_MARY, GranitePeak_Gym_EventScript_DoorLocked
+	goto_if_not_defeated MEGAMANSION_TRAINER1, GranitePeak_Gym_EventScript_DoorLocked
 	setvar VAR_0x8008, 7
 	setvar VAR_0x8009, 59
 	msgbox GranitePeak_Gym_Text_EnterDefenseRoom, MSGBOX_YESNO
@@ -804,7 +803,7 @@ GranitePeak_Gym_EventScript_RightDefenseRoomDoor::
 
 GranitePeak_Gym_EventScript_RecoveryRoomDoor::
 	lockall
-	goto_if_not_defeated TRAINER_MARY, GranitePeak_Gym_EventScript_DoorLocked
+	goto_if_not_defeated MEGAMANSION_TRAINER1, GranitePeak_Gym_EventScript_DoorLocked
 	setvar VAR_0x8008, 1
 	setvar VAR_0x8009, 72
 	msgbox GranitePeak_Gym_Text_EnterRecoveryRoom, MSGBOX_YESNO
@@ -824,7 +823,6 @@ GranitePeak_Gym_EventScript_LeftStrengthRoomDoor::
 
 GranitePeak_Gym_EventScript_RightStrengthRoomDoor::
 	lockall
-	goto_if_not_defeated TRAINER_ALEXIA, GranitePeak_Gym_EventScript_DoorLocked
 	setvar VAR_0x8008, 7
 	setvar VAR_0x8009, 20
 	msgbox GranitePeak_Gym_Text_EnterStrengthRoom, MSGBOX_YESNO
@@ -834,7 +832,6 @@ GranitePeak_Gym_EventScript_RightStrengthRoomDoor::
 
 GranitePeak_Gym_EventScript_LeftOHKORoomDoor::
 	lockall
-	goto_if_not_defeated TRAINER_ALEXIA, GranitePeak_Gym_EventScript_DoorLocked
 	setvar VAR_0x8008, 1
 	setvar VAR_0x8009, 33
 	msgbox GranitePeak_Gym_Text_EnterOHKORoom, MSGBOX_YESNO
@@ -854,7 +851,7 @@ GranitePeak_Gym_EventScript_RightOHKORoomDoor::
 
 GranitePeak_Gym_EventScript_LeftGymLeadersRoomDoor::
 	lockall
-	goto_if_not_defeated TRAINER_JODY, GranitePeak_Gym_EventScript_DoorLocked
+	goto_if_not_defeated MEGAMANSION_TRAINER3, GranitePeak_Gym_EventScript_DoorLocked
 	setvar VAR_0x8008, 1
 	setvar VAR_0x8009, 7
 	msgbox GranitePeak_Gym_Text_EnterGymLeadersRoom, MSGBOX_YESNO
@@ -873,7 +870,7 @@ GranitePeak_Gym_EventScript_RightGymLeadersRoomDoor::
 	end
 
 GranitePeak_Gym_EventScript_Randall::
-	trainerbattle_single EMBERDUNE_CHARR, GranitePeak_Gym_Text_RandallIntro, GranitePeak_Gym_Text_RandallDefeat, GranitePeak_Gym_EventScript_SlideOpenSpeedRoomDoors
+	trainerbattle_single EMBERDUNE_JORDAN_SECRET_BASE, GranitePeak_Gym_Text_RandallIntro, GranitePeak_Gym_Text_RandallDefeat, GranitePeak_Gym_EventScript_SlideOpenSpeedRoomDoors
 	goto_if_set FLAG_DEFEATED_PETALBURG_GYM, GranitePeak_Gym_EventScript_RandallPostBadge
 	msgbox GranitePeak_Gym_Text_RandallPostBattle, MSGBOX_AUTOCLOSE
 	end
@@ -941,7 +938,7 @@ GranitePeak_Gym_EventScript_BerkePostBadge::
 	end
 
 GranitePeak_Gym_EventScript_Mary::
-	trainerbattle_single TRAINER_MARY, GranitePeak_Gym_Text_MaryIntro, GranitePeak_Gym_Text_MaryDefeat, GranitePeak_Gym_EventScript_SlideOpenAccuracyRoomDoors
+	trainerbattle_single MEGAMANSION_TRAINER1, GranitePeak_Gym_Text_MaryIntro, GranitePeak_Gym_Text_MaryDefeat, GranitePeak_Gym_EventScript_SlideOpenAccuracyRoomDoors
 	goto_if_set FLAG_DEFEATED_PETALBURG_GYM, GranitePeak_Gym_EventScript_MaryPostBadge
 	msgbox GranitePeak_Gym_Text_MaryPostBattle, MSGBOX_AUTOCLOSE
 	end
@@ -958,8 +955,6 @@ GranitePeak_Gym_EventScript_MaryPostBadge::
 	end
 
 GranitePeak_Gym_EventScript_Alexia::
-	trainerbattle_single TRAINER_ALEXIA, GranitePeak_Gym_Text_AlexiaIntro, GranitePeak_Gym_Text_AlexiaDefeat, GranitePeak_Gym_EventScript_SlideOpenDefenseRoomDoors
-	goto_if_set FLAG_DEFEATED_PETALBURG_GYM, GranitePeak_Gym_EventScript_AlexiaPostBadge
 	msgbox GranitePeak_Gym_Text_AlexiaPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -975,7 +970,7 @@ GranitePeak_Gym_EventScript_AlexiaPostBadge::
 	end
 
 GranitePeak_Gym_EventScript_Jody::
-	trainerbattle_single TRAINER_JODY, GranitePeak_Gym_Text_JodyIntro, GranitePeak_Gym_Text_JodyDefeat, GranitePeak_Gym_EventScript_SlideOpenStrengthRoomDoors
+	trainerbattle_single MEGAMANSION_TRAINER3, GranitePeak_Gym_Text_JodyIntro, GranitePeak_Gym_Text_JodyDefeat, GranitePeak_Gym_EventScript_SlideOpenStrengthRoomDoors
 	goto_if_set FLAG_DEFEATED_PETALBURG_GYM, GranitePeak_Gym_EventScript_JodyPostBadge
 	msgbox GranitePeak_Gym_Text_JodyPostBattle, MSGBOX_AUTOCLOSE
 	end

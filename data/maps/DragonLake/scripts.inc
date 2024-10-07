@@ -13,6 +13,12 @@ DragonLake_MapScripts_MAP_SCRIPT_ON_TRANSITION_1:
 	return
 
 
+DragonLake_Camper::
+	trainerbattle_single DRAGONLAKE_CAMPER, DragonLake_Camper_Intro, DragonLake_Camper_Outro, Increase_Trainers_Beaten
+	msgbox DragonLake_Camper_PostBattle, MSGBOX_AUTOCLOSE
+	end
+
+
 Salt7_MeetingRedGyrados::
 	lock
 	faceplayer
@@ -24,11 +30,12 @@ Salt7_MeetingRedGyrados::
 	applymovement 2, Movement_RedGyrados
 	waitmovement 2
 	msgbox Salt7_MeetingRedGyrados_Text_3
-	setflag FLAG_FORCE_SHINY
+	setflag P_FLAG_FORCE_SHINY
 	special StartRedGyradosEncounter
-	clearflag FLAG_FORCE_SHINY
+	clearflag P_FLAG_FORCE_SHINY
 	removeobject 2
 	setvar VAR_SALTS7_QUEST_STATE, 3
+	subquestmenu QUEST_MENU_COMPLETE_QUEST, QUEST_POKEMON_LEAGUE, SUB_QUEST_SALT_RED_GYRADOS
 	msgbox Salt7_MeetingRedGyrados_Text_4
 	msgbox Salt7_MeetingRedGyrados_Text_5
 	msgbox Salt7_MeetingRedGyrados_Text_6
@@ -38,6 +45,49 @@ Salt7_MeetingRedGyrados::
 	waitmovement 1
 	removeobject 1
 	release
+	return
+
+
+GiantGyradosScript::
+	lockall
+	questmenu QUEST_MENU_CHECK_ACTIVE, QUEST_GIANT_FISH
+	compare VAR_RESULT, 0
+	goto_if_ne GiantGyradosScript_4
+GiantGyradosScript_3:
+	msgbox GiantGyradosScript_Text_3
+GiantGyradosScript_1:
+	releaseall
+	return
+
+GiantGyradosScript_2:
+	msgbox GiantGyradosScript_Text_0, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq GiantGyradosScript_7
+	end
+
+GiantGyradosScript_4:
+	goto_if_unset FLAG_GIANT_GYRADOS_BEATEN, GiantGyradosScript_2
+	goto GiantGyradosScript_3
+
+GiantGyradosScript_7:
+	setflag FLAG_CANT_CATCH_MON
+	setflag FLAG_CANNOT_RUN_FROM_BATTLE
+	msgbox GiantGyradosScript_Text_1
+	settotemboost 1, 1, 1, 1, 0, 1, 0, 0
+	setwildbattle SPECIES_GYARADOS, 35, ITEM_WACAN_BERRY
+	dowildbattle
+	subquestmenu QUEST_MENU_COMPLETE_QUEST, QUEST_POKEMON_LEAGUE, SUB_QUEST_GIANT_FISH_1
+	msgbox GiantGyradosScript_Text_2
+	giveitem ITEM_DRAGON_SCALE
+	playfanfare MUS_OBTAIN_ITEM
+	setflag FLAG_GIANT_GYRADOS_BEATEN
+	clearflag FLAG_CANT_CATCH_MON
+	clearflag FLAG_CANNOT_RUN_FROM_BATTLE
+	goto GiantGyradosScript_1
+
+
+DragonLake_ItemBall_TM09::
+	finditem ITEM_TM09
 	return
 
 
@@ -96,3 +146,30 @@ Salt7_MeetingRedGyrados_Text_5:
 
 Salt7_MeetingRedGyrados_Text_6:
 	.string "See you next time!$"
+
+GiantGyradosScript_Text_0:
+	.string "You see a giant Pokémon swimming under\n"
+	.string "the surface, do you want to attempt to\l"
+	.string "catch it?$"
+
+GiantGyradosScript_Text_1:
+	.string "It leaps out at you$"
+
+GiantGyradosScript_Text_2:
+	.string "The Gyrados flees and leaves something\n"
+	.string "behind$"
+
+GiantGyradosScript_Text_3:
+	.string "You see a giant Pokémon swimming under\n"
+	.string "the surface$"
+
+DragonLake_Camper_Intro::
+	.string "Lots of rare Pokemon can be found\n"
+	.string "around here$"
+
+DragonLake_Camper_Outro::
+	.string "Have you already caught them?$"
+
+DragonLake_Camper_PostBattle::
+	.string "I'm sure if I find the original dragon\n"
+	.string "I'll be able to beat you$"

@@ -50,7 +50,7 @@
 #define MAX_STREAK 9999
 
 //todo rename this flag
-#define FRONTIER_MAX_LEVEL_50   22 //Lowered from 50 to 22 for trainer school
+#define FRONTIER_MAX_LEVEL_50   1 //Set to a var to control
 #define FRONTIER_MIN_LEVEL_OPEN 60
 #define FRONTIER_MAX_LEVEL_OPEN MAX_LEVEL
 

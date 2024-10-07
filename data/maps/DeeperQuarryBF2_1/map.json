@@ -1,0 +1,48 @@
+{
+  "id": "MAP_DEEPER_QUARRY_BF2_1",
+  "name": "DeeperQuarryBF2_1",
+  "layout": "LAYOUT_DEEPER_QUARRY_BF2_1",
+  "music": "MUS_MT_CHIMNEY",
+  "region_map_section": "MAPSEC_PATTERN_BUSH",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_UNDERGROUND",
+  "allow_cycling": true,
+  "allow_escaping": true,
+  "allow_running": true,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": 0,
+  "object_events": [
+
+  ],
+  "warp_events": [
+    {
+      "x": 7,
+      "y": 3,
+      "elevation": 0,
+      "dest_map": "MAP_DEEPER_QUARRY_GF_1",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 14,
+      "y": 35,
+      "elevation": 0,
+      "dest_map": "MAP_DEEPER_QUARRY_END",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 14,
+      "y": 26,
+      "elevation": 0,
+      "dest_map": "MAP_DEEPER_QUARRY_GF_1",
+      "dest_warp_id": "2"
+    }
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ]
+}

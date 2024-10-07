@@ -17,4 +17,4 @@ SandyCliffColin_Outro::
 
 PostBattle_SandyCliffColin::
 	.string "I'm always hunting for new and stronger\n"
-	.string "fossil pokemon.$"
+	.string "fossil Pokémon.$"

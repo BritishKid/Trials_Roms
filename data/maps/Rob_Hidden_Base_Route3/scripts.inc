@@ -11,6 +11,7 @@ FrontPageRob_Hidden_Base_EventScript_PC::
 
 FrontPageRob_Hidden_Base_EventScript_Find_MagnemiteDoll::
 	lockall
+	faceplayer
 	goto_if_unset FLAG_HIDDEN_BASE_COLLECTABLE_FOUND_MUDKIP, FrontPageRob_Hidden_Base_EventScript_Find_MagnemiteDoll_2
 	msgbox FrontPageRob_Hidden_Base_EventScript_Find_MagnemiteDoll_Text_0
 FrontPageRob_Hidden_Base_EventScript_Find_MagnemiteDoll_1:
@@ -21,6 +22,7 @@ FrontPageRob_Hidden_Base_EventScript_Find_MagnemiteDoll_2:
 	msgbox FrontPageRob_Hidden_Base_EventScript_Find_MagnemiteDoll_Text_0
 	adddecoration DECOR_MUDKIP_DOLL
 	setflag FLAG_HIDDEN_BASE_COLLECTABLE_FOUND_MUDKIP
+	subquestmenu QUEST_MENU_COMPLETE_QUEST, QUEST_POKEMON_LEAGUE, SUB_QUEST_MUDKIP_DOLL
 	msgbox FrontPageRob_Hidden_Base_EventScript_Find_MagnemiteDoll_Text_1
 	goto FrontPageRob_Hidden_Base_EventScript_Find_MagnemiteDoll_1
 
@@ -92,7 +94,7 @@ Rob_GivesHonege_2:
 
 FrontPageRob_Hidden_Base_EventScript_PC_Text_0:
 	.string "Thank you to FrontPageRob for the\n"
-	.string "support making this game!$"
+	.string "support in making this game!$"
 
 FrontPageRob_Hidden_Base_EventScript_Find_MagnemiteDoll_Text_0:
 	.string "It's FrontPageRob's Mudkip Doll$"
@@ -109,13 +111,16 @@ Rob_GivesHonege_Text_1:
 	.string "and you get it soon.$"
 
 FrontPageRob_Intro::
-	.string "$"
+	.string "Physics puns are no joke. It's a\n"
+	.string "relatively dark matter$"
 
 FrontPageRob_Outro::
-	.string "$"
+	.string "Clearly I've been studying frequency\n"
+	.string "too much, now my brain Hertz$"
 
 PostBattle_FrontPageRob::
 	.string "$"
 
 Beat_FrontPageRob::
-	.string "You're incredible here have a sword$"
+	.string "Well that didn't go right. Here take this\n"
+	.string "sword I found$"

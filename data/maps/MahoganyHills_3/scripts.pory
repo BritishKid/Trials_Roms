@@ -13,7 +13,7 @@ script MahoganyHills3_EventScript_Darwin {
             msgbox(format("Oh that's a shame. They are just fantastic."))
         }
     } else {
-        msgbox(format("Come find me and I'll revive that fossil for you."))
+        msgbox(format("Come find me at my lab in Lilycove and I'll revive that fossil for you."))
     }
     releaseall
 }

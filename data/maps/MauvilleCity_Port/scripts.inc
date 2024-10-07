@@ -45,6 +45,7 @@ Thug_Port_Boss_Beaten::
 	setvar VAR_THUG_TOWN_STATE, 3
 	setflag FLAG_COAST_TOWN_SAVED
 	clearflag FLAG_HIDE_THUG_TOWN
+	questmenu QUEST_MENU_COMPLETE_QUEST, QUEST_THUG_TOWN
 	return
 
 

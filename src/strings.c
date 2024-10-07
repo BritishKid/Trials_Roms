@@ -1844,6 +1844,12 @@ const u8 gText_CalmMint[] = _("CALM MINT");
 const u8 gText_TimidMint[] = _("TIMID MINT");
 const u8 gText_JollyMint[] = _("JOLLY MINT");
 
+//starter options 
+const u8 gText_Starter1[] = _("TOTODILE");
+const u8 gText_Starter2[] = _("CHIKORITA");
+const u8 gText_Starter3[] = _("CYNDAQUIL");
+
+
 //// side quest data
 //generic strings
 const u8 gText_QuestAnnounce[] = _("The quest '{STR_VAR_1}'\nis now {STR_VAR_2}.");
@@ -1862,7 +1868,7 @@ const u8 gText_SideQuestName_8[] = _("Waterfall Dojo");
 const u8 gText_SideQuestName_9[] = _("Trainer School Tournament");
 const u8 gText_SideQuestName_10[] = _("Evolution Stones Market");
 const u8 gText_SideQuestName_11[] = _("Finding your plaice");
-const u8 gText_SideQuestName_12[] = _("Side Quest 12");
+const u8 gText_SideQuestName_12[] = _("The trees are alive");
 const u8 gText_SideQuestName_13[] = _("Side Quest 13");
 const u8 gText_SideQuestName_14[] = _("Side Quest 14");
 const u8 gText_SideQuestName_15[] = _("Side Quest 15");
@@ -1897,7 +1903,7 @@ const u8 gText_SideQuestDesc_8[] = _("Investigate a hidden Dojo");
 const u8 gText_SideQuestDesc_9[] = _("Take part in the Trainer School Tournament");
 const u8 gText_SideQuestDesc_10[] = _("Find the source of evolution stones");
 const u8 gText_SideQuestDesc_11[] = _("Impress the fisherman");
-const u8 gText_SideQuestDesc_12[] = _("Description 12");
+const u8 gText_SideQuestDesc_12[] = _("Help the young girl find\nher favourite Pokemon");
 const u8 gText_SideQuestDesc_13[] = _("Description 13");
 const u8 gText_SideQuestDesc_14[] = _("Description 14");
 const u8 gText_SideQuestDesc_15[] = _("Description 15");
@@ -1929,7 +1935,7 @@ const u8 gText_SideQuestDoneDesc_8[] = _("You beat the Water Dojo\nand got a Tyr
 const u8 gText_SideQuestDoneDesc_9[] = _("You won the Trainer School Tournament");
 const u8 gText_SideQuestDoneDesc_10[] = _("Found the source of all evolution stones");
 const u8 gText_SideQuestDoneDesc_11[] = _("You have impressed the fisherman");
-const u8 gText_SideQuestDoneDesc_12[] = _("Completed Quest 12");
+const u8 gText_SideQuestDoneDesc_12[] = _("You found a Treecko");
 const u8 gText_SideQuestDoneDesc_13[] = _("Completed Quest 13");
 const u8 gText_SideQuestDoneDesc_14[] = _("Completed Quest 14");
 const u8 gText_SideQuestDoneDesc_15[] = _("Completed Quest 15");
@@ -1954,14 +1960,14 @@ const u8 gText_SideQuestMap1[] = _("Grand Plateau");
 const u8 gText_SideQuestMap2[] = _("Triver");
 const u8 gText_SideQuestMap3[] = _("Clay Haven");
 const u8 gText_SideQuestMap4[] = _("Route 1");
-const u8 gText_SideQuestMap5[] = _("Map 5");
+const u8 gText_SideQuestMap5[] = _("Granite Peak");
 const u8 gText_SideQuestMap6[] = _("Hall Of Origin"); //placeholder till we
-const u8 gText_SideQuestMap7[] = _("Mavuille"); //placeholder
+const u8 gText_SideQuestMap7[] = _("Ocean Cliff"); //placeholder
 const u8 gText_SideQuestMap8[] = _("Route 4");
 const u8 gText_SideQuestMap9[] = _("Granite Peak");
-const u8 gText_SideQuestMap10[] = _("Fortree City"); //placehholder
-const u8 gText_SideQuestMap11[] = _("Fortree City"); //rename to correct city when decided 
-const u8 gText_SideQuestMap12[] = _("Map 12");
+const u8 gText_SideQuestMap10[] = _("Coral Port"); //placehholder
+const u8 gText_SideQuestMap11[] = _("Coral Port"); 
+const u8 gText_SideQuestMap12[] = _("Hemlock Town");
 const u8 gText_SideQuestMap13[] = _("Map 13");
 const u8 gText_SideQuestMap14[] = _("Map 14");
 const u8 gText_SideQuestMap15[] = _("Map 15");
@@ -1996,9 +2002,9 @@ const u8 gText_SubQuest1_Name10[] = _("Champion Rank");
 const u8 gText_SubQuest2_Name1[] = _("Chikorita Doll");
 const u8 gText_SubQuest2_Name2[] = _("Gulpin Doll");
 const u8 gText_SubQuest2_Name3[] = _("Mudkip Doll");
-const u8 gText_SubQuest2_Name4[] = _("Part 4");
-const u8 gText_SubQuest2_Name5[] = _("Part 5");
-const u8 gText_SubQuest2_Name6[] = _("Part 6");
+const u8 gText_SubQuest2_Name4[] = _("Lotad Doll");
+const u8 gText_SubQuest2_Name5[] = _("Meowth Doll");
+const u8 gText_SubQuest2_Name6[] = _("Swablu Doll");
 const u8 gText_SubQuest2_Name7[] = _("Part 7");
 const u8 gText_SubQuest2_Name8[] = _("Part 8");
 const u8 gText_SubQuest2_Name9[] = _("Part 9");
@@ -2028,9 +2034,9 @@ const u8 gText_SubQuest1_Desc10[] = _("You defeated Grand Champion to get the \n
 const u8 gText_SubQuest2_Desc1[] = _("You found the hidden\nChikorita Doll");
 const u8 gText_SubQuest2_Desc2[] = _("You found the hidden\nGulpin Doll");
 const u8 gText_SubQuest2_Desc3[] = _("You found the hidden\nMudkip Doll");
-const u8 gText_SubQuest2_Desc4[] = _("You found the hidden\nN/A Doll");
-const u8 gText_SubQuest2_Desc5[] = _("You found the hidden\nN/A Doll");
-const u8 gText_SubQuest2_Desc6[] = _("Description Sub 6");
+const u8 gText_SubQuest2_Desc4[] = _("You found the hidden\nLotad Doll");
+const u8 gText_SubQuest2_Desc5[] = _("You found the hidden\nMeowth Doll");
+const u8 gText_SubQuest2_Desc6[] = _("You found the hidden\nSwablo Doll");
 const u8 gText_SubQuest2_Desc7[] = _("Description Sub 7");
 const u8 gText_SubQuest2_Desc8[] = _("Description Sub 8");
 const u8 gText_SubQuest2_Desc9[] = _("Description Sub 9");
@@ -2060,12 +2066,16 @@ const u8 gText_SubQuest1_SubMap10[] = _("TBD");
 const u8 gText_SubQuest2_SubMap1[] = _("N/A");
 const u8 gText_SubQuest2_SubMap2[] = _("Route 1");
 const u8 gText_SubQuest2_SubMap3[] = _("Route 3");
+const u8 gText_SubQuest2_SubMap4[] = _("Mahogany Hills");
+const u8 gText_SubQuest2_SubMap5[] = _("Route 8");
+const u8 gText_SubQuest2_SubMap6[] = _("Victory Road");
+
 
 //salts quest text
 const u8 gText_SubQuest4_Name1[] = _("Meeting Salt7");
 const u8 gText_SubQuest4_Name2[] = _("Evolving Magikarp");
 const u8 gText_SubQuest4_Name3[] = _("Encountering Red Gyrados");
-const u8 gText_SubQuest4_Name4[] = _("TBD");
+const u8 gText_SubQuest4_Name4[] = _("Salts7 Rainbow Gyrados");
 const u8 gText_SubQuest4_Name5[] = _("TBD");
 
 const u8 gText_SubQuest9_Name1[] = _("Evolution Class");
@@ -2076,10 +2086,13 @@ const u8 gText_SubQuest9_Name5[] = _("Trainer School Tournament");
 
 const u8 gText_SubQuest4_SubMap1[] = _("Route 1");
 const u8 gText_SubQuest4_SubMap2[] = _("Route 5");
+const u8 gText_SubQuest4_SubMap3[] = _("Dragon Lake");
+const u8 gText_SubQuest4_SubMap4[] = _("Quarry");
 
 const u8 gText_SubQuest4_Desc1[] = _("You met Salts7\nHe really loves Gyrados");
 const u8 gText_SubQuest4_Desc2[] = _("Salts7 has been using the waterfall in\nRoute 4 to evolve his Pokemon");
 const u8 gText_SubQuest4_Desc3[] = _("Salts7 Caught a Red Gyrados!\nIt was so awesome!");
+const u8 gText_SubQuest4_Desc4[] = _("Salts7 showed me all his new Gyrados!");
 
 const u8 gText_SubQuest9_Desc1[] = _("You obtained the Evolution Patch");
 const u8 gText_SubQuest9_Desc2[] = _("You obtained the Ability Patch");
@@ -2174,8 +2187,8 @@ const u8 gText_SubQuest10_SubMap2[] = _("Granite Peak");
 const u8 gText_SubQuest10_SubMap4[] = _("Flower Glade");
 
 //giant fish
-const u8 gText_SubQuest11_Name1[] = _("Giant POKEMON");
-const u8 gText_SubQuest11_Name2[] = _("Giant POKEMON");
+const u8 gText_SubQuest11_Name1[] = _("Giant Gyrados");
+const u8 gText_SubQuest11_Name2[] = _("Giant Azumarill");
 const u8 gText_SubQuest11_Name3[] = _("Giant POKEMON");
 const u8 gText_SubQuest11_Name4[] = _("Giant POKEMON");
 const u8 gText_SubQuest11_Name5[] = _("Giant POKEMON");
@@ -2183,8 +2196,8 @@ const u8 gText_SubQuest11_Name6[] = _("Giant POKEMON");
 const u8 gText_SubQuest11_Name7[] = _("Giant POKEMON");
 const u8 gText_SubQuest11_Name8[] = _("Giant POKEMON");
 
-const u8 gText_SubQuest11_Desc1[] = _("You defeated the giant POKEMON");
-const u8 gText_SubQuest11_Desc2[] = _("You defeated the giant POKEMON");
+const u8 gText_SubQuest11_Desc1[] = _("You defeated the giant Gyrados");
+const u8 gText_SubQuest11_Desc2[] = _("You defeated the giant Azumarill");
 const u8 gText_SubQuest11_Desc3[] = _("You defeated the giant POKEMON");
 const u8 gText_SubQuest11_Desc4[] = _("You defeated the giant POKEMON");
 const u8 gText_SubQuest11_Desc5[] = _("You defeated the giant POKEMON");
@@ -2192,8 +2205,8 @@ const u8 gText_SubQuest11_Desc6[] = _("You defeated the giant POKEMON");
 const u8 gText_SubQuest11_Desc7[] = _("You defeated the giant POKEMON");
 const u8 gText_SubQuest11_Desc8[] = _("You defeated the giant POKEMON");
 
-const u8 gText_SubQuest11_SubMap1[] = _("TBD");
-const u8 gText_SubQuest11_SubMap2[] = _("TBD");
+const u8 gText_SubQuest11_SubMap1[] = _("Dragon Lake");
+const u8 gText_SubQuest11_SubMap2[] = _("Route 1");
 const u8 gText_SubQuest11_SubMap3[] = _("TBD");
 const u8 gText_SubQuest11_SubMap4[] = _("TBD");
 const u8 gText_SubQuest11_SubMap5[] = _("TBD");

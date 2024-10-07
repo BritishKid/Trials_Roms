@@ -1,0 +1,9 @@
+mapscripts GranitePeak_Dojo1_MapScripts {}
+
+script GranitePeak_Dojo1_Expert {
+    lockall
+    faceplayer
+    msgbox(format("Welcome to my Dojo"))
+    msgbox(format("COMING SOON"))
+    releaseall
+}

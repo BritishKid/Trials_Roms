@@ -3,10 +3,11 @@ mapscripts LostPlates_MapScripts {}
 script InsectPlate_Altar {
     lock
     if(!flag(FLAG_INSECT_PLATE_FOUND)) {
-        msgbox(format("There is a plate with an ancient bug pokemon inscribed on it"))
+        msgbox(format("There is a plate with an ancient bug Pokémon inscribed on it"))
         msgbox(format("Do you want to take it?"), MSGBOX_YESNO)
         if(var(VAR_RESULT) == YES) {
-            msgbox(format("As you reach for the plate A giant Pokemon jumps out"))
+            msgbox(format("As you reach for the plate A giant Pokémon jumps out"))
+            setflag(FLAG_CANT_CATCH_MON)
             settotemboost(1, 0, 1, 1, 0, 1, 0, 0)
             setwildbattle(SPECIES_ACCELGOR, 40, ITEM_INSECT_PLATE)
             call(StartPlateBattle)
@@ -15,11 +16,13 @@ script InsectPlate_Altar {
             giveitem(ITEM_INSECT_PLATE)
             playfanfare(MUS_OBTAIN_ITEM)
             setflag(FLAG_INSECT_PLATE_FOUND)
-            // subquestmenu(QUEST_MENU_COMPLETE_QUEST, QUEST_POKEMON_LEAGUE, SUB_QUEST_INSECT_PLATE)
+            clearflag(FLAG_CANT_CATCH_MON)
+            call(IncrementNumber_PlatesFound)
+            subquestmenu(QUEST_MENU_COMPLETE_QUEST, QUEST_POKEMON_LEAGUE, SUB_QUEST_INSECT_PLATE)
         }
     }
     if(flag(FLAG_INSECT_PLATE_FOUND)) {
-        msgbox(format("You already have the insect plate"))//todo do more
+        msgbox(format("You already have the insect plate"))
     }
     release
 }
@@ -27,10 +30,11 @@ script InsectPlate_Altar {
 script StonePlate_Altar {
     lock
     if(!flag(FLAG_ROCK_PLATE_FOUND)) {
-        msgbox(format("There is a plate with an ancient rock pokemon inscribed on it"))
+        msgbox(format("There is a plate with an ancient rock Pokémon inscribed on it"))
         msgbox(format("Do you want to take it?"), MSGBOX_YESNO)
         if(var(VAR_RESULT) == YES) {
-            msgbox(format("As you reach for the plate A giant Pokemon jumps out"))
+            msgbox(format("As you reach for the plate A giant Pokémon jumps out"))
+            setflag(FLAG_CANT_CATCH_MON)
             settotemboost(1, 1, 1, 1, 0, 1, 0, 0)
             setwildbattle(SPECIES_GIGALITH, 40, ITEM_STONE_PLATE)
             call(StartPlateBattle)
@@ -39,11 +43,13 @@ script StonePlate_Altar {
             giveitem(ITEM_STONE_PLATE)
             playfanfare(MUS_OBTAIN_ITEM)
             setflag(FLAG_ROCK_PLATE_FOUND)
-            // subquestmenu(QUEST_MENU_COMPLETE_QUEST, QUEST_POKEMON_LEAGUE, SUB_QUEST_STONE_PLATE)
+            clearflag(FLAG_CANT_CATCH_MON)
+            call(IncrementNumber_PlatesFound)
+            subquestmenu(QUEST_MENU_COMPLETE_QUEST, QUEST_POKEMON_LEAGUE, SUB_QUEST_STONE_PLATE)
         }
     }
     if(flag(FLAG_ROCK_PLATE_FOUND)) {
-        msgbox(format("You already have the stone plate"))//todo do more
+        msgbox(format("You already have the stone plate"))
     }
     release
 }
@@ -51,10 +57,11 @@ script StonePlate_Altar {
 script EarthPlate_Altar {
     lock
     if(!flag(FLAG_ROCK_PLATE_FOUND)) {
-        msgbox(format("There is a plate with an ancient ground pokemon inscribed on it"))
+        msgbox(format("There is a plate with an ancient ground Pokémon inscribed on it"))
         msgbox(format("Do you want to take it?"), MSGBOX_YESNO)
         if(var(VAR_RESULT) == YES) {
-            msgbox(format("As you reach for the plate A giant Pokemon jumps out"))
+            msgbox(format("As you reach for the plate A giant Pokémon jumps out"))
+            setflag(FLAG_CANT_CATCH_MON)
             settotemboost(1, 1, 1, 1, 0, 1, 0, 0)
             setwildbattle(SPECIES_HIPPOWDON, 40, ITEM_EARTH_PLATE)
             call(StartPlateBattle)
@@ -63,14 +70,108 @@ script EarthPlate_Altar {
             giveitem(ITEM_EARTH_PLATE)
             playfanfare(MUS_OBTAIN_ITEM)
             setflag(FLAG_EARTH_PLATE_FOUND)
-            // subquestmenu(QUEST_MENU_COMPLETE_QUEST, QUEST_POKEMON_LEAGUE, SUB_QUEST_EARTH_PLATE)
+            clearflag(FLAG_CANT_CATCH_MON)
+            call(IncrementNumber_PlatesFound)
+            subquestmenu(QUEST_MENU_COMPLETE_QUEST, QUEST_POKEMON_LEAGUE, SUB_QUEST_EARTH_PLATE)
         }
     }
     if(flag(FLAG_ROCK_PLATE_FOUND)) {
-        msgbox(format("You already have the earth plate"))//todo do more
+        msgbox(format("You already have the earth plate"))
     }
     release
 }
+
+
+script IronPlate_Altar {
+    lock
+    if(!flag(FLAG_IRON_PLATE_FOUND)) {
+        msgbox(format("There is a plate with an ancient steel Pokémon inscribed on it"))
+        msgbox(format("Do you want to take it?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES) {
+            msgbox(format("As you reach for the plate A giant Pokémon jumps out"))
+            setflag(FLAG_CANT_CATCH_MON)
+            settotemboost(1, 1, 1, 1, 1, 1, 0, 0)
+            setwildbattle(SPECIES_KLINKLANG, 40, ITEM_IRON_PLATE)
+            call(StartPlateBattle)
+            msgbox(format("Klinklang retreats into the cave."))
+            msgbox(format("You pick up the Iron Plate"))
+            giveitem(ITEM_IRON_PLATE)
+            playfanfare(MUS_OBTAIN_ITEM)
+            setflag(FLAG_IRON_PLATE_FOUND)
+            clearflag(FLAG_CANT_CATCH_MON)
+            call(IncrementNumber_PlatesFound)
+            subquestmenu(QUEST_MENU_COMPLETE_QUEST, QUEST_POKEMON_LEAGUE, SUB_QUEST_IRON_PLATE)
+        }
+    }
+    if(flag(FLAG_IRON_PLATE_FOUND)) {
+        msgbox(format("You already have the Iron Plate"))
+    }
+    release
+}
+
 script StartPlateBattle {
     dowildbattle
+}
+
+script IncrementNumber_PlatesFound {
+    if (var(VAR_PLATES_FOUND) == 19) {
+        setvar(VAR_PLATES_FOUND, 20)
+    }
+    if (var(VAR_PLATES_FOUND) == 18) {
+        setvar(VAR_PLATES_FOUND, 19)
+    }
+    if (var(VAR_PLATES_FOUND) == 17) {
+        setvar(VAR_PLATES_FOUND, 18)
+    }
+    if (var(VAR_PLATES_FOUND) == 16) {
+        setvar(VAR_PLATES_FOUND, 17)
+    }
+    if (var(VAR_PLATES_FOUND) == 15) {
+        setvar(VAR_PLATES_FOUND, 16)
+    }
+    if (var(VAR_PLATES_FOUND) == 14) {
+        setvar(VAR_PLATES_FOUND, 15)
+    }
+    if (var(VAR_PLATES_FOUND) == 13) {
+        setvar(VAR_PLATES_FOUND, 14)
+    }
+    if (var(VAR_PLATES_FOUND) == 12) {
+        setvar(VAR_PLATES_FOUND, 13)
+    }
+    if (var(VAR_PLATES_FOUND) == 11) {
+        setvar(VAR_PLATES_FOUND, 12)
+    }
+    if (var(VAR_PLATES_FOUND) == 10) {
+        setvar(VAR_PLATES_FOUND, 11)
+    }
+    if (var(VAR_PLATES_FOUND) == 9) {
+        setvar(VAR_PLATES_FOUND, 10)
+    }
+    if (var(VAR_PLATES_FOUND) == 8) {
+        setvar(VAR_PLATES_FOUND, 9)
+    }
+    if (var(VAR_PLATES_FOUND) == 7) {
+        setvar(VAR_PLATES_FOUND, 8)
+    }
+    if (var(VAR_PLATES_FOUND) == 6) {
+        setvar(VAR_PLATES_FOUND, 7)
+    }
+    if (var(VAR_PLATES_FOUND) == 5) {
+        setvar(VAR_PLATES_FOUND, 6)
+    }
+    if (var(VAR_PLATES_FOUND) == 4) {
+        setvar(VAR_PLATES_FOUND, 5)
+    }
+    if (var(VAR_PLATES_FOUND) == 3) {
+        setvar(VAR_PLATES_FOUND, 4)
+    }
+    if (var(VAR_PLATES_FOUND) == 2) {
+        setvar(VAR_PLATES_FOUND, 3)
+    }
+    if (var(VAR_PLATES_FOUND) == 1) {
+        setvar(VAR_PLATES_FOUND, 2)
+    }
+    if (var(VAR_PLATES_FOUND) == 0) {
+        setvar(VAR_PLATES_FOUND, 1)
+    }
 }

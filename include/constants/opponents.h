@@ -19,7 +19,7 @@
 #define MAHOGANYHILLSGYM_TRAINER_SKYE        15  //custom trainer in mh
 #define MAHOGANYHILLSGYM_TRAINER_WRIGHT      16 //Custom trainer in mh gym
 #define TRAINER_ROUTE2_GENKI                 17 // Trainer Genki route 2
-#define TRAINER_ROUTE2_ROBERT                18  //Custom first time battling Robert in Route 2
+#define TRAINER_FIRST_ENCOUNTER_ROBERT                18  //Custom first time battling Robert in Route 2
 #define TRAINER_FRONTPAGEROB_SECRET_BASE     19 //Custom trainer at top of route 3 hidden base 
 #define WIBBLYWOBBLY_BATTLE                  20 //Custom Trainer Wibbly Wobbly on beach
 #define ROUTE4_BUGCATCHER                    21 //Custom trainer blocking berries in route 4
@@ -57,7 +57,7 @@
 #define GYM_XP_DUMP               53 //fast xp
 #define TRAINER_ROUTE7b_RACHEL               54 //warning trainer on route 7b
 #define EMBERDUNE_CONOR               55 //conor in ember dunes
-#define TRAINER_RIVAL_ROUTE9               56 //Route 9 Rival
+#define TRAINER_RIVAL_ROUTE8_MEGANIUM               56 //Route 8 rival fight when you choose water type
 #define TRAINER_WATERFALL_CAVE_BLACKBELT_1                       57 //blackbelt 1 in waterfall cave
 #define TRAINER_WATERFALL_CAVE_BLACKBELT_2                      58 //waterfall cave 3rd fight fight
 #define TRAINER_WATERFALL_CAVE_BLACKBELT_3                         59 //waterfall cave second fight
@@ -72,7 +72,7 @@
 #define ROUTE4_ODA_BLACKBELT                      68 //route 4 blackebelt
 #define EMBERDUNE_MANIAC                      69 //trainer blocking regirock route
 #define EMBERDUNE_JORDAN                      70 //trainer blocking the exit of emberdune 
-#define EMBERDUNE_CHARR                      71 //trainer blocking the exit of emberdunec double battle
+#define EMBERDUNE_JORDAN_SECRET_BASE                      71 //trainer blocking the exit of emberdunec double battle
 #define ROUTE9_MATTHEW                       72 //custom ttrainer on route 9
 #define ROUTE9_MATE                       73 //custom trainer route 9
 #define ROUTE9_BIDOOFCRAZEDMAN                        74 //custom bidoof trainer route 9
@@ -81,26 +81,26 @@
 #define TRAINER_TRAINER1_GYM4                        77 // gym 4 trainer 1
 #define TRAINER_AY_GYM4                     78 //gym 4 trainer Ay
 #define TRAINER_OLLIE_GYM4                        79 //gym 4 ollie fight
-#define TRAINER_ALBERT                       80
-#define TRAINER_SAMUEL                       81
-#define TRAINER_VITO                         82
-#define TRAINER_OWEN                         83
-#define TRAINER_WILTON_2                     84
-#define TRAINER_WILTON_3                     85
-#define TRAINER_WILTON_4                     86
-#define TRAINER_WILTON_5                     87
-#define TRAINER_WARREN                       88
-#define TRAINER_MARY                         89
-#define TRAINER_ALEXIA                       90
-#define TRAINER_JODY                         91
-#define TRAINER_WENDY                        92
-#define TRAINER_KEIRA                        93
-#define TRAINER_BROOKE_1                     94
-#define TRAINER_JENNIFER                     95
-#define TRAINER_HOPE                         96
-#define TRAINER_SHANNON                      97
-#define TRAINER_MICHELLE                     98
-#define TRAINER_CAROLINE                     99
+#define TRAINER_RIVAL_ROUTE8_FERALIGATOR                       80 //rival if you choose fire starter found on route 8
+#define TRAINER_RIVAL_ROUTE8_TYPHLOSION                       81 //rival if you chose grass start found on route 8
+#define TRAINER_QUARRYWORKER_STUCK1                         82 //Trainer battle when you come back after clearing quarry vs worker
+#define FLOWERGLADE_FLORAL_TRAINER                         83 //Flowerglade trainer
+#define FLOWERGLADE_FLORAL_TRAINER_LILY                     84 //flowerglade trainer
+#define TRAINER_ACE_MARQUES                     85 //custom obsidian thicket trainer
+#define TRAINER_DARKCAVEGF_WARNINGTRAINER                     86 //custom trainer in dark cave to warn player about the direct
+#define TRAINER_COLIN_OBSIDIAN_THICKET                     87 //blocks access to black sludge
+#define EMBERDUNE_GARY                       88 //inverse battle
+#define MEGAMANSION_TRAINER1                         89 //trainer in the mega mansion
+#define MEGAMANSION_TRAINER2                       90 //trainer in mega mansion
+#define MEGAMANSION_TRAINER3                         91 //trainer in mega mansion
+#define MEGAMANSION_TRAINER4                        92 //trainer in mega mansion
+#define MEGAMANSION_TRAINER5                        93  //trainer in mega mansion
+#define MEGAMANSION_TRAINER6                     94 //trainer in mega mansion
+#define MEGAMANSION_MATBATTLE                     95 //mat in mega mansion
+#define TRAINER_RIVAL_DEWFORD_TOWN_TOTODILE                         96 //rival in island 3 if player took totodile
+#define TRAINER_RIVAL_DEWFORD_TOWN_CYNDAQUIL                      97 //rival in island 3 if player took cyndaquil
+#define TRAINER_RIVAL_DEWFORD_TOWN_CHIKORITA                     98 //rival in island 3 if player took chikorita
+#define MEGAMANSION_TRAINER7                     99 //trainer in mega
 #define TRAINER_JULIE                       100
 #define TRAINER_BROOKE_2                    101
 #define TRAINER_BROOKE_3                    102
@@ -110,23 +110,23 @@
 #define TRAINER_KINDRA                      106
 #define TRAINER_TAMMY                       107
 #define TRAINER_VALERIE_1                   108
-#define TRAINER_TASHA                       109
-#define TRAINER_VALERIE_2                   110
-#define TRAINER_VALERIE_3                   111
-#define TRAINER_VALERIE_4                   112
-#define TRAINER_VALERIE_5                   113
-#define TRAINER_CINDY_1                     114
-#define TRAINER_DAPHNE                      115
-#define TRAINER_GRUNT_SPACE_CENTER_2        116
-#define TRAINER_CINDY_2                     117
-#define TRAINER_BRIANNA                     118
-#define TRAINER_NAOMI                       119
-#define TRAINER_CINDY_3                     120
-#define TRAINER_CINDY_4                     121
-#define TRAINER_CINDY_5                     122
-#define TRAINER_CINDY_6                     123
-#define TRAINER_MELISSA                     124
-#define TRAINER_SHEILA                      125
+#define QUARRY_WORKER1                       109 //Quarry Worker 1
+#define QUARRY_WORKER2                   110 //quarry
+#define QUARRY_FISHERMAN                   111 //quarry
+#define QUARRY_SALTS7                   112 //quarry salts
+#define LILYCOVE_GAMER                   113 //GAMER IN LILCYcove
+#define TRAINER_BRAD_HIDDEN_BASE                     114 //vicotry road base
+#define TRAINER_SECOND_ENCOUNTER_ROBERT                      115 //second rob battle
+#define TRAINER_THIRD_ENCOUNTER_ROBERT        116 //third rob battle
+#define TRAINER_FOURTH_ENCOUNTER_ROBERT                     117 //4th rob battle
+#define TRAINER_BRIANNA                     118 //5th
+#define TRAINER_NAOMI                       119 //6th 
+#define TRAINER_CINDY_3                     120 //7th 
+#define TRAINER_CINDY_4                     121 //8th 
+#define TRAINER_CINDY_5                     122 //9th
+#define TRAINER_CINDY_6                     123 //10th 
+#define TRAINER_NOAH_OBSIDIAN_THICKET                     124 //obsidian thickett dude
+#define DRAGONLAKE_CAMPER                      125 //dragon lake trainer
 #define TRAINER_SHIRLEY                     126
 #define TRAINER_JESSICA_1                   127
 #define TRAINER_CONNIE                      128
@@ -547,11 +547,11 @@
 #define TRAINERTHUG_PORT_ENTRANCE                     543  // Port Thug entrance
 #define THUG_PORT_COMMANDER                     544 // Port thug commander
 #define THUG_PORT_BOSS                     545 //THUG_PORT_BOSS
-#define TRAINER_HALLE                       546
-#define TRAINER_GARRISON                    547
-#define TRAINER_LYDIA_2                     548
-#define TRAINER_LYDIA_3                     549
-#define TRAINER_LYDIA_4                     550
+#define TRAINER_HIDDEN_BASE_PINSIR                       546 //hidden base pinsir encounter
+#define TRAINER_HIDDEN_BASE_HERACROSS                    547 //hidden base heracross encounte
+#define TRAINER_DARKCAVE_HIKER1                     548 //hiker 1 dark cave
+#define TRAINER_DARKCAVE_HIKER2                     549 //hiker 2 dark cave
+#define TRAINER_DARKCAVE_ACE                     550 //ace dark cave
 #define TRAINER_LYDIA_5                     551
 #define TRAINER_JACKSON_1                   552
 #define TRAINER_LORENZO                     553
@@ -771,11 +771,12 @@
 #define TRAINER_CRISTIN_1                   767
 #define TRAINER_MAY_RUSTBORO_TREECKO        768
 #define TRAINER_MAY_RUSTBORO_TORCHIC        769
-#define TRAINER_ROXANNE_2                   770
-#define TRAINER_ROXANNE_3                   771
-#define TRAINER_ROXANNE_4                   772
-#define TRAINER_ROXANNE_5                   773
-#define TRAINER_BRAWLY_2                    774
+//Champions Guild
+#define CHAMPION_MAT                   770 //Champions Guild MAT 
+#define TRAINER_OLLIE_CHAMPION                   771
+#define TRAINER_ALEX_CHAMPION                   772
+#define TRAINER_GATTO_CHAMPION                   773
+#define TRAINER_PULSAR_CHAMPION                    774
 #define TRAINER_BRAWLY_3                    775
 #define TRAINER_BRAWLY_4                    776
 #define TRAINER_BRAWLY_5                    777

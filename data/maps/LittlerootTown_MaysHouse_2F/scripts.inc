@@ -6,15 +6,15 @@ LittlerootTown_MaysHouse_2F_MapScripts::
 	.byte 0
 
 LittlerootTown_MaysHouse_2F_OnTransition:
-	call_if_lt VAR_LITTLEROOT_RIVAL_STATE, 2, LittlerootTown_MaysHouse_2F_EventScript_CheckSetReadyToMeetMay
-	call_if_ge VAR_LITTLEROOT_RIVAL_STATE, 3, LittlerootTown_MaysHouse_2F_EventScript_CheckShouldUpdateMayPos
+	call_if_lt VAR_QUARRY_STATE, 2, LittlerootTown_MaysHouse_2F_EventScript_CheckSetReadyToMeetMay
+	call_if_ge VAR_QUARRY_STATE, 3, LittlerootTown_MaysHouse_2F_EventScript_CheckShouldUpdateMayPos
 	call_if_eq VAR_LITTLEROOT_INTRO_STATE, 4, PlayersHouse_2F_EventScript_BlockStairsUntilClockIsSet
 	call SecretBase_EventScript_SetDecorationFlags
 	setvar VAR_SECRET_BASE_INITIALIZED, 0
 	end
 
 LittlerootTown_MaysHouse_2F_EventScript_CheckShouldUpdateMayPos::
-	goto_if_set FLAG_MET_RIVAL_LILYCOVE, LittlerootTown_MaysHouse_2F_EventScript_TryUpdateMayPos
+	goto_if_set FLAG_CANNOT_RUN_FROM_BATTLE, LittlerootTown_MaysHouse_2F_EventScript_TryUpdateMayPos
 	goto_if_ge VAR_BIRCH_LAB_STATE, 2, LittlerootTown_MaysHouse_2F_EventScript_Ret
 	goto LittlerootTown_MaysHouse_2F_EventScript_TryUpdateMayPos
 
@@ -35,7 +35,7 @@ LittlerootTown_MaysHouse_2F_EventScript_CheckSetReadyToMeetMay::
 	return
 
 LittlerootTown_MaysHouse_2F_EventScript_SetReadyToMeetMay::
-	setvar VAR_LITTLEROOT_RIVAL_STATE, 2
+	setvar VAR_QUARRY_STATE, 2
 	return
 
 LittlerootTown_MaysHouse_2F_OnWarp:
@@ -49,7 +49,7 @@ LittlerootTown_MaysHouse_2F_EventScript_CheckInitDecor::
 
 LittlerootTown_MaysHouse_2F_EventScript_RivalsPokeBall::
 	lockall
-	goto_if_eq VAR_LITTLEROOT_RIVAL_STATE, 2, LittlerootTown_MaysHouse_2F_EventScript_MeetMay
+	goto_if_eq VAR_QUARRY_STATE, 2, LittlerootTown_MaysHouse_2F_EventScript_MeetMay
 	msgbox RivalsHouse_2F_Text_ItsRivalsPokeBall, MSGBOX_DEFAULT
 	releaseall
 	end
@@ -70,7 +70,7 @@ LittlerootTown_MaysHouse_2F_EventScript_MeetMay::
 	call_if_eq VAR_FACING, DIR_SOUTH, LittlerootTown_MaysHouse_2F_EventScript_MeetMaySouth
 	call_if_eq VAR_FACING, DIR_WEST, LittlerootTown_MaysHouse_2F_EventScript_MeetMayWest
 	call_if_eq VAR_FACING, DIR_EAST, LittlerootTown_MaysHouse_2F_EventScript_MeetMayEast
-	setvar VAR_LITTLEROOT_RIVAL_STATE, 3
+	setvar VAR_QUARRY_STATE, 3
 	savebgm MUS_DUMMY
 	fadedefaultbgm
 	releaseall
@@ -234,7 +234,7 @@ LittlerootTown_MaysHouse_2F_Movement_PlayerWatchMayEast:
 
 RivalsHouse_2F_EventScript_Rival::
 	lockall
-	goto_if_set FLAG_MET_RIVAL_LILYCOVE, RivalsHouse_2F_EventScript_RivalPostLilycove
+	goto_if_set FLAG_CANNOT_RUN_FROM_BATTLE, RivalsHouse_2F_EventScript_RivalPostLilycove
 	checkplayergender
 	goto_if_eq VAR_RESULT, MALE, RivalsHouse_2F_EventScript_May
 	goto_if_eq VAR_RESULT, FEMALE, RivalsHouse_2F_EventScript_Brendan

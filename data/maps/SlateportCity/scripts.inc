@@ -95,7 +95,7 @@ SlateportCity_EventScript_ScottScene::
 	waitfanfare
 	closemessage
 	delay 30
-	setflag FLAG_ENABLE_SCOTT_MATCH_CALL
+	setflag FLAG_BRAD_GIVES_SHINY_AXEW
 	msgbox SlateportCity_Text_KeepEyeOnTrainersBeSeeingYou, MSGBOX_DEFAULT
 	closemessage
 	applymovement LOCALID_SCOTT, SlateportCity_Movement_ScottExit

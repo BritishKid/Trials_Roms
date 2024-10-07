@@ -1,60 +1,94 @@
 VerdanturfTown_Mart_MapScripts::
 	.byte 0
 
+
 VerdanturfTown_Mart_EventScript_Clerk::
-	lock
+	lockall
 	faceplayer
-	message gText_HowMayIServeYou
+	msgbox VerdanturfTown_Mart_EventScript_Clerk_Text_0
 	waitmessage
-	pokemart VerdanturfTown_Mart_Pokemart
-	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
-	release
-	end
+	goto_if_unset FLAG_BADGE03_GET, VerdanturfTown_Mart_EventScript_Clerk_2
+	pokemart VerdanturfTownMart_Items_LessThanSixBadges
+VerdanturfTown_Mart_EventScript_Clerk_1:
+	msgbox VerdanturfTown_Mart_EventScript_Clerk_Text_1
+	releaseall
+	return
+
+VerdanturfTown_Mart_EventScript_Clerk_2:
+	pokemart VerdanturfTownMart_Items_LessThanThreeBadges
+	goto VerdanturfTown_Mart_EventScript_Clerk_1
+
+
+VerdanturfTown_Mart_EventScript_Lass::
+	lockall
+	faceplayer
+	msgbox VerdanturfTown_Mart_EventScript_Lass_Text_0
+	releaseall
+	return
+
+
+VerdanturfTown_Mart_EventScript_Boy::
+	lockall
+	faceplayer
+	msgbox VerdanturfTown_Mart_EventScript_Boy_Text_0
+	releaseall
+	return
+
+
+VerdanturfTown_Mart_EventScript_ExpertF::
+	lockall
+	faceplayer
+	msgbox VerdanturfTown_Mart_EventScript_ExpertF_Text_0
+	releaseall
+	return
+
 
 	.align 2
-VerdanturfTown_Mart_Pokemart:
+VerdanturfTownMart_Items_LessThanThreeBadges:
+	.2byte ITEM_POKE_BALL
 	.2byte ITEM_GREAT_BALL
-	.2byte ITEM_NEST_BALL
+	.2byte ITEM_DUSK_BALL
+	.2byte ITEM_POTION
+	.2byte ITEM_ANTIDOTE
+	.2byte ITEM_PARALYZE_HEAL
+	.2byte ITEM_AWAKENING
+	.2byte ITEM_REPEL
+	.2byte ITEM_ESCAPE_ROPE
+	.2byte ITEM_NONE
+
+	.align 2
+VerdanturfTownMart_Items_LessThanSixBadges:
+	.2byte ITEM_POKE_BALL
+	.2byte ITEM_GREAT_BALL
+	.2byte ITEM_DUSK_BALL
+	.2byte ITEM_POTION
 	.2byte ITEM_SUPER_POTION
 	.2byte ITEM_ANTIDOTE
 	.2byte ITEM_PARALYZE_HEAL
 	.2byte ITEM_AWAKENING
-	.2byte ITEM_BURN_HEAL
-	.2byte ITEM_ICE_HEAL
+	.2byte ITEM_FULL_HEAL
 	.2byte ITEM_REPEL
-	.2byte ITEM_X_SP_ATK
-	.2byte ITEM_FLUFFY_TAIL
+	.2byte ITEM_SUPER_REPEL
+	.2byte ITEM_ESCAPE_ROPE
 	.2byte ITEM_NONE
-	release
-	end
 
-VerdanturfTown_Mart_EventScript_Boy::
-	msgbox VerdanturfTown_Mart_Text_XSpecialIsCrucial, MSGBOX_NPC
-	end
+VerdanturfTown_Mart_EventScript_Clerk_Text_0:
+	.string "How may I serve you$"
 
-VerdanturfTown_Mart_EventScript_ExpertF::
-	msgbox VerdanturfTown_Mart_Text_NoStrategyGuidesForBattleTent, MSGBOX_NPC
-	end
+VerdanturfTown_Mart_EventScript_Clerk_Text_1:
+	.string "Please Come Again.$"
 
-VerdanturfTown_Mart_EventScript_Lass::
-	msgbox VerdanturfTown_Mart_Text_NestBallOnWeakenedPokemon, MSGBOX_NPC
-	end
+VerdanturfTown_Mart_EventScript_Lass_Text_0:
+	.string "Theres a bunch of nerds who breed\n"
+	.string "crazy strong Pokémon nearby, but if\l"
+	.string "it's not perfect they release them.$"
 
-VerdanturfTown_Mart_Text_XSpecialIsCrucial:
-	.string "For any POKéMON match, X SPECIAL\n"
-	.string "is crucial.\p"
-	.string "It jacks up the power of some moves\n"
-	.string "even though it's only for one battle.$"
+VerdanturfTown_Mart_EventScript_Boy_Text_0:
+	.string "So many people find shiny Pokémon here\n"
+	.string "because of the nearby breeders$"
 
-VerdanturfTown_Mart_Text_NoStrategyGuidesForBattleTent:
-	.string "They don't seem to sell any winning\n"
-	.string "strategy guides for the BATTLE TENT…\p"
-	.string "It seems one must rely on one's\n"
-	.string "own wits after all…$"
-
-VerdanturfTown_Mart_Text_NestBallOnWeakenedPokemon:
-	.string "The NEST BALL works better on\n"
-	.string "weakened POKéMON.\p"
-	.string "VERDANTURF is the only place you can\n"
-	.string "buy it.$"
-
+VerdanturfTown_Mart_EventScript_ExpertF_Text_0:
+	.string "Ember Dunes is a very big dangerous\n"
+	.string "area, I spent my life trying to solve\l"
+	.string "the mystery of a lost powerful Pokémon\l"
+	.string "in there.$"

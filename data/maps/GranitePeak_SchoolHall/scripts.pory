@@ -19,7 +19,22 @@ script GranitePeak_BattleDomeLobby_EventScript_BeatChallenge {
 	// special(LoadPlayerParty)
 	// special(HealPlayerParty)
     if(flag(FLAG_TRAINER_TOURNAMENT_WON)) { //repeatable rewards
-        addmoney(5000)
+        //decide the level of the tournament
+        if(!flag(FLAG_BADGE02_GET)) {
+            addmoney(5000)
+        }
+        elif(!flag(FLAG_BADGE03_GET)) {
+            addmoney(6000)
+        }
+        elif(!flag(FLAG_BADGE04_GET)) {
+            addmoney(7000)
+        }
+        elif(!flag(FLAG_BADGE05_GET)) {
+            addmoney(8000)
+        }
+        else {
+            addmoney(10000)
+        }
         msgbox("Select your prize!")
         waitmessage()
         multichoice(21, 6, MULTI_NATURE_MINT_SELECTION, TRUE)
@@ -31,13 +46,14 @@ script GranitePeak_BattleDomeLobby_EventScript_BeatChallenge {
             case 4: goto(School_TimidMint)
             case 5: goto(School_JollyMint)
         }
+        //todo Add a bonus for doing x number of wins?
     }
     if(!flag(FLAG_TRAINER_TOURNAMENT_WON)) { //runs the first time
         setflag(FLAG_TRAINER_TOURNAMENT_WON)
         msgbox(format("For you success in the tournament take this trophy!"))
         givedecoration(DECOR_SILVER_SHIELD)
-        // subquestmenu(QUEST_MENU_COMPLETE_QUEST, QUEST_POKEMON_LEAGUE, SUB_QUEST_SCHOOL_TOURNAMENT)
-        // questmenu(QUEST_MENU_COMPLETE_QUEST, QUEST_SCHOOL_TOURNAMENT)
+        subquestmenu(QUEST_MENU_COMPLETE_QUEST, QUEST_POKEMON_LEAGUE, SUB_QUEST_SCHOOL_TOURNAMENT)
+        questmenu(QUEST_MENU_COMPLETE_QUEST, QUEST_SCHOOL_TOURNAMENT)
         addmoney(7500)
         msgbox("Select your prize!")
         waitmessage()
@@ -130,7 +146,7 @@ script GranitePeakAbilitiesClassroomDoor {
 
 script Petalburgcity_School_Enter_Right {
     lockall
-    msgbox(format("So many amazing trainer came from this school, just look at all the names that have won the school pokemon tournament."))
+    msgbox(format("So many amazing trainer came from this school, just look at all the names that have won the school Pokémon tournament."))
     applymovement(OBJ_EVENT_ID_PLAYER, Movement_MovePlayerLeftOnce)
     waitmovement(OBJ_EVENT_ID_PLAYER)
     call(PetaburgCity_School_Mat_TrophyCase)
@@ -139,7 +155,7 @@ script Petalburgcity_School_Enter_Right {
 
 script Petalburgcity_School_Enter_Left {
     lockall
-    msgbox(format("So many amazing trainer came from this school, just look at all the names that have won the school pokemon tournament."))
+    msgbox(format("So many amazing trainer came from this school, just look at all the names that have won the school Pokémon tournament."))
     call(PetaburgCity_School_Mat_TrophyCase)
     releaseall
 }
@@ -166,15 +182,17 @@ script Mat_Beaten {
     removeobject(1)
     setflag(FLAG_HIDE_MAT_SCHOOL_HALL)
     setflag(FLAG_HIDE_MOVES_ROOM)
-    setvar(VAR_ENTERED_SCHOOL, 1)
-    // questmenu(QUEST_MENU_SET_ACTIVE, QUEST_SCHOOL_TOURNAMENT)
+    setvar(VAR_MAT_STATE, 1)
+    clearflag(FLAG_HIDE_MAT_MEGA_MANSION)
+    questmenu(QUEST_MENU_SET_ACTIVE, QUEST_SCHOOL_TOURNAMENT)
+    call(Increase_Trainers_Beaten)
 }
 
 script GranitePeak_School_TrophyCase {
     lockall
     msgbox(format("It's the Petalburg School Trainer Trophy."))
     msgbox(format("It's got all the previous winners etched into it..."))
-    msgbox(format("Pulsar"))
+    msgbox(format("Pulsar, Jordan"))
     //check if the player has won the tournament their name can go on aswell
     releaseall
 }
@@ -187,16 +205,16 @@ script GranitePeak_School_TournamentTeacher_Hallway {
         msgbox(format("Oh fantastic you've completed all the classes and take part in the tournament"))
         msgbox(format("Would you like to take part in the tournament?"), MSGBOX_YESNO)
         if(var(VAR_RESULT) == YES) {
-            //add a check for number of pokemon in party
+            //add a check for number of Pokémon in party
                 getpartysize
                 if(var(VAR_RESULT) <= DOME_BATTLE_PARTY_SIZE) {
                     setvar(VAR_FRONTIER_FACILITY, FRONTIER_FACILITY_DOME) //this is where we set the frontier to use the facility dome rules, this is the tournament structure
                     setvar(VAR_FRONTIER_BATTLE_MODE, FRONTIER_MODE_SINGLES) //only one option so may not need these could hardcode or remove checks
                     goto(GranitePeak_BattleDomeLobby_EventScript_AttendantWelcome)
-                    
+                    // msgbox(format("COMING SOON"))
                 }
                 else {
-                    msgbox(format("You can't enter with more than 3 Pokemon"))
+                    msgbox(format("You can't enter with more than 3 Pokémon"))
 
                 }
         } 
@@ -217,28 +235,56 @@ script GranitePeak_BattleDomeLobby_EventScript_AttendantWelcome {
 }
 
 script GranitePeak_BattleDomeLobby_EventScript_TryEnterChallenge {
+
+    //decide the level of the tournament
+    if(!flag(FLAG_BADGE02_GET)) {
+        setvar(FRONTIER_MAX_LEVEL_50, 22)
+    }
+    elif(!flag(FLAG_BADGE03_GET)) {
+        setvar(FRONTIER_MAX_LEVEL_50, 28)
+    }
+    elif(!flag(FLAG_BADGE04_GET)) {
+        setvar(FRONTIER_MAX_LEVEL_50, 35)
+    }
+    elif(!flag(FLAG_BADGE05_GET)) {
+        setvar(FRONTIER_MAX_LEVEL_50, 40)
+    }
+    else {
+        setvar(FRONTIER_MAX_LEVEL_50, 50)
+    }
+
     //could add other information from previous function
 	setvar(VAR_0x8004, FRONTIER_UTIL_FUNC_SET_DATA)
 	setvar(VAR_0x8005, FRONTIER_DATA_LVL_MODE) //choose which level
-	setvar(VAR_0x8006, FRONTIER_LVL_50) //set level of  we are hard coding to "50" but its actually 22
+	setvar(VAR_0x8006, FRONTIER_LVL_50) //Set the level of the tournament, it varies based on gyms 
 	special(CallFrontierUtilFunc) //set everything up 
     call(GranitePeak_BattleDomeLobby_EventScript_SaveBeforeChallenge)
 }
 
 script GranitePeak_BattleDomeLobby_EventScript_SaveBeforeChallenge {
     setvar(VAR_TEMP_0, 0)
-	dome_init //
+	// dome_init // dome init is done below
+    setvar(VAR_0x8004, BATTLE_DOME_FUNC_INIT)
+    special(CallBattleDomeFunction)
     // special(LoadPlayerParty)
     closemessage
+    // msgbox(format("BATTLE DOME FUNC INIT"))
+    // msgbox(format("SECOND TEXT TO SHOW IT MOVES"))
     delay(2) //we dont save do we want to?
     setvar(VAR_TEMP_0, 255)
-    dome_inittrainers //creates trainers being used
+    // dome_inittrainers //creates trainers being used
+    setvar(VAR_0x8004, BATTLE_DOME_FUNC_INIT_TRAINERS)
+	special(CallBattleDomeFunction)
+    // msgbox(format("BATTLE DOME INIT TRAINERS"))
     call(GranitePeak_BattleDomeLobby_EventScript_EnterChallenge)
 }
 
 script GranitePeak_BattleDomeLobby_EventScript_EnterChallenge {
     // special(SavePlayerParty)
-    dome_settrainers //picks trainers that are getting used
+    // dome_settrainers //picks trainers that are getting used
+    setvar(VAR_0x8004, BATTLE_DOME_FUNC_SET_TRAINERS)
+	special(CallBattleDomeFunction)
+    // msgbox(format("BATTLE DOME SET TRAINERS PRE WARP"))
     // special(HealPlayerParty)
 	warp(MAP_GRANITE_PEAK_TOURNAMENT_WAITING_ROOM, 6, 8) //teleport to waiting room
 	setvar(VAR_TEMP_0, 0)
@@ -282,6 +328,18 @@ script School_JollyMint {
     return
 }
 
+script MatEasterEgg {
+    lockall
+    if(flag(FLAG_MAT_ID)){
+        msgbox(format("It's empty"))
+    }
+    if(!flag(FLAG_MAT_ID)) {
+        msgbox(format("You find someones student ID in the pot:\nIt belongs to Mat"))
+        setflag(FLAG_MAT_ID)
+    }
+    releaseall
+}
+
 //movement scripts
 
 movement Movement_MatExclamation {
@@ -289,10 +347,12 @@ movement Movement_MatExclamation {
 }
 
 movement Movement_MatIntoMoveRoom {
-    walk_right
-    walk_right
-    walk_right
-    walk_right
+    walk_left
+    walk_left
+    walk_left
+    walk_left
+    walk_left
+    face_up
 }
 
 movement  Movement_MovePlayerLeftOnce {

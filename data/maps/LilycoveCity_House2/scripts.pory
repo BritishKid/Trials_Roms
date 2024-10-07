@@ -1,0 +1,64 @@
+mapscripts LilycoveCity_House2_MapScripts {
+    
+}
+
+script LilycoveCity_PokemonCenter_1F_FossilRevival {
+    lockall
+    msgbox(format("Hey do you want to revive any fossils?"))
+    checkitem(ITEM_ROOT_FOSSIL)
+    if(var(VAR_RESULT) == TRUE) {
+        msgbox(format("You have a ROOT FOSSIL, do you want to revive it?"), MSGBOX_YESNO) 
+        if(var(VAR_RESULT) == YES) {
+            givemon(SPECIES_LILEEP, 5, ITEM_BIG_ROOT)
+            playfanfare(MUS_OBTAIN_ITEM)
+            if (var(VAR_RESULT) == MON_GIVEN_TO_PARTY) {
+                    msgbox("Recieved Lileep")
+                    removeitem(ITEM_ROOT_FOSSIL, 1)
+                    call(NicknamePartyMon)
+                }
+                elif (var(VAR_RESULT) == MON_GIVEN_TO_PC) {
+                    msgbox("Recieved Lileep")
+                    removeitem(ITEM_ROOT_FOSSIL, 1)
+                    call(NicknameBoxMon)
+                }
+                else {
+                    hidemonpic
+                    msgbox(format("You don't have enough space. Come back and you get it soon."))
+            }
+        }
+        else {
+            msgbox(format("Come back if you do!"))
+            end
+        }
+    }
+    checkitem(ITEM_CLAW_FOSSIL)
+    if(var(VAR_RESULT) == TRUE) {
+        msgbox(format("You have a CLAW FOSSIL, do you want to revive it?"), MSGBOX_YESNO) 
+        if(var(VAR_RESULT) == YES) {
+            givemon(SPECIES_ANORITH, 5, ITEM_RAZOR_CLAW) //item might be too strong as it leads to weavile early?
+            playfanfare(MUS_OBTAIN_ITEM)
+            if (var(VAR_RESULT) == MON_GIVEN_TO_PARTY) {
+                    msgbox("Recieved Anorith")
+                    removeitem(ITEM_CLAW_FOSSIL, 1)
+                    call(NicknamePartyMon)
+                }
+                elif (var(VAR_RESULT) == MON_GIVEN_TO_PC) {
+                    msgbox("Recieved Anorith")
+                    removeitem(ITEM_CLAW_FOSSIL, 1)
+                    call(NicknameBoxMon)
+                }
+                else {
+                    hidemonpic
+                    msgbox(format("You don't have enough space. Come back and you get it soon."))
+            }
+        }
+        else {
+            msgbox(format("Come back if you do!"))
+            end
+        }
+    }
+
+    //todo add other fossils
+
+    releaseall
+}

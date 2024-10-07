@@ -17,5 +17,5 @@ text SandyCliffColin_Outro {
 }
 
 text PostBattle_SandyCliffColin {
-    format("I'm always hunting for new and stronger fossil pokemon.")
+    format("I'm always hunting for new and stronger fossil Pokémon.")
 }

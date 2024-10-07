@@ -3,19 +3,19 @@ mapscripts Tutorial_Start_MapScripts {}
 
 script ChooseStarterPokemon1 {
     lockall
-    if(flag(FLAG_UNUSED_0x04F)){    
+    if(flag(FLAG_RECIEVED_LIGHT_BALL)){    
         msgbox(format("Don't be greedy you already chose your starter"))
     }
-    if(!flag(FLAG_UNUSED_0x04F)){    
+    if(!flag(FLAG_RECIEVED_LIGHT_BALL)){    
         showmonpic(SPECIES_INKAY, 10, 3)
         msgbox(format("Do you want to choose Inkay"), MSGBOX_YESNO)
         if(var(VAR_RESULT) == NO) {
-            msgbox(format("I'll choose another pokemon"))
+            msgbox(format("I'll choose another Pokémon"))
         }
         if(var(VAR_RESULT) == YES) {
             givemon(SPECIES_INKAY, 5, ITEM_ORAN_BERRY)
             playfanfare(MUS_OBTAIN_ITEM)
-            setflag(FLAG_UNUSED_0x04F)
+            setflag(FLAG_RECIEVED_LIGHT_BALL)
             setvar(VAR_ROUTE101_STATE, 1)
         }
         hidemonpic
@@ -25,19 +25,19 @@ script ChooseStarterPokemon1 {
 
 script ChooseStarterPokemon2 {
     lockall
-    if(flag(FLAG_UNUSED_0x04F)){    
+    if(flag(FLAG_RECIEVED_LIGHT_BALL)){    
         msgbox(format("Don't be greedy you already chose your starter"))
     }
-    if(!flag(FLAG_UNUSED_0x04F)){    
+    if(!flag(FLAG_RECIEVED_LIGHT_BALL)){    
         showmonpic(SPECIES_SABLEYE, 10, 3)
         msgbox(format("Do you want to choose Sableye"), MSGBOX_YESNO)
         if(var(VAR_RESULT) == NO) {
-            msgbox(format("I'll choose another pokemon"))
+            msgbox(format("I'll choose another Pokémon"))
         }
         if(var(VAR_RESULT) == YES) {
             givemon(SPECIES_SABLEYE, 5, ITEM_ORAN_BERRY)
             playfanfare(MUS_OBTAIN_ITEM)
-            setflag(FLAG_UNUSED_0x04F)
+            setflag(FLAG_RECIEVED_LIGHT_BALL)
             setvar(VAR_ROUTE101_STATE, 2)
         }
         hidemonpic
@@ -47,19 +47,19 @@ script ChooseStarterPokemon2 {
 
 script ChooseStarterPokemon3 {
     lockall
-    if(flag(FLAG_UNUSED_0x04F)){    
+    if(flag(FLAG_RECIEVED_LIGHT_BALL)){    
         msgbox(format("Don't be greedy you already chose your starter"))
     }
-    if(!flag(FLAG_UNUSED_0x04F)){   
+    if(!flag(FLAG_RECIEVED_LIGHT_BALL)){   
         showmonpic(SPECIES_STEELIX, 10, 3)
         msgbox(format("Do you want to choose Steelix"), MSGBOX_YESNO)
         if(var(VAR_RESULT) == NO) {
-            msgbox(format("I'll choose another pokemon"))
+            msgbox(format("I'll choose another Pokémon"))
         }
         if(var(VAR_RESULT) == YES) {
             givemon(SPECIES_STEELIX, 5, ITEM_ORAN_BERRY)
             playfanfare(MUS_OBTAIN_ITEM)
-            setflag(FLAG_UNUSED_0x04F)
+            setflag(FLAG_RECIEVED_LIGHT_BALL)
             setvar(VAR_ROUTE101_STATE, 3)
         }
         hidemonpic
@@ -73,11 +73,11 @@ script GiveTrainerItemFromPokeball {
 
 script GiveHiddenItem {
     lockall
-    if(!flag(FLAG_UNUSED_0x04E)) {
+    if(!flag(FLAG_RECIEVED_LIGHT_BALL)) {
         msgbox(format("Hey i've something hidden in the rocks"))
         giveitem(ITEM_POTION, 2)
         playfanfare(MUS_OBTAIN_ITEM)
-        setflag(FLAG_UNUSED_0x04E)
+        setflag(FLAG_RECIEVED_LIGHT_BALL)
     }
     releaseall
 }

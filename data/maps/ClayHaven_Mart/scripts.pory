@@ -13,7 +13,15 @@ script ClayHaven_EventScript_MartClerk {
 	faceplayer
 	msgbox("How may I serve you")
 	waitmessage	
-	pokemart(ClayHavenMart_Items_NoBadges)
+	if(!flag(FLAG_BADGE01_GET)) {
+		pokemart(ClayHavenMart_Items_NoBadges)
+	}
+	elif(!flag(FLAG_BADGE03_GET)) {
+		pokemart(ClayHavenMart_Items_LessThanThreeBadges)	
+	}
+	else{
+		pokemart(ClayHavenMart_Items_LessThanSixBadges)
+	}
 	msgbox("Please Come Again.")
 	releaseall
 }
@@ -32,4 +40,29 @@ mart ClayHavenMart_Items_NoBadges {
 	ITEM_ANTIDOTE
 	ITEM_PARALYZE_HEAL
 	ITEM_AWAKENING
+}
+
+mart ClayHavenMart_Items_LessThanThreeBadges {
+	ITEM_POKE_BALL
+	ITEM_GREAT_BALL
+	ITEM_POTION
+	ITEM_ANTIDOTE
+	ITEM_PARALYZE_HEAL
+	ITEM_AWAKENING
+	ITEM_REPEL
+	ITEM_ESCAPE_ROPE
+}
+
+mart ClayHavenMart_Items_LessThanSixBadges{
+	ITEM_POKE_BALL
+	ITEM_GREAT_BALL
+	ITEM_POTION
+	ITEM_SUPER_POTION
+	ITEM_ANTIDOTE
+	ITEM_PARALYZE_HEAL
+	ITEM_AWAKENING
+	ITEM_FULL_HEAL
+	ITEM_REPEL
+	ITEM_SUPER_REPEL
+	ITEM_ESCAPE_ROPE
 }

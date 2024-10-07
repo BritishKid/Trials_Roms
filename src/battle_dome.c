@@ -2360,23 +2360,30 @@ static void InitDomeTrainers(void)
             DOME_TRAINERS[i].trainerId = trainerId;
         }
 
+        // for (j = 1; j < i; j++) //something added?
+        //     {
+        //         if (DOME_TRAINERS[j].trainerId == trainerId)
+        //         break;
+        //     }
+            
         // Choose party
         for (j = 0; j < FRONTIER_PARTY_SIZE; j++)
         {
             do
             {
-                monId = GetRandomFrontierMonFromSet(trainerId);
+                // monId = GetRandomFrontierMonFromSet(trainerId);
+                monId = GetAllThreeSchoolMonFromSet(trainerId, j); //Should pick the 3 pokemon from the list
                 for (k = 0; k < j; k++)
                 {
                     // Make sure the mon is valid.
-                    int alreadySelectedMonId = DOME_MONS[i][k];
-                    if (alreadySelectedMonId == monId
-                        || species[0] == gFacilityTrainerMons[monId].species
-                        || species[1] == gFacilityTrainerMons[monId].species
-                        || gFacilityTrainerMons[alreadySelectedMonId].itemTableId == gFacilityTrainerMons[monId].itemTableId)
-                        break;
+                    // int alreadySelectedMonId = DOME_MONS[i][k];
+                    // if (alreadySelectedMonId == monId
+                    //     || species[0] == gFacilityTrainerMons[monId].species
+                    //     || species[1] == gFacilityTrainerMons[monId].species
+                    //     || gFacilityTrainerMons[alreadySelectedMonId].itemTableId == gFacilityTrainerMons[monId].itemTableId)
+                    //     break;
                 }
-            } while (k != j);
+            } while (k != j); //until party filled
 
             DOME_MONS[i][j] = monId;
             species[j] = gFacilityTrainerMons[monId].species;

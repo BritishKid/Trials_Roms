@@ -182,6 +182,7 @@ GranitePeak_School_MoveQuiz_Passsed::
 	giveitem ITEM_TM27
 	setvar VAR_MOVE_ROOM_STUDENTS, 5
 	setflag FLAG_MOVE_PATCH_EARNT
+	subquestmenu QUEST_MENU_COMPLETE_QUEST, QUEST_POKEMON_LEAGUE, SUB_QUEST_SCHOOL_MOVE_PATCH
 	msgbox GranitePeak_School_MoveQuiz_Passsed_Text_4, MSGBOX_AUTOCLOSE
 	applymovement 5, Movement_Mat_Leaves
 	removeobject 5
@@ -223,7 +224,9 @@ MoveStudent_Beaten_1:
 	goto_if_eq MoveStudent_Beaten_5
 MoveStudent_Beaten_4:
 	compare VAR_MOVE_ROOM_STUDENTS, 0
-	goto_if_eq MoveStudent_Beaten_7
+	goto_if_eq MoveStudent_Beaten_8
+MoveStudent_Beaten_7:
+	call Increase_Trainers_Beaten
 	return
 
 MoveStudent_Beaten_2:
@@ -234,9 +237,9 @@ MoveStudent_Beaten_5:
 	setvar VAR_MOVE_ROOM_STUDENTS, 2
 	goto MoveStudent_Beaten_4
 
-MoveStudent_Beaten_7:
+MoveStudent_Beaten_8:
 	setvar VAR_MOVE_ROOM_STUDENTS, 1
-	return
+	goto MoveStudent_Beaten_7
 
 
 Movement_Surprised_MoveClass:
@@ -321,11 +324,11 @@ GranitePeak_School_Move_Quiz_Text_5:
 
 GranitePeak_School_Move_Quiz_Text_6:
 	.string "Okay Final Question\n"
-	.string "Grass Pokemon are immune to Powder\l"
+	.string "Grass Pokémon are immune to Powder\l"
 	.string "moves?$"
 
 GranitePeak_School_Move_Quiz_Text_7:
-	.string "Grass, Overcoat and pokemon with\n"
+	.string "Grass, Overcoat and Pokémon with\n"
 	.string "Safety Goggles$"
 
 GranitePeak_School_Move_Quiz_Text_8:
@@ -336,7 +339,7 @@ GranitePeak_School_Move_Quiz_Text_9:
 	.string "Good job to you both!$"
 
 GranitePeak_School_Move_Quiz_Text_10:
-	.string "Of course not, only Pokemon with the\n"
+	.string "Of course not, only Pokémon with the\n"
 	.string "Overcoat ability are immune.$"
 
 GranitePeak_School_Move_Quiz_Text_11:
@@ -355,7 +358,7 @@ GranitePeak_School_Move_Quiz_Text_14:
 
 GranitePeak_School_Move_Quiz_Text_15:
 	.string "That's Incorrect. Only Adaptability\n"
-	.string "Pokemon will gain twice the power$"
+	.string "Pokémon will gain twice the power$"
 
 GranitePeak_School_MoveQuiz_Failed_Text_0:
 	.string "There are lots of resources you can use\n"

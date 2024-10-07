@@ -167,7 +167,7 @@ static const u8 sFixedIVTable[][2] =
 };
 
 static const u16 sInitialRentalMonRanges[][2] =
-{
+{ //fix
     // Level 50
     {FRONTIER_MON_GRIMER,     SCHOOL_TOURNAMENT_MON_FURRET},   // 110 - 199
     {FRONTIER_MON_DELCATTY_1, FRONTIER_MON_CLOYSTER_1}, // 162 - 266

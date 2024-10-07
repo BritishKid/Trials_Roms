@@ -3,17 +3,18 @@ mapscripts Rob_Hidden_Base_Route3_MapScripts {}
 
 script FrontPageRob_Hidden_Base_EventScript_PC {
     lockall
-    msgbox(format("Thank you to FrontPageRob for the support making this game!"))
+    msgbox(format("Thank you to FrontPageRob for the support in making this game!"))
     releaseall
 }
 
 script FrontPageRob_Hidden_Base_EventScript_Find_MagnemiteDoll {
     lockall
+    faceplayer
     if (!flag(FLAG_HIDDEN_BASE_COLLECTABLE_FOUND_MUDKIP)) {
         msgbox(format("It's FrontPageRob's Mudkip Doll"))
         adddecoration(DECOR_MUDKIP_DOLL) //todo make this magnemite doll
         setflag(FLAG_HIDDEN_BASE_COLLECTABLE_FOUND_MUDKIP)
-        // subquestmenu(QUEST_MENU_COMPLETE_QUEST, QUEST_POKEMON_LEAGUE, SUB_QUEST_MUDKIP_DOLL)
+        subquestmenu(QUEST_MENU_COMPLETE_QUEST, QUEST_POKEMON_LEAGUE, SUB_QUEST_MUDKIP_DOLL)
         msgbox(format("You've unlocked the Mudkip Doll for your secret base"))
     }
     else {
@@ -67,11 +68,11 @@ script Rob_GivesHonege {
 
 //text scripts
 text FrontPageRob_Intro {
-    format("")
+    format("Physics puns are no joke. It's a relatively dark matter")
 }
 
 text FrontPageRob_Outro {
-    format("")
+    format("Clearly I've been studying frequency too much, now my brain Hertz")
 }
 
 text PostBattle_FrontPageRob {
@@ -79,5 +80,5 @@ text PostBattle_FrontPageRob {
 }
 
 text Beat_FrontPageRob {
-    format("You're incredible here have a sword")
+    format("Well that didn't go right. Here take this sword I found")
 }

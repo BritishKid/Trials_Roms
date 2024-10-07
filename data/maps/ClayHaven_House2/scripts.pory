@@ -2,20 +2,22 @@ mapscripts ClayHaven_House2_MapScripts {}
 
 script Town2_House2_Woman {
     lockall
+    faceplayer
     msgbox(format("This town was founded thousand of years ago after some explorers found a strange plate in the mountains."))
-    msgbox(format("It was the reason why lots of rare pokemon used to be found in these mountains but it's since been stolen."))
+    msgbox(format("It was the reason why lots of rare Pokémon used to be found in these mountains but it's since been stolen."))
     releaseall
 }
 
 script Town2_House2_Man {
     lockall
-    msgbox(format("Someone stole the plate from it's shrine and the police have been unable to find it. The town seems...wrong without it"))
+    faceplayer
+    msgbox(format("I heard that someone in this town can turn berries into juice."))
     releaseall
 }
 
 script Town2_House2_TV {
     lockall
-    msgbox(format("It's a show about the History of Triver. It talks about how the 3 main islands where created as gifts to ancient pokemon"))
+    msgbox(format("It's a show about the History of Triver. It talks about how the 3 main islands where created as gifts to ancient Pokémon"))
     releaseall
 }
 

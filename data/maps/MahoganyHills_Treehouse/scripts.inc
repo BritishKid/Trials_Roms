@@ -10,4 +10,4 @@ MahoganyHills_EventScript_Fossil::
 
 
 MahoganyHills_EventScript_Fossil_Text_0:
-	.string "It's a fossil of an ancient pokemon$"
+	.string "It's a fossil of an ancient Pokémon$"

@@ -15,7 +15,7 @@ script WatefallCave_SubBasement_LegendsDoor {
         msgbox(format("There seems to be some ancient text carved on the wall, you get out the book Alex gave you to try and translate it."))
         msgbox(format("ARCEUS - CREATOR OF ALL - MASTER OF EVERYTHING"))
         msgbox(format("WHEN HUMAN AND POKEMON ARE BONDED TOGETHER YOU MAY ENTER"))
-        msgbox(format("You get out a Pokemon from their ball and you both tough the wall"))
+        msgbox(format("You get out a Pokémon from their ball and you both tough the wall"))
         call(EnterLegendsAltar)
     }
     release
@@ -30,4 +30,11 @@ script EnterLegendsAltar {
     fadescreen(FADE_TO_BLACK)
     warp(MAP_LEGENDS_ALTAR, 14, 26)
     release
+}
+
+script FirstMaster_Fallen  {
+    lockall
+    msgbox(format("...."))
+    msgbox(format("The floor collapsed? How are we going to get out of here?"))
+    releaseall
 }

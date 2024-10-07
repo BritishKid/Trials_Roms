@@ -3,13 +3,13 @@ Route4_MapScripts::
 
 
 BugCatcherShedinjaChallenge::
-	trainerbattle_single ROUTE4_BUGCATCHER, BugCatchChallenge_Intro, BugCatchChallenge_Outro
+	trainerbattle_single ROUTE4_BUGCATCHER, BugCatchChallenge_Intro, BugCatchChallenge_Outro, Increase_Trainers_Beaten
 	msgbox BugCatchChallenge_PostBattle, MSGBOX_AUTOCLOSE
 	end
 
 
 GraspingPieBattleScript::
-	trainerbattle_single ROUTE4_GRASPINGPIE, GraspingPie_Intro, GraspingPie_Outro
+	trainerbattle_single ROUTE4_GRASPINGPIE, GraspingPie_Intro, GraspingPie_Outro, Increase_Trainers_Beaten
 	msgbox GraspingPie_PostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -24,6 +24,7 @@ Route4_EventScript_WaterStone::
 Route4_EventScript_WaterStone_Grandson::
 	lock
 	msgbox Route4_EventScript_WaterStone_Grandson_Text_0
+	questmenu QUEST_MENU_CHECK_ACTIVE, QUEST_EVOLUTION_STONE_MART
 	goto_if_unset FLAG_WATER_STONE_SOURCE, Route4_EventScript_WaterStone_Grandson_3
 Route4_EventScript_WaterStone_Grandson_1:
 	release
@@ -64,6 +65,7 @@ Route4_EventScript_WaterStone_Grandson_7:
 	setflag FLAG_WATER_STONE_SOURCE
 	goto_if_set FLAG_LEAF_STONE_SOURCE, Route4_EventScript_WaterStone_Grandson_14
 Route4_EventScript_WaterStone_Grandson_11:
+	subquestmenu QUEST_MENU_COMPLETE_QUEST, QUEST_POKEMON_LEAGUE, SUB_QUEST_WATER_STONE
 	applymovement 3, Movement_GrandsonLeaves_WaterStone
 	waitmovement 3
 	removeobject 3
@@ -88,6 +90,11 @@ Route4_EventScript_WaterStone_Grandson_14:
 
 StartWaterStoneBattle::
 	dowildbattle
+	return
+
+
+Route4_Itemball_Thunderbolt::
+	finditem ITEM_TM24
 	return
 
 
@@ -132,7 +139,7 @@ Route4_EventScript_WaterStone_Grandson_Text_2:
 	.string "your help. I need to harvest some of\l"
 	.string "this rock to process into water stones\l"
 	.string "but any attempt causes me to get\l"
-	.string "attacked by wild pokemon.$"
+	.string "attacked by wild Pokémon.$"
 
 Route4_EventScript_WaterStone_Grandson_Text_3:
 	.string "Could you fight them off while when I\n"

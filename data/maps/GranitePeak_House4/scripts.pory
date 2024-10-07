@@ -3,16 +3,17 @@ mapscripts GranitePeak_House4_MapScripts {}
 
 script GranitePeak_House4_OldMan_Quest {
     lock
+    faceplayer
     msgbox(format("A hoy hoy, how are you doing young one."))
     msgbox(format("Are you interested in learning about the ancient orbs?"), MSGBOX_YESNO)
     if (var(VAR_RESULT) == YES) {
         msgbox(format("It has been said their are 3 orbs that were created by the gods to seal away a terrible power."))
         msgbox(format("Each of the Orbs had the power from a god siphoned into it to keep the gateway sealed."))
-        msgbox(format("They got hidden deep away to prevent anyone coming stumbling across them to prevent anyone accidently releasing the destructive Pokemon."))
+        msgbox(format("They got hidden deep away to prevent anyone coming stumbling across them to prevent anyone accidently releasing the destructive Pokémon."))
         msgbox(format("Many strong trainers are exploring the world to try and find them to get this power for themselves but to no avail."))
         msgbox(format("I myself spent years hunting them down but never found them.\nNow I'm too old to continue searching."))
         msgbox(format("Feel free to check out my memoirs I've been writing down my lifes research in there, maybe you'll have better luck."))
-        // questmenu(QUEST_MENU_SET_ACTIVE, QUEST_LOCKED_GATEWAY)
+        questmenu(QUEST_MENU_SET_ACTIVE, QUEST_LOCKED_GATEWAY)
     } else {
         msgbox(format("Possibly another time then"))
     }
@@ -25,9 +26,9 @@ script GranitePeak_House4_AdamantOrb_Book {
     msgbox(format("My travels have led me to uncover countless mysteries and mythical legends. Yet, the fabled Adamant Orb has eluded me. Whispers of its existence have been carried on the winds of time, yet its true location remains shrouded in obscurity. As I pen down my findings and musings, I share these elusive clues with fellow seekers, hoping one day, the Adamant Orb's secrets will finally be revealed."))
     //Clue 1 It's on an altar on top of a mountain peak
     msgbox(format("Tales from seasoned travelers have long suggested that the Adamant Orb may find its sanctuary nestled amid towering peaks, concealed within the embrace of ancient mountains. I've trekked the highlands of numerous regions, where harsh terrain and biting winds only served to test the resolve of explorers. Could it be that the Adamant Orb rests upon an altar atop one of these majestic summits, a testament to the strength it embodies?"))
-    //Clue 2 A legendary pokemon blocks it dialga
+    //Clue 2 A legendary Pokémon blocks it dialga
     msgbox(format("The Adamant Orb is said to be watched over by a formidable and vigilant guardian, a legendary Pokémon whose might mirrors the orb's indomitable essence. This guardian may be guarding not just the orb itself but also the knowledge of its whereabouts. Ancient lore speaks of an unwavering protector who roams the rocky crags, vigilant and resolute. The key to the Adamant Orb's location might lie in deciphering the secrets held by this guardian, for they are the gatekeeper to the orb's sanctum."))
-    //Clue 3 Friendship to a pokemon - A pokemon holding a mega stone with full frienship maybe started pokemon?
+    //Clue 3 Friendship to a Pokémon - A Pokémon holding a mega stone with full frienship maybe started Pokémon?
     msgbox(format("Rumors persist of a tale surrounding the Adamant Orb, a bond of friendship that ties it to a specific Pokémon. Some say that the true seeker must forge a profound connection with a Pokémon that embodies the essence of determination and strength. This Pokémon, a beacon of unwavering loyalty, could hold the key to uncovering the path to the orb's hiding place."))
     msgbox(format("May the spirits of exploration and curiosity guide your path, and may you be the one to finally unravel the secret of the Adamant Orb, a testament to the unyielding strength that resides within the heart of the Pokémon world."))
     release
@@ -53,7 +54,7 @@ script GranitePeak_House4_GriseousOrb_Book {
     msgbox(format("Whispers from old maps and forgotten lore suggest that the Griseous Orb's sanctuary might dwell in a realm where the boundaries between worlds blur. It is said to be concealed within a veil of ghostly mists, a place where the living and the departed intermingle. The seeker must tread through ethereal realms where shadows play tricks upon the mind."))
     //clue 2 Tied more to souls and death
     msgbox(format("Wandering among forsaken places, I've encountered echoes of lost souls, mournful whispers of those who once sought the Griseous Orb's power. Seekers may find these echoes to be a guide or a warning, a reminder that the orb's powers are as elusive as the souls who sought them."))
-    //clue 3 it doesn't have a pokemon guarding it
+    //clue 3 it doesn't have a Pokémon guarding it
     msgbox(format("As I etch my final musings upon parchment, I pass the torch of exploration to the next brave soul who dares to venture into the mysteries of the Griseous Orb. Though my own journey remains inconclusive, I hope these clues will serve as the guiding light for others in search of the Griseous Orb's realm."))
     release
 }

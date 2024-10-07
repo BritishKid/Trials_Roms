@@ -1,0 +1,26 @@
+mapscripts Quarry_ForemanHouse_MapScripts {
+}
+
+script Quarry_Foreman_InHouse {
+    lockall
+    faceplayer
+    if(var(VAR_QUARRY_STATE) == 0) {
+        msgbox(format("We've had to close the Quarry due to the wild Pokémon running rampant"))
+    } 
+    elif (var(VAR_QUARRY_STATE) > 3) {
+        msgbox(format("I told you to stay out the Quarry, it's very dangerous right now."))
+    }
+    else {
+        if(!flag(FLAG_RECIEVED_PICKAXE)) {
+            msgbox(format("You're the one who cleared out the quarry and saved my men? That's amazing!"))
+            msgbox(format("Please take this as a thank you"))
+            //giveitem(ITEM_PICKAXE) create pickaxe
+            msgbox(format("It's a pickaxe you can use to break rocks, you won't have to use HMs any more!"))
+            msgbox(format("PICKAXE ISN'T IMPLEMENTED YET AND WILL COME IN FUTURE UPDATE"))
+        }
+        else {
+            msgbox(format("We are finally able to get back to work in the Quarry"))
+        }
+    }
+    releaseall
+}

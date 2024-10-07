@@ -1,0 +1,17 @@
+mapscripts DewfordTown_House2_MapScripts {
+    
+}
+
+script DewfordTown_House2_EventScript_Man {
+    lockall
+    if(flag(FLAG_RECEIVED_SS_TICKET)) {    
+        msgbox(format("Would you like to travel to Island 2?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES) {
+            warp(MAP_LILYCOVE_CITY_HARBOR, 8, 11, 3)
+        }
+    }
+    if(!flag(FLAG_RECEIVED_SS_TICKET)) {
+        msgbox(format("You need to have a ticket if you wish to travel on this boat."))
+    }
+    releaseall
+}

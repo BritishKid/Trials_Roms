@@ -11,7 +11,11 @@ Route8_RivalBattle_Flash::
 	msgbox Route8_RivalBattle_Flash_Text_1
 	msgbox Route8_RivalBattle_Flash_Text_2
 	msgbox Route8_RivalBattle_Flash_Text_3
-	trainerbattle_no_intro TRAINER_RIVAL_ROUTE9, Rival_Route9_Beaten
+	switch VAR_STARTER_MON
+	case 0, Route8_RivalBattle_Flash_3
+	case 1, Route8_RivalBattle_Flash_4
+	case 2, Route8_RivalBattle_Flash_5
+Route8_RivalBattle_Flash_1:
 	msgbox Route8_RivalBattle_Flash_Text_4
 	giveitem ITEM_HM05
 	playfanfare MUS_OBTAIN_TMHM
@@ -23,6 +27,23 @@ Route8_RivalBattle_Flash::
 	waitmovement 2
 	removeobject 2
 	release
+	return
+
+Route8_RivalBattle_Flash_3:
+	trainerbattle_no_intro TRAINER_RIVAL_ROUTE8_TYPHLOSION, Rival_Route9_Beaten
+	goto Route8_RivalBattle_Flash_1
+
+Route8_RivalBattle_Flash_4:
+	trainerbattle_no_intro TRAINER_RIVAL_ROUTE8_FERALIGATOR, Rival_Route9_Beaten
+	goto Route8_RivalBattle_Flash_1
+
+Route8_RivalBattle_Flash_5:
+	trainerbattle_no_intro TRAINER_RIVAL_ROUTE8_MEGANIUM, Rival_Route9_Beaten
+	goto Route8_RivalBattle_Flash_1
+
+
+Route8_ItemBall::
+	finditem ITEM_TM44
 	return
 
 
@@ -50,9 +71,9 @@ Route8_RivalBattle_Flash_Text_0:
 
 Route8_RivalBattle_Flash_Text_1:
 	.string "I'm just heading back to Bedrock town\n"
-	.string "to talk to Proffessor Holly, she wanted\l"
-	.string "a strong trainer to come and help her\l"
-	.string "and with 4 badges I should be more than\l"
+	.string "to talk to Professor Holly, she wanted a\l"
+	.string "strong trainer to come and help her and\l"
+	.string "with 4 badges I should be more than\l"
 	.string "strong enough.$"
 
 Route8_RivalBattle_Flash_Text_2:
@@ -62,7 +83,7 @@ Route8_RivalBattle_Flash_Text_2:
 Route8_RivalBattle_Flash_Text_3:
 	.string "How about I prove to you how strong I\n"
 	.string "am, I'll make it fair and use my new\l"
-	.string "Pokemon I just caught$"
+	.string "Pokémon I just caught$"
 
 Route8_RivalBattle_Flash_Text_4:
 	.string "If you insist on continuing on to the\n"

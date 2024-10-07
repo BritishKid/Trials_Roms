@@ -1,0 +1,66 @@
+mapscripts MauvilleCity_House1_MapScripts {
+    
+}
+
+script  MauvilleCity_Scientist_Pyukumuku {
+    lockall
+    faceplayer
+    msgbox(format("I've been researching Pyukumuku, they are a really fascinating Pokémon."))
+    if(var(VAR_PYUKUMUKUS_SAVED) == 0) {
+        msgbox(format("I've heard they like to climb onto land. If you could throw them back into the ocean and report back to me it would really help."))
+    } 
+    elif(var(VAR_PYUKUMUKUS_SAVED) > 3 && !flag(FLAG_PYUKUMUKU_PRIZE_1)) {
+        msgbox(format("You've found that many! Wow this will be fantastic help to me."))
+        msgbox(format("Please take this as thanks!"))
+        giveitem(ITEM_ABSORB_BULB)
+        playfanfare(MUS_OBTAIN_ITEM)
+        setflag(FLAG_PYUKUMUKU_PRIZE_1)
+        msgbox(format("Keep looking out I'm sure there is many more to find."))
+    }
+    elif(var(VAR_PYUKUMUKUS_SAVED) > 6 && !flag(FLAG_PYUKUMUKU_PRIZE_2)) {
+        msgbox(format("Wow you can't be stopped. I'm sure I'll be able to learn about therir abilities"))
+        msgbox(format("Please take this as thanks!"))
+        giveitem(ITEM_TM24)
+        playfanfare(MUS_OBTAIN_ITEM)
+        setflag(FLAG_PYUKUMUKU_PRIZE_2)
+        msgbox(format("Keep looking out I'm sure there is many more to find."))
+    }
+    elif(var(VAR_PYUKUMUKUS_SAVED) > 9 && !flag(FLAG_PYUKUMUKU_PRIZE_3)) {
+        msgbox(format("They must be everywhere, you've been such a good help! I'll get a reserch grant for sure"))
+        msgbox(format("Please take this as thanks!"))
+        giveitem(ITEM_TM52_SCALD)
+        playfanfare(MUS_OBTAIN_ITEM)
+        setflag(FLAG_PYUKUMUKU_PRIZE_3)
+        msgbox(format("Keep looking out I'm sure there is many more to find."))
+    }
+    elif(var(VAR_PYUKUMUKUS_SAVED) == 10 && !flag(FLAG_PYUKUMUKU_PRIZE_4)) {
+        msgbox(format("Still finding them? I've found out more than I thought possible. I've got a new grant and will be moving away soon!"))
+        msgbox(format("You've been such a great help you should have this!"))
+        setflag(P_FLAG_FORCE_SHINY)
+        givemon(SPECIES_PYUKUMUKU, 5, ITEM_ELECTRIC_SEED)
+        if (var(VAR_RESULT) == MON_GIVEN_TO_PARTY) {
+            msgbox("Recieved Pyukumuku")
+            setflag(FLAG_PYUKUMUKU_PRIZE_4)
+            call(NicknamePartyMon)
+        }
+        elif (var(VAR_RESULT) == MON_GIVEN_TO_PC) {
+            msgbox("Recieved Pyukumuku")
+            setflag(FLAG_PYUKUMUKU_PRIZE_4)
+            call(NicknameBoxMon)
+        }
+        else {
+            hidemonpic
+            msgbox(format("You don't have enough space. Come back and you get it soon."))
+        }
+        clearflag(P_FLAG_FORCE_SHINY)
+        playfanfare(MUS_OBTAIN_ITEM)
+    }
+    if(flag(FLAG_PYUKUMUKU_PRIZE_4)){
+        msgbox(format("I can't wait to move to my new lab!"))
+    }
+    else {
+        // msgbox(format("You've found  Pyukumukus so far.")) //work?
+        msgbox(format("Keep up the good work!"))
+    }
+    releaseall
+}

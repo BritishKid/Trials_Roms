@@ -92,9 +92,9 @@
 
 // Battle Outcome defines
 #define B_OUTCOME_WON                  1
-#define B_OUTCOME_LOST                 2
+#define B_OUTCOME_LOST                 2 
 #define B_OUTCOME_DREW                 3
-#define B_OUTCOME_RAN                  4
+#define B_OUTCOME_RAN                  4 //can we use this for something in boss battles
 #define B_OUTCOME_PLAYER_TELEPORTED    5
 #define B_OUTCOME_MON_FLED             6
 #define B_OUTCOME_CAUGHT               7

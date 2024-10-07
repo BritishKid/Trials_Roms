@@ -2,38 +2,47 @@ mapscripts WaterfallCave_MapScripts {}
 
 script WaterfallCave_BlackBelt1 {
     lock
+    faceplayer
     msgbox(format("Hi shrimp, you think you're tough enough to take us?"))
     release
 }
 
 script WaterfallCave_BlackBelt3 {
     lock
+    faceplayer
     msgbox(format("We've been training in here with our master for years."))
     release
 }
 
 script WaterfallCave_BlackBelt2 {
     lock
+    faceplayer
+    if(flag(FLAG_HIDE_PRE_BATTLE_1_THING)) {
     if(!flag(FLAG_BEATEN_WATERFALLCAVE_BLACKBELTS)) {
-        msgbox(format("Welcome to our waterfall. We are training here to unlock the full potential of our Pokemon. Do you want to join us in some battles?"), MSGBOX_YESNO) 
-        if(var(VAR_RESULT) == YES){
-            msgbox(format("Very good, go prepare yourself for battle."))
-            // questmenu(QUEST_MENU_SET_ACTIVE, QUEST_WATERFALL_CAVE)
-            applymovement(OBJ_EVENT_ID_PLAYER, Movement_WaterfallCave_PreparePlayer)
-            waitmovement(OBJ_EVENT_ID_PLAYER)
-            msgbox(format("Prepare yourself for the first challenge"))
-            applymovement(1, Movement_WaterfallCave_BlackBelt1Prepare)
-            waitmovement(1)
-            trainerbattle_no_intro(TRAINER_WATERFALL_CAVE_BLACKBELT_1, Waterfallcave_Blackbelt1_Outro)
-            call(WaterfallCave_BlackBelt1_Beaten)
-        }
-        else {
-            msgbox(format("Maybe another time then."))
+            msgbox(format("Welcome to our waterfall. We are training here to unlock the full potential of our Pokémon. Do you want to join us in some battles?"), MSGBOX_YESNO) 
+            if(var(VAR_RESULT) == YES){
+                msgbox(format("Very good, go prepare yourself for battle."))
+                questmenu(QUEST_MENU_SET_ACTIVE, QUEST_WATERFALL_CAVE)
+                applymovement(OBJ_EVENT_ID_PLAYER, Movement_WaterfallCave_PreparePlayer)
+                waitmovement(OBJ_EVENT_ID_PLAYER)
+                msgbox(format("Prepare yourself for the first challenge"))
+                applymovement(1, Movement_WaterfallCave_BlackBelt1Prepare)
+                waitmovement(1)
+                trainerbattle_no_intro(TRAINER_WATERFALL_CAVE_BLACKBELT_1, Waterfallcave_Blackbelt1_Outro)
+                call(WaterfallCave_BlackBelt1_Beaten)
+            }
+            else {
+                msgbox(format("Maybe another time then."))
+            }
+        } 
+        if(flag(FLAG_BEATEN_WATERFALLCAVE_BLACKBELTS)) {
+            call(WaterfallCave_Accept_MasterChallenge)
         }
     } 
-    if(flag(FLAG_BEATEN_WATERFALLCAVE_BLACKBELTS)) {
-        call(WaterfallCave_Accept_MasterChallenge)
+    else {
+        msgbox(format("That battle was amazing to watch"))
     }
+  
     release
 }
 
@@ -62,7 +71,7 @@ script WaterfallCave_BlackBelt3_Beaten {
 
 script WaterfallCave_BlackBelt2_Beaten {
     setflag(FLAG_BEATEN_WATERFALLCAVE_BLACKBELTS)
-    msgbox(format("You managed to beat all of us! We thought you might have beaten a few Pokemon but not this"))
+    msgbox(format("You managed to beat all of us! We thought you might have beaten a few Pokémon but not this"))
     msgbox(format("We think you could take on our Master. We train he in hopes to one day beat his challenge and recieve his prize but we never get close."))
     msgbox(format("You definately seem strong enough to beat him."))
     call(WaterfallCave_Accept_MasterChallenge)
@@ -79,6 +88,51 @@ script WaterfallCave_Accept_MasterChallenge {
         msgbox(format("Okay no problem, come back when you are ready."))
     }
     releaseall
+}
+
+
+script WaterfallCave_BlackBelt_PostWin {
+    lockall
+    faceplayer
+    msgbox(format("You're incredible dude you managed to beat the master!"))
+    releaseall
+}
+
+script WaterfallCave_Expert_PostWin {
+    lockall
+    faceplayer
+    if(flag(FLAG_WATERFALL_CAVE_CLEARED)) {
+        msgbox(format("I should fix the floor, loads of Unowns keeps flying out and causing us problems."))
+    }
+    if(!flag(FLAG_RECEIVED_TYROGUE)) {
+        call(GivePlayerTyrogueWaterfallCave)
+    }
+    if(!flag(FLAG_WATERFALL_CAVE_CLEARED)) {
+        msgbox(format("Wow our battle was so extreme is destroyed my dojo! Hopefully you didn't get hurt too much!"))
+        msgbox(format("But yes you deserve a reward! Here take this Pokémon"))
+        call(GivePlayerTyrogueWaterfallCave)
+        msgbox(format("We need to fix that floor though, the Unowns in that cave caused me problems getting out."))
+    }
+    releaseall
+}
+
+script GivePlayerTyrogueWaterfallCave {
+        givemon(SPECIES_TYROGUE, 5, ITEM_BLACK_BELT)
+        playfanfare(MUS_OBTAIN_ITEM)
+        if (var(VAR_RESULT) == MON_GIVEN_TO_PARTY) {
+            msgbox("Recieved Tyrogue")
+            call(NicknamePartyMon)
+        }
+        elif (var(VAR_RESULT) == MON_GIVEN_TO_PC) {
+            msgbox("Recieved Tyrogue")
+            call(NicknameBoxMon)
+        }
+        else {
+            hidemonpic
+            msgbox(format("You don't have enough space. Come back and you get it soon."))
+        }
+        setflag(FLAG_WATERFALL_CAVE_CLEARED)
+        setflag(FLAG_RECEIVED_TYROGUE)
 }
 
 //movement

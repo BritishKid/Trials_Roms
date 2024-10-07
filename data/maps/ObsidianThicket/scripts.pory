@@ -2,19 +2,31 @@ mapscripts ObsidianThicket_MapScripts {}
 
 
 script Katherine_ObsidianThicket1 {
-    trainerbattle_single(TRAINER_KATHERINE_OBSIDIAN_THICKET, Katherine_ObisidianThicket_Intro, Katherine_ObisidianThicket_Outro)
+    trainerbattle_single(TRAINER_KATHERINE_OBSIDIAN_THICKET, Katherine_ObisidianThicket_Intro, Katherine_ObisidianThicket_Outro, Increase_Trainers_Beaten)
     msgbox(PostBattle_Katherine_ObisidianThicket, MSGBOX_AUTOCLOSE)
 }
 
 script Derek_ObsidianThicket1 {
-    trainerbattle_single(TRAINER_DEREK_OBSIDIAN_THICKET, Derek_ObisidianThicket_Intro, Derek_ObisidianThicket_Outro)
+    trainerbattle_single(TRAINER_DEREK_OBSIDIAN_THICKET, Derek_ObisidianThicket_Intro, Derek_ObisidianThicket_Outro, Increase_Trainers_Beaten)
     msgbox(PostBattle_Derek_ObisidianThicket, MSGBOX_AUTOCLOSE)
 }
 
+script ObsidianThicket1_ItemBall {
+    finditem(ITEM_TM18) //raindance
+}
+
+script ObsidianThicket1_Ace_Marques {
+    trainerbattle_single(TRAINER_ACE_MARQUES, Derek_ObisidianThicket_Intro, Derek_ObisidianThicket_Outro, Increase_Trainers_Beaten)
+    msgbox(PostBattle_Derek_ObisidianThicket, MSGBOX_AUTOCLOSE)
+}
+
+script ObsidianThicket1_ItemBall_LinkingCable {
+    finditem(ITEM_LINKING_CORD)
+}
 
 //text
 text Katherine_ObisidianThicket_Intro {
-    format("Have you seen this big cuddly Pokemon I found?")
+    format("Have you seen this big cuddly Pokémon I found?")
 }
 
 text Katherine_ObisidianThicket_Outro{
@@ -34,5 +46,17 @@ text Derek_ObisidianThicket_Outro{
 }
 
 text PostBattle_Derek_ObisidianThicket {
+    format("If you find them please tell me")
+}
+
+text Marques_ObisidianThicket_Intro {
+    format("Hey let's have an intense battle!")
+}
+
+text Marques_ObisidianThicket_Outro{
+    format("Great battle let's do it again some time")
+}
+
+text PostBattle_Marques_ObisidianThicket {
     format("If you find them please tell me")
 }

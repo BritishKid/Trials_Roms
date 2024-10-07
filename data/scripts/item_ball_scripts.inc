@@ -2,14 +2,6 @@ Route102_EventScript_ItemPotion::
 	finditem ITEM_POTION
 	end
 
-Route103_EventScript_ItemGuardSpec::
-	finditem ITEM_GUARD_SPEC
-	end
-
-Route103_EventScript_ItemPPUp::
-	finditem ITEM_PP_UP
-	end
-
 Route104_EventScript_ItemPPUp::
 	finditem ITEM_PP_UP
 	end
@@ -355,11 +347,11 @@ GraniteCave_1F_EventScript_ItemEscapeRope::
 	end
 
 GraniteCave_B1F_EventScript_ItemPokeBall::
-	finditem ITEM_POKE_BALL
+	finditem ITEM_TM53_ROCK_SLIDE
 	end
 
 GraniteCave_B2F_EventScript_ItemRepel::
-	finditem ITEM_REPEL
+	finditem ITEM_NEVER_MELT_ICE
 	end
 
 GraniteCave_B2F_EventScript_ItemRareCandy::
@@ -378,21 +370,7 @@ FieryPath_EventScript_ItemTM06::
 	finditem ITEM_TM06
 	end
 
-MeteorFalls_1F_1R_EventScript_ItemTM23::
-	finditem ITEM_TM23
-	end
 
-MeteorFalls_1F_1R_EventScript_ItemFullHeal::
-	finditem ITEM_FULL_HEAL
-	end
-
-MeteorFalls_1F_1R_EventScript_ItemMoonStone::
-	finditem ITEM_MOON_STONE
-	end
-
-MeteorFalls_1F_1R_EventScript_ItemPPUP::
-	finditem ITEM_PP_UP
-	end
 
 MeteorFalls_B1F_2R_EventScript_ItemTM02::
 	finditem ITEM_TM02
@@ -488,10 +466,6 @@ MtPyre_2F_EventScript_ItemUltraBall::
 
 MtPyre_3F_EventScript_ItemSuperRepel::
 	finditem ITEM_SUPER_REPEL
-	end
-
-MtPyre_4F_EventScript_ItemSeaIncense::
-	finditem ITEM_SEA_INCENSE
 	end
 
 MtPyre_5F_EventScript_ItemLaxIncense::
@@ -644,10 +618,6 @@ MagmaHideout_2F_2R_EventScript_ItemFullRestore::
 
 MagmaHideout_3F_1R_EventScript_ItemNugget::
 	finditem ITEM_NUGGET
-	end
-
-MagmaHideout_3F_2R_EventScript_ItemPPMax::
-	finditem ITEM_PP_MAX
 	end
 
 MagmaHideout_4F_EventScript_ItemMaxRevive::

@@ -1,26 +1,26 @@
 mapscripts Route4b_MapScripts {
         MAP_SCRIPT_ON_TRANSITION {
-            setflag(FLAG_ROUTE4B_SALTS_BEATEN)
+            setflag(FLAG_HIDING_SALTS)
         if (var(VAR_SALTS7_QUEST_STATE) == 1) {
-            clearflag(FLAG_ROUTE4B_SALTS_BEATEN)
+            clearflag(FLAG_HIDING_SALTS)
         }
     }
 }
 
 script OstrichPuppetBattleScript {
-    trainerbattle_single(ROUTE4_OSTRICHPUPPET, OstrichPuppet_Intro, OstrichPuppet_Outro)
+    trainerbattle_single(ROUTE4_OSTRICHPUPPET, OstrichPuppet_Intro, OstrichPuppet_Outro, Increase_Trainers_Beaten)
     msgbox(OstrichPuppet_PostBattle, MSGBOX_AUTOCLOSE)
     end
 }
 
 script Route4_BlackbeltOda_BattleScript {
-    trainerbattle_single(ROUTE4_ODA_BLACKBELT, Route4_Blackbelt_Intro, Route4_Blackbelt_Outro)
+    trainerbattle_single(ROUTE4_ODA_BLACKBELT, Route4_Blackbelt_Intro, Route4_Blackbelt_Outro, Increase_Trainers_Beaten)
     msgbox(Route4_Blackbelt_PostBattle, MSGBOX_AUTOCLOSE)
     end
 }
 
 script LihsirBattleScript {
-    trainerbattle_single(ROUTE4_LIHSIR, Lihsir_Intro, Lihsir_Outro)
+    trainerbattle_single(ROUTE4_LIHSIR, Lihsir_Intro, Lihsir_Outro, Increase_Trainers_Beaten)
     msgbox(Lihsir_PostBattle, MSGBOX_AUTOCLOSE)
     end
 }
@@ -53,12 +53,12 @@ script Route4b_Salts7Battle {
 
 script Route4b_Salt7_PostBattle {
     msgbox(format("You're getting powerful! But have you heard about Dragon Lake?"))
-    msgbox(format("It's home to the most powerful Dragon Pokemon and that must mean it's perfect to tarin my Gyrados! I'll be unstoppable soon enough!"))
+    msgbox(format("It's home to the most powerful Dragon Pokémon and that must mean it's perfect to tarin my Gyrados! I'll be unstoppable soon enough!"))
     applymovement(3, Movement_Route4b_Salts7_MoveAway)
     waitmovement(3)
     removeobject(3)
-    setflag(FLAG_ROUTE4B_SALTS_BEATEN)
-    // subquestmenu(QUEST_MENU_COMPLETE_QUEST, QUEST_POKEMON_LEAGUE, SUB_QUEST_SALT_EVOLVING)
+    setflag(FLAG_HIDING_SALTS)
+    subquestmenu(QUEST_MENU_COMPLETE_QUEST, QUEST_POKEMON_LEAGUE, SUB_QUEST_SALT_EVOLVING)
     setvar(VAR_SALTS7_QUEST_STATE, 2)
     releaseall
 }
@@ -113,18 +113,6 @@ text OstrichPuppet_PostBattle {
     format("I just need an ACRO BIKE to cross over")
 }
 
-text Lihsir_Intro {
-    format("TODO")
-}
-
-text Lihsir_Outro {
-    format("TODO")
-}
-
-text Lihsir_PostBattle {
-    format("TODO")
-}
-
 text Salts7Route4b_Intro {
     format("Let me show you how great my team of Gyrados is!")
 }
@@ -142,5 +130,18 @@ text Route4_Blackbelt_Outro {
 }
 
 text Route4_Blackbelt_PostBattle {
-    format("Martial artists from all over the world are goign to come here to explore the old dojos")
+    format("Martial artists from all over the world are going to come here to explore the old dojos")
+}
+
+//ai genned
+text Lihsir_Intro {
+    format("Greetings, trainer! I am Lihsir, drawn to the serene flow of the river for a Pokémon battle. Shall we let our spirits dance with the current?")
+}
+
+text Lihsir_Outro {
+    format("A beautiful battle, indeed! Your skills flow gracefully like the river. May your journey be as harmonious and serene.")
+}
+
+text Lihsir_PostBattle {
+    format("A wonderful battle! If you ever want to share the tranquility of river-side battles or simply converse by the water, find me along your journey.")
 }

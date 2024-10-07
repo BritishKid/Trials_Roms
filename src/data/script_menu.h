@@ -16,6 +16,13 @@ static const struct MenuAction MultichoiceList_EnterInfo[] =
     {gText_Exit},
 };
 
+static const struct MenuAction MultichoiceList_Starter[] =
+{
+    {gText_Starter1},
+    {gText_Starter2},
+    {gText_Starter3}
+};
+
 static const struct MenuAction MultichoiceList_ContestInfo[] =
 {
     {gText_WhatsAContest},
@@ -796,7 +803,7 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_BASE_PC_WITH_REGISTRY]      = MULTICHOICE(MultichoiceList_BasePCWithRegistry),
     [MULTI_REGISTER_MENU]              = MULTICHOICE(MultichoiceList_RegisterMenu),
     [MULTI_SSTIDAL_LILYCOVE]           = MULTICHOICE(MultichoiceList_Exit),
-    [MULTI_UNUSED_9]                   = MULTICHOICE(MultichoiceList_Exit),
+    [MULTI_STARTER_SELECTION]                   = MULTICHOICE(MultichoiceList_Starter),
     [MULTI_UNUSED_10]                  = MULTICHOICE(MultichoiceList_Exit),
     [MULTI_FRONTIER_PASS_INFO]         = MULTICHOICE(MultichoiceList_FrontierPassInfo),
     [MULTI_BIKE]                       = MULTICHOICE(MultichoiceList_Bike),

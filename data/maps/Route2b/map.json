@@ -26,19 +26,6 @@
   ],
   "object_events": [
     {
-      "graphics_id": "OBJ_EVENT_GFX_BRENDAN_NORMAL",
-      "x": 13,
-      "y": 12,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "EventScript_Route2_Robert_FindLater",
-      "flag": "0"
-    },
-    {
       "graphics_id": "OBJ_EVENT_GFX_FISHERMAN",
       "x": 8,
       "y": 17,
@@ -95,15 +82,7 @@
     }
   ],
   "coord_events": [
-    {
-      "type": "trigger",
-      "x": 10,
-      "y": 31,
-      "elevation": 0,
-      "var": "VAR_ROBERT_STATE",
-      "var_value": "0",
-      "script": "EventScript_Route2_MeetRob"
-    }
+
   ],
   "bg_events": [
 

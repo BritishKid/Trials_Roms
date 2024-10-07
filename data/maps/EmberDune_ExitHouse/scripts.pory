@@ -1,1 +1,48 @@
 mapscripts EmberDune_ExitHouse_MapScripts {}
+
+script RuinManiac_EmberDune_Suggestion {
+    lockall
+    faceplayer
+    msgbox(format("Apparently there is a lot of ruins from an old civilisation in the Ember Dunes but I couldn't find a way past. I'm training up to get enough Gym Badges to use Strength"))
+    releaseall
+}
+
+script GhostGymHelper_EmberDune {
+    //todo add option if box full so you can still get miltank if
+    setflag(FLAG_INVERSE_BATTLE_ON)
+    trainerbattle_single(EMBERDUNE_GARY, Gary_Intro, Gary_Outro, Gary_Postbattle_Script)
+    msgbox(Gary_PostBattle, MSGBOX_AUTOCLOSE)
+    clearflag(FLAG_INVERSE_BATTLE_ON)
+    release
+}
+
+script Gary_Postbattle_Script {
+    msgbox(format("Incredible!"))
+    givemon(SPECIES_MILTANK, 30, ITEM_ABILITY_CAPSULE) //todo have to start with ability scrappy
+    playfanfare(MUS_OBTAIN_ITEM)
+        if (var(VAR_RESULT) == MON_GIVEN_TO_PARTY) {
+                msgbox("Recieved Miltank")
+                call(NicknamePartyMon)
+            }
+            elif (var(VAR_RESULT) == MON_GIVEN_TO_PC) {
+                msgbox("Recieved Miltank")
+                call(NicknameBoxMon)
+            }
+            else {
+        msgbox(format("You don't have enough space. Come back and you get it soon."))
+    }
+    msgbox(format("Miltank can get the ability Scrappy, it allows it to hit Ghost type Pokémon. It will be very useful."))
+}
+
+//text
+text Gary_Intro {
+    format("The Ember Dunes gym is full of storng ghost Pokémon, if you want to beat the gym you'll need to prepare. If you can beat my inverse team I'll give you something to help")
+}
+
+text Gary_Outro {
+    format("That surprised me!")
+}
+
+text Gary_PostBattle {
+    format("Scrappy allows any more to hit Ghost types.")
+}

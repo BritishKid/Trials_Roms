@@ -18,7 +18,7 @@
     },
     {
       "map_section": "MAPSEC_DEWFORD_TOWN",
-      "name": "DEWFORD TOWN",
+      "name": "ISLAND 3",
       "x": 2,
       "y": 14,
       "width": 1,
@@ -42,7 +42,7 @@
     },
     {
       "map_section": "MAPSEC_VERDANTURF_TOWN",
-      "name": "VERDANTURF TOWN",
+      "name": "EMBER VILLAGE",
       "x": 4,
       "y": 6,
       "width": 1,
@@ -74,7 +74,7 @@
     },
     {
       "map_section": "MAPSEC_MAUVILLE_CITY",
-      "name": "MAUVILLE CITY",
+      "name": "OCEAN CLIFF",
       "x": 8,
       "y": 6,
       "width": 2,
@@ -90,7 +90,7 @@
     },
     {
       "map_section": "MAPSEC_CORAL_PORT",
-      "name": "SANDS COAST",
+      "name": "CORAL PORT",
       "x": 12,
       "y": 0,
       "width": 1,
@@ -98,7 +98,7 @@
     },
     {
       "map_section": "MAPSEC_LILYCOVE_CITY",
-      "name": "LILYCOVE CITY",
+      "name": "MARBLE PORT",
       "x": 18,
       "y": 3,
       "width": 2,
@@ -106,7 +106,7 @@
     },
     {
       "map_section": "MAPSEC_MOSSDEEP_CITY",
-      "name": "MOSSDEEP CITY",
+      "name": "HEMLOCK TOWN",
       "x": 24,
       "y": 5,
       "width": 2,
@@ -138,7 +138,7 @@
     },
     {
       "map_section": "MAPSEC_ROUTE_102",
-      "name": "ROUTE 102",
+      "name": "MAHOGANY HILLS",
       "x": 2,
       "y": 9,
       "width": 2,
@@ -1152,7 +1152,7 @@
     },
     {
       "map_section": "MAPSEC_ONE_ISLAND",
-      "name": "ONE ISLAND",
+      "name": "CORAL BEACH",
       "x": 0,
       "y": 0,
       "width": 1,
@@ -1449,7 +1449,7 @@
     },
     {
       "map_section": "MAPSEC_DOTTED_HOLE",
-      "name": "DOTTED HOLE",
+      "name": "FLOWER GLADE",
       "x": 0,
       "y": 0,
       "width": 1,
@@ -1465,7 +1465,7 @@
     },
     {
       "map_section": "MAPSEC_PATTERN_BUSH",
-      "name": "PATTERN BUSH",
+      "name": "QUARRY",
       "x": 0,
       "y": 0,
       "width": 1,

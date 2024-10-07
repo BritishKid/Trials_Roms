@@ -139,7 +139,7 @@ RustboroCity_Movement_ScientistLeave:
 RustboroCity_EventScript_FatMan::
 	lock
 	faceplayer
-	goto_if_set FLAG_DEVON_GOODS_STOLEN, RustboroCity_EventScript_FatManSawGrunt
+	goto_if_set FLAG_MAT_ID, RustboroCity_EventScript_FatManSawGrunt
 	msgbox RustboroCity_Text_WeShortenItToDevon, MSGBOX_DEFAULT
 	release
 	end
@@ -306,10 +306,10 @@ RustboroCity_EventScript_StolenGoodsScene::
 	fadedefaultbgm
 	removeobject LOCALID_DEVON_EMPLOYEE
 	setobjectxyperm LOCALID_DEVON_EMPLOYEE, 30, 10
-	clearflag FLAG_HIDE_RUSTBORO_CITY_DEVON_EMPLOYEE_1
-	setflag FLAG_DEVON_GOODS_STOLEN
+	clearflag FLAG_HIDE_STEELIX
+	setflag FLAG_MAT_ID
 	setvar VAR_RUSTBORO_CITY_STATE, 2
-	setvar VAR_RUSTURF_TUNNEL_STATE, 2
+	setvar VAR_EMBERDUNES_BUTTONS_PRESSED, 2
 	setvar VAR_ROUTE116_STATE, 1
 	clearflag FLAG_HIDE_ROUTE_116_MR_BRINEY
 	clearflag FLAG_HIDE_RUSTURF_TUNNEL_PEEKO
@@ -467,7 +467,7 @@ RustboroCity_Movement_EmployeeApproachPlayerFar:
 RustboroCity_EventScript_DevonEmployee1::
 	lock
 	faceplayer
-	goto_if_set FLAG_RECOVERED_DEVON_GOODS, RustboroCity_EventScript_ReturnGoodsSpokeToEmployee
+	goto_if_set FLAG_MAT_ID_RETURNED, RustboroCity_EventScript_ReturnGoodsSpokeToEmployee
 	msgbox RustboroCity_Text_ShadyCharacterTookOffTowardsTunnel, MSGBOX_DEFAULT
 	release
 	end
@@ -605,7 +605,7 @@ RustboroCity_EventScript_ReturnGoods::
 	msgbox RustboroCity_Text_PleaseComeWithMe, MSGBOX_DEFAULT
 	closemessage
 	setflag FLAG_RETURNED_DEVON_GOODS
-	setflag FLAG_HIDE_RUSTBORO_CITY_DEVON_EMPLOYEE_1
+	setflag FLAG_HIDE_STEELIX
 	setvar VAR_RUSTBORO_CITY_STATE, 5
 	delay 30
 	warp MAP_RUSTBORO_CITY_DEVON_CORP_3F, 2, 2

@@ -1,13 +1,13 @@
 mapscripts Route3b_MapScripts {}
 
 script GBattleScript {
-    trainerbattle_single(ROUTE3G, G_Intro, G_Outro)
+    trainerbattle_single(ROUTE3G, G_Intro, G_Outro, Increase_Trainers_Beaten)
     msgbox(G_PostBattle, MSGBOX_AUTOCLOSE)
     end
 }
 
 script SurpirseBattleScript {
-    trainerbattle_single(ROUTE3_HIDDEN, Route3Hidden_Intro, Route3Hidden_Outro, SurpriseTrainerPostScript)
+    trainerbattle_single(ROUTE3_HIDDEN, Route3Hidden_Intro, Route3Hidden_Outro, SurpriseTrainerPostScript, Increase_Trainers_Beaten)
     msgbox(Route3Hidden_PostBattle, MSGBOX_AUTOCLOSE)
     end
 }   
@@ -19,12 +19,16 @@ script SurpriseTrainerPostScript {
 
 script CharmanderGrotto {
     if (var(VAR_HIDDEN_MOUNTAIN_PASS) == 1) {
-        msgbox(format("You think you can see some pokemon running around."))
+        msgbox(format("You think you can see some Pokémon running around."))
         msgbox(format("Do you want to try and squeeze through the gap?"), MSGBOX_YESNO)
         if (var(VAR_RESULT) == 1) { 
             warp(MAP_CHARMANDER_GROTTO, 5, 9)
         }
     }
+}
+
+script Route3b_Itemball_ChoiceBand {
+    finditem(ITEM_CHOICE_BAND)
 }
 
 
@@ -35,11 +39,11 @@ text G_Intro {
 }
 
 text G_Outro {
-    format("I'll have to catch stronger Pokemon then.")
+    format("I'll have to catch stronger Pokémon then.")
 }
 
 text G_PostBattle {
-    format("I've heard some really powerful Pokemon hide near the peak.")
+    format("I've heard some really powerful Pokémon hide near the peak.")
 }
 
 text Route3Hidden_Intro {
@@ -47,7 +51,7 @@ text Route3Hidden_Intro {
 }
 
 text Route3Hidden_Outro {
-    format("It should be nearby")
+    format("That explosion blew the band right off my Graveller")
 }
 
 text Route3Hidden_PostBattle {

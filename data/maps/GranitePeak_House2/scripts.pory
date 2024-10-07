@@ -4,6 +4,7 @@ mapscripts GranitePeak_House2_MapScripts {
 
 script GranitePeak_House2_EventScript_SchoolKid {
     lock
+    faceplayer
     msgbox(format("The trainer school is full of so many powerful trainers. I passed all the classes but still couldn't make it through the first round"))
     if(flag(FLAG_TRAINER_TOURNAMENT_WON) && !flag(FLAG_RECEIVED_TM10)) {
        msgbox(format("Oh wow you managed to beat the tournament! You're incredible")) 
@@ -12,6 +13,7 @@ script GranitePeak_House2_EventScript_SchoolKid {
        msgbox(format("Take this I'm sure you'll have a great use for it."))
        giveitem(ITEM_TM10)
        setflag(FLAG_RECEIVED_TM10)
+       msgbox(format("It's Hidden Power, a move that changes for every Pokémon!"))
     }
     if(flag(FLAG_TRAINER_TOURNAMENT_WON) && flag(FLAG_RECEIVED_TM10)) {
         msgbox(format("I'm training every day to improve"))
@@ -23,6 +25,8 @@ script GranitePeak_House2_EventScript_SchoolKid {
 }
 
 script GranitePeak_House2_EventScript_Woman {
+    lockall
+    faceplayer
     msgbox(format("My husband is a brilliant trainer, he's always off finding ways to improve."))
     if(!flag(FLAG_RECIEVE_CHARCOAL)) {
         msgbox(format("Last time he came with a lot of these, here have one."))
@@ -33,4 +37,5 @@ script GranitePeak_House2_EventScript_Woman {
     if(flag(FLAG_RECIEVE_CHARCOAL)) {
         msgbox(format("If you every find him be prepared for a tough fight."))
     }
+    releaseall
 }

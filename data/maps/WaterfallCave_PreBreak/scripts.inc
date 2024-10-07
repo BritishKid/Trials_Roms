@@ -20,7 +20,7 @@ WaterfallCave_Master_PreBreak::
 
 WaterfallCave_Master_Beaten::
 	msgbox WaterfallCave_Master_Beaten_Text_0
-	setflag FLAG_WATERFALL_CAVE_CLEARED
+	clearflag FLAG_HIDE_PRE_BATTLE_1_THING
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_WaterfallCave_Shock
 	waitmovement OBJ_EVENT_ID_PLAYER
 	setvar VAR_0x8004, 1

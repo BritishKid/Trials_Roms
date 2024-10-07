@@ -15,7 +15,7 @@
   "connections": 0,
   "object_events": [
     {
-      "graphics_id": "OBJ_EVENT_GFX_BOY_3",
+      "graphics_id": "OBJ_EVENT_GFX_SCHOOL_KID_M",
       "x": 6,
       "y": 2,
       "elevation": 0,
@@ -91,7 +91,7 @@
       "x": 6,
       "y": 4,
       "elevation": 0,
-      "var": "VAR_ENTERED_SCHOOL",
+      "var": "VAR_MAT_STATE",
       "var_value": "0",
       "script": "Petalburgcity_School_Enter_Left"
     },
@@ -100,7 +100,7 @@
       "x": 7,
       "y": 4,
       "elevation": 0,
-      "var": "VAR_ENTERED_SCHOOL",
+      "var": "VAR_MAT_STATE",
       "var_value": "0",
       "script": "Petalburgcity_School_Enter_Right"
     }
@@ -153,6 +153,14 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "GranitePeak_School_TrophyCase"
+    },
+    {
+      "type": "sign",
+      "x": 11,
+      "y": 2,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "NULL"
     }
   ]
 }

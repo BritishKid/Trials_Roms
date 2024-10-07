@@ -38,7 +38,7 @@
     },
     {
       "x": 4,
-      "y": 21,
+      "y": 22,
       "elevation": 3,
       "dest_map": "MAP_GRANITE_CAVE_1F",
       "dest_warp_id": "2"
@@ -55,7 +55,7 @@
       "y": 21,
       "elevation": 3,
       "dest_map": "MAP_GRANITE_CAVE_B2F",
-      "dest_warp_id": "1"
+      "dest_warp_id": "0"
     },
     {
       "x": 8,

@@ -1042,7 +1042,7 @@ static u8 Debug_CheckToggleFlags(u8 id)
             result = FlagGet(FLAG_SYS_B_DASH);
             break;
         case DEBUG_FLAGVAR_MENU_ITEM_TOGGLE_LOCATIONS:
-            result = FlagGet(FLAG_VISITED_OLDALE_TOWN) &&
+            result = FlagGet(FLAG_VISITED_CLAY_HAVEN) &&
                 FlagGet(FLAG_VISITED_DEWFORD_TOWN) &&
                 FlagGet(FLAG_VISITED_LAVARIDGE_TOWN) &&
                 FlagGet(FLAG_VISITED_FALLARBOR_TOWN) &&
@@ -1584,7 +1584,7 @@ static void DebugAction_Util_HealParty(u8 taskId)
 static void DebugAction_Util_Fly(u8 taskId)
 {
     FlagSet(FLAG_VISITED_BEDROCK_TOWN);
-    FlagSet(FLAG_VISITED_OLDALE_TOWN);
+    FlagSet(FLAG_VISITED_CLAY_HAVEN);
     FlagSet(FLAG_VISITED_DEWFORD_TOWN);
     FlagSet(FLAG_VISITED_LAVARIDGE_TOWN);
     FlagSet(FLAG_VISITED_FALLARBOR_TOWN);
@@ -2380,7 +2380,7 @@ static void DebugAction_FlagsVars_ToggleFlyFlags(u8 taskId)
         PlaySE(SE_PC_OFF);
 
         FlagClear(FLAG_VISITED_BEDROCK_TOWN);
-        FlagClear(FLAG_VISITED_OLDALE_TOWN);
+        FlagClear(FLAG_VISITED_CLAY_HAVEN);
         FlagClear(FLAG_VISITED_DEWFORD_TOWN);
         FlagClear(FLAG_VISITED_LAVARIDGE_TOWN);
         FlagClear(FLAG_VISITED_FALLARBOR_TOWN);
@@ -2403,7 +2403,7 @@ static void DebugAction_FlagsVars_ToggleFlyFlags(u8 taskId)
         PlaySE(SE_PC_LOGIN);
 
         FlagSet(FLAG_VISITED_BEDROCK_TOWN);
-        FlagSet(FLAG_VISITED_OLDALE_TOWN);
+        FlagSet(FLAG_VISITED_CLAY_HAVEN);
         FlagSet(FLAG_VISITED_DEWFORD_TOWN);
         FlagSet(FLAG_VISITED_LAVARIDGE_TOWN);
         FlagSet(FLAG_VISITED_FALLARBOR_TOWN);

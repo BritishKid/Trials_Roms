@@ -1,0 +1,63 @@
+mapscripts DeeperQuarryEnd_MapScripts {}
+
+
+script Steelix_Encounter_Quarry {
+    lockall
+    msgbox(format("Let's pretend this is a steelix sprite!"))
+    playmoncry(SPECIES_STEELIX, CRY_MODE_ENCOUNTER)
+    call(GiantSteelixEncounter)
+    call(FallenWorkerComesIn)
+    call(MegaSteelixEncounter_Quarry)
+    clearflag(FLAG_CANT_CATCH_MON)
+    msgbox(format("Wow you're incredible how did you manage to beat him?"))
+    msgbox(format("Where the Steelix was you find an item"))
+    giveitem(ITEM_STEELIXITE, 1)
+    playfanfare(MUS_OBTAIN_ITEM)
+    setvar(VAR_QUARRY_STATE, 3)// beaten steelix
+    setflag(FLAG_HIDE_STEELIX)
+    releaseall
+}
+
+script FallenWorker_Injured {
+    lockall
+    if(!flag(FLAG_HIDE_STEELIX)){
+        msgbox(format("Oh someone else foolish enough to come down here?\pI went to try and clear away the Pokémon that was causing problems but it was too strong for me!"))
+    } else {
+        msgbox(format("You're an incredible trainer, remind me to keep my distance."))
+    }
+    releaseall
+}
+
+script GiantSteelixEncounter {
+    msgbox(format("The giant STEELIX lunges at you!"))
+    setflag(FLAG_CANT_CATCH_MON)
+    settotemboost(1, 0, 1,0, 0, 0, 0, 0)
+    setwildbattle(SPECIES_STEELIX, 40, ITEM_SITRUS_BERRY)
+    dowildbattle
+}
+
+script FallenWorkerComesIn {
+    setobjectxy(2, 9, 18)
+    msgbox(format("That wasn't the Steelix I remember seeing! That was far too small, like a child!"))
+    playmoncry(SPECIES_STEELIX, CRY_MODE_ENCOUNTER)
+}
+
+script MegaSteelixEncounter_Quarry {
+    fadescreen(FADE_TO_BLACK)
+    removeobject(1)
+    msgbox(format("An even larger STEELIX comes out the dark towards you!"))
+    settotemboost(1, 1, 2, 1, 0, 2, 0, 0)
+    setwildbattle(SPECIES_STEELIX_MEGA, 45, ITEM_STEELIUM_Z)
+    dowildbattle
+}
+
+script QuarryEnd_FallDeeper {
+    lockall
+    msgbox(format("You see somethhing sparkling, do you want to reach for it?"), MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES) {
+        msgbox(format("You lose your footing trynig to reach out"))
+        fadescreen(FADE_TO_BLACK)
+        warp(MAP_QUARRY_SECRET, 3, 5)
+    }
+    releaseall
+}

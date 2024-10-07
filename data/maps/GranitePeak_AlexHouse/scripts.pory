@@ -1,0 +1,21 @@
+mapscripts GranitePeak_AlexHouse_MapScripts {}
+
+//todo expand on this to support history arceus quest
+script AlexHistoryBoy {
+    lockall
+    faceplayer
+    if(!flag(FLAG_ALEX_MET)){
+        msgbox(format("Hi I'm Alex! I'm trying to learn about some of the hidden mysteries of the Triver region, I've heard word about some interesting enscryptions at Platefall Cave near Clay Haven"))
+    }
+    if(flag(FLAG_ALEX_MET) && !flag(FLAG_LEGENDS_PLATE_FOUND)) {
+        msgbox(format("Hello again! How have your travels been?"))
+        msgbox(format("I've been trying to read up on my theory of this key we need and I'm seeing many references to a mountain that formed when the plates fell")
+        msgbox(format("Granite Peak is one of the youngest mountains to form, so I'm gearing up to start looking around here!"))
+        )
+    }
+    if(flag(FLAG_LEGENDS_PLATE_FOUND)) {
+        msgbox(format("Tips on where to find plates will be here!"))
+    }
+
+    releaseall
+}

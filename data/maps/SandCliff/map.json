@@ -20,7 +20,7 @@
     },
     {
       "map": "MAP_DRAGON_LAKE",
-      "offset": 14,
+      "offset": 15,
       "direction": "right"
     },
     {
@@ -52,6 +52,13 @@
 
   ],
   "bg_events": [
-
+    {
+      "type": "hidden_item",
+      "x": 5,
+      "y": 6,
+      "elevation": 0,
+      "item": "ITEM_LEAF_STONE",
+      "flag": "FLAG_HIDDEN_ITEM_CORAL_CLIFF_LEAF_STONE"
+    }
   ]
 }

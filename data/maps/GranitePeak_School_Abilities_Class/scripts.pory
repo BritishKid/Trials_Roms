@@ -4,7 +4,7 @@ mapscripts GranitePeak_School_Abilities_Class_MapScripts {}
 script GranitePeak_AbilityClass_Teacher {
     lockall
     if(var(VAR_ABILITY_ROOM_STUDENTS) <=2) {
-        msgbox(format("Abilities are what make some Pokemon stronger than others."))
+        msgbox(format("Abilities are what make some Pokémon stronger than others."))
         msgbox(format("Speak to some of my students and learn what you can and when you are ready you can take my test."))
     } 
     if (var(VAR_ABILITY_ROOM_STUDENTS) == 3) {
@@ -26,7 +26,7 @@ script GranitePeak_AbilityClass_Teacher {
 
 script GranitePeak_School_Ability_Quiz {
     setvar(VAR_PREVENT_LOOPS_SCHOOL, 0)
-    msgbox(format("Question 1. \n When Pokemon evolve they always keep their ability?"), MSGBOX_YESNO)
+    msgbox(format("Question 1. \n When Pokémon evolve they always keep their ability?"), MSGBOX_YESNO)
     if(var(VAR_RESULT) == NO && var(VAR_PREVENT_LOOPS_SCHOOL) == 0) {
         //correct
         msgbox(format("Correct! Well done"))
@@ -54,7 +54,7 @@ script GranitePeak_School_Ability_Quiz {
     }
     if(var(VAR_RESULT) == YES && var(VAR_PREVENT_LOOPS_SCHOOL) == 0) {
         //wrong
-        msgbox(format("Sorry that's wrong, sometimes Pokemon don't share abilities with their evolutions."))
+        msgbox(format("Sorry that's wrong, sometimes Pokémon don't share abilities with their evolutions."))
         call(GranitePeak_School_AbilityQuiz_Failed)
     }
 }
@@ -65,7 +65,7 @@ script GranitePeak_School_AbilityQuiz_Passed {
     msgbox(format("Congratulations to you all you've passed. Here take these."))
     playfanfare(MUS_OBTAIN_ITEM)
     setflag(FLAG_ABILITY_PATCH_EARNT)
-    // subquestmenu(QUEST_MENU_COMPLETE_QUEST, QUEST_POKEMON_LEAGUE, SUB_QUEST_SCHOOL_ABILITY_PATCH)
+    subquestmenu(QUEST_MENU_COMPLETE_QUEST, QUEST_POKEMON_LEAGUE, SUB_QUEST_SCHOOL_ABILITY_PATCH)
     msgbox(format("I think you should also have these!"))
     playfanfare(MUS_OBTAIN_ITEM)
     giveitem(ITEM_ABILITY_CAPSULE, 2)
@@ -103,12 +103,13 @@ script AbilityStudent_Beaten {
     if (var(VAR_ABILITY_ROOM_STUDENTS) == 0) {
         setvar(VAR_ABILITY_ROOM_STUDENTS, 1)
     }
+    call(Increase_Trainers_Beaten)
 }
 
 //text scripts
 
 text AbilityBoy1_Intro {
-    format("Abilities can allow pokemon to gain new resitences or immunities")
+    format("Abilities can allow Pokémon to gain new resitences or immunities")
 }
 
 text AbilityBoy1_Outro {

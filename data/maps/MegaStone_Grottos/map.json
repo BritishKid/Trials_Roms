@@ -78,14 +78,14 @@
     },
     {
       "x": 48,
-      "y": 16,
+      "y": 14,
       "elevation": 0,
       "dest_map": "MAP_TREECKO_GROTTO",
       "dest_warp_id": "0"
     },
     {
       "x": 49,
-      "y": 16,
+      "y": 14,
       "elevation": 0,
       "dest_map": "MAP_TREECKO_GROTTO",
       "dest_warp_id": "0"

@@ -109,7 +109,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Route116_EventScript_ItemEther",
-      "flag": "FLAG_ITEM_ROUTE_116_ETHER"
+      "flag": "FLAG_ITEM_OBSIDIAN_THICKET_LINK_CORD"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
@@ -122,7 +122,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Route116_EventScript_ItemRepel",
-      "flag": "FLAG_ITEM_ROUTE_116_REPEL"
+      "flag": "FLAG_ITEM_FLOWERGLADE_TM22"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
@@ -213,7 +213,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Route116_EventScript_ItemHPUp",
-      "flag": "FLAG_ITEM_ROUTE_116_HP_UP"
+      "flag": "FLAG_ITEM_FLOWERGLADE_ABSORB_BULB"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_LASS",

@@ -2,7 +2,7 @@ mapscripts MegaStone_Grottos_MapScripts {}
 
 script MegaStone_Grotto_EventScript_Blastoise_MegaStone {
     lock
-    if(flag(FLAG_BLASTOISE_MEGASTONE_FOUND)) {
+    if(!flag(FLAG_BLASTOISE_MEGASTONE_FOUND)) {
         msgbox(format("There seems to be a blue marble like object on the altar"))
         playmoncry(SPECIES_BLASTOISE, CRY_MODE_ENCOUNTER)
         applymovement(OBJ_EVENT_ID_PLAYER, Movement_MegaStoneGrotto_PlayerSurpisedFaceDown)
@@ -21,12 +21,14 @@ script MegaStone_Grotto_EventScript_Blastoise_MegaStone {
 
 script BlastoiseMegaBattle {
     settotemboost(1, 0, 2, 0, 1, 2, 0, 0)
+    setflag(FLAG_CANT_CATCH_MON)
     setwildbattle(SPECIES_BLASTOISE_MEGA, 45)
     dowildbattle
 }
 
 script BlastoiseMegaBeaten {
     removeobject(1)
+    clearflag(FLAG_CANT_CATCH_MON)
     msgbox(format("The Blastoise retreats"))
     applymovement(OBJ_EVENT_ID_PLAYER, Movement_MegaStoneGrotto_FaceUpPlayer)
     msgbox(format("You take the marble from the atlar"))
@@ -36,7 +38,7 @@ script BlastoiseMegaBeaten {
 
 script MegaStone_Grotto_EventScript_Charizard_MegaStone {
     lock
-    if(flag(FLAG_CHARIZARD_Y_MEGASTONE_FOUND)) {
+    if(!flag(FLAG_CHARIZARD_Y_MEGASTONE_FOUND)) {
         msgbox(format("There seems to be a red marble like object on the altar"))
         playmoncry(SPECIES_CHARIZARD, CRY_MODE_ENCOUNTER)
         applymovement(2, Movement_CharizardArrives)
@@ -51,6 +53,7 @@ script MegaStone_Grotto_EventScript_Charizard_MegaStone {
 }
 
 script CharizardMegaBattle {
+    setflag(FLAG_CANT_CATCH_MON)
     settotemboost(1, 0, 1, 1, 2, 1, 0, 0)
     setwildbattle(SPECIES_CHARIZARD_MEGA_Y, 45)
     dowildbattle
@@ -58,6 +61,7 @@ script CharizardMegaBattle {
 
 script CharizardMegaBeaten {
     removeobject(1)
+    clearflag(FLAG_CANT_CATCH_MON)
     msgbox(format("The Charizard retreats"))
     msgbox(format("You take the marble from the atlar"))
     giveitem(ITEM_CHARIZARDITE_Y)

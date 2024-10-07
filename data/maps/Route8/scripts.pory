@@ -2,17 +2,23 @@ mapscripts Route8_MapScripts {}
 
 script Route8_RivalBattle_Flash {
     lock
-    //todo rival fight
     msgbox(format("Hi, still not given up I see!"))
     addobject(2)
     applymovement(2, movement_rival_route9_Appear)
     waitmovement(2)
-    msgbox(format("I'm just heading back to Bedrock town to talk to Proffessor Holly, she wanted a strong trainer to come and help her and with 4 badges I should be more than strong enough."))
+    msgbox(format("I'm just heading back to Bedrock town to talk to Professor Holly, she wanted a strong trainer to come and help her and with 4 badges I should be more than strong enough."))
     msgbox(format("I wouldn't bother going back if I was you, you're no where near my level."))
-    msgbox(format("How about I prove to you how strong I am, I'll make it fair and use my new Pokemon I just caught"))
-    trainerbattle_no_intro(TRAINER_RIVAL_ROUTE9, Rival_Route9_Beaten)
+    msgbox(format("How about I prove to you how strong I am, I'll make it fair and use my new Pokémon I just caught"))
+    switch (var(VAR_STARTER_MON)) {
+        case 0: //chikorita selected
+            trainerbattle_no_intro(TRAINER_RIVAL_ROUTE8_TYPHLOSION, Rival_Route9_Beaten)
+        case 1: //cyndaquil selected
+            trainerbattle_no_intro(TRAINER_RIVAL_ROUTE8_FERALIGATOR, Rival_Route9_Beaten)
+        case 2: // totodile selected
+            trainerbattle_no_intro(TRAINER_RIVAL_ROUTE8_MEGANIUM, Rival_Route9_Beaten)
+    }
     msgbox(format("If you insist on continuing on to the Ember Dunes you should take this."))
-    giveitem(ITEM_HM05)
+    giveitem(ITEM_HM05) //Currently Flash should be something else
     playfanfare(MUS_OBTAIN_TMHM)
     msgbox(format("It will help you light up the darkness in the cave, but make sure you get an acro bike if you want to make your way through."))
     msgbox(format("You might be able to buy one from someone in town."))
@@ -23,6 +29,10 @@ script Route8_RivalBattle_Flash {
     removeobject(2)
     release
 }   
+
+script Route8_ItemBall {
+    finditem(ITEM_TM44)
+}
 
 //movement
 movement  movement_rival_route9_Appear {

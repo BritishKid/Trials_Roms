@@ -99,7 +99,7 @@ script Bugcatch_Dennis_MH2_Battle {
 
 script Bugcatcher_Dennis_Beaten {
     setvar(VAR_BUGCATCHERS_BEATEN_MAHOGANY_HILLS, 5)
-    setvar(VAR_FIRST_TRAINERS_BEATEN_CHECK, VAR_FIRST_TRAINERS_BEATEN_CHECK+1)
+    setvar(VAR_TRAINERS_BEATEN_CHECK, VAR_TRAINERS_BEATEN_CHECK+1)
     msgbox(format("That was crazy. Take this as a reward!"))
     releaseall
 }
@@ -125,7 +125,7 @@ script PostDennis_MH_Reward {
 }
 
 script MahoganyHills_Rival_Battle {
-    msgbox(format("You're so slow, I've already got myself a badge. It was a breeze. My Pokemon barely broke a sweat. In fact I bet they could beat you here!"))
+    msgbox(format("You're so slow, I've already got myself a badge. It was a breeze. My Pokémon barely broke a sweat. In fact I bet they could beat you here!"))
     switch(var(VAR_STARTER_MON)){
         case 0:
             trainerbattle_single(TRAINER_RIVAL_MAHOGANYHILL_TREECKO, MahoganyHills_Rival_Battle_Intro, MahoganyHills_Rival_Battle_Outro, MahoganyHills_RivalBeaten)
@@ -143,6 +143,11 @@ script MahoganyHills_RivalBeaten {
     giveitem(ITEM_HM01, 1)
     playfanfare(MUS_OBTAIN_ITEM)
     setflag(FLAG_RECEIVED_HM01)
+	if(!flag(FLAG_RECEIVED_EXP_SHARE)){
+        msgbox(format("Also here is an extra gift for you, it should come in useful!"))
+        giveitem(ITEM_EXP_SHARE, 1) //Exp share for now, replace with something else when modern xp share added
+	    setflag(FLAG_RECEIVED_EXP_SHARE) //do we want it on from start or given here
+    }
     msgbox(format("Seeya Slowpoke"))
     applymovement(5, Movement_Rival_Off_Bridge_MahoganyHill)
     waitmovement(5)
@@ -164,6 +169,10 @@ script MahoganyHills_MeetRoxanne {
 script MahoganyHills_RoxanneBeaten {
     lockall
     msgbox(format("Well you are pretty tough! You would be a Hoenn Champion in no time if you where over there."))
+    msgbox(format("Take this as well!"))
+    giveitem(ITEM_TM37)
+    playfanfare(MUS_OBTAIN_ITEM)
+    setflag(FLAG_ITEM_MAHOGANY_HILLS_POKEBALL_ROCK_TOMB)
     msgbox(format("I hope to see you again!"))
     applymovement(OBJ_EVENT_ID_PLAYER, Movement_PlayerLeft)
     waitmovement(OBJ_EVENT_ID_PLAYER)
@@ -172,6 +181,29 @@ script MahoganyHills_RoxanneBeaten {
     removeobject(6)
     setvar(VAR_MAHOGANYHILLS_FOSSIL_ROXANNE, 1)
     releaseall
+}
+
+script MahoganyHills_LegendaryDungeon {
+    lockall
+    if(var(VAR_MAHOGANCYHILLS_BUTTONS_PRESSED) == 4) {
+        msgbox(format("The boulder looks like it can be moved. Do you want to push it?"), MSGBOX_YESNO) 
+        if(var(VAR_RESULT) == YES ){
+            msgbox(format("COMING SOON"))
+            // warp() //warp to make where legendary is probably wochien
+        }
+    }
+    else {
+        msgbox(format("It won't budge."))
+    }
+    releaseall
+}
+
+script MahongayHill2_ItemBall_SunStone {
+    finditem(ITEM_SUN_STONE)
+}
+
+script MahongayHill2_EventScript_ItemPPUp {
+    finditem(ITEM_PP_UP)
 }
 
 //movement scripts
@@ -273,7 +305,7 @@ text MahoganyHills2_BugCatcher_Dee_Outro {
 }
 
 text MahoganyHills2_BugCatcher_Dee_NotEnoughMons {
-    format("You need two pokemon to battle")
+    format("You need two Pokémon to battle")
 }
 
 text PostBattle_MahoganyHills2_BugCatcher_Dee {
@@ -293,7 +325,7 @@ text PostBattle_MahoganyHills2_BugCatcher_Dennis {
 }
 
 text MahoganyHills_Roxanne_Battle_Intro {
-    format("Oh you're a Pokemon trainer. I could go for a battle before I head off.")
+    format("Oh you're a Pokémon trainer. I could go for a battle before I head off.")
 }
 
 text MahoganyHills_Roxanne_Battle_Outro {

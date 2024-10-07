@@ -194,7 +194,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Route117_EventScript_ItemGreatBall",
-      "flag": "FLAG_ITEM_ROUTE_117_GREAT_BALL"
+      "flag": "FLAG_ITEM_ROUTE_4_TM_24"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE",
@@ -220,7 +220,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Route117_EventScript_ItemRevive",
-      "flag": "FLAG_ITEM_ROUTE_117_REVIVE"
+      "flag": "FLAG_ITEM_CLAYHAVEN_NETBALL"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_RUNNING_TRIATHLETE_F",

@@ -11,19 +11,19 @@ SandyGhastEncounter::
 
 
 WillyWombyBattleScript::
-	trainerbattle_single WIBBLYWOBBLY_BATTLE, Beach1_WillyWomby_Intro, Beach1_WillyWomby_Outro
+	trainerbattle_single WIBBLYWOBBLY_BATTLE, Beach1_WillyWomby_Intro, Beach1_WillyWomby_Outro, Increase_Trainers_Beaten
 	msgbox Beach1_WillyWomby_PostBattle, MSGBOX_AUTOCLOSE
 	end
 
 
 Trainer_Damon::
-	trainerbattle_single DAMON_BATTLE, Beach1_Damon_Intro, Beach1_Damon_Outro
+	trainerbattle_single DAMON_BATTLE, Beach1_Damon_Intro, Beach1_Damon_Outro, Increase_Trainers_Beaten
 	msgbox Beach1_Damon_PostBattle, MSGBOX_AUTOCLOSE
 	end
 
 
 Trainer_Beach1_Clair::
-	trainerbattle_single BEACH1_CLAIR_BATTLE, Beach1_Clair_Intro, Beach1_Clair_Outro
+	trainerbattle_single BEACH1_CLAIR_BATTLE, Beach1_Clair_Intro, Beach1_Clair_Outro, Increase_Trainers_Beaten
 	msgbox Beach1_Clair_PostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -45,7 +45,7 @@ Beach1_WillyWomby_Intro::
 	.string "guy!$"
 
 Beach1_WillyWomby_Outro::
-	.string "The pokemon that hatched is cute, I\n"
+	.string "The Pokémon that hatched is cute, I\n"
 	.string "wonder where he got it$"
 
 Beach1_WillyWomby_PostBattle::
@@ -54,7 +54,7 @@ Beach1_WillyWomby_PostBattle::
 
 Beach1_Damon_Intro::
 	.string "Have you seen how many awesome purple\n"
-	.string "Pokemon I have?!$"
+	.string "Pokémon I have?!$"
 
 Beach1_Damon_Outro::
 	.string "OH NO!$"
