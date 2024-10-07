@@ -8986,8 +8986,8 @@
           }
         },
         {
-          "map": "MAP_PETALBURG_CITY",
-          "base_label": "gPetalburgCity",
+          "map": "MAP_GRANITE_PEAK",
+          "base_label": "gGranitePeak",
           "water_mons": {
             "encounter_rate": 1,
             "mons": [

@@ -638,7 +638,7 @@
 #define FLAG_HIDDEN_ITEM_ROUTE_128_HEART_SCALE_1             (FLAG_HIDDEN_ITEMS_START + 0x5C)
 #define FLAG_HIDDEN_ITEM_ROUTE_128_HEART_SCALE_2             (FLAG_HIDDEN_ITEMS_START + 0x5D)
 #define FLAG_HIDDEN_ITEM_ROUTE_128_HEART_SCALE_3             (FLAG_HIDDEN_ITEMS_START + 0x5E)
-#define FLAG_HIDDEN_ITEM_PETALBURG_CITY_RARE_CANDY           (FLAG_HIDDEN_ITEMS_START + 0x5F)
+#define FLAG_HIDDEN_ITEM_GRANITE_PEAK_RARE_CANDY           (FLAG_HIDDEN_ITEMS_START + 0x5F)
 #define FLAG_HIDDEN_ITEM_ROUTE_116_BLACK_GLASSES             (FLAG_HIDDEN_ITEMS_START + 0x60)
 #define FLAG_HIDDEN_ITEM_ROUTE_115_HEART_SCALE               (FLAG_HIDDEN_ITEMS_START + 0x61)
 #define FLAG_HIDDEN_ITEM_ROUTE_113_NUGGET                    (FLAG_HIDDEN_ITEMS_START + 0x62)
@@ -772,9 +772,9 @@
 #define FLAG_HIDE_ROUTE_103_RIVAL                                   0x2D3
 #define FLAG_HIDE_PETALBURG_WOODS_DEVON_EMPLOYEE                    0x2D4
 #define FLAG_HIDE_PETALBURG_WOODS_AQUA_GRUNT                        0x2D5
-#define FLAG_HIDE_PETALBURG_CITY_WALLY                              0x2D6
+#define FLAG_HIDE_GRANITE_PEAK_WALLY                              0x2D6
 #define FLAG_HIDE_MOSSDEEP_CITY_STEVENS_HOUSE_INVISIBLE_NINJA_BOY   0x2D7
-#define FLAG_HIDE_PETALBURG_CITY_WALLYS_MOM                         0x2D8
+#define FLAG_HIDE_GRANITE_PEAK_WALLYS_MOM                         0x2D8
 
 #define FLAG_UNUSED_0x2D9                                           0x2D9 // Unused Flag
 
@@ -878,7 +878,7 @@
 #define FLAG_HIDE_SOOTOPOLIS_CITY_MAXIE                             0x33B
 #define FLAG_HIDE_SEAFLOOR_CAVERN_ROOM_9_ARCHIE                     0x33C
 #define FLAG_HIDE_SEAFLOOR_CAVERN_ROOM_9_MAXIE                      0x33D
-#define FLAG_HIDE_PETALBURG_CITY_WALLYS_DAD                         0x33E
+#define FLAG_HIDE_GRANITE_PEAK_WALLYS_DAD                         0x33E
 #define FLAG_HIDE_SEAFLOOR_CAVERN_ROOM_9_MAGMA_GRUNTS               0x33F
 #define FLAG_HIDE_LILYCOVE_CONTEST_HALL_BLEND_MASTER                0x340
 #define FLAG_HIDE_GRANITE_CAVE_STEVEN                               0x341
@@ -981,7 +981,7 @@
 #define FLAG_HIDE_LAVARIDGE_TOWN_RIVAL_ON_BIKE                      0x3A2
 #define FLAG_HIDE_RUSTURF_TUNNEL_ROCK_1                             0x3A3
 #define FLAG_HIDE_RUSTURF_TUNNEL_ROCK_2                             0x3A4
-#define FLAG_HIDE_FORTREE_CITY_HOUSE_4_WINGULL                      0x3A5
+#define FLAG_HIDE_CORAL_PORT_HOUSE_4_WINGULL                      0x3A5
 #define FLAG_HIDE_MOSSDEEP_CITY_HOUSE_2_WINGULL                     0x3A6
 #define FLAG_HIDE_REGIROCK                                          0x3A7
 #define FLAG_HIDE_REGICE                                            0x3A8
@@ -1017,7 +1017,7 @@
 #define FLAG_HIDE_ROUTE_118_STEVEN                                  0x3C6
 #define FLAG_HIDE_MOSSDEEP_CITY_STEVENS_HOUSE_STEVEN                0x3C7
 #define FLAG_HIDE_MOSSDEEP_CITY_STEVENS_HOUSE_BELDUM_POKEBALL       0x3C8
-#define FLAG_HIDE_FORTREE_CITY_KECLEON                              0x3C9
+#define FLAG_HIDE_CORAL_PORT_KECLEON                              0x3C9
 #define FLAG_HIDE_ROUTE_120_KECLEON_BRIDGE                          0x3CA
 #define FLAG_HIDE_LILYCOVE_CITY_RIVAL                               0x3CB
 #define FLAG_HIDE_ROUTE_120_STEVEN                                  0x3CC
@@ -1027,7 +1027,7 @@
 #define FLAG_HIDE_NEW_MAUVILLE_VOLTORB_3                            0x3D0
 #define FLAG_HIDE_AQUA_HIDEOUT_B1F_ELECTRODE_1                      0x3D1
 #define FLAG_HIDE_AQUA_HIDEOUT_B1F_ELECTRODE_2                      0x3D2
-#define FLAG_HIDE_OLDALE_TOWN_RIVAL                                 0x3D3
+#define FLAG_HIDE_CLAY_HAVEN_RIVAL                                 0x3D3
 #define FLAG_HIDE_UNDERWATER_SEA_FLOOR_CAVERN_STOLEN_SUBMARINE      0x3D4
 #define FLAG_HIDE_ROUTE_120_KECLEON_BRIDGE_SHADOW                   0x3D5
 #define FLAG_HIDE_ROUTE_120_KECLEON_1                               0x3D6
@@ -1043,7 +1043,7 @@
 #define FLAG_HIDE_WEATHER_INSTITUTE_2F_AQUA_GRUNT_M                 0x3E0
 #define FLAG_HIDE_LILYCOVE_POKEMON_CENTER_CONTEST_LADY_MON          0x3E1
 #define FLAG_HIDE_MT_CHIMNEY_LAVA_COOKIE_LADY                       0x3E2
-#define FLAG_HIDE_PETALBURG_CITY_SCOTT                              0x3E3
+#define FLAG_HIDE_GRANITE_PEAK_SCOTT                              0x3E3
 #define FLAG_HIDE_SOOTOPOLIS_CITY_RAYQUAZA                          0x3E4
 #define FLAG_HIDE_SOOTOPOLIS_CITY_KYOGRE                            0x3E5
 #define FLAG_HIDE_SOOTOPOLIS_CITY_GROUDON                           0x3E6
@@ -1089,8 +1089,8 @@
 #define FLAG_ITEM_ROUTE_132_RARE_CANDY                              0x40C
 #define FLAG_ITEM_ROUTE_133_BIG_PEARL                               0x40D
 #define FLAG_ITEM_ROUTE_133_STAR_PIECE                              0x40E
-#define FLAG_ITEM_PETALBURG_CITY_MAX_REVIVE                         0x40F
-#define FLAG_ITEM_PETALBURG_CITY_ETHER                              0x410
+#define FLAG_ITEM_GRANITE_PEAK_MAX_REVIVE                         0x40F
+#define FLAG_ITEM_GRANITE_PEAK_ETHER                              0x410
 #define FLAG_ITEM_RUSTBORO_CITY_X_DEFEND                            0x411
 #define FLAG_ITEM_LILYCOVE_CITY_MAX_REPEL                           0x412
 #define FLAG_ITEM_MOSSDEEP_CITY_NET_BALL                            0x413
@@ -1368,17 +1368,17 @@
 
 // Towns and Cities
 #define FLAG_VISITED_BEDROCK_TOWN                (SYSTEM_FLAGS + 0xF)
-#define FLAG_VISITED_OLDALE_TOWN                    (SYSTEM_FLAGS + 0x10)
+#define FLAG_VISITED_CLAY_HAVEN                    (SYSTEM_FLAGS + 0x10)
 #define FLAG_VISITED_DEWFORD_TOWN                   (SYSTEM_FLAGS + 0x11)
 #define FLAG_VISITED_LAVARIDGE_TOWN                 (SYSTEM_FLAGS + 0x12)
 #define FLAG_VISITED_FALLARBOR_TOWN                 (SYSTEM_FLAGS + 0x13)
 #define FLAG_VISITED_VERDANTURF_TOWN                (SYSTEM_FLAGS + 0x14)
 #define FLAG_VISITED_PACIFIDLOG_TOWN                (SYSTEM_FLAGS + 0x15)
-#define FLAG_VISITED_PETALBURG_CITY                 (SYSTEM_FLAGS + 0x16)
+#define FLAG_VISITED_GRANITE_PEAK                 (SYSTEM_FLAGS + 0x16)
 #define FLAG_VISITED_SLATEPORT_CITY                 (SYSTEM_FLAGS + 0x17)
 #define FLAG_VISITED_MAUVILLE_CITY                  (SYSTEM_FLAGS + 0x18)
 #define FLAG_VISITED_RUSTBORO_CITY                  (SYSTEM_FLAGS + 0x19)
-#define FLAG_VISITED_FORTREE_CITY                   (SYSTEM_FLAGS + 0x1A)
+#define FLAG_VISITED_CORAL_PORT                   (SYSTEM_FLAGS + 0x1A)
 #define FLAG_VISITED_LILYCOVE_CITY                  (SYSTEM_FLAGS + 0x1B)
 #define FLAG_VISITED_MOSSDEEP_CITY                  (SYSTEM_FLAGS + 0x1C)
 #define FLAG_VISITED_SOOTOPOLIS_CITY                (SYSTEM_FLAGS + 0x1D)

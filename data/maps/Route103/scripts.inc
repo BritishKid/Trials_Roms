@@ -68,7 +68,7 @@ Route103_EventScript_RivalEnd::
 	clearflag FLAG_HIDE_MAHOGANY_HILLS_OBJECT
 	setflag FLAG_DEFEATED_RIVAL_ROUTE103
 	setvar VAR_OLDALE_RIVAL_STATE, 1
-	clearflag FLAG_HIDE_OLDALE_TOWN_RIVAL
+	clearflag FLAG_HIDE_CLAY_HAVEN_RIVAL
 	savebgm MUS_DUMMY
 	fadedefaultbgm
 	releaseall

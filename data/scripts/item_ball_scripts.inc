@@ -302,11 +302,11 @@ Route134_EventScript_ItemStarPiece::
 	finditem ITEM_STAR_PIECE
 	end
 
-PetalburgCity_EventScript_ItemMaxRevive::
+GranitePeak_EventScript_ItemMaxRevive::
 	finditem ITEM_MAX_REVIVE
 	end
 
-PetalburgCity_EventScript_ItemEther::
+GranitePeak_EventScript_ItemEther::
 	finditem ITEM_ETHER
 	end
 

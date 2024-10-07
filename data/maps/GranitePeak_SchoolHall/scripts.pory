@@ -144,7 +144,7 @@ script GranitePeakAbilitiesClassroomDoor {
     releaseall
 }
 
-script Petalburgcity_School_Enter_Right {
+script GranitePeak_School_Enter_Right {
     lockall
     msgbox(format("So many amazing trainer came from this school, just look at all the names that have won the school Pokémon tournament."))
     applymovement(OBJ_EVENT_ID_PLAYER, Movement_MovePlayerLeftOnce)
@@ -153,7 +153,7 @@ script Petalburgcity_School_Enter_Right {
     releaseall
 }
 
-script Petalburgcity_School_Enter_Left {
+script GranitePeak_School_Enter_Left {
     lockall
     msgbox(format("So many amazing trainer came from this school, just look at all the names that have won the school Pokémon tournament."))
     call(PetaburgCity_School_Mat_TrophyCase)

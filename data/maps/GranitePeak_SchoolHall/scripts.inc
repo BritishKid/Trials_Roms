@@ -290,11 +290,11 @@ GranitePeakAbilitiesClassroomDoor_2:
 	goto GranitePeakAbilitiesClassroomDoor_1
 
 
-Petalburgcity_School_Enter_Right::
+GranitePeak_School_Enter_Right::
 # 148 "data/maps/GranitePeak_SchoolHall/scripts.pory"
 	lockall
 # 149 "data/maps/GranitePeak_SchoolHall/scripts.pory"
-	msgbox Petalburgcity_School_Enter_Right_Text_0
+	msgbox GranitePeak_School_Enter_Right_Text_0
 # 150 "data/maps/GranitePeak_SchoolHall/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_MovePlayerLeftOnce
 # 151 "data/maps/GranitePeak_SchoolHall/scripts.pory"
@@ -306,11 +306,11 @@ Petalburgcity_School_Enter_Right::
 	return
 
 
-Petalburgcity_School_Enter_Left::
+GranitePeak_School_Enter_Left::
 # 157 "data/maps/GranitePeak_SchoolHall/scripts.pory"
 	lockall
 # 158 "data/maps/GranitePeak_SchoolHall/scripts.pory"
-	msgbox Petalburgcity_School_Enter_Right_Text_0
+	msgbox GranitePeak_School_Enter_Right_Text_0
 # 159 "data/maps/GranitePeak_SchoolHall/scripts.pory"
 	call PetaburgCity_School_Mat_TrophyCase
 # 160 "data/maps/GranitePeak_SchoolHall/scripts.pory"
@@ -685,7 +685,7 @@ GranitePeakAbilitiesClassroomDoor_Text_0:
 # 139 "data/maps/GranitePeak_SchoolHall/scripts.pory"
 	.string "Abilities Class$"
 
-Petalburgcity_School_Enter_Right_Text_0:
+GranitePeak_School_Enter_Right_Text_0:
 # 149 "data/maps/GranitePeak_SchoolHall/scripts.pory"
 	.string "So many amazing trainer came from this\n"
 	.string "school, just look at all the names that\l"

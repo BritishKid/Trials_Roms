@@ -93,7 +93,7 @@
       "elevation": 0,
       "var": "VAR_MAT_STATE",
       "var_value": "0",
-      "script": "Petalburgcity_School_Enter_Left"
+      "script": "GranitePeak_School_Enter_Left"
     },
     {
       "type": "trigger",
@@ -102,7 +102,7 @@
       "elevation": 0,
       "var": "VAR_MAT_STATE",
       "var_value": "0",
-      "script": "Petalburgcity_School_Enter_Right"
+      "script": "GranitePeak_School_Enter_Right"
     }
   ],
   "bg_events": [

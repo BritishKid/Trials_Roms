@@ -2,17 +2,17 @@
 #define GUARD_REGIONMAPSEC_H
 
 #define MAPSEC_BEDROCK_TOWN              0x00
-#define MAPSEC_OLDALE_TOWN                  0x01
+#define MAPSEC_CLAY_HAVEN                  0x01
 #define MAPSEC_DEWFORD_TOWN                 0x02
 #define MAPSEC_LAVARIDGE_TOWN               0x03
 #define MAPSEC_FALLARBOR_TOWN               0x04
 #define MAPSEC_VERDANTURF_TOWN              0x05
 #define MAPSEC_PACIFIDLOG_TOWN              0x06
-#define MAPSEC_PETALBURG_CITY               0x07
+#define MAPSEC_GRANITE_PEAK               0x07
 #define MAPSEC_SLATEPORT_CITY               0x08
 #define MAPSEC_MAUVILLE_CITY                0x09
 #define MAPSEC_RUSTBORO_CITY                0x0A
-#define MAPSEC_FORTREE_CITY                 0x0B
+#define MAPSEC_CORAL_PORT                 0x0B
 #define MAPSEC_LILYCOVE_CITY                0x0C
 #define MAPSEC_MOSSDEEP_CITY                0x0D
 #define MAPSEC_SOOTOPOLIS_CITY              0x0E
