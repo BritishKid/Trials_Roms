@@ -1,0 +1,52 @@
+mapscripts PlayersHouse_1F_MapScripts {
+
+}
+
+
+script PlayersHouse_1F_Trigger_StartJourney {
+    lockall
+    msgbox(format("HEY! You're finally awake."), MSGBOX_DEFAULT)
+    applymovement(1, PlayersHouse_1F_RivalBrother_WalksClose)
+    waitmovement(1)
+    msgbox(format("RIVALNAME sent me over to see what you were doing and distract you but I guess I made too much noise. He's rushed off to MAHOGONY HILLS to start his gym challenge cause he's the best!"), MSGBOX_DEFAULT)
+    msgbox(format("He has probably already got all the badges as he is the best trainer ever!"), MSGBOX_DEFAULT)
+    msgbox(format("I saw you're a trainer to! I was looking at your POKEMON but I mixed it up with the POKEMON my mum gave me, do you remember which one it was?"), MSGBOX_DEFAULT)
+    special(ChooseStarter)
+	waitstate
+    setflag(FLAG_SYS_POKEMON_GET)
+	setflag(FLAG_SYS_POKEDEX_GET)
+    // setflag(FLAG_SYS_QUEST_MENU_GET)
+    setflag(FLAG_SYS_B_DASH)
+    special(EnableNationalPokedex)
+    msgbox(format("Oh wow! Your POKEMON is so much weaker than RIVALNAME"), MSGBOX_DEFAULT)
+    msgbox(format("Anyway I'm going to get some juice!"), MSGBOX_DEFAULT)
+    setflag(FLAG_RECEIVED_STARTER)
+    setvar(VAR_BEDROCK_TOWN_STATE, 1)
+    applymovement(1, PlayersHouse_1F_RivalBrother_ToSink)
+    waitmovement(1)
+    releaseall
+}
+
+script PlayersHouse_1F_EventScript_LittleBoy {
+    lockall
+    msgbox(format("Where is your juice?"), MSGBOX_DEFAULT)
+    releaseall
+}
+
+//movement
+movement PlayersHouse_1F_RivalBrother_WalksClose {
+    walk_up
+    walk_up
+}
+
+movement PlayersHouse_1F_RivalBrother_ToSink {
+    walk_left
+    walk_left
+    walk_left
+    walk_up
+    walk_left
+    walk_left
+    walk_left
+    walk_left
+    walk_left
+}
