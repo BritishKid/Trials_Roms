@@ -27,6 +27,8 @@
 #include "constants/abilities.h"
 #include "constants/items.h"
 #include "constants/battle_frontier.h"
+#include "constants/abilities.h"
+#include "wild_encounter.h"
 
 static void CB2_ReturnFromChooseHalfParty(void);
 static void CB2_ReturnFromChooseBattleFrontierParty(void);
@@ -319,6 +321,11 @@ void SetTeraType(struct ScriptContext *ctx)
  */
 static u32 ScriptGiveMonParameterized(u8 side, u8 slot, u16 species, u8 level, u16 item, u8 ball, u8 nature, u8 abilityNum, u8 gender, u8 *evs, u8 *ivs, u16 *moves, bool8 isShiny, bool8 ggMaxFactor, u8 teraType)
 {
+u32 BirchCase_GiveMonParameterized(u16 species, u8 level, u16 item, u8 ball, u8 nature, u8 abilityNum, u8 gender, u8 *evs, u8 *ivs, u16 *moves, bool8 ggMaxFactor, u8 teraType, bool8 isShinyExpansion)
+{
+    //
+    //  This function is created by Lunos and Ghoulslash as part of the custom givemon script in Expansion. I had to port it and rename it so that - 
+    //  I could have it working in pokeemerald and Expansion with #ifdefs without clashing with any changes Expansion makes to the old one
     u16 nationalDexNum;
     int sentToPc;
     struct Pokemon mon;
@@ -329,11 +336,18 @@ static u32 ScriptGiveMonParameterized(u8 side, u8 slot, u16 species, u8 level, u
     // check whether to use a specific nature or a random one
     if (nature >= NUM_NATURES)
     {
+#ifdef POKEMON_EXPANSION
         if (OW_SYNCHRONIZE_NATURE >= GEN_6
          && (gSpeciesInfo[species].eggGroups[0] == EGG_GROUP_NO_EGGS_DISCOVERED || OW_SYNCHRONIZE_NATURE == GEN_7))
             nature = PickWildMonNature();
         else
             nature = Random() % NUM_NATURES;
+#else
+        if ((gSpeciesInfo[species].eggGroups[0] == EGG_GROUP_NO_EGGS_DISCOVERED))
+                nature = PickWildMonNature();
+            else
+                nature = Random() % NUM_NATURES;
+#endif
     }
 
     // create a Pokémon with basic data
