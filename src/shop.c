@@ -705,6 +705,7 @@ static void BuyMenuPrintPriceInList(u8 windowId, u32 itemId, u8 y)
                 SearchItemListForPrice(itemId),
                 STR_CONV_MODE_LEFT_ALIGN,
                 5);
+        }
         else if (sMartInfo.martType == MART_TYPE_OUTFIT)
         {
             ConvertIntToDecimalStringN(gStringVar1, GetOutfitPrice(itemId), STR_CONV_MODE_LEFT_ALIGN, 6);
