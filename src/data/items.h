@@ -5677,15 +5677,21 @@ const struct Item gItemsInfo[] =
         .iconPalette = gItemIconPalette_Sablenite,
     },
 
-    [ITEM_0E2] =
+    [ITEM_MAWILITE] =
     {
-        .name = _("????????"),
-        .itemId = ITEM_NONE,
+        .name = _("Mawilite"),
         .price = 0,
-        .description = sDummyDesc,
+        .holdEffect = HOLD_EFFECT_MEGA_STONE,
+        .description = COMPOUND_STRING(
+            "This stone enables\n"
+            "Mawile to Mega\n"
+            "Evolve in battle."),
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 80,
+        .iconPic = gItemIcon_Mawilite,
+        .iconPalette = gItemIconPalette_Mawilite,
     },
 
     [ITEM_AGGRONITE] =
@@ -14084,7 +14090,373 @@ const struct Item gItemsInfo[] =
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_OutfitBox,
-	.iconPic = gItemIcon_OutfitBox,
-	.iconPalette = gItemIconPalette_OutfitBox,
+        .iconPic = gItemIcon_OutfitBox,
+        .iconPalette = gItemIconPalette_OutfitBox,
+    },
+
+    [ITEM_CRAFT_BUNDLE] =
+    {
+        .name = _("CRAFT BUNDLE"),
+        .price = 0,
+        .description = COMPOUND_STRING(   
+            "A roll-out tool kit\n"
+            "packed full of\n"
+            "crafting supplies."),
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_FIELD,
+        .fieldUseFunc = ItemUseOutOfBattle_CraftBundle,
+        .iconPic = gItemIcon_OutfitBox,
+        .iconPalette = gItemIconPalette_OutfitBox,
+    },
+
+    [ITEM_0E3] =
+    {
+        .name = _("????????"),
+        .price = 0,
+        .description = COMPOUND_STRING(   
+            "???????"),    
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_OutfitBox,
+        .iconPalette = gItemIconPalette_OutfitBox,
+    },
+
+    [ITEM_0E4] =
+    {
+        .name = _("????????"),
+        .price = 0,
+        .description = COMPOUND_STRING(   
+            "???????"),    
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_OutfitBox,
+        .iconPalette = gItemIconPalette_OutfitBox,
+    },
+
+    [ITEM_0E5] =
+    {
+        .name = _("????????"),
+        .price = 0,
+        .description = COMPOUND_STRING(   
+            "???????"),    
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_OutfitBox,
+        .iconPalette = gItemIconPalette_OutfitBox,
+    },
+
+    [ITEM_0E6] =
+    {
+        .name = _("????????"),
+        .price = 0,
+        .description = COMPOUND_STRING(   
+            "???????"),    
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_OutfitBox,
+        .iconPalette = gItemIconPalette_OutfitBox,
+    },
+
+    [ITEM_0E7] =
+    {
+        .name = _("????????"),
+        .price = 0,
+        .description = COMPOUND_STRING(   
+            "???????"),    
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_OutfitBox,
+        .iconPalette = gItemIconPalette_OutfitBox,
+    },
+
+    [ITEM_0E8] =
+    {
+        .name = _("????????"),
+        .price = 0,
+        .description = COMPOUND_STRING(   
+            "???????"),    
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_OutfitBox,
+        .iconPalette = gItemIconPalette_OutfitBox,
+    },
+
+    [ITEM_0E9] =
+    {
+        .name = _("????????"),
+        .price = 0,
+        .description = COMPOUND_STRING(   
+            "???????"),    
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_OutfitBox,
+        .iconPalette = gItemIconPalette_OutfitBox,
+    },
+
+    [ITEM_0EA] =
+    {
+        .name = _("????????"),
+        .price = 0,
+        .description = COMPOUND_STRING(   
+            "???????"),    
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_OutfitBox,
+        .iconPalette = gItemIconPalette_OutfitBox,
+    },
+
+    [ITEM_0EB] =
+    {
+        .name = _("????????"),
+        .price = 0,
+        .description = COMPOUND_STRING(   
+            "???????"),    
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_OutfitBox,
+        .iconPalette = gItemIconPalette_OutfitBox,
+    },
+
+    [ITEM_0EC] =
+    {
+        .name = _("????????"),
+        .price = 0,
+        .description = COMPOUND_STRING(   
+            "???????"),    
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_OutfitBox,
+        .iconPalette = gItemIconPalette_OutfitBox,
+    },
+
+    [ITEM_0ED] =
+    {
+        .name = _("????????"),
+        .price = 0,
+        .description = COMPOUND_STRING(   
+            "???????"),    
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_OutfitBox,
+        .iconPalette = gItemIconPalette_OutfitBox,
+    },
+
+    [ITEM_0EE] =
+    {
+        .name = _("????????"),
+        .price = 0,
+        .description = COMPOUND_STRING(   
+            "???????"),    
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_OutfitBox,
+        .iconPalette = gItemIconPalette_OutfitBox,
+    },
+
+    [ITEM_0EF] =
+    {
+        .name = _("????????"),
+        .price = 0,
+        .description = COMPOUND_STRING(   
+            "???????"),    
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_OutfitBox,
+        .iconPalette = gItemIconPalette_OutfitBox,
+    },
+
+    [ITEM_0F0] =
+    {
+        .name = _("????????"),
+        .price = 0,
+        .description = COMPOUND_STRING(   
+            "???????"),    
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_OutfitBox,
+        .iconPalette = gItemIconPalette_OutfitBox,
+    },
+
+    [ITEM_0F1] =
+    {
+        .name = _("????????"),
+        .price = 0,
+        .description = COMPOUND_STRING(   
+            "???????"),    
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_OutfitBox,
+        .iconPalette = gItemIconPalette_OutfitBox,
+    },
+
+    [ITEM_0F2] =
+    {
+        .name = _("????????"),
+        .price = 0,
+        .description = COMPOUND_STRING(   
+            "???????"),    
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_OutfitBox,
+        .iconPalette = gItemIconPalette_OutfitBox,
+    },
+
+    [ITEM_0F3] =
+    {
+        .name = _("????????"),
+        .price = 0,
+        .description = COMPOUND_STRING(   
+            "???????"),    
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_OutfitBox,
+        .iconPalette = gItemIconPalette_OutfitBox,
+    },
+
+    [ITEM_0F4] =
+    {
+        .name = _("????????"),
+        .price = 0,
+        .description = COMPOUND_STRING(   
+            "???????"),    
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_OutfitBox,
+        .iconPalette = gItemIconPalette_OutfitBox,
+    },
+
+    [ITEM_0F5] =
+    {
+        .name = _("????????"),
+        .price = 0,
+        .description = COMPOUND_STRING(   
+            "???????"),    
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_OutfitBox,
+        .iconPalette = gItemIconPalette_OutfitBox,
+    },
+
+    [ITEM_0F6] =
+    {
+        .name = _("????????"),
+        .price = 0,
+        .description = COMPOUND_STRING(   
+            "???????"),    
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_OutfitBox,
+        .iconPalette = gItemIconPalette_OutfitBox,
+    },
+
+    [ITEM_0F7] =
+    {
+        .name = _("????????"),
+        .price = 0,
+        .description = COMPOUND_STRING(   
+            "???????"),    
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_OutfitBox,
+        .iconPalette = gItemIconPalette_OutfitBox,
+    },
+
+    [ITEM_0F8] =
+    {
+        .name = _("????????"),
+        .price = 0,
+        .description = COMPOUND_STRING(   
+            "???????"),    
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_OutfitBox,
+        .iconPalette = gItemIconPalette_OutfitBox,
+    },
+
+    [ITEM_0F9] =
+    {
+        .name = _("????????"),
+        .price = 0,
+        .description = COMPOUND_STRING(   
+            "???????"),    
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_OutfitBox,
+        .iconPalette = gItemIconPalette_OutfitBox,
+    },
+
+    [ITEM_0FA] =
+    {
+        .name = _("????????"),
+        .price = 0,
+        .description = COMPOUND_STRING(   
+            "???????"),    
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_OutfitBox,
+        .iconPalette = gItemIconPalette_OutfitBox,
+    },
+
+    [ITEM_0FB] =
+    {
+        .name = _("????????"),
+        .price = 0,
+        .description = COMPOUND_STRING(   
+            "???????"),    
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_OutfitBox,
+        .iconPalette = gItemIconPalette_OutfitBox,
+    },
+
+    [ITEM_0FC] =
+    {
+        .name = _("????????"),
+        .price = 0,
+        .description = COMPOUND_STRING(   
+            "???????"),    
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_OutfitBox,
+        .iconPalette = gItemIconPalette_OutfitBox,
+    },
+
+    [ITEM_0FD] =
+    {
+        .name = _("????????"),
+        .price = 0,
+        .description = COMPOUND_STRING(   
+            "???????"),    
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_OutfitBox,
+        .iconPalette = gItemIconPalette_OutfitBox,
     },
 };

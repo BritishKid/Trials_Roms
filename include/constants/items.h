@@ -1002,8 +1002,36 @@
 
 #define ITEM_OUTFIT_BOX 828
 #define ITEM_CRAFT_BUNDLE 829
+#define ITEM_0E3 830
+#define ITEM_0E4 831
+#define ITEM_0E5 832
+#define ITEM_0E6 833
+#define ITEM_0E7 834
+#define ITEM_0E8 835
+#define ITEM_0E9 836
+#define ITEM_0EA 837
+#define ITEM_0EB 838
+#define ITEM_0EC 839
+#define ITEM_0ED 840
+#define ITEM_0EE 841
+#define ITEM_0EF 842
+#define ITEM_0F0 843
+#define ITEM_0F1 844
+#define ITEM_0F2 845
+#define ITEM_0F3 846
+#define ITEM_0F4 847
+#define ITEM_0F5 848
+#define ITEM_0F6 849
+#define ITEM_0F7 850
+#define ITEM_0F8 851
+#define ITEM_0F9 852
+#define ITEM_0FA 853
+#define ITEM_0FB 854
+#define ITEM_0FC 855
+#define ITEM_0FD 856
 
-#define ITEMS_COUNT 830
+#define ITEMS_COUNT 857
+
 #define ITEM_FIELD_ARROW ITEMS_COUNT
 
 // A special item id associated with "Cancel"/"Exit" etc. in a list of items or decorations

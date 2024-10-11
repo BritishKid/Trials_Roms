@@ -1,7 +1,7 @@
 #ifndef GUARD_CRAFT_MENU_H
 #define GUARD_CRAFT_MENU_H
 
-extern bool8 (*gMenuCallback)(void);
+// extern bool8 (*gMenuCallback)(void);
 extern EWRAM_DATA u16 sCurrentCraftTableItems[4][2];
 extern EWRAM_DATA u8 sCraftMenuCursorPos;
 

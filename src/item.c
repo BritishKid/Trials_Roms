@@ -1019,7 +1019,8 @@ u32 GetItemStatus2Mask(u16 itemId)
 
 void ShowItemIconSprite(u16 item, bool8 flash, u8 screen_x, u8 screen_y)
 {
-    s16 x, y;
+    s16 x = screen_x;
+    s16 y = screen_y;
     u8 iconSpriteId;   
     u8 spriteId2 = MAX_SPRITES;
 
@@ -1050,9 +1051,9 @@ void ShowItemIconSprite(u16 item, bool8 flash, u8 screen_x, u8 screen_y)
         }
         */
 
-        //parameters!
-        x = screen_x;
-        y = screen_y;
+        // //parameters!
+        // x = screen_x;
+        // y = screen_y;
 
         gSprites[iconSpriteId].x2 = x;
         gSprites[iconSpriteId].y2 = y;
