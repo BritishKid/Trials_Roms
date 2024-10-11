@@ -10,6 +10,7 @@ PlayersHouse_1F_Trigger_StartJourney::
 	msgbox PlayersHouse_1F_Trigger_StartJourney_Text_1, MSGBOX_DEFAULT
 	msgbox PlayersHouse_1F_Trigger_StartJourney_Text_2, MSGBOX_DEFAULT
 	msgbox PlayersHouse_1F_Trigger_StartJourney_Text_3, MSGBOX_DEFAULT
+	callnative StartNewPokeballCaseUI
 	waitstate
 	setflag FLAG_SYS_POKEMON_GET
 	setflag FLAG_SYS_POKEDEX_GET
@@ -27,6 +28,7 @@ PlayersHouse_1F_Trigger_StartJourney::
 
 PlayersHouse_1F_EventScript_LittleBoy::
 	lockall
+	faceplayer
 	msgbox PlayersHouse_1F_EventScript_LittleBoy_Text_0, MSGBOX_DEFAULT
 	releaseall
 	return
@@ -47,6 +49,7 @@ PlayersHouse_1F_RivalBrother_ToSink:
 	walk_left
 	walk_left
 	walk_left
+	face_up
 	step_end
 
 PlayersHouse_1F_Trigger_StartJourney_Text_0:

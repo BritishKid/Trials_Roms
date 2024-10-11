@@ -11,7 +11,7 @@ script PlayersHouse_1F_Trigger_StartJourney {
     msgbox(format("RIVALNAME sent me over to see what you were doing and distract you but I guess I made too much noise. He's rushed off to MAHOGONY HILLS to start his gym challenge cause he's the best!"), MSGBOX_DEFAULT)
     msgbox(format("He has probably already got all the badges as he is the best trainer ever!"), MSGBOX_DEFAULT)
     msgbox(format("I saw you're a trainer to! I was looking at your POKEMON but I mixed it up with the POKEMON my mum gave me, do you remember which one it was?"), MSGBOX_DEFAULT)
-    special(ChooseStarter)
+	callnative(StartNewPokeballCaseUI)
 	waitstate
     setflag(FLAG_SYS_POKEMON_GET)
 	setflag(FLAG_SYS_POKEDEX_GET)
@@ -29,6 +29,7 @@ script PlayersHouse_1F_Trigger_StartJourney {
 
 script PlayersHouse_1F_EventScript_LittleBoy {
     lockall
+    faceplayer()
     msgbox(format("Where is your juice?"), MSGBOX_DEFAULT)
     releaseall
 }
@@ -49,4 +50,5 @@ movement PlayersHouse_1F_RivalBrother_ToSink {
     walk_left
     walk_left
     walk_left
+    face_up
 }
