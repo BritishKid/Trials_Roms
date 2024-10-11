@@ -1079,3 +1079,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/PlayersBedroom/scripts.inc"
 
 	.include "data/maps/PlayersHouse_1F/scripts.inc"
+	
+	.include "data/scripts/craft.inc"

@@ -5677,21 +5677,15 @@ const struct Item gItemsInfo[] =
         .iconPalette = gItemIconPalette_Sablenite,
     },
 
-    [ITEM_MAWILITE] =
+    [ITEM_0E2] =
     {
-        .name = _("Mawilite"),
+        .name = _("????????"),
+        .itemId = ITEM_NONE,
         .price = 0,
-        .holdEffect = HOLD_EFFECT_MEGA_STONE,
-        .description = COMPOUND_STRING(
-            "This stone enables\n"
-            "Mawile to Mega\n"
-            "Evolve in battle."),
+        .description = sDummyDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .flingPower = 80,
-        .iconPic = gItemIcon_Mawilite,
-        .iconPalette = gItemIconPalette_Mawilite,
     },
 
     [ITEM_AGGRONITE] =

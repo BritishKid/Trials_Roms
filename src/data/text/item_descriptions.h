@@ -3998,3 +3998,8 @@ static const u8 sOutfitBoxDesc[] = _(
     "A box for storing\n"
     "your collections of\n"
     "Outfits safely.");
+
+static const u8 sCraftBundleDesc[] = _(
+    "A roll-out tool kit\n"
+    "packed full of\n"
+    "crafting supplies.");
