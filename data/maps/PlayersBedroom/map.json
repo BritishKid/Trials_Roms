@@ -17,16 +17,198 @@
 
   ],
   "warp_events": [
-    {
-      "x": 7,
-      "y": 1,
-      "elevation": 0,
-      "dest_map": "MAP_PLAYERS_HOUSE_1F",
-      "dest_warp_id": "0"
-    }
+
   ],
   "coord_events": [
-
+    {
+      "type": "trigger",
+      "x": 2,
+      "y": 4,
+      "elevation": 0,
+      "var": "VAR_GAME_STATE",
+      "var_value": "0",
+      "script": "ShowPokemonChoiceOnScreen1"
+    },
+    {
+      "type": "trigger",
+      "x": 2,
+      "y": 10,
+      "elevation": 0,
+      "var": "VAR_GAME_STATE",
+      "var_value": "1",
+      "script": "RemovePokemonChoiceOnScreenLeft"
+    },
+    {
+      "type": "trigger",
+      "x": 3,
+      "y": 4,
+      "elevation": 0,
+      "var": "VAR_GAME_STATE",
+      "var_value": "0",
+      "script": "ShowPokemonChoiceOnScreen1"
+    },
+    {
+      "type": "trigger",
+      "x": 5,
+      "y": 4,
+      "elevation": 0,
+      "var": "VAR_GAME_STATE",
+      "var_value": "0",
+      "script": "ShowPokemonChoiceOnScreen1"
+    },
+    {
+      "type": "trigger",
+      "x": 4,
+      "y": 4,
+      "elevation": 0,
+      "var": "VAR_GAME_STATE",
+      "var_value": "0",
+      "script": "ShowPokemonChoiceOnScreen1"
+    },
+    {
+      "type": "trigger",
+      "x": 7,
+      "y": 4,
+      "elevation": 0,
+      "var": "VAR_GAME_STATE",
+      "var_value": "0",
+      "script": "ShowPokemonChoiceOnScreen1"
+    },
+    {
+      "type": "trigger",
+      "x": 6,
+      "y": 4,
+      "elevation": 0,
+      "var": "VAR_GAME_STATE",
+      "var_value": "0",
+      "script": "ShowPokemonChoiceOnScreen1"
+    },
+    {
+      "type": "trigger",
+      "x": 12,
+      "y": 4,
+      "elevation": 0,
+      "var": "VAR_GAME_STATE",
+      "var_value": "0",
+      "script": "ShowPokemonChoiceOnScreen1"
+    },
+    {
+      "type": "trigger",
+      "x": 11,
+      "y": 4,
+      "elevation": 0,
+      "var": "VAR_GAME_STATE",
+      "var_value": "0",
+      "script": "ShowPokemonChoiceOnScreen1"
+    },
+    {
+      "type": "trigger",
+      "x": 10,
+      "y": 4,
+      "elevation": 0,
+      "var": "VAR_GAME_STATE",
+      "var_value": "0",
+      "script": "ShowPokemonChoiceOnScreen1"
+    },
+    {
+      "type": "trigger",
+      "x": 9,
+      "y": 4,
+      "elevation": 0,
+      "var": "VAR_GAME_STATE",
+      "var_value": "0",
+      "script": "ShowPokemonChoiceOnScreen1"
+    },
+    {
+      "type": "trigger",
+      "x": 8,
+      "y": 4,
+      "elevation": 0,
+      "var": "VAR_GAME_STATE",
+      "var_value": "0",
+      "script": "ShowPokemonChoiceOnScreen1"
+    },
+    {
+      "type": "trigger",
+      "x": 3,
+      "y": 10,
+      "elevation": 0,
+      "var": "VAR_GAME_STATE",
+      "var_value": "1",
+      "script": "RemovePokemonChoiceOnScreenLeft"
+    },
+    {
+      "type": "trigger",
+      "x": 5,
+      "y": 10,
+      "elevation": 0,
+      "var": "VAR_GAME_STATE",
+      "var_value": "1",
+      "script": "RemovePokemonChoiceOnScreenLeft"
+    },
+    {
+      "type": "trigger",
+      "x": 4,
+      "y": 10,
+      "elevation": 0,
+      "var": "VAR_GAME_STATE",
+      "var_value": "1",
+      "script": "RemovePokemonChoiceOnScreenLeft"
+    },
+    {
+      "type": "trigger",
+      "x": 6,
+      "y": 10,
+      "elevation": 0,
+      "var": "VAR_GAME_STATE",
+      "var_value": "1",
+      "script": "RemovePokemonChoiceOnScreenLeft"
+    },
+    {
+      "type": "trigger",
+      "x": 12,
+      "y": 10,
+      "elevation": 0,
+      "var": "VAR_GAME_STATE",
+      "var_value": "1",
+      "script": "RemovePokemonChoiceOnScreenRight"
+    },
+    {
+      "type": "trigger",
+      "x": 11,
+      "y": 10,
+      "elevation": 0,
+      "var": "VAR_GAME_STATE",
+      "var_value": "1",
+      "script": "RemovePokemonChoiceOnScreenRight"
+    },
+    {
+      "type": "trigger",
+      "x": 10,
+      "y": 10,
+      "elevation": 0,
+      "var": "VAR_GAME_STATE",
+      "var_value": "1",
+      "script": "RemovePokemonChoiceOnScreenRight"
+    },
+    {
+      "type": "trigger",
+      "x": 9,
+      "y": 10,
+      "elevation": 0,
+      "var": "VAR_GAME_STATE",
+      "var_value": "1",
+      "script": "RemovePokemonChoiceOnScreenRight"
+    },
+    {
+      "type": "trigger",
+      "x": 8,
+      "y": 10,
+      "elevation": 0,
+      "var": "VAR_GAME_STATE",
+      "var_value": "1",
+      "script": "RemovePokemonChoiceOnScreenRight"
+    }
   ],
   "bg_events": [
 

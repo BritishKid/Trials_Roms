@@ -969,6 +969,20 @@
 	.byte 0x76
 	.endm
 
+
+	@ Displays a box containing the front sprite for the specified Pokemon species.
+	.macro showmonpic2 species:req, x:req, y:req
+	.byte 0xe9
+	.2byte \species
+	.byte \x
+	.byte \y
+	.endm
+
+	@ Hides the box displayed by showmonpic2.
+	.macro hidemonpic2
+	.byte 0xea
+	.endm
+
 	@ Draws an image of the winner of the contest. winnerId is any CONTEST_WINNER_* constant.
 	.macro showcontestpainting winnerId:req
 	.byte 0x77

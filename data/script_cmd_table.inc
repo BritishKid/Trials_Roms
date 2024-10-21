@@ -233,6 +233,8 @@ gScriptCmdTable::
 	.4byte ScrCmd_getoutfitstatus                   @ 0xe6
 	.4byte ScrCmd_bufferoutfitstr                   @ 0xe7
 	.4byte ScrCmd_pokemartoutfit                    @ 0xe8
+	.4byte ScrCmd_showmonpic2                       @ 0xe9
+	.4byte ScrCmd_hidemonpic2                       @ 0xea
 
 gScriptCmdTableEnd::
 	.4byte ScrCmd_nop

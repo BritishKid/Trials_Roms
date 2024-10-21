@@ -1598,11 +1598,33 @@ bool8 ScrCmd_showmonpic(struct ScriptContext *ctx)
     return FALSE;
 }
 
+bool8 ScrCmd_showmonpic2(struct ScriptContext *ctx)
+{
+    u16 species = VarGet(ScriptReadHalfword(ctx));
+    u8 x = ScriptReadByte(ctx);
+    u8 y = ScriptReadByte(ctx);
+
+    ScriptMenu_ShowPokemonPic2(species, x, y);
+    return FALSE;
+}
+
 bool8 ScrCmd_hidemonpic(struct ScriptContext *ctx)
 {
     // The hide function returns a pointer to a function
     // that returns true once the pic is hidden
     bool8 (*func)(void) = ScriptMenu_HidePokemonPic();
+
+    if (func == NULL)
+        return FALSE;
+    SetupNativeScript(ctx, func);
+    return TRUE;
+}
+
+bool8 ScrCmd_hidemonpic2(struct ScriptContext *ctx)
+{
+    // The hide function returns a pointer to a function
+    // that returns true once the pic is hidden
+    bool8 (*func)(void) = ScriptMenu_HidePokemonPic2();
 
     if (func == NULL)
         return FALSE;

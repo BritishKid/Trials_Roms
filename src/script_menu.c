@@ -59,6 +59,7 @@ static void DrawLinkServicesMultichoiceMenu(u8 multichoiceId);
 static void CreatePCMultichoice(void);
 static void CreateLilycoveSSTidalMultichoice(void);
 static bool8 IsPicboxClosed(void);
+static bool8 IsPicboxClosed2(void);
 static void CreateStartMenuForPokenavTutorial(void);
 static void InitMultichoiceNoWrap(bool8 ignoreBPress, u8 unusedCount, u8 windowId, u8 multichoiceId);
 static void MultichoiceDynamicEventDebug_OnInit(struct DynamicListMenuEventArgs *eventArgs);
@@ -958,6 +959,29 @@ static void Task_PokemonPicWindow(u8 taskId)
     }
 }
 
+static void Task_PokemonPicWindow2(u8 taskId)
+{
+    struct Task *task = &gTasks[taskId];
+
+    switch (task->tState)
+    {
+    case 0:
+        task->tState++;
+        break;
+    case 1:
+        // Wait until state is advanced by ScriptMenu_HidePokemonPic
+        break;
+    case 2:
+        FreeResourcesAndDestroySprite(&gSprites[task->tMonSpriteId], task->tMonSpriteId);
+        task->tState++;
+        break;
+    case 3:
+        ClearToTransparentAndRemoveWindow(task->tWindowId);
+        DestroyTask(taskId);
+        break;
+    }
+}
+
 bool8 ScriptMenu_ShowPokemonPic(u16 species, u8 x, u8 y)
 {
     u8 taskId;
@@ -969,9 +993,35 @@ bool8 ScriptMenu_ShowPokemonPic(u16 species, u8 x, u8 y)
     }
     else
     {
-        spriteId = CreateMonSprite_PicBox(species, x * 8 + 40, y * 8 + 40, 0);
+        spriteId = CreateMonSprite_PicBox(species, x * 8 + 29, y * 8 + 30, 0);
         taskId = CreateTask(Task_PokemonPicWindow, 0x50);
-        gTasks[taskId].tWindowId = CreateWindowFromRect(x, y, 8, 8);
+        gTasks[taskId].tWindowId = CreateWindowFromRect(x, y, 5, 5);        
+        gTasks[taskId].tState = 0;
+        gTasks[taskId].tMonSpecies = species;
+        gTasks[taskId].tMonSpriteId = spriteId;
+        gSprites[spriteId].callback = SpriteCallbackDummy;
+        gSprites[spriteId].oam.priority = 0;
+        SetStandardWindowBorderStyle(gTasks[taskId].tWindowId, TRUE);
+        ScheduleBgCopyTilemapToVram(0);
+        return TRUE;
+    }
+}
+
+
+bool8 ScriptMenu_ShowPokemonPic2(u16 species, u8 x, u8 y)
+{
+    u8 taskId;
+    u8 spriteId;
+
+    if (FindTaskIdByFunc(Task_PokemonPicWindow2) != TASK_NONE)
+    {
+        return FALSE;
+    }
+    else
+    {
+        spriteId = CreateMonSprite_PicBox(species, x * 8 + 29, y * 8 + 30, 0);
+        taskId = CreateTask(Task_PokemonPicWindow2, 0x50);
+        gTasks[taskId].tWindowId = CreateWindowFromRect(x, y, 5, 5);        
         gTasks[taskId].tState = 0;
         gTasks[taskId].tMonSpecies = species;
         gTasks[taskId].tMonSpriteId = spriteId;
@@ -986,16 +1036,33 @@ bool8 ScriptMenu_ShowPokemonPic(u16 species, u8 x, u8 y)
 bool8 (*ScriptMenu_HidePokemonPic(void))(void)
 {
     u8 taskId = FindTaskIdByFunc(Task_PokemonPicWindow);
-
     if (taskId == TASK_NONE)
         return NULL;
     gTasks[taskId].tState++;
     return IsPicboxClosed;
 }
 
+bool8 (*ScriptMenu_HidePokemonPic2(void))(void)
+{
+    u8 taskId = FindTaskIdByFunc(Task_PokemonPicWindow2);
+    if (taskId == TASK_NONE)
+        return NULL;
+    gTasks[taskId].tState++;
+    return IsPicboxClosed2;
+}
+
 static bool8 IsPicboxClosed(void)
 {
     if (FindTaskIdByFunc(Task_PokemonPicWindow) == TASK_NONE)
+        return TRUE;
+    else
+        return FALSE;
+}
+
+
+static bool8 IsPicboxClosed2(void)
+{
+    if (FindTaskIdByFunc(Task_PokemonPicWindow2) == TASK_NONE)
         return TRUE;
     else
         return FALSE;
