@@ -15,7 +15,7 @@
 #define MAP_MOSSDEEP_CITY       (6 | (0 << 8))
 #define MAP_SOOTOPOLIS_CITY     (7 | (0 << 8))
 #define MAP_EVER_GRANDE_CITY    (8 | (0 << 8))
-#define MAP_LITTLEROOT_TOWN     (9 | (0 << 8))
+#define MAP_BEDROCK_TOWN        (9 | (0 << 8))
 #define MAP_OLDALE_TOWN         (10 | (0 << 8))
 #define MAP_DEWFORD_TOWN        (11 | (0 << 8))
 #define MAP_LAVARIDGE_TOWN      (12 | (0 << 8))

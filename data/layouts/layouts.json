@@ -92,14 +92,14 @@
       "blockdata_filepath": "data/layouts/EverGrandeCity/map.bin"
     },
     {
-      "id": "LAYOUT_LITTLEROOT_TOWN",
-      "name": "LittlerootTown_Layout",
-      "width": 20,
+      "id": "LAYOUT_BEDROCK_TOWN",
+      "name": "BedrockTown_Layout",
+      "width": 35,
       "height": 20,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Petalburg",
-      "border_filepath": "data/layouts/LittlerootTown/border.bin",
-      "blockdata_filepath": "data/layouts/LittlerootTown/map.bin"
+      "border_filepath": "data/layouts/BedrockTown/border.bin",
+      "blockdata_filepath": "data/layouts/BedrockTown/map.bin"
     },
     {
       "id": "LAYOUT_OLDALE_TOWN",

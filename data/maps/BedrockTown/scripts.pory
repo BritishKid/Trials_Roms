@@ -1,0 +1,15 @@
+mapscripts BedrockTown_MapScripts {
+    
+}
+
+script BedrockTown_TownSign {
+    lockall
+    msgbox(format("Bedrock Town:\nAn ancient lake now full of life."), MSGBOX_DEFAULT)
+    releaseall
+}
+
+script BedrockTown_LabSign {
+    lockall
+    msgbox(format("Professor Holly's Lab.\nLeading the research into a lost past."), MSGBOX_DEFAULT)
+    releaseall
+}
