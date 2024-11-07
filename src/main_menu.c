@@ -460,11 +460,11 @@ static const struct MenuAction sMenuActions_Gender[] = {
 };
 
 static const u8 *const sMalePresetNames[] = {
-    gText_DefaultNameStu,
-    gText_DefaultNameMilton,
-    gText_DefaultNameTom,
-    gText_DefaultNameKenny,
-    gText_DefaultNameReid,
+    gText_DefaultNameRobert,
+    gText_DefaultNameOliver,
+    gText_DefaultNameAlex,
+    gText_DefaultNameMatthew,
+    gText_DefaultNameDavid,
     gText_DefaultNameJude,
     gText_DefaultNameJaxson,
     gText_DefaultNameEaston,
@@ -483,8 +483,8 @@ static const u8 *const sMalePresetNames[] = {
 };
 
 static const u8 *const sFemalePresetNames[] = {
-    gText_DefaultNameKimmy,
-    gText_DefaultNameTiara,
+    gText_DefaultNameSarah,
+    gText_DefaultNameTalitha,
     gText_DefaultNameBella,
     gText_DefaultNameJayla,
     gText_DefaultNameAllie,

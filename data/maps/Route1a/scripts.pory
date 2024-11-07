@@ -1,0 +1,19 @@
+mapscripts Route1a_MapScripts {
+    
+}
+
+
+script Route1_EventScript_SecretPower {
+    lockall
+    faceplayer
+    if(flag(FLAG_RECEIVED_SECRET_POWER)) {
+        msgbox(format("Many other trainers have made hidden bases for you to explore."))
+    }
+    if(!flag(FLAG_RECEIVED_SECRET_POWER)) {
+        msgbox(format("If you use SECRET POWER you can open up hidden areas to make a base in certain trees, bushes and rocks."), MSGBOX_DEFAULT)
+        msgbox(format("Here take the TM so you can do it!"), MSGBOX_DEFAULT)
+        giveitem(ITEM_TM43, 1)
+        setflag(FLAG_RECEIVED_SECRET_POWER)
+    }
+    releaseall
+}

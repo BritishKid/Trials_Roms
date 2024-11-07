@@ -1,5 +1,4 @@
 gText_Birch_Welcome::
-	.string "Hi! Sorry to keep you waiting!\p"
 	.string "Welcome to the world of POKéMON!\p"
 	.string "My name is HOLLY.\p"
 	.string "But everyone calls me the POKéMON\n"
@@ -53,7 +52,7 @@ gText_Birch_AreYouReady::
 	.string "All right, are you ready?\p"
 	.string "Your very own adventure is about\n"
 	.string "to unfold.\p"
-	.string "Take courage, and leap into the\n"
-	.string "world of POKéMON where dreams,\l"
-	.string "adventure, and friendships await!\p"
+	.string "When in your room head to the\n"
+	.string "notebook and configure your playthrough\n"
+	.string "to be just the way you want!\p"
 	.string "$"

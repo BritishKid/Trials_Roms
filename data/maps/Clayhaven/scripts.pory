@@ -1,0 +1,25 @@
+raw `Clayhaven_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, Clayhaven_OnTransition
+	.byte 0
+
+Clayhaven_OnTransition:
+	setflag FLAG_VISITED_CLAYHAVEN
+	end`
+
+script Clayhaven_MapScript_CraftingMaster_Sign {
+    lockall
+    msgbox(format("Crafting Master's House"))
+    releaseall
+}
+
+script Clayhaven_MapScript_TownSign {
+    lockall
+    msgbox(format("CLAY HAVEN\lTriver's oldest town"))
+    releaseall
+}
+
+script Clayhaven_MapScript_PlatefallCave_Sign {
+    lockall
+    msgbox(format("PLATEFALL CAVE\lLanding site of an ancient Pokémon"))
+    releaseall
+}

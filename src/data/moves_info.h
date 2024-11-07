@@ -7356,7 +7356,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
             "An attack with effects\n"
             "that vary by location."),
         .effect = EFFECT_HIT,
-        .power = 70,
+        .power = 40,
         .type = TYPE_NORMAL,
         .accuracy = 100,
         .pp = 20,

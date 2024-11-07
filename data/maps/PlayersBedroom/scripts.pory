@@ -2,3 +2,14 @@ mapscripts PlayersBedroom_MapScripts {
     
 }
 
+script PlayersBedroom_EventScript_Notebook {
+    lockall
+    msgbox(format("Make changes to the gameplay at anytime to fit your playstyle!"))
+    msgbox(format("Would you like to turn on level caps?"), MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES) {
+        setflag(FLAG_LEVEL_CAPS_ON)
+    } else {
+        clearflag(FLAG_LEVEL_CAPS_ON)
+    }
+    releaseall
+}

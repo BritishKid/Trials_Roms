@@ -98,7 +98,7 @@
 #define VAR_UNUSED_0x404E                                0x404E // Unused Var
 #define VAR_LOTAD_SIZE_RECORD                            0x404F
 #define VAR_BEDROCK_TOWN_STATE                           0x4050 //USED
-#define VAR_OLDALE_TOWN_STATE                            0x4051
+#define VAR_CLAYHAVEN_STATE                            0x4051
 #define VAR_DEWFORD_TOWN_STATE                           0x4052 // Unused Var
 #define VAR_LAVARIDGE_TOWN_STATE                         0x4053
 #define VAR_CURRENT_SECRET_BASE                          0x4054 // was probably allocated for VAR_FALLARBOR_TOWN_STATE at one point
@@ -113,9 +113,9 @@
 #define VAR_MOSSDEEP_CITY_STATE                          0x405D
 #define VAR_SOOTOPOLIS_CITY_STATE                        0x405E
 #define VAR_EVER_GRANDE_CITY_STATE                       0x405F // Unused Var
-#define VAR_ROUTE101_STATE                               0x4060
-#define VAR_ROUTE102_STATE                               0x4061 // Craft Tutorial
-#define VAR_ROUTE103_STATE                               0x4062 // Unused Var
+#define VAR_SALTS7_QUEST_STATE                           0x4060 //Used for salt quest
+#define VAR_CRAFTING_STATION_STATE                       0x4061 // Craft Tutorial
+#define VAR_PLATEQUEST_STATE                             0x4062 // Used for plates
 #define VAR_ROUTE104_STATE                               0x4063
 #define VAR_ROUTE105_STATE                               0x4064 // Unused Var
 #define VAR_ROUTE106_STATE                               0x4065 // Unused Var
@@ -201,7 +201,7 @@
 #define VAR_TRICK_HOUSE_ENTER_FROM_CORRIDOR              0x40B5
 #define VAR_TRICK_HOUSE_PUZZLE_7_STATE_2                 0x40B6 // Leftover from RS, never set
 #define VAR_SLATEPORT_FAN_CLUB_STATE                     0x40B7
-#define VAR_UNUSED_0x40B8                                0x40B8 // Unused Var
+#define VAR_PLATES_FOUND                                0x40B8 //Used counts plates found
 #define VAR_MT_PYRE_STATE                                0x40B9
 #define VAR_NEW_MAUVILLE_STATE                           0x40BA
 #define VAR_UNUSED_0x40BB                                0x40BB // Unused Var

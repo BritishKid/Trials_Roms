@@ -1,0 +1,76 @@
+mapscripts PlatefallCave_GF_MapScripts {}
+
+script Platefall_Puzzle_Wall {
+    lockall
+    if(!flag(FLAG_ALEX_MET)) {
+        msgbox(format("It's a carving about the people who founded CLAY HAVEN"))
+        msgbox(format("It shows a creature coming down from the heavers with many arms holding a plate like artifact"))
+        msgbox(format("18 beams of light are shooting out of the creature landing all over an old map of TRIVER"))
+        msgbox(format("You can't help but notice four smooth holes in the wall."))
+        // questmenu(QUEST_MENU_SET_ACTIVE, QUEST_ARCEUS_PLATES) //todo when questmenu added
+        msgbox(format("It's an interseting story don't you think?"))
+        applymovement(OBJ_EVENT_ID_PLAYER, Movement_Platefallcave_Surprise)
+        waitmovement(OBJ_EVENT_ID_PLAYER)
+        applymovement(2, Movement_PlayerfallCave_AlexMovesToPlayer)
+        waitmovement(2)
+        msgbox(format("The story of the ancient plates have always fascinated me, it's name Platefall references that this is where the first plates landed."))
+        msgbox(format("But that Pokémon at the top of the painting, the one with many arms. It's nothing like anything we've seen before."))
+        msgbox(format("Anyway I'm being rude. My name is Alex it's very nice to meet you. I'm an explorer looking into the ancient history of the Triver region"))
+        msgbox(format("These carvings here are found all over the region and I've been trying to decipher them. There is one just over in Mahogany Hills, although curiously this carving has a lot more spaces on it."))
+        msgbox(format("I've had a theory that if you can find the plates they picture this wall is actually a doorway to awaken that ancient Pokémon."))
+        msgbox(format("Although no-one has managed to find any yet, although half the fun is exploring!"))
+        msgbox(format("Anyway I'll be seeing you around!"))
+        applymovement(2, Movement_PlayerfallCave_AlexLeaves)
+        waitmovement(2)
+        removeobject(2)
+        setvar(VAR_PLATEQUEST_STATE, 1)
+        setflag(FLAG_ALEX_MET)
+    }
+    if(var(VAR_PLATES_FOUND) > 3) {
+        msgbox(format("You put 4 plates into the slots"))
+        // warp(DEEPER) //todo warp the player deeper when 4 plates have been found
+    }
+    else {
+        msgbox(format("There seems to be 4 smooth holes bored into the wall"))
+    }
+    releaseall
+}
+
+script Platefall_Cave_Alex_General {
+    lockall
+    faceplayer
+    msgbox(format("I love this place, its so full of ancient history."))
+    releaseall
+}
+
+script Platefall_Cave_Maniac {
+    lockall
+    faceplayer
+    msgbox(format("Many history books talk about a rare Pokémon hidden deep in these mountains, but they are very hard to traverse"))
+    releaseall
+}
+
+//movement scripts
+
+movement Movement_Platefallcave_Surprise {
+    emote_exclamation_mark
+}
+
+movement Movement_PlayerfallCave_AlexMovesToPlayer {
+    walk_up
+    walk_up
+    walk_up
+    walk_up
+    walk_up
+    walk_up
+}
+
+movement Movement_PlayerfallCave_AlexLeaves {
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+}

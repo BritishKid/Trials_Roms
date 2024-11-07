@@ -113,7 +113,7 @@ Converts trainer data (for `convert_trainer_parties.py`) and partner data (for `
 
 #### [src/data/trainers.party](..src/data/trainers.party)
 ```diff
-+=== TRAINER_SAWYER_1 ===
++=== TRAINER_SALT7_ROUTE_1B_ENCOUNTER ===
 +Name: SAWYER
 +Class: Hiker
 +Pic: Hiker

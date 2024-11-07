@@ -1,0 +1,22 @@
+mapscripts OldFishermans_Hut_MapScripts {}
+
+
+script OldFisherman_EventScript_Fisherman {
+    lockall
+    faceplayer
+    if(flag(FLAG_RECEIVED_OLD_ROD)) {
+        msgbox(format("Sometimes you can find giant Pokemon hidden in the water."))
+    }
+    if(!flag(FLAG_RECEIVED_OLD_ROD)) {
+        msgbox(format("Have you got an interest in catching water Pokemon?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES) {
+            msgbox(format("Brilliant!\nHave this."))
+            giveitem(ITEM_OLD_ROD)
+            setflag(FLAG_RECEIVED_OLD_ROD)
+        }
+        else {
+            msgbox(format("What a shame."))
+        }
+    }
+    releaseall
+}

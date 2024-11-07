@@ -1,0 +1,44 @@
+mapscripts Route1b_MapScripts {
+    
+}
+
+script Route1b_EventScript_FisherSign {
+    lockall
+    msgbox(format("The Old Fishers House"), MSGBOX_DEFAULT)
+    releaseall
+}
+
+script Route1b_EventScript_Fisherman {
+    lockall
+    faceplayer
+    msgbox(format("If only I had a Pokemon that knew SURF I'd be able to reach that island."))
+    releaseall
+}
+
+script Route1b_BattleSalt7_FirstBattle {
+    trainerbattle_single(TRAINER_SALT7_ROUTE_1B_ENCOUNTER, Salt7_Intro, Salt7_Outro, Salt7_PostBattleScript)
+    msgbox(PostBattle_Salt7, MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Salt7_PostBattleScript {
+    setflag(FLAG_SALT7_BEATEN_FIRST_ENCOUNTER)
+    // questmenu(QUEST_MENU_SET_ACTIVE, QUEST_SALT7_GYRADOS)
+    // subquestmenu(QUEST_MENU_COMPLETE_QUEST, QUEST_POKEMON_LEAGUE, SUB_QUEST_MET_SALT)
+    setvar(VAR_SALTS7_QUEST_STATE, 1)
+    waitmessage
+}
+
+//text scripts
+
+text Salt7_Intro {
+    format("The guy in that house there gave me an old rod! I'm going to use it to catch all the Gyrados I can find! I've already got some. Here let me show you")
+}
+
+text Salt7_Outro {
+    format("Alright so they aren't Gyrados yes, but I'll get more and become unstoppable! But just how do I evolve them.")
+}
+
+text PostBattle_Salt7 {
+    format("I remember reading something about a waterfall could make them evolve. I think there is one somewhere nearby")
+}

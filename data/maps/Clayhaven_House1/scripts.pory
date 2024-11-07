@@ -1,0 +1,11 @@
+mapscripts Clayhaven_House1_MapScripts {
+    
+}
+
+script Clayhaven_House1_EventScript_CraftingMaster {
+    lockall
+    faceplayer
+    msgbox("Hello")
+    call(CraftTutorial_EventScript_Table)
+    releaseall
+}

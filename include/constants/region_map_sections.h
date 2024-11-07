@@ -2,7 +2,7 @@
 #define GUARD_REGIONMAPSEC_H
 
 #define MAPSEC_BEDROCK_TOWN              0x00
-#define MAPSEC_OLDALE_TOWN                  0x01
+#define MAPSEC_CLAYHAVEN                  0x01
 #define MAPSEC_DEWFORD_TOWN                 0x02
 #define MAPSEC_LAVARIDGE_TOWN               0x03
 #define MAPSEC_FALLARBOR_TOWN               0x04
@@ -17,8 +17,8 @@
 #define MAPSEC_MOSSDEEP_CITY                0x0D
 #define MAPSEC_SOOTOPOLIS_CITY              0x0E
 #define MAPSEC_EVER_GRANDE_CITY             0x0F
-#define MAPSEC_ROUTE_101                    0x10
-#define MAPSEC_ROUTE_102                    0x11
+#define MAPSEC_ROUTE_1                    0x10
+#define MAPSEC_ROUTE_2                    0x11
 #define MAPSEC_ROUTE_103                    0x12
 #define MAPSEC_ROUTE_104                    0x13
 #define MAPSEC_ROUTE_105                    0x14
@@ -102,8 +102,8 @@
 #define MAPSEC_SAFFRON_CITY                 0x62
 #define MAPSEC_ROUTE_4_POKECENTER           0x63
 #define MAPSEC_ROUTE_10_POKECENTER          0x64
-#define MAPSEC_ROUTE_1                      0x65
-#define MAPSEC_ROUTE_2                      0x66
+#define MAPSEC_ROUTE_1_KANTO                0x65
+#define MAPSEC_ROUTE_2_KANTO                0x66
 #define MAPSEC_ROUTE_3                      0x67
 #define MAPSEC_ROUTE_4                      0x68
 #define MAPSEC_ROUTE_5                      0x69
@@ -191,7 +191,7 @@
 #define MAPSEC_BIRTH_ISLAND_FRLG            0xBB
 #define MAPSEC_MONEAN_CHAMBER               0xBC
 #define MAPSEC_LIPTOO_CHAMBER               0xBD
-#define MAPSEC_WEEPTH_CHAMBER               0xBE
+#define MAPSEC_PLATEFALL_CAVE               0xBE
 #define MAPSEC_DILFORD_CHAMBER              0xBF
 #define MAPSEC_SCUFIB_CHAMBER               0xC0
 #define MAPSEC_RIXY_CHAMBER                 0xC1

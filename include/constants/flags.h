@@ -42,7 +42,7 @@
 #define TEMP_FLAGS_END   FLAG_TEMP_1F
 #define NUM_TEMP_FLAGS   (TEMP_FLAGS_END - TEMP_FLAGS_START + 1)
 
-#define FLAG_UNUSED_0x020    0x20 // Unused Flag
+#define FLAG_FOUND_GULPIN_DOLL    0x20 // Used
 #define FLAG_UNUSED_0x021    0x21 // Unused Flag
 #define FLAG_UNUSED_0x022    0x22 // Unused Flag
 #define FLAG_UNUSED_0x023    0x23 // Unused Flag
@@ -94,14 +94,14 @@
 // Scripts
 #define FLAG_HIDE_SKY_PILLAR_TOP_RAYQUAZA_STILL  0x50
 #define FLAG_SET_WALL_CLOCK                      0x51
-#define FLAG_RESCUED_BIRCH                       0x52
+#define FLAG_ALEX_MET                           0x52
 #define FLAG_LEGENDARIES_IN_SOOTOPOLIS           0x53
 
 #define FLAG_UNUSED_0x054                    0x54  // Unused Flag
 #define FLAG_UNUSED_0x055                    0x55  // Unused Flag
 
 #define FLAG_HIDE_CONTEST_POKE_BALL          0x56  // Always set after new game, object it hides is added directly
-#define FLAG_MET_RIVAL_MOM                   0x57
+#define FLAG_SALT7_BEATEN_FIRST_ENCOUNTER    0x57 //used
 #define FLAG_BIRCH_AIDE_MET                  0x58
 #define FLAG_DECLINED_BIKE                   0x59
 #define FLAG_RECEIVED_BIKE                   0x5A
@@ -742,7 +742,7 @@
 #define FLAG_UNUSED_0x2BB  0x2BB // Unused Flag
 
 // Event Flags
-#define FLAG_RECEIVED_STARTER                                       0x2BC
+#define FLAG_RECEIVED_STARTER                                       0x2BC //used
 #define FLAG_HIDE_APPRENTICE                                        0x2BD
 #define FLAG_HIDE_POKEMON_CENTER_2F_MYSTERY_GIFT_MAN                0x2BE
 #define FLAG_HIDE_UNION_ROOM_PLAYER_1                               0x2BF
@@ -762,17 +762,17 @@
 #define FLAG_HIDE_SAFARI_ZONE_SOUTH_CONSTRUCTION_WORKERS            0x2CD
 #define FLAG_HIDE_MEW                                               0x2CE
 #define FLAG_HIDE_ROUTE_104_RIVAL                                   0x2CF
-#define FLAG_HIDE_ROUTE_101_BIRCH_ZIGZAGOON_BATTLE                  0x2D0
+#define FLAG_LEVEL_CAPS_ON                                          0x2D0 //used
 #define FLAG_HIDE_LITTLEROOT_TOWN_BIRCHS_LAB_BIRCH                  0x2D1
 #define FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_RIVAL_BEDROOM          0x2D2
-#define FLAG_HIDE_ROUTE_103_RIVAL                                   0x2D3
+#define FLAG_RECEIVED_DWEBBLE                                       0x2D3 //used
 #define FLAG_HIDE_PETALBURG_WOODS_DEVON_EMPLOYEE                    0x2D4
 #define FLAG_HIDE_PETALBURG_WOODS_AQUA_GRUNT                        0x2D5
 #define FLAG_HIDE_PETALBURG_CITY_WALLY                              0x2D6
 #define FLAG_HIDE_MOSSDEEP_CITY_STEVENS_HOUSE_INVISIBLE_NINJA_BOY   0x2D7
 #define FLAG_HIDE_PETALBURG_CITY_WALLYS_MOM                         0x2D8
 
-#define FLAG_UNUSED_0x2D9                                           0x2D9 // Unused Flag
+#define FLAG_NATHAN_BEATEN                                           0x2D9 // Used
 
 #define FLAG_HIDE_LILYCOVE_FAN_CLUB_INTERVIEWER                     0x2DA
 #define FLAG_HIDE_RUSTBORO_CITY_AQUA_GRUNT                          0x2DB
@@ -838,7 +838,7 @@
 #define FLAG_HIDE_FANCLUB_LITTLE_BOY                                0x317
 #define FLAG_HIDE_FANCLUB_LADY                                      0x318
 #define FLAG_HIDE_EVER_GRANDE_POKEMON_CENTER_1F_SCOTT               0x319
-#define FLAG_HIDE_LITTLEROOT_TOWN_RIVAL                             0x31A
+#define FLAG_XP_ALL_ON                                              0x31A //used
 #define FLAG_HIDE_LITTLEROOT_TOWN_BIRCH                             0x31B
 #define FLAG_HIDE_ROUTE_111_GABBY_AND_TY_1                          0x31C
 #define FLAG_HIDE_ROUTE_118_GABBY_AND_TY_1                          0x31D
@@ -933,7 +933,7 @@
 #define FLAG_HIDE_SLATEPORT_CITY_OCEANIC_MUSEUM_2F_ARCHIE           0x376
 #define FLAG_HIDE_SLATEPORT_CITY_OCEANIC_MUSEUM_2F_CAPTAIN_STERN    0x377
 #define FLAG_HIDE_BATTLE_TOWER_OPPONENT                             0x378
-#define FLAG_HIDE_LITTLEROOT_TOWN_BIRCHS_LAB_RIVAL                  0x379
+#define FLAG_TURN_ON_INCREASED_XP                                   0x379 //used
 #define FLAG_HIDE_ROUTE_119_TEAM_AQUA                               0x37A
 #define FLAG_HIDE_ROUTE_116_MR_BRINEY                               0x37B
 #define FLAG_HIDE_WEATHER_INSTITUTE_1F_WORKERS                      0x37C
@@ -1023,7 +1023,7 @@
 #define FLAG_HIDE_NEW_MAUVILLE_VOLTORB_3                            0x3D0
 #define FLAG_HIDE_AQUA_HIDEOUT_B1F_ELECTRODE_1                      0x3D1
 #define FLAG_HIDE_AQUA_HIDEOUT_B1F_ELECTRODE_2                      0x3D2
-#define FLAG_HIDE_OLDALE_TOWN_RIVAL                                 0x3D3
+#define FLAG_HIDE_CLAYHAVEN_RIVAL                                 0x3D3
 #define FLAG_HIDE_UNDERWATER_SEA_FLOOR_CAVERN_STOLEN_SUBMARINE      0x3D4
 #define FLAG_HIDE_ROUTE_120_KECLEON_BRIDGE_SHADOW                   0x3D5
 #define FLAG_HIDE_ROUTE_120_KECLEON_1                               0x3D6
@@ -1364,7 +1364,7 @@
 
 // Towns and Cities
 #define FLAG_VISITED_LITTLEROOT_TOWN                (SYSTEM_FLAGS + 0xF)
-#define FLAG_VISITED_OLDALE_TOWN                    (SYSTEM_FLAGS + 0x10)
+#define FLAG_VISITED_CLAYHAVEN                    (SYSTEM_FLAGS + 0x10)
 #define FLAG_VISITED_DEWFORD_TOWN                   (SYSTEM_FLAGS + 0x11)
 #define FLAG_VISITED_LAVARIDGE_TOWN                 (SYSTEM_FLAGS + 0x12)
 #define FLAG_VISITED_FALLARBOR_TOWN                 (SYSTEM_FLAGS + 0x13)

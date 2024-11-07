@@ -12,10 +12,10 @@
 
 // Configs
 #define B_EXP_CAP_TYPE                  EXP_CAP_NONE   // [EXP_CAP_NONE, EXP_CAP_HARD, EXP_CAP_SOFT] choose the type of level cap to apply
-#define B_LEVEL_CAP_TYPE                LEVEL_CAP_NONE // [LEVEL_CAP_NONE, LEVEL_CAP_FLAG_LIST, LEVEL_CAP_VARIABLE] choose the method to derive the level cap
-#define B_LEVEL_CAP_VARIABLE            0 // event variable used to derive level cap if B_LEVEL_CAP_TYPE is set to LEVEL_CAP_VARIABLE
+#define B_LEVEL_CAP_TYPE                LEVEL_CAP_FLAG_LIST // [LEVEL_CAP_NONE, LEVEL_CAP_FLAG_LIST, LEVEL_CAP_VARIABLE] choose the method to derive the level cap
+#define B_LEVEL_CAP_VARIABLE            FLAG_LEVEL_CAPS_ON // event variable used to derive level cap if B_LEVEL_CAP_TYPE is set to LEVEL_CAP_VARIABLE
 
-#define B_RARE_CANDY_CAP                FALSE // If set to true, Rare Candies can't be used to go over the level cap
-#define B_LEVEL_CAP_EXP_UP              FALSE // If set to true, mons under level cap will receive more experience
-
+#define B_RARE_CANDY_CAP                TRUE // If set to true, Rare Candies can't be used to go over the level cap
+#define B_LEVEL_CAP_EXP_UP              FLAG_TURN_ON_INCREASED_XP // If set to true, mons under level cap will receive more experience
+//above set when arriving into a gym for the first time and not recieved badge.
 #endif /* GUARD_CONFIG_LEVEL_CAP_H */

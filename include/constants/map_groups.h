@@ -16,15 +16,15 @@
 #define MAP_SOOTOPOLIS_CITY     (7 | (0 << 8))
 #define MAP_EVER_GRANDE_CITY    (8 | (0 << 8))
 #define MAP_BEDROCK_TOWN        (9 | (0 << 8))
-#define MAP_OLDALE_TOWN         (10 | (0 << 8))
+#define MAP_CLAYHAVEN           (10 | (0 << 8))
 #define MAP_DEWFORD_TOWN        (11 | (0 << 8))
 #define MAP_LAVARIDGE_TOWN      (12 | (0 << 8))
 #define MAP_FALLARBOR_TOWN      (13 | (0 << 8))
 #define MAP_VERDANTURF_TOWN     (14 | (0 << 8))
 #define MAP_PACIFIDLOG_TOWN     (15 | (0 << 8))
-#define MAP_ROUTE101            (16 | (0 << 8))
-#define MAP_ROUTE102            (17 | (0 << 8))
-#define MAP_ROUTE103            (18 | (0 << 8))
+#define MAP_ROUTE1A             (16 | (0 << 8))
+#define MAP_ROUTE1B             (17 | (0 << 8))
+#define MAP_ROUTE2              (18 | (0 << 8))
 #define MAP_ROUTE104            (19 | (0 << 8))
 #define MAP_ROUTE105            (20 | (0 << 8))
 #define MAP_ROUTE106            (21 | (0 << 8))
@@ -72,11 +72,11 @@
 #define MAP_LITTLEROOT_TOWN_PROFESSOR_BIRCHS_LAB (4 | (1 << 8))
 
 // gMapGroup_IndoorOldale
-#define MAP_OLDALE_TOWN_HOUSE1            (0 | (2 << 8))
-#define MAP_OLDALE_TOWN_HOUSE2            (1 | (2 << 8))
-#define MAP_OLDALE_TOWN_POKEMON_CENTER_1F (2 | (2 << 8))
-#define MAP_OLDALE_TOWN_POKEMON_CENTER_2F (3 | (2 << 8))
-#define MAP_OLDALE_TOWN_MART              (4 | (2 << 8))
+#define MAP_CLAYHAVEN_HOUSE1            (0 | (2 << 8))
+#define MAP_CLAYHAVEN_HOUSE2            (1 | (2 << 8))
+#define MAP_CLAYHAVEN_POKEMON_CENTER_1F (2 | (2 << 8))
+#define MAP_CLAYHAVEN_POKEMON_CENTER_2F (3 | (2 << 8))
+#define MAP_CLAYHAVEN_MART              (4 | (2 << 8))
 
 // gMapGroup_IndoorDewford
 #define MAP_DEWFORD_TOWN_HOUSE1            (0 | (3 << 8))
@@ -400,6 +400,7 @@
 #define MAP_TERRA_CAVE_END                           (105 | (24 << 8))
 #define MAP_ALTERING_CAVE                            (106 | (24 << 8))
 #define MAP_METEOR_FALLS_STEVENS_CAVE                (107 | (24 << 8))
+#define MAP_PLATEFALL_CAVE_GF                        (108 | (24 << 8))
 
 // gMapGroup_IndoorDynamic
 #define MAP_SECRET_BASE_RED_CAVE1    (0 | (25 << 8))
@@ -594,7 +595,14 @@
 // gMapGroup_IndoorBedrock
 #define MAP_PLAYERS_BEDROOM  (0 | (34 << 8))
 #define MAP_PLAYERS_HOUSE_1F (1 | (34 << 8))
+#define MAP_RIVALS_HOUSE_1F  (2 | (34 << 8))
 
-#define MAP_GROUPS_COUNT 35
+// gMapGroup_IndoorRoute1
+#define MAP_OLD_FISHERMANS_HUT (0 | (35 << 8))
+
+// gMapGroup_HiddenBases
+#define MAP_NATHANS_HIDDEN_BASE (0 | (36 << 8))
+
+#define MAP_GROUPS_COUNT 37
 
 #endif // GUARD_CONSTANTS_MAP_GROUPS_H

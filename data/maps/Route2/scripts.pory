@@ -1,0 +1,28 @@
+mapscripts Route2_MapScripts {
+    
+}
+
+script Route2_EventScript_BerryGirl {
+    lockall
+    faceplayer
+    if(!flag(FLAG_RECEIVED_WAILMER_PAIL)){
+        msgbox(format("Hey you must have seen all these berry patches around the place.\lYou can use them to grow your own berries.\lHere take some, I have spare."))
+        giveitem(ITEM_CHERI_BERRY, 5)
+        giveitem(ITEM_ORAN_BERRY, 5)
+        giveitem(ITEM_PECHA_BERRY, 5)
+        giveitem(ITEM_LEPPA_BERRY, 5)
+        giveitem(ITEM_COBA_BERRY, 5)
+        giveitem(ITEM_PERSIM_BERRY, 5)
+        msgbox(format("Use the spots next to me to grow more, but you will need this to help."))
+        giveitem(ITEM_WAILMER_PAIL, 1)
+        setflag(FLAG_RECEIVED_WAILMER_PAIL)
+    }
+    msgbox(format("Using a berry in battle can make a big difference."))
+    releaseall
+}
+
+script Battle_Route2_Trainer3 {
+    lockall
+    msgbox(format("BATTLE COMING SOON"))
+    releaseall
+}

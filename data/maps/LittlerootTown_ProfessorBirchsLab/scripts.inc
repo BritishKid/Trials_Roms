@@ -205,7 +205,7 @@ LittlerootTown_ProfessorBirchsLab_EventScript_UpgradeToNationalDex::
 	msgbox LittlerootTown_ProfessorBirchsLab_Text_GrassyPatchWaiting2, MSGBOX_DEFAULT
 	closemessage
 	setflag FLAG_HIDE_LITTLEROOT_TOWN_BIRCH
-	setflag FLAG_HIDE_LITTLEROOT_TOWN_RIVAL
+	setflag FLAG_XP_ALL_ON
 	setvar VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 2
 	setvar VAR_SCOTT_BF_CALL_STEP_COUNTER, 0
 	setflag FLAG_SCOTT_CALL_BATTLE_FRONTIER
@@ -524,7 +524,7 @@ LittlerootTown_ProfessorBirchsLab_EventScript_GivePokedex::
 	call_if_eq VAR_RESULT, FEMALE, LittlerootTown_ProfessorBirchsLab_EventScript_BrendanGivePokeBalls
 	setvar VAR_BIRCH_LAB_STATE, 5
 	setflag FLAG_ADVENTURE_STARTED
-	setvar VAR_OLDALE_TOWN_STATE, 1
+	setvar VAR_CLAYHAVEN_STATE, 1
 	setvar VAR_LITTLEROOT_RIVAL_STATE, 4
 	setvar VAR_BEDROCK_TOWN_STATE, 3
 	releaseall

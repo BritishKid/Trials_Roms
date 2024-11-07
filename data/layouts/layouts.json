@@ -102,14 +102,14 @@
       "blockdata_filepath": "data/layouts/BedrockTown/map.bin"
     },
     {
-      "id": "LAYOUT_OLDALE_TOWN",
-      "name": "OldaleTown_Layout",
-      "width": 20,
-      "height": 20,
+      "id": "LAYOUT_CLAYHAVEN",
+      "name": "Clayhaven_Layout",
+      "width": 50,
+      "height": 39,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Petalburg",
-      "border_filepath": "data/layouts/OldaleTown/border.bin",
-      "blockdata_filepath": "data/layouts/OldaleTown/map.bin"
+      "border_filepath": "data/layouts/Clayhaven/border.bin",
+      "blockdata_filepath": "data/layouts/Clayhaven/map.bin"
     },
     {
       "id": "LAYOUT_DEWFORD_TOWN",
@@ -162,34 +162,34 @@
       "blockdata_filepath": "data/layouts/PacifidlogTown/map.bin"
     },
     {
-      "id": "LAYOUT_ROUTE101",
-      "name": "Route101_Layout",
-      "width": 20,
-      "height": 20,
+      "id": "LAYOUT_ROUTE1A",
+      "name": "Route1a_Layout",
+      "width": 30,
+      "height": 25,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Petalburg",
-      "border_filepath": "data/layouts/Route101/border.bin",
-      "blockdata_filepath": "data/layouts/Route101/map.bin"
+      "border_filepath": "data/layouts/Route1a/border.bin",
+      "blockdata_filepath": "data/layouts/Route1a/map.bin"
     },
     {
-      "id": "LAYOUT_ROUTE102",
-      "name": "Route102_Layout",
+      "id": "LAYOUT_ROUTE1B",
+      "name": "Route1b_Layout",
       "width": 50,
-      "height": 20,
+      "height": 40,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Petalburg",
-      "border_filepath": "data/layouts/Route102/border.bin",
-      "blockdata_filepath": "data/layouts/Route102/map.bin"
+      "secondary_tileset": "gTileset_Rustboro",
+      "border_filepath": "data/layouts/Route1b/border.bin",
+      "blockdata_filepath": "data/layouts/Route1b/map.bin"
     },
     {
-      "id": "LAYOUT_ROUTE103",
-      "name": "Route103_Layout",
-      "width": 80,
-      "height": 22,
+      "id": "LAYOUT_ROUTE2",
+      "name": "Route2_Layout",
+      "width": 46,
+      "height": 40,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Petalburg",
-      "border_filepath": "data/layouts/Route103/border.bin",
-      "blockdata_filepath": "data/layouts/Route103/map.bin"
+      "secondary_tileset": "gTileset_Rustboro",
+      "border_filepath": "data/layouts/Route2/border.bin",
+      "blockdata_filepath": "data/layouts/Route2/map.bin"
     },
     {
       "id": "LAYOUT_ROUTE104",
@@ -4430,6 +4430,46 @@
       "secondary_tileset": "gTileset_BrendansMaysHouse",
       "border_filepath": "data/layouts/PlayersHouse_1F/border.bin",
       "blockdata_filepath": "data/layouts/PlayersHouse_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_RIVALS_HOUSE_1F",
+      "name": "RivalsHouse_1F_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/RivalsHouse_1F/border.bin",
+      "blockdata_filepath": "data/layouts/RivalsHouse_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_NATHANS_HIDDEN_BASE",
+      "name": "Nathans_Hidden_base_Layout",
+      "width": 11,
+      "height": 9,
+      "primary_tileset": "gTileset_SecretBase",
+      "secondary_tileset": "gTileset_SecretBaseBrownCave",
+      "border_filepath": "data/layouts/Nathans_Hidden_base/border.bin",
+      "blockdata_filepath": "data/layouts/Nathans_Hidden_base/map.bin"
+    },
+    {
+      "id": "LAYOUT_OLD_FISHERMANS_HUT",
+      "name": "OldFishermans_Hut_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/OldFishermans_Hut/border.bin",
+      "blockdata_filepath": "data/layouts/OldFishermans_Hut/map.bin"
+    },
+    {
+      "id": "LAYOUT_PLATEFALL_CAVE_GF",
+      "name": "PlatefallCave_GF_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/PlatefallCave_GF/border.bin",
+      "blockdata_filepath": "data/layouts/PlatefallCave_GF/map.bin"
     }
   ]
 }

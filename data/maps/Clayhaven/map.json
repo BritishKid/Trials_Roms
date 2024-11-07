@@ -1,0 +1,121 @@
+{
+  "id": "MAP_CLAYHAVEN",
+  "name": "Clayhaven",
+  "layout": "LAYOUT_CLAYHAVEN",
+  "music": "MUS_OLDALE",
+  "region_map_section": "MAPSEC_CLAYHAVEN",
+  "requires_flash": false,
+  "weather": "WEATHER_SUNNY",
+  "map_type": "MAP_TYPE_TOWN",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_ROUTE1B",
+      "offset": 15,
+      "direction": "right"
+    },
+    {
+      "map": "MAP_ROUTE2",
+      "offset": 0,
+      "direction": "down"
+    }
+  ],
+  "object_events": [
+
+  ],
+  "warp_events": [
+    {
+      "x": 34,
+      "y": 26,
+      "elevation": 0,
+      "dest_map": "MAP_CLAYHAVEN_POKEMON_CENTER_1F",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 15,
+      "y": 12,
+      "elevation": 0,
+      "dest_map": "MAP_CLAYHAVEN_MART",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 26,
+      "y": 26,
+      "elevation": 0,
+      "dest_map": "MAP_CLAYHAVEN_HOUSE1",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 31,
+      "y": 5,
+      "elevation": 0,
+      "dest_map": "MAP_PLATEFALL_CAVE_GF",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 29,
+      "y": 26,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Clayhaven_MapScript_CraftingMaster_Sign"
+    },
+    {
+      "type": "sign",
+      "x": 37,
+      "y": 26,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Clayhaven_MapScript_TownSign"
+    },
+    {
+      "type": "sign",
+      "x": 36,
+      "y": 26,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "Common_EventScript_ShowPokemonCenterSign"
+    },
+    {
+      "type": "sign",
+      "x": 35,
+      "y": 26,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "Common_EventScript_ShowPokemonCenterSign"
+    },
+    {
+      "type": "sign",
+      "x": 16,
+      "y": 12,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "Common_EventScript_ShowPokemartSign"
+    },
+    {
+      "type": "sign",
+      "x": 17,
+      "y": 12,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "Common_EventScript_ShowPokemartSign"
+    },
+    {
+      "type": "sign",
+      "x": 29,
+      "y": 7,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Clayhaven_MapScript_PlatefallCave_Sign"
+    }
+  ]
+}

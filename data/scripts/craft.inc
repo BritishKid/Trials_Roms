@@ -21,7 +21,7 @@ Craft_Cancel:
     end
 
 @ CRAFT TUTORIAL
-    @ State descriptions for VAR_ROUTE102_STATE
+    @ State descriptions for VAR_CRAFTING_STATION_STATE
     @ 0: New Game
     @ 1: Fetch Quest
     @ 2: Antidote crafting
@@ -29,19 +29,18 @@ Craft_Cancel:
 
 CraftTutorial_EventScript_Table::
     lock
-    call_if_eq VAR_ROUTE102_STATE, 0, CraftTutorial_EventScript_FlowerBox
-    goto_if_eq VAR_TEMP_0,         2, CraftTutorial_EventScript_AntidoteCheck
-    goto_if_eq VAR_ROUTE102_STATE, 1, CraftTutorial_EventScript_WorkStation
-    goto_if_eq VAR_ROUTE102_STATE, 3, Craft_EventScript_CraftTable
+    goto_if_eq VAR_TEMP_0,         2, CraftTutorial_EventScript_HowToCraft
+    call_if_eq VAR_CRAFTING_STATION_STATE, 0, CraftTutorial_EventScript_FlowerBox
+    goto_if_eq VAR_CRAFTING_STATION_STATE, 1, CraftTutorial_EventScript_ItemCheck
+    goto_if_eq VAR_CRAFTING_STATION_STATE, 5, CraftTutorial_EventScript_WorkStation
+    goto_if_eq VAR_CRAFTING_STATION_STATE, 3, CraftTutorial_EventScript_WantReminder
     goto CraftTutorial_EventScript_Hey
     end
 
 CraftTutorial_EventScript_BoyDialogue::
     lock
-    applymovement 5, Common_Movement_FacePlayer
-    goto_if_eq VAR_TEMP_0,         2, CraftTutorial_EventScript_HowToCraft
-    goto_if_eq VAR_ROUTE102_STATE, 1, CraftTutorial_EventScript_ItemCheck
-    goto_if_eq VAR_ROUTE102_STATE, 3, CraftTutorial_EventScript_WantReminder
+    goto_if_eq VAR_TEMP_0,         2, CraftTutorial_EventScript_AntidoteCheck
+    goto_if_eq VAR_CRAFTING_STATION_STATE, 3, Craft_EventScript_CraftTable
     return
 
 CraftTutorial_EventScript_FlowerBox::
@@ -50,57 +49,13 @@ CraftTutorial_EventScript_FlowerBox::
 
 CraftTutorial_EventScript_Hey::
     lockall
-    applymovement 5, Common_Movement_WalkInPlaceFasterDown
-	waitmovement 0
-    playse SE_PIN
-	applymovement 5, Common_Movement_ExclamationMark
-	waitmovement 0
-	applymovement 5, Common_Movement_Delay48
-	waitmovement 0
-	delay 30
-    setobjectmovementtype 5, MOVEMENT_TYPE_FACE_DOWN
     msgbox CraftTutorial_Text_HeyLikeMySetup, MSGBOX_DEFAULT
-    specialvar VAR_RESULT, GetPlayerFacingDirection
-	call_if_eq VAR_RESULT, DIR_SOUTH, CraftTutorial_EventScript_ApproachPlayer1
-    call_if_eq VAR_RESULT, DIR_EAST,  CraftTutorial_EventScript_ApproachPlayer2
-	call_if_eq VAR_RESULT, DIR_NORTH, CraftTutorial_EventScript_ApproachPlayer3
+    msgbox CraftTutorial_Text_HeyLikeMySetup2, MSGBOX_DEFAULT
     msgbox CraftTutorial_Text_FindAPechaAndPotion, MSGBOX_DEFAULT
     closemessage
-    applymovement 5, CraftTutorial_Movement_GoBackToGrass
-    waitmovement 0
-    setvar VAR_ROUTE102_STATE, 1
+    setvar VAR_CRAFTING_STATION_STATE, 1
     releaseall
     end
-
-CraftTutorial_EventScript_ApproachPlayer1::
-	turnobject OBJ_EVENT_ID_PLAYER, DIR_WEST
-    applymovement 5, CraftTutorial_Movement_GoToCraftTable
-    waitmovement 0
-    turnobject OBJ_EVENT_ID_PLAYER, DIR_SOUTH
-    msgbox CraftTutorial_Text_HeyLikeMySetup2, MSGBOX_DEFAULT
-    turnobject 5, DIR_NORTH
-    return
-
-CraftTutorial_EventScript_ApproachPlayer2::
-	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
-    applymovement 5, CraftTutorial_Movement_GoToCraftTableMovePlayer1
-    waitmovement 0
-    turnobject OBJ_EVENT_ID_PLAYER, DIR_WEST
-    msgbox CraftTutorial_Text_HeyLikeMySetup2, MSGBOX_DEFAULT
-    applymovement OBJ_EVENT_ID_PLAYER, CraftTutorial_Movement_GoToCraftTableMovePlayer2
-    applymovement 5, CraftTutorial_Movement_GoToCraftTableMovePlayer3
-    waitmovement 0
-    turnobject 5, DIR_SOUTH
-    return
-
-CraftTutorial_EventScript_ApproachPlayer3::
-	turnobject OBJ_EVENT_ID_PLAYER, DIR_WEST
-    applymovement 5, CraftTutorial_Movement_GoToCraftTable
-    waitmovement 0
-    turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
-    msgbox CraftTutorial_Text_HeyLikeMySetup2, MSGBOX_DEFAULT
-    turnobject 5, DIR_SOUTH
-    return
 
 CraftTutorial_EventScript_WorkStation::
     msgbox CraftTutorial_Text_ItsAWorkStation, MSGBOX_DEFAULT
@@ -126,19 +81,19 @@ CraftTutorial_EventScript_LetsDoIt::
     msgbox CraftTutorial_Text_YouGotTheStuff, MSGBOX_DEFAULT
     closemessage
     playbgm MUS_FOLLOW_ME, FALSE
-    applymovement 5, CraftTutorial_Movement_GoToCraftTable2
+    applymovement 1, CraftTutorial_Movement_GoToCraftTable2
     call_if_eq VAR_RESULT, DIR_SOUTH, CraftTutorial_EventScript_LetsGoN
     call_if_eq VAR_RESULT, DIR_NORTH, CraftTutorial_EventScript_LetsGoS
     call_if_eq VAR_RESULT, DIR_WEST,  CraftTutorial_EventScript_LetsGoE
     call_if_eq VAR_RESULT, DIR_EAST,  CraftTutorial_EventScript_LetsGoW
     msgbox CraftTutorial_Text_CraftingIsSimple, MSGBOX_DEFAULT
     closemessage
-    turnobject 5, DIR_NORTH
+    turnobject 1, DIR_NORTH
     applymovement OBJ_EVENT_ID_PLAYER, CraftTutorial_Movement_FollowToCraftTableFinish
     waitmovement 0
     msgbox CraftTutorial_Text_ChooseSpaceAndAddItem, MSGBOX_DEFAULT
-    setobjectxyperm 5, 39, 7
-	setobjectmovementtype 5, MOVEMENT_TYPE_LOOK_AROUND
+    setobjectxyperm 1, 39, 7
+	setobjectmovementtype 1, MOVEMENT_TYPE_LOOK_AROUND
     setvar VAR_TEMP_0, 2
 	fadedefaultbgm
     releaseall
@@ -192,7 +147,7 @@ CraftTutorial_EventScript_Finish::
     waitmovement 0
     setobjectmovementtype 5, MOVEMENT_TYPE_WANDER_AROUND
     setvar VAR_TEMP_0, 0
-    setvar VAR_ROUTE102_STATE, 3
+    setvar VAR_CRAFTING_STATION_STATE, 3
     releaseall
     end
 
@@ -310,30 +265,26 @@ CraftTutorial_Movement_GoToCraftTableMovePlayer3:
     step_end
 
 CraftTutorial_Text_ItsAFlowerBox:
-    .string "It's a simple flower box and paver\n"
-    .string "stone.\p"
-    .string "Someone's tools are laying there...$"
+    .string "I'm known as the crafting master.\n"
+    .string "I can make amazing things from almost.\n"
+    .string "nothing.$"
 
 CraftTutorial_Text_HeyLikeMySetup:
-    .string "Hey! Like my setup?$"
+    .string "I could teach you!$"
 
 CraftTutorial_Text_HeyLikeMySetup2:
-    .string "To the layman it might look like a simple\n"
-    .string "flower box and paver stone,\p"
-    .string "But this is actually the proud WORK\n"
-    .string "STATION of my ANTIDOTE crafting.\p"
-    .string "As part of my income, I make ANTIDOTE\n"
-    .string "for the OLDALE POKéMART!$"
+    .string "You can use berries and items\n"
+    .string "found held by certain Pokémon\n"
+    .string "to create incredible new items.\p"
+    .string "It's a great way to make powerful.\n"
+    .string "items and medicines to support\n"
+    .string "your Pokémon journey!$"
 
 CraftTutorial_Text_FindAPechaAndPotion:
-    .string "Tell you what. I've got a bit of extra\n"
-    .string "time today, so if you're interested\l"
-    .string "I can show you how to CRAFT.\p"
+    .string "Tell you what.\p"
     .string "Find me a PECHA BERRY and a POTION, and\n"
     .string "I'll show you how to put two and two\l"
-    .string "together!\p...for a small price.\p"
-    .string "Sounds like a great deal, no? Find\n"
-    .string "those items and meet me back here.\p"
+    .string "together!\p"
     .string "I think I saw some PECHA BERRIES\n"
     .string "growing nearby.$"
 

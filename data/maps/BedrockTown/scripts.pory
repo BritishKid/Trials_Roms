@@ -13,3 +13,15 @@ script BedrockTown_LabSign {
     msgbox(format("Professor Holly's Lab.\nLeading the research into a lost past."), MSGBOX_DEFAULT)
     releaseall
 }
+
+script BedrockTown_EventScript_HollyAid {
+    lockall
+    msgbox(format("Sorry no one is allowed through with Professor Holly's permission."), MSGBOX_DEFAULT)
+    releaseall
+}
+
+script COMINGSOON {
+    lockall
+    msgbox("COMING SOON")
+    releaseall
+}

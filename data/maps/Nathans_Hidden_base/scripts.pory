@@ -1,0 +1,99 @@
+mapscripts Nathans_Hidden_base_MapScripts {}
+
+
+script Nathans_computer {
+    lockall
+    msgbox(format("Thank you to Natrhan for watching the streams and helping to create this game!"))
+    releaseall
+}
+
+script Battle_NathanSecretBase {
+    lockall
+    faceplayer
+    if(!flag(FLAG_NATHAN_BEATEN)) {
+        trainerbattle_single(TRAINER_NATHAN_SECRET_BASE_1, Nathan_Intro, Nathan_Outro, Nathan_Beaten) 
+    }
+    if(flag(FLAG_NATHAN_BEATEN) && !flag(FLAG_RECEIVED_DWEBBLE)) {
+        call(Nathan_Gives_Dwebble)
+    }
+    if(flag(FLAG_NATHAN_BEATEN) && flag(FLAG_RECEIVED_DWEBBLE)) {
+        msgbox(PostBattle_Nathan, MSGBOX_AUTOCLOSE)
+        //todo come back for rematch
+    }
+    releaseall
+}
+
+script Nathan_Beaten {
+    msgbox(Beat_Nathan, MSGBOX_AUTOCLOSE)
+    setflag(FLAG_NATHAN_BEATEN)
+    call(Nathan_Gives_Dwebble)
+    release
+}
+
+script Nathan_Gives_Dwebble {
+    showmonpic(SPECIES_DWEBBLE, 10, 3)
+    givemon(SPECIES_DWEBBLE, 5)
+    setflag(FLAG_RECEIVED_DWEBBLE)
+    playfanfare(MUS_OBTAIN_ITEM)
+    if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY) {
+        msgbox("Received Dwebble")
+        call(NicknamePartyMon)
+    }
+    elif(var(VAR_RESULT) == MON_GIVEN_TO_PC) {
+        msgbox("Received Dwebble")
+        call(NicknameBoxMon)
+    }
+    else {
+        hidemonpic
+        msgbox(format("You don't have enough space. Come back and get it soon."))
+    }
+}
+
+script NicknamePartyMon {
+    msgbox("Give Dwebble a nickname?", MSGBOX_YESNO)
+    hidemonpic
+    if(var(VAR_RESULT) == YES) {
+        call(Common_EventScript_GetGiftMonPartySlot)
+        call(Common_EventScript_NameReceivedPartyMon)
+    }
+}
+
+script NicknameBoxMon {
+    msgbox("Give Dwebble a nickname?", MSGBOX_YESNO)
+    hidemonpic
+    if(var(VAR_RESULT) == YES) {
+        call(Common_EventScript_NameReceivedBoxMon)
+    }
+}
+
+script Nathan_HiddenBase_EventScript_GulpinDoll {
+    lockall
+    if(flag(FLAG_FOUND_GULPIN_DOLL)) {
+        msgbox(format("It's Nathan's Gulpin doll."))
+    }
+    if(!flag(FLAG_FOUND_GULPIN_DOLL)) {
+        msgbox(format("It's Nathan's Gulpin doll."))
+        adddecoration(DECOR_GULPIN_DOLL)
+        setflag(FLAG_FOUND_GULPIN_DOLL)
+        msgbox(format("You've unlocked the GULPIN DOLL for your secret base."))
+    }
+    releaseall
+}
+
+
+//text scripts
+text Nathan_Intro {
+    format("I found this Pokémon in a far away land! It's so cool.")
+}
+
+text Nathan_Outro {
+    format("How did you manage that?")
+}
+
+text Beat_Nathan {
+    format("That was amazing, here have one yourself")
+}
+
+text PostBattle_Nathan {
+    format("I love Dwebble and Crustle. They are amazing.")
+}
