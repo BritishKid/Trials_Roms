@@ -2,7 +2,7 @@
   "group_order": [
     "gMapGroup_TownsAndRoutes",
     "gMapGroup_IndoorLittleroot",
-    "gMapGroup_IndoorOldale",
+    "gMapGroup_IndoorClayhaven",
     "gMapGroup_IndoorDewford",
     "gMapGroup_IndoorLavaridge",
     "gMapGroup_IndoorFallarbor",
@@ -36,7 +36,9 @@
     "gMapGroup_IndoorRoute124",
     "gMapGroup_IndoorBedrock",
     "gMapGroup_IndoorRoute1",
-    "gMapGroup_HiddenBases"
+    "gMapGroup_HiddenBases",
+    "gMapGroup_HiddenGrottos",
+    "gMapGroup_MahogonyHills"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -104,7 +106,7 @@
     "LittlerootTown_MaysHouse_2F",
     "LittlerootTown_ProfessorBirchsLab"
   ],
-  "gMapGroup_IndoorOldale": [
+  "gMapGroup_IndoorClayhaven": [
     "Clayhaven_House1",
     "Clayhaven_House2",
     "Clayhaven_PokemonCenter_1F",
@@ -635,5 +637,11 @@
   ],
   "gMapGroup_HiddenBases": [
     "Nathans_Hidden_base"
+  ],
+  "gMapGroup_HiddenGrottos": [
+
+  ],
+  "gMapGroup_MahogonyHills": [
+    "MahogonyHills_1"
   ]
 }

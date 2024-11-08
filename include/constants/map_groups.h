@@ -71,7 +71,7 @@
 #define MAP_LITTLEROOT_TOWN_MAYS_HOUSE_2F        (3 | (1 << 8))
 #define MAP_LITTLEROOT_TOWN_PROFESSOR_BIRCHS_LAB (4 | (1 << 8))
 
-// gMapGroup_IndoorOldale
+// gMapGroup_IndoorClayhaven
 #define MAP_CLAYHAVEN_HOUSE1            (0 | (2 << 8))
 #define MAP_CLAYHAVEN_HOUSE2            (1 | (2 << 8))
 #define MAP_CLAYHAVEN_POKEMON_CENTER_1F (2 | (2 << 8))
@@ -603,6 +603,11 @@
 // gMapGroup_HiddenBases
 #define MAP_NATHANS_HIDDEN_BASE (0 | (36 << 8))
 
-#define MAP_GROUPS_COUNT 37
+// gMapGroup_HiddenGrottos
+
+// gMapGroup_MahogonyHills
+#define MAP_MAHOGONY_HILLS_1 (0 | (38 << 8))
+
+#define MAP_GROUPS_COUNT 39
 
 #endif // GUARD_CONSTANTS_MAP_GROUPS_H

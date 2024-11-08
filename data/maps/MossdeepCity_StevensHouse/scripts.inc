@@ -42,7 +42,7 @@ MossdeepCity_StevensHouse_EventScript_StevenGivesDive::
 	msgbox MossdeepCity_StevensHouse_Text_YouveEarnedHMDive, MSGBOX_DEFAULT
 	giveitem ITEM_HM_DIVE
 	setflag FLAG_RECEIVED_HM_DIVE
-	setflag FLAG_OMIT_DIVE_FROM_STEVEN_LETTER
+	setflag FLAG_CANT_CATCH_MON
 	msgbox MossdeepCity_StevensHouse_Text_ExplainDive, MSGBOX_DEFAULT
 	closemessage
 	delay 20

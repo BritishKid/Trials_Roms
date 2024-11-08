@@ -1089,3 +1089,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/OldFishermans_Hut/scripts.inc"
 
 	.include "data/maps/PlatefallCave_GF/scripts.inc"
+
+	.include "data/maps/MahogonyHills_1/scripts.inc"

@@ -166,7 +166,7 @@
 #define MAPSEC_MEMORIAL_PILLAR              0xA2
 #define MAPSEC_OUTCAST_ISLAND               0xA3
 #define MAPSEC_GREEN_PATH                   0xA4
-#define MAPSEC_WATER_PATH                   0xA5
+#define MAPSEC_MAHOGONY_HILLS                   0xA5
 #define MAPSEC_RUIN_VALLEY                  0xA6
 #define MAPSEC_TRAINER_TOWER                0xA7
 #define MAPSEC_CANYON_ENTRANCE              0xA8
