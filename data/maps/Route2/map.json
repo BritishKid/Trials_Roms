@@ -133,6 +133,19 @@
       "trainer_sight_or_berry_tree_id": "5",
       "script": "Battle_Route2_Jenova",
       "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 16,
+      "y": 21,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "ITEM_ROCK_INCENSE",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_ITEM_ROUTE_104_ROCK_INCENSE"
     }
   ],
   "warp_events": [
@@ -149,12 +162,33 @@
       "elevation": 0,
       "dest_map": "MAP_MAHOGONY_HILLS_1",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 26,
+      "y": 33,
+      "elevation": 0,
+      "dest_map": "MAP_HIDDEN_GROTTO_ROWLET",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 27,
+      "y": 33,
+      "elevation": 0,
+      "dest_map": "MAP_HIDDEN_GROTTO_ROWLET",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [
 
   ],
   "bg_events": [
-
+    {
+      "type": "hidden_item",
+      "x": 40,
+      "y": 29,
+      "elevation": 3,
+      "item": "ITEM_GROWTH_MULCH",
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE_2_GROWTH_MULCH"
+    }
   ]
 }

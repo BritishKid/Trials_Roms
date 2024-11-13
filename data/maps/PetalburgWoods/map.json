@@ -12,7 +12,7 @@
   "allow_running": true,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": null,
+  "connections": 0,
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE",
@@ -264,14 +264,6 @@
       "elevation": 3,
       "item": "ITEM_POTION",
       "flag": "FLAG_HIDDEN_ITEM_PETALBURG_WOODS_POTION"
-    },
-    {
-      "type": "hidden_item",
-      "x": 26,
-      "y": 6,
-      "elevation": 3,
-      "item": "ITEM_TINY_MUSHROOM",
-      "flag": "FLAG_HIDDEN_ITEM_PETALBURG_WOODS_TINY_MUSHROOM_1"
     },
     {
       "type": "hidden_item",
