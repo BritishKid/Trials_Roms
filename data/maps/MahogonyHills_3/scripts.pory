@@ -1,0 +1,67 @@
+mapscripts MahogonyHills_3_MapScripts {}
+
+
+script MahoganyHills3_EventScript_Darwin {
+    lockall
+    faceplayer
+    if(var(VAR_MAHOGONY_FOSSIL_SELECTION) == 1) {
+        msgbox(format("Go ahead pick a fossil."))
+    }
+    if(var(VAR_MAHOGONY_FOSSIL_SELECTION) == 2) {
+        msgbox(format("Come find me in my lab I'll be able to revive it for you."))
+    }
+    if(var(VAR_MAHOGONY_FOSSIL_SELECTION) == 0){
+        msgbox(format("Oh hello. Are you interested in fossils aswell?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES) {
+            msgbox(format("Oh lovely. Why don't you pick one to have."))
+            setvar(VAR_MAHOGONY_FOSSIL_SELECTION, 1)
+        }
+        else {
+            msgbox(format("That's a shame, they are just fantastic."))
+        }
+    }
+    releaseall
+}
+
+script MahoganyHills3_EventScript_ClawFossil {
+    lockall
+    if(var(VAR_MAHOGONY_FOSSIL_SELECTION) > 1) {
+        msgbox(format("I can't take both."))
+    }
+    if(var(VAR_MAHOGONY_FOSSIL_SELECTION) == 0) {
+        msgbox(format("It's a fossil in the shape of a claw."))
+    }
+    if(var(VAR_MAHOGONY_FOSSIL_SELECTION) == 1) {
+        msgbox(format("It's a fossil in the shape of a claw, do you want to take it?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES) {
+            msgbox(format("{PLAYER} took the Claw Fossil"))
+            setflag(FLAG_CHOSE_CLAW_FOSSIL)
+            removeobject(2)
+            giveitem(ITEM_CLAW_FOSSIL)
+            setvar(VAR_MAHOGONY_FOSSIL_SELECTION, 2)
+        }
+    }
+    releaseall
+}
+
+
+script MahoganyHills3_EventScript_RootFossil {
+    lockall
+    if(var(VAR_MAHOGONY_FOSSIL_SELECTION) > 1) {
+        msgbox(format("I can't take both."))
+    }
+    if(var(VAR_MAHOGONY_FOSSIL_SELECTION) == 0) {
+        msgbox(format("It's a fossil in the shape of a root."))
+    }
+    if(var(VAR_MAHOGONY_FOSSIL_SELECTION) == 1) {
+        msgbox(format("It's a fossil in the shape of a root, do you want to take it?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES) {
+            msgbox(format("{PLAYER} took the Root Fossil"))
+            setflag(FLAG_CHOSE_ROOT_FOSSIL)
+            removeobject(3)
+            giveitem(ITEM_ROOT_FOSSIL)
+            setvar(VAR_MAHOGONY_FOSSIL_SELECTION, 2)
+        }
+    }
+    releaseall
+}

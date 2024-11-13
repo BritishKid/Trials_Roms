@@ -1,0 +1,21 @@
+mapscripts MahoganyHills_4_MapScripts {}
+
+
+script MahoganyHills_Secret_MapScripts_SecretButton1 {
+    lockall
+    if(!flag(FLAG_MAHOGANY_HILLS_BUTTON_1_PRESSED)) {
+        msgbox(format("It's covered in moss but you can make out some kind of button.\nPress the button?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES) {
+            msgbox(format("You press the button."))
+            addvar(VAR_MAHOGANYHILLS_BUTTONS_PRESSED, 1)
+            setflag(FLAG_MAHOGANY_HILLS_BUTTON_1_PRESSED)
+        }
+        if(var(VAR_RESULT) == NO) {
+            msgbox(format("Probably the smart choice."))
+        }
+    }
+    if(flag(FLAG_MAHOGANY_HILLS_BUTTON_1_PRESSED)) {
+        msgbox(format("I've already pressed this button. I wonder why I did that."))
+    }
+    releaseall
+}

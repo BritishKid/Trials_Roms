@@ -1,0 +1,40 @@
+{
+  "id": "MAP_MAHOGANY_HILLS_GYM_ENTRANCE",
+  "name": "MahoganyHills_GymEntrance",
+  "layout": "LAYOUT_MAHOGANY_HILLS_GYM_ENTRANCE",
+  "music": "MUS_PETALBURG_WOODS",
+  "region_map_section": "MAPSEC_MAHOGONY_HILLS",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_ROUTE",
+  "allow_cycling": true,
+  "allow_escaping": true,
+  "allow_running": true,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_MAHOGONY_HILLS_2",
+      "offset": -12,
+      "direction": "down"
+    }
+  ],
+  "object_events": [
+
+  ],
+  "warp_events": [
+    {
+      "x": 17,
+      "y": 13,
+      "elevation": 0,
+      "dest_map": "MAP_MAHOGANY_HILLS_GYM_INTERIOR",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ]
+}

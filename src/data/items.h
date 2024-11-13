@@ -11157,12 +11157,15 @@ const struct Item gItemsInfo[] =
     {
         .name = _("TM51"),
         .price = 3000,
-        .description = sQuestionMarksDesc, // Todo
+        .description = COMPOUND_STRING(
+            "The user attacks by\n"
+            "pecking the target\n"
+            "and eating berries."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_NONE, // Todo
+        .secondaryId = MOVE_PLUCK,
     },
 
     [ITEM_TM52] =
@@ -14458,5 +14461,20 @@ const struct Item gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .iconPic = gItemIcon_OutfitBox,
         .iconPalette = gItemIconPalette_OutfitBox,
+    },
+
+    [ITEM_HISTORY_BOOK] =
+    {
+        .name = _("History Book"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "A book full of the\n"
+            "history of TRIVER."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_QuestionMark,
+        .iconPalette = gItemIconPalette_QuestionMark,
     },
 };

@@ -636,12 +636,23 @@
     "OldFishermans_Hut"
   ],
   "gMapGroup_HiddenBases": [
-    "Nathans_Hidden_base"
+    "Nathans_Hidden_base",
+    "Jenovas_Hidden_Base"
   ],
   "gMapGroup_HiddenGrottos": [
-
+    "HiddenGrotto_Rowlet"
   ],
   "gMapGroup_MahogonyHills": [
-    "MahogonyHills_1"
+    "MahogonyHills_1",
+    "MahogonyHills_2",
+    "MahogonyHills_3",
+    "MahoganyHills_4",
+    "MahoganyHills_5",
+    "MahoganyHills_6",
+    "MahoganyHills_Secret",
+    "MahogonyHills_ResearchStation",
+    "MahoganyHills_Cave",
+    "MahoganyHills_GymEntrance",
+    "MahoganyHills_Gym_Interior"
   ]
 }

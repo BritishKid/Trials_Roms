@@ -1,0 +1,64 @@
+mapscripts MahoganyHills_Gym_Interior_MapScripts {}
+
+
+script MahoganyHills_Gym_Interior_EventScript_GymSign {
+    lockall
+    msgbox(format("Mahogany Hills Gym.\lMaking trainers soar to new heights."))
+    msgbox(format("Certified Trainers:"))
+    msgbox(format("Nathan, Tanski, KoraidonFan783, LimblessCarpet, Tapdabtap 84, The TC, BitBeads, Jordan, Robert"))
+    if(flag(FLAG_BADGE01_GET)) {
+        msgbox(format("{PLAYER}$")) 
+    }
+    releaseall
+}
+
+script MahoganyHills_Gym_Interior_EventScript_Greeter {
+    lockall
+    faceplayer
+    msgbox(format("Yo Champ in the making! This gym specialises in flying types. Rock, Electric and Ice moves are the best way to take them out."))
+    if(!flag(FLAG_LEVEL_CAPS_ON) && !flag(FLAG_BADGE01_GET)) {
+        msgbox(format("How about a battle for some fast levels?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES) {
+            cleartrainerflag(GYM_XP_DUMP)
+            trainerbattle_no_intro(GYM_XP_DUMP, GymXpDump_Outro)
+        }
+     }
+    releaseall
+}
+
+script MahoganyHills_Gym_Interior_EventScript_GymLeader {
+    lockall
+    faceplayer
+    trainerbattle_single(TRAINER_MAHOGANYGILLS_GYM_LEADER, MahoganyHillsGym_Leader_Intro, MahoganyHillsGym_Leader_Outro, MahoganyHillsGym_Leader_Postscript)
+    msgbox(MahoganyHillsGym_Leader_Postbattle, MSGBOX_DEFAULT)
+    releaseall
+}
+
+script MahoganyHillsGym_Leader_Postscript {
+    msgbox(format("That was a hard fought battle you deserve this gym badge."))
+    playfanfare(MUS_OBTAIN_BADGE)
+    msgbox(format("You have obtained the Gale Badge"))
+    special(DoDomeConfetti)
+    setflag(FLAG_BADGE01_GET)
+    msgbox(format("Also please take this TM."))
+    giveitem(ITEM_TM51)
+    releaseall
+}
+
+//text 
+
+text GymXpDump_Outro {
+    format("Very good")
+}
+
+text MahoganyHillsGym_Leader_Intro {
+    format("Hi! Welcome to my gym.\lI am Jaiden a Master from the Winged City.\lI hope you're prepared to be blown away by my flying type Pokemon.")
+}
+
+text MahoganyHillsGym_Leader_Outro {
+    format("It appears you have the power of a tornado!")
+}
+
+text MahoganyHillsGym_Leader_Postbattle {
+    format("Good luck on the rest of your journey, you will become a Champion in no time!")
+}

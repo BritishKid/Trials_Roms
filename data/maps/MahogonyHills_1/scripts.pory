@@ -1,10 +1,10 @@
 mapscripts MahogonyHills_1_MapScripts {
     MAP_SCRIPT_ON_LOAD {
         if(var(VAR_TOWN_2_QUEST_STATE) == 3) {
-            setmetatile(27, 27, METATILE_Forest_Warp_Towards, TRUE)
-	        setmetatile(28, 27, METATILE_Forest_Warp_Towards, TRUE)
-            setmetatile(27, 26, METATILE_Forest_Warp_Up, TRUE)
-	        setmetatile(28, 26, METATILE_Forest_Warp_Up, TRUE)
+            setmetatile(27, 27, METATILE_Forest_Warp_Towards, FALSE)
+	        setmetatile(28, 27, METATILE_Forest_Warp_Towards, FALSE)
+            setmetatile(27, 26, METATILE_Forest_Warp_Up, FALSE)
+	        setmetatile(28, 26, METATILE_Forest_Warp_Up, FALSE)
             setmetatile(27, 25, METATILE_Forest_Warp_Tree_Base, TRUE)
 	        setmetatile(28, 25, METATILE_Forest_Warp_Tree_Base, TRUE)
         }
@@ -71,6 +71,54 @@ script MahoganyScript_EventScript_Monster_Beaten {
     setvar(VAR_TOWN_2_QUEST_STATE, 2)
     setflag(FLAG_HIDE_MAHOGANY_HILLS_OBJECT)
     clearflag(FLAG_HIDE_TOWN2_HOUSE3_GIRL)
+}
+
+script MahogonyHills_1_Eventscript_BerrySkitty {
+    lockall
+    faceplayer
+    msgbox(format("SKITTY!"))
+    if(var(VAR_BERRY_SKITTY_STATE) == 0) {
+        msgbox(format("The SKITTY seems to hand over a berry."))
+        giveitem(ITEM_COBA_BERRY, 5)
+        setvar(VAR_BERRY_SKITTY_STATE, 1)
+        setflag(FLAG_HIDE_SKITTY_MAHOGONY_HILLS)
+    }
+    releaseall
+}
+
+script Battle_MahoganyHills_Bao {
+    trainerbattle_single(MAHOGANYHILLS1_BAO, MahoganyHills1_Bao_Intro, MahoganyHills1_Bao_Outro, Increase_Trainers_Beaten)
+    msgbox(MahoganyHills1_Bao_Postbattle, MSGBOX_AUTOCLOSE)
+}
+
+script Battle_MahoganyHills_ToughChild {
+    trainerbattle_single(MAHOGANYHILLS1_TOUGH_TRAINER, MahoganyHills1_ToughTrainer_Intro, MahoganyHills1_ToughTrainer_Outro, Increase_Trainers_Beaten)
+    msgbox(MahoganyHills1_ToughTrainer_Postbattle, MSGBOX_AUTOCLOSE)
+}
+
+//text 
+text MahoganyHills1_Bao_Intro {
+    format("I keep trying but failing to beat the gym.")
+}
+
+text MahoganyHills1_Bao_Outro {
+    format("You might have a chance.")
+}
+
+text MahoganyHills1_Bao_Postbattle {
+    format("I should probably catch some other Pokemon.")
+}
+
+text MahoganyHills1_ToughTrainer_Intro {
+    format("I learnt so many battle strategies at school.")
+}
+
+text MahoganyHills1_ToughTrainer_Outro {
+    format("Wow. You must be top of your class!")
+}
+
+text MahoganyHills1_ToughTrainer_Postbattle {
+    format("Wait you've never been to school in GRANITE PEAK?")
 }
 
 //movement scripts

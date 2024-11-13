@@ -1,0 +1,72 @@
+{
+  "id": "MAP_MAHOGONY_HILLS_RESEARCH_STATION",
+  "name": "MahogonyHills_ResearchStation",
+  "layout": "LAYOUT_MAHOGONY_HILLS_RESEARCH_STATION",
+  "music": "MUS_PETALBURG_WOODS",
+  "region_map_section": "MAPSEC_MAHOGONY_HILLS",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_INDOOR",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": 0,
+  "object_events": [
+
+  ],
+  "warp_events": [
+    {
+      "x": 3,
+      "y": 5,
+      "elevation": 0,
+      "dest_map": "MAP_MAHOGONY_HILLS_2",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 4,
+      "y": 5,
+      "elevation": 0,
+      "dest_map": "MAP_MAHOGONY_HILLS_2",
+      "dest_warp_id": "1"
+    }
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 5,
+      "y": 2,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "MahoganyHills_EventScript_Fossil"
+    },
+    {
+      "type": "sign",
+      "x": 6,
+      "y": 2,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "MahoganyHills_EventScript_Fossil"
+    },
+    {
+      "type": "sign",
+      "x": 2,
+      "y": 2,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "MahoganyHills_EventScript_Fossil"
+    },
+    {
+      "type": "sign",
+      "x": 1,
+      "y": 2,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "MahoganyHills_EventScript_Fossil"
+    }
+  ]
+}

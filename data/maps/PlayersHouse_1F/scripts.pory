@@ -18,10 +18,12 @@ script PlayersHouse_1F_Trigger_StartJourney {
     // setflag(FLAG_SYS_QUEST_MENU_GET)
     setflag(FLAG_SYS_B_DASH)
     special(EnableNationalPokedex)
-    msgbox(format("Oh wow! Your POKEMON is so much weaker than RIVALNAME"), MSGBOX_DEFAULT)
+    msgbox(format("Oh wow! Your POKEMON is so much weaker than RIVALNAME, you probably need this to catch up."), MSGBOX_DEFAULT)
+    giveitem(ITEM_EXP_SHARE)
+	// setflag(FLAG_RECEIVED_EXP_SHARE)
     msgbox(format("Anyway I'm going to get some juice!"), MSGBOX_DEFAULT)
     setflag(FLAG_RECEIVED_STARTER)
-    setvar(VAR_BEDROCK_TOWN_STATE, 1)
+    setvar(VAR_BEDROCK_TOWN_STATE, 2)
     applymovement(1, PlayersHouse_1F_RivalBrother_ToSink)
     waitmovement(1)
     releaseall
@@ -31,6 +33,25 @@ script PlayersHouse_1F_EventScript_LittleBoy {
     lockall
     faceplayer()
     msgbox(format("Where is your juice?"), MSGBOX_DEFAULT)
+    releaseall
+}
+
+script PlayersHouse_GF_EventScript_Itemball {
+    lockall
+    giveitem(ITEM_POKE_BALL, 5)
+    setflag(FLAG_ITEM_FIRST_POKEBALLS)
+    releaseall
+}
+
+script PlayersHouse_GF_EventScript_Television {
+    lockall
+    msgbox(format("It's a show about cartoon dogs.\lI'm not going to listen to them."))
+    releaseall
+}
+
+script PlayersHouse_GF_EventScript_Fridge {
+    lockall
+    msgbox(format("I need to buy more juice."))
     releaseall
 }
 

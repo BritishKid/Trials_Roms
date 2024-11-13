@@ -20,8 +20,13 @@
     },
     {
       "map": "MAP_ROUTE2",
-      "offset": 0,
+      "offset": 4,
       "direction": "down"
+    },
+    {
+      "map": "MAP_MAHOGANY_HILLS_5",
+      "offset": 12,
+      "direction": "left"
     }
   ],
   "object_events": [
@@ -123,6 +128,22 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Clayhaven_MapScript_PlatefallCave_Sign"
+    },
+    {
+      "type": "sign",
+      "x": 39,
+      "y": 26,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "COMINGSOON"
+    },
+    {
+      "type": "sign",
+      "x": 41,
+      "y": 9,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "COMINGSOON"
     }
   ]
 }

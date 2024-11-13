@@ -602,11 +602,23 @@
 
 // gMapGroup_HiddenBases
 #define MAP_NATHANS_HIDDEN_BASE (0 | (36 << 8))
+#define MAP_JENOVAS_HIDDEN_BASE (1 | (36 << 8))
 
 // gMapGroup_HiddenGrottos
+#define MAP_HIDDEN_GROTTO_ROWLET (0 | (37 << 8))
 
 // gMapGroup_MahogonyHills
-#define MAP_MAHOGONY_HILLS_1 (0 | (38 << 8))
+#define MAP_MAHOGONY_HILLS_1                (0 | (38 << 8))
+#define MAP_MAHOGONY_HILLS_2                (1 | (38 << 8))
+#define MAP_MAHOGONY_HILLS_3                (2 | (38 << 8))
+#define MAP_MAHOGANY_HILLS_4                (3 | (38 << 8))
+#define MAP_MAHOGANY_HILLS_5                (4 | (38 << 8))
+#define MAP_MAHOGANY_HILLS_6                (5 | (38 << 8))
+#define MAP_MAHOGANY_HILLS_SECRET           (6 | (38 << 8))
+#define MAP_MAHOGONY_HILLS_RESEARCH_STATION (7 | (38 << 8))
+#define MAP_MAHOGANY_HILLS_CAVE             (8 | (38 << 8))
+#define MAP_MAHOGANY_HILLS_GYM_ENTRANCE     (9 | (38 << 8))
+#define MAP_MAHOGANY_HILLS_GYM_INTERIOR     (10 | (38 << 8))
 
 #define MAP_GROUPS_COUNT 39
 

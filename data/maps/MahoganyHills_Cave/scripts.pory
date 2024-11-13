@@ -1,0 +1,70 @@
+mapscripts MahoganyHills_Cave_MapScripts {
+}
+
+
+script MahoganyHills_EventScript_InsectPlate {
+    lockall
+    msgbox(format("There is a carving of many small bug like Pokémon crawling over a plate."))
+    if(flag(FLAG_LEGENDS_PLATE_FOUND) && !flag(FLAG_INSECT_PLATE_FOUND)) {
+        msgbox(format("Do you want to put the LEGENDS PLATE into the slot?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES) {
+            setvar(VAR_0x8004, 1)
+            setvar(VAR_0x8005, 1)
+            setvar(VAR_0x8006, 8)
+            setvar(VAR_0x8007, 0)
+            special(ShakeCamera)
+            fadescreen(FADE_TO_BLACK)
+            // warp(MAP_LOST_PLATES, ) // todo create plate location
+        }
+    }
+    if((var(VAR_PLATEQUEST_STATE) == 2) && !flag(FLAG_LEGENDS_PLATE_FOUND)) {
+        msgbox(format("There seems to be a slot in the wall for something. Maybe it's that Key Alex spoke about."))
+    }
+    if(var(VAR_PLATEQUEST_STATE) == 1) {
+        msgbox(format("You listened to me then."))
+        //todo create sprite to move towards player
+        setobjectxy(2, 20, 9)
+        applymovement(2, Movement_AlexToPlayer_MHC)
+        waitmovement(2)
+        msgbox(format("Hello again! This is that carving I mentioned to you."))
+        msgbox(format("It looks to be carved in the same way as the one in Platefall, it also has a hole in it."))
+        msgbox(format("People believe the plates are locked and hidden behind carvings like these, but how do you open these doorsways without the plates in the first place?"))
+        msgbox(format("It is a confusing conumdrun."))
+        msgbox(format("I believe there must be a 19th plate not mentioned, one that acts like a key, although I've struggled to find any proof of it existing yet."))
+        msgbox(format("That is what we must search for {PLAYER}, the key!"))
+        msgbox(format("Here take this."))
+        //todo rest off video to not spoil for the lovely people
+        giveitem(ITEM_HISTORY_BOOK)
+        // msgbox(format("Alex gives you a Translation Book"))
+        // playfanfare(MUS_OBTAIN_ITEM)
+        msgbox(format("You can use this to translate any ancient text you stumble upon."))
+        applymovement(2, Movement_AlexLeavesPlayer_MHC)
+        removeobject(2)
+        setvar(VAR_PLATEQUEST_STATE, 2)
+    }
+    releaseall
+}
+
+//movement
+
+movement Movement_AlexToPlayer_MHC {
+    walk_up
+    walk_up
+    walk_up
+    walk_up
+    walk_up
+    walk_up
+    walk_up
+}
+
+movement Movement_AlexLeavesPlayer_MHC {
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+}

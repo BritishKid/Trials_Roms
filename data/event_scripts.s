@@ -1091,3 +1091,27 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/PlatefallCave_GF/scripts.inc"
 
 	.include "data/maps/MahogonyHills_1/scripts.inc"
+
+	.include "data/maps/MahogonyHills_2/scripts.inc"
+
+	.include "data/maps/MahogonyHills_3/scripts.inc"
+
+	.include "data/maps/MahoganyHills_4/scripts.inc"
+
+	.include "data/maps/MahoganyHills_5/scripts.inc"
+
+	.include "data/maps/MahoganyHills_6/scripts.inc"
+
+	.include "data/maps/MahoganyHills_Secret/scripts.inc"
+
+	.include "data/maps/HiddenGrotto_Rowlet/scripts.inc"
+
+	.include "data/maps/Jenovas_Hidden_Base/scripts.inc"
+
+	.include "data/maps/MahogonyHills_ResearchStation/scripts.inc"
+
+	.include "data/maps/MahoganyHills_Cave/scripts.inc"
+
+	.include "data/maps/MahoganyHills_GymEntrance/scripts.inc"
+
+	.include "data/maps/MahoganyHills_Gym_Interior/scripts.inc"

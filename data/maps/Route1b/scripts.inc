@@ -42,6 +42,22 @@ Salt7_PostBattleScript::
 	return
 
 
+Route1_TrainerScript_Camper::
+# 33 "data/maps/Route1b/scripts.pory"
+	trainerbattle_single TRAINER_CAMPER_ROUTE1B, Route1b_Camper_Intro, Route1b_Camper_Outro, Increase_Trainers_Beaten
+# 34 "data/maps/Route1b/scripts.pory"
+	msgbox Route1b_Camper_Postbattle, MSGBOX_AUTOCLOSE
+	return
+
+
+Route1_TrainerScript_BugCatcher::
+# 39 "data/maps/Route1b/scripts.pory"
+	trainerbattle_single TRAINER_BUGCATCHER_ROUTE1B, Route1b_Camper_Intro, Route1b_Camper_Outro, Increase_Trainers_Beaten
+# 40 "data/maps/Route1b/scripts.pory"
+	msgbox Route1b_Camper_Postbattle, MSGBOX_AUTOCLOSE
+	return
+
+
 Route1b_EventScript_FisherSign_Text_0:
 # 7 "data/maps/Route1b/scripts.pory"
 	.string "The Old Fishers House$"
@@ -52,20 +68,51 @@ Route1b_EventScript_Fisherman_Text_0:
 	.string "I'd be able to reach that island.$"
 
 Salt7_Intro::
-# 34 "data/maps/Route1b/scripts.pory"
+# 46 "data/maps/Route1b/scripts.pory"
 	.string "The guy in that house there gave me an\n"
 	.string "old rod! I'm going to use it to catch all\l"
 	.string "the Gyrados I can find! I've already got\l"
 	.string "some. Here let me show you$"
 
 Salt7_Outro::
-# 38 "data/maps/Route1b/scripts.pory"
+# 50 "data/maps/Route1b/scripts.pory"
 	.string "Alright so they aren't Gyrados yes, but\n"
 	.string "I'll get more and become unstoppable!\l"
 	.string "But just how do I evolve them.$"
 
 PostBattle_Salt7::
-# 42 "data/maps/Route1b/scripts.pory"
+# 54 "data/maps/Route1b/scripts.pory"
 	.string "I remember reading something about a\n"
 	.string "waterfall could make them evolve. I\l"
 	.string "think there is one somewhere nearby$"
+
+Route1b_Camper_Intro::
+# 58 "data/maps/Route1b/scripts.pory"
+	.string "My dad used to bring me here all the\n"
+	.string "time, he said the hills had strong\l"
+	.string "Pokemon.$"
+
+Route1b_Camper_Outro::
+# 62 "data/maps/Route1b/scripts.pory"
+	.string "We never found them but I enjoyed our\n"
+	.string "trips.$"
+
+Route1b_Camper_Postbattle::
+# 66 "data/maps/Route1b/scripts.pory"
+	.string "When I'm strong enough I'll be able to\n"
+	.string "spread his ashes at the old winged city.$"
+
+Route1b_Bugcatcher_Intro::
+# 70 "data/maps/Route1b/scripts.pory"
+	.string "I love all the different bug Pokemon in\n"
+	.string "Triver.$"
+
+Route1b_Bugcatcher_Outro::
+# 74 "data/maps/Route1b/scripts.pory"
+	.string "I heard some really strong bugs can be\n"
+	.string "found deep in the desert.$"
+
+Route1b_Bugcatcher_Postbattle::
+# 78 "data/maps/Route1b/scripts.pory"
+	.string "People used to worship bugs as strong\n"
+	.string "as the sun.$"

@@ -6,17 +6,17 @@
 #define TRAINER_NONE                          0
 #define TRAINER_SALT7_ROUTE_1B_ENCOUNTER      1
 #define TRAINER_NATHAN_SECRET_BASE_1          2
-#define TRAINER_GRUNT_AQUA_HIDEOUT_2          3
-#define TRAINER_GRUNT_AQUA_HIDEOUT_3          4
-#define TRAINER_GRUNT_AQUA_HIDEOUT_4          5
-#define TRAINER_GRUNT_SEAFLOOR_CAVERN_1       6
-#define TRAINER_GRUNT_SEAFLOOR_CAVERN_2       7
-#define TRAINER_GRUNT_SEAFLOOR_CAVERN_3       8
-#define TRAINER_GABRIELLE_1                   9
-#define TRAINER_GRUNT_PETALBURG_WOODS        10
-#define TRAINER_MARCEL                       11
-#define TRAINER_ALBERTO                      12
-#define TRAINER_ED                           13
+#define TRAINER_CAMPER_ROUTE1B                3
+#define TRAINER_BUGCATCHER_ROUTE1B          4
+#define TRAINER_ROUTE2_TRAINER3          5
+#define TRAINER_ROUTE2_COCO       6
+#define MAHOGANYHILLS1_BAO       7
+#define MAHOGANYHILLS1_TOUGH_TRAINER       8
+#define TRAINER_RIVAL_MAHOGONYHILL2                   9
+#define TRAINER_LUKE_MAHOGANYHILLS2        10
+#define TRAINER_ROUTE2_JENOVA                       11
+#define GYM_XP_DUMP                      12
+#define TRAINER_MAHOGANYGILLS_GYM_LEADER                           13
 #define TRAINER_GRUNT_SEAFLOOR_CAVERN_4      14
 #define TRAINER_DECLAN                       15
 #define TRAINER_GRUNT_RUSTURF_TUNNEL         16
@@ -268,7 +268,7 @@
 #define TRAINER_PHOEBE                      262
 #define TRAINER_GLACIA                      263
 #define TRAINER_DRAKE                       264
-#define TRAINER_ROXANNE_1                   265
+#define TRAINER_ROXANNE_1                   265 //used
 #define TRAINER_BRAWLY_1                    266
 #define TRAINER_WATTSON_1                   267
 #define TRAINER_FLANNERY_1                  268

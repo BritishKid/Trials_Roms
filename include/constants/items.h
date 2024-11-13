@@ -1030,7 +1030,10 @@
 #define ITEM_0FC 855
 #define ITEM_0FD 856
 
-#define ITEMS_COUNT 857
+//custom items
+#define ITEM_HISTORY_BOOK 857
+
+#define ITEMS_COUNT 858
 
 #define ITEM_FIELD_ARROW ITEMS_COUNT
 

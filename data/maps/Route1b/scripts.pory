@@ -29,6 +29,18 @@ script Salt7_PostBattleScript {
     waitmessage
 }
 
+script Route1_TrainerScript_Camper {
+    trainerbattle_single(TRAINER_CAMPER_ROUTE1B, Route1b_Camper_Intro, Route1b_Camper_Outro, Increase_Trainers_Beaten)
+        msgbox(Route1b_Camper_Postbattle, MSGBOX_AUTOCLOSE)
+
+}
+
+script Route1_TrainerScript_BugCatcher {
+    trainerbattle_single(TRAINER_BUGCATCHER_ROUTE1B, Route1b_Camper_Intro, Route1b_Camper_Outro, Increase_Trainers_Beaten)
+        msgbox(Route1b_Camper_Postbattle, MSGBOX_AUTOCLOSE)
+
+}
+
 //text scripts
 
 text Salt7_Intro {
@@ -41,4 +53,28 @@ text Salt7_Outro {
 
 text PostBattle_Salt7 {
     format("I remember reading something about a waterfall could make them evolve. I think there is one somewhere nearby")
+}
+
+text Route1b_Camper_Intro {
+    format("My dad used to bring me here all the time, he said the hills had strong Pokemon.")
+}
+
+text Route1b_Camper_Outro {
+    format("We never found them but I enjoyed our trips.")
+}
+
+text Route1b_Camper_Postbattle {
+    format("When I'm strong enough I'll be able to spread his ashes at the old winged city.")
+}
+
+text Route1b_Bugcatcher_Intro {
+    format("I love all the different bug Pokemon in Triver.")
+}
+
+text Route1b_Bugcatcher_Outro {
+    format("I heard some really strong bugs can be found deep in the desert.")
+}
+
+text Route1b_Bugcatcher_Postbattle {
+    format("People used to worship bugs as strong as the sun.")
 }

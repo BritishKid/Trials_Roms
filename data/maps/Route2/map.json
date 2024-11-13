@@ -15,12 +15,17 @@
   "connections": [
     {
       "map": "MAP_CLAYHAVEN",
-      "offset": 0,
+      "offset": -4,
       "direction": "up"
     },
     {
       "map": "MAP_ROUTE1A",
-      "offset": 11,
+      "offset": 16,
+      "direction": "right"
+    },
+    {
+      "map": "MAP_ROUTE1B",
+      "offset": -24,
       "direction": "right"
     }
   ],
@@ -85,14 +90,14 @@
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
       "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "3",
       "script": "Battle_Route2_Trainer3",
       "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_GIRL_2",
-      "x": 37,
+      "x": 38,
       "y": 17,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -101,6 +106,32 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Route2_EventScript_BerryGirl",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
+      "x": 14,
+      "y": 15,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "5",
+      "script": "Battle_Route2_Coco",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_WOMAN_3",
+      "x": 16,
+      "y": 27,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT",
+      "movement_range_x": 5,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "5",
+      "script": "Battle_Route2_Jenova",
       "flag": "0"
     }
   ],

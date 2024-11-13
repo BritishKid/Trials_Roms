@@ -8,10 +8,7 @@ script Route2_EventScript_BerryGirl {
     if(!flag(FLAG_RECEIVED_WAILMER_PAIL)){
         msgbox(format("Hey you must have seen all these berry patches around the place.\lYou can use them to grow your own berries.\lHere take some, I have spare."))
         giveitem(ITEM_CHERI_BERRY, 5)
-        giveitem(ITEM_ORAN_BERRY, 5)
-        giveitem(ITEM_PECHA_BERRY, 5)
         giveitem(ITEM_LEPPA_BERRY, 5)
-        giveitem(ITEM_COBA_BERRY, 5)
         giveitem(ITEM_PERSIM_BERRY, 5)
         msgbox(format("Use the spots next to me to grow more, but you will need this to help."))
         giveitem(ITEM_WAILMER_PAIL, 1)
@@ -22,7 +19,63 @@ script Route2_EventScript_BerryGirl {
 }
 
 script Battle_Route2_Trainer3 {
-    lockall
-    msgbox(format("BATTLE COMING SOON"))
-    releaseall
+    trainerbattle_single(TRAINER_ROUTE2_TRAINER3, Route2_Trainer3_Intro, Route2_Trainer3_Outro, Increase_Trainers_Beaten)
+    msgbox(PostBattle_Route2_Trainer3, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+script Battle_Route2_Coco {
+    trainerbattle_single(TRAINER_ROUTE2_COCO, Route2_Coco_Intro, Route2_Coco_Outro, Increase_Trainers_Beaten)
+    msgbox(Route2_Coco_Postbattle, MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Battle_Route2_Jenova {
+    trainerbattle_single(TRAINER_ROUTE2_JENOVA, Route2_Jenova_Intro, Route2_Jenova_Outro, Increase_Trainers_Beaten)
+    msgbox(Route2_Jenova_Postbattle, MSGBOX_AUTOCLOSE)
+    end
+}
+
+
+//text
+text Route2_Trainer3_Intro {
+    format("My sister loves planting Berries, she travels all over the region to find more.")
+}
+
+text Route2_Trainer3_Outro {
+    format("Even with my sisters berries I was no good.")
+}
+
+text PostBattle_Route2_Trainer3 {
+    format("You should go speak to her, she would likely share some with you.")
+}
+
+text Route2_Coco_Intro {
+    format("")
+}
+
+text Route2_Coco_Outro {
+    format("")
+}
+
+text Route2_Coco_Postbattle {
+    format("")
+}
+
+
+text Route2_Jenova_Intro {
+    format("I got a Mew! It can't be beaten.")
+}
+
+text Route2_Jenova_Outro {
+    format("Oh i guess my mom was lying when she said Mew can't be defeated.")
+}
+
+text Route2_Jenova_Postbattle {
+    format("What else did she lie about.")
+}
+
+script Increase_Trainers_Beaten {
+    addvar(VAR_TRAINERS_BEATEN_CHECK, 1)
 }

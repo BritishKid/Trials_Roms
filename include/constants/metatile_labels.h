@@ -192,6 +192,7 @@
 #define METATILE_Fortree_BridgeOverGrass_Raised            0x24E
 #define METATILE_Fortree_BridgeOverTrees_Lowered           0x257
 #define METATILE_Fortree_BridgeOverTrees_Raised            0x256
+#define METATILE_Fortree_GroundHole                        0x310
 #define METATILE_Fortree_LongGrass_Root                    0x208
 #define METATILE_Fortree_SecretBase_LongGrass_BottomLeft   0x281
 #define METATILE_Fortree_SecretBase_LongGrass_BottomMid    0x282
@@ -432,11 +433,8 @@
 #define METATILE_PokemonCenter_Floor_ShadowTop_Alt       0x2DC
 
 // gTileset_Rustboro
-#define METATILE_Rustboro_Door_Gray                     0x21F
-#define METATILE_Rustboro_Door_Tan                      0x22F
-#define METATILE_Forest_Warp_Up                         0x30F
-#define METATILE_Forest_Warp_Towards                    0x317
-#define METATILE_Forest_Warp_Tree_Base                  0x307
+#define METATILE_Rustboro_Door_Gray  0x21F
+#define METATILE_Rustboro_Door_Tan   0x22F
 
 // gTileset_SecretBase
 #define METATILE_SecretBase_AttractMat_BottomLeft       0x313
@@ -783,6 +781,9 @@
 #define METATILE_Underwater_RockWall     0x21E
 
 // Other
+#define METATILE_Forest_Warp_Towards           0x317
+#define METATILE_Forest_Warp_Tree_Base         0x307
+#define METATILE_Forest_Warp_Up                0x30F
 #define METATILE_RSMossdeepGym_RedArrow_Down   0x205
 #define METATILE_RSMossdeepGym_RedArrow_Left   0x20C
 #define METATILE_RSMossdeepGym_RedArrow_Right  0x204

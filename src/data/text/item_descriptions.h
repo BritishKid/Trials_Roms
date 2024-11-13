@@ -3281,8 +3281,10 @@ static const u8 sTM50Desc[] = _(
     "attack, but sharply\n"
     "lowers Sp. Atk.");
 
-static const u8 sTM51Desc[] = _( // Todo
-    "?????");
+static const u8 sTM51Desc[] = _(
+    "The user attacks by\n"
+    "pecking the target\n"
+    "and eating berries.");
 
 static const u8 sTM52Desc[] = _( // Todo
     "?????");

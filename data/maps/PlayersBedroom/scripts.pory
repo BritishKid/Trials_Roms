@@ -11,5 +11,21 @@ script PlayersBedroom_EventScript_Notebook {
     } else {
         clearflag(FLAG_LEVEL_CAPS_ON)
     }
+    if(var(VAR_BEDROCK_TOWN_STATE) == 0) {
+        setvar(VAR_BEDROCK_TOWN_STATE, 1)
+    }
+    releaseall
+}
+
+script PlayersBedroom_Trigger_Setup {
+    lockall
+    msgbox(format("Before we start the adventure we can configure the game to your playstyle.\pThis can be changed at any time from the notebook in this room."))
+    msgbox(format("Would you like to turn on level caps?"), MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES) {
+        setflag(FLAG_LEVEL_CAPS_ON)
+    } else {
+        clearflag(FLAG_LEVEL_CAPS_ON)
+    }
+    setvar(VAR_BEDROCK_TOWN_STATE, 1)
     releaseall
 }

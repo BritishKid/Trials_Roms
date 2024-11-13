@@ -1,0 +1,8 @@
+mapscripts MahogonyHills_ResearchStation_MapScripts {}
+
+
+script MahoganyHills_EventScript_Fossil {
+    lockall
+    msgbox(format("It's a fossil of an ancient Pokémon"))
+    releaseall
+}
