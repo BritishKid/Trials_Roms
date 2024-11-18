@@ -4,10 +4,10 @@
     {
       "id": "LAYOUT_PETALBURG_CITY",
       "name": "PetalburgCity_Layout",
-      "width": 30,
+      "width": 45,
       "height": 30,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Petalburg",
+      "secondary_tileset": "gTileset_Lilycove",
       "border_filepath": "data/layouts/PetalburgCity/border.bin",
       "blockdata_filepath": "data/layouts/PetalburgCity/map.bin"
     },
@@ -4600,6 +4600,46 @@
       "secondary_tileset": "gTileset_FortreeGym",
       "border_filepath": "data/layouts/MahoganyHills_Gym_Interior/border.bin",
       "blockdata_filepath": "data/layouts/MahoganyHills_Gym_Interior/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE3",
+      "name": "Route3_Layout",
+      "width": 30,
+      "height": 40,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Rustboro",
+      "border_filepath": "data/layouts/Route3/border.bin",
+      "blockdata_filepath": "data/layouts/Route3/map.bin"
+    },
+    {
+      "id": "LAYOUT_TEST",
+      "name": "Test_Layout",
+      "width": 12,
+      "height": 20,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Lab",
+      "border_filepath": "data/layouts/Test/border.bin",
+      "blockdata_filepath": "data/layouts/Test/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE3B",
+      "name": "Route3b_Layout",
+      "width": 40,
+      "height": 50,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Fortree",
+      "border_filepath": "data/layouts/Route3b/border.bin",
+      "blockdata_filepath": "data/layouts/Route3b/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE3C",
+      "name": "Route3c_Layout",
+      "width": 52,
+      "height": 24,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Fortree",
+      "border_filepath": "data/layouts/Route3c/border.bin",
+      "blockdata_filepath": "data/layouts/Route3c/map.bin"
     }
   ]
 }

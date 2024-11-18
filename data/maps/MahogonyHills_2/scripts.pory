@@ -39,7 +39,8 @@ script MahoganyHills2_Rival_PostScript {
     setvar(VAR_BEDROCK_TOWN_STATE, 3)
     setflag(FLAG_MAHOGANY_HILLS_RIVAL_BEATEN)
     msgbox(format("You might have won but I still have more badges than you. That's what matters really."))
-    //todo work out some prize for beating rival?? Ask viewers they are smarter than you Robert
+    msgbox(format("You should probably take this to, it will help once you've got your first badge."))
+    giveitem(ITEM_SMALL_SAW)
     msgbox(format("Anyway I'm heading to get my next badge, I'll see you there if you don't lose too badly up here."))
     msgbox(format("See ya nerd!"))
     applymovement(5, Movement_Rival_Leaves_Player_MahoganyHills2)
@@ -53,6 +54,20 @@ script MahoganyHills2_BattleScript_Luke {
     msgbox(MahoganyHills2_Luke_Postbattle, MSGBOX_AUTOCLOSE)
 }
 
+script MahoganyHills2_BattleScript_Carlie {
+    trainerbattle_single(TRAINER_CARLIE_MAHOGANYHILLS2, MahoganyHills2_Carlie_Intro, MahoganyHills2_Carlie_Outro, Increase_Trainers_Beaten)
+    msgbox(MahoganyHills2_Carlie_PostBattle, MSGBOX_AUTOCLOSE)
+}
+
+script MahoganyHills2_BattleScript_Josh {
+    trainerbattle_single(TRAINER_JOSH_MAHOGANYHILLS2, MahoganyHills2_Josh_Intro, MahoganyHills2_Josh_Outro, MahoganyHills2_Josh_PostScript)
+    msgbox(MahoganyHills2_Josh_PostBattle, MSGBOX_AUTOCLOSE)
+}
+
+script MahoganyHills2_BattleScript_BugCatcherSean {
+    trainerbattle_single(TRAINER_SEAN_ROUTE2, Mahoganygills2_Sean_Intro, Mahoganygills2_Sean_Outro, Increase_Trainers_Beaten)
+    msgbox(Mahoganygills2_Sean_Postbattle, MSGBOX_AUTOCLOSE)
+}
 
 script MahoganyHills2_Trigger_RoxanneEncounter {
     lockall
@@ -106,6 +121,12 @@ script MahoganyHills_RoxanneBeaten_WithoutTrigger {
     releaseall
 }
 
+script MahoganyHills2_Josh_PostScript {
+    msgbox(format("Wow with money you'd be unstoppable. Why don't you take this."))
+    giveitem(ITEM_AMULET_COIN)
+    call(Increase_Trainers_Beaten)
+    releaseall
+}
 
 //Movement scripts
 movement Movement_Rival_To_Player_MahoganyHills2Right {
@@ -209,4 +230,40 @@ text MahoganyHills_Roxanne_Battle_Intro {
 
 text MahoganyHills_Roxanne_Battle_Outro {
     format("Wow, if we were in Hoenn you'd have just earnt a badge!")
+}
+
+text MahoganyHills2_Carlie_Intro {
+    format("If I win I'm gonna buy groceries from the money.")
+}
+
+text MahoganyHills2_Carlie_Outro {
+    format("Guess it's gonna be unseasoned noodles today.")
+}
+
+text MahoganyHills2_Carlie_PostBattle {
+    format("One day I'll get some meat.")
+}
+
+text MahoganyHills2_Josh_Intro {
+    format("Money is a trainers best friend.")
+}
+
+text MahoganyHills2_Josh_Outro {
+    format("I guess I need to earn more money.")
+}
+
+text MahoganyHills2_Josh_PostBattle {
+    format("Spend what you earn wisely.")
+}
+
+text Mahoganygills2_Sean_Intro {
+    format("Not all bugs are weak!")
+} 
+
+text Mahoganygills2_Sean_Outro {
+    format("Wow, how did you?")
+}
+
+text Mahoganygills2_Sean_Postbattle {
+    format("I've heard there is a bug trainer that is almost unbeatable.")
 }

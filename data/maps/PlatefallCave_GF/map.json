@@ -39,6 +39,19 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Platefall_Cave_Alex_General",
       "flag": "FLAG_ALEX_MET"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 17,
+      "y": 9,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "ITEM_HEAVY_BALL",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_ITEM_PLATEFALLCAVE_GF_HEAVY_BALL"
     }
   ],
   "warp_events": [

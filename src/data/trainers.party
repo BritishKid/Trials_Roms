@@ -375,167 +375,255 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Ominous Wind
 - Nature Power
 
-=== TRAINER_GRUNT_SEAFLOOR_CAVERN_4 ===
-Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt F
+=== TRAINER_OLLIE_MAHOGANYHILLSGYM ===
+Name: OLLIE
+Class: Cooltrainer
+Pic: Cooltrainer M
+Gender: Male
+Music: Cool
+Double Battle: No
+AI: Check Bad Move
+
+Onix @ Air Balloon
+Level: 13
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_ROBERT_MAHOGANYHILLSGYM ===
+Name: Robert
+Class: PKMN Trainer 1
+Pic: Brendan
+Gender: Male
+Music: Intense
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Ferroseed @ Berry Juice  
+Ability: Iron Barbs  
+Level: 15  
+Tera Type: Grass  
+EVs: 252 HP / 216 Def / 40 SpD  
+Relaxed Nature  
+- Pin Missile  
+- Ingrain  
+- Metal Claw  
+- Tackle  
+
+Clefairy @ Berry Juice  
+Ability: Cute Charm  
+Level: 15  
+Tera Type: Fairy  
+EVs: 252 HP / 4 Def / 252 SpD  
+Sassy Nature  
+IVs: 0 Atk  
+- Disarming Voice  
+- Encore  
+- Minimize  
+- Stored Power  
+
+Spearow @ Cell Battery  
+Ability: Sniper  
+Level: 15  
+Tera Type: Normal  
+EVs: 252 HP / 252 SpD / 4 Spe  
+Jolly Nature  
+- Pluck  
+- Aerial Ace  
+- Pursuit  
+- Fury Attack  
+
+Dustox @ Silver Powder  
+Ability: Shield Dust  
+Level: 15  
+Tera Type: Bug  
+EVs: 248 HP / 8 Atk / 252 SpA  
+Quiet Nature  
+- Gust  
+- Poison Powder  
+- Confusion  
+- Bug Bite  
+
+Stunfisk @ Electric Gem  
+Ability: Static  
+Level: 15  
+Tera Type: Ground  
+EVs: 252 HP / 4 Atk / 252 SpA  
+Quiet Nature  
+- Water Gun  
+- Thunder Shock  
+- Mud Shot  
+- Tackle  
+
+Poliwag @ Berry Juice  
+Ability: Water Absorb  
+Level: 15  
+Tera Type: Water  
+EVs: 4 Atk / 252 SpA / 252 Spe  
+Hasty Nature  
+- Hypnosis  
+- Water Gun  
+- Pound  
+- Mud Shot  
+
+=== TRAINER_CARLIE_MAHOGANYHILLS2 ===
+Name: CARLIE
+Class: Lass
+Pic: Lass
 Gender: Female
-Music: Aqua
+Music: Female
 Double Battle: No
 AI: Check Bad Move
 
-Carvanha
-Level: 36
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_DECLAN ===
-Name: DECLAN
-Class: Swimmer M
-Pic: Swimmer M
-Gender: Male
-Music: Swimmer
-Double Battle: No
-AI: Check Bad Move
-
-Gyarados
-Level: 34
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_GRUNT_RUSTURF_TUNNEL ===
-Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
-Gender: Male
-Music: Aqua
-Double Battle: No
-AI: Check Bad Move
-
-Poochyena
+Trapinch
 Level: 11
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_GRUNT_WEATHER_INST_1 ===
-Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
+=== TRAINER_JOSH_MAHOGANYHILLS2 ===
+Name: JOSH
+Class: Rich Boy
+Pic: Rich Boy
 Gender: Male
-Music: Aqua
+Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Zubat
-Level: 27
+Meowth
+Level: 12
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Pay Day
 
-Poochyena
-Level: 27
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_GRUNT_WEATHER_INST_2 ===
-Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
+=== TRAINER_ROUTE2_GENKI ===
+Name: GENKI
+Class: Bird Keeper
+Pic: Bird Keeper
 Gender: Male
-Music: Aqua
+Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Poochyena
-Level: 27
+Psyduck
+Level: 13
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Carvanha
-Level: 27
+Ducklett
+Level: 13
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_GRUNT_WEATHER_INST_3 ===
-Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
+Farfetchd
+Level: 13
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_SEAN_ROUTE2 ===
+Name: SEAN
+Class: Bug Catcher
+Pic: Bug Catcher
 Gender: Male
-Music: Aqua
+Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Poochyena
-Level: 26
+Beautifly
+Level: 12
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Zubat
-Level: 26
+Beedrill
+Level: 12
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Carvanha
-Level: 26
+Scyther
+Level: 13
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_GRUNT_MUSEUM_1 ===
-Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
-Gender: Male
-Music: Aqua
+=== TRAINER_SKYE_MAHOGANYHILLSGYM ===
+Name: SKYE
+Class: Lass
+Pic: Lass
+Gender: Female
+Music: Female
 Double Battle: No
 AI: Check Bad Move
 
-Carvanha
-Level: 15
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_GRUNT_MUSEUM_2 ===
-Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
-Gender: Male
-Music: Aqua
-Double Battle: No
-AI: Check Bad Move
-
-Zubat
+Spearow
 Level: 14
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Carvanha
+Rowlet
 Level: 14
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_GRUNT_SPACE_CENTER_1 ===
-Name: GRUNT
-Class: Team Magma
-Pic: Magma Grunt M
+=== MAHOGANYHILLSGYM_TRAINER_WRIGHT ===
+Name: WRIGHT
+Class: Bird Keeper
+Pic: Bird Keeper
 Gender: Male
-Music: Magma
+Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Numel
-Level: 32
+Doduo
+Level: 12
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Peck
+- Quick Attack
+- Growl
+- Pursuit
+
+Natu
+Level: 14
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Confusion
+- Tailwind
+- Leer
+- Quick Attack
+
+=== MAHOGANYHILLSGYM_TRAINER_ANDY ===
+Name: Andy
+Class: Youngster
+Pic: Youngster
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Pidgey
+Level: 13
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_GRUNT_MT_PYRE_1 ===
-Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
-Gender: Male
-Music: Aqua
-Double Battle: No
-AI: Check Bad Move
-
-Zubat
-Level: 32
+Starly
+Level: 13
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_GRUNT_MT_PYRE_2 ===
-Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
-Gender: Male
-Music: Aqua
+Taillow
+Level: 13
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== ROUTE3LASSALEX ===
+Name: ALEX
+Class: Lass
+Pic: Lass
+Gender: Female
+Music: Female
 Double Battle: No
 AI: Check Bad Move
 
-Carvanha
-Level: 32
+Spheal
+Level: 13
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Chikorita
+Level: 13
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_ROUTE3_HIKERMARK ===
+Name: Mark
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Geodude
+Level: 16
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_MT_PYRE_3 ===

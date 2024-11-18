@@ -132,6 +132,20 @@
       "elevation": 0,
       "dest_map": "MAP_MAHOGANY_HILLS_SECRET",
       "dest_warp_id": "1"
+    },
+    {
+      "x": 2,
+      "y": 21,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE3",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 3,
+      "y": 21,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE3",
+      "dest_warp_id": "1"
     }
   ],
   "coord_events": [
@@ -176,6 +190,14 @@
       "elevation": 3,
       "item": "ITEM_MIRACLE_SEED",
       "flag": "FLAG_HIDDEN_ITEM_MAHOGONYHILLS_MIRACLE_SEED"
+    },
+    {
+      "type": "hidden_item",
+      "x": 31,
+      "y": 27,
+      "elevation": 3,
+      "item": "ITEM_NET_BALL",
+      "flag": "FLAG_HIDDEN_ITEM_MAHOGANYHILLS_NET_BALL"
     }
   ]
 }

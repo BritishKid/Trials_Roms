@@ -59,7 +59,9 @@ static const u16 Craft_Recipes[][6] = {
     {0,             ITEM_REPEL,        ITEM_REPEL,        ITEM_REPEL,               ITEM_SUPER_REPEL,      2},
     {0,             ITEM_SUPER_REPEL,  ITEM_SUPER_REPEL,  ITEM_SUPER_REPEL,         ITEM_MAX_REPEL,        2},
     {0,             0,                 ITEM_POKE_BALL,    ITEM_MAX_REPEL,           ITEM_SMOKE_BALL,       1},
-    {0,             0,                 ITEM_ORAN_BERRY,   ITEM_ORAN_BERRY,          ITEM_BERRY_JUICE,      1}
+    {0,             0,                 ITEM_ORAN_BERRY,   ITEM_ORAN_BERRY,          ITEM_BERRY_JUICE,      1},
+    {0,             0,                 ITEM_POTION,       ITEM_ORAN_BERRY,          ITEM_BERRY_JUICE,      1}
+
 };
 
 // Here's some flags in case you want to lock away an item due to plot progression,
@@ -68,7 +70,7 @@ static const u16 Craft_Recipes[][6] = {
 
 static const u16 Craft_Flags[][4] = {
     //{CRAFT PRODUCT, ||||  FLAG 1,                        FLAG 2,                         FLAG 3},
-    {ITEM_BERRY_JUICE,      FLAG_VISITED_PETALBURG_CITY,   FLAG_ITEM_ROUTE_102_POTION,     NO_FLAG}
+    {ITEM_BERRY_JUICE,      FLAG_VISITED_GRANITE_PEAK_TOWN,   FLAG_ITEM_ROUTE_102_POTION,     NO_FLAG}
 };
 
 #undef NO_FLAG // kthxbye

@@ -1,0 +1,24 @@
+mapscripts Route3b_MapScripts {}
+
+
+script Rotue3b_TrainerBattle_LassAlex {
+    trainerbattle_single(ROUTE3LASSALEX, LassAlex_Intro, LassAlex_Outro, Increase_Trainers_Beaten)
+    msgbox(LassAlex_PostBattle, MSGBOX_AUTOCLOSE)
+}
+
+
+
+//Text Scripts
+
+//ai genned to fix
+text LassAlex_Intro {
+    format("Hey there! I'm Lass Alex, braving the heights for a mountainous Pokémon battle. Ready to take on the challenge?")
+}
+
+text LassAlex_Outro {
+    format("Wow, you really conquered the summit of this battle! Your skills shine like the mountain peak. Keep that determination on your journey!")
+}
+
+text LassAlex_PostBattle {
+    format("Fantastic battle! If you ever want to climb to new heights in Pokémon battles or just chat, find me along your mountainous journey.")
+}

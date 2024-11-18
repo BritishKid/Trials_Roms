@@ -1,0 +1,36 @@
+mapscripts Route3_MapScripts {}
+
+script Route3_TrainerBattle_Genki {
+    trainerbattle_single(TRAINER_ROUTE2_GENKI, Route2_Genki_Intro, Route2_Genki_Outro, Increase_Trainers_Beaten)
+    msgbox(PostBattle_Route2_Genki, MSGBOX_AUTOCLOSE)
+}
+
+script Route3_TrainerBattle_HikerMark {
+    trainerbattle_single(TRAINER_ROUTE3_HIKERMARK, Route3_HikerIntro, Route3_HikerOutro, Increase_Trainers_Beaten)
+    msgbox(Route3_HikerPostbattle, MSGBOX_DEFAULT)
+}
+
+//text
+text Route2_Genki_Intro {
+    format("Let's have a quackin' good time!.")
+}
+
+text Route2_Genki_Outro {
+    format("Ducks ducks.")
+}
+
+text PostBattle_Route2_Genki {
+    format("I'll have to go get more ducks.")
+}
+
+text Route3_HikerIntro {
+    format("I thought my Rock Pokemon would have made the gym easy, but it was still tough.")
+}
+
+text Route3_HikerOutro {
+    format("You probably had no issue with the gym.")
+}
+
+text Route3_HikerPostbattle {
+    format("From what I've been told I'll struggle alot with the gym near Coral Port.")
+}

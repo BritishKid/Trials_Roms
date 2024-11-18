@@ -60,6 +60,9 @@
     "Route1a",
     "Route1b",
     "Route2",
+    "Route3",
+    "Route3b",
+    "Route3c",
     "Route104",
     "Route105",
     "Route106",
@@ -104,7 +107,8 @@
     "LittlerootTown_BrendansHouse_2F",
     "LittlerootTown_MaysHouse_1F",
     "LittlerootTown_MaysHouse_2F",
-    "LittlerootTown_ProfessorBirchsLab"
+    "LittlerootTown_ProfessorBirchsLab",
+    "Test"
   ],
   "gMapGroup_IndoorClayhaven": [
     "Clayhaven_House1",

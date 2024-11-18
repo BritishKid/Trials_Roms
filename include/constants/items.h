@@ -1032,8 +1032,9 @@
 
 //custom items
 #define ITEM_HISTORY_BOOK 857
+#define ITEM_SMALL_SAW 858
 
-#define ITEMS_COUNT 858
+#define ITEMS_COUNT 859
 
 #define ITEM_FIELD_ARROW ITEMS_COUNT
 

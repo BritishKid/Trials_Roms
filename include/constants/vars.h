@@ -109,7 +109,7 @@
 #define VAR_MAHOGANYHILLS_BUTTONS_PRESSED                          0x4059 // Used
 #define VAR_RUSTBORO_CITY_STATE                          0x405A
 #define VAR_ROXANNE_ENCOUNTER_STATE                           0x405B // used Var
-#define VAR_LILYCOVE_CITY_STATE                          0x405C // Unused Var
+#define VAR_ROBERT_STATUS                          0x405C // Used
 #define VAR_MOSSDEEP_CITY_STATE                          0x405D
 #define VAR_SOOTOPOLIS_CITY_STATE                        0x405E
 #define VAR_EVER_GRANDE_CITY_STATE                       0x405F // Unused Var
@@ -272,7 +272,7 @@
 #define VAR_UNUSED_0x40FC                                0x40FC // Unused Var
 #define VAR_UNUSED_0x40FD                                0x40FD // Unused Var
 #define VAR_UNUSED_0x40FE                                0x40FE // Unused Var
-#define VAR_UNUSED_0x40FF                                0x40FF // Unused Var
+#define VAR_STARTER_SELECTION_STATE                      0x40FF
 
 #define VARS_END                                         0x40FF
 #define VARS_COUNT                                       (VARS_END - VARS_START + 1)

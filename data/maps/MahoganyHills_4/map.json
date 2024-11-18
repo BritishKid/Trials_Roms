@@ -17,6 +17,11 @@
       "map": "MAP_MAHOGONY_HILLS_2",
       "offset": 0,
       "direction": "right"
+    },
+    {
+      "map": "MAP_MAHOGANY_HILLS_6",
+      "offset": -14,
+      "direction": "down"
     }
   ],
   "object_events": [

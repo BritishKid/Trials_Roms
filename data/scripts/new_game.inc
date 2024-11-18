@@ -275,6 +275,7 @@ EventScript_ResetAllMapFlags::
 	setflag FLAG_HIDE_MAHOGANY_HILLS_OBJECT
 	setflag FLAG_XP_ALL_ON
 	setflag FLAG_HIDE_TOWN2_HOUSE3_GIRL
+	setflag FLAG_HIDE_FIRST_ENCOUNTER_ROB
 	
 	call EventScript_ResetAllBerries
 	end

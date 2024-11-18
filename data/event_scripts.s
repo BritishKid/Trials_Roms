@@ -1115,3 +1115,11 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/MahoganyHills_GymEntrance/scripts.inc"
 
 	.include "data/maps/MahoganyHills_Gym_Interior/scripts.inc"
+
+	.include "data/maps/Route3/scripts.inc"
+
+	.include "data/maps/Test/scripts.inc"
+
+	.include "data/maps/Route3b/scripts.inc"
+
+	.include "data/maps/Route3c/scripts.inc"

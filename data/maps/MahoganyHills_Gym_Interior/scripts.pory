@@ -1,4 +1,10 @@
-mapscripts MahoganyHills_Gym_Interior_MapScripts {}
+mapscripts MahoganyHills_Gym_Interior_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION {
+        if(flag(FLAG_LEVEL_CAPS_ON) && !flag(FLAG_BADGE01_GET)) {
+            setflag(FLAG_TURN_ON_INCREASED_XP)
+        }
+    }
+}
 
 
 script MahoganyHills_Gym_Interior_EventScript_GymSign {
@@ -36,6 +42,7 @@ script MahoganyHills_Gym_Interior_EventScript_GymLeader {
 
 script MahoganyHillsGym_Leader_Postscript {
     msgbox(format("That was a hard fought battle you deserve this gym badge."))
+    clearflag(FLAG_TURN_ON_INCREASED_XP)
     playfanfare(MUS_OBTAIN_BADGE)
     msgbox(format("You have obtained the Gale Badge"))
     special(DoDomeConfetti)
@@ -45,8 +52,30 @@ script MahoganyHillsGym_Leader_Postscript {
     releaseall
 }
 
-//text 
+script MahoganyHillsGymInterior_TrainerBattle_Ollie {
+    trainerbattle_single(TRAINER_OLLIE_MAHOGANYHILLSGYM, MahoganyHillsGym_Ollie_Intro, MahoganyHillsGym_Ollie_Outro, Increase_Trainers_Beaten)
+    msgbox(MahoganyHillsGym_Ollie_Postbattle, MSGBOX_DEFAULT)
+}
 
+script MahoganyHillsGymInterior_TrainerBattle_Skye {
+    trainerbattle_single(TRAINER_SKYE_MAHOGANYHILLSGYM, MahoganyHillsGym_Skye_Intro, MahoganyHillsGym_Skye_Outro, Increase_Trainers_Beaten)
+    msgbox(MahoganyHillsGym_Skye_Postbattle, MSGBOX_DEFAULT)
+}
+
+script MahoganyHillsGym_Trainer_Wright {
+    trainerbattle_single(MAHOGANYHILLSGYM_TRAINER_WRIGHT, MahoganyHillsGym_Wright_Intro, MahoganyHillsGym_Wright_Outro, Increase_Trainers_Beaten)
+    msgbox(MahoganyHillsGym_Wright_PostbattleScript, MSGBOX_AUTOCLOSE)
+    end
+}
+
+
+script MahoganyHillsGym_Trainer_Andy {
+    trainerbattle_single(MAHOGANYHILLSGYM_TRAINER_ANDY, MahoganyHillsGym_Andy_Intro, MahoganyHillsGym_Andy_Outro, Increase_Trainers_Beaten)
+    msgbox(MahoganyHillsGym_Andy_PostbattleScript, MSGBOX_AUTOCLOSE)
+    end
+}
+
+//text 
 text GymXpDump_Outro {
     format("Very good")
 }
@@ -61,4 +90,52 @@ text MahoganyHillsGym_Leader_Outro {
 
 text MahoganyHillsGym_Leader_Postbattle {
     format("Good luck on the rest of your journey, you will become a Champion in no time!")
+}
+
+text MahoganyHillsGym_Ollie_Intro {
+    format("I'm creating the strongest STEELIX ever, the master of all types!")
+}
+
+text MahoganyHillsGym_Ollie_Outro {
+    format("You mastered FLYING types better than me.")
+}
+
+text MahoganyHillsGym_Ollie_Postbattle {
+    format("Now I need to learn about WATER Pokemon.")
+}
+
+text MahoganyHillsGym_Skye_Intro {
+    format("Not many trainers get past me to Jaiden, I doubt you will.")
+}
+
+text MahoganyHillsGym_Skye_Outro {
+    format("Most trainers coming here are bug trainers to be fair.")
+}
+
+text MahoganyHillsGym_Skye_Postbattle {
+    format("You're almost as strong as that other trainer that came through here.")
+}
+
+text MahoganyHillsGym_Wright_Intro {
+    format("Have you ever been to the Winged City?")
+}
+
+text MahoganyHillsGym_Wright_Outro {
+    format("It's meant to be amazing")
+}
+
+text MahoganyHillsGym_Wright_PostbattleScript {
+    format("I really can't wait to finally get to the Winged City")
+}
+
+text MahoganyHillsGym_Andy_Intro {
+    format("I'm getting ready for the battle champion dojo!")
+}
+
+text MahoganyHillsGym_Andy_Outro {
+    format("You should join to!")
+}
+
+text MahoganyHillsGym_Andy_PostbattleScript {
+    format("Strong trainers from all over compete in the dojo.")
 }

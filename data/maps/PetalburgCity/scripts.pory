@@ -1,0 +1,9 @@
+mapscripts PetalburgCity_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION {
+        setflag(FLAG_VISITED_GRANITE_PEAK_TOWN)
+    }
+}
+
+script GranitePeak_EventScript_TownSign {
+    msgbox(format("Granite Peak: Look down on an ancient world."))
+}

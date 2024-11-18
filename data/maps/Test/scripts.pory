@@ -1,0 +1,101 @@
+mapscripts Test_MapScripts {}
+
+script LittlerootTown_ProfessorBirchsLab_EventScript_CharmanderSelection {
+    lockall
+    if(!flag(FLAG_RECEIVED_KANTO_CHOICE)){
+        showmonpic(SPECIES_CHARMANDER, 10, 3)
+        msgbox(format("Do you want to select Charmander?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == NO) {
+            msgbox(format("I'll choose another Pokémon"))
+        }
+        if(var(VAR_RESULT) == YES) {
+            givemon(SPECIES_CHARMANDER, 5, ITEM_ORAN_BERRY)
+            playfanfare(MUS_OBTAIN_ITEM)
+            setflag(FLAG_RECEIVED_CHARMANDER)
+            removeobject(8)
+            setflag(FLAG_RECEIVED_KANTO_CHOICE)
+            setvar(VAR_STARTER_SELECTION_STATE, 2)
+        }
+        hidemonpic
+    }
+    releaseall
+}
+
+script LittlerootTown_ProfessorBirchsLab_EventScript_SquirtleSelection {
+    lockall
+    if(!flag(FLAG_RECEIVED_KANTO_CHOICE)){
+        showmonpic(SPECIES_SQUIRTLE, 10, 3)
+        msgbox(format("Do you want to select Squirtle?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == NO) {
+            msgbox(format("I'll choose another Pokémon"))
+        }
+        if(var(VAR_RESULT) == YES) {
+            givemon(SPECIES_SQUIRTLE, 5, ITEM_ORAN_BERRY)
+            playfanfare(MUS_OBTAIN_ITEM)
+            setflag(FLAG_RECEIVED_SQUIRTLE)
+            removeobject(9)
+            setflag(FLAG_RECEIVED_KANTO_CHOICE)
+            setvar(VAR_STARTER_SELECTION_STATE, 2)
+        }
+        hidemonpic
+    }
+    releaseall
+}
+
+
+script LittlerootTown_ProfessorBirchsLab_EventScript_BulbasaurSelection {
+    lockall
+    if(!flag(FLAG_RECEIVED_KANTO_CHOICE)){
+        showmonpic(SPECIES_BULBASAUR, 10, 3)
+        msgbox(format("Do you want to select Bulbasaur?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == NO) {
+            msgbox(format("I'll choose another Pokémon"))
+        }
+        if(var(VAR_RESULT) == YES) {
+            givemon(SPECIES_BULBASAUR, 5, ITEM_ORAN_BERRY)
+            playfanfare(MUS_OBTAIN_ITEM)
+            setflag(FLAG_RECEIVED_BULBSAUR)
+            removeobject(7)
+            setflag(FLAG_RECEIVED_KANTO_CHOICE)
+            setvar(VAR_STARTER_SELECTION_STATE, 2)
+        }
+        hidemonpic
+    }
+    releaseall
+}
+
+script ProffesorLab_Proffesor {
+    lockall
+    faceplayer
+    if(var(VAR_STARTER_SELECTION_STATE) > 1) {
+        msgbox(format("Good luck on your adventure."))
+    }
+    if(var(VAR_STARTER_SELECTION_STATE) == 1) {
+        msgbox(format("I caught them all myself, they are very rare."))
+    }
+    if(var(VAR_STARTER_SELECTION_STATE) == 0) {
+        msgbox(format("Please take a Pokemon"))
+        setvar(VAR_STARTER_SELECTION_STATE, 1)
+    }
+    releaseall
+}
+
+script ProffessorLab_Trigger_PlayerAttemptsToLeave {
+    lockall
+    msgbox(format("HEY WAIT!"))
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_ProffesorsLab_PlayerSurprised)
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+    msgbox(format("You will need Pokemon to continue your journey."))
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_proffesorsLab_StepUp)
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+    releaseall
+}
+
+movement Movement_ProffesorsLab_PlayerSurprised {
+    emote_exclamation_mark
+    face_up
+}
+
+movement Movement_proffesorsLab_StepUp {
+    walk_up
+}

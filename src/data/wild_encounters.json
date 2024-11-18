@@ -11609,7 +11609,7 @@
               {
                 "min_level": 3,
                 "max_level": 7,
-                "species": "SPECIES_TRAPINCH"
+                "species": "SPECIES_ZUBAT"
               }
             ]
           }
@@ -11955,6 +11955,144 @@
                 "min_level": 5,
                 "max_level": 5,
                 "species": "SPECIES_ROWLET"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_ROUTE3",
+          "base_label": "gRoute30",
+          "land_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 6,
+                "max_level": 10,
+                "species": "SPECIES_SPEAROW"
+              },
+              {
+                "min_level": 6,
+                "max_level": 10,
+                "species": "SPECIES_DUCKLETT"
+              },
+              {
+                "min_level": 6,
+                "max_level": 10,
+                "species": "SPECIES_SHINX"
+              },
+              {
+                "min_level": 6,
+                "max_level": 10,
+                "species": "SPECIES_NIDORAN_M"
+              },
+              {
+                "min_level": 6,
+                "max_level": 10,
+                "species": "SPECIES_NIDORAN_F"
+              },
+              {
+                "min_level": 6,
+                "max_level": 10,
+                "species": "SPECIES_SEEDOT"
+              },
+              {
+                "min_level": 6,
+                "max_level": 10,
+                "species": "SPECIES_MANKEY"
+              },
+              {
+                "min_level": 6,
+                "max_level": 10,
+                "species": "SPECIES_RALTS"
+              },
+              {
+                "min_level": 6,
+                "max_level": 10,
+                "species": "SPECIES_RALTS"
+              },
+              {
+                "min_level": 6,
+                "max_level": 10,
+                "species": "SPECIES_FERROSEED"
+              },
+              {
+                "min_level": 6,
+                "max_level": 10,
+                "species": "SPECIES_FERROSEED"
+              },
+              {
+                "min_level": 6,
+                "max_level": 10,
+                "species": "SPECIES_FERROSEED"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_ROUTE3B",
+          "base_label": "gRoute3b0",
+          "land_mons": {
+            "encounter_rate": 10,
+            "mons": [
+              {
+                "min_level": 5,
+                "max_level": 9,
+                "species": "SPECIES_ROOKIDEE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 9,
+                "species": "SPECIES_PATRAT"
+              },
+              {
+                "min_level": 5,
+                "max_level": 9,
+                "species": "SPECIES_ROCKRUFF"
+              },
+              {
+                "min_level": 5,
+                "max_level": 9,
+                "species": "SPECIES_MANKEY"
+              },
+              {
+                "min_level": 5,
+                "max_level": 9,
+                "species": "SPECIES_BUNEARY"
+              },
+              {
+                "min_level": 5,
+                "max_level": 9,
+                "species": "SPECIES_GROWLITHE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 9,
+                "species": "SPECIES_SKIDDO"
+              },
+              {
+                "min_level": 5,
+                "max_level": 9,
+                "species": "SPECIES_SPOINK"
+              },
+              {
+                "min_level": 5,
+                "max_level": 9,
+                "species": "SPECIES_ROOKIDEE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 9,
+                "species": "SPECIES_ROCKRUFF_OWN_TEMPO"
+              },
+              {
+                "min_level": 5,
+                "max_level": 9,
+                "species": "SPECIES_MURKROW"
+              },
+              {
+                "min_level": 5,
+                "max_level": 9,
+                "species": "SPECIES_MURKROW"
               }
             ]
           }

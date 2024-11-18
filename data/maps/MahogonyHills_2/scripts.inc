@@ -70,185 +70,187 @@ MahoganyHills2_Rival_PostScript::
 	setflag FLAG_MAHOGANY_HILLS_RIVAL_BEATEN
 # 41 "data/maps/MahogonyHills_2/scripts.pory"
 	msgbox MahoganyHills2_Rival_PostScript_Text_0
-# 43 "data/maps/MahogonyHills_2/scripts.pory"
+# 42 "data/maps/MahogonyHills_2/scripts.pory"
 	msgbox MahoganyHills2_Rival_PostScript_Text_1
+# 43 "data/maps/MahogonyHills_2/scripts.pory"
+	giveitem ITEM_SMALL_SAW
 # 44 "data/maps/MahogonyHills_2/scripts.pory"
 	msgbox MahoganyHills2_Rival_PostScript_Text_2
 # 45 "data/maps/MahogonyHills_2/scripts.pory"
-	applymovement 5, Movement_Rival_Leaves_Player_MahoganyHills2
+	msgbox MahoganyHills2_Rival_PostScript_Text_3
 # 46 "data/maps/MahogonyHills_2/scripts.pory"
-	waitmovement 5
+	applymovement 5, Movement_Rival_Leaves_Player_MahoganyHills2
 # 47 "data/maps/MahogonyHills_2/scripts.pory"
-	removeobject 5
+	waitmovement 5
 # 48 "data/maps/MahogonyHills_2/scripts.pory"
+	removeobject 5
+# 49 "data/maps/MahogonyHills_2/scripts.pory"
 	releaseall
 	return
 
 
 MahoganyHills2_BattleScript_Luke::
-# 52 "data/maps/MahogonyHills_2/scripts.pory"
-	trainerbattle_single TRAINER_LUKE_MAHOGANYHILLS2, MahoganyHills2_Luke_Intro, MahoganyHills2_Luke_Outro, Increase_Trainers_Beaten
 # 53 "data/maps/MahogonyHills_2/scripts.pory"
+	trainerbattle_single TRAINER_LUKE_MAHOGANYHILLS2, MahoganyHills2_Luke_Intro, MahoganyHills2_Luke_Outro, Increase_Trainers_Beaten
+# 54 "data/maps/MahogonyHills_2/scripts.pory"
 	msgbox MahoganyHills2_Luke_Postbattle, MSGBOX_AUTOCLOSE
 	return
 
 
-MahoganyHills2_Trigger_RoxanneEncounter::
+MahoganyHills2_BattleScript_Carlie::
 # 58 "data/maps/MahogonyHills_2/scripts.pory"
-	lockall
+	trainerbattle_single TRAINER_CARLIE_MAHOGANYHILLS2, MahoganyHills2_Carlie_Intro, MahoganyHills2_Carlie_Outro, Increase_Trainers_Beaten
 # 59 "data/maps/MahogonyHills_2/scripts.pory"
-	applymovement 7, Movement_MahoganyHills_RoxanneComingCloser
-# 60 "data/maps/MahogonyHills_2/scripts.pory"
-	msgbox MahoganyHills2_Trigger_RoxanneEncounter_Text_0
-# 61 "data/maps/MahogonyHills_2/scripts.pory"
-	msgbox MahoganyHills2_Trigger_RoxanneEncounter_Text_1
-# 62 "data/maps/MahogonyHills_2/scripts.pory"
-	trainerbattle_single TRAINER_ROXANNE_1, MahoganyHills_Roxanne_Battle_Intro, MahoganyHills_Roxanne_Battle_Outro, MahoganyHills_RoxanneBeaten
+	msgbox MahoganyHills2_Carlie_PostBattle, MSGBOX_AUTOCLOSE
+	return
+
+
+MahoganyHills2_BattleScript_Josh::
 # 63 "data/maps/MahogonyHills_2/scripts.pory"
+	trainerbattle_single TRAINER_JOSH_MAHOGANYHILLS2, MahoganyHills2_Josh_Intro, MahoganyHills2_Josh_Outro, MahoganyHills2_Josh_PostScript
+# 64 "data/maps/MahogonyHills_2/scripts.pory"
+	msgbox MahoganyHills2_Josh_PostBattle, MSGBOX_AUTOCLOSE
+	return
+
+
+MahoganyHills2_BattleScript_BugCatcherSean::
+# 68 "data/maps/MahogonyHills_2/scripts.pory"
+	trainerbattle_single TRAINER_SEAN_ROUTE2, Mahoganygills2_Sean_Intro, Mahoganygills2_Sean_Outro, Increase_Trainers_Beaten
+# 69 "data/maps/MahogonyHills_2/scripts.pory"
+	msgbox Mahoganygills2_Sean_Postbattle, MSGBOX_AUTOCLOSE
+	return
+
+
+MahoganyHills2_Trigger_RoxanneEncounter::
+# 73 "data/maps/MahogonyHills_2/scripts.pory"
+	lockall
+# 74 "data/maps/MahogonyHills_2/scripts.pory"
+	applymovement 7, Movement_MahoganyHills_RoxanneComingCloser
+# 75 "data/maps/MahogonyHills_2/scripts.pory"
+	msgbox MahoganyHills2_Trigger_RoxanneEncounter_Text_0
+# 76 "data/maps/MahogonyHills_2/scripts.pory"
+	msgbox MahoganyHills2_Trigger_RoxanneEncounter_Text_1
+# 77 "data/maps/MahogonyHills_2/scripts.pory"
+	trainerbattle_single TRAINER_ROXANNE_1, MahoganyHills_Roxanne_Battle_Intro, MahoganyHills_Roxanne_Battle_Outro, MahoganyHills_RoxanneBeaten
+# 78 "data/maps/MahogonyHills_2/scripts.pory"
 	releaseall
 	return
 
 
 MahoganyHills_RoxanneBeaten::
-# 67 "data/maps/MahogonyHills_2/scripts.pory"
+# 82 "data/maps/MahogonyHills_2/scripts.pory"
 	lockall
-# 68 "data/maps/MahogonyHills_2/scripts.pory"
+# 83 "data/maps/MahogonyHills_2/scripts.pory"
 	msgbox MahoganyHills_RoxanneBeaten_Text_0
-# 69 "data/maps/MahogonyHills_2/scripts.pory"
+# 84 "data/maps/MahogonyHills_2/scripts.pory"
 	giveitem ITEM_TM37
-# 70 "data/maps/MahogonyHills_2/scripts.pory"
+# 85 "data/maps/MahogonyHills_2/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
-# 71 "data/maps/MahogonyHills_2/scripts.pory"
+# 86 "data/maps/MahogonyHills_2/scripts.pory"
 	setflag FLAG_RECEIVED_TM_ROCK_TOMB
-# 72 "data/maps/MahogonyHills_2/scripts.pory"
+# 87 "data/maps/MahogonyHills_2/scripts.pory"
 	setvar VAR_ROXANNE_ENCOUNTER_STATE, 1
-# 73 "data/maps/MahogonyHills_2/scripts.pory"
+# 88 "data/maps/MahogonyHills_2/scripts.pory"
 	msgbox MahoganyHills_RoxanneBeaten_Text_1
-# 74 "data/maps/MahogonyHills_2/scripts.pory"
+# 89 "data/maps/MahogonyHills_2/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, MahoganyHills1_MoveOutTheWay_Player
-# 75 "data/maps/MahogonyHills_2/scripts.pory"
+# 90 "data/maps/MahogonyHills_2/scripts.pory"
 	waitmovement OBJ_EVENT_ID_PLAYER
-# 76 "data/maps/MahogonyHills_2/scripts.pory"
+# 91 "data/maps/MahogonyHills_2/scripts.pory"
 	applymovement 7, MahoganyHills1_RoxanneLeaves
-# 77 "data/maps/MahogonyHills_2/scripts.pory"
+# 92 "data/maps/MahogonyHills_2/scripts.pory"
 	waitmovement 7
-# 78 "data/maps/MahogonyHills_2/scripts.pory"
+# 93 "data/maps/MahogonyHills_2/scripts.pory"
 	removeobject 7
-# 79 "data/maps/MahogonyHills_2/scripts.pory"
+# 94 "data/maps/MahogonyHills_2/scripts.pory"
 	releaseall
 	return
 
 
 MahoganyHills2_EventScript_RoxanneEncounter::
-# 83 "data/maps/MahogonyHills_2/scripts.pory"
+# 98 "data/maps/MahogonyHills_2/scripts.pory"
 	lockall
-# 84 "data/maps/MahogonyHills_2/scripts.pory"
+# 99 "data/maps/MahogonyHills_2/scripts.pory"
 	faceplayer
-# 85 "data/maps/MahogonyHills_2/scripts.pory"
+# 100 "data/maps/MahogonyHills_2/scripts.pory"
 	msgbox MahoganyHills2_Trigger_RoxanneEncounter_Text_0
-# 86 "data/maps/MahogonyHills_2/scripts.pory"
+# 101 "data/maps/MahogonyHills_2/scripts.pory"
 	msgbox MahoganyHills2_Trigger_RoxanneEncounter_Text_1
-# 87 "data/maps/MahogonyHills_2/scripts.pory"
+# 102 "data/maps/MahogonyHills_2/scripts.pory"
 	trainerbattle_single TRAINER_ROXANNE_1, MahoganyHills_Roxanne_Battle_Intro, MahoganyHills_Roxanne_Battle_Outro, MahoganyHills_RoxanneBeaten
 	return
 
 
 MahoganyHills_RoxanneBeaten_WithoutTrigger::
-# 92 "data/maps/MahogonyHills_2/scripts.pory"
+# 107 "data/maps/MahogonyHills_2/scripts.pory"
 	lockall
-# 93 "data/maps/MahogonyHills_2/scripts.pory"
+# 108 "data/maps/MahogonyHills_2/scripts.pory"
 	msgbox MahoganyHills_RoxanneBeaten_Text_0
-# 94 "data/maps/MahogonyHills_2/scripts.pory"
+# 109 "data/maps/MahogonyHills_2/scripts.pory"
 	giveitem ITEM_TM37
-# 95 "data/maps/MahogonyHills_2/scripts.pory"
+# 110 "data/maps/MahogonyHills_2/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
-# 96 "data/maps/MahogonyHills_2/scripts.pory"
+# 111 "data/maps/MahogonyHills_2/scripts.pory"
 	setflag FLAG_RECEIVED_TM_ROCK_TOMB
-# 97 "data/maps/MahogonyHills_2/scripts.pory"
+# 112 "data/maps/MahogonyHills_2/scripts.pory"
 	setvar VAR_ROXANNE_ENCOUNTER_STATE, 1
-# 98 "data/maps/MahogonyHills_2/scripts.pory"
+# 113 "data/maps/MahogonyHills_2/scripts.pory"
 	msgbox MahoganyHills_RoxanneBeaten_Text_1
-# 99 "data/maps/MahogonyHills_2/scripts.pory"
+# 114 "data/maps/MahogonyHills_2/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, MahoganyHills1_MoveOutTheWay_Player_WithoutTrigger
-# 100 "data/maps/MahogonyHills_2/scripts.pory"
+# 115 "data/maps/MahogonyHills_2/scripts.pory"
 	waitmovement OBJ_EVENT_ID_PLAYER
-# 101 "data/maps/MahogonyHills_2/scripts.pory"
+# 116 "data/maps/MahogonyHills_2/scripts.pory"
 	applymovement 7, Movement_MahoganyHills_RoxanneComingCloser
-# 102 "data/maps/MahogonyHills_2/scripts.pory"
+# 117 "data/maps/MahogonyHills_2/scripts.pory"
 	waitmovement 7
-# 103 "data/maps/MahogonyHills_2/scripts.pory"
+# 118 "data/maps/MahogonyHills_2/scripts.pory"
 	applymovement 7, MahoganyHills1_RoxanneLeaves
-# 104 "data/maps/MahogonyHills_2/scripts.pory"
+# 119 "data/maps/MahogonyHills_2/scripts.pory"
 	waitmovement 7
-# 105 "data/maps/MahogonyHills_2/scripts.pory"
+# 120 "data/maps/MahogonyHills_2/scripts.pory"
 	removeobject 7
-# 106 "data/maps/MahogonyHills_2/scripts.pory"
+# 121 "data/maps/MahogonyHills_2/scripts.pory"
 	releaseall
 	return
 
 
-# 111 "data/maps/MahogonyHills_2/scripts.pory"
-Movement_Rival_To_Player_MahoganyHills2Right:
-# 112 "data/maps/MahogonyHills_2/scripts.pory"
-	walk_down
-# 113 "data/maps/MahogonyHills_2/scripts.pory"
-	walk_down
-# 114 "data/maps/MahogonyHills_2/scripts.pory"
-	walk_down
-# 115 "data/maps/MahogonyHills_2/scripts.pory"
-	walk_down
-# 116 "data/maps/MahogonyHills_2/scripts.pory"
-	walk_down
-# 117 "data/maps/MahogonyHills_2/scripts.pory"
-	walk_down
-	step_end
-
-# 120 "data/maps/MahogonyHills_2/scripts.pory"
-Movement_Rival_To_Player_MahoganyHills2Left:
-# 121 "data/maps/MahogonyHills_2/scripts.pory"
-	walk_down
-# 122 "data/maps/MahogonyHills_2/scripts.pory"
-	walk_down
-# 123 "data/maps/MahogonyHills_2/scripts.pory"
-	walk_down
-# 124 "data/maps/MahogonyHills_2/scripts.pory"
-	walk_down
+MahoganyHills2_Josh_PostScript::
 # 125 "data/maps/MahogonyHills_2/scripts.pory"
-	walk_down
+	msgbox MahoganyHills2_Josh_PostScript_Text_0
 # 126 "data/maps/MahogonyHills_2/scripts.pory"
-	walk_down
+	giveitem ITEM_AMULET_COIN
 # 127 "data/maps/MahogonyHills_2/scripts.pory"
-	walk_left
+	call Increase_Trainers_Beaten
 # 128 "data/maps/MahogonyHills_2/scripts.pory"
-	face_down
-	step_end
+	releaseall
+	return
 
-# 131 "data/maps/MahogonyHills_2/scripts.pory"
-Movement_Rival_Leaves_Player_MahoganyHills2:
+
 # 132 "data/maps/MahogonyHills_2/scripts.pory"
-	walk_up
+Movement_Rival_To_Player_MahoganyHills2Right:
 # 133 "data/maps/MahogonyHills_2/scripts.pory"
-	walk_up
+	walk_down
 # 134 "data/maps/MahogonyHills_2/scripts.pory"
-	walk_up
+	walk_down
 # 135 "data/maps/MahogonyHills_2/scripts.pory"
-	walk_up
+	walk_down
 # 136 "data/maps/MahogonyHills_2/scripts.pory"
-	walk_up
+	walk_down
 # 137 "data/maps/MahogonyHills_2/scripts.pory"
-	walk_up
+	walk_down
 # 138 "data/maps/MahogonyHills_2/scripts.pory"
-	walk_up
-# 139 "data/maps/MahogonyHills_2/scripts.pory"
-	walk_up
-# 140 "data/maps/MahogonyHills_2/scripts.pory"
-	walk_up
+	walk_down
 	step_end
 
+# 141 "data/maps/MahogonyHills_2/scripts.pory"
+Movement_Rival_To_Player_MahoganyHills2Left:
+# 142 "data/maps/MahogonyHills_2/scripts.pory"
+	walk_down
 # 143 "data/maps/MahogonyHills_2/scripts.pory"
-Movement_MahoganyHills_RoxanneComingCloser:
+	walk_down
 # 144 "data/maps/MahogonyHills_2/scripts.pory"
-	walk_right
+	walk_down
 # 145 "data/maps/MahogonyHills_2/scripts.pory"
 	walk_down
 # 146 "data/maps/MahogonyHills_2/scripts.pory"
@@ -256,68 +258,106 @@ Movement_MahoganyHills_RoxanneComingCloser:
 # 147 "data/maps/MahogonyHills_2/scripts.pory"
 	walk_down
 # 148 "data/maps/MahogonyHills_2/scripts.pory"
-	walk_down
+	walk_left
 # 149 "data/maps/MahogonyHills_2/scripts.pory"
-	walk_down
+	face_down
 	step_end
 
 # 152 "data/maps/MahogonyHills_2/scripts.pory"
-MahoganyHills1_MoveOutTheWay_Player:
+Movement_Rival_Leaves_Player_MahoganyHills2:
 # 153 "data/maps/MahogonyHills_2/scripts.pory"
-	walk_down
+	walk_up
 # 154 "data/maps/MahogonyHills_2/scripts.pory"
-	walk_right
+	walk_up
 # 155 "data/maps/MahogonyHills_2/scripts.pory"
+	walk_up
+# 156 "data/maps/MahogonyHills_2/scripts.pory"
+	walk_up
+# 157 "data/maps/MahogonyHills_2/scripts.pory"
+	walk_up
+# 158 "data/maps/MahogonyHills_2/scripts.pory"
+	walk_up
+# 159 "data/maps/MahogonyHills_2/scripts.pory"
+	walk_up
+# 160 "data/maps/MahogonyHills_2/scripts.pory"
+	walk_up
+# 161 "data/maps/MahogonyHills_2/scripts.pory"
+	walk_up
+	step_end
+
+# 164 "data/maps/MahogonyHills_2/scripts.pory"
+Movement_MahoganyHills_RoxanneComingCloser:
+# 165 "data/maps/MahogonyHills_2/scripts.pory"
+	walk_right
+# 166 "data/maps/MahogonyHills_2/scripts.pory"
+	walk_down
+# 167 "data/maps/MahogonyHills_2/scripts.pory"
+	walk_down
+# 168 "data/maps/MahogonyHills_2/scripts.pory"
+	walk_down
+# 169 "data/maps/MahogonyHills_2/scripts.pory"
+	walk_down
+# 170 "data/maps/MahogonyHills_2/scripts.pory"
+	walk_down
+	step_end
+
+# 173 "data/maps/MahogonyHills_2/scripts.pory"
+MahoganyHills1_MoveOutTheWay_Player:
+# 174 "data/maps/MahogonyHills_2/scripts.pory"
+	walk_down
+# 175 "data/maps/MahogonyHills_2/scripts.pory"
+	walk_right
+# 176 "data/maps/MahogonyHills_2/scripts.pory"
 	face_left
 	step_end
 
-# 158 "data/maps/MahogonyHills_2/scripts.pory"
+# 179 "data/maps/MahogonyHills_2/scripts.pory"
 MahoganyHills1_RoxanneLeaves:
-# 159 "data/maps/MahogonyHills_2/scripts.pory"
+# 180 "data/maps/MahogonyHills_2/scripts.pory"
 	walk_down
-# 160 "data/maps/MahogonyHills_2/scripts.pory"
+# 181 "data/maps/MahogonyHills_2/scripts.pory"
 	walk_down
-# 161 "data/maps/MahogonyHills_2/scripts.pory"
+# 182 "data/maps/MahogonyHills_2/scripts.pory"
 	walk_down
-# 162 "data/maps/MahogonyHills_2/scripts.pory"
+# 183 "data/maps/MahogonyHills_2/scripts.pory"
 	walk_down
-# 163 "data/maps/MahogonyHills_2/scripts.pory"
+# 184 "data/maps/MahogonyHills_2/scripts.pory"
 	walk_left
-# 164 "data/maps/MahogonyHills_2/scripts.pory"
+# 185 "data/maps/MahogonyHills_2/scripts.pory"
 	walk_left
-# 165 "data/maps/MahogonyHills_2/scripts.pory"
+# 186 "data/maps/MahogonyHills_2/scripts.pory"
 	walk_left
-# 166 "data/maps/MahogonyHills_2/scripts.pory"
+# 187 "data/maps/MahogonyHills_2/scripts.pory"
 	walk_left
-# 167 "data/maps/MahogonyHills_2/scripts.pory"
+# 188 "data/maps/MahogonyHills_2/scripts.pory"
 	walk_left
-# 168 "data/maps/MahogonyHills_2/scripts.pory"
+# 189 "data/maps/MahogonyHills_2/scripts.pory"
 	walk_left
-# 169 "data/maps/MahogonyHills_2/scripts.pory"
+# 190 "data/maps/MahogonyHills_2/scripts.pory"
 	walk_left
-# 170 "data/maps/MahogonyHills_2/scripts.pory"
+# 191 "data/maps/MahogonyHills_2/scripts.pory"
 	walk_left
-# 171 "data/maps/MahogonyHills_2/scripts.pory"
+# 192 "data/maps/MahogonyHills_2/scripts.pory"
 	walk_left
-# 172 "data/maps/MahogonyHills_2/scripts.pory"
+# 193 "data/maps/MahogonyHills_2/scripts.pory"
 	walk_left
-# 173 "data/maps/MahogonyHills_2/scripts.pory"
+# 194 "data/maps/MahogonyHills_2/scripts.pory"
 	walk_left
-# 174 "data/maps/MahogonyHills_2/scripts.pory"
+# 195 "data/maps/MahogonyHills_2/scripts.pory"
 	walk_left
-# 175 "data/maps/MahogonyHills_2/scripts.pory"
+# 196 "data/maps/MahogonyHills_2/scripts.pory"
 	walk_left
-# 176 "data/maps/MahogonyHills_2/scripts.pory"
+# 197 "data/maps/MahogonyHills_2/scripts.pory"
 	walk_left
 	step_end
 
-# 179 "data/maps/MahogonyHills_2/scripts.pory"
+# 200 "data/maps/MahogonyHills_2/scripts.pory"
 MahoganyHills1_MoveOutTheWay_Player_WithoutTrigger:
-# 180 "data/maps/MahogonyHills_2/scripts.pory"
+# 201 "data/maps/MahogonyHills_2/scripts.pory"
 	walk_right
-# 181 "data/maps/MahogonyHills_2/scripts.pory"
+# 202 "data/maps/MahogonyHills_2/scripts.pory"
 	walk_right
-# 182 "data/maps/MahogonyHills_2/scripts.pory"
+# 203 "data/maps/MahogonyHills_2/scripts.pory"
 	face_left
 	step_end
 
@@ -342,17 +382,22 @@ MahoganyHills2_Rival_PostScript_Text_0:
 	.string "really.$"
 
 MahoganyHills2_Rival_PostScript_Text_1:
-# 43 "data/maps/MahogonyHills_2/scripts.pory"
+# 42 "data/maps/MahogonyHills_2/scripts.pory"
+	.string "You should probably take this to, it will\n"
+	.string "help once you've got your first badge.$"
+
+MahoganyHills2_Rival_PostScript_Text_2:
+# 44 "data/maps/MahogonyHills_2/scripts.pory"
 	.string "Anyway I'm heading to get my next\n"
 	.string "badge, I'll see you there if you don't\l"
 	.string "lose too badly up here.$"
 
-MahoganyHills2_Rival_PostScript_Text_2:
-# 44 "data/maps/MahogonyHills_2/scripts.pory"
+MahoganyHills2_Rival_PostScript_Text_3:
+# 45 "data/maps/MahogonyHills_2/scripts.pory"
 	.string "See ya nerd!$"
 
 MahoganyHills2_Trigger_RoxanneEncounter_Text_0:
-# 60 "data/maps/MahogonyHills_2/scripts.pory"
+# 75 "data/maps/MahogonyHills_2/scripts.pory"
 	.string "Hi there, I've just been visiting Darwin\n"
 	.string "to get new fossils. He has a little\l"
 	.string "research station and has found the\l"
@@ -360,48 +405,92 @@ MahoganyHills2_Trigger_RoxanneEncounter_Text_0:
 	.string "fossils.$"
 
 MahoganyHills2_Trigger_RoxanneEncounter_Text_1:
-# 61 "data/maps/MahogonyHills_2/scripts.pory"
+# 76 "data/maps/MahogonyHills_2/scripts.pory"
 	.string "I'm visiting from Hoenn and by that look\n"
 	.string "I can tell you're a trainer.$"
 
 MahoganyHills_RoxanneBeaten_Text_0:
-# 68 "data/maps/MahogonyHills_2/scripts.pory"
+# 83 "data/maps/MahogonyHills_2/scripts.pory"
 	.string "That's impressive, I'm not at my gym but\n"
 	.string "you should still take this.$"
 
 MahoganyHills_RoxanneBeaten_Text_1:
-# 73 "data/maps/MahogonyHills_2/scripts.pory"
+# 88 "data/maps/MahogonyHills_2/scripts.pory"
 	.string "I'll see you around again!$"
 
+MahoganyHills2_Josh_PostScript_Text_0:
+# 125 "data/maps/MahogonyHills_2/scripts.pory"
+	.string "Wow with money you'd be unstoppable.\n"
+	.string "Why don't you take this.$"
+
 MahoganyHills2_Rival_Intro::
-# 186 "data/maps/MahogonyHills_2/scripts.pory"
+# 207 "data/maps/MahogonyHills_2/scripts.pory"
 	.string "Don't worry this won't take long.$"
 
 MahoganyHills2_Rival_Outro::
-# 190 "data/maps/MahogonyHills_2/scripts.pory"
+# 211 "data/maps/MahogonyHills_2/scripts.pory"
 	.string "I guess my Pokémon are still tired from\n"
 	.string "the gym.$"
 
 MahoganyHills2_Luke_Intro::
-# 194 "data/maps/MahogonyHills_2/scripts.pory"
+# 215 "data/maps/MahogonyHills_2/scripts.pory"
 	.string "I've just moved here from Sinnoh and\n"
 	.string "looking to get stronger!$"
 
 MahoganyHills2_Luke_Outro::
-# 198 "data/maps/MahogonyHills_2/scripts.pory"
+# 219 "data/maps/MahogonyHills_2/scripts.pory"
 	.string "Wow you're stronger than the bug\n"
 	.string "trainers around here.$"
 
 MahoganyHills2_Luke_Postbattle::
-# 202 "data/maps/MahogonyHills_2/scripts.pory"
+# 223 "data/maps/MahogonyHills_2/scripts.pory"
 	.string "One day I'm going to become a gym\n"
 	.string "leader!$"
 
 MahoganyHills_Roxanne_Battle_Intro::
-# 206 "data/maps/MahogonyHills_2/scripts.pory"
+# 227 "data/maps/MahogonyHills_2/scripts.pory"
 	.string "How about a battle then.$"
 
 MahoganyHills_Roxanne_Battle_Outro::
-# 210 "data/maps/MahogonyHills_2/scripts.pory"
+# 231 "data/maps/MahogonyHills_2/scripts.pory"
 	.string "Wow, if we were in Hoenn you'd have just\n"
 	.string "earnt a badge!$"
+
+MahoganyHills2_Carlie_Intro::
+# 235 "data/maps/MahogonyHills_2/scripts.pory"
+	.string "If I win I'm gonna buy groceries from\n"
+	.string "the money.$"
+
+MahoganyHills2_Carlie_Outro::
+# 239 "data/maps/MahogonyHills_2/scripts.pory"
+	.string "Guess it's gonna be unseasoned noodles\n"
+	.string "today.$"
+
+MahoganyHills2_Carlie_PostBattle::
+# 243 "data/maps/MahogonyHills_2/scripts.pory"
+	.string "One day I'll get some meat.$"
+
+MahoganyHills2_Josh_Intro::
+# 247 "data/maps/MahogonyHills_2/scripts.pory"
+	.string "Money is a trainers best friend.$"
+
+MahoganyHills2_Josh_Outro::
+# 251 "data/maps/MahogonyHills_2/scripts.pory"
+	.string "I guess I need to earn more money.$"
+
+MahoganyHills2_Josh_PostBattle::
+# 255 "data/maps/MahogonyHills_2/scripts.pory"
+	.string "Spend what you earn wisely.$"
+
+Mahoganygills2_Sean_Intro::
+# 259 "data/maps/MahogonyHills_2/scripts.pory"
+	.string "Not all bugs are weak!$"
+
+Mahoganygills2_Sean_Outro::
+# 263 "data/maps/MahogonyHills_2/scripts.pory"
+	.string "Wow, how did you?$"
+
+Mahoganygills2_Sean_Postbattle::
+# 267 "data/maps/MahogonyHills_2/scripts.pory"
+	.string "I've heard there is a bug trainer that\n"
+	.string "is almost unbeatable.$"

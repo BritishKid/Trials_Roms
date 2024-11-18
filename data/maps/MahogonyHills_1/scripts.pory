@@ -11,7 +11,6 @@ mapscripts MahogonyHills_1_MapScripts {
     }
 }
 
-
 script MahoganyTown_EventScript_LostGirl_Right {
     lockall
     addobject(5)

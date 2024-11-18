@@ -14477,4 +14477,19 @@ const struct Item gItemsInfo[] =
         .iconPic = gItemIcon_QuestionMark,
         .iconPalette = gItemIconPalette_QuestionMark,
     },
+    
+    [ITEM_SMALL_SAW] =
+    {
+        .name = _("Small Saw"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "A small saw used to\n"
+            "cut down trees."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_QuestionMark,
+        .iconPalette = gItemIconPalette_QuestionMark,
+    },
 };
