@@ -790,3 +790,5 @@ static const struct CreditsEntry *const sCreditsEntryPointerTable[PAGE_COUNT][EN
 //TODO Work out custom credits
 //CUSTOM CREDITS
 //Item icons by Cookie Softcore
+//Replacing confusion ducks with Psyduck
+// Please credit as "PurrfectDoodle / Eva" if you use this in your project.
