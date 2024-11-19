@@ -73,7 +73,7 @@ MahoganyHills2_Rival_PostScript::
 # 42 "data/maps/MahogonyHills_2/scripts.pory"
 	msgbox MahoganyHills2_Rival_PostScript_Text_1
 # 43 "data/maps/MahogonyHills_2/scripts.pory"
-	giveitem ITEM_SMALL_SAW
+	giveitem ITEM_HAND_AXE
 # 44 "data/maps/MahogonyHills_2/scripts.pory"
 	msgbox MahoganyHills2_Rival_PostScript_Text_2
 # 45 "data/maps/MahogonyHills_2/scripts.pory"

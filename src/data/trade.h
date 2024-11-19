@@ -982,23 +982,23 @@ static const union AffineAnimCmd *const sAffineAnims_CrossingMonPics[] =
     sAffineAnim_CrossingMonPic
 };
 
-static const struct InGameTrade sIngameTrades[] =
+static const struct InGameTrade sIngameTrades[] = //todo talk about trades and add more
 {
-    [INGAME_TRADE_SEEDOT] =
+    [INGAME_TRADE_MAGNEMITE] =
     {
-        .nickname = _("DOTS"),
-        .species = SPECIES_SEEDOT,
-        .ivs = {5, 4, 5, 4, 4, 4},
+        .nickname = _("AMPERE"),
+        .species = SPECIES_MAGNEMITE,
+        .ivs = {25, 19, 22, 26, 21, 20},
         .abilityNum = 1,
         .otId = 38726,
         .conditions = {30, 5, 5, 5, 5},
         .personality = 0x84,
-        .heldItem = ITEM_CHESTO_BERRY,
+        .heldItem = ITEM_MAGNET,
         .mailNum = -1,
-        .otName = _("KOBE"),
-        .otGender = MALE,
+        .otName = _("JAN"),
+        .otGender = FEMALE,
         .sheen = 10,
-        .requestedSpecies = SPECIES_RALTS
+        .requestedSpecies = SPECIES_MARILL
     },
     [INGAME_TRADE_PLUSLE] =
     {

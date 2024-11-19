@@ -1,0 +1,141 @@
+mapscripts GranitePeakTown_SchoolHall_MapScripts {}
+
+script GranitePeak_EventScript_EvolutionClassroomDoor {
+    lockall
+    msgbox(format("Evolution Class\nDo you want to enter?"), MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES) {
+        // warp(MAP_GRANITE_PEAK_SCHOOL_EVOLUTION_CLASS, 5, 10)
+    }
+    releaseall
+}
+
+script GranitePeak_EventScript_ItemClassroomDoor {
+    lockall
+    msgbox(format("Item Class\nDo you want to enter?"), MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES) {
+        // warp(MAP_GRANITE_PEAK_SCHOOL_ITEM_CLASS, 5, 10)
+    }
+    releaseall
+}
+
+script GranitePeak_EventScript_MovesClassroomDoor {
+    lockall
+    msgbox(format("Moves Class\nDo you want to enter?"), MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES) {
+        // warp(MAP_GRANITE_PEAK_SCHOOL_MOVES_CLASS, 5, 10)
+    }
+    releaseall
+}
+
+script GranitePeak_EventScript_AbilitiesClassroomDoor {
+    lockall
+    msgbox(format("Abilities Class\nDo you want to enter?"), MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES) {
+        // warp(MAP_GRANITE_PEAK_SCHOOL_ABILITY_CLASS, 5, 10)
+    }
+    releaseall
+}
+
+script GranitePeakTown_School_EventScript_EnterRight {
+    lockall
+    msgbox(format("So many amazing trainers came from this school, just look at all the names that have won the school Pokémon tournament."))
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_GranitePeakSchool_MovePlayerLeftOnce)
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+    call(GranitePeakSchool_Mat_TrophyCase)
+    releaseall
+}
+
+script GranitePeakTown_School_EventScript_EnterLeft {
+    lockall
+    msgbox(format("So many amazing trainers came from this school, just look at all the names that have won the school Pokémon tournament."))
+    call(GranitePeakSchool_Mat_TrophyCase)
+    releaseall
+}
+
+script GranitePeakSchool_Mat_TrophyCase {
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_GranitePeakSchool_MovePlayerToMat)
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+    applymovement(1, Movement_GranitePeakSchool_MatFaceDown)
+    waitmovement(1)
+    msgbox(format("One day my name will be on there!"))
+    msgbox(format("Hi, I'm Mat and I'm going to be the very best!"))
+    applymovement(1, Movement_GranitePeakSchool_MatExclamation)
+    waitmovement(1)
+    msgbox(format("Oh you're a trainer. Let me show you how good the future school champion is!"))
+    trainerbattle_single(TRAINERSCHOOLHALL_MAT1, SchoolHall_Mat_Intro, SchoolHall_Mat_Outro, SchoolHall_Mat_Beaten)
+}
+
+script SchoolHall_Mat_Beaten {
+    msgbox(format("I still have a lot to learn a but this school is the best place for me to be."))
+    msgbox(format("If I complete all four classes and get their patches I can take part and win the school tournament."))
+    msgbox(format("Let's get going!"))
+    applymovement(1, Movement_GranitePeakSchool_MatMovesRooms)
+    waitmovement(1)
+    // playse() player sound for doorway
+    removeobject(1)
+    setflag(FLAG_HIDE_MAT_SCHOOL_HALL)
+    setflag(FLAG_HIDE_MOVES_ROOM)
+    setvar(VAR_MAT_STATE, 1)
+    clearflag(FLAG_HIDE_MAT_MEGA_MANSION)
+    //todo add quest checker
+    call(Increase_Trainers_Beaten)
+}
+
+script GranitePeakTown_School_TrophyCase {
+    lockall
+    msgbox(format("It's the Granite Peak School Trainer Trophy."))
+    msgbox(format("It's got all the previous winners etched into it..."))
+    msgbox(format("Jordan"))
+    //check if the player has won the tournament their name can go on aswell
+    releaseall
+}
+
+script GranitePeakTown_School_MatLostID {
+    lockall
+    if(flag(FLAG_MAT_ID)){
+        msgbox(format("It's empty"))
+    }
+    if(!flag(FLAG_MAT_ID)) {
+        msgbox(format("You find someones student ID in the pot:\nIt belongs to Mat"))
+        setflag(FLAG_MAT_ID)
+    }
+    releaseall
+}
+
+
+//movement
+
+movement Movement_GranitePeakSchool_MovePlayerLeftOnce {
+    walk_left
+}
+
+movement Movement_GranitePeakSchool_MovePlayerToMat {
+    walk_up
+}
+
+movement Movement_GranitePeakSchool_MatFaceDown {
+    face_down
+}
+
+movement Movement_GranitePeakSchool_MatExclamation {
+    emote_exclamation_mark
+}
+
+movement Movement_GranitePeakSchool_MatMovesRooms {
+    walk_left
+    walk_left
+    walk_left
+    walk_left
+    walk_left
+    face_up
+}
+
+//text
+
+text SchoolHall_Mat_Intro {
+    format("I won't hold back!")
+}
+
+text SchoolHall_Mat_Outro {
+    format("Okay I guess I'm not ready yet.")
+}

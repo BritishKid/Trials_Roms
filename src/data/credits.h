@@ -785,3 +785,8 @@ static const struct CreditsEntry *const sCreditsEntryPointerTable[PAGE_COUNT][EN
     },
 };
 #undef _
+
+
+//TODO Work out custom credits
+//CUSTOM CREDITS
+//Item icons by Cookie Softcore

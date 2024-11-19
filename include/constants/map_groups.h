@@ -6,7 +6,7 @@
 //
 
 // gMapGroup_TownsAndRoutes
-#define MAP_PETALBURG_CITY      (0 | (0 << 8))
+#define MAP_GRANITE_PEAK_TOWN   (0 | (0 << 8))
 #define MAP_SLATEPORT_CITY      (1 | (0 << 8))
 #define MAP_MAUVILLE_CITY       (2 | (0 << 8))
 #define MAP_RUSTBORO_CITY       (3 | (0 << 8))
@@ -129,14 +129,21 @@
 #define MAP_PACIFIDLOG_TOWN_HOUSE4            (5 | (7 << 8))
 #define MAP_PACIFIDLOG_TOWN_HOUSE5            (6 | (7 << 8))
 
-// gMapGroup_IndoorPetalburg
-#define MAP_PETALBURG_CITY_WALLYS_HOUSE      (0 | (8 << 8))
-#define MAP_PETALBURG_CITY_GYM               (1 | (8 << 8))
-#define MAP_PETALBURG_CITY_HOUSE1            (2 | (8 << 8))
-#define MAP_PETALBURG_CITY_HOUSE2            (3 | (8 << 8))
-#define MAP_PETALBURG_CITY_POKEMON_CENTER_1F (4 | (8 << 8))
-#define MAP_PETALBURG_CITY_POKEMON_CENTER_2F (5 | (8 << 8))
-#define MAP_PETALBURG_CITY_MART              (6 | (8 << 8))
+// gMapGroup_IndoorGranitePeak
+#define MAP_GRANITE_PEAK_TOWN_WALLYS_HOUSE          (0 | (8 << 8))
+#define MAP_GRANITE_PEAK_GYM                        (1 | (8 << 8))
+#define MAP_GRANITE_PEAK_TOWN_HOUSE1                (2 | (8 << 8))
+#define MAP_GRANITE_PEAK_TOWN_HOUSE2                (3 | (8 << 8))
+#define MAP_GRANITE_PEAK_TOWN_HOUSE3                (4 | (8 << 8))
+#define MAP_GRANITE_PEAK_TOWN_HOUSE4                (5 | (8 << 8))
+#define MAP_GRANITE_PEAK_TOWN_POKEMON_CENTER_1F     (6 | (8 << 8))
+#define MAP_GRANITE_PEAK_TOWN_POKEMON_CENTER_2F     (7 | (8 << 8))
+#define MAP_GRANITE_PEAK_TOWN_MART                  (8 | (8 << 8))
+#define MAP_GRANITE_PEAK_TOWN_SCHOOL_HALL           (9 | (8 << 8))
+#define MAP_GRANITE_PEAK_TOWN_SCHOOL_EVOLUTION_ROOM (10 | (8 << 8))
+#define MAP_GRANITE_PEAK_TOWN_SCHOOL_ITEMS_ROOM     (11 | (8 << 8))
+#define MAP_GRANITE_PEAK_TOWN_SCHOOL_MOVE_ROOM      (12 | (8 << 8))
+#define MAP_GRANITE_PEAK_TOWN_SCHOOL_ABILITY_ROOM   (13 | (8 << 8))
 
 // gMapGroup_IndoorSlateport
 #define MAP_SLATEPORT_CITY_STERNS_SHIPYARD_1F      (0 | (9 << 8))

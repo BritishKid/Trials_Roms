@@ -8,7 +8,7 @@
     "gMapGroup_IndoorFallarbor",
     "gMapGroup_IndoorVerdanturf",
     "gMapGroup_IndoorPacifidlog",
-    "gMapGroup_IndoorPetalburg",
+    "gMapGroup_IndoorGranitePeak",
     "gMapGroup_IndoorSlateport",
     "gMapGroup_IndoorMauville",
     "gMapGroup_IndoorRustboro",
@@ -41,7 +41,7 @@
     "gMapGroup_MahogonyHills"
   ],
   "gMapGroup_TownsAndRoutes": [
-    "PetalburgCity",
+    "GranitePeakTown",
     "SlateportCity",
     "MauvilleCity",
     "RustboroCity",
@@ -164,14 +164,21 @@
     "PacifidlogTown_House4",
     "PacifidlogTown_House5"
   ],
-  "gMapGroup_IndoorPetalburg": [
-    "PetalburgCity_WallysHouse",
-    "PetalburgCity_Gym",
-    "PetalburgCity_House1",
-    "PetalburgCity_House2",
-    "PetalburgCity_PokemonCenter_1F",
-    "PetalburgCity_PokemonCenter_2F",
-    "PetalburgCity_Mart"
+  "gMapGroup_IndoorGranitePeak": [
+    "GranitePeakTown_WallysHouse",
+    "GranitePeakTown_Gym",
+    "GranitePeakTown_House1",
+    "GranitePeakTown_House2",
+    "GranitePeakTown_House3",
+    "GranitePeakTown_House4",
+    "GranitePeakTown_PokemonCenter_1F",
+    "GranitePeakTown_PokemonCenter_2F",
+    "GranitePeakTown_Mart",
+    "GranitePeakTown_SchoolHall",
+    "GranitePeakTown_School_EvolutionRoom",
+    "GranitePeakTown_School_ItemsRoom",
+    "GranitePeakTown_School_MoveRoom",
+    "GranitePeakTown_School_AbilityRoom"
   ],
   "gMapGroup_IndoorSlateport": [
     "SlateportCity_SternsShipyard_1F",

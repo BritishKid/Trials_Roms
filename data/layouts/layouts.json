@@ -2,14 +2,14 @@
   "layouts_table_label": "gMapLayouts",
   "layouts": [
     {
-      "id": "LAYOUT_PETALBURG_CITY",
-      "name": "PetalburgCity_Layout",
+      "id": "LAYOUT_GRANITE_PEAK_TOWN",
+      "name": "GranitePeakTown_Layout",
       "width": 45,
       "height": 30,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Lilycove",
-      "border_filepath": "data/layouts/PetalburgCity/border.bin",
-      "blockdata_filepath": "data/layouts/PetalburgCity/map.bin"
+      "border_filepath": "data/layouts/GranitePeakTown/border.bin",
+      "blockdata_filepath": "data/layouts/GranitePeakTown/map.bin"
     },
     {
       "id": "LAYOUT_SLATEPORT_CITY",
@@ -782,14 +782,14 @@
       "blockdata_filepath": "data/layouts/PacifidlogTown_House2/map.bin"
     },
     {
-      "id": "LAYOUT_PETALBURG_CITY_GYM",
-      "name": "PetalburgCity_Gym_Layout",
+      "id": "LAYOUT_GRANITE_PEAK_TOWN_GYM",
+      "name": "GranitePeakTown_Gym_Layout",
       "width": 9,
       "height": 112,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_PetalburgGym",
-      "border_filepath": "data/layouts/PetalburgCity_Gym/border.bin",
-      "blockdata_filepath": "data/layouts/PetalburgCity_Gym/map.bin"
+      "border_filepath": "data/layouts/GranitePeakTown_Gym/border.bin",
+      "blockdata_filepath": "data/layouts/GranitePeakTown_Gym/map.bin"
     },
     {
       "id": "LAYOUT_HOUSE_WITH_BED",
@@ -4640,6 +4640,76 @@
       "secondary_tileset": "gTileset_Fortree",
       "border_filepath": "data/layouts/Route3c/border.bin",
       "blockdata_filepath": "data/layouts/Route3c/map.bin"
+    },
+    {
+      "id": "LAYOUT_GRANITE_PEAK_TOWN_TOWN_HOUSE4",
+      "name": "GranitePeakTown_House4_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/GranitePeakTown_House4/border.bin",
+      "blockdata_filepath": "data/layouts/GranitePeakTown_House4/map.bin"
+    },
+    {
+      "id": "LAYOUT_GRANITE_PEAK_TOWN_SCHOOL_HALL",
+      "name": "GranitePeakTown_SchoolHall_Layout",
+      "width": 14,
+      "height": 6,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/GranitePeakTown_SchoolHall/border.bin",
+      "blockdata_filepath": "data/layouts/GranitePeakTown_SchoolHall/map.bin"
+    },
+    {
+      "id": "LAYOUT_GRANITE_PEAK_TOWN_TOWN_HOUSE3",
+      "name": "GranitePeakTown_House3_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/GranitePeakTown_House3/border.bin",
+      "blockdata_filepath": "data/layouts/GranitePeakTown_House3/map.bin"
+    },
+    {
+      "id": "LAYOUT_GRANITE_PEAK_TOWN_SCHOOL_EVOLUTION_ROOM",
+      "name": "GranitePeakTown_School_EvolutionRoom_Layout",
+      "width": 12,
+      "height": 11,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonSchool",
+      "border_filepath": "data/layouts/GranitePeakTown_School_EvolutionRoom/border.bin",
+      "blockdata_filepath": "data/layouts/GranitePeakTown_School_EvolutionRoom/map.bin"
+    },
+    {
+      "id": "LAYOUT_GRANITE_PEAK_TOWN_SCHOOL_ITEMS_ROOM",
+      "name": "GranitePeakTown_School_ItemsRoom_Layout",
+      "width": 12,
+      "height": 11,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonSchool",
+      "border_filepath": "data/layouts/GranitePeakTown_School_ItemsRoom/border.bin",
+      "blockdata_filepath": "data/layouts/GranitePeakTown_School_ItemsRoom/map.bin"
+    },
+    {
+      "id": "LAYOUT_GRANITE_PEAK_TOWN_SCHOOL_MOVE_ROOM",
+      "name": "GranitePeakTown_School_MoveRoom_Layout",
+      "width": 12,
+      "height": 11,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonSchool",
+      "border_filepath": "data/layouts/GranitePeakTown_School_MoveRoom/border.bin",
+      "blockdata_filepath": "data/layouts/GranitePeakTown_School_MoveRoom/map.bin"
+    },
+    {
+      "id": "LAYOUT_GRANITE_PEAK_TOWN_SCHOOL_ABILITY_ROOM",
+      "name": "GranitePeakTown_School_AbilityRoom_Layout",
+      "width": 12,
+      "height": 11,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonSchool",
+      "border_filepath": "data/layouts/GranitePeakTown_School_AbilityRoom/border.bin",
+      "blockdata_filepath": "data/layouts/GranitePeakTown_School_AbilityRoom/map.bin"
     }
   ]
 }

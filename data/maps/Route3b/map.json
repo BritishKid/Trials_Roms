@@ -124,6 +124,14 @@
       "y": 37,
       "elevation": 0,
       "secret_base_id": "SECRET_BASE_TREE2_2"
+    },
+    {
+      "type": "hidden_item",
+      "x": 17,
+      "y": 28,
+      "elevation": 0,
+      "item": "ITEM_CHESTO_BERRY",
+      "flag": "FLAG_RECEIVED_CHESTO_BERRY_ROUTE3B"
     }
   ]
 }

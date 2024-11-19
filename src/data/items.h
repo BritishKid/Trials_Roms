@@ -14478,13 +14478,118 @@ const struct Item gItemsInfo[] =
         .iconPalette = gItemIconPalette_QuestionMark,
     },
     
-    [ITEM_SMALL_SAW] =
+    [ITEM_HAND_AXE] =
     {
-        .name = _("Small Saw"),
+        .name = _("Hand Axe"),
         .price = 0,
         .description = COMPOUND_STRING(
-            "A small saw used to\n"
+            "A hand axe used to\n"
             "cut down trees."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_HandAxe,
+        .iconPalette = gItemIconPalette_HandAxe,
+    },
+    
+    [ITEM_LANTERN] =
+    {
+        .name = _("Lantern"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "A lantern used to\n"
+            "light up caves."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse, //todo make it work
+        .iconPic = gItemIcon_Lantern,
+        .iconPalette = gItemIconPalette_Lantern,
+    },
+    
+    [ITEM_PICKAXE] =
+    {
+        .name = _("Pickaxe"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "A pickaxe used to\n"
+            "clear small rocks."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse, //todo make it work
+        .iconPic = gItemIcon_Pickaxe,
+        .iconPalette = gItemIconPalette_Pickaxe,
+    },
+    
+    [ITEM_SURFBOARD] =
+    {
+        .name = _("Surfboard"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "A surfboard used\n"
+            "to cross water."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse, //todo make it work
+        .iconPic = gItemIcon_Surfboard,
+        .iconPalette = gItemIconPalette_Surfboard,
+    },
+       
+    [ITEM_EVOLUTION_PATCH] =
+    {
+        .name = _("Evolution Patch"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "Awarded for completing\n"
+            "evolution class."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_QuestionMark,
+        .iconPalette = gItemIconPalette_QuestionMark,
+    },
+
+    [ITEM_ITEMS_PATCH] =
+    {
+        .name = _("Items Patch"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "Awarded for completing\n"
+            "items class."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_QuestionMark,
+        .iconPalette = gItemIconPalette_QuestionMark,
+    },
+    
+    [ITEM_MOVES_PATCH] =
+    {
+        .name = _("Moves Patch"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "Awarded for completing\n"
+            "moves class."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_QuestionMark,
+        .iconPalette = gItemIconPalette_QuestionMark,
+    },
+    
+    [ITEM_ABILITIES_PATCH] =
+    {
+        .name = _("Abilities Patch"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "Awarded for completing\n"
+            "abilities class."),
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_BAG_MENU,

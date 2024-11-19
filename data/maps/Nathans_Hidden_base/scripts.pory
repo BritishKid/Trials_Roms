@@ -50,7 +50,7 @@ script Nathan_Gives_Dwebble {
 }
 
 script NicknamePartyMon {
-    msgbox("Give Dwebble a nickname?", MSGBOX_YESNO)
+    msgbox("Give it a nickname?", MSGBOX_YESNO)
     hidemonpic
     if(var(VAR_RESULT) == YES) {
         call(Common_EventScript_GetGiftMonPartySlot)
@@ -59,7 +59,7 @@ script NicknamePartyMon {
 }
 
 script NicknameBoxMon {
-    msgbox("Give Dwebble a nickname?", MSGBOX_YESNO)
+    msgbox("Give it a nickname?", MSGBOX_YESNO)
     hidemonpic
     if(var(VAR_RESULT) == YES) {
         call(Common_EventScript_NameReceivedBoxMon)

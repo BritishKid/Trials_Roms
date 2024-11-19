@@ -2,7 +2,7 @@
 EventScript_CutTree::
 	lockall
 	goto_if_unset FLAG_BADGE01_GET, EventScript_CheckTreeCantCut
-	checkitem ITEM_SMALL_SAW 1
+	checkitem ITEM_HAND_AXE 1
 	goto_if_eq VAR_RESULT, 1, EventScriptCanCut
 EventScriptCanCut:
 	setfieldeffectargument 0, VAR_RESULT
@@ -64,14 +64,11 @@ EventScript_UseRockSmash::
 EventScript_RockSmash::
 	lockall
 	goto_if_unset FLAG_BADGE03_GET, EventScript_CantSmashRock
-	checkpartymove MOVE_ROCK_SMASH
-	goto_if_eq VAR_RESULT, PARTY_SIZE, EventScript_CantSmashRock
-	setfieldeffectargument 0, VAR_RESULT
-	bufferpartymonnick STR_VAR_1, VAR_RESULT
-	buffermovename STR_VAR_2, MOVE_ROCK_SMASH
+	checkitem ITEM_PICKAXE 1
+	goto_if_eq VAR_RESULT, 1, EventScript_CantSmashRock
 	msgbox Text_WantToSmash, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, EventScript_CancelSmash
-	msgbox Text_MonUsedFieldMove, MSGBOX_DEFAULT
+	msgbox Text_UsedPickaxe, MSGBOX_DEFAULT
 	closemessage
 EventScript_RockSmashCommon:
 	@ check if follower should use the field move
@@ -395,3 +392,7 @@ Text_FailSweetScent:
 
 Text_UsedSmallSaw:
 	.string "You used the small saw$"
+
+	
+Text_UsedPickaxe:
+	.string "You used the pickaxe$"

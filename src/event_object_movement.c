@@ -2369,7 +2369,7 @@ void GetFollowerAction(struct ScriptContext *ctx) // Essentially a big switch fo
         case MAPSEC_CINNABAR_ISLAND:
             multi = TYPE_FIRE;
             break;
-        case MAPSEC_PETALBURG_CITY:
+        case MAPSEC_GRANITE_PEAK_TOWN:
             multi = TYPE_NORMAL;
             break;
         case MAPSEC_FORTREE_CITY:

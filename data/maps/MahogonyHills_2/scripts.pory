@@ -40,7 +40,7 @@ script MahoganyHills2_Rival_PostScript {
     setflag(FLAG_MAHOGANY_HILLS_RIVAL_BEATEN)
     msgbox(format("You might have won but I still have more badges than you. That's what matters really."))
     msgbox(format("You should probably take this to, it will help once you've got your first badge."))
-    giveitem(ITEM_SMALL_SAW)
+    giveitem(ITEM_HAND_AXE)
     msgbox(format("Anyway I'm heading to get my next badge, I'll see you there if you don't lose too badly up here."))
     msgbox(format("See ya nerd!"))
     applymovement(5, Movement_Rival_Leaves_Player_MahoganyHills2)

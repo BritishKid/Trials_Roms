@@ -185,7 +185,7 @@ Nathan_Gives_Dwebble_Text_1:
 
 NicknamePartyMon_Text_0:
 # 53 "data/maps/Nathans_Hidden_base/scripts.pory"
-	.string "Give Dwebble a nickname?$"
+	.string "Give it a nickname?$"
 
 Nathan_HiddenBase_EventScript_GulpinDoll_Text_0:
 # 72 "data/maps/Nathans_Hidden_base/scripts.pory"
