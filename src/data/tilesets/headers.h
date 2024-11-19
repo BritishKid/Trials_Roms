@@ -825,3 +825,69 @@ const struct Tileset gTileset_UnionRoom =
     .metatileAttributes = gMetatileAttributes_UnionRoom,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_gTileset_AutumnRuins =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_gTileset_AutumnRuins,
+    .palettes = gTilesetPalettes_gTileset_AutumnRuins,
+    .metatiles = gMetatiles_gTileset_AutumnRuins,
+    .metatileAttributes = gMetatileAttributes_gTileset_AutumnRuins,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_beach_cave =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_beach_cave,
+    .palettes = gTilesetPalettes_beach_cave,
+    .metatiles = gMetatiles_beach_cave,
+    .metatileAttributes = gMetatileAttributes_beach_cave,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_Desert =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_Desert,
+    .palettes = gTilesetPalettes_Desert,
+    .metatiles = gMetatiles_Desert,
+    .metatileAttributes = gMetatileAttributes_Desert,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_desert_pyramid_exterior =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_desert_pyramid_exterior,
+    .palettes = gTilesetPalettes_desert_pyramid_exterior,
+    .metatiles = gMetatiles_desert_pyramid_exterior,
+    .metatileAttributes = gMetatileAttributes_desert_pyramid_exterior,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_desert_village =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_desert_village,
+    .palettes = gTilesetPalettes_desert_village,
+    .metatiles = gMetatiles_desert_village,
+    .metatileAttributes = gMetatileAttributes_desert_village,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_General_Snow =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_General_Snow,
+    .palettes = gTilesetPalettes_General_Snow,
+    .metatiles = gMetatiles_General_Snow,
+    .metatileAttributes = gMetatileAttributes_General_Snow,
+    .callback = NULL,
+};

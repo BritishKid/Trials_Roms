@@ -131,7 +131,7 @@
 
 // gMapGroup_IndoorGranitePeak
 #define MAP_GRANITE_PEAK_TOWN_WALLYS_HOUSE          (0 | (8 << 8))
-#define MAP_GRANITE_PEAK_GYM                        (1 | (8 << 8))
+#define MAP_GRANITE_PEAK_TOWN_GYM                   (1 | (8 << 8))
 #define MAP_GRANITE_PEAK_TOWN_HOUSE1                (2 | (8 << 8))
 #define MAP_GRANITE_PEAK_TOWN_HOUSE2                (3 | (8 << 8))
 #define MAP_GRANITE_PEAK_TOWN_HOUSE3                (4 | (8 << 8))

@@ -207,3 +207,21 @@ const u16 gMetatileAttributes_MysteryEventsHouse[] = INCBIN_U16("data/tilesets/s
 
 const u16 gMetatiles_UnionRoom[] = INCBIN_U16("data/tilesets/secondary/union_room/metatiles.bin");
 const u16 gMetatileAttributes_UnionRoom[] = INCBIN_U16("data/tilesets/secondary/union_room/metatile_attributes.bin");
+
+const u16 gMetatiles_gTileset_AutumnRuins[] = INCBIN_U16("data/tilesets/secondary/autumn_ruins/metatiles.bin");
+const u16 gMetatileAttributes_gTileset_AutumnRuins[] = INCBIN_U16("data/tilesets/secondary/autumn_ruins/metatile_attributes.bin");
+
+const u16 gMetatiles_beach_cave[] = INCBIN_U16("data/tilesets/secondary/beach_cave/metatiles.bin");
+const u16 gMetatileAttributes_beach_cave[] = INCBIN_U16("data/tilesets/secondary/beach_cave/metatile_attributes.bin");
+
+const u16 gMetatiles_Desert[] = INCBIN_U16("data/tilesets/primary/desert/metatiles.bin");
+const u16 gMetatileAttributes_Desert[] = INCBIN_U16("data/tilesets/primary/desert/metatile_attributes.bin");
+
+const u16 gMetatiles_desert_pyramid_exterior[] = INCBIN_U16("data/tilesets/secondary/desert_pyramid_exterior/metatiles.bin");
+const u16 gMetatileAttributes_desert_pyramid_exterior[] = INCBIN_U16("data/tilesets/secondary/desert_pyramid_exterior/metatile_attributes.bin");
+
+const u16 gMetatiles_desert_village[] = INCBIN_U16("data/tilesets/secondary/desert_village/metatiles.bin");
+const u16 gMetatileAttributes_desert_village[] = INCBIN_U16("data/tilesets/secondary/desert_village/metatile_attributes.bin");
+
+const u16 gMetatiles_General_Snow[] = INCBIN_U16("data/tilesets/primary/general_snow/metatiles.bin");
+const u16 gMetatileAttributes_General_Snow[] = INCBIN_U16("data/tilesets/primary/general_snow/metatile_attributes.bin");
