@@ -1,4 +1,9 @@
-mapscripts GranitePeakTown_SchoolHall_MapScripts {}
+mapscripts GranitePeakTown_SchoolHall_MapScripts {
+    MAP_SCRIPT_ON_FRAME_TABLE [
+        VAR_CURRENT_SCHOOL_TOURNAMENT_STATE, 1: GranitePeak_BattleDomeLobby_EventScript_BeatChallenge //this runs when the player wins and returns
+        VAR_SCHOOL_TEAM_RESET, 5: GranitePeak_BattleDomeLobby_EventScript_LostChallenge //when the player loses this runs
+    ]
+}
 
 script GranitePeak_EventScript_EvolutionClassroomDoor {
     lockall
@@ -102,9 +107,173 @@ script GranitePeakTown_School_MatLostID {
     releaseall
 }
 
+//Tournament Code
+
+//SETUP
+script GranitePeakTown_SchoolTournament_Teacher {
+    lockall
+    faceplayer
+    if(!flag(FLAG_CAN_ACCESS_SCHOOL_TOURNAMENT)) { //check each patch once then if they can enter this is skipped
+        msgbox(format("If you wish to take part in the tournament you must have first completed every class."))
+        checkitem(ITEM_EVOLUTION_PATCH, 1)
+        if(var(VAR_RESULT) == FALSE) {
+            msgbox(format("You still need to complete the Evolution test."))
+            releaseall
+            end
+        }
+        msgbox(format("Good job on passing the Evolution test."))
+        checkitem(ITEM_MOVES_PATCH, 1)
+        if(var(VAR_RESULT) == FALSE) {
+            msgbox(format("You still need to complete the Moves test."))
+            releaseall
+            end
+        }
+        msgbox(format("Brilliant you have completed the Moves test"))
+        checkitem(ITEM_ITEMS_PATCH, 1)
+        if(var(VAR_RESULT) == FALSE) {
+            msgbox(format("You still need to complete the Items test."))
+            releaseall
+            end
+        }
+        msgbox(format("Great, you also completed the Items test"))
+        checkitem(ITEM_ABILITIES_PATCH, 1)
+        if(var(VAR_RESULT) == FALSE) {
+            msgbox(format("You still need to complete the Abiliy test."))
+            releaseall
+            end
+        }
+        msgbox(format("Evolution test as well, fantastic job!"))
+        setflag(FLAG_CAN_ACCESS_SCHOOL_TOURNAMENT)
+    }
+    if(flag(FLAG_CAN_ACCESS_SCHOOL_TOURNAMENT)) {
+        msgbox(format("It looks like you can take part, would you like to?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == NO) {
+            msgbox(format("Come back when you wish to give it a go."))
+        }
+        if(var(VAR_RESULT) == YES) {
+            getpartysize
+            if(var(VAR_RESULT) <= DOME_BATTLE_PARTY_SIZE) {
+                //check player has 3 or less pokemon
+                setvar(VAR_FRONTIER_FACILITY, FRONTIER_FACILITY_DOME) // We are going to hack the dome and add custom trainers into it
+                setvar(VAR_FRONTIER_BATTLE_MODE, FRONTIER_MODE_SINGLES)
+                goto(GranitePeakTown_BattleDomeLobby_EventScript_AttendantWelcome)
+            }
+            else {
+                msgbox(format("Sorry you can't enter with more than 3 Pokémon."))
+            }
+        }
+    }
+    releaseall
+}
+
+script GranitePeakTown_BattleDomeLobby_EventScript_AttendantWelcome {
+    //set level of the tournament based on badges aquired
+    if(!flag(FLAG_BADGE02_GET)) {
+        setvar(VAR_SCHOOL_TOURNAMENT_LEVEL, 22)
+    } elif(!flag(FLAG_BADGE03_GET)) {
+        setvar(VAR_SCHOOL_TOURNAMENT_LEVEL, 28)
+    } elif(!flag(FLAG_BADGE04_GET)) {
+        setvar(VAR_SCHOOL_TOURNAMENT_LEVEL, 35)
+    } elif(!flag(FLAG_BADGE05_GET)) {
+        setvar(VAR_SCHOOL_TOURNAMENT_LEVEL, 40)
+    } else {
+        setvar(VAR_SCHOOL_TOURNAMENT_LEVEL, 50)
+    }
+
+    setvar(VAR_0x8004, FRONTIER_UTIL_FUNC_SET_DATA)
+    setvar(VAR_0x8005, FRONTIER_DATA_LVL_MODE)
+    setvar(VAR_0x8006, FRONTIER_LVL_50) //forces to use the above level cap
+    special(CallFrontierUtilFunc) //set everything up
+    call(GranitePeakTown_SchoolTournamentLobby_EventScript_SaveBeforeChallenge)
+}
+
+script GranitePeakTown_SchoolTournamentLobby_EventScript_SaveBeforeChallenge {
+    setvar(VAR_TEMP_0, 0)
+    setvar(VAR_0x8004, BATTLE_DOME_FUNC_INIT)
+    special(CallBattleDomeFunction)
+    closemessage
+    delay(2)
+    setvar(VAR_TEMP_0, 255)
+    setvar(VAR_0x8004, BATTLE_DOME_FUNC_INIT_TRAINERS) // sets up the trainers
+    special(CallBattleDomeFunction)
+    call(GranitePeakTown_SchoolTournament_EventScript_EnterChallenge)
+}
+
+script GranitePeakTown_SchoolTournament_EventScript_EnterChallenge {
+    setvar(VAR_0x8004, BATTLE_DOME_FUNC_SET_TRAINERS)
+    special(CallBattleDomeFunction)
+warp(MAP_GRANITE_PEAK_TOWN_TOURNAMENT_WAITING_ROOM, 6, 8)
+    setvar(VAR_TEMP_0, 0)
+    waitstate
+    end
+}
+
+//Winning the Tournament
+
+script GranitePeak_BattleDomeLobby_EventScript_BeatChallenge {
+    lockall
+    turnobject(OBJ_EVENT_ID_PLAYER, DIR_NORTH)
+    setvar(VAR_CURRENT_SCHOOL_TOURNAMENT_STATE, 0) //reset to allow for it to be repeatable
+    msgbox(format("Congratulations you managed to beat the others! It was incredible to watch!"))
+    setvar(VAR_SCHOOL_TEAM_RESET, 0)
+    if(flag(FLAG_TRAINER_TOURNAMENT_WON)) { //Different prizes for repeated wins
+        //scaled based on difficulty/badges earnt
+        if(!flag(FLAG_BADGE02_GET)) {
+            addmoney(5000)
+        } elif(!flag(FLAG_BADGE03_GET)) {
+            addmoney(6000)
+        } elif(!flag(FLAG_BADGE04_GET)) {
+            addmoney(7000)
+        } elif(!flag(FLAG_BADGE05_GET)) {
+            addmoney(8000)
+        } else {
+            addmoney(10000)
+        }
+        call(GranitePeakTown_SchoolTournament_MintPrizeSelection)
+        } 
+        //todo a bonus for multiple wins back to back? Maybe
+        //below on runs for first time the player wins 
+        if(!flag(FLAG_TRAINER_TOURNAMENT_WON)) {
+            setflag(FLAG_TRAINER_TOURNAMENT_WON)
+            msgbox(format("For your succes in the tournament take this trophy!"))
+            givedecoration(DECOR_SILVER_SHIELD)
+            // sub quest
+            // quest menu when added
+            addmoney(7500)
+            call(GranitePeakTown_SchoolTournament_MintPrizeSelection)
+        }
+    releaseall
+}
+
+script GranitePeakTown_SchoolTournament_MintPrizeSelection {
+    msgbox("Select your prize!")
+    waitmessage()
+    multichoice(21,6, MULTI_NATURE_MINT_SELECTION, TRUE)
+    switch(var(VAR_RESULT)) {
+        case 0: giveitem(ITEM_ADAMANT_MINT)
+        case 1: giveitem(ITEM_MODEST_MINT)
+        case 2: giveitem(ITEM_BOLD_MINT)
+        case 3: giveitem(ITEM_CALM_MINT)
+        case 4: giveitem(ITEM_JOLLY_MINT)
+        case 5: giveitem(ITEM_TIMID_MINT)
+    }
+}
+
+// Losing the Tournament
+script  GranitePeak_BattleDomeLobby_EventScript_LostChallenge {
+    lockall
+    setvar(VAR_SCHOOL_TEAM_RESET, 0)
+    turnobject(OBJ_EVENT_ID_PLAYER, DIR_NORTH)
+    msgbox(format("Nice try, better luck next time."))
+    setvar(VAR_0x8004, FRONTIER_UTIL_FUNC_SET_PARTY_ORDER)
+    setvar(VAR_0x8005, FRONTIER_PARTY_SIZE)
+    special(CallFrontierUtilFunc)
+    frontier_checkairshow
+    special(HealPlayerParty)
+    releaseall
+}
 
 //movement
-
 movement Movement_GranitePeakSchool_MovePlayerLeftOnce {
     walk_left
 }

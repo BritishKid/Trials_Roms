@@ -447,7 +447,7 @@ static const struct MenuAction MultichoiceList_TourneyNoRecord[] =
     {gText_Tourney_Tree},
     {gText_ReadyToStart},
     {gText_Rest},
-    {gText_Retire},
+    // {gText_Retire},
 };
 
 static const struct MenuAction MultichoiceList_Tent[] =
@@ -778,6 +778,16 @@ static const struct MenuAction MultichoiceList_BerryPlot[] =
     {gText_Exit},
 };
 
+static const struct MenuAction MultichoiceList_MintSelection[] =
+{
+    {gText_AdamantMint},
+    {gText_ModestMint},
+    {gText_BoldMint},
+    {gText_CalmMint},
+    {gText_JollyMint},
+    {gText_TimidMint},
+};
+
 static const struct MenuAction MultichoiceList_Exit[] =
 {
     {gText_Exit},
@@ -906,6 +916,7 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_FALLARBOR_TENT_RULES]       = MULTICHOICE(MultichoiceList_FallarborTentRules),
     [MULTI_TAG_MATCH_TYPE]             = MULTICHOICE(MultichoiceList_TagMatchType),
     [MULTI_BERRY_PLOT]                 = MULTICHOICE(MultichoiceList_BerryPlot),
+    [MULTI_NATURE_MINT_SELECTION]      = MULTICHOICE(MultichoiceList_MintSelection),
 };
 
 const u8 *const gStdStrings[] =

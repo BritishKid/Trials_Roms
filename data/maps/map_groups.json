@@ -178,7 +178,8 @@
     "GranitePeakTown_School_EvolutionRoom",
     "GranitePeakTown_School_ItemsRoom",
     "GranitePeakTown_School_MoveRoom",
-    "GranitePeakTown_School_AbilityRoom"
+    "GranitePeakTown_School_AbilityRoom",
+    "GranitePeakTown_TournamentWaitingRoom"
   ],
   "gMapGroup_IndoorSlateport": [
     "SlateportCity_SternsShipyard_1F",

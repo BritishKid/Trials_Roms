@@ -4710,6 +4710,16 @@
       "secondary_tileset": "gTileset_PokemonSchool",
       "border_filepath": "data/layouts/GranitePeakTown_School_AbilityRoom/border.bin",
       "blockdata_filepath": "data/layouts/GranitePeakTown_School_AbilityRoom/map.bin"
+    },
+    {
+      "id": "LAYOUT_GRANITE_PEAK_TOWN_TOURNAMENT_WAITING_ROOM",
+      "name": "GranitePeakTown_TournamentWaitingRoom_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonSchool",
+      "border_filepath": "data/layouts/GranitePeakTown_TournamentWaitingRoom/border.bin",
+      "blockdata_filepath": "data/layouts/GranitePeakTown_TournamentWaitingRoom/map.bin"
     }
   ]
 }

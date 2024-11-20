@@ -877,6 +877,9 @@ KingTapir Ekat TheDeadHeroAlistair Skillmen
 Desert Pyramid
 KingTapir Ekat TheDeadHeroAlistair Skillmen
 
+Desert village
+KingTapir Ekat TheDeadHeroAlistair Skillmen
+
 
  */ 
 

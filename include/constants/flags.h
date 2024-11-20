@@ -738,7 +738,7 @@
 #define FLAG_UNUSED_0x2B6  0x2B6 // Unused Flag
 #define FLAG_UNUSED_0x2B7  0x2B7 // Unused Flag
 #define FLAG_UNUSED_0x2B8  0x2B8 // Unused Flag
-#define FLAG_UNUSED_0x2B9  0x2B9 // Unused Flag
+#define FLAG_CAN_ACCESS_SCHOOL_TOURNAMENT  0x2B9 // Used
 #define FLAG_GET_SCHOOL_EEVEE  0x2BA //
 #define FLAG_HIDE_EVOLUTION_ROOM  0x2BB // 
 

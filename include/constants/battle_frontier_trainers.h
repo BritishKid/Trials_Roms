@@ -14,7 +14,7 @@
 #define FRONTIER_TRAINER_ELISE          10
 #define FRONTIER_TRAINER_ZOEY           11
 #define FRONTIER_TRAINER_MANUEL         12
-#define FRONTIER_TRAINER_RUSS           13
+#define FRONTIER_TRAINER_RUSS           13 //here
 #define FRONTIER_TRAINER_DUSTIN         14
 #define FRONTIER_TRAINER_TINA           15
 #define FRONTIER_TRAINER_GILLIAN1       16

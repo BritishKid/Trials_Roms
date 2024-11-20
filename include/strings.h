@@ -3045,6 +3045,14 @@ extern const u8 gText_BasePointsResetToZero[];
 extern const u8 gText_Fertilize[];
 extern const u8 gText_PlantBerry[];
 
+//Custom
+extern const u8 gText_AdamantMint[];
+extern const u8 gText_ModestMint[];
+extern const u8 gText_BoldMint[];
+extern const u8 gText_CalmMint[];
+extern const u8 gText_JollyMint[];
+extern const u8 gText_TimidMint[];
+
 // Map name pop-up
 extern const u8 gText_AM[];
 extern const u8 gText_PM[];

@@ -1993,16 +1993,17 @@ static void InitDomeTrainers(void)
         {
             do
             {
-                monId = GetRandomFrontierMonFromSet(trainerId);
+                monId = GetAllThreeSchoolMonFromSet(trainerId, j);
+                // monId = GetRandomFrontierMonFromSet(trainerId);
                 for (k = 0; k < j; k++)
                 {
                     // Make sure the mon is valid.
-                    int alreadySelectedMonId = DOME_MONS[i][k];
-                    if (alreadySelectedMonId == monId
-                        || species[0] == gFacilityTrainerMons[monId].species
-                        || species[1] == gFacilityTrainerMons[monId].species
-                        || gFacilityTrainerMons[alreadySelectedMonId].heldItem == gFacilityTrainerMons[monId].heldItem)
-                        break;
+                    // int alreadySelectedMonId = DOME_MONS[i][k];
+                    // if (alreadySelectedMonId == monId
+                    //     || species[0] == gFacilityTrainerMons[monId].species
+                    //     || species[1] == gFacilityTrainerMons[monId].species
+                    //     || gFacilityTrainerMons[alreadySelectedMonId].heldItem == gFacilityTrainerMons[monId].heldItem)
+                    //     break;
                 }
             } while (k != j);
 

@@ -1837,3 +1837,11 @@ const u8 gText_PlantBerry[] = _("PLANT BERRY");
 const u8 gText_AM[] = _("AM");
 const u8 gText_PM[] = _("PM");
 const u8 gText_StatEditor[] = _("EDIT STATS");
+
+//CUSTOM STRINGS
+const u8 gText_AdamantMint[] = ("ADAMANT MINT");
+const u8 gText_ModestMint[] = ("MODEST MINT");
+const u8 gText_BoldMint[] = ("BOLD MINT");
+const u8 gText_CalmMint[] = ("CALM MINT");
+const u8 gText_JollyMint[] = ("JOLY MINT");
+const u8 gText_TimidMint[] = ("TIMID MINT");

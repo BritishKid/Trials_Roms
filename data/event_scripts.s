@@ -1137,3 +1137,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/GranitePeakTown_School_MoveRoom/scripts.inc"
 
 	.include "data/maps/GranitePeakTown_School_AbilityRoom/scripts.inc"
+
+	.include "data/maps/GranitePeakTown_TournamentWaitingRoom/scripts.inc"

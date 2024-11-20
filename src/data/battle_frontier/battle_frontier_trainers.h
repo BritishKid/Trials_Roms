@@ -671,7 +671,7 @@ const struct BattleFrontierTrainer gBattleFrontierTrainers[FRONTIER_TRAINERS_COU
         .speechWin = {EC_WORD_MY, EC_WORD_RIVAL, EC_WORD_IS, EC_WORD_MY, EC_WORD_GIRL, EC_WORD_FRIEND},
         .speechLose = {EC_WORD_I_AM, EC_WORD_MAKING, EC_WORD_YOU, EC_WORD_MY, EC_WORD_RIVAL, EC_EMPTY_WORD},
         .monSet = gBattleFrontierTrainerMons_Maxwell
-    },
+    }, //EVERYTHING ABOVE HERE NEEDS TO BE CUSTOMISED
     [FRONTIER_TRAINER_DARYL] = {
         .facilityClass = FACILITY_CLASS_HIKER,
         .trainerName = _("DARYL"),
