@@ -1,0 +1,40 @@
+mapscripts Route4_MapScripts {}
+
+
+script Route4_TrainerBattle_Jakobi {
+    trainerbattle_single(ROUTE4_COOLTRAINER_JAKOBI, Jakobi_Intro, Jakobi_Outro, Increase_Trainers_Beaten)
+    msgbox(Jakobi_Postbattle, MSGBOX_DEFAULT)
+    end
+}
+
+script Route4_TrainerBattle_ToughBug {
+    trainerbattle_single(ROUTE4_BUGCATCHER, Route4Bug_Intro, Route4Bug_Outro, Increase_Trainers_Beaten)
+    msgbox(Route4Bug_Postbattle, MSGBOX_DEFAULT)
+    end
+}
+
+
+//text
+text Jakobi_Intro {
+    format("Should never came here pal.")
+}
+
+text Jakobi_Outro{ 
+    format("How could i lose these Pokemon were so expensive.")
+}
+
+text Jakobi_Postbattle {
+    format("How much did your Pokemon Cost?")
+}
+
+text Route4Bug_Intro {
+    format("I love feeding powerful berries to my bug Pokemon")
+}
+
+text Route4Bug_Outro {
+    format("Fine then I will share the berries.")
+}
+
+text Route4Bug_Postbattle {
+    format("Make good use of it.")
+}

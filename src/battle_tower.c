@@ -1834,7 +1834,6 @@ u16 GetRandomFrontierMonFromSet(u16 trainerId)
 }
 
 u16 GetAllThreeSchoolMonFromSet(u16 trainerId, int number) { //Custom one that should get all 3 mons in the list for school
-    u8 level = SetFacilityPtrsGetLevel();
     const u16 *monSet = gFacilityTrainers[trainerId].monSet; // Reads the possible pokemon a trainer can have
     u32 monId = monSet[number];
     

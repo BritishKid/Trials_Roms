@@ -44,10 +44,10 @@
     {
       "id": "LAYOUT_FORTREE_CITY",
       "name": "FortreeCity_Layout",
-      "width": 40,
+      "width": 50,
       "height": 20,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Fortree",
+      "secondary_tileset": "gTileset_Slateport",
       "border_filepath": "data/layouts/FortreeCity/border.bin",
       "blockdata_filepath": "data/layouts/FortreeCity/map.bin"
     },
@@ -4720,6 +4720,76 @@
       "secondary_tileset": "gTileset_PokemonSchool",
       "border_filepath": "data/layouts/GranitePeakTown_TournamentWaitingRoom/border.bin",
       "blockdata_filepath": "data/layouts/GranitePeakTown_TournamentWaitingRoom/map.bin"
+    },
+    {
+      "id": "LAYOUT_HIDDEN_GROTTO_CHARMANDER",
+      "name": "HiddenGrotto_Charmander_Layout",
+      "width": 12,
+      "height": 12,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/HiddenGrotto_Charmander/border.bin",
+      "blockdata_filepath": "data/layouts/HiddenGrotto_Charmander/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROBS_HIDDEN_BASE",
+      "name": "Robs_Hidden_Base_Layout",
+      "width": 14,
+      "height": 14,
+      "primary_tileset": "gTileset_SecretBase",
+      "secondary_tileset": "gTileset_SecretBaseTree",
+      "border_filepath": "data/layouts/Robs_Hidden_Base/border.bin",
+      "blockdata_filepath": "data/layouts/Robs_Hidden_Base/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE4",
+      "name": "Route4_Layout",
+      "width": 32,
+      "height": 16,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Lilycove",
+      "border_filepath": "data/layouts/Route4/border.bin",
+      "blockdata_filepath": "data/layouts/Route4/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE4B",
+      "name": "Route4b_Layout",
+      "width": 45,
+      "height": 51,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Fortree",
+      "border_filepath": "data/layouts/Route4b/border.bin",
+      "blockdata_filepath": "data/layouts/Route4b/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE4C",
+      "name": "Route4c_Layout",
+      "width": 35,
+      "height": 32,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Slateport",
+      "border_filepath": "data/layouts/Route4c/border.bin",
+      "blockdata_filepath": "data/layouts/Route4c/map.bin"
+    },
+    {
+      "id": "LAYOUT_SANDY_CLIFF_CAVE",
+      "name": "SandyCliff_Cave_Layout",
+      "width": 22,
+      "height": 13,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/SandyCliff_Cave/border.bin",
+      "blockdata_filepath": "data/layouts/SandyCliff_Cave/map.bin"
+    },
+    {
+      "id": "LAYOUT_CORAL_BEACH_1",
+      "name": "CoralBeach_1_Layout",
+      "width": 35,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Slateport",
+      "border_filepath": "data/layouts/CoralBeach_1/border.bin",
+      "blockdata_filepath": "data/layouts/CoralBeach_1/map.bin"
     }
   ]
 }

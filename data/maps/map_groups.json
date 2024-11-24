@@ -100,7 +100,11 @@
     "Underwater_Route128",
     "Underwater_Route129",
     "Underwater_Route105",
-    "Underwater_Route125"
+    "Underwater_Route125",
+    "Route4",
+    "Route4b",
+    "Route4c",
+    "CoralBeach_1"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",
@@ -447,7 +451,8 @@
     "TerraCave_End",
     "AlteringCave",
     "MeteorFalls_StevensCave",
-    "PlatefallCave_GF"
+    "PlatefallCave_GF",
+    "SandyCliff_Cave"
   ],
   "gMapGroup_IndoorDynamic": [
     "SecretBase_RedCave1",
@@ -649,10 +654,12 @@
   ],
   "gMapGroup_HiddenBases": [
     "Nathans_Hidden_base",
-    "Jenovas_Hidden_Base"
+    "Jenovas_Hidden_Base",
+    "Robs_Hidden_Base"
   ],
   "gMapGroup_HiddenGrottos": [
-    "HiddenGrotto_Rowlet"
+    "HiddenGrotto_Rowlet",
+    "HiddenGrotto_Charmander"
   ],
   "gMapGroup_MahogonyHills": [
     "MahogonyHills_1",

@@ -1,1 +1,74 @@
-mapscripts Route3c_MapScripts {}
+mapscripts Route3c_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION {
+        if(var(VAR_HIDDEN_MOUNTAIN_PASS) > 0) {
+            setmetatile(9, 8, METATILE_General_Grass, FALSE)
+            setmetatile(10, 8, METATILE_General_Grass, FALSE)
+            setmetatile(8, 8, METATILE_General_GrassRockWallRight, TRUE)
+            setmetatile(11, 8, METATILE_General_GrassRockCorner, TRUE)
+            setmetatile(9, 7, METATILE_General_CaveEntrance_Bottom, FALSE)
+            setmetatile(10, 7, METATILE_General_GrassRockWallDown, TRUE)
+            setmetatile(8, 7, METATILE_General_RockCornerRight, TRUE)
+            setmetatile(11, 7, METATILE_General_RockCornerLeft, TRUE)
+            setmetatile(9, 6, METATILE_General_CaveEntrance_Top, TRUE)
+        }
+    }
+}
+
+
+script Route3c_TrainerBattle_Hiker {
+    trainerbattle_single(ROUTE3C_HIKER, Route3c_Hiker_Intro, Route3c_Hiker_Outro, Increase_Trainers_Beaten)
+    msgbox(Route3c_Hiker_Postbattle, MSGBOX_DEFAULT)
+    end
+}
+
+script Route3c_TrainerBattle_CamperSurprise {
+    trainerbattle_single(ROUTE3C_CAMPER Route3Hidden_Intro, Route3Hidden_Outro, Route3c_EventScript_CamperBeaten, Increase_Trainers_Beaten)
+    msgbox(Route3Hidden_PostBattle, MSGBOX_AUTOCLOSE)
+    end
+}   
+
+script Route3c_TrainerBattle_RichBoy {
+    trainerbattle_single(ROUTE3C_RICHBOY_CLIVE, Route3_RichBoyClive_Intro, Route3_RichBoyClive_Outro, Increase_Trainers_Beaten)
+    msgbox(Route3_RichBoyClive_PostBattle, MSGBOX_AUTOCLOSE)
+}
+
+script Route3c_EventScript_CamperBeaten {
+    setvar(VAR_HIDDEN_MOUNTAIN_PASS, 1)
+}
+
+//text script
+text Route3c_Hiker_Intro {
+    format("I've caught some incredibly storng Pokemon up here.")
+}
+
+text Route3c_Hiker_Outro {
+    format("I guess I need to keep exploring for stronger Pokemon.")
+}
+
+text Route3c_Hiker_Postbattle {
+    format("I heard about about powerful dragons that live on the peak of mountain.")
+}
+
+text Route3Hidden_Intro {
+    format("I was told you can catch Charmander somewhere near here.")
+}
+
+text Route3Hidden_Outro {
+    format("That explosion blew the band right off my Graveller")
+}
+
+text Route3Hidden_PostBattle {
+    format("Maybe I read the map wrong")
+}
+
+text Route3_RichBoyClive_Intro {
+    format("I am so lost.")
+}
+
+text Route3_RichBoyClive_Outro {
+    format("That hasn't helped.")
+}
+
+text Route3_RichBoyClive_PostBattle {
+    format("Do you often beat lost children and take their money?")
+}

@@ -747,7 +747,7 @@ GranitePeakTown_Gym_EventScript_SpeedRoomDoor::
 GranitePeakTown_Gym_EventScript_EnterRoom::
 	closemessage
 	delay 30
-	warpdoor MAP_GRANITE_PEAK_GYM, VAR_0x8008, VAR_0x8009
+	warpdoor MAP_GRANITE_PEAK_TOWN_GYM, VAR_0x8008, VAR_0x8009
 	waitstate
 	releaseall
 	end

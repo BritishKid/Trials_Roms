@@ -1139,3 +1139,17 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/GranitePeakTown_School_AbilityRoom/scripts.inc"
 
 	.include "data/maps/GranitePeakTown_TournamentWaitingRoom/scripts.inc"
+
+	.include "data/maps/HiddenGrotto_Charmander/scripts.inc"
+
+	.include "data/maps/Robs_Hidden_Base/scripts.inc"
+
+	.include "data/maps/Route4/scripts.inc"
+
+	.include "data/maps/Route4b/scripts.inc"
+
+	.include "data/maps/Route4c/scripts.inc"
+
+	.include "data/maps/SandyCliff_Cave/scripts.inc"
+
+	.include "data/maps/CoralBeach_1/scripts.inc"

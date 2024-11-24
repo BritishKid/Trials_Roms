@@ -1462,7 +1462,7 @@ static bool32 IsValidLocationForVsSeeker(void)
     } Location;
 
     u32 i;
-    Location validIndoorLocations[] =
+    Location validIndoorLocations[] = //to do update these
     {
         { MAP_GROUP(MT_PYRE_SUMMIT),           MAP_NUM(MT_PYRE_SUMMIT) },
         { MAP_GROUP(SAFARI_ZONE_NORTH),        MAP_NUM(SAFARI_ZONE_NORTH) },
@@ -1479,7 +1479,7 @@ static bool32 IsValidLocationForVsSeeker(void)
         { MAP_GROUP(MAUVILLE_CITY_GYM),        MAP_NUM(MAUVILLE_CITY_GYM) },
         { MAP_GROUP(LAVARIDGE_TOWN_GYM_1F),    MAP_NUM(LAVARIDGE_TOWN_GYM_1F) },
         { MAP_GROUP(LAVARIDGE_TOWN_GYM_B1F),   MAP_NUM(LAVARIDGE_TOWN_GYM_B1F) },
-        { MAP_GROUP(GRANITE_PEAK_GYM),       MAP_NUM(GRANITE_PEAK_GYM) },
+        { MAP_GROUP(GRANITE_PEAK_TOWN_GYM),    MAP_NUM(GRANITE_PEAK_TOWN_GYM) },
         { MAP_GROUP(FORTREE_CITY_GYM),         MAP_NUM(FORTREE_CITY_GYM) },
         { MAP_GROUP(MOSSDEEP_CITY_GYM),        MAP_NUM(MOSSDEEP_CITY_GYM) },
         { MAP_GROUP(SOOTOPOLIS_CITY_GYM_1F),   MAP_NUM(SOOTOPOLIS_CITY_GYM_1F) },

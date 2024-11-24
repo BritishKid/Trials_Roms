@@ -1,12 +1,29 @@
 mapscripts Route3b_MapScripts {}
 
-
 script Rotue3b_TrainerBattle_LassAlex {
     trainerbattle_single(ROUTE3LASSALEX, LassAlex_Intro, LassAlex_Outro, Increase_Trainers_Beaten)
     msgbox(LassAlex_PostBattle, MSGBOX_AUTOCLOSE)
 }
 
+script Route3b_TrainerBattle_FishermanNeet {
+    trainerbattle_single(ROUTE3_FISHERMAN_NEET, FishermanNeet_Intro, FishermanNeet_Outro, Increase_Trainers_Beaten)
+    msgbox(FishermanNeet_Postbattle, MSGBOX_AUTOCLOSE)
+}
 
+script Route3b_TrainerBattle_CamperDave {
+    trainerbattle_single(ROUTE3_CAMPER_DAVE, CamperDave_Intro, CamperDave_Outro, Increase_Trainers_Beaten)
+    msgbox(CamperDave_Postbattle, MSGBOX_AUTOCLOSE)
+}
+
+script Route3b_TrainerBattle_Rose {
+    trainerbattle_single(ROUTE3_ROSE, Rose_Intro, Rose_Outro, Increase_Trainers_Beaten)
+    msgbox(Rose_Postbattle, MSGBOX_AUTOCLOSE)
+}
+
+script Route3b_TrainerBattle_Lily {
+    trainerbattle_single(ROUTE3_LILY, Lily_Intro, Lily_Outro, Increase_Trainers_Beaten)
+    msgbox(Lily_Postbattle, MSGBOX_AUTOCLOSE)
+}
 
 //Text Scripts
 
@@ -21,4 +38,52 @@ text LassAlex_Outro {
 
 text LassAlex_PostBattle {
     format("Fantastic battle! If you ever want to climb to new heights in Pokémon battles or just chat, find me along your mountainous journey.")
+}
+
+text FishermanNeet_Intro {
+    format("I'm going to go and catch a Totodile.")
+}
+
+text FishermanNeet_Outro {
+    format("Now I have to go to Clay Haven on the way")
+}
+
+text FishermanNeet_Postbattle {
+    format("Totodile Island is meant to be on Route 1.")
+}
+
+text CamperDave_Intro {
+    format("It's a long way down!")
+}
+
+text CamperDave_Outro {
+    format("I was distracted by the drop.")
+}
+
+text CamperDave_Postbattle {
+    format("Imagine flying through the valley.")
+}
+
+text Rose_Intro {
+    format("My sister told she found rare Pokemon here.")
+}
+
+text Rose_Outro {
+    format("She is probably just confused.")
+}
+
+text Rose_Postbattle {
+    format("I'm never going to find it...")
+}
+
+text Lily_Intro {
+    format("Did you see Bulbsaur anywhere?")
+}
+
+text Lily_Outro {
+    format("They must be close.")
+}
+
+text Lily_Postbattle {
+    format("I caught one here years ago, but it's changed so much.")
 }

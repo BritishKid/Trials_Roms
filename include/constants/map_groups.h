@@ -66,6 +66,10 @@
 #define MAP_UNDERWATER_ROUTE129 (57 | (0 << 8))
 #define MAP_UNDERWATER_ROUTE105 (58 | (0 << 8))
 #define MAP_UNDERWATER_ROUTE125 (59 | (0 << 8))
+#define MAP_ROUTE4              (60 | (0 << 8))
+#define MAP_ROUTE4B             (61 | (0 << 8))
+#define MAP_ROUTE4C             (62 | (0 << 8))
+#define MAP_CORAL_BEACH_1       (63 | (0 << 8))
 
 // gMapGroup_IndoorLittleroot
 #define MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_1F    (0 | (1 << 8))
@@ -413,6 +417,7 @@
 #define MAP_ALTERING_CAVE                            (106 | (24 << 8))
 #define MAP_METEOR_FALLS_STEVENS_CAVE                (107 | (24 << 8))
 #define MAP_PLATEFALL_CAVE_GF                        (108 | (24 << 8))
+#define MAP_SANDY_CLIFF_CAVE                         (109 | (24 << 8))
 
 // gMapGroup_IndoorDynamic
 #define MAP_SECRET_BASE_RED_CAVE1    (0 | (25 << 8))
@@ -615,9 +620,11 @@
 // gMapGroup_HiddenBases
 #define MAP_NATHANS_HIDDEN_BASE (0 | (36 << 8))
 #define MAP_JENOVAS_HIDDEN_BASE (1 | (36 << 8))
+#define MAP_ROBS_HIDDEN_BASE    (2 | (36 << 8))
 
 // gMapGroup_HiddenGrottos
-#define MAP_HIDDEN_GROTTO_ROWLET (0 | (37 << 8))
+#define MAP_HIDDEN_GROTTO_ROWLET     (0 | (37 << 8))
+#define MAP_HIDDEN_GROTTO_CHARMANDER (1 | (37 << 8))
 
 // gMapGroup_MahogonyHills
 #define MAP_MAHOGONY_HILLS_1                (0 | (38 << 8))

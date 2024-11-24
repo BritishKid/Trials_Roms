@@ -41,17 +41,17 @@
 #define TRAINER_MOVEGIRL1                         35
 #define TRAINER_MOVEGIRL2                        36
 #define TRAINER_MOVEBOY                       37
-#define TRAINER_FELIX                        38
-#define TRAINER_VIOLET                       39
-#define TRAINER_ROSE_2                       40
-#define TRAINER_ROSE_3                       41
-#define TRAINER_ROSE_4                       42
-#define TRAINER_ROSE_5                       43
-#define TRAINER_DUSTY_1                      44
-#define TRAINER_CHIP                         45
-#define TRAINER_FOSTER                       46
-#define TRAINER_DUSTY_2                      47
-#define TRAINER_DUSTY_3                      48
+#define ROUTE3C_HIKER                        38
+#define ROUTE3C_CAMPER                       39
+#define TRAINER_FRONTPAGEROB_SECRET_BASE                       40 //rematches where used here we gotta fix
+#define ROUTE3_FISHERMAN_NEET                       41
+#define ROUTE3_CAMPER_DAVE                       42
+#define ROUTE3_ROSE                       43
+#define ROUTE3_LILY                      44 //previous trainer here had rematches we gotta fix
+#define ROUTE3C_RICHBOY_CLIVE                         45
+#define ROUTE4_COOLTRAINER_JAKOBI                       46
+#define ROUTE4_BUGCATCHER                      47
+#define ROUTE4_LANDO                      48
 #define TRAINER_DUSTY_4                      49
 #define TRAINER_DUSTY_5                      50
 #define TRAINER_GABBY_AND_TY_1               51

@@ -43,7 +43,7 @@
 #define NUM_TEMP_FLAGS   (TEMP_FLAGS_END - TEMP_FLAGS_START + 1)
 
 #define FLAG_FOUND_GULPIN_DOLL    0x20 // Used
-#define FLAG_UNUSED_0x021    0x21 // Unused Flag
+#define FLAG_FOUND_MUDKIP_DOLL    0x21 // Used
 #define FLAG_UNUSED_0x022    0x22 // Unused Flag
 #define FLAG_RECEIVED_BULBSAUR    0x23 // Unused Flag
 #define FLAG_RECEIVED_SQUIRTLE    0x24 // Unused Flag
@@ -247,7 +247,7 @@
 #define FLAG_RECEIVED_MENTAL_HERB            0xDF
 #define FLAG_WINGULL_DELIVERED_MAIL          0xE0
 #define FLAG_RECEIVED_20_COINS               0xE1
-#define FLAG_RECEIVED_STARTER_DOLL           0xE2
+#define FLAG_RECEIVED_STARTER_DOLL           0xE2 //COULD FIX
 #define FLAG_RECEIVED_GOOD_ROD               0xE3
 #define FLAG_REGI_DOORS_OPENED               0xE4
 #define FLAG_RECEIVED_TM_RETURN              0xE5
@@ -767,7 +767,7 @@
 #define FLAG_HIDE_LITTLEROOT_TOWN_BIRCHS_LAB_BIRCH                  0x2D1
 #define FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_RIVAL_BEDROOM          0x2D2
 #define FLAG_RECEIVED_DWEBBLE                                       0x2D3 //used
-#define FLAG_HIDE_PETALBURG_WOODS_DEVON_EMPLOYEE                    0x2D4
+#define FLAG_FRONTPAGEROB_GAVE_HONEGE                               0x2D4 //used was hide petalburg guy
 #define FLAG_HIDE_PETALBURG_WOODS_AQUA_GRUNT                        0x2D5
 #define FLAG_TRAINER_TOURNAMENT_WON                                 0x2D6 //used
 #define FLAG_HIDE_MOSSDEEP_CITY_STEVENS_HOUSE_INVISIBLE_NINJA_BOY   0x2D7

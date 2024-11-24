@@ -244,6 +244,11 @@
 #define METATILE_General_TallGrass_TreeUp      0x025
 #define METATILE_General_YellowCaveIndent      0x1A8
 #define METATILE_General_YellowCaveOpen        0x1A9
+#define METATILE_General_RockCornerRight       0x074
+#define METATILE_General_RockCornerLeft        0x089
+#define METATILE_General_GrassRockCorner       0x078
+#define METATILE_General_GrassRockWallRight    0x072
+#define METATILE_General_GrassRockWallDown     0x079
 
 // gTileset_GenericBuilding
 #define METATILE_GenericBuilding_TableEdge               0x2F1
@@ -784,6 +789,7 @@
 #define METATILE_Forest_Warp_Towards           0x317
 #define METATILE_Forest_Warp_Tree_Base         0x307
 #define METATILE_Forest_Warp_Up                0x30F
+
 #define METATILE_RSMossdeepGym_RedArrow_Down   0x205
 #define METATILE_RSMossdeepGym_RedArrow_Left   0x20C
 #define METATILE_RSMossdeepGym_RedArrow_Right  0x204

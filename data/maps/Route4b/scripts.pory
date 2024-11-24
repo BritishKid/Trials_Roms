@@ -1,0 +1,22 @@
+mapscripts Route4b_MapScripts {}
+
+
+script Route4b_TrainerBattle_Lando {
+    trainerbattle_single(ROUTE4_LANDO, Lando_Intro, Lando_Outro, Increase_Trainers_Beaten)
+    msgbox(Lando_Postbattle, MSGBOX_DEFAULT)
+}
+
+
+//text 
+
+text Lando_Intro {
+    format("You came to the wrong hill!")
+}
+
+text Lando_Outro {
+    format("You can have this hill.")
+}
+
+text Lando_Postbattle {
+    format("I'm leaving, I'm leaving.")
+}

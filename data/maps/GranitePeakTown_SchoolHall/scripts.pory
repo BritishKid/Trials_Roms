@@ -202,7 +202,7 @@ script GranitePeakTown_SchoolTournamentLobby_EventScript_SaveBeforeChallenge {
 script GranitePeakTown_SchoolTournament_EventScript_EnterChallenge {
     setvar(VAR_0x8004, BATTLE_DOME_FUNC_SET_TRAINERS)
     special(CallBattleDomeFunction)
-warp(MAP_GRANITE_PEAK_TOWN_TOURNAMENT_WAITING_ROOM, 6, 8)
+    warp(MAP_GRANITE_PEAK_TOWN_TOURNAMENT_WAITING_ROOM, 6, 8)
     setvar(VAR_TEMP_0, 0)
     waitstate
     end

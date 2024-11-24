@@ -1,5 +1,7 @@
 mapscripts PlayersHouse_1F_MapScripts {
-
+    MAP_SCRIPT_ON_TRANSITION {
+        setrespawn(HEAL_LOCATION_PLAYERS_BEDROOM)
+    }
 }
 
 
@@ -40,6 +42,7 @@ script PlayersHouse_GF_EventScript_Itemball {
     lockall
     giveitem(ITEM_POKE_BALL, 5)
     setflag(FLAG_ITEM_FIRST_POKEBALLS)
+    removeobject(2)
     releaseall
 }
 

@@ -139,7 +139,7 @@
 #define VAR_ROUTE124_STATE                               0x4077 // Unused Var
 #define VAR_ROUTE125_STATE                               0x4078 // Unused Var
 #define VAR_ROUTE126_STATE                               0x4079 // Unused Var
-#define VAR_ROUTE127_STATE                               0x407A // Unused Var
+#define VAR_HIDDEN_MOUNTAIN_PASS                               0x407A // Used
 #define VAR_ROUTE128_STATE                               0x407B
 #define VAR_ROUTE129_STATE                               0x407C // Unused Var
 #define VAR_SCHOOL_TOURNAMENT_LEVEL                               0x407D //Used to determine max level of school tournament
