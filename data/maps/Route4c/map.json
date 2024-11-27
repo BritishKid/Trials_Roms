@@ -14,13 +14,18 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "map": "MAP_FORTREE_CITY",
+      "map": "MAP_CORAL_PORT",
       "offset": 0,
       "direction": "down"
     },
     {
       "map": "MAP_ROUTE4B",
       "offset": -36,
+      "direction": "right"
+    },
+    {
+      "map": "MAP_CRYSTAL_COVE",
+      "offset": 15,
       "direction": "right"
     }
   ],
@@ -54,6 +59,14 @@
       "elevation": 3,
       "item": "ITEM_FULL_RESTORE",
       "flag": "FLAG_HIDDEN_ITEM_ROUTE_104_HEART_SCALE"
+    },
+    {
+      "type": "hidden_item",
+      "x": 11,
+      "y": 25,
+      "elevation": 3,
+      "item": "ITEM_RARE_CANDY",
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE_4C_RARE_CANDY"
     }
   ]
 }

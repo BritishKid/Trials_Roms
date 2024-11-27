@@ -880,6 +880,77 @@ KingTapir Ekat TheDeadHeroAlistair Skillmen
 Desert village
 KingTapir Ekat TheDeadHeroAlistair Skillmen
 
+dojo interior
+Credits to rejuvenation dev team: Zumi (Honnojis) Crimson CeriseBlossome Winter Azeria Dallas Soulja Janichroma Kyledove(Deviantart) ligtherzein Zumi (Honnojis) Zerudez (Deviantart) Lemon princess-phoenix Kidkatt SacredDragonair DarkusShadow ActionReplayer Pokemon Trainer Jackey Noscium Quanyails Zermonious GeoIsEvil Kyle Dove dDialgaDiamondb N-kin Misterreno Kevfin Xtreme1992 Vale98PM Branflakes325 Dreadwing93 Amethyst Jan Zumi (Honnojis) Bazaro Koyo Smeargletail Noscium Lepagon N-kin fishbowlsoul90 princess-phoenix SageDeoxys Kyle-Dove DatLopunnyTho Conyjams kaji atsu The cynical poet LuigiPlayer Falgaia of the Smogon S/M sprite project Pikafan2000 Lord-Myre Amethyst conyjams KingOfThe-X-Roads Crocovyle Cynda InvoluntaryTwitch zlolxd mjco G.E.Z. Marcello Khrona Janichroma Maruno & Pkmn Essentials Team Amethyst Alistair Clara-WaH Pyrolusite StargazerSammie Ekat SacredDragonair ChaoticCherryCake PrincessPhoenix HeartlessDragon Vurtax
+
+dojo exterior
+Building by TheDeadHeroAlistair
+
+Assembling : Yumekua
+
+Primary creators
+- Ekat99
+- Heartlessdragoon
+- Vurtax 
+
+Extra creators
+- Redblueyellow
+- Heartless Dragoon
+- Morlockhater
+- Nemu
+- Ross Hawkins
+- Pokemon Dawn Team
+- Slimshady
+- Thedeadheroalistar
+- The-Red-Ex
+- Zein
+- Fabnt 
+- Idilio
+- Silverdeoxys563
+- Puggsoy
+- Aveontrainer
+- Alistar
+- Shyinn 
+- Dragoon
+- Zein
+- War8
+- SteamyJ
+- Anonaplacca
+- Dasani
+- Zeo
+- Pokémon Rejuvenation Team
+- Anonaplacca
+- 125scratch
+- aj nitro
+- Akiazurka
+- Aleclom
+- Anonalpacca
+- Bacon
+- Cuddlesthefatcat
+- Dawnbronze
+- french orange
+- J-Treecko252
+- Labs
+- Lennybitao
+- Matheus123
+- Mr. C
+- oceanside
+- ploaj
+- Pokemon Reborn Team
+- Random Talking Bush
+- Remy
+- robbydude
+- RocketSeviperShadow
+- Seiyouh
+- snuffles5
+- spherical ice
+- taka Digi and Joe Schmoe
+- The Purple Stuff
+- The Red-Ex
+- TheWildDeadHero
+- Tonberry2k
+- XDinky
+- Thewilddeadhero
+- Skidmarc25
 
  */ 
-

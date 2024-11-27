@@ -21,7 +21,7 @@ Route3c_MapScripts_MAP_SCRIPT_ON_TRANSITION_1:
 # 8 "data/maps/Route3c/scripts.pory"
 	setmetatile 9, 7, METATILE_General_CaveEntrance_Bottom, FALSE
 # 9 "data/maps/Route3c/scripts.pory"
-	setmetatile 10, 7, METATILE_General_GrassRockWallDown, TRUE
+	setmetatile 10, 7, METATILE_General_RockWall_GrassBase, TRUE
 # 10 "data/maps/Route3c/scripts.pory"
 	setmetatile 8, 7, METATILE_General_RockCornerRight, TRUE
 # 11 "data/maps/Route3c/scripts.pory"

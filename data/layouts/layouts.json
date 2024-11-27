@@ -42,14 +42,14 @@
       "blockdata_filepath": "data/layouts/RustboroCity/map.bin"
     },
     {
-      "id": "LAYOUT_FORTREE_CITY",
-      "name": "FortreeCity_Layout",
+      "id": "LAYOUT_CORAL_PORT",
+      "name": "CoralPort_Layout",
       "width": 50,
       "height": 20,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Slateport",
-      "border_filepath": "data/layouts/FortreeCity/border.bin",
-      "blockdata_filepath": "data/layouts/FortreeCity/map.bin"
+      "border_filepath": "data/layouts/CoralPort/border.bin",
+      "blockdata_filepath": "data/layouts/CoralPort/map.bin"
     },
     {
       "id": "LAYOUT_LILYCOVE_CITY",
@@ -982,14 +982,14 @@
       "blockdata_filepath": "data/layouts/RustboroCity_CuttersHouse/map.bin"
     },
     {
-      "id": "LAYOUT_FORTREE_CITY_HOUSE1",
-      "name": "FortreeCity_House1_Layout",
+      "id": "LAYOUT_CORAL_PORT_HOUSE1",
+      "name": "CoralPort_House1_Layout",
       "width": 8,
       "height": 6,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_GenericBuilding",
-      "border_filepath": "data/layouts/FortreeCity_House1/border.bin",
-      "blockdata_filepath": "data/layouts/FortreeCity_House1/map.bin"
+      "border_filepath": "data/layouts/CoralPort_House1/border.bin",
+      "blockdata_filepath": "data/layouts/CoralPort_House1/map.bin"
     },
     {
       "id": "LAYOUT_FORTREE_CITY_GYM",
@@ -1002,14 +1002,14 @@
       "blockdata_filepath": "data/layouts/FortreeCity_Gym/map.bin"
     },
     {
-      "id": "LAYOUT_FORTREE_CITY_HOUSE2",
-      "name": "FortreeCity_House2_Layout",
+      "id": "LAYOUT_CORAL_PORT_HARBOR",
+      "name": "CoralPort_Harbor_Layout",
       "width": 8,
       "height": 6,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_GenericBuilding",
-      "border_filepath": "data/layouts/FortreeCity_House2/border.bin",
-      "blockdata_filepath": "data/layouts/FortreeCity_House2/map.bin"
+      "border_filepath": "data/layouts/CoralPort_Harbor/border.bin",
+      "blockdata_filepath": "data/layouts/CoralPort_Harbor/map.bin"
     },
     {
       "id": "LAYOUT_ROUTE104_MR_BRINEYS_HOUSE",
@@ -4757,7 +4757,7 @@
       "width": 45,
       "height": 51,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Fortree",
+      "secondary_tileset": "gTileset_Dojo_Exterior",
       "border_filepath": "data/layouts/Route4b/border.bin",
       "blockdata_filepath": "data/layouts/Route4b/map.bin"
     },
@@ -4765,7 +4765,7 @@
       "id": "LAYOUT_ROUTE4C",
       "name": "Route4c_Layout",
       "width": 35,
-      "height": 32,
+      "height": 31,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Slateport",
       "border_filepath": "data/layouts/Route4c/border.bin",
@@ -4784,12 +4784,52 @@
     {
       "id": "LAYOUT_CORAL_BEACH_1",
       "name": "CoralBeach_1_Layout",
-      "width": 35,
-      "height": 20,
+      "width": 65,
+      "height": 30,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Slateport",
       "border_filepath": "data/layouts/CoralBeach_1/border.bin",
       "blockdata_filepath": "data/layouts/CoralBeach_1/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE4_DOJO",
+      "name": "Route4_Dojo_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Dojo_Interior",
+      "border_filepath": "data/layouts/Route4_Dojo/border.bin",
+      "blockdata_filepath": "data/layouts/Route4_Dojo/map.bin"
+    },
+    {
+      "id": "LAYOUT_CORAL_BEACH_2",
+      "name": "CoralBeach_2_Layout",
+      "width": 32,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Slateport",
+      "border_filepath": "data/layouts/CoralBeach_2/border.bin",
+      "blockdata_filepath": "data/layouts/CoralBeach_2/map.bin"
+    },
+    {
+      "id": "LAYOUT_CRYSTAL_COVE",
+      "name": "Crystal_Cove_Layout",
+      "width": 55,
+      "height": 16,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Slateport",
+      "border_filepath": "data/layouts/Crystal_Cove/border.bin",
+      "blockdata_filepath": "data/layouts/Crystal_Cove/map.bin"
+    },
+    {
+      "id": "LAYOUT_CRYSTAL_COVE_CAVE",
+      "name": "Crystal_Cove_Cave_Layout",
+      "width": 48,
+      "height": 17,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_beach_cave",
+      "border_filepath": "data/layouts/Crystal_Cove_Cave/border.bin",
+      "blockdata_filepath": "data/layouts/Crystal_Cove_Cave/map.bin"
     }
   ]
 }

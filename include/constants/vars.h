@@ -112,14 +112,14 @@
 #define VAR_ROBERT_STATUS                          0x405C // Used
 #define VAR_MOSSDEEP_CITY_STATE                          0x405D
 #define VAR_SOOTOPOLIS_CITY_STATE                        0x405E
-#define VAR_EVER_GRANDE_CITY_STATE                       0x405F // Unused Var
+#define VAR_GIANT_FISH_STATE                       0x405F // 0 unstarted 1 started
 #define VAR_SALTS7_QUEST_STATE                           0x4060 //Used for salt quest
 #define VAR_CRAFTING_STATION_STATE                       0x4061 // Craft Tutorial
 #define VAR_PLATEQUEST_STATE                             0x4062 // Used for plates
 #define VAR_ROUTE104_STATE                               0x4063
-#define VAR_ROUTE105_STATE                               0x4064 // Unused Var
-#define VAR_ROUTE106_STATE                               0x4065 // Unused Var
-#define VAR_ROUTE107_STATE                               0x4066 // Unused Var
+#define VAR_RIVAL_FIGHT_2                               0x4064 //Used
+#define VAR_EVOLUTION_STONE_HUNTING                               0x4065 // Used
+#define VAR_ROUTE4_DOJO_STATE                               0x4066 // Used
 #define VAR_ROUTE108_STATE                               0x4067 // Unused Var
 #define VAR_ROUTE109_STATE                               0x4068 // Unused Var
 #define VAR_ROUTE110_STATE                               0x4069

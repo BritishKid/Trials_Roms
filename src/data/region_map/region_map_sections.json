@@ -89,8 +89,8 @@
       "height": 2
     },
     {
-      "map_section": "MAPSEC_FORTREE_CITY",
-      "name": "FORTREE CITY",
+      "map_section": "MAPSEC_CORAL_PORT",
+      "name": "CORAL PORT",
       "x": 12,
       "y": 0,
       "width": 1,
@@ -145,8 +145,8 @@
       "height": 1
     },
     {
-      "map_section": "MAPSEC_ROUTE_103",
-      "name": "ROUTE 103",
+      "map_section": "MAPSEC_SANDY_CLIFF",
+      "name": "SANDY CLIFF",
       "x": 4,
       "y": 8,
       "width": 4,
@@ -812,16 +812,16 @@
       "height": 1
     },
     {
-      "map_section": "MAPSEC_ROUTE_1_KANTO",
-      "name": "ROUTE 1",
+      "map_section": "MAPSEC_CORAL_BEACH",
+      "name": "CORAL BEACH",
       "x": 0,
       "y": 0,
       "width": 1,
       "height": 1
     },
     {
-      "map_section": "MAPSEC_ROUTE_2_KANTO",
-      "name": "ROUTE 2",
+      "map_section": "MAPSEC_CRYSTAL_COVE",
+      "name": "CRYSTAL COVE",
       "x": 0,
       "y": 0,
       "width": 1,

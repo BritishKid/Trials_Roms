@@ -12,14 +12,14 @@
 #define MAPSEC_SLATEPORT_CITY               0x08
 #define MAPSEC_MAUVILLE_CITY                0x09
 #define MAPSEC_RUSTBORO_CITY                0x0A
-#define MAPSEC_FORTREE_CITY                 0x0B
+#define MAPSEC_CORAL_PORT                 0x0B
 #define MAPSEC_LILYCOVE_CITY                0x0C
 #define MAPSEC_MOSSDEEP_CITY                0x0D
 #define MAPSEC_SOOTOPOLIS_CITY              0x0E
 #define MAPSEC_EVER_GRANDE_CITY             0x0F
 #define MAPSEC_ROUTE_1                    0x10
 #define MAPSEC_ROUTE_2                    0x11
-#define MAPSEC_ROUTE_103                    0x12
+#define MAPSEC_SANDY_CLIFF                    0x12
 #define MAPSEC_ROUTE_104                    0x13
 #define MAPSEC_ROUTE_105                    0x14
 #define MAPSEC_ROUTE_106                    0x15
@@ -102,8 +102,8 @@
 #define MAPSEC_SAFFRON_CITY                 0x62
 #define MAPSEC_ROUTE_4_POKECENTER           0x63
 #define MAPSEC_ROUTE_10_POKECENTER          0x64
-#define MAPSEC_ROUTE_1_KANTO                0x65
-#define MAPSEC_ROUTE_2_KANTO                0x66
+#define MAPSEC_CORAL_BEACH                0x65
+#define MAPSEC_CRYSTAL_COVE                0x66
 #define MAPSEC_ROUTE_3                      0x67
 #define MAPSEC_ROUTE_4                      0x68
 #define MAPSEC_ROUTE_5                      0x69

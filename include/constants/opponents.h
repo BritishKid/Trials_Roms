@@ -52,10 +52,10 @@
 #define ROUTE4_COOLTRAINER_JAKOBI                       46
 #define ROUTE4_BUGCATCHER                      47
 #define ROUTE4_LANDO                      48
-#define TRAINER_DUSTY_4                      49
-#define TRAINER_DUSTY_5                      50
-#define TRAINER_GABBY_AND_TY_1               51
-#define TRAINER_GABBY_AND_TY_2               52
+#define ROUTE4_OSTRICHPUPPET                      49
+#define ROUTE4_ODA_BLACKBELT                      50
+#define ROUTE4_SALTS7               51 //GABBY TV PREVIOUSLY TO FIX
+#define ROUTE4_VIKTOR_SCHOOLKID               52
 #define TRAINER_GABBY_AND_TY_3               53
 #define TRAINER_GABBY_AND_TY_4               54
 #define TRAINER_GABBY_AND_TY_5               55

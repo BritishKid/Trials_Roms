@@ -17,3 +17,38 @@ script Route1_EventScript_SecretPower {
     }
     releaseall
 }
+
+script EventScript_Route1a_LittleGirl {
+    lockall
+    msgbox(format("I threw a rock in the water and it sank forever. That water goes to the bottom of the world."))
+    releaseall
+}
+
+script Giant_Azumarill {
+    lockall
+    // questmenu(QUEST_MENU_CHECK_ACTIVE, QUEST_GIANT_FISH)
+    if(var(VAR_GIANT_FISH_STATE) == 1 && !flag(FLAG_GIANT_AZUMARILL_BEATEN)) {
+        msgbox(format("You see a giant Pokémon swimming under the surface, do you want to attempt to catch it?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES) {
+            setflag(FLAG_CANT_CATCH_MON)
+            // setflag(FLAG_CANNOT_RUN_FROM_BATTLE)
+            msgbox(format("It leaps out at you"))
+            settotemboost(1, 1, 1, 1, 0, 1, 0, 0)
+            setwildbattle(SPECIES_AZUMARILL, 35, ITEM_SITRUS_BERRY)
+            dowildbattle()
+            // subquestmenu(QUEST_MENU_COMPLETE_QUEST, QUEST_POKEMON_LEAGUE, SUB_QUEST_GIANT_FISH_2) //could not work?
+            msgbox(format("The Azumarill flees and leaves something behind"))
+            giveitem(ITEM_LUMINOUS_MOSS)
+            setflag(FLAG_GIANT_AZUMARILL_BEATEN)
+            clearflag(FLAG_CANT_CATCH_MON)
+            // clearflag(FLAG_CANNOT_RUN_FROM_BATTLE)
+        }
+        else {
+            end
+        }
+    }
+    else {
+        msgbox(format("You see a giant Pokémon swimming under the surface"))
+    }
+    releaseall
+}

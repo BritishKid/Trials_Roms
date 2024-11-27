@@ -1,0 +1,30 @@
+raw `.set LOCALID_NURSE, 1
+
+CoralPort_PokemonCenter_1F_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, CoralPort_PokemonCenter_1F_OnTransition
+	map_script MAP_SCRIPT_ON_RESUME, CableClub_OnResume
+	.byte 0
+
+CoralPort_PokemonCenter_1F_OnTransition:
+	setrespawn HEAL_LOCATION_CORAL_PORT
+	end
+
+CoralPort_PokemonCenter_1F_EventScript_Nurse::
+	setvar VAR_0x800B, LOCALID_NURSE
+	call Common_EventScript_PkmnCenterNurse
+	waitmessage
+	waitbuttonpress
+	release
+	end`
+
+script CoralPort_PokemonCenter_1F_EventScript_Man {
+    lockall
+    msgbox(format("Have you spoken to the fisherman in the market?\lHe taught me so much."))
+    releaseall
+}
+
+script CoralPort_PokemonCenter_1F_EventScript_Boy {
+    lockall
+    msgbox(format("I heard they have giant fish in the gym."))
+    releaseall
+}

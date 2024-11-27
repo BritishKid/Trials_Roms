@@ -671,71 +671,71 @@ const struct BattleFrontierTrainer gBattleFrontierTrainers[FRONTIER_TRAINERS_COU
         .speechWin = {EC_WORD_MY, EC_WORD_RIVAL, EC_WORD_IS, EC_WORD_MY, EC_WORD_GIRL, EC_WORD_FRIEND},
         .speechLose = {EC_WORD_I_AM, EC_WORD_MAKING, EC_WORD_YOU, EC_WORD_MY, EC_WORD_RIVAL, EC_EMPTY_WORD},
         .monSet = gBattleFrontierTrainerMons_Maxwell
-    }, //EVERYTHING ABOVE HERE NEEDS TO BE CUSTOMISED
-    [FRONTIER_TRAINER_DARYL] = {
-        .facilityClass = FACILITY_CLASS_HIKER,
-        .trainerName = _("DARYL"),
+    }, 
+    [FRONTIER_TRAINER_VIKTOR] = {
+        .facilityClass = FACILITY_CLASS_SCHOOL_KID_M,
+        .trainerName = _("VIKTOR"),
         .speechBefore = {EC_WORD_I, EC_WORD_ONLY, EC_WORD_KNOW, EC_WORD_HOW, EC_WORD_TO, EC_MOVE(CHARGE)},
         .speechWin = {EC_WORD_AM, EC_WORD_I, EC_WORD_OVERWHELMING, EC_WORD_OR, EC_WORD_WHAT, EC_WORD_QUES},
         .speechLose = {EC_WORD_YOU_RE, EC_WORD_GOING, EC_WORD_TO, EC_WORD_A, EC_WORD_LEGEND, EC_WORD_EXCL},
-        .monSet = gBattleFrontierTrainerMons_Daryl
+        .monSet = gBattleFrontierTrainerMons_Viktor
     },
-    [FRONTIER_TRAINER_KENNETH] = {
-        .facilityClass = FACILITY_CLASS_HIKER,
-        .trainerName = _("KENNETH"),
+    [FRONTIER_TRAINER_LILY] = {
+        .facilityClass = FACILITY_CLASS_SCHOOL_KID_F,
+        .trainerName = _("LILY"),
         .speechBefore = {EC_WORD_YOU, EC_WORD_BETTER, EC_WORD_NOT, EC_MOVE2(SLACK_OFF), EC_WORD_WITH, EC_WORD_ME},
         .speechWin = {EC_WORD_DID, EC_WORD_MY, EC_MOVE2(TAUNT), EC_WORD_INTIMIDATE, EC_WORD_YOU, EC_WORD_QUES},
         .speechLose = {EC_WORD_I_AM, EC_WORD_SORRY, EC_WORD_ELLIPSIS, EC_EMPTY_WORD, EC_EMPTY_WORD, EC_EMPTY_WORD},
-        .monSet = gBattleFrontierTrainerMons_Kenneth
+        .monSet = gBattleFrontierTrainerMons_Lily
     },
-    [FRONTIER_TRAINER_RICH] = {
-        .facilityClass = FACILITY_CLASS_HIKER,
-        .trainerName = _("RICH"),
+    [FRONTIER_TRAINER_ERIFIRE] = {
+        .facilityClass = FACILITY_CLASS_SCHOOL_KID_M,
+        .trainerName = _("ERIFIRE"),
         .speechBefore = {EC_WORD_YOUR, EC_MOVE(FACADE), EC_WORD_DOESN_T, EC_MOVE2(TRICK), EC_WORD_ME, EC_EMPTY_WORD},
         .speechWin = {EC_WORD_SERIOUSLY, EC_WORD_ARE, EC_WORD_YOU, EC_WORD_REALLY, EC_WORD_OK_QUES, EC_EMPTY_WORD},
         .speechLose = {EC_WORD_THAT_WAS, EC_WORD_REALLY, EC_WORD_TOUGH, EC_WORD_ON, EC_WORD_ME, EC_EMPTY_WORD},
-        .monSet = gBattleFrontierTrainerMons_Rich
+        .monSet = gBattleFrontierTrainerMons_Erifire
     },
-    [FRONTIER_TRAINER_CADEN] = {
-        .facilityClass = FACILITY_CLASS_KINDLER,
-        .trainerName = _("CADEN"),
+    [FRONTIER_TRAINER_MART] = {
+        .facilityClass = FACILITY_CLASS_SCHOOL_KID_M,
+        .trainerName = _("MART"),
         .speechBefore = {EC_WORD_I, EC_WORD_CAN_T, EC_WORD_BE, EC_WORD_DEFEATED, EC_WORD_EXCL, EC_EMPTY_WORD},
         .speechWin = {EC_WORD_FIRE, EC_WORD_EXCL, EC_EMPTY_WORD, EC_WORD_FIRE, EC_WORD_EXCL_EXCL, EC_EMPTY_WORD},
         .speechLose = {EC_WORD_I_AM, EC_WORD_TIRED, EC_WORD_ELLIPSIS, EC_WORD_IT_S, EC_WORD_SO, EC_WORD_HOT},
-        .monSet = gBattleFrontierTrainerMons_Caden
+        .monSet = gBattleFrontierTrainerMons_Mart
     },
-    [FRONTIER_TRAINER_MARLON] = {
-        .facilityClass = FACILITY_CLASS_KINDLER,
-        .trainerName = _("MARLON"),
+    [FRONTIER_TRAINER_JAMES] = {
+        .facilityClass = FACILITY_CLASS_SCHOOL_KID_M,
+        .trainerName = _("JAMES"),
         .speechBefore = {EC_WORD_A, EC_WORD_POKEDEX, EC_WORD_IS, EC_WORD_A_LITTLE, EC_WORD_RADIO, EC_WORD_QUES},
         .speechWin = {EC_WORD_A_LITTLE, EC_WORD_RADIO, EC_WORD_HUH_QUES, EC_WORD_THAT_S, EC_WORD_TOTALLY, EC_WORD_COOL},
         .speechLose = {EC_WORD_IT_S, EC_WORD_NOT, EC_WORD_QUES, EC_WORD_IS, EC_WORD_POKENAV, EC_WORD_QUES},
-        .monSet = gBattleFrontierTrainerMons_Marlon
+        .monSet = gBattleFrontierTrainerMons_James
     },
-    [FRONTIER_TRAINER_NASH] = {
-        .facilityClass = FACILITY_CLASS_KINDLER,
-        .trainerName = _("NASH"),
+    [FRONTIER_TRAINER_DANNY] = {
+        .facilityClass = FACILITY_CLASS_SCHOOL_KID_M,
+        .trainerName = _("DANNY"),
         .speechBefore = {EC_WORD_I_AM, EC_WORD_ON, EC_WORD_FIRE, EC_WORD_BABY, EC_WORD_EXCL, EC_EMPTY_WORD},
         .speechWin = {EC_WORD_I, EC_WORD_LEFT, EC_WORD_YOU, EC_WORD_JUST, EC_WORD_AN, EC_MOVE2(EMBER)},
         .speechLose = {EC_WORD_AIYEEH, EC_WORD_EXCL_EXCL, EC_EMPTY_WORD, EC_WORD_NO, EC_WORD_WATER, EC_WORD_PLEASE},
-        .monSet = gBattleFrontierTrainerMons_Nash
+        .monSet = gBattleFrontierTrainerMons_Danny
     },
-    [FRONTIER_TRAINER_ROBBY] = {
-        .facilityClass = FACILITY_CLASS_RUNNING_TRIATHLETE_M,
-        .trainerName = _("ROBBY"),
+    [FRONTIER_TRAINER_MAX] = {
+        .facilityClass = FACILITY_CLASS_SCHOOL_KID_M,
+        .trainerName = _("MAX"),
         .speechBefore = {EC_WORD_HAHAHA, EC_WORD_EXCL, EC_WORD_HAPPY, EC_WORD_TO, EC_WORD_MEET_YOU, EC_WORD_EXCL},
         .speechWin = {EC_WORD_I_AM, EC_WORD_THE, EC_WORD_LEADER, EC_WORD_WITH, EC_WORD_REFRESHING, EC_WORD_SERENE_GRACE},
         .speechLose = {EC_WORD_I, EC_WORD_WILL, EC_MOVE(THRASH), EC_WORD_MY, EC_WORD_TOYS, EC_WORD_EXCL},
-        .monSet = gBattleFrontierTrainerMons_Robby
+        .monSet = gBattleFrontierTrainerMons_Max
     },
-    [FRONTIER_TRAINER_REECE] = {
-        .facilityClass = FACILITY_CLASS_RUNNING_TRIATHLETE_M,
-        .trainerName = _("REECE"),
+    [FRONTIER_TRAINER_ALEX] = {
+        .facilityClass = FACILITY_CLASS_SCHOOL_KID_M,
+        .trainerName = _("ALEX"),
         .speechBefore = {EC_WORD_MY, EC_MOVE2(QUICK_ATTACK), EC_WORD_CAN, EC_WORD_BEAT, EC_WORD_A, EC_MOVE2(TELEPORT)},
         .speechWin = {EC_WORD_LIKE, EC_WORD_I, EC_WORD_SAID, EC_WORD_I_AM, EC_WORD_DARN, EC_WORD_FAST},
         .speechLose = {EC_WORD_I_WAS, EC_WORD_KIDDING, EC_WORD_ABOUT, EC_WORD_THAT, EC_MOVE2(TELEPORT), EC_WORD_THING},
-        .monSet = gBattleFrontierTrainerMons_Reece
-    },
+        .monSet = gBattleFrontierTrainerMons_Alex
+    },//EVERYTHING ABOVE HERE NEEDS TO BE CUSTOMISED
     [FRONTIER_TRAINER_KATHRYN] = {
         .facilityClass = FACILITY_CLASS_RUNNING_TRIATHLETE_F,
         .trainerName = _("KATHRYN"),

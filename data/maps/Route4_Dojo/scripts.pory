@@ -1,0 +1,21 @@
+mapscripts Route4_Dojo_MapScripts {}
+
+script Brawley_Route4_Dojo {
+    lockall
+    if(var(VAR_ROUTE4_DOJO_STATE) == 1) {
+        msgbox(format("Have you found any of the masters hidden in the mountains?"))
+    }
+    if(var(VAR_ROUTE4_DOJO_STATE) == 0) {
+    msgbox(format("Welcome to my new Dojo!\lThis will soon be full of martial artists from all over the world hunting down the ancient dojos in these mountains."))
+    msgbox(format("Enough talk, I can see you're a Pokemon Trainer so I know what you came for."))
+    trainerbattle_no_intro(TRAINER_BRAWLY_1, Brawley_Route4_Outro)
+    msgbox(format("Well done kid, you might have what it takes to become a black belt"))
+    setvar(VAR_ROUTE4_DOJO_STATE, 1)
+    }
+    releaseall
+}
+
+//text
+text Brawley_Route4_Outro {
+    format("Damn kid")
+}

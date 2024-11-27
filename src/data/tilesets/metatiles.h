@@ -225,3 +225,9 @@ const u16 gMetatileAttributes_desert_village[] = INCBIN_U16("data/tilesets/secon
 
 const u16 gMetatiles_General_Snow[] = INCBIN_U16("data/tilesets/primary/general_snow/metatiles.bin");
 const u16 gMetatileAttributes_General_Snow[] = INCBIN_U16("data/tilesets/primary/general_snow/metatile_attributes.bin");
+
+const u16 gMetatiles_Dojo_Interior[] = INCBIN_U16("data/tilesets/secondary/dojo_interior/metatiles.bin");
+const u16 gMetatileAttributes_Dojo_Interior[] = INCBIN_U16("data/tilesets/secondary/dojo_interior/metatile_attributes.bin");
+
+const u16 gMetatiles_Dojo_Exterior[] = INCBIN_U16("data/tilesets/secondary/dojo_exterior/metatiles.bin");
+const u16 gMetatileAttributes_Dojo_Exterior[] = INCBIN_U16("data/tilesets/secondary/dojo_exterior/metatile_attributes.bin");

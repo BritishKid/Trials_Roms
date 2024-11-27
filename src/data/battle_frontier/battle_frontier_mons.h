@@ -13,26 +13,26 @@ const struct TrainerMon gBattleFrontierMons[NUM_FRONTIER_MONS] = {
     .ev = TRAINER_PARTY_EVS(252, 0, 0, 0, 0, 252),
     .nature = NATURE_HARDY
 },
-[FRONTIER_MON_DUSKULL] = {
-    .species = SPECIES_DUSKULL,
-    .moves = {MOVE_SKILL_SWAP, MOVE_NIGHT_SHADE, MOVE_DISABLE, MOVE_CONFUSE_RAY},
-    .heldItem = ITEM_PERSIM_BERRY,
-    .ev = TRAINER_PARTY_EVS(252, 0, 0, 0, 0, 252),
-    .nature = NATURE_QUIRKY
+[SCHOOL_TOURNAMENT_MON_SWABLU] = {
+    .species = SPECIES_SWABLU,
+    .moves = {MOVE_DRAGON_BREATH, MOVE_ROUND, MOVE_DISARMING_VOICE, MOVE_PROTECT},
+    .heldItem = ITEM_YACHE_BERRY,
+    .ev = TRAINER_PARTY_EVS(0, 0, 0, 252, 0, 252),
+    .nature = NATURE_MODEST
 },
-[FRONTIER_MON_ELECTRIKE] = {
-    .species = SPECIES_ELECTRIKE,
-    .moves = {MOVE_SPARK, MOVE_THUNDER_WAVE, MOVE_ROAR, MOVE_QUICK_ATTACK},
-    .heldItem = ITEM_CHERI_BERRY,
-    .ev = TRAINER_PARTY_EVS(252, 0, 0, 0, 0, 252),
-    .nature = NATURE_DOCILE
+[SCHOOL_TOURNAMENT_MON_GOOMY] = {
+    .species = SPECIES_GOOMY,
+    .moves = {MOVE_ABSORB, MOVE_DRAGON_BREATH, MOVE_WATER_PULSE, MOVE_FLAIL},
+    .heldItem = ITEM_SHED_SHELL,
+    .ev = TRAINER_PARTY_EVS(252, 0, 0, 0, 252, 0),
+    .nature = NATURE_CALM
 },
-[FRONTIER_MON_VULPIX] = {
-    .species = SPECIES_VULPIX,
-    .moves = {MOVE_WILL_O_WISP, MOVE_CONFUSE_RAY, MOVE_FIRE_SPIN, MOVE_QUICK_ATTACK},
-    .heldItem = ITEM_RAWST_BERRY,
+[SCHOOL_TOURNAMENT_MON_BRIONNE] = {
+    .species = SPECIES_BRIONNE,
+    .moves = {MOVE_AQUA_JET, MOVE_ICY_WIND, MOVE_BABY_DOLL_EYES, MOVE_SING},
+    .heldItem = ITEM_MYSTIC_WATER,
     .ev = TRAINER_PARTY_EVS(252, 0, 0, 0, 0, 252),
-    .nature = NATURE_DOCILE
+    .nature = NATURE_MODEST
 },
 [SCHOOL_TOURNAMENT_MON_PIKACHU] = {
     .species = SPECIES_PIKACHU,
@@ -41,14 +41,14 @@ const struct TrainerMon gBattleFrontierMons[NUM_FRONTIER_MONS] = {
     .ev = TRAINER_PARTY_EVS(252, 0, 0, 0, 0, 252),
     .nature = NATURE_DOCILE
 },
-[FRONTIER_MON_SANDSHREW] = {
+[SCHOOL_TOURNAMENT_MON_SANDSHREW] = {
     .species = SPECIES_SANDSHREW,
     .moves = {MOVE_DIG, MOVE_ROCK_TOMB, MOVE_SANDSTORM, MOVE_SAND_ATTACK},
     .heldItem = ITEM_SOFT_SAND,
     .ev = TRAINER_PARTY_EVS(252, 252, 0, 0, 0, 0),
     .nature = NATURE_DOCILE
 },
-[FRONTIER_MON_POLIWAG] = {
+[SCHOOL_TOURNAMENT_MON_POLIWAG] = {
     .species = SPECIES_POLIWAG,
     .moves = {MOVE_HYPNOSIS, MOVE_ICY_WIND, MOVE_WATER_GUN, MOVE_RAIN_DANCE},
     .heldItem = ITEM_MYSTIC_WATER,
@@ -342,10 +342,10 @@ const struct TrainerMon gBattleFrontierMons[NUM_FRONTIER_MONS] = {
     .ev = TRAINER_PARTY_EVS(252, 0, 0, 252, 0, 0),
     .nature = NATURE_HARDY
 },
-[FRONTIER_MON_GRIMER] = {
+[SCHOOL_TOURNAMENT_MON_GRIMER] = {
     .species = SPECIES_GRIMER,
     .moves = {MOVE_SLUDGE, MOVE_ROCK_TOMB, MOVE_ACID_ARMOR, MOVE_MINIMIZE},
-    .heldItem = ITEM_PECHA_BERRY,
+    .heldItem = ITEM_BLACK_SLUDGE,
     .ev = TRAINER_PARTY_EVS(252, 0, 126, 0, 126, 0),
     .nature = NATURE_QUIRKY
 },
@@ -748,7 +748,7 @@ const struct TrainerMon gBattleFrontierMons[NUM_FRONTIER_MONS] = {
     .ev = TRAINER_PARTY_EVS(252, 0, 0, 252, 0, 0),
     .nature = NATURE_RELAXED
 },
-[FRONTIER_MON_KADABRA_1] = {
+[SCHOOL_TOURNAMENT_MON_KADABRA] = {
     .species = SPECIES_KADABRA,
     .moves = {MOVE_CONFUSION, MOVE_ROLE_PLAY, MOVE_FUTURE_SIGHT, MOVE_DISABLE},
     .heldItem = ITEM_TWISTED_SPOON,
@@ -853,11 +853,11 @@ const struct TrainerMon gBattleFrontierMons[NUM_FRONTIER_MONS] = {
     .ev = TRAINER_PARTY_EVS(252, 0, 252, 0, 0, 0),
     .nature = NATURE_RELAXED
 },
-[FRONTIER_MON_WOBBUFFET_1] = {
+[SCHOOL_TOURNAMENT_MON_WOBBUFFET] = {
     .species = SPECIES_WOBBUFFET,
     .moves = {MOVE_COUNTER, MOVE_MIRROR_COAT, MOVE_CHARM, MOVE_SAFEGUARD},
-    .heldItem = ITEM_FOCUS_BAND,
-    .ev = TRAINER_PARTY_EVS(252, 0, 126, 0, 126, 0),
+    .heldItem = ITEM_SITRUS_BERRY,
+    .ev = TRAINER_PARTY_EVS(0, 0, 0, 0, 0, 0),
     .nature = NATURE_CAREFUL
 },
 [FRONTIER_MON_PLUSLE_1] = {
@@ -6166,4 +6166,27 @@ const struct TrainerMon gBattleFrontierMons[NUM_FRONTIER_MONS] = {
     .ev = TRAINER_PARTY_EVS(252, 0, 252, 0, 0, 0) ,
     .nature = NATURE_CALM
 },
+[SCHOOL_TOURNAMENT_MON_GRIMER_ALOLAN] = {
+    .species = SPECIES_GRIMER_ALOLAN,
+    .moves = {MOVE_POISON_FANG, MOVE_DISABLE, MOVE_BITE, MOVE_POUND},
+    .heldItem = ITEM_BLACK_SLUDGE,
+    .ev = TRAINER_PARTY_EVS(252, 252, 0, 0, 0, 0) ,
+    .nature = NATURE_ADAMANT
+},
+[SCHOOL_TOURNAMENT_MON_CHARCADET] = {
+    .species = SPECIES_CHARCADET,
+    .moves = {MOVE_FIRE_SPIN, MOVE_WILL_O_WISP, MOVE_NIGHT_SHADE, MOVE_CLEAR_SMOG},
+    .heldItem = ITEM_CHARCOAL,
+    .ev = TRAINER_PARTY_EVS(0, 0, 0, 252, 0, 252) ,
+    .nature = NATURE_MODEST
+},
+[SCHOOL_TOURNAMENT_MON_SILICOBRA] = {
+    .species = SPECIES_SILICOBRA,
+    .moves = {MOVE_BULLDOZE, MOVE_HEADBUTT, MOVE_BRUTAL_SWING, MOVE_WRAP},
+    .heldItem = ITEM_NORMAL_GEM,
+    .ev = TRAINER_PARTY_EVS(0, 252, 252, 0, 0, 0) ,
+    .nature = ITEM_ADAMANT
+},
+
+
 };

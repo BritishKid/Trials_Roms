@@ -109,7 +109,7 @@ gStdScripts_End::
 	.include "data/maps/SlateportCity/scripts.inc"
 	.include "data/maps/MauvilleCity/scripts.inc"
 	.include "data/maps/RustboroCity/scripts.inc"
-	.include "data/maps/FortreeCity/scripts.inc"
+	.include "data/maps/CoralPort/scripts.inc"
 	.include "data/maps/LilycoveCity/scripts.inc"
 	.include "data/maps/MossdeepCity/scripts.inc"
 	.include "data/maps/SootopolisCity/scripts.inc"
@@ -255,12 +255,12 @@ gStdScripts_End::
 	.include "data/maps/RustboroCity_Flat2_2F/scripts.inc"
 	.include "data/maps/RustboroCity_Flat2_3F/scripts.inc"
 	.include "data/maps/RustboroCity_House3/scripts.inc"
-	.include "data/maps/FortreeCity_House1/scripts.inc"
+	.include "data/maps/CoralPort_House1/scripts.inc"
 	.include "data/maps/FortreeCity_Gym/scripts.inc"
-	.include "data/maps/FortreeCity_PokemonCenter_1F/scripts.inc"
-	.include "data/maps/FortreeCity_PokemonCenter_2F/scripts.inc"
-	.include "data/maps/FortreeCity_Mart/scripts.inc"
-	.include "data/maps/FortreeCity_House2/scripts.inc"
+	.include "data/maps/CoralPort_PokemonCenter_1F/scripts.inc"
+	.include "data/maps/CoralPort_PokemonCenter_2F/scripts.inc"
+	.include "data/maps/CoralPort_Mart/scripts.inc"
+	.include "data/maps/CoralPort_Harbor/scripts.inc"
 	.include "data/maps/FortreeCity_House3/scripts.inc"
 	.include "data/maps/FortreeCity_House4/scripts.inc"
 	.include "data/maps/FortreeCity_House5/scripts.inc"
@@ -1153,3 +1153,11 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/SandyCliff_Cave/scripts.inc"
 
 	.include "data/maps/CoralBeach_1/scripts.inc"
+
+	.include "data/maps/Route4_Dojo/scripts.inc"
+
+	.include "data/maps/CoralBeach_2/scripts.inc"
+
+	.include "data/maps/Crystal_Cove/scripts.inc"
+
+	.include "data/maps/Crystal_Cove_Cave/scripts.inc"

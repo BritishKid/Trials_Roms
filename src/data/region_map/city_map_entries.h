@@ -71,7 +71,7 @@ static const struct CityMapEntry sPokenavCityMaps[NUM_CITY_MAPS] =
         .tilemap = gPokenavCityMap_Rustboro_1,
     },
     {
-        .mapSecId = MAPSEC_FORTREE_CITY,
+        .mapSecId = MAPSEC_CORAL_PORT,
         .index = 0,
         .tilemap = gPokenavCityMap_Fortree_0,
     },

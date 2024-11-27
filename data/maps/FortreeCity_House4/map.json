@@ -1,9 +1,9 @@
 {
   "id": "MAP_FORTREE_CITY_HOUSE4",
   "name": "FortreeCity_House4",
-  "layout": "LAYOUT_FORTREE_CITY_HOUSE2",
+  "layout": "LAYOUT_CORAL_PORT_HARBOR",
   "music": "MUS_FORTREE",
-  "region_map_section": "MAPSEC_FORTREE_CITY",
+  "region_map_section": "MAPSEC_CORAL_PORT",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_INDOOR",
@@ -55,20 +55,7 @@
     }
   ],
   "warp_events": [
-    {
-      "x": 3,
-      "y": 5,
-      "elevation": 0,
-      "dest_map": "MAP_FORTREE_CITY",
-      "dest_warp_id": "6"
-    },
-    {
-      "x": 4,
-      "y": 5,
-      "elevation": 0,
-      "dest_map": "MAP_FORTREE_CITY",
-      "dest_warp_id": "6"
-    }
+
   ],
   "coord_events": [
 

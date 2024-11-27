@@ -1,6 +1,7 @@
 {
   "group_order": [
     "gMapGroup_TownsAndRoutes",
+    "gMapGroup_Island1",
     "gMapGroup_IndoorLittleroot",
     "gMapGroup_IndoorClayhaven",
     "gMapGroup_IndoorDewford",
@@ -12,7 +13,7 @@
     "gMapGroup_IndoorSlateport",
     "gMapGroup_IndoorMauville",
     "gMapGroup_IndoorRustboro",
-    "gMapGroup_IndoorFortree",
+    "gMapGroup_IndoorCoralPort",
     "gMapGroup_IndoorLilycove",
     "gMapGroup_IndoorMossdeep",
     "gMapGroup_IndoorSootopolis",
@@ -36,33 +37,24 @@
     "gMapGroup_IndoorRoute124",
     "gMapGroup_IndoorBedrock",
     "gMapGroup_IndoorRoute1",
+    "gMapGroup_IndoorRoute4",
     "gMapGroup_HiddenBases",
     "gMapGroup_HiddenGrottos",
     "gMapGroup_MahogonyHills"
   ],
   "gMapGroup_TownsAndRoutes": [
-    "GranitePeakTown",
     "SlateportCity",
     "MauvilleCity",
     "RustboroCity",
-    "FortreeCity",
     "LilycoveCity",
     "MossdeepCity",
     "SootopolisCity",
     "EverGrandeCity",
-    "BedrockTown",
-    "Clayhaven",
     "DewfordTown",
     "LavaridgeTown",
     "FallarborTown",
     "VerdanturfTown",
     "PacifidlogTown",
-    "Route1a",
-    "Route1b",
-    "Route2",
-    "Route3",
-    "Route3b",
-    "Route3c",
     "Route104",
     "Route105",
     "Route106",
@@ -100,11 +92,25 @@
     "Underwater_Route128",
     "Underwater_Route129",
     "Underwater_Route105",
-    "Underwater_Route125",
+    "Underwater_Route125"
+  ],
+  "gMapGroup_Island1": [
+    "BedrockTown",
+    "Clayhaven",
+    "GranitePeakTown",
+    "CoralPort",
+    "Route1a",
+    "Route1b",
+    "Route2",
+    "Route3",
+    "Route3b",
+    "Route3c",
     "Route4",
     "Route4b",
     "Route4c",
-    "CoralBeach_1"
+    "CoralBeach_1",
+    "CoralBeach_2",
+    "Crystal_Cove"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",
@@ -230,13 +236,13 @@
     "RustboroCity_Flat2_3F",
     "RustboroCity_House3"
   ],
-  "gMapGroup_IndoorFortree": [
-    "FortreeCity_House1",
+  "gMapGroup_IndoorCoralPort": [
+    "CoralPort_House1",
     "FortreeCity_Gym",
-    "FortreeCity_PokemonCenter_1F",
-    "FortreeCity_PokemonCenter_2F",
-    "FortreeCity_Mart",
-    "FortreeCity_House2",
+    "CoralPort_PokemonCenter_1F",
+    "CoralPort_PokemonCenter_2F",
+    "CoralPort_Mart",
+    "CoralPort_Harbor",
     "FortreeCity_House3",
     "FortreeCity_House4",
     "FortreeCity_House5",
@@ -452,7 +458,8 @@
     "AlteringCave",
     "MeteorFalls_StevensCave",
     "PlatefallCave_GF",
-    "SandyCliff_Cave"
+    "SandyCliff_Cave",
+    "Crystal_Cove_Cave"
   ],
   "gMapGroup_IndoorDynamic": [
     "SecretBase_RedCave1",
@@ -651,6 +658,9 @@
   ],
   "gMapGroup_IndoorRoute1": [
     "OldFishermans_Hut"
+  ],
+  "gMapGroup_IndoorRoute4": [
+    "Route4_Dojo"
   ],
   "gMapGroup_HiddenBases": [
     "Nathans_Hidden_base",
