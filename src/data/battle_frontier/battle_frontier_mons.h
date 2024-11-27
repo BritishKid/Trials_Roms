@@ -6185,7 +6185,14 @@ const struct TrainerMon gBattleFrontierMons[NUM_FRONTIER_MONS] = {
     .moves = {MOVE_BULLDOZE, MOVE_HEADBUTT, MOVE_BRUTAL_SWING, MOVE_WRAP},
     .heldItem = ITEM_NORMAL_GEM,
     .ev = TRAINER_PARTY_EVS(0, 252, 252, 0, 0, 0) ,
-    .nature = ITEM_ADAMANT
+    .nature = NATURE_ADAMANT
+},
+[SCHOOL_TOURNAMENT_MON_HERDIER] = {
+    .species = SPECIES_HERDIER,
+    .moves = {MOVE_RETALIATE, MOVE_BITE, MOVE_WORK_UP, MOVE_TACKLE},
+    .heldItem = ITEM_NORMAL_GEM,
+    .ev = TRAINER_PARTY_EVS(0, 252, 252, 0, 0, 0) ,
+    .nature = NATURE_ADAMANT
 },
 
 
