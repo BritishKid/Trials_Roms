@@ -4830,6 +4830,26 @@
       "secondary_tileset": "gTileset_beach_cave",
       "border_filepath": "data/layouts/Crystal_Cove_Cave/border.bin",
       "blockdata_filepath": "data/layouts/Crystal_Cove_Cave/map.bin"
+    },
+    {
+      "id": "LAYOUT_HIDDEN_GROTTO_SQUIRTLE",
+      "name": "HiddenGrotto_Squirtle_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Rustboro",
+      "border_filepath": "data/layouts/HiddenGrotto_Squirtle/border.bin",
+      "blockdata_filepath": "data/layouts/HiddenGrotto_Squirtle/map.bin"
+    },
+    {
+      "id": "LAYOUT_CORAL_BEACH_GYM_INTERIOR",
+      "name": "CoralBeach_Gym_Interior_Layout",
+      "width": 22,
+      "height": 23,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_beach_cave",
+      "border_filepath": "data/layouts/CoralBeach_Gym_Interior/border.bin",
+      "blockdata_filepath": "data/layouts/CoralBeach_Gym_Interior/map.bin"
     }
   ]
 }

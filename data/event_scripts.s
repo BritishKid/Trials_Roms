@@ -1161,3 +1161,7 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/Crystal_Cove/scripts.inc"
 
 	.include "data/maps/Crystal_Cove_Cave/scripts.inc"
+
+	.include "data/maps/HiddenGrotto_Squirtle/scripts.inc"
+
+	.include "data/maps/CoralBeach_Gym_Interior/scripts.inc"

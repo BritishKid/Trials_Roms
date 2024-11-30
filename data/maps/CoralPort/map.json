@@ -173,8 +173,8 @@
   "coord_events": [
     {
       "type": "trigger",
-      "x": 3,
-      "y": 11,
+      "x": 5,
+      "y": 9,
       "elevation": 0,
       "var": "VAR_RIVAL_FIGHT_2",
       "var_value": "2",

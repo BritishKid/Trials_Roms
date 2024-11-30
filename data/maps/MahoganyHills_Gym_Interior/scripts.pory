@@ -47,6 +47,7 @@ script MahoganyHillsGym_Leader_Postscript {
     msgbox(format("You have obtained the Gale Badge"))
     special(DoDomeConfetti)
     setflag(FLAG_BADGE01_GET)
+    clearflag(FLAG_TURN_ON_INCREASED_XP)
     msgbox(format("Also please take this TM."))
     giveitem(ITEM_TM51)
     releaseall

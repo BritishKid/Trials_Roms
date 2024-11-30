@@ -2,6 +2,7 @@
   "group_order": [
     "gMapGroup_TownsAndRoutes",
     "gMapGroup_Island1",
+    "gMapGroup_Island2",
     "gMapGroup_IndoorLittleroot",
     "gMapGroup_IndoorClayhaven",
     "gMapGroup_IndoorDewford",
@@ -40,7 +41,8 @@
     "gMapGroup_IndoorRoute4",
     "gMapGroup_HiddenBases",
     "gMapGroup_HiddenGrottos",
-    "gMapGroup_MahogonyHills"
+    "gMapGroup_MahogonyHills",
+    "gMapGroup_GymInterior"
   ],
   "gMapGroup_TownsAndRoutes": [
     "SlateportCity",
@@ -111,6 +113,9 @@
     "CoralBeach_1",
     "CoralBeach_2",
     "Crystal_Cove"
+  ],
+  "gMapGroup_Island2": [
+
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",
@@ -669,7 +674,8 @@
   ],
   "gMapGroup_HiddenGrottos": [
     "HiddenGrotto_Rowlet",
-    "HiddenGrotto_Charmander"
+    "HiddenGrotto_Charmander",
+    "HiddenGrotto_Squirtle"
   ],
   "gMapGroup_MahogonyHills": [
     "MahogonyHills_1",
@@ -681,7 +687,10 @@
     "MahoganyHills_Secret",
     "MahogonyHills_ResearchStation",
     "MahoganyHills_Cave",
-    "MahoganyHills_GymEntrance",
-    "MahoganyHills_Gym_Interior"
+    "MahoganyHills_GymEntrance"
+  ],
+  "gMapGroup_GymInterior": [
+    "MahoganyHills_Gym_Interior",
+    "CoralBeach_Gym_Interior"
   ]
 }

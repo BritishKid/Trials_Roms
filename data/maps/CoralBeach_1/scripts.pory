@@ -1,1 +1,172 @@
 mapscripts CoralBeach_1_MapScripts {}
+
+script CoralBeach1_EventScript_GymSign {
+    lockall
+    msgbox(format("Coral Gym:\nCan you handle the powerful torrent of the sea"))
+    releaseall
+}
+
+script WillyWombyBattleScript {
+    trainerbattle_single(WIBBLYWOBBLY_BATTLE, Beach1_WillyWomby_Intro, Beach1_WillyWomby_Outro, Increase_Trainers_Beaten)
+    msgbox(Beach1_WillyWomby_PostBattle, MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Trainer_Damon {
+    trainerbattle_single(DAMON_BATTLE, Beach1_Damon_Intro, Beach1_Damon_Outro, Increase_Trainers_Beaten)
+    msgbox(Beach1_Damon_PostBattle, MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Trainer_Beach1_Clair {
+    trainerbattle_single(BEACH1_CLAIR_BATTLE, Beach1_Clair_Intro, Beach1_Clair_Outro, Increase_Trainers_Beaten)
+    msgbox(Beach1_Clair_PostBattle, MSGBOX_AUTOCLOSE)
+    end
+}
+
+script SquirtleHiddenGrotto_Entrance {
+    lock
+    if(var(VAR_SALTS7_QUEST_STATE) > 2) {
+        warp(MAP_HIDDEN_GROTTO_SQUIRTLE, 10, 15)
+    }
+    release
+}
+
+script EventScript_Gym2_MeetRob {
+    lockall
+    msgbox(format("You made it!"))
+    removeobject(4)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Gym2_Robert_ExclamationMark)
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+    addobject(4)
+    setobjectxy(4,15,12)
+    applymovement(4, Movement_Gym2_Robert_Approaches)
+    waitmovement(4)
+    msgbox(format("You've been making huge wave as amongst the trainers on your way here."))
+    clearflag(FLAG_HIDE_SECOND_ENCOUNTER_ROB)
+    if(var(VAR_TRAINERS_BEATEN_CHECK) >= 30){ //todo work out how many to do
+        msgbox(format("Are you ready to go again?"), MSGBOX_YESNO)
+            if(var(VAR_RESULT) == YES) {
+                trainerbattle_single(TRAINER_SECOND_ENCOUNTER_ROBERT, MahoganyHills_Robert_Intro, MahoganyHills_Robert_Outro, EventScript_Gym2_RobertBeaten)
+            }
+            else{
+                msgbox(format("Oh that's a shame. I'll see you another time then."))
+                call(EventScript_Gym2_RobertMoves)
+            }
+    } else {
+        msgbox(format("Oh you've been slacking, you're not ready."))
+        call(EventScript_Gym2_RobertMoves)
+    }
+    releaseall
+}
+
+
+script EventScript_Gym2_RobertBeaten {
+    msgbox(format("Wow you're incredible, here take this!"))
+    giveitem(ITEM_ABILITY_PATCH, 1)
+    msgbox(format("You can use it to bring out the Hidden Ability for your Pokémon.\p It can make your Pokémon much stronger!"))
+    if(var(VAR_ROBERT_STATUS) == 4)  { 
+        msgbox(format("Anyway I'll catch you later!"))
+        call(EventScript_Gym2_RobertLeaves)
+    }
+    setvar(VAR_ROBERT_STATUS, 4)
+    setflag(FLAG_HIDE_SECOND_ENCOUNTER_ROB)
+    releaseall
+}
+
+
+script EventScript_Gym2_RobertMoves {
+    applymovement(4, Movement_Gym2_RobertMoves)
+    waitmovement(4)
+    setobjectxy(4, 17, 6)
+    setvar(VAR_ROBERT_STATUS, 3)
+}
+
+script EventScript_Gym2_RobertLeaves {
+    applymovement(4, Movement_Gym2_RobertLeaves)
+    waitmovement(4)
+}
+
+script EventScript_Gym2_Robert_FindLater {
+    if(var(VAR_ROBERT_STATUS)==3) {
+        msgbox(format("Oh it's you.\n Hello"))
+        if(var(VAR_TRAINERS_BEATEN_CHECK) >= 30){ //Beat atleast 10 trainers to trigger meeting Robert
+        msgbox(format("Are you ready to go again?"), MSGBOX_YESNO)
+            if(var(VAR_RESULT) == YES) {
+                trainerbattle_single(TRAINER_SECOND_ENCOUNTER_ROBERT, MahoganyHills_Robert_Intro, MahoganyHills_Robert_Outro, EventScript_Gym2_RobertBeaten)
+            }
+        } else {
+            msgbox(format("Oh that's a shame. I'll see you another time then."))
+        }
+    } 
+    if(var(VAR_ROBERT_STATUS) == 4) {
+        msgbox(format("I'll train some more and beat you by the Hemlock gym."))
+    }
+    releaseall
+}
+
+//Text Scripts
+text Beach1_WillyWomby_Intro {
+    format("I was given a wierd blue egg from some guy!")
+}
+
+text Beach1_WillyWomby_Outro {
+    format("The Pokémon that hatched is cute, I wonder where he got it")
+}
+
+text Beach1_WillyWomby_PostBattle {
+    format("He got on the ferry to cross the channel.")
+}
+
+text Beach1_Damon_Intro {
+    format("Have you seen how many awesome purple Pokémon I have?!")
+}
+
+text Beach1_Damon_Outro {
+    format("OH NO!")
+}
+
+text Beach1_Damon_PostBattle {
+    format("I'm going to make them soo strong.")
+}
+
+text Beach1_Clair_Intro {
+    format("I feel a presence around here!")
+}
+
+text Beach1_Clair_Outro {
+    format("It's getting closer!")
+}
+
+text Beach1_Clair_PostBattle {
+    format("Nevermind it was just gas.")
+}
+
+//movement
+movement Movement_Gym2_Robert_Approaches {
+    walk_up
+    walk_up
+    walk_up
+    walk_up
+    walk_up
+}
+
+movement Movement_Gym2_RobertMoves {
+    walk_right
+    walk_right
+    walk_up
+    face_down
+}
+
+movement Movement_Gym2_RobertLeaves {
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+}
+
+movement Movement_Gym2_Robert_ExclamationMark {
+    emote_exclamation_mark
+}

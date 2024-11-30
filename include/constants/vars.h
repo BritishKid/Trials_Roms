@@ -120,7 +120,7 @@
 #define VAR_RIVAL_FIGHT_2                               0x4064 //Used
 #define VAR_EVOLUTION_STONE_HUNTING                               0x4065 // Used
 #define VAR_ROUTE4_DOJO_STATE                               0x4066 // Used
-#define VAR_ROUTE108_STATE                               0x4067 // Unused Var
+#define VAR_GYM2_QUESTIONS                               0x4067 // 
 #define VAR_ROUTE109_STATE                               0x4068 // Unused Var
 #define VAR_ROUTE110_STATE                               0x4069
 #define VAR_ROUTE111_STATE                               0x406A // Unused Var

@@ -56,13 +56,13 @@
 #define ROUTE4_ODA_BLACKBELT                      50
 #define ROUTE4_SALTS7               51 //GABBY TV PREVIOUSLY TO FIX
 #define ROUTE4_VIKTOR_SCHOOLKID               52
-#define TRAINER_GABBY_AND_TY_3               53
-#define TRAINER_GABBY_AND_TY_4               54
-#define TRAINER_GABBY_AND_TY_5               55
-#define TRAINER_GABBY_AND_TY_6               56
-#define TRAINER_LOLA_1                       57
-#define TRAINER_AUSTINA                      58
-#define TRAINER_GWEN                         59
+#define WIBBLYWOBBLY_BATTLE               53
+#define DAMON_BATTLE               54
+#define BEACH1_CLAIR_BATTLE               55
+#define BEACHGYM_TRAINER_OLLIE               56
+#define TRAINER_BEACH_GYM_LEADER                       57 //Lola_1 originally was rematchable
+#define TRAINER_SANDYCLIFFCOLIN                      58
+#define TRAINER_SECOND_ENCOUNTER_ROBERT                         59
 #define TRAINER_LOLA_2                       60
 #define TRAINER_LOLA_3                       61
 #define TRAINER_LOLA_4                       62
