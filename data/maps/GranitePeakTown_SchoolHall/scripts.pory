@@ -9,7 +9,7 @@ script GranitePeak_EventScript_EvolutionClassroomDoor {
     lockall
     msgbox(format("Evolution Class\nDo you want to enter?"), MSGBOX_YESNO)
     if(var(VAR_RESULT) == YES) {
-        // warp(MAP_GRANITE_PEAK_SCHOOL_EVOLUTION_CLASS, 5, 10)
+        warp(MAP_GRANITE_PEAK_TOWN_SCHOOL_EVOLUTION_ROOM, 5, 10)
     }
     releaseall
 }
@@ -18,7 +18,7 @@ script GranitePeak_EventScript_ItemClassroomDoor {
     lockall
     msgbox(format("Item Class\nDo you want to enter?"), MSGBOX_YESNO)
     if(var(VAR_RESULT) == YES) {
-        // warp(MAP_GRANITE_PEAK_SCHOOL_ITEM_CLASS, 5, 10)
+        warp(MAP_GRANITE_PEAK_TOWN_SCHOOL_ITEMS_ROOM, 5, 10)
     }
     releaseall
 }
@@ -27,7 +27,7 @@ script GranitePeak_EventScript_MovesClassroomDoor {
     lockall
     msgbox(format("Moves Class\nDo you want to enter?"), MSGBOX_YESNO)
     if(var(VAR_RESULT) == YES) {
-        // warp(MAP_GRANITE_PEAK_SCHOOL_MOVES_CLASS, 5, 10)
+        warp(MAP_GRANITE_PEAK_TOWN_SCHOOL_MOVE_ROOM, 5, 10)
     }
     releaseall
 }
@@ -36,7 +36,7 @@ script GranitePeak_EventScript_AbilitiesClassroomDoor {
     lockall
     msgbox(format("Abilities Class\nDo you want to enter?"), MSGBOX_YESNO)
     if(var(VAR_RESULT) == YES) {
-        // warp(MAP_GRANITE_PEAK_SCHOOL_ABILITY_CLASS, 5, 10)
+        warp(MAP_GRANITE_PEAK_TOWN_SCHOOL_ABILITY_ROOM, 5, 10)
     }
     releaseall
 }

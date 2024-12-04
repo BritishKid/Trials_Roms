@@ -1000,21 +1000,21 @@ static const struct InGameTrade sIngameTrades[] = //todo talk about trades and a
         .sheen = 10,
         .requestedSpecies = SPECIES_MARILL
     },
-    [INGAME_TRADE_PLUSLE] =
+    [INGAME_TRADE_MUDBRAY] =
     {
-        .nickname = _("PLUSES"),
-        .species = SPECIES_PLUSLE,
-        .ivs = {4, 4, 4, 5, 5, 4},
-        .abilityNum = 0,
+        .nickname = _("PONY"),
+        .species = SPECIES_MUDBRAY,
+        .ivs = {23, 24, 14, 25, 5, 14},
+        .abilityNum = 1,
         .otId = 73996,
         .conditions = {5, 5, 30, 5, 5},
         .personality = 0x6F,
-        .heldItem = ITEM_WOOD_MAIL,
+        .heldItem = ITEM_SOFT_SAND,
         .mailNum = 0,
-        .otName = _("ROMAN"),
-        .otGender = MALE,
+        .otName = _("LAURA"),
+        .otGender = FEMALE,
         .sheen = 10,
-        .requestedSpecies = SPECIES_VOLBEAT
+        .requestedSpecies = SPECIES_GOOMY
     },
     [INGAME_TRADE_HORSEA] =
     {

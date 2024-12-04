@@ -64,8 +64,8 @@
     {
       "id": "LAYOUT_MOSSDEEP_CITY",
       "name": "MossdeepCity_Layout",
-      "width": 80,
-      "height": 40,
+      "width": 30,
+      "height": 36,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Mossdeep",
       "border_filepath": "data/layouts/MossdeepCity/border.bin",
@@ -3262,14 +3262,14 @@
       "blockdata_filepath": "data/layouts/SeafloorCavern_Room9_Lava/map.bin"
     },
     {
-      "id": "LAYOUT_MOSSDEEP_CITY_STEVENS_HOUSE",
-      "name": "MossdeepCity_StevensHouse_Layout",
-      "width": 11,
-      "height": 8,
+      "id": "LAYOUT_HEMLOCK_VILLAGE_ORPHANAGE",
+      "name": "HemlockVillage_Orphanage_Layout",
+      "width": 19,
+      "height": 9,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_GenericBuilding",
-      "border_filepath": "data/layouts/MossdeepCity_StevensHouse/border.bin",
-      "blockdata_filepath": "data/layouts/MossdeepCity_StevensHouse/map.bin"
+      "border_filepath": "data/layouts/HemlockVillage_Orphanage/border.bin",
+      "blockdata_filepath": "data/layouts/HemlockVillage_Orphanage/map.bin"
     },
     {
       "id": "LAYOUT_SHOAL_CAVE_LOW_TIDE_ICE_ROOM",
@@ -4850,6 +4850,76 @@
       "secondary_tileset": "gTileset_beach_cave",
       "border_filepath": "data/layouts/CoralBeach_Gym_Interior/border.bin",
       "blockdata_filepath": "data/layouts/CoralBeach_Gym_Interior/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE5",
+      "name": "Route5_Layout",
+      "width": 42,
+      "height": 16,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Mossdeep",
+      "border_filepath": "data/layouts/Route5/border.bin",
+      "blockdata_filepath": "data/layouts/Route5/map.bin"
+    },
+    {
+      "id": "LAYOUT_OBSIDIAN_THICKET_1",
+      "name": "Obsidian_Thicket_1_Layout",
+      "width": 28,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Mossdeep",
+      "border_filepath": "data/layouts/Obsidian_Thicket_1/border.bin",
+      "blockdata_filepath": "data/layouts/Obsidian_Thicket_1/map.bin"
+    },
+    {
+      "id": "LAYOUT_OBSIDIAN_THICKET_2",
+      "name": "Obsidian_Thicket_2_Layout",
+      "width": 30,
+      "height": 50,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Mossdeep",
+      "border_filepath": "data/layouts/Obsidian_Thicket_2/border.bin",
+      "blockdata_filepath": "data/layouts/Obsidian_Thicket_2/map.bin"
+    },
+    {
+      "id": "LAYOUT_OBSIDIAN_THICKET_3",
+      "name": "Obsidian_Thicket_3_Layout",
+      "width": 41,
+      "height": 42,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Mossdeep",
+      "border_filepath": "data/layouts/Obsidian_Thicket_3/border.bin",
+      "blockdata_filepath": "data/layouts/Obsidian_Thicket_3/map.bin"
+    },
+    {
+      "id": "LAYOUT_OBSIDIAN_THICKET_4",
+      "name": "Obsidian_Thicket_4_Layout",
+      "width": 41,
+      "height": 42,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Mossdeep",
+      "border_filepath": "data/layouts/Obsidian_Thicket_4/border.bin",
+      "blockdata_filepath": "data/layouts/Obsidian_Thicket_4/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE5B",
+      "name": "Route5b_Layout",
+      "width": 41,
+      "height": 28,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Mossdeep",
+      "border_filepath": "data/layouts/Route5b/border.bin",
+      "blockdata_filepath": "data/layouts/Route5b/map.bin"
+    },
+    {
+      "id": "LAYOUT_CLAYHAVEN_HOUSE3",
+      "name": "Clayhaven_House3_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/Clayhaven_House3/border.bin",
+      "blockdata_filepath": "data/layouts/Clayhaven_House3/map.bin"
     }
   ]
 }

@@ -25,20 +25,20 @@ GranitePeakSChool_EvolutionClass_Teacher::
 # 16 "data/maps/GranitePeakTown_School_EvolutionRoom/scripts.pory"
 	checkitem ITEM_EVOLUTION_PATCH, 1
 # 17 "data/maps/GranitePeakTown_School_EvolutionRoom/scripts.pory"
-	goto_if_unset FLAG_GET_SCHOOL_EEVEE, GranitePeakSChool_EvolutionClass_Teacher_2
+	goto_if_unset FLAG_GET_SCHOOL_EEVEE, GranitePeakSChool_EvolutionClass_Teacher_3
 GranitePeakSChool_EvolutionClass_Teacher_1:
 # 20 "data/maps/GranitePeakTown_School_EvolutionRoom/scripts.pory"
 	compare VAR_EVOLUTION_ROOM_STUDENTS, 5
-	goto_if_eq GranitePeakSChool_EvolutionClass_Teacher_5
-GranitePeakSChool_EvolutionClass_Teacher_4:
+	goto_if_eq GranitePeakSChool_EvolutionClass_Teacher_7
+GranitePeakSChool_EvolutionClass_Teacher_6:
 # 23 "data/maps/GranitePeakTown_School_EvolutionRoom/scripts.pory"
 	compare VAR_EVOLUTION_ROOM_STUDENTS, 4
-	goto_if_eq GranitePeakSChool_EvolutionClass_Teacher_8
-GranitePeakSChool_EvolutionClass_Teacher_7:
+	goto_if_eq GranitePeakSChool_EvolutionClass_Teacher_10
+GranitePeakSChool_EvolutionClass_Teacher_9:
 # 26 "data/maps/GranitePeakTown_School_EvolutionRoom/scripts.pory"
 	compare VAR_EVOLUTION_ROOM_STUDENTS, 3
-	goto_if_eq GranitePeakSChool_EvolutionClass_Teacher_11
-GranitePeakSChool_EvolutionClass_Teacher_10:
+	goto_if_eq GranitePeakSChool_EvolutionClass_Teacher_13
+GranitePeakSChool_EvolutionClass_Teacher_12:
 # 56 "data/maps/GranitePeakTown_School_EvolutionRoom/scripts.pory"
 	releaseall
 	return
@@ -48,29 +48,35 @@ GranitePeakSChool_EvolutionClass_Teacher_2:
 	call GranitePeak_GivePlayer_Eevee
 	goto GranitePeakSChool_EvolutionClass_Teacher_1
 
-GranitePeakSChool_EvolutionClass_Teacher_5:
+GranitePeakSChool_EvolutionClass_Teacher_3:
+# 17 "data/maps/GranitePeakTown_School_EvolutionRoom/scripts.pory"
+	compare VAR_RESULT, TRUE
+	goto_if_eq GranitePeakSChool_EvolutionClass_Teacher_2
+	goto GranitePeakSChool_EvolutionClass_Teacher_1
+
+GranitePeakSChool_EvolutionClass_Teacher_7:
 # 21 "data/maps/GranitePeakTown_School_EvolutionRoom/scripts.pory"
 	msgbox GranitePeakSChool_EvolutionClass_Teacher_Text_0
-	goto GranitePeakSChool_EvolutionClass_Teacher_4
+	goto GranitePeakSChool_EvolutionClass_Teacher_6
 
-GranitePeakSChool_EvolutionClass_Teacher_8:
+GranitePeakSChool_EvolutionClass_Teacher_10:
 # 24 "data/maps/GranitePeakTown_School_EvolutionRoom/scripts.pory"
 	goto GranitePeakSchool_EvolutionTest
-	goto GranitePeakSChool_EvolutionClass_Teacher_7
+	goto GranitePeakSChool_EvolutionClass_Teacher_9
 
-GranitePeakSChool_EvolutionClass_Teacher_11:
+GranitePeakSChool_EvolutionClass_Teacher_13:
 # 27 "data/maps/GranitePeakTown_School_EvolutionRoom/scripts.pory"
 	msgbox GranitePeakSChool_EvolutionClass_Teacher_Text_1, MSGBOX_YESNO
 # 28 "data/maps/GranitePeakTown_School_EvolutionRoom/scripts.pory"
 	compare VAR_RESULT, YES
-	goto_if_eq GranitePeakSChool_EvolutionClass_Teacher_14
-GranitePeakSChool_EvolutionClass_Teacher_13:
+	goto_if_eq GranitePeakSChool_EvolutionClass_Teacher_16
+GranitePeakSChool_EvolutionClass_Teacher_15:
 # 51 "data/maps/GranitePeakTown_School_EvolutionRoom/scripts.pory"
 	compare VAR_RESULT, NO
-	goto_if_eq GranitePeakSChool_EvolutionClass_Teacher_16
-	goto GranitePeakSChool_EvolutionClass_Teacher_10
+	goto_if_eq GranitePeakSChool_EvolutionClass_Teacher_18
+	goto GranitePeakSChool_EvolutionClass_Teacher_12
 
-GranitePeakSChool_EvolutionClass_Teacher_14:
+GranitePeakSChool_EvolutionClass_Teacher_16:
 # 29 "data/maps/GranitePeakTown_School_EvolutionRoom/scripts.pory"
 	setvar VAR_EVOLUTION_ROOM_STUDENTS, 4
 # 30 "data/maps/GranitePeakTown_School_EvolutionRoom/scripts.pory"
@@ -113,12 +119,12 @@ GranitePeakSChool_EvolutionClass_Teacher_14:
 	waitmovement OBJ_EVENT_ID_PLAYER
 # 49 "data/maps/GranitePeakTown_School_EvolutionRoom/scripts.pory"
 	goto GranitePeakSchool_EvolutionTest
-	goto GranitePeakSChool_EvolutionClass_Teacher_13
+	goto GranitePeakSChool_EvolutionClass_Teacher_15
 
-GranitePeakSChool_EvolutionClass_Teacher_16:
+GranitePeakSChool_EvolutionClass_Teacher_18:
 # 52 "data/maps/GranitePeakTown_School_EvolutionRoom/scripts.pory"
 	msgbox GranitePeakSChool_EvolutionClass_Teacher_Text_5
-	goto GranitePeakSChool_EvolutionClass_Teacher_10
+	goto GranitePeakSChool_EvolutionClass_Teacher_12
 
 
 GranitePeakSchool_EvolutionTest::

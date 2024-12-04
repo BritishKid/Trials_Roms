@@ -47,84 +47,84 @@ Route4b_Salt7_GyradosEncounterLeft::
 # 27 "data/maps/Route4b/scripts.pory"
 	waitmovement 4
 # 28 "data/maps/Route4b/scripts.pory"
+	call Route4b_Salts7Battle
+# 29 "data/maps/Route4b/scripts.pory"
 	releaseall
 	return
 
 
 Route4b_Salt7_GyradosEncounterRight::
-# 32 "data/maps/Route4b/scripts.pory"
-	lockall
 # 33 "data/maps/Route4b/scripts.pory"
-	msgbox Route4b_Salt7_GyradosEncounterLeft_Text_0
+	lockall
 # 34 "data/maps/Route4b/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_PlayerSurprised_Route4b
+	msgbox Route4b_Salt7_GyradosEncounterLeft_Text_0
 # 35 "data/maps/Route4b/scripts.pory"
-	waitmovement OBJ_EVENT_ID_PLAYER
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_PlayerSurprised_Route4b
 # 36 "data/maps/Route4b/scripts.pory"
-	applymovement 4, Movement_Salts7Route4b_ReachingPlayerRight
+	waitmovement OBJ_EVENT_ID_PLAYER
 # 37 "data/maps/Route4b/scripts.pory"
-	waitmovement 4
+	applymovement 4, Movement_Salts7Route4b_ReachingPlayerRight
 # 38 "data/maps/Route4b/scripts.pory"
+	waitmovement 4
+# 39 "data/maps/Route4b/scripts.pory"
+	call Route4b_Salts7Battle
+# 40 "data/maps/Route4b/scripts.pory"
 	releaseall
 	return
 
 
 Route4b_Salts7Battle::
-# 42 "data/maps/Route4b/scripts.pory"
+# 44 "data/maps/Route4b/scripts.pory"
 	msgbox Route4b_Salts7Battle_Text_0
-# 43 "data/maps/Route4b/scripts.pory"
+# 45 "data/maps/Route4b/scripts.pory"
 	trainerbattle_single ROUTE4_SALTS7, Salts7Route4b_Intro, Salts7Route4b_Outro, Route4b_Salt7_PostBattle
 	return
 
 
 Route4b_Salt7_PostBattle::
-# 47 "data/maps/Route4b/scripts.pory"
-	msgbox Route4b_Salt7_PostBattle_Text_0
-# 48 "data/maps/Route4b/scripts.pory"
-	msgbox Route4b_Salt7_PostBattle_Text_1
 # 49 "data/maps/Route4b/scripts.pory"
-	applymovement 4, Movement_Route4b_Salts7_MoveAway
+	msgbox Route4b_Salt7_PostBattle_Text_0
 # 50 "data/maps/Route4b/scripts.pory"
-	waitmovement 4
+	msgbox Route4b_Salt7_PostBattle_Text_1
 # 51 "data/maps/Route4b/scripts.pory"
-	removeobject 4
+	applymovement 4, Movement_Route4b_Salts7_MoveAway
 # 52 "data/maps/Route4b/scripts.pory"
-	setflag FLAG_HIDING_SALTS
+	waitmovement 4
+# 53 "data/maps/Route4b/scripts.pory"
+	removeobject 4
 # 54 "data/maps/Route4b/scripts.pory"
+	setflag FLAG_HIDING_SALTS
+# 56 "data/maps/Route4b/scripts.pory"
 	setvar VAR_SALTS7_QUEST_STATE, 2
-# 55 "data/maps/Route4b/scripts.pory"
+# 57 "data/maps/Route4b/scripts.pory"
 	releaseall
 	return
 
 
 Route4_BlackbeltOda_BattleScript::
-# 59 "data/maps/Route4b/scripts.pory"
+# 61 "data/maps/Route4b/scripts.pory"
 	trainerbattle_single ROUTE4_ODA_BLACKBELT, Route4_Blackbelt_Intro, Route4_Blackbelt_Outro, Increase_Trainers_Beaten
-# 60 "data/maps/Route4b/scripts.pory"
+# 62 "data/maps/Route4b/scripts.pory"
 	msgbox Route4_Blackbelt_PostBattle, MSGBOX_AUTOCLOSE
 	end
 
 
 Route4_SchoolKid_Viktor::
-# 65 "data/maps/Route4b/scripts.pory"
+# 67 "data/maps/Route4b/scripts.pory"
 	trainerbattle_single ROUTE4_VIKTOR_SCHOOLKID, Route4_Viktor_Intro, Route4_Viktor_Outro, Increase_Trainers_Beaten
-# 66 "data/maps/Route4b/scripts.pory"
+# 68 "data/maps/Route4b/scripts.pory"
 	msgbox Route4_Viktor_PostBattle, MSGBOX_AUTOCLOSE
 	end
 
 
-# 128 "data/maps/Route4b/scripts.pory"
+# 130 "data/maps/Route4b/scripts.pory"
 Movement_PlayerSurprised_Route4b:
-# 129 "data/maps/Route4b/scripts.pory"
+# 131 "data/maps/Route4b/scripts.pory"
 	emote_question_mark
 	step_end
 
-# 132 "data/maps/Route4b/scripts.pory"
-Movement_Salts7Route4b_ReachingPlayerRight:
-# 133 "data/maps/Route4b/scripts.pory"
-	walk_up
 # 134 "data/maps/Route4b/scripts.pory"
-	walk_up
+Movement_Salts7Route4b_ReachingPlayerRight:
 # 135 "data/maps/Route4b/scripts.pory"
 	walk_up
 # 136 "data/maps/Route4b/scripts.pory"
@@ -133,16 +133,16 @@ Movement_Salts7Route4b_ReachingPlayerRight:
 	walk_up
 # 138 "data/maps/Route4b/scripts.pory"
 	walk_up
+# 139 "data/maps/Route4b/scripts.pory"
+	walk_up
+# 140 "data/maps/Route4b/scripts.pory"
+	walk_up
 	step_end
 
-# 141 "data/maps/Route4b/scripts.pory"
-Movement_Salts7Route4b_ReachingPlayerLeft:
-# 142 "data/maps/Route4b/scripts.pory"
-	walk_left
 # 143 "data/maps/Route4b/scripts.pory"
-	walk_up
+Movement_Salts7Route4b_ReachingPlayerLeft:
 # 144 "data/maps/Route4b/scripts.pory"
-	walk_up
+	walk_left
 # 145 "data/maps/Route4b/scripts.pory"
 	walk_up
 # 146 "data/maps/Route4b/scripts.pory"
@@ -151,14 +151,14 @@ Movement_Salts7Route4b_ReachingPlayerLeft:
 	walk_up
 # 148 "data/maps/Route4b/scripts.pory"
 	walk_up
+# 149 "data/maps/Route4b/scripts.pory"
+	walk_up
+# 150 "data/maps/Route4b/scripts.pory"
+	walk_up
 	step_end
 
-# 150 "data/maps/Route4b/scripts.pory"
-Movement_Route4b_Salts7_MoveAway:
-# 151 "data/maps/Route4b/scripts.pory"
-	walk_down
 # 152 "data/maps/Route4b/scripts.pory"
-	walk_down
+Movement_Route4b_Salts7_MoveAway:
 # 153 "data/maps/Route4b/scripts.pory"
 	walk_down
 # 154 "data/maps/Route4b/scripts.pory"
@@ -167,6 +167,10 @@ Movement_Route4b_Salts7_MoveAway:
 	walk_down
 # 156 "data/maps/Route4b/scripts.pory"
 	walk_down
+# 157 "data/maps/Route4b/scripts.pory"
+	walk_down
+# 158 "data/maps/Route4b/scripts.pory"
+	walk_down
 	step_end
 
 Route4b_Salt7_GyradosEncounterLeft_Text_0:
@@ -174,82 +178,82 @@ Route4b_Salt7_GyradosEncounterLeft_Text_0:
 	.string "Hey it's you ${PLAYER}$"
 
 Route4b_Salts7Battle_Text_0:
-# 42 "data/maps/Route4b/scripts.pory"
+# 44 "data/maps/Route4b/scripts.pory"
 	.string "I've brought my Magikarps here to climb\n"
 	.string "the waterfall so they can evolve eh!$"
 
 Route4b_Salt7_PostBattle_Text_0:
-# 47 "data/maps/Route4b/scripts.pory"
+# 49 "data/maps/Route4b/scripts.pory"
 	.string "You're getting powerful! But have you\n"
 	.string "heard about Dragon Lake?$"
 
 Route4b_Salt7_PostBattle_Text_1:
-# 48 "data/maps/Route4b/scripts.pory"
+# 50 "data/maps/Route4b/scripts.pory"
 	.string "It's home to the most powerful Dragon\n"
 	.string "Pokémon and that must mean it's\l"
 	.string "perfect to tarin my Gyrados! I'll be\l"
 	.string "unstoppable soon enough!$"
 
 Lando_Intro::
-# 72 "data/maps/Route4b/scripts.pory"
+# 74 "data/maps/Route4b/scripts.pory"
 	.string "You came to the wrong hill!$"
 
 Lando_Outro::
-# 76 "data/maps/Route4b/scripts.pory"
+# 78 "data/maps/Route4b/scripts.pory"
 	.string "You can have this hill.$"
 
 Lando_Postbattle::
-# 80 "data/maps/Route4b/scripts.pory"
+# 82 "data/maps/Route4b/scripts.pory"
 	.string "I'm leaving, I'm leaving.$"
 
 OstrichPuppet_Intro::
-# 84 "data/maps/Route4b/scripts.pory"
+# 86 "data/maps/Route4b/scripts.pory"
 	.string "I've heard there is a powerful trainer\n"
 	.string "somewhere nearby.$"
 
 OstrichPuppet_Outro::
-# 88 "data/maps/Route4b/scripts.pory"
+# 90 "data/maps/Route4b/scripts.pory"
 	.string "You're strong but it's not you$"
 
 OstrichPuppet_PostBattle::
-# 92 "data/maps/Route4b/scripts.pory"
+# 94 "data/maps/Route4b/scripts.pory"
 	.string "I just need an ACRO BIKE to cross over.$"
 
 Salts7Route4b_Intro::
-# 96 "data/maps/Route4b/scripts.pory"
+# 98 "data/maps/Route4b/scripts.pory"
 	.string "Let me show you how great my team of\n"
 	.string "Gyrados is!$"
 
 Salts7Route4b_Outro::
-# 100 "data/maps/Route4b/scripts.pory"
+# 102 "data/maps/Route4b/scripts.pory"
 	.string "Sorry, I guess I still need to evolve\n"
 	.string "the rest.$"
 
 Route4_Blackbelt_Intro::
-# 104 "data/maps/Route4b/scripts.pory"
+# 106 "data/maps/Route4b/scripts.pory"
 	.string "I'm helping Brawly set up a new mountain\n"
 	.string "hut.$"
 
 Route4_Blackbelt_Outro::
-# 108 "data/maps/Route4b/scripts.pory"
+# 110 "data/maps/Route4b/scripts.pory"
 	.string "It's going to be incredible.$"
 
 Route4_Blackbelt_PostBattle::
-# 112 "data/maps/Route4b/scripts.pory"
+# 114 "data/maps/Route4b/scripts.pory"
 	.string "Martial artists from all over the world\n"
 	.string "are going to come here to explore the\l"
 	.string "old dojos.$"
 
 Route4_Viktor_Intro::
-# 116 "data/maps/Route4b/scripts.pory"
+# 118 "data/maps/Route4b/scripts.pory"
 	.string "My Pokemon are being trained for the\n"
 	.string "School Tournament.$"
 
 Route4_Viktor_Outro::
-# 120 "data/maps/Route4b/scripts.pory"
+# 122 "data/maps/Route4b/scripts.pory"
 	.string "It's a good thing I'm still training.$"
 
 Route4_Viktor_PostBattle::
-# 124 "data/maps/Route4b/scripts.pory"
+# 126 "data/maps/Route4b/scripts.pory"
 	.string "I'll be stronger when we meet in the\n"
 	.string "tournament.$"

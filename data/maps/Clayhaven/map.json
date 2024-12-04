@@ -79,6 +79,13 @@
       "elevation": 0,
       "dest_map": "MAP_CLAYHAVEN_HOUSE2",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 41,
+      "y": 9,
+      "elevation": 0,
+      "dest_map": "MAP_CLAYHAVEN_HOUSE3",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [
@@ -145,14 +152,6 @@
       "type": "sign",
       "x": 39,
       "y": 26,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "COMINGSOON"
-    },
-    {
-      "type": "sign",
-      "x": 41,
-      "y": 9,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "COMINGSOON"

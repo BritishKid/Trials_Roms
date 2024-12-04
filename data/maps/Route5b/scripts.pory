@@ -1,0 +1,28 @@
+mapscripts Route5b_MapScripts {}
+
+
+script Route5b_TrianerBattle_Bumbleboozer {
+    trainerbattle_single(TRAINER_BUMBLE, BumbleBoozer_Intro, BumbleBoozer_Outro, Bumbleboozer_Postscript)
+    msgbox(BumbleBoozer_PostBattle, MSGBOX_DEFAULT)
+    end
+}
+
+script Bumbleboozer_Postscript {
+    lockall
+    msgbox(format("You can have this, I don't want it anymore."))
+    giveitem(ITEM_HONEY, 5)
+    releaseall
+}
+
+//text
+text BumbleBoozer_Intro {
+    format("My victory will be sweet!")
+}
+
+text BumbleBoozer_Outro {
+    format("Now I'm sour.")
+}
+
+text BumbleBoozer_PostBattle {
+    format("")
+}

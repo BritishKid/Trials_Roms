@@ -1,0 +1,48 @@
+mapscripts HemlockVillage_Orphanage_MapScripts {
+
+}
+
+script HemlockVillage_Orphanage_EventScript_LostTreecko {
+    lockall
+    faceplayer
+    //questmenu TODO
+    if(var(VAR_TREECKO_STATE) > 2) {
+        msgbox(format("I have to go catch my own Treecko!"))
+        end
+    }   
+    if(var(VAR_TREECKO_STATE) == 1) {
+        msgbox(format("I would love to se a Treecko."))
+    }
+    if(var(VAR_TREECKO_STATE) == 0) {
+        msgbox(format("My mum used to talk about how cool Treecko was but I never got to see one before she died."))
+        msgbox(format("You have lots of Pokémon are you able to show me one?"))
+        msgbox(format("Oh you haven't seen one, please find one for me."))
+        setvar(VAR_TREECKO_STATE, 1)
+    }
+    releaseall
+}
+
+script HemlockVillage_Orphanage_EventScript_Lady {
+    lockall
+    faceplayer
+    msgbox(format("It's hard looking after all these children, but it's so rewarding to teach them."))
+    releaseall
+}
+
+script HemlockVillage_Orphanage_EventScript_ChildBoy {
+    lockall
+    faceplayer
+    msgbox(format("I'm learning to cook! It'll make me such a ladies man when I'm older."))
+    releaseall
+}
+
+script HemlockVillage_Orphanage_EventScript_Sink {
+    lockall
+    msgbox(format("It's a sink"))
+    if(!flag(FLAG_LEFTOVERS_ORPHANAGE)) {
+        msgbox(format("There is some food in the sink you think you could use."))
+        giveitem(ITEM_LEFTOVERS, 1)
+        setflag(FLAG_LEFTOVERS_ORPHANAGE)
+    }
+    releaseall
+}

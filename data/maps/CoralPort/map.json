@@ -164,7 +164,7 @@
     },
     {
       "x": 3,
-      "y": 10,
+      "y": 9,
       "elevation": 0,
       "dest_map": "MAP_CORAL_PORT_HARBOR",
       "dest_warp_id": "0"

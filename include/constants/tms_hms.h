@@ -52,7 +52,10 @@
     F(SKILL_SWAP) \
     F(SNATCH) \
     F(OVERHEAT) \
-    F(PLUCK)
+    F(PLUCK) \
+    F(GRASS_KNOT) \
+    F(ROCK_SMASH) \
+    F(CUT) 
 
 #define FOREACH_HM(F) \
     F(CUT) \

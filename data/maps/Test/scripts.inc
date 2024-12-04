@@ -6,7 +6,7 @@ LittlerootTown_ProfessorBirchsLab_EventScript_CharmanderSelection::
 # 4 "data/maps/Test/scripts.pory"
 	lockall
 # 5 "data/maps/Test/scripts.pory"
-	goto_if_unset FLAG_RECEIVED_KANTO_CHOICE, LittlerootTown_ProfessorBirchsLab_EventScript_CharmanderSelection_2
+	goto_if_unset FLAG_LEFTOVERS_ORPHANAGE, LittlerootTown_ProfessorBirchsLab_EventScript_CharmanderSelection_2
 LittlerootTown_ProfessorBirchsLab_EventScript_CharmanderSelection_1:
 # 21 "data/maps/Test/scripts.pory"
 	releaseall
@@ -44,7 +44,7 @@ LittlerootTown_ProfessorBirchsLab_EventScript_CharmanderSelection_8:
 # 15 "data/maps/Test/scripts.pory"
 	removeobject 8
 # 16 "data/maps/Test/scripts.pory"
-	setflag FLAG_RECEIVED_KANTO_CHOICE
+	setflag FLAG_LEFTOVERS_ORPHANAGE
 # 17 "data/maps/Test/scripts.pory"
 	setvar VAR_STARTER_SELECTION_STATE, 2
 	goto LittlerootTown_ProfessorBirchsLab_EventScript_CharmanderSelection_7
@@ -54,7 +54,7 @@ LittlerootTown_ProfessorBirchsLab_EventScript_SquirtleSelection::
 # 25 "data/maps/Test/scripts.pory"
 	lockall
 # 26 "data/maps/Test/scripts.pory"
-	goto_if_unset FLAG_RECEIVED_KANTO_CHOICE, LittlerootTown_ProfessorBirchsLab_EventScript_SquirtleSelection_2
+	goto_if_unset FLAG_LEFTOVERS_ORPHANAGE, LittlerootTown_ProfessorBirchsLab_EventScript_SquirtleSelection_2
 LittlerootTown_ProfessorBirchsLab_EventScript_SquirtleSelection_1:
 # 42 "data/maps/Test/scripts.pory"
 	releaseall
@@ -92,7 +92,7 @@ LittlerootTown_ProfessorBirchsLab_EventScript_SquirtleSelection_8:
 # 36 "data/maps/Test/scripts.pory"
 	removeobject 9
 # 37 "data/maps/Test/scripts.pory"
-	setflag FLAG_RECEIVED_KANTO_CHOICE
+	setflag FLAG_LEFTOVERS_ORPHANAGE
 # 38 "data/maps/Test/scripts.pory"
 	setvar VAR_STARTER_SELECTION_STATE, 2
 	goto LittlerootTown_ProfessorBirchsLab_EventScript_SquirtleSelection_7
@@ -102,7 +102,7 @@ LittlerootTown_ProfessorBirchsLab_EventScript_BulbasaurSelection::
 # 47 "data/maps/Test/scripts.pory"
 	lockall
 # 48 "data/maps/Test/scripts.pory"
-	goto_if_unset FLAG_RECEIVED_KANTO_CHOICE, LittlerootTown_ProfessorBirchsLab_EventScript_BulbasaurSelection_2
+	goto_if_unset FLAG_LEFTOVERS_ORPHANAGE, LittlerootTown_ProfessorBirchsLab_EventScript_BulbasaurSelection_2
 LittlerootTown_ProfessorBirchsLab_EventScript_BulbasaurSelection_1:
 # 64 "data/maps/Test/scripts.pory"
 	releaseall
@@ -140,7 +140,7 @@ LittlerootTown_ProfessorBirchsLab_EventScript_BulbasaurSelection_8:
 # 58 "data/maps/Test/scripts.pory"
 	removeobject 7
 # 59 "data/maps/Test/scripts.pory"
-	setflag FLAG_RECEIVED_KANTO_CHOICE
+	setflag FLAG_LEFTOVERS_ORPHANAGE
 # 60 "data/maps/Test/scripts.pory"
 	setvar VAR_STARTER_SELECTION_STATE, 2
 	goto LittlerootTown_ProfessorBirchsLab_EventScript_BulbasaurSelection_7

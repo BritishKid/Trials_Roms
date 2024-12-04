@@ -42,14 +42,13 @@
     "gMapGroup_HiddenBases",
     "gMapGroup_HiddenGrottos",
     "gMapGroup_MahogonyHills",
+    "gMapGroup_ObsidianThicket",
     "gMapGroup_GymInterior"
   ],
   "gMapGroup_TownsAndRoutes": [
     "SlateportCity",
-    "MauvilleCity",
     "RustboroCity",
     "LilycoveCity",
-    "MossdeepCity",
     "SootopolisCity",
     "EverGrandeCity",
     "DewfordTown",
@@ -115,7 +114,10 @@
     "Crystal_Cove"
   ],
   "gMapGroup_Island2": [
-
+    "Route5",
+    "Route5b",
+    "MossdeepCity",
+    "MauvilleCity"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",
@@ -130,7 +132,8 @@
     "Clayhaven_House2",
     "Clayhaven_PokemonCenter_1F",
     "Clayhaven_PokemonCenter_2F",
-    "Clayhaven_Mart"
+    "Clayhaven_Mart",
+    "Clayhaven_House3"
   ],
   "gMapGroup_IndoorDewford": [
     "DewfordTown_House1",
@@ -286,7 +289,7 @@
     "MossdeepCity_PokemonCenter_2F",
     "MossdeepCity_Mart",
     "MossdeepCity_House3",
-    "MossdeepCity_StevensHouse",
+    "HemlockVillage_Orphanage",
     "MossdeepCity_House4",
     "MossdeepCity_SpaceCenter_1F",
     "MossdeepCity_SpaceCenter_2F",
@@ -688,6 +691,12 @@
     "MahogonyHills_ResearchStation",
     "MahoganyHills_Cave",
     "MahoganyHills_GymEntrance"
+  ],
+  "gMapGroup_ObsidianThicket": [
+    "Obsidian_Thicket_1",
+    "Obsidian_Thicket_2",
+    "Obsidian_Thicket_3",
+    "Obsidian_Thicket_4"
   ],
   "gMapGroup_GymInterior": [
     "MahoganyHills_Gym_Interior",

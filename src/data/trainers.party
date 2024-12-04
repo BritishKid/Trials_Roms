@@ -1538,120 +1538,204 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Hidden Power
 - Thunder Wave
 
-=== TRAINER_LOLA_2 ===
-Name: LOLA
-Class: Tuber F
-Pic: Tuber F
-Gender: Female
-Music: Girl
-Double Battle: No
-AI: Check Bad Move
-
-Marill
-Level: 26
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
-
-Marill
-Level: 26
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
-
-=== TRAINER_LOLA_3 ===
-Name: LOLA
-Class: Tuber F
-Pic: Tuber F
-Gender: Female
-Music: Girl
-Double Battle: No
-AI: Check Bad Move
-
-Marill
-Level: 29
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
-
-Marill
-Level: 29
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
-
-=== TRAINER_LOLA_4 ===
-Name: LOLA
-Class: Tuber F
-Pic: Tuber F
-Gender: Female
-Music: Girl
-Double Battle: No
-AI: Check Bad Move
-
-Marill
-Level: 32
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-
-Marill
-Level: 32
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-
-=== TRAINER_LOLA_5 ===
-Name: LOLA
-Class: Tuber F
-Pic: Tuber F
-Gender: Female
-Music: Girl
-Double Battle: No
-AI: Check Bad Move
-
-Azumarill
-Level: 35
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
-
-Azumarill
-Level: 35
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
-
-=== TRAINER_RICKY_1 ===
-Name: RICKY
-Class: Tuber M
-Pic: Tuber M
+=== TRAINER_BUMBLE ===
+Name: BUMBLE
+Class: Youngster
+Pic: Youngster
 Gender: Male
-Music: Girl
+Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Zigzagoon
-Level: 13
+Geodude
+Level: 20
 IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
-- Sand Attack
+
+Sentret
+Level: 20
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+
+Combee
+Level: 22
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+
+=== BUGTRAINER_MARK ===
+Name: MARK
+Class: Bug Catcher
+Pic: Bug Catcher
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Pineco @ Salac Berry
+Level: 25
+Ability: Sturdy
+IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
+- Spikes
+- Stealth Rock
+- Self Destruct
+
+Beedrill @ Focus Sash
+Level: 27
+IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
+- Toxic Spikes
+- Endeavor
+- Bug Bite
+
+Dustox @ Black Sludge
+Level: 28
+IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
+- Moonlight
+- Poison Powder
+- Psybeam
+- Venoshock
+
+=== GENTLEMAN_ARTHUR ===
+Name: ARTHUR
+Class: Gentleman
+Pic: Gentleman
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Nidoking @ Sitrus Berry
+Level: 28
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+- Sludge Bomb
+- Earth Power
+- Water Pulse
+- Shock Wave
+
+=== LASS_JESSICA ===
+Name: JESSICA
+Class: Lass
+Pic: Lass
+Gender: Female
+Music: Girl
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Miltank @ Lum Berry
+Level: 28
+IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+- Rollout
+- Milk Drink
+- Stomp
+- Attract
+
+=== EXPERT_HERBERT ===
+Name: HERBERT
+Class: Expert
+Pic: Expert M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Venonat @ Eviolite
+Level: 29
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+- Sleep Powder
+- Morning Sun
+- Psychic
+- Sludge Bomb
+
+Cherubi @ Eviolite
+Level: 29
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+- Solar Beam
+- Weather Ball
+- Sunny Day
+
+=== MATRON_ANGELA ===
+Name: ANGELA
+Class: Expert
+Pic: Expert F
+Gender: Female
+Music: Girl
+Double Battle: Yes
+AI: Check Bad Move
+
+Lucario @ Lum Berry
+Level: 30
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+- Ice Punch
+- Close Combat
+- Bullet Punch
+- Extreme Speed
+
+Arcanine @ Heat Rock
+Level: 30
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+- Flame Charge
+- Flare Blitz
+- Sunny Day
+- Fire Fang
+
+=== TRAINER_THIRD_ENCOUNTER_ROBERT ===
+Name: ROBERT
+Class: Pokefan 
+Pic: Brendan
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Gigalith @ Kings Rock
+Nature: Careful
+Level: 31
+IVs: 8 HP / 8 Atk / 8 Def / 8 SpA / 8 SpD / 8 Spe
+- Stealth Rock
+- Rock Slide
 - Headbutt
-- Tail Whip
-- Surf
+- Mud Slap
 
-=== TRAINER_SIMON ===
-Name: SIMON
-Class: Tuber M
-Pic: Tuber M
-Gender: Male
-Music: Girl
-Double Battle: No
-AI: Check Bad Move
+Clefable @ Leftovers
+Nature: Sassy
+Level: 31
+IVs: 8 HP / 8 Atk / 8 Def / 8 SpA / 8 SpD / 8 Spe
+- Moonblast
+- Moonlight
+- Minimize
+- Stored Power
 
-Azurill
-Level: 12
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Durant @ Salac Berry
+Nature: Adamant
+Level: 31
+IVs: 8 HP / 8 Atk / 8 Def / 8 SpA / 8 SpD / 8 Spe
+- Bug Bite
+- Metal Claw
+- Bite
+- Vise Grip
 
-Marill
-Level: 12
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Slowking @ Leftovers
+Nature: Relaxed
+Level: 31
+IVs: 8 HP / 8 Atk / 8 Def / 8 SpA / 8 SpD / 8 Spe
+- Water Pulse
+- Amnesia
+- Future Sight
+- Power Gem
 
-=== TRAINER_CHARLIE ===
-Name: CHARLIE
-Class: Tuber M
-Pic: Tuber M
-Gender: Male
-Music: Girl
-Double Battle: No
-AI: Check Bad Move
+Sirfetchd @ Sharp Beak
+Nature: Adamant
+Level: 31
+IVs: 8 HP / 8 Atk / 8 Def / 8 SpA / 8 SpD / 8 Spe
+- First Impression
+- Rock Smash
+- Brutal Swing
+- Pluck
 
-Marill
-Level: 26
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Jolteon @ Electric Gem
+Nature: Modest
+Level: 31
+IVs: 8 HP / 8 Atk / 8 Def / 8 SpA / 8 SpD / 8 Spe
+- Thunderbolt
+- Swift
+- Hidden Power
+- Thunder Wave
 
 === TRAINER_RICKY_2 ===
 Name: RICKY

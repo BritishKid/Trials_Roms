@@ -108,7 +108,7 @@ script CoralPort_EventScript_OldMan_Market  {
 script CoralPort_EventScript_Woman_Market {
     //marketshop selling something   
     lockall
-    msgbox("Hey would you like some items to help you in your battles?")
+    msgbox(format("Hey would you like some items to help you in your battles?"))
 	waitmessage	
 	pokemart(CoralPort_Market_Items)
     releaseall

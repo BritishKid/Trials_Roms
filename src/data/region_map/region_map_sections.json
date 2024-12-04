@@ -529,7 +529,7 @@
       "height": 1
     },
     {
-      "map_section": "MAPSEC_AQUA_HIDEOUT_OLD",
+      "map_section": "MAPSEC_OBSIDIAN_THICKET_OLD",
       "name": "{AQUA} HIDEOUT",
       "name_clone": true,
       "x": 19,
@@ -1584,8 +1584,8 @@
       "height": 1
     },
     {
-      "map_section": "MAPSEC_AQUA_HIDEOUT",
-      "name": "AQUA HIDEOUT",
+      "map_section": "MAPSEC_OBSIDIAN_THICKET",
+      "name": "OBSIDIAN THICKET",
       "x": 19,
       "y": 3,
       "width": 1,

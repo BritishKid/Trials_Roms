@@ -67,7 +67,7 @@
 #define MAPSEC_METEOR_FALLS                 0x3F
 #define MAPSEC_METEOR_FALLS2                0x40
 #define MAPSEC_MT_PYRE                      0x41
-#define MAPSEC_AQUA_HIDEOUT_OLD             0x42
+#define MAPSEC_OBSIDIAN_THICKET_OLD             0x42
 #define MAPSEC_SHOAL_CAVE                   0x43
 #define MAPSEC_SEAFLOOR_CAVERN              0x44
 #define MAPSEC_UNDERWATER_SEAFLOOR_CAVERN   0x45
@@ -198,7 +198,7 @@
 #define MAPSEC_VIAPOIS_CHAMBER              0xC2
 #define MAPSEC_EMBER_SPA                    0xC3
 #define MAPSEC_SPECIAL_AREA                 0xC4
-#define MAPSEC_AQUA_HIDEOUT                 0xC5
+#define MAPSEC_OBSIDIAN_THICKET                 0xC5
 #define MAPSEC_MAGMA_HIDEOUT                0xC6
 #define MAPSEC_MIRAGE_TOWER                 0xC7
 #define MAPSEC_BIRTH_ISLAND                 0xC8

@@ -25,6 +25,7 @@ script Route4b_Salt7_GyradosEncounterLeft {
     waitmovement(OBJ_EVENT_ID_PLAYER)
     applymovement(4, Movement_Salts7Route4b_ReachingPlayerLeft)
     waitmovement(4)
+    call(Route4b_Salts7Battle)
     releaseall
 }
 
@@ -35,6 +36,7 @@ script Route4b_Salt7_GyradosEncounterRight {
     waitmovement(OBJ_EVENT_ID_PLAYER)
     applymovement(4, Movement_Salts7Route4b_ReachingPlayerRight)
     waitmovement(4)
+    call(Route4b_Salts7Battle)
     releaseall
 }
 

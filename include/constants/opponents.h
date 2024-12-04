@@ -63,13 +63,13 @@
 #define TRAINER_BEACH_GYM_LEADER                       57 //Lola_1 originally was rematchable
 #define TRAINER_SANDYCLIFFCOLIN                      58
 #define TRAINER_SECOND_ENCOUNTER_ROBERT                         59
-#define TRAINER_LOLA_2                       60
-#define TRAINER_LOLA_3                       61
-#define TRAINER_LOLA_4                       62
-#define TRAINER_LOLA_5                       63
-#define TRAINER_RICKY_1                      64
-#define TRAINER_SIMON                        65
-#define TRAINER_CHARLIE                      66
+#define TRAINER_BUMBLE                       60
+#define BUGTRAINER_MARK                       61
+#define GENTLEMAN_ARTHUR                       62
+#define LASS_JESSICA                       63
+#define EXPERT_HERBERT                      64
+#define MATRON_ANGELA                        65
+#define TRAINER_THIRD_ENCOUNTER_ROBERT                      66
 #define TRAINER_RICKY_2                      67
 #define TRAINER_RICKY_3                      68
 #define TRAINER_RICKY_4                      69

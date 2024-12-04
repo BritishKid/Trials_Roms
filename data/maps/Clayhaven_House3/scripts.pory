@@ -1,0 +1,16 @@
+mapscripts Clayhaven_House3_MapScripts {}
+
+
+script Clayhaven_House3_EventScript_Woman {
+    lockall
+    faceplayer
+    if(flag(FLAG_RECEIVED_TM_CUT)) {
+        msgbox(format("How goes the journey?"))
+    }
+    if(!flag(FLAG_RECEIVED_TM_CUT)) {
+        msgbox(format("You're a trainer? Take this it could help in your journey."))
+        giveitem(ITEM_TM52)
+        setflag(FLAG_RECEIVED_TM_CUT)
+    }
+    releaseall
+}

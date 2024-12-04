@@ -295,7 +295,7 @@ gStdScripts_End::
 	.include "data/maps/MossdeepCity_PokemonCenter_2F/scripts.inc"
 	.include "data/maps/MossdeepCity_Mart/scripts.inc"
 	.include "data/maps/MossdeepCity_House3/scripts.inc"
-	.include "data/maps/MossdeepCity_StevensHouse/scripts.inc"
+	.include "data/maps/HemlockVillage_Orphanage/scripts.inc"
 	.include "data/maps/MossdeepCity_House4/scripts.inc"
 	.include "data/maps/MossdeepCity_SpaceCenter_1F/scripts.inc"
 	.include "data/maps/MossdeepCity_SpaceCenter_2F/scripts.inc"
@@ -1165,3 +1165,17 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/HiddenGrotto_Squirtle/scripts.inc"
 
 	.include "data/maps/CoralBeach_Gym_Interior/scripts.inc"
+
+	.include "data/maps/Route5/scripts.inc"
+
+	.include "data/maps/Obsidian_Thicket_1/scripts.inc"
+
+	.include "data/maps/Obsidian_Thicket_2/scripts.inc"
+
+	.include "data/maps/Obsidian_Thicket_3/scripts.inc"
+
+	.include "data/maps/Obsidian_Thicket_4/scripts.inc"
+
+	.include "data/maps/Route5b/scripts.inc"
+
+	.include "data/maps/Clayhaven_House3/scripts.inc"

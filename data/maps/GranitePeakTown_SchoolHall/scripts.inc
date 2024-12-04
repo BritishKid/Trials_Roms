@@ -25,6 +25,8 @@ GranitePeak_EventScript_EvolutionClassroomDoor_1:
 	return
 
 GranitePeak_EventScript_EvolutionClassroomDoor_2:
+# 12 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+	warp MAP_GRANITE_PEAK_TOWN_SCHOOL_EVOLUTION_ROOM, 5, 10
 	goto GranitePeak_EventScript_EvolutionClassroomDoor_1
 
 
@@ -42,6 +44,8 @@ GranitePeak_EventScript_ItemClassroomDoor_1:
 	return
 
 GranitePeak_EventScript_ItemClassroomDoor_2:
+# 21 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+	warp MAP_GRANITE_PEAK_TOWN_SCHOOL_ITEMS_ROOM, 5, 10
 	goto GranitePeak_EventScript_ItemClassroomDoor_1
 
 
@@ -59,6 +63,8 @@ GranitePeak_EventScript_MovesClassroomDoor_1:
 	return
 
 GranitePeak_EventScript_MovesClassroomDoor_2:
+# 30 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+	warp MAP_GRANITE_PEAK_TOWN_SCHOOL_MOVE_ROOM, 5, 10
 	goto GranitePeak_EventScript_MovesClassroomDoor_1
 
 
@@ -76,6 +82,8 @@ GranitePeak_EventScript_AbilitiesClassroomDoor_1:
 	return
 
 GranitePeak_EventScript_AbilitiesClassroomDoor_2:
+# 39 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+	warp MAP_GRANITE_PEAK_TOWN_SCHOOL_ABILITY_ROOM, 5, 10
 	goto GranitePeak_EventScript_AbilitiesClassroomDoor_1
 
 

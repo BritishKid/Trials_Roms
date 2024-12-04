@@ -4,8 +4,8 @@ CoralPort_House1_MapScripts::
 CoralPort_House1_EventScript_Trader::
 	lock
 	faceplayer
-	goto_if_set FLAG_FORTREE_NPC_TRADE_COMPLETED, CoralPort_House1_EventScript_TradeCompleted
-	setvar VAR_0x8008, INGAME_TRADE_PLUSLE
+	goto_if_set FLAG_HEMLOCK_NPC_TRADE_COMPLETED, CoralPort_House1_EventScript_TradeCompleted
+	setvar VAR_0x8008, INGAME_TRADE_MUDBRAY
 	copyvar VAR_0x8004, VAR_0x8008
 	specialvar VAR_RESULT, GetInGameTradeSpeciesInfo
 	copyvar VAR_0x8009, VAR_RESULT
@@ -26,7 +26,7 @@ CoralPort_House1_EventScript_Trader::
 	waitstate
 	bufferspeciesname STR_VAR_1, VAR_0x8009
 	msgbox CoralPort_House1_Text_MonYouTakeCare, MSGBOX_DEFAULT
-	setflag FLAG_FORTREE_NPC_TRADE_COMPLETED
+	setflag FLAG_HEMLOCK_NPC_TRADE_COMPLETED
 	release
 	end
 

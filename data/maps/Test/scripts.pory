@@ -2,7 +2,7 @@ mapscripts Test_MapScripts {}
 
 script LittlerootTown_ProfessorBirchsLab_EventScript_CharmanderSelection {
     lockall
-    if(!flag(FLAG_RECEIVED_KANTO_CHOICE)){
+    if(!flag(FLAG_LEFTOVERS_ORPHANAGE)){
         showmonpic(SPECIES_CHARMANDER, 10, 3)
         msgbox(format("Do you want to select Charmander?"), MSGBOX_YESNO)
         if(var(VAR_RESULT) == NO) {
@@ -13,7 +13,7 @@ script LittlerootTown_ProfessorBirchsLab_EventScript_CharmanderSelection {
             playfanfare(MUS_OBTAIN_ITEM)
             setflag(FLAG_RECEIVED_CHARMANDER)
             removeobject(8)
-            setflag(FLAG_RECEIVED_KANTO_CHOICE)
+            setflag(FLAG_LEFTOVERS_ORPHANAGE)
             setvar(VAR_STARTER_SELECTION_STATE, 2)
         }
         hidemonpic
@@ -23,7 +23,7 @@ script LittlerootTown_ProfessorBirchsLab_EventScript_CharmanderSelection {
 
 script LittlerootTown_ProfessorBirchsLab_EventScript_SquirtleSelection {
     lockall
-    if(!flag(FLAG_RECEIVED_KANTO_CHOICE)){
+    if(!flag(FLAG_LEFTOVERS_ORPHANAGE)){
         showmonpic(SPECIES_SQUIRTLE, 10, 3)
         msgbox(format("Do you want to select Squirtle?"), MSGBOX_YESNO)
         if(var(VAR_RESULT) == NO) {
@@ -34,7 +34,7 @@ script LittlerootTown_ProfessorBirchsLab_EventScript_SquirtleSelection {
             playfanfare(MUS_OBTAIN_ITEM)
             setflag(FLAG_RECEIVED_SQUIRTLE)
             removeobject(9)
-            setflag(FLAG_RECEIVED_KANTO_CHOICE)
+            setflag(FLAG_LEFTOVERS_ORPHANAGE)
             setvar(VAR_STARTER_SELECTION_STATE, 2)
         }
         hidemonpic
@@ -45,18 +45,19 @@ script LittlerootTown_ProfessorBirchsLab_EventScript_SquirtleSelection {
 
 script LittlerootTown_ProfessorBirchsLab_EventScript_BulbasaurSelection {
     lockall
-    if(!flag(FLAG_RECEIVED_KANTO_CHOICE)){
+    if(!flag(FLAG_LEFTOVERS_ORPHANAGE)){
         showmonpic(SPECIES_BULBASAUR, 10, 3)
         msgbox(format("Do you want to select Bulbasaur?"), MSGBOX_YESNO)
         if(var(VAR_RESULT) == NO) {
             msgbox(format("I'll choose another Pokémon"))
         }
         if(var(VAR_RESULT) == YES) {
-            givemon(SPECIES_BULBASAUR, 5, ITEM_ORAN_BERRY)
+            msgbox(format("Would you like the pokemon to be shiny?"), MSGBOX_YESNO)
+            givemon(SPECIES_BULBASAUR, 5, ITEM_ORAN_BERRY, isShiny=VAR_RESULT)
             playfanfare(MUS_OBTAIN_ITEM)
             setflag(FLAG_RECEIVED_BULBSAUR)
             removeobject(7)
-            setflag(FLAG_RECEIVED_KANTO_CHOICE)
+            setflag(FLAG_LEFTOVERS_ORPHANAGE)
             setvar(VAR_STARTER_SELECTION_STATE, 2)
         }
         hidemonpic

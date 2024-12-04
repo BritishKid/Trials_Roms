@@ -14,7 +14,7 @@ script GranitePeakSChool_EvolutionClass_Teacher {
     lockall
     faceplayer
     checkitem(ITEM_EVOLUTION_PATCH, 1)
-    if(!flag(FLAG_GET_SCHOOL_EEVEE)) {
+    if(!flag(FLAG_GET_SCHOOL_EEVEE) && var(VAR_RESULT) == TRUE) {
         call(GranitePeak_GivePlayer_Eevee)
     }
     if(var(VAR_EVOLUTION_ROOM_STUDENTS) == 5) {

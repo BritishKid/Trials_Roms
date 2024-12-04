@@ -437,7 +437,8 @@ CoralPort_EventScript_OldMan_Market_Text_7:
 
 CoralPort_EventScript_Woman_Market_Text_0:
 # 111 "data/maps/CoralPort/scripts.pory"
-	.string "Hey would you like some items to help you in your battles?$"
+	.string "Hey would you like some items to help\n"
+	.string "you in your battles?$"
 
 CoralPort_EventScript_Fishman_Market_Text_0:
 # 122 "data/maps/CoralPort/scripts.pory"
