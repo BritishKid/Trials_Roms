@@ -70,7 +70,7 @@
       "x": 8,
       "y": 3,
       "elevation": 0,
-      "var": "VAR_BEDROCK_TOWN_STATE",
+      "var": "VAR_RIVAL_STATE",
       "var_value": "1",
       "script": "PlayersHouse_1F_Trigger_StartJourney"
     }

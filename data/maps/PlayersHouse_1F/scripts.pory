@@ -25,7 +25,7 @@ script PlayersHouse_1F_Trigger_StartJourney {
 	// setflag(FLAG_RECEIVED_EXP_SHARE)
     msgbox(format("Anyway I'm going to get some juice!"), MSGBOX_DEFAULT)
     setflag(FLAG_RECEIVED_STARTER)
-    setvar(VAR_BEDROCK_TOWN_STATE, 2)
+    setvar(VAR_RIVAL_STATE, 2)
     applymovement(1, PlayersHouse_1F_RivalBrother_ToSink)
     waitmovement(1)
     releaseall

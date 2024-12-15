@@ -1,81 +1,63 @@
 CoralPort_Harbor_MapScripts::
 	.byte 0
 
-CoralPort_Harbor_EventScript_HiddenPowerGiver::
-	lock
-	faceplayer
-	goto_if_set FLAG_RECEIVED_TM_HIDDEN_POWER, CoralPort_Harbor_EventScript_ExplainHiddenPower
-	call_if_unset FLAG_MET_HIDDEN_POWER_GIVER, CoralPort_Harbor_EventScript_Greeting
-	msgbox CoralPort_Harbor_Text_CoinInWhichHand, MSGBOX_DEFAULT
-	multichoice 21, 8, MULTI_RIGHTLEFT, TRUE
-	switch VAR_RESULT
-	case 1, CoralPort_Harbor_EventScript_WrongGuess
-	msgbox CoralPort_Harbor_Text_CorrectTryAgainWhichHand, MSGBOX_DEFAULT
-	multichoice 21, 8, MULTI_RIGHTLEFT, TRUE
-	switch VAR_RESULT
-	case 1, CoralPort_Harbor_EventScript_WrongGuess
-	msgbox CoralPort_Harbor_Text_CorrectTryAgainWhichHand2, MSGBOX_DEFAULT
-	multichoice 21, 8, MULTI_RIGHTLEFT, TRUE
-	switch VAR_RESULT
-	case 0, CoralPort_Harbor_EventScript_WrongGuess
-	msgbox CoralPort_Harbor_Text_YourHiddenPowerHasAwoken, MSGBOX_DEFAULT
-	giveitem ITEM_TM_HIDDEN_POWER
-	goto_if_eq VAR_RESULT, 0, Common_EventScript_ShowBagIsFull
-	setflag FLAG_RECEIVED_TM_HIDDEN_POWER
-	msgbox CoralPort_Harbor_Text_ExplainHiddenPower, MSGBOX_DEFAULT
-	release
-	end
 
-CoralPort_Harbor_EventScript_Greeting::
-	msgbox CoralPort_Harbor_Text_HiddenPowersArousedByNature, MSGBOX_DEFAULT
-	setflag FLAG_MET_HIDDEN_POWER_GIVER
+Island1_TravelByBoat::
+# 6 "data/maps/CoralPort_Harbor/scripts.pory"
+	lockall
+# 7 "data/maps/CoralPort_Harbor/scripts.pory"
+	goto_if_set FLAG_RECEIVED_SS_TICKET, Island1_TravelByBoat_2
+Island1_TravelByBoat_1:
+# 19 "data/maps/CoralPort_Harbor/scripts.pory"
+	goto_if_unset FLAG_RECEIVED_SS_TICKET, Island1_TravelByBoat_5
+Island1_TravelByBoat_4:
+# 22 "data/maps/CoralPort_Harbor/scripts.pory"
+	releaseall
 	return
 
-CoralPort_Harbor_EventScript_ExplainHiddenPower::
-	msgbox CoralPort_Harbor_Text_ExplainHiddenPower, MSGBOX_DEFAULT
-	release
-	end
+Island1_TravelByBoat_2:
+# 8 "data/maps/CoralPort_Harbor/scripts.pory"
+	msgbox Island1_TravelByBoat_Text_0, MSGBOX_YESNO
+# 9 "data/maps/CoralPort_Harbor/scripts.pory"
+	compare VAR_RESULT, YES
+	goto_if_eq Island1_TravelByBoat_7
+	goto Island1_TravelByBoat_1
 
-CoralPort_Harbor_EventScript_WrongGuess::
-	msgbox CoralPort_Harbor_Text_YouGuessedWrong, MSGBOX_DEFAULT
-	release
-	end
+Island1_TravelByBoat_5:
+# 20 "data/maps/CoralPort_Harbor/scripts.pory"
+	msgbox Island1_TravelByBoat_Text_2
+	goto Island1_TravelByBoat_4
 
-CoralPort_Harbor_Text_HiddenPowersArousedByNature:
-	.string "People… POKéMON…\p"
-	.string "Their hidden powers are aroused by\n"
-	.string "living in natural environments…$"
+Island1_TravelByBoat_7:
+# 10 "data/maps/CoralPort_Harbor/scripts.pory"
+	goto_if_unset FLAG_COAST_TOWN_SAVED, Island1_TravelByBoat_10
+Island1_TravelByBoat_9:
+# 14 "data/maps/CoralPort_Harbor/scripts.pory"
+	goto_if_set FLAG_COAST_TOWN_SAVED, Island1_TravelByBoat_12
+	goto Island1_TravelByBoat_1
 
-CoralPort_Harbor_Text_CoinInWhichHand:
-	.string "Let this old woman see if your hidden\n"
-	.string "power has awoken…\p"
-	.string "I hold a coin in my hand.\p"
-	.string "Now, tell me, have I palmed it in\n"
-	.string "the right hand? Or in the left?$"
+Island1_TravelByBoat_10:
+# 11 "data/maps/CoralPort_Harbor/scripts.pory"
+	msgbox Island1_TravelByBoat_Text_1
+# 12 "data/maps/CoralPort_Harbor/scripts.pory"
+	warp MAP_ROUTE5, 24, 6
+	goto Island1_TravelByBoat_9
 
-CoralPort_Harbor_Text_CorrectTryAgainWhichHand:
-	.string "Oh! Yes, correct!\p"
-	.string "We shall try again.\p"
-	.string "In which hand have I palmed the coin?\n"
-	.string "The right or left?$"
+Island1_TravelByBoat_12:
+	goto Island1_TravelByBoat_1
 
-CoralPort_Harbor_Text_CorrectTryAgainWhichHand2:
-	.string "Oh! Yes, correct!\p"
-	.string "We shall try again.\p"
-	.string "In which hand have I palmed the coin?\n"
-	.string "The right or left?$"
 
-CoralPort_Harbor_Text_YourHiddenPowerHasAwoken:
-	.string "Oh! Splendid!\n"
-	.string "Your hidden power has awoken!\p"
-	.string "Here, take this and awaken the hidden\n"
-	.string "power of your POKéMON.$"
+Island1_TravelByBoat_Text_0:
+# 8 "data/maps/CoralPort_Harbor/scripts.pory"
+	.string "Would you like to travel to Island 2?$"
 
-CoralPort_Harbor_Text_ExplainHiddenPower:
-	.string "HIDDEN POWER is a move that changes\n"
-	.string "with the POKéMON.$"
+Island1_TravelByBoat_Text_1:
+# 11 "data/maps/CoralPort_Harbor/scripts.pory"
+	.string "Due to trouble in the Islands Port we\n"
+	.string "will have to drop you on the beach for\l"
+	.string "your safety.$"
 
-CoralPort_Harbor_Text_YouGuessedWrong:
-	.string "No, too bad.\n"
-	.string "You guessed wrong.$"
-
+Island1_TravelByBoat_Text_2:
+# 20 "data/maps/CoralPort_Harbor/scripts.pory"
+	.string "You need to have a ticket if you wish to\n"
+	.string "travel on this boat.$"

@@ -1737,140 +1737,193 @@ IVs: 8 HP / 8 Atk / 8 Def / 8 SpA / 8 SpD / 8 Spe
 - Hidden Power
 - Thunder Wave
 
-=== TRAINER_RICKY_2 ===
-Name: RICKY
-Class: Tuber M
-Pic: Tuber M
+=== TRAINER_KEVIN_GYMLEADER ===
+Name: KEVIN
+Class: Leader
+Pic: Wally
 Gender: Male
-Music: Girl
+Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Linoone
-Level: 27
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
-- Sand Attack
+Koffing @ Eviolite
+Level: 31
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+- Will O Wisp
+- Pain Split
+- Sludge Bomb
+- Toxic Spikes
+
+Seviper @ Expert Belt
+Level: 31
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+- Poison Jab
+- Night Slash
+- Giga Drain
+- Bulldoze
+
+Croagunk @ Black Belt
+Level: 31
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+- Knock Off
+- Sludge Bomb
+- Vacuum Wave
+- Drain Punch
+
+Overqwil @ Black Sludge
+Level: 31
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+- Barb Barrage
 - Pin Missile
-- Tail Whip
-- Surf
+- Crunch
+- Destiny Bond
 
-=== TRAINER_RICKY_3 ===
-Name: RICKY
-Class: Tuber M
-Pic: Tuber M
+Salazzle @ Shuca Berry
+Level: 31
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+- Incinerate
+- Hidden Power
+- Sludge Wave
+- Toxic
+
+=== OT1YOUNSGTER ===
+Name: CLREFUERZO
+Class: Youngster
+Pic: Youngster
 Gender: Male
-Music: Girl
+Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Linoone
-Level: 30
+Breloom
+Level: 25
 IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
-- Sand Attack
-- Pin Missile
-- Tail Whip
-- Surf
 
-=== TRAINER_RICKY_4 ===
-Name: RICKY
-Class: Tuber M
-Pic: Tuber M
+Mareanie
+Level: 25
+IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
+
+Joltik
+Level: 25
+IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
+
+=== CAMPER_KATTY ===
+Name: OCTOBER
+Class: Camper
+Pic: Camper
 Gender: Male
-Music: Girl
+Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Linoone
-Level: 33
+Pachirisu
+Level: 20
 IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-- Sand Attack
-- Pin Missile
-- Tail Whip
-- Surf
 
-=== TRAINER_RICKY_5 ===
-Name: RICKY
-Class: Tuber M
-Pic: Tuber M
-Gender: Male
+Shinx
+Level: 20
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+
+Growlithe
+Level: 25
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+
+=== HEMLOCKGYM_TRAINER_TESSA ===
+Name: TESSA
+Class: Picnicker
+Pic: Picnicker
+Gender: Female
 Music: Girl
 Double Battle: No
 AI: Check Bad Move
 
-Linoone
-Level: 36
+Grimer Alolan
+Level: 28
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
-- Sand Attack
-- Pin Missile
-- Tail Whip
-- Surf
 
-=== TRAINER_RANDALL ===
-Name: RANDALL
+=== HEMLOCKGYM_TRAINER_PABLO ===
+Name: PABLO
+Class: Gentleman
+Pic: Gentleman
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Croagunk
+Level: 27
+IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+
+Roselia
+Level: 27
+IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+
+Arbok
+Level: 27
+IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+
+=== HEMLOCKGYM_TRAINER_VICTOR ===
+Name: VICTOR
+Class: Camper
+Pic: Camper
+Gender: Male
+Music: Cool
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Koffing
+Level: 26
+IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+
+Nidorino
+Level: 26
+IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+
+Nidorina
+Level: 26
+IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+
+=== HEMLOCKGYM_TRAINER_OLLIE ===
+Name: OLLIE
 Class: Cooltrainer
 Pic: Cooltrainer M
+Gender: Male
+Music: Cool
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Steelix
+Level: 27
+IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+- Poison tail
+- Bulldoze
+- Rock Throw
+
+=== HEMLOCKGYM_TRAINER_CHLOE ===
+Name: CHLOE
+Class: Picnicker
+Pic: Picnicker
 Gender: Male
 Music: Cool
 Items: Hyper Potion
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
 
-Swellow
+Trubbish
 Level: 26
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Quick Attack
-- Agility
-- Wing Attack
+IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
-=== TRAINER_PARKER ===
-Name: PARKER
-Class: Cooltrainer
-Pic: Cooltrainer M
-Gender: Male
-Music: Cool
-Items: Hyper Potion
-Double Battle: No
-AI: Check Bad Move / Try To Faint / Check Viability
-
-Spinda
+Tentacool
 Level: 26
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Teeter Dance
-- Dizzy Punch
-- Focus Punch
+IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
-=== TRAINER_GEORGE ===
-Name: GEORGE
-Class: Cooltrainer
-Pic: Cooltrainer M
-Gender: Male
-Music: Cool
-Items: Hyper Potion
-Double Battle: No
-AI: Check Bad Move / Try To Faint / Check Viability
-
-Slakoth @ Sitrus Berry
+Ariados
 Level: 26
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Slack Off
-- Counter
-- Shadow Ball
+IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
-=== TRAINER_BERKE ===
-Name: BERKE
-Class: Cooltrainer
-Pic: Cooltrainer M
-Gender: Male
-Music: Cool
-Items: Hyper Potion
-Double Battle: No
-AI: Check Bad Move / Try To Faint / Check Viability
-
-Vigoroth
+Gloom
 Level: 26
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Focus Energy
-- Slash
+IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
 === TRAINER_BRAXTON ===
 Name: BRAXTON

@@ -1,1 +1,48 @@
 mapscripts Obsidian_Thicket_1_MapScripts {}
+
+
+script ObsidianThicket1_TrainerBattle_Youngster {
+    trainerbattle_single(OT1YOUNSGTER, OT_Youngster_Intro, OT_Youngster_Outro, Increase_Trainers_Beaten)
+    msgbox(OT_Youngster_Postbattle, MSGBOX_AUTOCLOSE)
+    end
+}
+
+script ObsidianThicket1_TrainerBattle_Katty {
+    trainerbattle_single(CAMPER_KATTY, OT_Katty_Intro, OT_Katty_Outro, Katty_Postbattle_Script)
+    msgbox(OT_Katty_Postbattle, MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Katty_Postbattle_Script {
+    msgbox(format("I think you've earned this."))
+    giveegg(SPECIES_GROWLITHE)
+    msgbox(format("Take good care of it."))
+    call(Increase_Trainers_Beaten)
+    releaseall
+}
+
+//text
+
+text OT_Youngster_Intro {
+    format("I love all the Pokemon here.")
+}
+
+text OT_Youngster_Outro {
+    format("I'm going to keep training.")
+}
+
+text OT_Youngster_Postbattle {
+    format("Battle, battle, battle, get stronger...")
+}
+
+text OT_Katty_Intro {
+    format("Hey! You there!\lAre you going to Hemlock Village too?")
+}
+
+text OT_Katty_Outro {
+    format("What an electrifying battle...")
+}
+
+text OT_Katty_Postbattle {
+    format("Did that egg hatch yet?")
+}

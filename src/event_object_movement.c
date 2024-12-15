@@ -2375,7 +2375,7 @@ void GetFollowerAction(struct ScriptContext *ctx) // Essentially a big switch fo
         case MAPSEC_CORAL_PORT:
             multi = TYPE_FLYING;
             break;
-        case MAPSEC_MOSSDEEP_CITY:
+        case MAPSEC_HEMLOCK_VILLAGE:
         case MAPSEC_SAFFRON_CITY:
             multi = TYPE_PSYCHIC;
             break;

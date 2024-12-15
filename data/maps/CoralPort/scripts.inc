@@ -287,7 +287,7 @@ SandyShoreCity_RivalBattleForTicket::
 
 SandyShoreCity_Rival_PostbattleScript::
 # 169 "data/maps/CoralPort/scripts.pory"
-	setvar VAR_RIVAL_FIGHT_2, 3
+	setvar VAR_RIVAL_STATE, 5
 # 170 "data/maps/CoralPort/scripts.pory"
 	msgbox SandyShoreCity_Rival_PostbattleScript_Text_0
 # 171 "data/maps/CoralPort/scripts.pory"
@@ -299,11 +299,11 @@ SandyShoreCity_Rival_PostbattleScript::
 # 174 "data/maps/CoralPort/scripts.pory"
 	setflag FLAG_RECEIVED_SS_TICKET
 # 175 "data/maps/CoralPort/scripts.pory"
-	applymovement 1, Movement_SandyBeach_RivalLeaves
+	applymovement 7, Movement_SandyBeach_RivalLeaves
 # 176 "data/maps/CoralPort/scripts.pory"
-	waitmovement 1
+	waitmovement 7
 # 177 "data/maps/CoralPort/scripts.pory"
-	removeobject 1
+	removeobject 7
 # 178 "data/maps/CoralPort/scripts.pory"
 	releaseall
 	return

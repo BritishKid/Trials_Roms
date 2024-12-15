@@ -16,7 +16,7 @@ PlayersBedroom_EventScript_Notebook::
 	clearflag FLAG_LEVEL_CAPS_ON
 PlayersBedroom_EventScript_Notebook_1:
 # 14 "data/maps/PlayersBedroom/scripts.pory"
-	compare VAR_BEDROCK_TOWN_STATE, 0
+	compare VAR_RIVAL_STATE, 0
 	goto_if_eq PlayersBedroom_EventScript_Notebook_6
 PlayersBedroom_EventScript_Notebook_5:
 # 17 "data/maps/PlayersBedroom/scripts.pory"
@@ -30,7 +30,7 @@ PlayersBedroom_EventScript_Notebook_2:
 
 PlayersBedroom_EventScript_Notebook_6:
 # 15 "data/maps/PlayersBedroom/scripts.pory"
-	setvar VAR_BEDROCK_TOWN_STATE, 1
+	setvar VAR_RIVAL_STATE, 1
 	goto PlayersBedroom_EventScript_Notebook_5
 
 
@@ -48,7 +48,7 @@ PlayersBedroom_Trigger_Setup::
 	clearflag FLAG_LEVEL_CAPS_ON
 PlayersBedroom_Trigger_Setup_1:
 # 29 "data/maps/PlayersBedroom/scripts.pory"
-	setvar VAR_BEDROCK_TOWN_STATE, 1
+	setvar VAR_RIVAL_STATE, 1
 # 30 "data/maps/PlayersBedroom/scripts.pory"
 	releaseall
 	return

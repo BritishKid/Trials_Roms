@@ -304,7 +304,7 @@ BeachGym_Gym_Leader_PostbattleScript::
 # 149 "data/maps/CoralBeach_Gym_Interior/scripts.pory"
 	setflag FLAG_BADGE02_GET
 # 150 "data/maps/CoralBeach_Gym_Interior/scripts.pory"
-	setvar VAR_RIVAL_FIGHT_2, 2
+	setvar VAR_RIVAL_STATE, 4
 # 151 "data/maps/CoralBeach_Gym_Interior/scripts.pory"
 	clearflag FLAG_TURN_ON_INCREASED_XP
 # 152 "data/maps/CoralBeach_Gym_Interior/scripts.pory"

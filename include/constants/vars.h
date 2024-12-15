@@ -97,7 +97,7 @@
 #define VAR_POKELOT_PRIZE_PLACE                          0x404D
 #define VAR_TOWN_2_QUEST_STATE                                0x404E // USED
 #define VAR_LOTAD_SIZE_RECORD                            0x404F
-#define VAR_BEDROCK_TOWN_STATE                           0x4050 //USED
+#define VAR_RIVAL_STATE                           0x4050 //USED for rival state
 #define VAR_CLAYHAVEN_STATE                            0x4051
 #define VAR_BERRY_SKITTY_STATE                           0x4052 // USED
 #define VAR_LAVARIDGE_TOWN_STATE                         0x4053
@@ -117,7 +117,7 @@
 #define VAR_CRAFTING_STATION_STATE                       0x4061 // Craft Tutorial
 #define VAR_PLATEQUEST_STATE                             0x4062 // Used for plates
 #define VAR_ROUTE104_STATE                               0x4063
-#define VAR_RIVAL_FIGHT_2                               0x4064 //Used
+#define VAR_RIVAL_FIGHT_2                               0x4064 //UNUSED
 #define VAR_EVOLUTION_STONE_HUNTING                               0x4065 // Used
 #define VAR_ROUTE4_DOJO_STATE                               0x4066 // Used
 #define VAR_GYM2_QUESTIONS                               0x4067 // 

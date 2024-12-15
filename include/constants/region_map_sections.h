@@ -14,7 +14,7 @@
 #define MAPSEC_RUSTBORO_CITY                0x0A
 #define MAPSEC_CORAL_PORT                 0x0B
 #define MAPSEC_LILYCOVE_CITY                0x0C
-#define MAPSEC_MOSSDEEP_CITY                0x0D
+#define MAPSEC_HEMLOCK_VILLAGE                0x0D
 #define MAPSEC_SOOTOPOLIS_CITY              0x0E
 #define MAPSEC_EVER_GRANDE_CITY             0x0F
 #define MAPSEC_ROUTE_1                    0x10
@@ -132,7 +132,7 @@
 #define MAPSEC_S_S_ANNE                     0x80
 #define MAPSEC_UNDERGROUND_PATH             0x81
 #define MAPSEC_UNDERGROUND_PATH_2           0x82
-#define MAPSEC_DIGLETTS_CAVE                0x83
+#define MAPSEC_FLOWERGLADE                0x83
 #define MAPSEC_KANTO_VICTORY_ROAD           0x84
 #define MAPSEC_ROCKET_HIDEOUT               0x85
 #define MAPSEC_SILPH_CO                     0x86

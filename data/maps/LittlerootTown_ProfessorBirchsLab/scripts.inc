@@ -1055,7 +1055,7 @@ LittlerootTown_ProfessorBirchsLab_EventScript_GivePokedex::
 # 528 "data/maps/LittlerootTown_ProfessorBirchsLab/scripts.pory"
 	setvar VAR_LITTLEROOT_RIVAL_STATE, 4
 # 529 "data/maps/LittlerootTown_ProfessorBirchsLab/scripts.pory"
-	setvar VAR_BEDROCK_TOWN_STATE, 3
+	setvar VAR_RIVAL_STATE, 3
 # 530 "data/maps/LittlerootTown_ProfessorBirchsLab/scripts.pory"
 	releaseall
 # 531 "data/maps/LittlerootTown_ProfessorBirchsLab/scripts.pory"

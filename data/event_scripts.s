@@ -1179,3 +1179,11 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/Route5b/scripts.inc"
 
 	.include "data/maps/Clayhaven_House3/scripts.inc"
+
+	.include "data/maps/Hemlock_Gym_Interior/scripts.inc"
+
+	.include "data/maps/NewMap1/scripts.inc"
+
+	.include "data/maps/Route6/scripts.inc"
+
+	.include "data/maps/FlowerGlade/scripts.inc"

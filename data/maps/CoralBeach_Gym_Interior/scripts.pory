@@ -147,7 +147,7 @@ script BeachGym_Gym_Leader_PostbattleScript {
     special(DoDomeConfetti)
     // subquestmenu(QUEST_MENU_COMPLETE_QUEST, QUEST_POKEMON_LEAGUE, SUB_QUEST_SHOAL_BADGE)
     setflag(FLAG_BADGE02_GET)
-    setvar(VAR_RIVAL_FIGHT_2, 2)
+    setvar(VAR_RIVAL_STATE, 4)
     clearflag(FLAG_TURN_ON_INCREASED_XP)
     msgbox(format("Also please take this TM"))
     playfanfare(MUS_OBTAIN_ITEM)

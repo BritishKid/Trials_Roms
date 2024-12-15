@@ -65,7 +65,7 @@ MahogonyHills2_EventScript_RivalEncounter::
 
 MahoganyHills2_Rival_PostScript::
 # 38 "data/maps/MahogonyHills_2/scripts.pory"
-	setvar VAR_BEDROCK_TOWN_STATE, 3
+	setvar VAR_RIVAL_STATE, 3
 # 39 "data/maps/MahogonyHills_2/scripts.pory"
 	setflag FLAG_MAHOGANY_HILLS_RIVAL_BEATEN
 # 40 "data/maps/MahogonyHills_2/scripts.pory"

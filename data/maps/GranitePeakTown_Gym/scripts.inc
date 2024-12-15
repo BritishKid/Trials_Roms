@@ -18,13 +18,13 @@ GranitePeakTown_Gym_OnLoad:
 GranitePeakTown_Gym_EventScript_OpenUnlockedDoors::
 	setvar VAR_0x8005, 1
 	call GranitePeakTown_Gym_EventScript_OpenGymEntranceDoors
-	call_if_defeated TRAINER_RANDALL, GranitePeakTown_Gym_EventScript_OpenSpeedRoomDoors
+	call_if_defeated HEMLOCKGYM_TRAINER_PABLO, GranitePeakTown_Gym_EventScript_OpenSpeedRoomDoors
 	call_if_defeated TRAINER_MARY, GranitePeakTown_Gym_EventScript_OpenAccuracyRoomDoors
-	call_if_defeated TRAINER_PARKER, GranitePeakTown_Gym_EventScript_OpenConfusionRoomDoors
+	call_if_defeated HEMLOCKGYM_TRAINER_VICTOR, GranitePeakTown_Gym_EventScript_OpenConfusionRoomDoors
 	call_if_defeated TRAINER_ALEXIA, GranitePeakTown_Gym_EventScript_OpenDefenseRoomDoors
-	call_if_defeated TRAINER_GEORGE, GranitePeakTown_Gym_EventScript_OpenRecoveryRoomDoors
+	call_if_defeated HEMLOCKGYM_TRAINER_OLLIE, GranitePeakTown_Gym_EventScript_OpenRecoveryRoomDoors
 	call_if_defeated TRAINER_JODY, GranitePeakTown_Gym_EventScript_OpenStrengthRoomDoors
-	call_if_defeated TRAINER_BERKE, GranitePeakTown_Gym_EventScript_OpenOHKORoomDoors
+	call_if_defeated HEMLOCKGYM_TRAINER_CHLOE, GranitePeakTown_Gym_EventScript_OpenOHKORoomDoors
 	end
 
 GranitePeakTown_Gym_EventScript_UnlockAllDoors::
@@ -774,7 +774,7 @@ GranitePeakTown_Gym_EventScript_AccuracyRoomDoor::
 
 GranitePeakTown_Gym_EventScript_ConfusionRoomDoor::
 	lockall
-	goto_if_not_defeated TRAINER_RANDALL, GranitePeakTown_Gym_EventScript_DoorLocked
+	goto_if_not_defeated HEMLOCKGYM_TRAINER_PABLO, GranitePeakTown_Gym_EventScript_DoorLocked
 	setvar VAR_0x8008, 7
 	setvar VAR_0x8009, 46
 	msgbox GranitePeakTown_Gym_Text_EnterConfusionRoom, MSGBOX_YESNO
@@ -784,7 +784,7 @@ GranitePeakTown_Gym_EventScript_ConfusionRoomDoor::
 
 GranitePeakTown_Gym_EventScript_LeftDefenseRoomDoor::
 	lockall
-	goto_if_not_defeated TRAINER_RANDALL, GranitePeakTown_Gym_EventScript_DoorLocked
+	goto_if_not_defeated HEMLOCKGYM_TRAINER_PABLO, GranitePeakTown_Gym_EventScript_DoorLocked
 	setvar VAR_0x8008, 1
 	setvar VAR_0x8009, 59
 	msgbox GranitePeakTown_Gym_Text_EnterDefenseRoom, MSGBOX_YESNO
@@ -814,7 +814,7 @@ GranitePeakTown_Gym_EventScript_RecoveryRoomDoor::
 
 GranitePeakTown_Gym_EventScript_LeftStrengthRoomDoor::
 	lockall
-	goto_if_not_defeated TRAINER_PARKER, GranitePeakTown_Gym_EventScript_DoorLocked
+	goto_if_not_defeated HEMLOCKGYM_TRAINER_VICTOR, GranitePeakTown_Gym_EventScript_DoorLocked
 	setvar VAR_0x8008, 1
 	setvar VAR_0x8009, 20
 	msgbox GranitePeakTown_Gym_Text_EnterStrengthRoom, MSGBOX_YESNO
@@ -844,7 +844,7 @@ GranitePeakTown_Gym_EventScript_LeftOHKORoomDoor::
 
 GranitePeakTown_Gym_EventScript_RightOHKORoomDoor::
 	lockall
-	goto_if_not_defeated TRAINER_GEORGE, GranitePeakTown_Gym_EventScript_DoorLocked
+	goto_if_not_defeated HEMLOCKGYM_TRAINER_OLLIE, GranitePeakTown_Gym_EventScript_DoorLocked
 	setvar VAR_0x8008, 7
 	setvar VAR_0x8009, 33
 	msgbox GranitePeakTown_Gym_Text_EnterOHKORoom, MSGBOX_YESNO
@@ -864,7 +864,7 @@ GranitePeakTown_Gym_EventScript_LeftGymLeadersRoomDoor::
 
 GranitePeakTown_Gym_EventScript_RightGymLeadersRoomDoor::
 	lockall
-	goto_if_not_defeated TRAINER_BERKE, GranitePeakTown_Gym_EventScript_DoorLocked
+	goto_if_not_defeated HEMLOCKGYM_TRAINER_CHLOE, GranitePeakTown_Gym_EventScript_DoorLocked
 	setvar VAR_0x8008, 7
 	setvar VAR_0x8009, 7
 	msgbox GranitePeakTown_Gym_Text_EnterGymLeadersRoom, MSGBOX_YESNO
@@ -873,7 +873,7 @@ GranitePeakTown_Gym_EventScript_RightGymLeadersRoomDoor::
 	end
 
 GranitePeakTown_Gym_EventScript_Randall::
-	trainerbattle_single TRAINER_RANDALL, GranitePeakTown_Gym_Text_RandallIntro, GranitePeakTown_Gym_Text_RandallDefeat, GranitePeakTown_Gym_EventScript_SlideOpenSpeedRoomDoors
+	trainerbattle_single HEMLOCKGYM_TRAINER_PABLO, GranitePeakTown_Gym_Text_RandallIntro, GranitePeakTown_Gym_Text_RandallDefeat, GranitePeakTown_Gym_EventScript_SlideOpenSpeedRoomDoors
 	goto_if_set FLAG_DEFEATED_PETALBURG_GYM, GranitePeakTown_Gym_EventScript_RandallPostBadge
 	msgbox GranitePeakTown_Gym_Text_RandallPostBattle, MSGBOX_AUTOCLOSE
 	end
@@ -890,7 +890,7 @@ GranitePeakTown_Gym_EventScript_RandallPostBadge::
 	end
 
 GranitePeakTown_Gym_EventScript_Parker::
-	trainerbattle_single TRAINER_PARKER, GranitePeakTown_Gym_Text_ParkerIntro, GranitePeakTown_Gym_Text_ParkerDefeat, GranitePeakTown_Gym_EventScript_SlideOpenConfusionRoomDoors
+	trainerbattle_single HEMLOCKGYM_TRAINER_VICTOR, GranitePeakTown_Gym_Text_ParkerIntro, GranitePeakTown_Gym_Text_ParkerDefeat, GranitePeakTown_Gym_EventScript_SlideOpenConfusionRoomDoors
 	goto_if_set FLAG_DEFEATED_PETALBURG_GYM, GranitePeakTown_Gym_EventScript_ParkerPostBadge
 	msgbox GranitePeakTown_Gym_Text_ParkerPostBattle, MSGBOX_AUTOCLOSE
 	end
@@ -907,7 +907,7 @@ GranitePeakTown_Gym_EventScript_ParkerPostBadge::
 	end
 
 GranitePeakTown_Gym_EventScript_George::
-	trainerbattle_single TRAINER_GEORGE, GranitePeakTown_Gym_Text_GeorgeIntro, GranitePeakTown_Gym_Text_GeorgeDefeat, GranitePeakTown_Gym_EventScript_SlideOpenRecoveryRoomDoors
+	trainerbattle_single HEMLOCKGYM_TRAINER_OLLIE, GranitePeakTown_Gym_Text_GeorgeIntro, GranitePeakTown_Gym_Text_GeorgeDefeat, GranitePeakTown_Gym_EventScript_SlideOpenRecoveryRoomDoors
 	goto_if_set FLAG_DEFEATED_PETALBURG_GYM, GranitePeakTown_Gym_EventScript_GeorgePostBadge
 	msgbox GranitePeakTown_Gym_Text_GeorgePostBattle, MSGBOX_AUTOCLOSE
 	end
@@ -924,7 +924,7 @@ GranitePeakTown_Gym_EventScript_GeorgePostBadge::
 	end
 
 GranitePeakTown_Gym_EventScript_Berke::
-	trainerbattle_single TRAINER_BERKE, GranitePeakTown_Gym_Text_BerkeIntro, GranitePeakTown_Gym_Text_BerkeDefeat, GranitePeakTown_Gym_EventScript_SlideOpenOHKORoomDoors
+	trainerbattle_single HEMLOCKGYM_TRAINER_CHLOE, GranitePeakTown_Gym_Text_BerkeIntro, GranitePeakTown_Gym_Text_BerkeDefeat, GranitePeakTown_Gym_EventScript_SlideOpenOHKORoomDoors
 	goto_if_set FLAG_DEFEATED_PETALBURG_GYM, GranitePeakTown_Gym_EventScript_BerkePostBadge
 	msgbox GranitePeakTown_Gym_Text_BerkePostBattle, MSGBOX_AUTOCLOSE
 	end

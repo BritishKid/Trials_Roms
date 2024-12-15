@@ -180,7 +180,7 @@
       "x": 23,
       "y": 17,
       "elevation": 0,
-      "var": "VAR_BEDROCK_TOWN_STATE",
+      "var": "VAR_RIVAL_STATE",
       "var_value": "2",
       "script": "MahoganyHills2_Trigger_BridgeLeft"
     },
@@ -189,7 +189,7 @@
       "x": 24,
       "y": 17,
       "elevation": 0,
-      "var": "VAR_BEDROCK_TOWN_STATE",
+      "var": "VAR_RIVAL_STATE",
       "var_value": "2",
       "script": "MahoganyHills2_Trigger_BridgeRight"
     },

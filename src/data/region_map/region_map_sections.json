@@ -105,8 +105,8 @@
       "height": 1
     },
     {
-      "map_section": "MAPSEC_MOSSDEEP_CITY",
-      "name": "MOSSDEEP CITY",
+      "map_section": "MAPSEC_HEMLOCK_VILLAGE",
+      "name": "HEMLOCK VILLAGE",
       "x": 24,
       "y": 5,
       "width": 2,
@@ -1053,8 +1053,8 @@
       "height": 1
     },
     {
-      "map_section": "MAPSEC_DIGLETTS_CAVE",
-      "name": "DIGLETT'S CAVE",
+      "map_section": "MAPSEC_FLOWERGLADE",
+      "name": "FLOWER GLADE",
       "x": 0,
       "y": 0,
       "width": 1,

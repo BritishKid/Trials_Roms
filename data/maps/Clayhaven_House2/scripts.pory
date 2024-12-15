@@ -5,6 +5,9 @@ mapscripts Clayhaven_House2_MapScripts {
 script Town2_EventScript_QuestStart {
     lockall
     faceplayer
+    if(var(VAR_TOWN_2_QUEST_STATE) == 1) {
+        msgbox(format("If you find her can you tell her to come back, I'm starting to worry."))
+    }
     if(var(VAR_TOWN_2_QUEST_STATE) == 0) {
         msgbox(format("Have you seen my daughter? She should be back by now. \p She went down to Mahogany Hills to train her Pokémon. I hope she is okay."))
         msgbox(format("If you find her can you tell her to come back, I'm starting to worry."))
@@ -12,9 +15,6 @@ script Town2_EventScript_QuestStart {
         setvar(VAR_TOWN_2_QUEST_STATE, 1)
         clearflag(FLAG_HIDE_MAHOGANY_HILLS_OBJECT)
     } 
-    if(var(VAR_TOWN_2_QUEST_STATE) == 1) {
-        msgbox(format("If you find her can you tell her to come back, I'm starting to worry."))
-    }
     if (var(VAR_TOWN_2_QUEST_STATE) == 2) {
         msgbox(format("Thank you for your help. She told me everything, she was lucky you found here."))
         msgbox(format("Please take this as a thank you, it might help"))

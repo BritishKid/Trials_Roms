@@ -1,1 +1,25 @@
 mapscripts Route5_MapScripts {}
+
+
+
+script Route5_IslandBoat {
+    lockall
+    faceplayer
+    msgbox(format("Would you like to travel to Island 1?"), MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES) {
+        warp(MAP_CORAL_PORT_HARBOR, 8, 11)
+    }
+    releaseall
+}
+
+
+script Route5_Sign_Directinos {
+    lockall
+    if(!flag(FLAG_COAST_TOWN_SAVED)) {
+        msgbox(format("Someone has scrawled over the sign to say:\lTHIS IS OUR ISLAND!"))
+    }
+    else {
+        msgbox(format("-> TOWN TO BE NAMED\l<- Hemlock Village"))
+    }
+    releaseall
+}

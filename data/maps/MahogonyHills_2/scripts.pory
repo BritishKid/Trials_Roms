@@ -35,7 +35,7 @@ script MahogonyHills2_EventScript_RivalEncounter {
 }
 
 script MahoganyHills2_Rival_PostScript {
-    setvar(VAR_BEDROCK_TOWN_STATE, 3)
+    setvar(VAR_RIVAL_STATE, 3)
     setflag(FLAG_MAHOGANY_HILLS_RIVAL_BEATEN)
     msgbox(format("You might have won but I still have more badges than you. That's what matters really."))
     msgbox(format("You should probably take this to, it will help once you've got your first badge."))

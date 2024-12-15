@@ -117,7 +117,9 @@
     "Route5",
     "Route5b",
     "MossdeepCity",
-    "MauvilleCity"
+    "MauvilleCity",
+    "Route6",
+    "FlowerGlade"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",
@@ -467,7 +469,8 @@
     "MeteorFalls_StevensCave",
     "PlatefallCave_GF",
     "SandyCliff_Cave",
-    "Crystal_Cove_Cave"
+    "Crystal_Cove_Cave",
+    "NewMap1"
   ],
   "gMapGroup_IndoorDynamic": [
     "SecretBase_RedCave1",
@@ -700,6 +703,7 @@
   ],
   "gMapGroup_GymInterior": [
     "MahoganyHills_Gym_Interior",
-    "CoralBeach_Gym_Interior"
+    "CoralBeach_Gym_Interior",
+    "Hemlock_Gym_Interior"
   ]
 }

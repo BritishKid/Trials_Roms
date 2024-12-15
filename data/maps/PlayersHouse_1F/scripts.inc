@@ -45,7 +45,7 @@ PlayersHouse_1F_Trigger_StartJourney::
 # 27 "data/maps/PlayersHouse_1F/scripts.pory"
 	setflag FLAG_RECEIVED_STARTER
 # 28 "data/maps/PlayersHouse_1F/scripts.pory"
-	setvar VAR_BEDROCK_TOWN_STATE, 2
+	setvar VAR_RIVAL_STATE, 2
 # 29 "data/maps/PlayersHouse_1F/scripts.pory"
 	applymovement 1, PlayersHouse_1F_RivalBrother_ToSink
 # 30 "data/maps/PlayersHouse_1F/scripts.pory"

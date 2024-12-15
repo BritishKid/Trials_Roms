@@ -78,6 +78,8 @@
 #define MAP_ROUTE5B       (1 | (2 << 8))
 #define MAP_MOSSDEEP_CITY (2 | (2 << 8))
 #define MAP_MAUVILLE_CITY (3 | (2 << 8))
+#define MAP_ROUTE6        (4 | (2 << 8))
+#define MAP_FLOWER_GLADE  (5 | (2 << 8))
 
 // gMapGroup_IndoorLittleroot
 #define MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_1F    (0 | (3 << 8))
@@ -428,6 +430,7 @@
 #define MAP_PLATEFALL_CAVE_GF                        (108 | (26 << 8))
 #define MAP_SANDY_CLIFF_CAVE                         (109 | (26 << 8))
 #define MAP_CRYSTAL_COVE_CAVE                        (110 | (26 << 8))
+#define MAP_NEW_MAP1                                 (111 | (26 << 8))
 
 // gMapGroup_IndoorDynamic
 #define MAP_SECRET_BASE_RED_CAVE1    (0 | (27 << 8))
@@ -661,6 +664,7 @@
 // gMapGroup_GymInterior
 #define MAP_MAHOGANY_HILLS_GYM_INTERIOR (0 | (43 << 8))
 #define MAP_CORAL_BEACH_GYM_INTERIOR    (1 | (43 << 8))
+#define MAP_HEMLOCK_GYM_INTERIOR        (2 | (43 << 8))
 
 #define MAP_GROUPS_COUNT 44
 

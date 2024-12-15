@@ -86,12 +86,12 @@ static const struct CityMapEntry sPokenavCityMaps[NUM_CITY_MAPS] =
         .tilemap = gPokenavCityMap_Lilycove_1,
     },
     {
-        .mapSecId = MAPSEC_MOSSDEEP_CITY,
+        .mapSecId = MAPSEC_HEMLOCK_VILLAGE,
         .index = 0,
         .tilemap = gPokenavCityMap_Mossdeep_0,
     },
     {
-        .mapSecId = MAPSEC_MOSSDEEP_CITY,
+        .mapSecId = MAPSEC_HEMLOCK_VILLAGE,
         .index = 1,
         .tilemap = gPokenavCityMap_Mossdeep_1,
     },

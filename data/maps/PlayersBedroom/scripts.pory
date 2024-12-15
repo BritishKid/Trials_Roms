@@ -11,8 +11,8 @@ script PlayersBedroom_EventScript_Notebook {
     } else {
         clearflag(FLAG_LEVEL_CAPS_ON)
     }
-    if(var(VAR_BEDROCK_TOWN_STATE) == 0) {
-        setvar(VAR_BEDROCK_TOWN_STATE, 1)
+    if(var(VAR_RIVAL_STATE) == 0) {
+        setvar(VAR_RIVAL_STATE, 1)
     }
     releaseall
 }
@@ -26,6 +26,6 @@ script PlayersBedroom_Trigger_Setup {
     } else {
         clearflag(FLAG_LEVEL_CAPS_ON)
     }
-    setvar(VAR_BEDROCK_TOWN_STATE, 1)
+    setvar(VAR_RIVAL_STATE, 1)
     releaseall
 }

@@ -45,10 +45,10 @@ LavaridgeTown_Gym_SetGymTrainers::
 	return
 
 GranitePeakTown_Gym_SetGymTrainers::
-	settrainerflag TRAINER_RANDALL
-	settrainerflag TRAINER_PARKER
-	settrainerflag TRAINER_GEORGE
-	settrainerflag TRAINER_BERKE
+	settrainerflag HEMLOCKGYM_TRAINER_PABLO
+	settrainerflag HEMLOCKGYM_TRAINER_VICTOR
+	settrainerflag HEMLOCKGYM_TRAINER_OLLIE
+	settrainerflag HEMLOCKGYM_TRAINER_CHLOE
 	settrainerflag TRAINER_MARY
 	settrainerflag TRAINER_ALEXIA
 	settrainerflag TRAINER_JODY
