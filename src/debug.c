@@ -1287,7 +1287,7 @@ static u8 Debug_CheckToggleFlags(u8 id)
                 FlagGet(FLAG_VISITED_RUSTBORO_CITY) &&
                 FlagGet(FLAG_VISITED_CORAL_PORT) &&
                 FlagGet(FLAG_VISITED_LILYCOVE_CITY) &&
-                FlagGet(FLAG_VISITED_MOSSDEEP_CITY) &&
+                FlagGet(FLAG_VISITED_HEMLOCK_VILLAGE) &&
                 FlagGet(FLAG_VISITED_SOOTOPOLIS_CITY) &&
                 FlagGet(FLAG_VISITED_EVER_GRANDE_CITY) &&
                 FlagGet(FLAG_LANDMARK_POKEMON_LEAGUE) &&
@@ -2794,7 +2794,7 @@ static void DebugAction_FlagsVars_ToggleFlyFlags(u8 taskId)
         FlagClear(FLAG_VISITED_RUSTBORO_CITY);
         FlagClear(FLAG_VISITED_CORAL_PORT);
         FlagClear(FLAG_VISITED_LILYCOVE_CITY);
-        FlagClear(FLAG_VISITED_MOSSDEEP_CITY);
+        FlagClear(FLAG_VISITED_HEMLOCK_VILLAGE);
         FlagClear(FLAG_VISITED_SOOTOPOLIS_CITY);
         FlagClear(FLAG_VISITED_EVER_GRANDE_CITY);
         FlagClear(FLAG_LANDMARK_POKEMON_LEAGUE);
@@ -2816,7 +2816,7 @@ static void DebugAction_FlagsVars_ToggleFlyFlags(u8 taskId)
         FlagSet(FLAG_VISITED_RUSTBORO_CITY);
         FlagSet(FLAG_VISITED_CORAL_PORT);
         FlagSet(FLAG_VISITED_LILYCOVE_CITY);
-        FlagSet(FLAG_VISITED_MOSSDEEP_CITY);
+        FlagSet(FLAG_VISITED_HEMLOCK_VILLAGE);
         FlagSet(FLAG_VISITED_SOOTOPOLIS_CITY);
         FlagSet(FLAG_VISITED_EVER_GRANDE_CITY);
         FlagSet(FLAG_LANDMARK_POKEMON_LEAGUE);

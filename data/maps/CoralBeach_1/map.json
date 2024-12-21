@@ -17,6 +17,11 @@
       "map": "MAP_CORAL_PORT",
       "offset": 18,
       "direction": "right"
+    },
+    {
+      "map": "MAP_ROUTE4C",
+      "offset": -13,
+      "direction": "right"
     }
   ],
   "object_events": [
@@ -71,6 +76,19 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "EventScript_Gym2_Robert_FindLater",
       "flag": "FLAG_HIDE_SECOND_ENCOUNTER_ROB"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_WATER_CUSHION",
+      "x": 1,
+      "y": 11,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "CoralBeach_Pyukumuku_Clean_Up",
+      "flag": "FLAG_CLEANED_UP_PYUKUMUKU_6"
     }
   ],
   "warp_events": [

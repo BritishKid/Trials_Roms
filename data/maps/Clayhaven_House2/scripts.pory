@@ -17,7 +17,7 @@ script Town2_EventScript_QuestStart {
     } 
     if (var(VAR_TOWN_2_QUEST_STATE) == 2) {
         msgbox(format("Thank you for your help. She told me everything, she was lucky you found here."))
-        msgbox(format("Please take this as a thank you, it might help"))
+        msgbox(format("Please take this ELECTRIC GEM as a thank you, it might help"))
         special(DoDomeConfetti)
         giveitem(ITEM_ELECTRIC_GEM)
         playfanfare(MUS_OBTAIN_ITEM)

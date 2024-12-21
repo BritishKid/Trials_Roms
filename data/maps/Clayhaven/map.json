@@ -42,6 +42,32 @@
       "trainer_sight_or_berry_tree_id": "ITEM_POKE_BALL",
       "script": "Common_EventScript_FindItem",
       "flag": "FLAG_ITEM_CLAYHAVEN_POKE_BALL"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MART_EMPLOYEE",
+      "x": 31,
+      "y": 11,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_CLAYHAVEN_MART_EMPLOYEE"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_HIKER",
+      "x": 20,
+      "y": 34,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
     }
   ],
   "warp_events": [
@@ -89,7 +115,15 @@
     }
   ],
   "coord_events": [
-
+    {
+      "type": "trigger",
+      "x": 31,
+      "y": 17,
+      "elevation": 0,
+      "var": "VAR_CLAYHAVEN_STATE",
+      "var_value": "0",
+      "script": "Clayhaven_BridgeMart_Employee"
+    }
   ],
   "bg_events": [
     {

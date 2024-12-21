@@ -16,7 +16,7 @@
     "gMapGroup_IndoorRustboro",
     "gMapGroup_IndoorCoralPort",
     "gMapGroup_IndoorLilycove",
-    "gMapGroup_IndoorMossdeep",
+    "gMapGroup_IndoorHemlock",
     "gMapGroup_IndoorSootopolis",
     "gMapGroup_IndoorEverGrande",
     "gMapGroup_IndoorRoute104",
@@ -43,7 +43,8 @@
     "gMapGroup_HiddenGrottos",
     "gMapGroup_MahogonyHills",
     "gMapGroup_ObsidianThicket",
-    "gMapGroup_GymInterior"
+    "gMapGroup_GymInterior",
+    "gMapGroup_Archived"
   ],
   "gMapGroup_TownsAndRoutes": [
     "SlateportCity",
@@ -116,7 +117,7 @@
   "gMapGroup_Island2": [
     "Route5",
     "Route5b",
-    "MossdeepCity",
+    "HemlockVillage",
     "MauvilleCity",
     "Route6",
     "FlowerGlade"
@@ -225,7 +226,8 @@
     "MauvilleCity_House2",
     "MauvilleCity_PokemonCenter_1F",
     "MauvilleCity_PokemonCenter_2F",
-    "MauvilleCity_Mart"
+    "MauvilleCity_Mart",
+    "MauvillCity_Harbour"
   ],
   "gMapGroup_IndoorRustboro": [
     "RustboroCity_DevonCorp_1F",
@@ -283,20 +285,13 @@
     "LilycoveCity_DepartmentStoreRooftop",
     "LilycoveCity_DepartmentStoreElevator"
   ],
-  "gMapGroup_IndoorMossdeep": [
-    "MossdeepCity_Gym",
-    "MossdeepCity_House1",
-    "MossdeepCity_House2",
-    "MossdeepCity_PokemonCenter_1F",
-    "MossdeepCity_PokemonCenter_2F",
-    "MossdeepCity_Mart",
-    "MossdeepCity_House3",
-    "HemlockVillage_Orphanage",
-    "MossdeepCity_House4",
-    "MossdeepCity_SpaceCenter_1F",
-    "MossdeepCity_SpaceCenter_2F",
-    "MossdeepCity_GameCorner_1F",
-    "MossdeepCity_GameCorner_B1F"
+  "gMapGroup_IndoorHemlock": [
+    "HemlockVillage_House1",
+    "HemlockVillage_House2",
+    "HemlockVillage_PokemonCenter_1F",
+    "HemlockVillage_PokemonCenter_2F",
+    "HemlockVillage_Mart",
+    "HemlockVillage_Orphanage"
   ],
   "gMapGroup_IndoorSootopolis": [
     "SootopolisCity_Gym_1F",
@@ -470,7 +465,11 @@
     "PlatefallCave_GF",
     "SandyCliff_Cave",
     "Crystal_Cove_Cave",
-    "NewMap1"
+    "NewMap1",
+    "DarkCaveGF",
+    "DarkCaveB1F",
+    "DarkCaveB2F",
+    "DarkCave1F"
   ],
   "gMapGroup_IndoorDynamic": [
     "SecretBase_RedCave1",
@@ -705,5 +704,14 @@
     "MahoganyHills_Gym_Interior",
     "CoralBeach_Gym_Interior",
     "Hemlock_Gym_Interior"
+  ],
+  "gMapGroup_Archived": [
+    "MossdeepCity_Gym",
+    "MossdeepCity_House3",
+    "MossdeepCity_House4",
+    "MossdeepCity_SpaceCenter_1F",
+    "MossdeepCity_SpaceCenter_2F",
+    "MossdeepCity_GameCorner_1F",
+    "MossdeepCity_GameCorner_B1F"
   ]
 }

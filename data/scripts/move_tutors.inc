@@ -180,7 +180,7 @@ MoveTutor_EventScript_SubstituteTaught::
 	release
 	end
 
-MossdeepCity_EventScript_DynamicPunchTutor::
+HemlockVillage_EventScript_DynamicPunchTutor::
 	lock
 	faceplayer
 	goto_if_set FLAG_MOVE_TUTOR_TAUGHT_DYNAMICPUNCH, MoveTutor_EventScript_DynamicPunchTaught

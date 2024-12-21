@@ -110,7 +110,7 @@
 #define VAR_RUSTBORO_CITY_STATE                          0x405A
 #define VAR_ROXANNE_ENCOUNTER_STATE                           0x405B // used Var
 #define VAR_ROBERT_STATUS                          0x405C // Used
-#define VAR_MOSSDEEP_CITY_STATE                          0x405D
+#define VAR_HEMLOCK_VILLAGE_STATE                          0x405D
 #define VAR_SOOTOPOLIS_CITY_STATE                        0x405E
 #define VAR_GIANT_FISH_STATE                       0x405F // 0 unstarted 1 started
 #define VAR_SALTS7_QUEST_STATE                           0x4060 //Used for salt quest
@@ -123,7 +123,7 @@
 #define VAR_GYM2_QUESTIONS                               0x4067 // 
 #define VAR_TREECKO_STATE                               0x4068 // Used
 #define VAR_ROUTE110_STATE                               0x4069
-#define VAR_ROUTE111_STATE                               0x406A // Unused Var
+#define VAR_PYUKUMUKUS_SAVED                               0x406A //USED
 #define VAR_ROUTE112_STATE                               0x406B // Unused Var
 #define VAR_ROUTE113_STATE                               0x406C // Unused Var
 #define VAR_ROUTE114_STATE                               0x406D // Unused Var

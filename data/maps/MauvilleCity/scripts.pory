@@ -3,3 +3,162 @@ mapscripts MauvilleCity_MapScripts {
         	setflag(FLAG_VISITED_MAUVILLE_CITY)
     }
 }
+
+
+script MauvilleCity_Pyukumuku_Clean_Up {
+    lockall
+    msgbox(format("It's a Pyukumuku, you push it back into the water"))
+    fadescreen(FADE_TO_BLACK)
+    msgbox(format("SPLASH"))
+    fadescreen(FADE_FROM_BLACK)
+    removeobject(3)
+    setflag(FLAG_CLEANED_UP_PYUKUMUKU_4)
+    giveitem(ITEM_BIG_PEARL)
+    msgbox(format("You found a big pearl under the Pokemon."))
+    playfanfare(MUS_OBTAIN_ITEM)
+    call(IncrementNumber_Pyukumukus_Saved)
+    releaseall
+}
+
+
+//blocking entrance to city thugs
+//placeholder using magma sprites until i add new custom ones
+
+script ThugCity_EventScript_Blocker1 {
+    trainerbattle_single(THUGCITY_BLOCKER1, Thug1_Intro, Thug1_Outro, Thug1PostScript) //battle on the left
+}
+
+script Thug1PostScript {
+    applymovement(3, Movement_ThugJumpsBack)
+    waitmovement(3)
+    msgbox(format("Fine I guess it's my go!"))
+    applymovement(4, Movement_Thug2MovesLeft)
+    waitmovement(4)
+    trainerbattle_single(THUGCITY_BLOCKER2, Thug2_Intro, Thug2_Outro, ThugsBeaten_Left)
+}
+
+script ThugsBeaten_Left {
+    //thugs are both on the left side
+    msgbox(format("We better warn Boss!"))
+    applymovement(3, Movement_ThugsRunRight)
+    applymovement(4, Movement_ThugsRunRight)
+    waitmovement(4)
+    setflag(flag(FLAG_HIDE_BLOCKER_THUGS))
+    removeobject(3)
+    removeobject(4)
+}
+
+script ThugCity_EventScript_Blocker2 {
+    trainerbattle_single(THUGCITY_BLOCKER2, Thug2_Intro, Thug2_Outro, Thug2PostScript) // battle on right
+}
+
+script Thug2PostScript {
+    applymovement(4, Movement_ThugJumpsBack)
+    waitmovement(4)
+    msgbox(format("Fine I guess it's my go!"))
+    applymovement(3, Movement_Thug1MovesRight)
+    waitmovement(3)
+    trainerbattle_single(THUGCITY_BLOCKER1, Thug1_Intro, Thug1_Outro, ThugsBeaten_Right)
+}
+
+script ThugsBeaten_Right {
+    msgbox(format("We better warn Boss!"))
+    applymovement(3, Movement_ThugsRunRight)
+    applymovement(4, Movement_ThugsRunRight)
+    waitmovement(4)
+    setflag(flag(FLAG_HIDE_BLOCKER_THUGS))
+    removeobject(3)
+    removeobject(4)
+}
+
+script ThugCity_EventScript_DoorBlockers {
+    lockall
+    faceplayer
+    msgbox(format("Boss says no-ones getting in or out so beat it."))
+    releaseall
+}
+
+script ThugCity_EventScript_PokemonCenterBlocker {
+    lockall
+    faceplayer
+    msgbox(format("Pokecenter is closed mate, but I can fix up your Pokemon.\lIt'll only cost 500!"), MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES) {
+        removemoney(500)
+        special(HealPlayerParty)
+        msgbox(format("Definately come again!"))
+    } else {
+        msgbox(format("Fine just beat it."))
+    }
+    releaseall
+}
+
+//text
+
+text Thug1_Intro {
+    format("I ain't gonna let you through here.")
+}
+
+text Thug1_Outro {
+    format("You ain't no normal trainer are you?")
+}
+
+text Thug2_Intro {
+    format("My job is too keep losers like you out our city.")
+}
+
+text Thug2_Outro {
+    format("What is happening?")
+}
+
+
+//movement
+
+movement Movement_ThugJumpsBack {
+    jump_up
+}
+
+movement Movement_Thug2MovesLeft {
+    walk_left
+    face_down
+}
+
+movement Movement_Thug1MovesRight {
+    walk_right
+    face_down
+}
+
+movement Movement_ThugsRunRight {
+    walk_fast_right
+    walk_fast_right
+    walk_fast_right
+    walk_fast_right
+    walk_fast_right
+    walk_fast_right
+    walk_fast_right
+    walk_fast_right
+    walk_fast_right
+}
+
+//mart
+
+raw `
+ThugCity_Mart_EventScript_Clerk::
+	lock
+	faceplayer
+	message gText_HowMayIServeYou
+	waitmessage
+	pokemart ThugCity_VariableMart
+	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	release
+	end
+
+	.align 2
+ThugCity_VariableMart:
+	.2byte ITEM_POKE_BALL, 150
+	.2byte ITEM_REVIVE, 1000
+	.2byte ITEM_REPEL, 250
+	.2byte ITEM_POTION, 150
+	.2byte ITEM_NONE
+	release
+	end
+`

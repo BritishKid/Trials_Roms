@@ -70,10 +70,11 @@
 #define FLAG_UNUSED_0x039    0x39 // Unused Flag
 #define FLAG_UNUSED_0x03A    0x3A // Unused Flag
 #define FLAG_UNUSED_0x03B    0x3B // Unused Flag
-#define FLAG_UNUSED_0x03C    0x3C // Unused Flag
-#define FLAG_UNUSED_0x03D    0x3D // Unused Flag
-#define FLAG_UNUSED_0x03E    0x3E // Unused Flag
-#define FLAG_UNUSED_0x03F    0x3F // Unused Flag
+
+#define FLAG_PYUKUMUKU_PRIZE_1    0x3C // Unused Flag
+#define FLAG_PYUKUMUKU_PRIZE_2    0x3D // Unused Flag
+#define FLAG_PYUKUMUKU_PRIZE_3    0x3E // Unused Flag
+#define FLAG_PYUKUMUKU_PRIZE_4    0x3F // Unused Flag
 
 //final buttons
 #define FLAG_UNUSED_0x040    0x40 // Unused Flag
@@ -110,7 +111,7 @@
 #define FLAG_HIDE_CONTEST_POKE_BALL          0x56  // Always set after new game, object it hides is added directly
 #define FLAG_SALT7_BEATEN_FIRST_ENCOUNTER    0x57 //used
 #define FLAG_BIRCH_AIDE_MET                  0x58
-#define FLAG_DECLINED_BIKE                   0x59
+#define FLAG_ACRO_BIKE                   0x59 //used
 #define FLAG_RECEIVED_BIKE                   0x5A
 #define FLAG_WATTSON_REMATCH_AVAILABLE       0x5B
 #define FLAG_COLLECTED_ALL_SILVER_SYMBOLS    0x5C
@@ -463,8 +464,8 @@
 #define FLAG_REMATCH_DRAKE                   0x1A8
 #define FLAG_REMATCH_WALLACE                 0x1A9
 
-#define FLAG_UNUSED_0x1AA                    0x1AA // Unused Flag
-#define FLAG_UNUSED_0x1AB                    0x1AB // Unused Flag
+#define FLAG_HIDE_BLOCKER_THUGS                    0x1AA //
+#define FLAG_HIDE_ALL_THUG_CITY_THUGS                    0x1AB // Unused Flag
 
 #define FLAG_DEFEATED_DEOXYS                 0x1AC
 #define FLAG_BATTLED_DEOXYS                  0x1AD
@@ -735,16 +736,17 @@
 #define FLAG_UNUSED_0x2AC  0x2AC // Unused Flag
 #define FLAG_UNUSED_0x2AD  0x2AD // Unused Flag
 #define FLAG_UNUSED_0x2AE  0x2AE // Unused Flag
-#define FLAG_UNUSED_0x2AF  0x2AF // Unused Flag
-#define FLAG_UNUSED_0x2B0  0x2B0 // Unused Flag
-#define FLAG_UNUSED_0x2B1  0x2B1 // Unused Flag
-#define FLAG_UNUSED_0x2B2  0x2B2 // Unused Flag
-#define FLAG_UNUSED_0x2B3  0x2B3 // Unused Flag
-#define FLAG_UNUSED_0x2B4  0x2B4 // Unused Flag
-#define FLAG_UNUSED_0x2B5  0x2B5 // Unused Flag
-#define FLAG_UNUSED_0x2B6  0x2B6 // Unused Flag
-#define FLAG_UNUSED_0x2B7  0x2B7 // Unused Flag
-#define FLAG_UNUSED_0x2B8  0x2B8 // Unused Flag
+
+#define FLAG_CLEANED_UP_PYUKUMUKU_1  0x2AF //  
+#define FLAG_CLEANED_UP_PYUKUMUKU_2  0x2B0 // 
+#define FLAG_CLEANED_UP_PYUKUMUKU_3  0x2B1 // 
+#define FLAG_CLEANED_UP_PYUKUMUKU_4  0x2B2 // 
+#define FLAG_CLEANED_UP_PYUKUMUKU_5  0x2B3 // 
+#define FLAG_CLEANED_UP_PYUKUMUKU_6  0x2B4 // 
+#define FLAG_CLEANED_UP_PYUKUMUKU_7  0x2B5 // 
+#define FLAG_CLEANED_UP_PYUKUMUKU_8  0x2B6 // 
+#define FLAG_CLEANED_UP_PYUKUMUKU_9  0x2B7 // 
+#define FLAG_CLEANED_UP_PYUKUMUKU_10  0x2B8 // 
 #define FLAG_CAN_ACCESS_SCHOOL_TOURNAMENT  0x2B9 // Used
 #define FLAG_GET_SCHOOL_EEVEE  0x2BA //
 #define FLAG_HIDE_EVOLUTION_ROOM  0x2BB // 
@@ -919,7 +921,7 @@
 #define FLAG_HIDE_BATTLE_TOWER_MULTI_BATTLE_PARTNER_ALT_1           0x360
 #define FLAG_HIDE_BATTLE_TOWER_MULTI_BATTLE_PARTNER_ALT_2           0x361
 #define FLAG_HIDE_PETALBURG_GYM_WALLY                               0x362
-#define FLAG_UNKNOWN_0x363                                          0x363 // Set, however has no purpose.
+#define FLAG_HIDE_THUG_CITY_OVERWORLD_INHABITANTS                                          0x363 // Set, however has no purpose.
 #define FLAG_HIDE_LITTLEROOT_TOWN_FAT_MAN                           0x364
 #define FLAG_HIDE_SLATEPORT_CITY_STERNS_SHIPYARD_MR_BRINEY          0x365
 #define FLAG_HIDE_LANETTES_HOUSE_LANETTE                            0x366
@@ -1068,7 +1070,7 @@
 #define FLAG_ITEM_ROUTE_112_NUGGET                                  0x3F3
 #define FLAG_ITEM_ROUTE_113_MAX_ETHER                               0x3F4
 #define FLAG_ITEM_ROUTE_113_SUPER_REPEL                             0x3F5
-#define FLAG_ITEM_ROUTE_114_RARE_CANDY                              0x3F6
+#define FLAG_ITEM_THUGCITY_HARBOUR_TM21                              0x3F6
 #define FLAG_ITEM_ROUTE_114_PROTEIN                                 0x3F7
 #define FLAG_ITEM_ROUTE_115_SUPER_POTION                            0x3F8
 #define FLAG_ITEM_ROUTE_115_TM_FOCUS_PUNCH                          0x3F9
@@ -1097,7 +1099,7 @@
 #define FLAG_ITEM_GRANITE_PEAK_ETHER                              0x410
 #define FLAG_ITEM_ROUTE4_TM24                            0x411
 #define FLAG_ITEM_LILYCOVE_CITY_MAX_REPEL                           0x412
-#define FLAG_ITEM_MOSSDEEP_CITY_NET_BALL                            0x413
+#define FLAG_ITEM_HEMLOCK_VILLAGE_SALAC_BERRY                            0x413
 #define FLAG_ITEM_METEOR_FALLS_1F_1R_TM_IRON_TAIL                   0x414
 #define FLAG_ITEM_METEOR_FALLS_1F_1R_FULL_HEAL                      0x415
 #define FLAG_ITEM_METEOR_FALLS_1F_1R_MOON_STONE                     0x416
@@ -1199,7 +1201,7 @@
 #define FLAG_ITEM_ROUTE_111_ELIXIR                                  0x476
 #define FLAG_ITEM_ROUTE_113_HYPER_POTION                            0x477
 #define FLAG_ITEM_ROUTE_115_HEAL_POWDER                             0x478
-#define FLAG_COAST_TOWN_SAVED                                       0x479
+#define FLAG_COAST_TOWN_SAVED                                       0x479 //UNUSED
 #define FLAG_ITEM_ROUTE_116_POTION                                  0x47A
 #define FLAG_ITEM_ROUTE_119_ELIXIR_2                                0x47B
 #define FLAG_ITEM_ROUTE_120_REVIVE                                  0x47C
@@ -1227,7 +1229,7 @@
 #define FLAG_ITEM_SAFARI_ZONE_SOUTH_EAST_BIG_PEARL                  0x492
 
 #define FLAG_HIDE_FIRST_ENCOUNTER_ROB                                           0x493 // Used
-#define FLAG_UNUSED_0x494                                           0x494 // Unused Flag
+#define FLAG_HIDE_CLAYHAVEN_MART_EMPLOYEE                                           0x494 
 #define FLAG_UNUSED_0x495                                           0x495 // Unused Flag
 #define FLAG_UNUSED_0x496                                           0x496 // Unused Flag
 #define FLAG_UNUSED_0x497                                           0x497 // Unused Flag
@@ -1384,7 +1386,7 @@
 #define FLAG_VISITED_RUSTBORO_CITY                  (SYSTEM_FLAGS + 0x19)
 #define FLAG_VISITED_CORAL_PORT                   (SYSTEM_FLAGS + 0x1A)
 #define FLAG_VISITED_LILYCOVE_CITY                  (SYSTEM_FLAGS + 0x1B)
-#define FLAG_VISITED_MOSSDEEP_CITY                  (SYSTEM_FLAGS + 0x1C)
+#define FLAG_VISITED_HEMLOCK_VILLAGE                  (SYSTEM_FLAGS + 0x1C)
 #define FLAG_VISITED_SOOTOPOLIS_CITY                (SYSTEM_FLAGS + 0x1D)
 #define FLAG_VISITED_EVER_GRANDE_CITY               (SYSTEM_FLAGS + 0x1E)
 

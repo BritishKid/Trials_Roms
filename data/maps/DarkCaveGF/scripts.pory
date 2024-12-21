@@ -1,0 +1,22 @@
+mapscripts DarkCaveGF_MapScripts {}
+
+
+script DarkCaveGF_Battle_LostYoungster {
+    trainerbattle_single(DARKCAVE_YOUNGSTER, DarkCave_Youngster_Intro, DarkCave_Youngster_Outro, Increase_Trainers_Beaten)
+    msgbox(DarkCave_Youngster_PostBattle, MSGBOX_AUTOCLOSE)
+}
+
+
+//intro 
+
+text DarkCave_Youngster_Intro {
+    format("HOW DO I GET OUT OF HERE!")
+}
+
+text DarkCave_Youngster_Outro {
+    format("I can't find the exit...")
+}
+
+text DarkCave_Youngster_PostBattle {
+    format("Oh I'm not that far, that's good.")
+}

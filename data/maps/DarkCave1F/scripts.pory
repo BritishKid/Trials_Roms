@@ -1,0 +1,17 @@
+mapscripts DarkCave1F_MapScripts {}
+
+
+script DarkCave1F_EventScript_Steven {
+    lockall
+    msgbox(format("These crystals are fascinating."))
+    msgbox(format("STEVEN QUEST COMING SOON!")) //todo
+    releaseall
+}
+
+
+//blue stone scripts
+script DarkCave_DepletedBlueStone {
+    lockall
+    msgbox(format("It's been depleted"))
+    releaseall
+}

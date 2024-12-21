@@ -1,0 +1,26 @@
+mapscripts MauvilleCity_House2_MapScripts {
+}
+
+
+script MauvilleCity_House2_EventScript_CraftingTable {
+    lockall
+    call(CraftTutorial_EventScript_Table)
+    releaseall
+}
+
+
+script MauvilleCity_House2_EventScript_Woman {
+    lockall
+    faceplayer
+    if(flag(FLAG_ACRO_BIKE)) {
+        msgbox(format("I wonder where the thugs ran off to."))
+    }
+    if(!flag(FLAG_ACRO_BIKE)) {
+        msgbox(format("Oh you're the one that kicked the thugs out of here. Please take this!"))
+        giveitem(ITEM_ACRO_BIKE)
+        setflag(FLAG_ACRO_BIKE)
+        playfanfare(MUS_OBTAIN_ITEM)
+        msgbox(format("The ACRO BIKE can be used to reach new places around the region."))
+    }
+    releaseall
+}

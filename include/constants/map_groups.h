@@ -74,12 +74,12 @@
 #define MAP_CRYSTAL_COVE      (15 | (1 << 8))
 
 // gMapGroup_Island2
-#define MAP_ROUTE5        (0 | (2 << 8))
-#define MAP_ROUTE5B       (1 | (2 << 8))
-#define MAP_MOSSDEEP_CITY (2 | (2 << 8))
-#define MAP_MAUVILLE_CITY (3 | (2 << 8))
-#define MAP_ROUTE6        (4 | (2 << 8))
-#define MAP_FLOWER_GLADE  (5 | (2 << 8))
+#define MAP_ROUTE5          (0 | (2 << 8))
+#define MAP_ROUTE5B         (1 | (2 << 8))
+#define MAP_HEMLOCK_VILLAGE (2 | (2 << 8))
+#define MAP_MAUVILLE_CITY   (3 | (2 << 8))
+#define MAP_ROUTE6          (4 | (2 << 8))
+#define MAP_FLOWER_GLADE    (5 | (2 << 8))
 
 // gMapGroup_IndoorLittleroot
 #define MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_1F    (0 | (3 << 8))
@@ -186,6 +186,7 @@
 #define MAP_MAUVILLE_CITY_POKEMON_CENTER_1F (5 | (12 << 8))
 #define MAP_MAUVILLE_CITY_POKEMON_CENTER_2F (6 | (12 << 8))
 #define MAP_MAUVILLE_CITY_MART              (7 | (12 << 8))
+#define MAP_MAUVILL_CITY_HARBOUR            (8 | (12 << 8))
 
 // gMapGroup_IndoorRustboro
 #define MAP_RUSTBORO_CITY_DEVON_CORP_1F     (0 | (13 << 8))
@@ -243,20 +244,13 @@
 #define MAP_LILYCOVE_CITY_DEPARTMENT_STORE_ROOFTOP  (21 | (15 << 8))
 #define MAP_LILYCOVE_CITY_DEPARTMENT_STORE_ELEVATOR (22 | (15 << 8))
 
-// gMapGroup_IndoorMossdeep
-#define MAP_MOSSDEEP_CITY_GYM               (0 | (16 << 8))
-#define MAP_MOSSDEEP_CITY_HOUSE1            (1 | (16 << 8))
-#define MAP_MOSSDEEP_CITY_HOUSE2            (2 | (16 << 8))
-#define MAP_MOSSDEEP_CITY_POKEMON_CENTER_1F (3 | (16 << 8))
-#define MAP_MOSSDEEP_CITY_POKEMON_CENTER_2F (4 | (16 << 8))
-#define MAP_MOSSDEEP_CITY_MART              (5 | (16 << 8))
-#define MAP_MOSSDEEP_CITY_HOUSE3            (6 | (16 << 8))
-#define MAP_HEMLOCK_VILLAGE_ORPHANAGE       (7 | (16 << 8))
-#define MAP_MOSSDEEP_CITY_HOUSE4            (8 | (16 << 8))
-#define MAP_MOSSDEEP_CITY_SPACE_CENTER_1F   (9 | (16 << 8))
-#define MAP_MOSSDEEP_CITY_SPACE_CENTER_2F   (10 | (16 << 8))
-#define MAP_MOSSDEEP_CITY_GAME_CORNER_1F    (11 | (16 << 8))
-#define MAP_MOSSDEEP_CITY_GAME_CORNER_B1F   (12 | (16 << 8))
+// gMapGroup_IndoorHemlock
+#define MAP_HEMLOCK_VILLAGE_HOUSE1            (0 | (16 << 8))
+#define MAP_HEMLOCK_VILLAGE_HOUSE2            (1 | (16 << 8))
+#define MAP_HEMLOCK_VILLAGE_POKEMON_CENTER_1F (2 | (16 << 8))
+#define MAP_HEMLOCK_VILLAGE_POKEMON_CENTER_2F (3 | (16 << 8))
+#define MAP_HEMLOCK_VILLAGE_MART              (4 | (16 << 8))
+#define MAP_HEMLOCK_VILLAGE_ORPHANAGE         (5 | (16 << 8))
 
 // gMapGroup_IndoorSootopolis
 #define MAP_SOOTOPOLIS_CITY_GYM_1F                   (0 | (17 << 8))
@@ -431,6 +425,10 @@
 #define MAP_SANDY_CLIFF_CAVE                         (109 | (26 << 8))
 #define MAP_CRYSTAL_COVE_CAVE                        (110 | (26 << 8))
 #define MAP_NEW_MAP1                                 (111 | (26 << 8))
+#define MAP_DARK_CAVE_GF                             (112 | (26 << 8))
+#define MAP_DARK_CAVE_B1F                            (113 | (26 << 8))
+#define MAP_DARK_CAVE_B2F                            (114 | (26 << 8))
+#define MAP_DARK_CAVE1F                              (115 | (26 << 8))
 
 // gMapGroup_IndoorDynamic
 #define MAP_SECRET_BASE_RED_CAVE1    (0 | (27 << 8))
@@ -666,6 +664,15 @@
 #define MAP_CORAL_BEACH_GYM_INTERIOR    (1 | (43 << 8))
 #define MAP_HEMLOCK_GYM_INTERIOR        (2 | (43 << 8))
 
-#define MAP_GROUPS_COUNT 44
+// gMapGroup_Archived
+#define MAP_MOSSDEEP_CITY_GYM             (0 | (44 << 8))
+#define MAP_MOSSDEEP_CITY_HOUSE3          (1 | (44 << 8))
+#define MAP_MOSSDEEP_CITY_HOUSE4          (2 | (44 << 8))
+#define MAP_MOSSDEEP_CITY_SPACE_CENTER_1F (3 | (44 << 8))
+#define MAP_MOSSDEEP_CITY_SPACE_CENTER_2F (4 | (44 << 8))
+#define MAP_MOSSDEEP_CITY_GAME_CORNER_1F  (5 | (44 << 8))
+#define MAP_MOSSDEEP_CITY_GAME_CORNER_B1F (6 | (44 << 8))
+
+#define MAP_GROUPS_COUNT 45
 
 #endif // GUARD_CONSTANTS_MAP_GROUPS_H

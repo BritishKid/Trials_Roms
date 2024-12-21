@@ -10,7 +10,7 @@
 #define MAPSEC_PACIFIDLOG_TOWN              0x06
 #define MAPSEC_GRANITE_PEAK_TOWN               0x07
 #define MAPSEC_SLATEPORT_CITY               0x08
-#define MAPSEC_MAUVILLE_CITY                0x09
+#define MAPSEC_FALL_HARBOUR                0x09
 #define MAPSEC_RUSTBORO_CITY                0x0A
 #define MAPSEC_CORAL_PORT                 0x0B
 #define MAPSEC_LILYCOVE_CITY                0x0C
@@ -203,7 +203,7 @@
 #define MAPSEC_MIRAGE_TOWER                 0xC7
 #define MAPSEC_BIRTH_ISLAND                 0xC8
 #define MAPSEC_FARAWAY_ISLAND               0xC9
-#define MAPSEC_ARTISAN_CAVE                 0xCA
+#define MAPSEC_DARK_CAVE                 0xCA
 #define MAPSEC_MARINE_CAVE                  0xCB
 #define MAPSEC_UNDERWATER_MARINE_CAVE       0xCC
 #define MAPSEC_TERRA_CAVE                   0xCD

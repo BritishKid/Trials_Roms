@@ -59,14 +59,14 @@
       "x": 5,
       "y": 8,
       "elevation": 0,
-      "dest_map": "MAP_MOSSDEEP_CITY",
+      "dest_map": "MAP_HEMLOCK_VILLAGE",
       "dest_warp_id": "4"
     },
     {
       "x": 6,
       "y": 8,
       "elevation": 0,
-      "dest_map": "MAP_MOSSDEEP_CITY",
+      "dest_map": "MAP_HEMLOCK_VILLAGE",
       "dest_warp_id": "4"
     }
   ],

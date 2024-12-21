@@ -96,8 +96,8 @@ Town2_EventScript_QuestStart_Text_2:
 
 Town2_EventScript_QuestStart_Text_3:
 # 20 "data/maps/Clayhaven_House2/scripts.pory"
-	.string "Please take this as a thank you, it\n"
-	.string "might help$"
+	.string "Please take this ELECTRIC GEM as a\n"
+	.string "thank you, it might help$"
 
 Town2_EventScript_QuestStart_Text_4:
 # 28 "data/maps/Clayhaven_House2/scripts.pory"

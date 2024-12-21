@@ -1,0 +1,105 @@
+{
+  "id": "MAP_MAUVILL_CITY_HARBOUR",
+  "name": "MauvillCity_Harbour",
+  "layout": "LAYOUT_MAUVILL_CITY_HARBOUR",
+  "music": "MUS_FORTREE",
+  "region_map_section": "MAPSEC_FALL_HARBOUR",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_INDOOR",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": 0,
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MAN_5",
+      "x": 0,
+      "y": 9,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ThugCity_Harbour_EventScript_ThugCommander",
+      "flag": "FLAG_HIDE_ALL_THUG_CITY_THUGS"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MAN_5",
+      "x": 1,
+      "y": 7,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_ALL_THUG_CITY_THUGS"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SAILOR",
+      "x": 8,
+      "y": 10,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ThugCity_Island2Boat",
+      "flag": "FLAG_HIDE_THUG_CITY_OVERWORLD_INHABITANTS"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SS_TIDAL",
+      "x": 9,
+      "y": 8,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_THUG_CITY_OVERWORLD_INHABITANTS"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 2,
+      "y": 4,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "ITEM_TM21",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_ITEM_THUGCITY_HARBOUR_TM21"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 11,
+      "y": 14,
+      "elevation": 0,
+      "dest_map": "MAP_MAUVILLE_CITY",
+      "dest_warp_id": "3"
+    },
+    {
+      "x": 12,
+      "y": 14,
+      "elevation": 0,
+      "dest_map": "MAP_MAUVILLE_CITY",
+      "dest_warp_id": "3"
+    }
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ]
+}

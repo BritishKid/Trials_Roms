@@ -15,7 +15,7 @@ MossdeepCity_SpaceCenter_2F_MapScripts::
 	.byte 0
 
 MossdeepCity_SpaceCenter_2F_OnTransition:
-	call_if_eq VAR_MOSSDEEP_CITY_STATE, 2, MossdeepCity_SpaceCenter_2F_EventScript_MoveCivilians
+	call_if_eq VAR_HEMLOCK_VILLAGE_STATE, 2, MossdeepCity_SpaceCenter_2F_EventScript_MoveCivilians
 	call_if_eq VAR_MOSSDEEP_SPACE_CENTER_STATE, 2, MossdeepCity_SpaceCenter_2F_EventScript_MoveDefeatedGrunts
 	end
 
@@ -106,8 +106,8 @@ MossdeepCity_SpaceCenter_2F_EventScript_Scientist::
 	lock
 	faceplayer
 	goto_if_set FLAG_SYS_GAME_CLEAR, MossdeepCity_SpaceCenter_2F_EventScript_ScientistNormal
-	goto_if_eq VAR_MOSSDEEP_CITY_STATE, 2, MossdeepCity_SpaceCenter_2F_EventScript_ScientistMagma
-	goto_if_lt VAR_MOSSDEEP_CITY_STATE, 2, MossdeepCity_SpaceCenter_2F_EventScript_ScientistNormal
+	goto_if_eq VAR_HEMLOCK_VILLAGE_STATE, 2, MossdeepCity_SpaceCenter_2F_EventScript_ScientistMagma
+	goto_if_lt VAR_HEMLOCK_VILLAGE_STATE, 2, MossdeepCity_SpaceCenter_2F_EventScript_ScientistNormal
 	goto MossdeepCity_SpaceCenter_2F_EventScript_ScientistMagma
 	end
 
@@ -125,8 +125,8 @@ MossdeepCity_SpaceCenter_2F_EventScript_Gentleman::
 	lock
 	faceplayer
 	goto_if_set FLAG_SYS_GAME_CLEAR, MossdeepCity_SpaceCenter_2F_EventScript_GentlemanNormal
-	goto_if_eq VAR_MOSSDEEP_CITY_STATE, 2, MossdeepCity_SpaceCenter_2F_EventScript_GentlemanMagma
-	goto_if_lt VAR_MOSSDEEP_CITY_STATE, 2, MossdeepCity_SpaceCenter_2F_EventScript_GentlemanNormal
+	goto_if_eq VAR_HEMLOCK_VILLAGE_STATE, 2, MossdeepCity_SpaceCenter_2F_EventScript_GentlemanMagma
+	goto_if_lt VAR_HEMLOCK_VILLAGE_STATE, 2, MossdeepCity_SpaceCenter_2F_EventScript_GentlemanNormal
 	goto MossdeepCity_SpaceCenter_2F_EventScript_GentlemanMagma
 	end
 
@@ -144,8 +144,8 @@ MossdeepCity_SpaceCenter_2F_EventScript_RichBoy::
 	lock
 	faceplayer
 	goto_if_set FLAG_SYS_GAME_CLEAR, MossdeepCity_SpaceCenter_2F_EventScript_RichBoyNormal
-	goto_if_eq VAR_MOSSDEEP_CITY_STATE, 2, MossdeepCity_SpaceCenter_2F_EventScript_RichBoyMagma
-	goto_if_lt VAR_MOSSDEEP_CITY_STATE, 2, MossdeepCity_SpaceCenter_2F_EventScript_RichBoyNormal
+	goto_if_eq VAR_HEMLOCK_VILLAGE_STATE, 2, MossdeepCity_SpaceCenter_2F_EventScript_RichBoyMagma
+	goto_if_lt VAR_HEMLOCK_VILLAGE_STATE, 2, MossdeepCity_SpaceCenter_2F_EventScript_RichBoyNormal
 	goto MossdeepCity_SpaceCenter_2F_EventScript_RichBoyMagma
 	end
 
@@ -278,7 +278,7 @@ MossdeepCity_SpaceCenter_2F_EventScript_DefeatedMaxieTabitha::
 	delay 20
 	msgbox MossdeepCity_SpaceCenter_2F_Text_MaxieWeWillGiveUp, MSGBOX_DEFAULT
 	closemessage
-	setvar VAR_MOSSDEEP_CITY_STATE, 3
+	setvar VAR_HEMLOCK_VILLAGE_STATE, 3
 	fadedefaultbgm
 	fadescreen FADE_TO_BLACK
 	setvar VAR_MOSSDEEP_SPACE_CENTER_STATE, 3

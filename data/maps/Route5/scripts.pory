@@ -15,11 +15,26 @@ script Route5_IslandBoat {
 
 script Route5_Sign_Directinos {
     lockall
-    if(!flag(FLAG_COAST_TOWN_SAVED)) {
+    if(!flag(FLAG_HIDE_BLOCKER_THUGS)) {
         msgbox(format("Someone has scrawled over the sign to say:\lTHIS IS OUR ISLAND!"))
     }
     else {
         msgbox(format("-> TOWN TO BE NAMED\l<- Hemlock Village"))
     }
     releaseall
+}
+
+script Route5_Pyukumuku_Clean_Up {
+    lock
+        msgbox(format("It's a Pyukumuku, you push it back into the water"))
+        fadescreen(FADE_TO_BLACK)
+        msgbox(format("SPLASH"))
+        fadescreen(FADE_FROM_BLACK)
+        removeobject(3)
+        setflag(FLAG_CLEANED_UP_PYUKUMUKU_3)
+        giveitem(ITEM_BIG_PEARL)
+        msgbox(format("You found a big pearl under the Pokemon."))
+        playfanfare(MUS_OBTAIN_ITEM)
+        call(IncrementNumber_Pyukumukus_Saved)
+    release
 }

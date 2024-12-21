@@ -413,7 +413,7 @@ static const match_call_text_data_t sWattsonTextScripts[] = {
 static const struct MatchCallStructTrainer sWattsonMatchCallHeader =
 {
     .type = MC_TYPE_LEADER,
-    .mapSec = MAPSEC_MAUVILLE_CITY,
+    .mapSec = MAPSEC_FALL_HARBOUR,
     .flag = FLAG_ENABLE_WATTSON_MATCH_CALL,
     .rematchTableIdx = REMATCH_WATTSON,
     .desc = gText_WattsonMatchCallDesc,

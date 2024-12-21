@@ -111,7 +111,7 @@ gStdScripts_End::
 	.include "data/maps/RustboroCity/scripts.inc"
 	.include "data/maps/CoralPort/scripts.inc"
 	.include "data/maps/LilycoveCity/scripts.inc"
-	.include "data/maps/MossdeepCity/scripts.inc"
+	.include "data/maps/HemlockVillage/scripts.inc"
 	.include "data/maps/SootopolisCity/scripts.inc"
 	.include "data/maps/EverGrandeCity/scripts.inc"
 	.include "data/maps/BedrockTown/scripts.inc"
@@ -289,11 +289,11 @@ gStdScripts_End::
 	.include "data/maps/LilycoveCity_DepartmentStoreRooftop/scripts.inc"
 	.include "data/maps/LilycoveCity_DepartmentStoreElevator/scripts.inc"
 	.include "data/maps/MossdeepCity_Gym/scripts.inc"
-	.include "data/maps/MossdeepCity_House1/scripts.inc"
-	.include "data/maps/MossdeepCity_House2/scripts.inc"
-	.include "data/maps/MossdeepCity_PokemonCenter_1F/scripts.inc"
-	.include "data/maps/MossdeepCity_PokemonCenter_2F/scripts.inc"
-	.include "data/maps/MossdeepCity_Mart/scripts.inc"
+	.include "data/maps/HemlockVillage_House1/scripts.inc"
+	.include "data/maps/HemlockVillage_House2/scripts.inc"
+	.include "data/maps/HemlockVillage_PokemonCenter_1F/scripts.inc"
+	.include "data/maps/HemlockVillage_PokemonCenter_2F/scripts.inc"
+	.include "data/maps/HemlockVillage_Mart/scripts.inc"
 	.include "data/maps/MossdeepCity_House3/scripts.inc"
 	.include "data/maps/HemlockVillage_Orphanage/scripts.inc"
 	.include "data/maps/MossdeepCity_House4/scripts.inc"
@@ -1187,3 +1187,13 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/Route6/scripts.inc"
 
 	.include "data/maps/FlowerGlade/scripts.inc"
+
+	.include "data/maps/DarkCaveGF/scripts.inc"
+
+	.include "data/maps/DarkCaveB1F/scripts.inc"
+
+	.include "data/maps/DarkCaveB2F/scripts.inc"
+
+	.include "data/maps/DarkCave1F/scripts.inc"
+
+	.include "data/maps/MauvillCity_Harbour/scripts.inc"

@@ -8730,7 +8730,7 @@
           }
         },
         {
-          "map": "MAP_MOSSDEEP_CITY",
+          "map": "MAP_HEMLOCK_VILLAGE",
           "base_label": "gMossdeepCity",
           "land_mons": {
             "encounter_rate": 25,
@@ -13467,64 +13467,64 @@
             "encounter_rate": 10,
             "mons": [
               {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_NONE"
+                "min_level": 10,
+                "max_level": 16,
+                "species": "SPECIES_WINGULL"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_NONE"
+                "min_level": 10,
+                "max_level": 16,
+                "species": "SPECIES_SENTRET"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_NONE"
+                "min_level": 10,
+                "max_level": 16,
+                "species": "SPECIES_KRABBY"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_NONE"
+                "min_level": 10,
+                "max_level": 16,
+                "species": "SPECIES_CRABRAWLER"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_NONE"
+                "min_level": 10,
+                "max_level": 16,
+                "species": "SPECIES_SLOWPOKE"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_NONE"
+                "min_level": 10,
+                "max_level": 16,
+                "species": "SPECIES_PYUKUMUKU"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_NONE"
+                "min_level": 10,
+                "max_level": 16,
+                "species": "SPECIES_CHEWTLE"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_NONE"
+                "min_level": 10,
+                "max_level": 16,
+                "species": "SPECIES_CRABRAWLER"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_NONE"
+                "min_level": 10,
+                "max_level": 16,
+                "species": "SPECIES_KRABBY"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_NONE"
+                "min_level": 10,
+                "max_level": 16,
+                "species": "SPECIES_WIMPOD"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_NONE"
+                "min_level": 10,
+                "max_level": 16,
+                "species": "SPECIES_WIMPOD"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_NONE"
+                "min_level": 10,
+                "max_level": 16,
+                "species": "SPECIES_PYUKUMUKU"
               }
             ]
           }
@@ -13911,6 +13911,392 @@
                 "min_level": 12,
                 "max_level": 20,
                 "species": "SPECIES_CUTIEFLY"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_DARK_CAVE_GF",
+          "base_label": "gDarkCaveGF0",
+          "land_mons": {
+            "encounter_rate": 10,
+            "mons": [
+              {
+                "min_level": 12,
+                "max_level": 20,
+                "species": "SPECIES_WOOBAT"
+              },
+              {
+                "min_level": 12,
+                "max_level": 20,
+                "species": "SPECIES_CUBONE"
+              },
+              {
+                "min_level": 12,
+                "max_level": 20,
+                "species": "SPECIES_DUNSPARCE"
+              },
+              {
+                "min_level": 12,
+                "max_level": 20,
+                "species": "SPECIES_TIMBURR"
+              },
+              {
+                "min_level": 12,
+                "max_level": 20,
+                "species": "SPECIES_ARON"
+              },
+              {
+                "min_level": 12,
+                "max_level": 20,
+                "species": "SPECIES_BRONZOR"
+              },
+              {
+                "min_level": 12,
+                "max_level": 20,
+                "species": "SPECIES_ARON"
+              },
+              {
+                "min_level": 12,
+                "max_level": 20,
+                "species": "SPECIES_SABLEYE"
+              },
+              {
+                "min_level": 12,
+                "max_level": 20,
+                "species": "SPECIES_DUNSPARCE"
+              },
+              {
+                "min_level": 12,
+                "max_level": 20,
+                "species": "SPECIES_ABRA"
+              },
+              {
+                "min_level": 12,
+                "max_level": 20,
+                "species": "SPECIES_ABRA"
+              },
+              {
+                "min_level": 12,
+                "max_level": 20,
+                "species": "SPECIES_PAWNIARD"
+              }
+            ]
+          },
+          "fishing_mons": {
+            "encounter_rate": 100,
+            "mons": [
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_BARBOACH"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_BARBOACH"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_DARK_CAVE_B1F",
+          "base_label": "gDarkCaveB1F0",
+          "land_mons": {
+            "encounter_rate": 10,
+            "mons": [
+              {
+                "min_level": 12,
+                "max_level": 20,
+                "species": "SPECIES_WOOBAT"
+              },
+              {
+                "min_level": 12,
+                "max_level": 20,
+                "species": "SPECIES_CUBONE"
+              },
+              {
+                "min_level": 12,
+                "max_level": 20,
+                "species": "SPECIES_DUNSPARCE"
+              },
+              {
+                "min_level": 12,
+                "max_level": 20,
+                "species": "SPECIES_TIMBURR"
+              },
+              {
+                "min_level": 12,
+                "max_level": 20,
+                "species": "SPECIES_ARON"
+              },
+              {
+                "min_level": 12,
+                "max_level": 20,
+                "species": "SPECIES_BRONZOR"
+              },
+              {
+                "min_level": 12,
+                "max_level": 20,
+                "species": "SPECIES_ARON"
+              },
+              {
+                "min_level": 12,
+                "max_level": 20,
+                "species": "SPECIES_SABLEYE"
+              },
+              {
+                "min_level": 12,
+                "max_level": 20,
+                "species": "SPECIES_DUNSPARCE"
+              },
+              {
+                "min_level": 12,
+                "max_level": 20,
+                "species": "SPECIES_ABRA"
+              },
+              {
+                "min_level": 12,
+                "max_level": 20,
+                "species": "SPECIES_ABRA"
+              },
+              {
+                "min_level": 12,
+                "max_level": 20,
+                "species": "SPECIES_PAWNIARD"
+              }
+            ]
+          },
+          "fishing_mons": {
+            "encounter_rate": 30,
+            "mons": [
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_BARBOACH"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_BARBOACH"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_DARK_CAVE_B2F",
+          "base_label": "gDarkCaveB2F0",
+          "land_mons": {
+            "encounter_rate": 10,
+            "mons": [
+              {
+                "min_level": 12,
+                "max_level": 20,
+                "species": "SPECIES_WOOPER"
+              },
+              {
+                "min_level": 12,
+                "max_level": 20,
+                "species": "SPECIES_CUBONE"
+              },
+              {
+                "min_level": 12,
+                "max_level": 20,
+                "species": "SPECIES_DUNSPARCE"
+              },
+              {
+                "min_level": 12,
+                "max_level": 20,
+                "species": "SPECIES_TIMBURR"
+              },
+              {
+                "min_level": 12,
+                "max_level": 20,
+                "species": "SPECIES_ARON"
+              },
+              {
+                "min_level": 12,
+                "max_level": 20,
+                "species": "SPECIES_BRONZOR"
+              },
+              {
+                "min_level": 12,
+                "max_level": 20,
+                "species": "SPECIES_UNOWN"
+              },
+              {
+                "min_level": 12,
+                "max_level": 20,
+                "species": "SPECIES_SABLEYE"
+              },
+              {
+                "min_level": 12,
+                "max_level": 20,
+                "species": "SPECIES_DUNSPARCE"
+              },
+              {
+                "min_level": 12,
+                "max_level": 20,
+                "species": "SPECIES_ABRA"
+              },
+              {
+                "min_level": 12,
+                "max_level": 20,
+                "species": "SPECIES_ABRA"
+              },
+              {
+                "min_level": 12,
+                "max_level": 20,
+                "species": "SPECIES_PAWNIARD"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_DARK_CAVE1F",
+          "base_label": "gDarkCave1F0",
+          "land_mons": {
+            "encounter_rate": 10,
+            "mons": [
+              {
+                "min_level": 12,
+                "max_level": 20,
+                "species": "SPECIES_WOOBAT"
+              },
+              {
+                "min_level": 12,
+                "max_level": 20,
+                "species": "SPECIES_CUBONE"
+              },
+              {
+                "min_level": 12,
+                "max_level": 20,
+                "species": "SPECIES_DUNSPARCE"
+              },
+              {
+                "min_level": 12,
+                "max_level": 20,
+                "species": "SPECIES_TIMBURR"
+              },
+              {
+                "min_level": 12,
+                "max_level": 20,
+                "species": "SPECIES_ARON"
+              },
+              {
+                "min_level": 12,
+                "max_level": 20,
+                "species": "SPECIES_BRONZOR"
+              },
+              {
+                "min_level": 12,
+                "max_level": 20,
+                "species": "SPECIES_ARON"
+              },
+              {
+                "min_level": 12,
+                "max_level": 20,
+                "species": "SPECIES_SABLEYE"
+              },
+              {
+                "min_level": 12,
+                "max_level": 20,
+                "species": "SPECIES_DUNSPARCE"
+              },
+              {
+                "min_level": 12,
+                "max_level": 20,
+                "species": "SPECIES_ABRA"
+              },
+              {
+                "min_level": 12,
+                "max_level": 20,
+                "species": "SPECIES_ABRA"
+              },
+              {
+                "min_level": 12,
+                "max_level": 20,
+                "species": "SPECIES_PAWNIARD"
               }
             ]
           }

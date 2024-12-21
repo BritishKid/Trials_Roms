@@ -55,7 +55,8 @@
     F(PLUCK) \
     F(GRASS_KNOT) \
     F(ROCK_SMASH) \
-    F(CUT) 
+    F(CUT) \
+    F(SCALD) 
 
 #define FOREACH_HM(F) \
     F(CUT) \

@@ -7,12 +7,12 @@ script Island1_TravelByBoat {
     if(flag(FLAG_RECEIVED_SS_TICKET)) {    
         msgbox(format("Would you like to travel to Island 2?"), MSGBOX_YESNO)
         if(var(VAR_RESULT) == YES) {
-            if(!flag(FLAG_COAST_TOWN_SAVED)) {
+            if(!flag(FLAG_HIDE_BLOCKER_THUGS)) {
                 msgbox(format("Due to trouble in the Islands Port we will have to drop you on the beach for your safety."))
                 warp(MAP_ROUTE5, 24, 6)
             }
-            if(flag(FLAG_COAST_TOWN_SAVED)) {
-                // warp(MAP_MAUVILLE_CITY_PORT, 5, 11)
+            if(flag(FLAG_HIDE_BLOCKER_THUGS)) {
+                warp(MAP_MAUVILL_CITY_HARBOUR, 8, 11)
             }
         }
     }

@@ -146,12 +146,12 @@ script SandyShoreCity_RivalBlocking_Boat {
 
 script SandyShoreCity_RivalBattleForTicket {
     lockall
-    msgbox(format("Wait!"))
-    setobjectxy(1, 10, 12)
-    addobject(1)
-    applymovement(1, Movement_RivalAppearing_BeachTown)
-    waitmovement(1)
-    msgbox(format("")) //TODO
+    msgbox(format("Wait!"), MSGBOX_AUTOCLOSE)
+    addobject(7)
+    setobjectxy(7, 10, 12)
+    applymovement(7, Movement_RivalAppearing_BeachTown)
+    waitmovement(7)
+    trainerbattle_single(TRAINER_SANDYSHORE_CITY_RIVAL, SandyShoreCity_Rival_Intro, SandyShoreCity_Rival_Outro, SandyShoreCity_Rival_PostbattleScript)
     //rival battle 2
     // if(var(VAR_STARTER_MON)== 0){
     // trainerbattle_single(TRAINER_SANDYSHORE_CITY_RIVAL_GRASS, SandyShoreCity_Rival_Intro, SandyShoreCity_Rival_Outro, SandyShoreCity_Rival_PostbattleScript)
@@ -186,6 +186,8 @@ movement  Movement_RivalAppearing_BeachTown {
     walk_left
     walk_left
     walk_left
+    walk_left
+    face_up
 }
 
 movement  Movement_SandyBeach_RivalLeaves {

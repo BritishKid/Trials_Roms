@@ -124,12 +124,11 @@ Double Battle: No
 AI: Check Bad Move
 
 Dwebble
-Level: 9
+Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-
 Dwebble
-Level: 11
+Level: 7
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_CAMPER_ROUTE1B ===
@@ -172,7 +171,7 @@ Double Battle: No
 AI: Check Bad Move
 
 Surskit
-Level: 5
+Level: 3
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Metapod
@@ -180,7 +179,7 @@ Level: 7
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Kricketot
-Level: 5
+Level: 4
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_ROUTE2_TRAINER3 ===
@@ -219,34 +218,34 @@ Double Battle: No
 AI: Check Bad Move
 
 Pidgey
-Level: 9
+Level: 7
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Charmander
-Level: 10
+Level: 8
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === MAHOGANYHILLS1_BAO ===
 Name: BAO
-Class: Cooltrainer
-Pic: Cooltrainer M
+Class: Pokemaniac
+Pic: Pokemaniac
 Gender: Male
 Music: Cool
 Double Battle: No
 AI: Check Bad Move
 
 Riolu
-Level: 12
+Level: 10
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Bulbasaur
-Level: 12
+Level: 11
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === MAHOGANYHILLS1_TOUGH_TRAINER ===
-Name: GRUNT
-Class: School Kid
-Pic: School Kid F
+Name: FERN
+Class: Cooltrainer
+Pic: Cooltrainer F
 Gender: Female
 Music: Female
 Double Battle: No
@@ -296,14 +295,14 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_LUKE_MAHOGANYHILLS2 ===
 Name: LUKE
 Class: PKMN Trainer 1
-Pic: Cooltrainer M
+Pic: Pokemaniac
 Gender: Male
 Music: Cool
 Double Battle: No
 AI: Check Bad Move
 
 Chimchar
-Level: 11
+Level: 9
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_ROUTE2_JENOVA ===
@@ -316,8 +315,8 @@ Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
 
 Jigglypuff
-Level: 10
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Level: 8
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === GYM_XP_DUMP ===
 Name: WAYNE
@@ -474,7 +473,7 @@ Double Battle: No
 AI: Check Bad Move
 
 Trapinch
-Level: 11
+Level: 9
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_JOSH_MAHOGANYHILLS2 ===
@@ -487,7 +486,7 @@ Double Battle: No
 AI: Check Bad Move
 
 Meowth
-Level: 12
+Level: 11
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Pay Day
 
@@ -623,7 +622,7 @@ Double Battle: No
 AI: Check Bad Move
 
 Geodude
-Level: 16
+Level: 14
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINERSCHOOLHALL_MAT1 ===
@@ -1925,135 +1924,123 @@ Gloom
 Level: 26
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
-=== TRAINER_BRAXTON ===
-Name: BRAXTON
-Class: Cooltrainer
-Pic: Cooltrainer M
+=== TRAINER_SANDYSHORE_CITY_RIVAL ===
+Name: RIVAL NAME
+Class: PKMN Trainer 1
+Pic: Brendan
 Gender: Male
-Music: Cool
-Items: Hyper Potion
+Music: Male
 Double Battle: No
-AI: Check Bad Move / Try To Faint / Check Viability
+AI: Check Bad Move
 
-Swellow
-Level: 28
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Focus Energy
-- Quick Attack
-- Wing Attack
-- Endeavor
+Boldore
+Level: 25
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Trapinch
-Level: 28
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Bite
-- Dig
-- Feint Attack
-- Sand Tomb
+Nuzleaf
+Level: 25
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Wailmer
-Level: 28
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Rollout
-- Whirlpool
-- Astonish
-- Water Pulse
+Azumarill
+Level: 25
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Magneton
-Level: 28
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Thunderbolt
-- Supersonic
-- Thunder Wave
-- Sonic Boom
+Boltund
+Level: 25
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Shiftry
-Level: 28
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Giga Drain
-- Feint Attack
-- Double Team
-- Swagger
+Meowth Galarian
+Level: 25
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_VINCENT ===
-Name: VINCENT
-Class: Cooltrainer
-Pic: Cooltrainer M
+
+=== THUGCITY_BLOCKER1 ===
+Name: THUG
+Class: Magma Grunt
+Pic: Magma Grunt M
 Gender: Male
 Music: Cool
-Items: Full Restore
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
 
 Sableye
-Level: 44
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Level: 32
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Medicham
-Level: 44
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Poochyena
+Level: 32
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Sharpedo
-Level: 44
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-
-=== TRAINER_LEROY ===
-Name: LEROY
-Class: Cooltrainer
-Pic: Cooltrainer M
+=== THUGCITY_BLOCKER2 ===
+Name: THUG
+Class: Magma Grunt
+Pic: Magma Grunt M
 Gender: Male
 Music: Cool
-Items: Full Restore
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
 
-Mawile
-Level: 46
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Maschiff
+Level: 32
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Starmie
-Level: 46
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Scraggy
+Level: 32
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_WILTON_1 ===
-Name: WILTON
-Class: Cooltrainer
-Pic: Cooltrainer M
+=== THUGCITY_COMMANDER ===
+Name: THUG
+Class: Magma Grunt
+Pic: Magma Grunt M
 Gender: Male
 Music: Cool
-Items: Super Potion
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
 
-Electrike
-Level: 17
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Sableye
+Level: 32
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Wailmer
-Level: 17
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Scraggy
+Level: 32
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Makuhita
-Level: 17
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Mabosstiff
+Level: 34
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_EDGAR ===
+=== DARKCAVE_YOUNGSTER ===
 Name: EDGAR
-Class: Cooltrainer
-Pic: Cooltrainer M
+Class: Youngster
+Pic: Youngster
 Gender: Male
-Music: Cool
-Items: Full Restore
+Music: Male
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
 
-Cacturne
-Level: 43
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Raboot
+Level: 19
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Pelipper
-Level: 43
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Woobat
+Level: 17
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Woobat
+Level: 15
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Woobat
+Level: 14
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Woobat
+Level: 18
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Woobat
+Level: 20
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_ALBERT ===
 Name: ALBERT

@@ -78,11 +78,11 @@
 #define HEMLOCKGYM_TRAINER_VICTOR                       72
 #define HEMLOCKGYM_TRAINER_OLLIE                       73
 #define HEMLOCKGYM_TRAINER_CHLOE                        74
-#define TRAINER_BRAXTON                      75
-#define TRAINER_VINCENT                      76
-#define TRAINER_LEROY                        77
-#define TRAINER_WILTON_1                     78
-#define TRAINER_EDGAR                        79
+#define TRAINER_SANDYSHORE_CITY_RIVAL                      75
+#define THUGCITY_BLOCKER1                      76
+#define THUGCITY_BLOCKER2                        77
+#define THUGCITY_COMMANDER                     78
+#define DARKCAVE_YOUNGSTER                        79
 #define TRAINER_ALBERT                       80
 #define TRAINER_SAMUEL                       81
 #define TRAINER_VITO                         82

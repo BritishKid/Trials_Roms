@@ -65,7 +65,7 @@ EventScript_RockSmash::
 	lockall
 	goto_if_unset FLAG_BADGE03_GET, EventScript_CantSmashRock
 	checkitem ITEM_PICKAXE 1
-	goto_if_eq VAR_RESULT, 1, EventScript_CantSmashRock
+	goto_if_eq VAR_RESULT, 0, EventScript_CantSmashRock2
 	msgbox Text_WantToSmash, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, EventScript_CancelSmash
 	msgbox Text_UsedPickaxe, MSGBOX_DEFAULT
@@ -210,6 +210,13 @@ EventScript_CantSmashRock::
 	releaseall
 	end
 
+	
+EventScript_CantSmashRock2::
+	msgbox Text_CantSmash2, MSGBOX_DEFAULT
+	releaseall
+	end
+
+
 EventScript_CancelSmash::
 	closemessage
 	releaseall
@@ -220,7 +227,13 @@ Text_WantToSmash:
 	.string "Would you like to use your Pickaxe?$"
 
 Text_CantSmash:
-	.string "It's a rugged rock.$"
+	.string "It's a rugged rock. NO BADGE$"
+
+	
+Text_CantSmash2:
+	.string "It's a rugged rock. NO AXE$"
+
+
 
 EventScript_StrengthBoulder::
 	lockall

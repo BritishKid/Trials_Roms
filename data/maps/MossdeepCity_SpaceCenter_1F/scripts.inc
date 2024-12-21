@@ -11,7 +11,7 @@ MossdeepCity_SpaceCenter_1F_MapScripts::
 	.byte 0
 
 MossdeepCity_SpaceCenter_1F_OnTransition:
-	goto_if_eq VAR_MOSSDEEP_CITY_STATE, 2, MossdeepCity_SpaceCenter_1F_EventScript_MoveObjectsForTeamMagma
+	goto_if_eq VAR_HEMLOCK_VILLAGE_STATE, 2, MossdeepCity_SpaceCenter_1F_EventScript_MoveObjectsForTeamMagma
 	end
 
 MossdeepCity_SpaceCenter_1F_EventScript_MoveObjectsForTeamMagma::
@@ -43,7 +43,7 @@ MossdeepCity_SpaceCenter_1F_EventScript_MoveStairGuardRight::
 	end
 
 MossdeepCity_SpaceCenter_1F_OnLoad:
-	goto_if_le VAR_MOSSDEEP_CITY_STATE, 2, MossdeepCity_SpaceCenter_1F_EventScript_SetMagmaNote
+	goto_if_le VAR_HEMLOCK_VILLAGE_STATE, 2, MossdeepCity_SpaceCenter_1F_EventScript_SetMagmaNote
 	end
 
 MossdeepCity_SpaceCenter_1F_EventScript_SetMagmaNote::
@@ -53,7 +53,7 @@ MossdeepCity_SpaceCenter_1F_EventScript_SetMagmaNote::
 MossdeepCity_SpaceCenter_1F_EventScript_RocketLaunchCounter::
 	lock
 	faceplayer
-	goto_if_eq VAR_MOSSDEEP_CITY_STATE, 2, MossdeepCity_SpaceCenter_1F_EventScript_RocketLaunchCounterMagma
+	goto_if_eq VAR_HEMLOCK_VILLAGE_STATE, 2, MossdeepCity_SpaceCenter_1F_EventScript_RocketLaunchCounterMagma
 	dotimebasedevents
 	specialvar VAR_RESULT, GetWeekCount
 	buffernumberstring STR_VAR_1, VAR_RESULT
@@ -96,7 +96,7 @@ MossdeepCity_SpaceCenter_1F_EventScript_ShowLaunchNumberMagma::
 MossdeepCity_SpaceCenter_1F_EventScript_Scientist::
 	lock
 	faceplayer
-	goto_if_eq VAR_MOSSDEEP_CITY_STATE, 2, MossdeepCity_SpaceCenter_1F_EventScript_ScientistMagma
+	goto_if_eq VAR_HEMLOCK_VILLAGE_STATE, 2, MossdeepCity_SpaceCenter_1F_EventScript_ScientistMagma
 	msgbox MossdeepCity_SpaceCenter_1F_Text_RocketLaunchDemandsPerfection, MSGBOX_DEFAULT
 	release
 	end
@@ -111,7 +111,7 @@ MossdeepCity_SpaceCenter_1F_EventScript_ScientistMagma::
 MossdeepCity_SpaceCenter_1F_EventScript_SunStoneMan::
 	lock
 	faceplayer
-	goto_if_eq VAR_MOSSDEEP_CITY_STATE, 2, MossdeepCity_SpaceCenter_1F_EventScript_SunStoneManMagma
+	goto_if_eq VAR_HEMLOCK_VILLAGE_STATE, 2, MossdeepCity_SpaceCenter_1F_EventScript_SunStoneManMagma
 	goto_if_set FLAG_RECEIVED_SUN_STONE_MOSSDEEP, MossdeepCity_SpaceCenter_1F_EventScript_GaveSunStone
 	msgbox MossdeepCity_SpaceCenter_1F_Text_FoundThisYouCanHaveIt, MSGBOX_DEFAULT
 	giveitem ITEM_SUN_STONE
@@ -149,8 +149,8 @@ MossdeepCity_SpaceCenter_1F_EventScript_Woman::
 	lock
 	faceplayer
 	goto_if_set FLAG_SYS_GAME_CLEAR, MossdeepCity_SpaceCenter_1F_EventScript_WomanNormal
-	goto_if_eq VAR_MOSSDEEP_CITY_STATE, 2, MossdeepCity_SpaceCenter_1F_EventScript_WomanMagma
-	goto_if_lt VAR_MOSSDEEP_CITY_STATE, 2, MossdeepCity_SpaceCenter_1F_EventScript_WomanNormal
+	goto_if_eq VAR_HEMLOCK_VILLAGE_STATE, 2, MossdeepCity_SpaceCenter_1F_EventScript_WomanMagma
+	goto_if_lt VAR_HEMLOCK_VILLAGE_STATE, 2, MossdeepCity_SpaceCenter_1F_EventScript_WomanNormal
 	goto MossdeepCity_SpaceCenter_1F_EventScript_WomanMagma
 	end
 
@@ -168,8 +168,8 @@ MossdeepCity_SpaceCenter_1F_EventScript_OldMan::
 	lock
 	faceplayer
 	goto_if_set FLAG_SYS_GAME_CLEAR, MossdeepCity_SpaceCenter_1F_EventScript_OldManNormal
-	goto_if_eq VAR_MOSSDEEP_CITY_STATE, 2, MossdeepCity_SpaceCenter_1F_EventScript_OldManMagma
-	goto_if_lt VAR_MOSSDEEP_CITY_STATE, 2, MossdeepCity_SpaceCenter_1F_EventScript_OldManNormal
+	goto_if_eq VAR_HEMLOCK_VILLAGE_STATE, 2, MossdeepCity_SpaceCenter_1F_EventScript_OldManMagma
+	goto_if_lt VAR_HEMLOCK_VILLAGE_STATE, 2, MossdeepCity_SpaceCenter_1F_EventScript_OldManNormal
 	goto MossdeepCity_SpaceCenter_1F_EventScript_OldManMagma
 	end
 

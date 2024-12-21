@@ -62,14 +62,14 @@
       "blockdata_filepath": "data/layouts/LilycoveCity/map.bin"
     },
     {
-      "id": "LAYOUT_MOSSDEEP_CITY",
-      "name": "MossdeepCity_Layout",
+      "id": "LAYOUT_HEMLOCK_VILLAGE",
+      "name": "HemlockVillage_Layout",
       "width": 30,
       "height": 36,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Mossdeep",
-      "border_filepath": "data/layouts/MossdeepCity/border.bin",
-      "blockdata_filepath": "data/layouts/MossdeepCity/map.bin"
+      "border_filepath": "data/layouts/HemlockVillage/border.bin",
+      "blockdata_filepath": "data/layouts/HemlockVillage/map.bin"
     },
     {
       "id": "LAYOUT_SOOTOPOLIS_CITY",
@@ -4960,6 +4960,56 @@
       "secondary_tileset": "gTileset_EverGrande",
       "border_filepath": "data/layouts/FlowerGlade/border.bin",
       "blockdata_filepath": "data/layouts/FlowerGlade/map.bin"
+    },
+    {
+      "id": "LAYOUT_DARK_CAVE_GF",
+      "name": "DarkCaveGF_Layout",
+      "width": 20,
+      "height": 26,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/DarkCaveGF/border.bin",
+      "blockdata_filepath": "data/layouts/DarkCaveGF/map.bin"
+    },
+    {
+      "id": "LAYOUT_DARK_CAVE_B1F",
+      "name": "DarkCaveB1F_Layout",
+      "width": 35,
+      "height": 40,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/DarkCaveB1F/border.bin",
+      "blockdata_filepath": "data/layouts/DarkCaveB1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_DARK_CAVE_B2F",
+      "name": "DarkCaveB2F_Layout",
+      "width": 25,
+      "height": 17,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/DarkCaveB2F/border.bin",
+      "blockdata_filepath": "data/layouts/DarkCaveB2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_DARK_CAVE1F",
+      "name": "DarkCave1F_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/DarkCave1F/border.bin",
+      "blockdata_filepath": "data/layouts/DarkCave1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_MAUVILL_CITY_HARBOUR",
+      "name": "MauvillCity_Harbour_Layout",
+      "width": 24,
+      "height": 15,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/MauvillCity_Harbour/border.bin",
+      "blockdata_filepath": "data/layouts/MauvillCity_Harbour/map.bin"
     }
   ]
 }

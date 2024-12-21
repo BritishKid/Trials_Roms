@@ -79,7 +79,7 @@ MossdeepCity_Gym_EventScript_TateAndLizaDefeated::
 	clearflag FLAG_HIDE_MOSSDEEP_CITY_SPACE_CENTER_1F_TEAM_MAGMA
 	clearflag FLAG_HIDE_MOSSDEEP_CITY_SPACE_CENTER_2F_TEAM_MAGMA
 	clearflag FLAG_HIDE_MOSSDEEP_CITY_SPACE_CENTER_2F_STEVEN
-	setvar VAR_MOSSDEEP_CITY_STATE, 1
+	setvar VAR_HEMLOCK_VILLAGE_STATE, 1
 	setflag FLAG_HIDE_MOSSDEEP_CITY_SPACE_CENTER_1F_STEVEN
 	setvar VAR_MOSSDEEP_SPACE_CENTER_STATE, 1
 	call MossdeepCity_Gym_EventScript_GiveCalmMind
@@ -203,7 +203,6 @@ MossdeepCity_Gym_EventScript_ClearSwitch4::
 
 MossdeepCity_Gym_EventScript_WarpToEntrance::
 	lockall
-	warpmossdeepgym MAP_MOSSDEEP_CITY_GYM, 7, 30
 	waitstate
 	releaseall
 	end

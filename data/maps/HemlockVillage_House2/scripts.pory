@@ -1,0 +1,59 @@
+mapscripts HemlockVillage_House2_MapScripts {
+
+}
+
+script HemlockVillage_House2_EventScript_Man {
+    lockall
+    faceplayer
+    msgbox(format("The Hemlock gym uses powerful Poison type Pokémon. Ground Pokémon are great against them."))
+    releaseall
+}
+
+script HemlockCity_Child_InHouse2 {
+    lockall
+    faceplayer
+    if(flag(FLAG_HEMLOCK_NPC_TRADE_COMPLETED)) {
+        goto(HemlockTown_TradeCompleted)
+    }
+    setvar(VAR_0x8008, INGAME_TRADE_MUDBRAY)
+    copyvar(VAR_0x8004, VAR_0x8008)
+    specialvar(VAR_RESULT, GetInGameTradeSpeciesInfo)
+    copyvar(VAR_0x8009, VAR_RESULT)
+    msgbox(format("Have you seen the gooey Pokémon {STR_VAR_1} nearby? Would you trade one for my {STR_VAR_2}?"), MSGBOX_YESNO)
+    if(var(VAR_RESULT) == NO) {
+        goto(HemlockTown_TradeDeclined)
+    }
+    if(var(VAR_RESULT) == YES) {
+        special(ChoosePartyMon)
+        waitstate
+        copyvar(VAR_0x800A, VAR_0x8004)
+        if(var(VAR_0x8004) == PARTY_NOTHING_CHOSEN) {
+            goto(HemlockTown_TradeDeclined)
+        }
+        copyvar(VAR_0x8005, VAR_0x800A)
+        specialvar(VAR_RESULT, GetTradeSpecies)
+        copyvar(VAR_0x800B, VAR_RESULT)
+        if(var(VAR_RESULT) != VAR_0x8009) {
+            msgbox(format("That's not a gooey enough {STR_VAR_1}"))
+            end
+        }
+        copyvar(VAR_0x8004, VAR_0x8008)
+        copyvar(VAR_0x8005, VAR_0x800A)
+        special(CreateInGameTradePokemon)
+        special(DoInGameTradeScene)
+        waitstate
+        msgbox(format("Thank you! It's sooo goooey."))
+        setflag(FLAG_HEMLOCK_NPC_TRADE_COMPLETED)
+    }
+    releaseall
+}
+
+script HemlockTown_TradeDeclined {
+    msgbox(format("..oh.."))
+    releaseall
+}
+
+script HemlockTown_TradeCompleted {
+    msgbox(format("Your Gooey is doing well!"))
+    releaseall
+}

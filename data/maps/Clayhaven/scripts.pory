@@ -8,18 +8,72 @@ Clayhaven_OnTransition:
 
 script Clayhaven_MapScript_CraftingMaster_Sign {
     lockall
-    msgbox(format("Crafting Master's House"))
+    msgbox(format("Crafting Master's House"), MSGBOX_AUTOCLOSE)
     releaseall
 }
 
 script Clayhaven_MapScript_TownSign {
     lockall
-    msgbox(format("CLAY HAVEN\lTriver's oldest town"))
+    msgbox(format("CLAY HAVEN\lTriver's oldest town"), MSGBOX_AUTOCLOSE)
     releaseall
 }
 
 script Clayhaven_MapScript_PlatefallCave_Sign {
     lockall
-    msgbox(format("PLATEFALL CAVE\lLanding site of an ancient Pokémon"))
+    msgbox(format("PLATEFALL CAVE\lLanding site of an ancient Pokémon"), MSGBOX_AUTOCLOSE)
     releaseall
+}
+
+script Clayhaven_BridgeMart_Employee {
+    lockall
+    msgbox(format("Hey there!"), MSGBOX_AUTOCLOSE)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Clayhaven_Surprise)
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+    applymovement(2, Movement_Clayhaven_MartEmployeeComesDown)
+    waitmovement(2)
+    msgbox(format("You must be from Bedrock town, I can tell from your coat.\lLet me be the first to welcome you to Clay Haven."), MSGBOX_AUTOCLOSE)
+    msgbox(format("Over this bridge is Platefall cave it's our claim to fame! We also have an incredible Pokemart where you can buy some useful items for your journey."), MSGBOX_AUTOCLOSE)
+    msgbox(format("If you're looking for the Pokemon Gym you can head south and head into Mahogany Hills where Jaiden built it."), MSGBOX_AUTOCLOSE)
+    msgbox(format("Have these as a sign of good faith."), MSGBOX_AUTOCLOSE)
+    giveitem(ITEM_BERRY_JUICE, 6)
+    giveitem(ITEM_POTION, 3)
+    playfanfare(MUS_OBTAIN_ITEM)
+    msgbox(format("You were given 6 berry juices and 3 potions."), MSGBOX_AUTOCLOSE)
+    setvar(VAR_CLAYHAVEN_STATE, 1)
+    msgbox(format("Good luck!"), MSGBOX_AUTOCLOSE)
+    applymovement(2, Movement_Clayhaven_MartEmployeeLeaves)
+    waitmovement(2)
+    setflag(FLAG_HIDE_CLAYHAVEN_MART_EMPLOYEE)
+    removeobject(2)
+    releaseall
+}
+
+script Clayhaven_EventScript_Hiker {
+    lockall
+    msgbox(format("If you're ever unsure where to go follow the padded down grass. It shows a journey of a hundred other trainers trying to become a champion and will lead you to your next challenge."))
+    releaseall
+}
+
+//movement
+
+movement Movement_Clayhaven_Surprise {
+    emote_exclamation_mark
+}
+
+movement Movement_Clayhaven_MartEmployeeComesDown {
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+}
+
+movement Movement_Clayhaven_MartEmployeeLeaves {
+    walk_up
+    walk_up
+    walk_up
+    walk_up
+    walk_up
+    walk_up
+    walk_up
 }

@@ -437,22 +437,17 @@ EventScript_Gym3_Robert_FindLater_Text_1:
 
 BugTrainer_Mark_Intro::
 # 168 "data/maps/Obsidian_Thicket_3/scripts.pory"
-	.string "Hey there, Bug Trainer Mark here! Ready\n"
-	.string "for a bug-tastic battle? Let's see if\l"
-	.string "you can keep up with the swarm!$"
+	.string "I was trying to reach the gym but there\n"
+	.string "are so many tough trainers in the way!$"
 
 BugTrainer_Mark_Outro::
 # 172 "data/maps/Obsidian_Thicket_3/scripts.pory"
-	.string "A tough battle, indeed! Your skills cut\n"
-	.string "through my bug defenses. Keep that\l"
-	.string "edge sharp on your journey!$"
+	.string "You are great! You might be strong\n"
+	.string "enough to make it.$"
 
 Bugtrainer_Mark_PostBattle::
 # 176 "data/maps/Obsidian_Thicket_3/scripts.pory"
-	.string "Great battle! The bug types may be\n"
-	.string "small, but their bite is mighty. If you\l"
-	.string "ever want to swap bug-catching\l"
-	.string "stories, I'm around!$"
+	.string "Good luck!$"
 
 GentlemanArthur_Intro::
 # 180 "data/maps/Obsidian_Thicket_3/scripts.pory"

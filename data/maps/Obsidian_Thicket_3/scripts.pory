@@ -166,15 +166,15 @@ script EventScript_Gym3_Robert_FindLater {
 //text 
 //ai genned will need to update
 text BugTrainer_Mark_Intro {
-    format("Hey there, Bug Trainer Mark here! Ready for a bug-tastic battle? Let's see if you can keep up with the swarm!")
+    format("I was trying to reach the gym but there are so many tough trainers in the way!")
 }
 
 text BugTrainer_Mark_Outro {
-    format("A tough battle, indeed! Your skills cut through my bug defenses. Keep that edge sharp on your journey!")
+    format("You are great! You might be strong enough to make it.")
 }
 
 text Bugtrainer_Mark_PostBattle {
-    format("Great battle! The bug types may be small, but their bite is mighty. If you ever want to swap bug-catching stories, I'm around!")
+    format("Good luck!")
 }
 
 text GentlemanArthur_Intro {

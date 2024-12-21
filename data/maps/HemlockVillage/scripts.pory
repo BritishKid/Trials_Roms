@@ -1,0 +1,73 @@
+mapscripts HemlockVillage_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION {
+        setflag(FLAG_VISITED_HEMLOCK_VILLAGE)
+    }
+}
+
+script HemlockVillage_EventScript_CitySign {
+    msgbox(format("HEMLOCK VILLAGE:\l"))
+}
+
+script SwampTown_KingsRock_Boy {
+    lockall
+    faceplayer
+    msgbox(format("This is the one place in Triver you can get King's Rocks"))
+    if(!flag(FLAG_RECEIVED_KINGS_ROCK)){
+        msgbox(format("Here have this one"))
+        giveitem(ITEM_KINGS_ROCK, 1)
+        playfanfare(MUS_OBTAIN_ITEM)
+    }
+    releaseall
+}
+
+script HemlockVillage_EventScript_BlackBelt {
+    lockall
+    faceplayer
+    if(!flag(FLAG_REMOVED_MOSSDEEP_ROCK)) {
+        msgbox(format("I'm trying to prove to my brother I can smash rocks like him.."))
+    }
+    if(flag(FLAG_REMOVED_MOSSDEEP_ROCK)) {
+        msgbox(format("How in the world did you do that?"))
+        //todo reward or something?
+    }
+    releaseall
+}
+
+script HemlockVillage_EventScript_Man {
+    lockall
+    faceplayer
+    msgbox(format("I'm sure I can hear Pokemon hiding in these trees."))
+    releaseall
+}
+
+script SwampTown_RockToSmash {
+    lockall
+    checkitem(ITEM_PICKAXE, 1)
+    if(var(VAR_RESULT) == FALSE) {
+        msgbox(format("It's a rugged rock."))
+    }
+    if(var(VAR_RESULT) == TRUE) {
+        msgbox("This rock appears to be breakable.\nWould you like to use your Pickaxe?", MSGBOX_YESNO)
+        if(var(VAR_RESULT) == NO) {
+            end
+        }
+        if(var(VAR_RESULT) == YES) {
+            setflag(FLAG_REMOVED_MOSSDEEP_ROCK)
+            removeobject(5)
+            applymovement(4, Movement_SwampTown_SurprisedBrother)
+            waitmovement(4)
+            msgbox(format("How did a scrawny lout like you manage that?"))
+            //todo more?
+        }
+        
+    }
+    releaseall
+    //smash rock and wind up the brother
+}
+
+
+//movement
+
+movement Movement_SwampTown_SurprisedBrother {
+    emote_exclamation_mark
+}

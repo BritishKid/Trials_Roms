@@ -13,6 +13,7 @@ CoralPort_Mart_EventScript_Clerk::
 
 	.align 2
 CoralPort_Mart_Pokemart:
+	.2byte ITEM_POKE_BALL
 	.2byte ITEM_GREAT_BALL
 	.2byte ITEM_ULTRA_BALL
 	.2byte ITEM_NET_BALL
@@ -23,7 +24,6 @@ CoralPort_Mart_Pokemart:
 	.2byte ITEM_AWAKENING
 	.2byte ITEM_REVIVE
 	.2byte ITEM_SUPER_REPEL
-	.2byte ITEM_WOOD_MAIL
 	.2byte ITEM_NONE
 	release
 	end

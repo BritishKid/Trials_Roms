@@ -334,29 +334,33 @@ BeachGym_EventScript_Greeter::
 # 167 "data/maps/CoralBeach_Gym_Interior/scripts.pory"
 	msgbox BeachGym_EventScript_Greeter_Text_0
 # 168 "data/maps/CoralBeach_Gym_Interior/scripts.pory"
-	goto_if_unset FLAG_LEVEL_CAPS_ON, BeachGym_EventScript_Greeter_3
+	msgbox BeachGym_EventScript_Greeter_Text_1
+# 169 "data/maps/CoralBeach_Gym_Interior/scripts.pory"
+	special HealPlayerParty
+# 170 "data/maps/CoralBeach_Gym_Interior/scripts.pory"
+	goto_if_set FLAG_LEVEL_CAPS_ON, BeachGym_EventScript_Greeter_3
 BeachGym_EventScript_Greeter_1:
-# 175 "data/maps/CoralBeach_Gym_Interior/scripts.pory"
+# 177 "data/maps/CoralBeach_Gym_Interior/scripts.pory"
 	releaseall
 	return
 
 BeachGym_EventScript_Greeter_2:
-# 169 "data/maps/CoralBeach_Gym_Interior/scripts.pory"
-	msgbox BeachGym_EventScript_Greeter_Text_1, MSGBOX_YESNO
-# 170 "data/maps/CoralBeach_Gym_Interior/scripts.pory"
+# 171 "data/maps/CoralBeach_Gym_Interior/scripts.pory"
+	msgbox BeachGym_EventScript_Greeter_Text_2, MSGBOX_YESNO
+# 172 "data/maps/CoralBeach_Gym_Interior/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq BeachGym_EventScript_Greeter_6
 	goto BeachGym_EventScript_Greeter_1
 
 BeachGym_EventScript_Greeter_3:
-# 168 "data/maps/CoralBeach_Gym_Interior/scripts.pory"
+# 170 "data/maps/CoralBeach_Gym_Interior/scripts.pory"
 	goto_if_unset FLAG_BADGE02_GET, BeachGym_EventScript_Greeter_2
 	goto BeachGym_EventScript_Greeter_1
 
 BeachGym_EventScript_Greeter_6:
-# 171 "data/maps/CoralBeach_Gym_Interior/scripts.pory"
+# 173 "data/maps/CoralBeach_Gym_Interior/scripts.pory"
 	cleartrainerflag GYM_XP_DUMP
-# 172 "data/maps/CoralBeach_Gym_Interior/scripts.pory"
+# 174 "data/maps/CoralBeach_Gym_Interior/scripts.pory"
 	trainerbattle_no_intro GYM_XP_DUMP, GymXpDump_Outro
 	goto BeachGym_EventScript_Greeter_1
 
@@ -412,38 +416,43 @@ BeachGym_EventScript_Greeter_Text_0:
 	.string "them out.$"
 
 BeachGym_EventScript_Greeter_Text_1:
-# 169 "data/maps/CoralBeach_Gym_Interior/scripts.pory"
+# 168 "data/maps/CoralBeach_Gym_Interior/scripts.pory"
+	.string "Let me heal up your Pokemon before you\n"
+	.string "go further.$"
+
+BeachGym_EventScript_Greeter_Text_2:
+# 171 "data/maps/CoralBeach_Gym_Interior/scripts.pory"
 	.string "How about a battle for some fast\n"
 	.string "levels?$"
 
 BeachGym_Gym_Leader_Intro::
-# 181 "data/maps/CoralBeach_Gym_Interior/scripts.pory"
+# 183 "data/maps/CoralBeach_Gym_Interior/scripts.pory"
 	.string "Why well done you've made it! Welcome to\n"
 	.string "my cavern, carved with the incredible\l"
 	.string "power of water! I am Marina a water of\l"
 	.string "water type Pokémon.$"
 
 BeachGym_Gym_Leader_Outro::
-# 185 "data/maps/CoralBeach_Gym_Interior/scripts.pory"
+# 187 "data/maps/CoralBeach_Gym_Interior/scripts.pory"
 	.string "Incredible! You've washed me away$"
 
 BeachGym_Gym_Leader_PostBattle::
-# 189 "data/maps/CoralBeach_Gym_Interior/scripts.pory"
+# 191 "data/maps/CoralBeach_Gym_Interior/scripts.pory"
 	.string "You've been making good progress on\n"
 	.string "your journey but this was just the\l"
 	.string "start.$"
 
 BeachGym_Ollie_Intro::
-# 193 "data/maps/CoralBeach_Gym_Interior/scripts.pory"
+# 195 "data/maps/CoralBeach_Gym_Interior/scripts.pory"
 	.string "This gym is a great place for me to\n"
 	.string "master the water type$"
 
 BeachGym_Ollie_Outro::
-# 197 "data/maps/CoralBeach_Gym_Interior/scripts.pory"
+# 199 "data/maps/CoralBeach_Gym_Interior/scripts.pory"
 	.string "Rocks shouldn't be bad in water. Rocks\n"
 	.string "surround the water$"
 
 BeachGym_Ollie_PostbattleScript::
-# 201 "data/maps/CoralBeach_Gym_Interior/scripts.pory"
+# 203 "data/maps/CoralBeach_Gym_Interior/scripts.pory"
 	.string "I've learnt enough, time to learn about\n"
 	.string "poison Pokémon$"

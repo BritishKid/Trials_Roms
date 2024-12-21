@@ -30,10 +30,10 @@ Island1_TravelByBoat_5:
 
 Island1_TravelByBoat_7:
 # 10 "data/maps/CoralPort_Harbor/scripts.pory"
-	goto_if_unset FLAG_COAST_TOWN_SAVED, Island1_TravelByBoat_10
+	goto_if_unset FLAG_HIDE_BLOCKER_THUGS, Island1_TravelByBoat_10
 Island1_TravelByBoat_9:
 # 14 "data/maps/CoralPort_Harbor/scripts.pory"
-	goto_if_set FLAG_COAST_TOWN_SAVED, Island1_TravelByBoat_12
+	goto_if_set FLAG_HIDE_BLOCKER_THUGS, Island1_TravelByBoat_12
 	goto Island1_TravelByBoat_1
 
 Island1_TravelByBoat_10:
@@ -44,6 +44,8 @@ Island1_TravelByBoat_10:
 	goto Island1_TravelByBoat_9
 
 Island1_TravelByBoat_12:
+# 15 "data/maps/CoralPort_Harbor/scripts.pory"
+	warp MAP_MAUVILL_CITY_HARBOUR, 8, 11
 	goto Island1_TravelByBoat_1
 
 
