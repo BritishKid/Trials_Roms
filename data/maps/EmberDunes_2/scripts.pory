@@ -1,0 +1,123 @@
+mapscripts EmberDunes_2_MapScripts {}
+
+
+script EmberDune_Conor_Battle {
+    trainerbattle_single(EMBERDUNE_CONOR, Conor_Intro, Conor_Outro, Increase_Trainers_Beaten)
+    msgbox(Conor_PostBattle, MSGBOX_AUTOCLOSE)
+    release
+}
+
+
+script EmberDune_Maniac_Battle {
+    trainerbattle_single(EMBERDUNE_MANIAC, DesertManiac_Intro, DesertManiac_Outro, Increase_Trainers_Beaten)
+    msgbox(DesertManiac_PostBattle, MSGBOX_AUTOCLOSE)
+    release
+}
+
+
+script EmberDune_Jordan_AceTrainer {
+    trainerbattle_double(EMBERDUNE_JORDAN, Jordan_Intro, Jordan_Outro, JordanNotEnoughMons, Increase_Trainers_Beaten)
+    msgbox(Jordan_PostBattle, MSGBOX_AUTOCLOSE)
+    release
+}
+
+script EmberDune_Charr_AceTrainer {
+    trainerbattle_double(EMBERDUNE_JORDAN, Charr_Intro, Charr_Outro,JordanNotEnoughMons, Increase_Trainers_Beaten)
+    msgbox(Charr_PostBattle, MSGBOX_AUTOCLOSE)
+    release
+}
+
+
+//legendary encounter
+
+script EmberDunes_1_EventScript_SecretButton1 {
+    lockall
+    if(!flag(FLAG_EMBER_DUNES_BUTTON_1_PRESSED)) {
+        msgbox(format("It's covered in sand but you can make out a button on it.\p Press the button?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES) {
+            msgbox(format("You press the button"))
+            addvar(VAR_EMBERDUNES_BUTTONS_PRESSED, 1)
+            setflag(FLAG_EMBER_DUNES_BUTTON_1_PRESSED)
+        }
+        if(var(VAR_RESULT) == NO) {
+            msgbox(format("Probably the smart choice."))
+        }
+    }
+    else {
+        msgbox(format("I've already pressed this button. I wonder why I did that."))
+    }
+    releaseall
+}
+
+script EmberDunes_1_EventScript_SecretButton2 {
+    lockall
+    if(!flag(FLAG_EMBER_DUNES_BUTTON_2_PRESSED)) {
+        msgbox(format("It's covered in sand but you can make out a button on it.\p Press the button?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES) {
+            msgbox(format("You press the button"))
+            addvar(VAR_EMBERDUNES_BUTTONS_PRESSED, 1)
+            setflag(FLAG_EMBER_DUNES_BUTTON_2_PRESSED)
+        }
+        if(var(VAR_RESULT) == NO) {
+            msgbox(format("Probably the smart choice."))
+        }
+    }
+    else {
+        msgbox(format("I've already pressed this button. I wonder why I did that."))
+    }
+    releaseall
+}
+
+
+//text
+text Conor_Intro {
+    format("I hope your ready because I've been training recently")
+}
+
+text Conor_Outro {
+    format("Wow. I guess I need to get back to training")
+}
+
+text Conor_PostBattle {
+    format("This is an amazing place to train.")
+}
+
+text DesertManiac_Intro {
+    format("I hope your ready because I've been training recently")
+}
+
+text DesertManiac_Outro {
+    format("Wow. I guess I need to get back to training")
+}
+
+text DesertManiac_PostBattle {
+    format("This is an amazing place to train.")
+}
+
+text Jordan_Intro {
+    format("Well done for making it this far, but now your time ends")
+}
+
+text Jordan_Outro {
+    format("Seens you've bested me. Well done!")
+}
+
+text Jordan_PostBattle {
+    format("I'm going to follow the footsteps of a legendary trainer and become the very best")
+}
+
+text Charr_Intro {
+    format("Jordan is unstoppable, he trains so hard to be the best")
+}
+
+text Charr_Outro {
+    format("I didn't think he could lose!")
+}
+
+text Charr_PostBattle {
+    format("Jordan is going to keep training and we will beat you next time we see you.")
+}
+
+text JordanNotEnoughMons {
+    format("Shame you don't have enough Pokémon")
+}

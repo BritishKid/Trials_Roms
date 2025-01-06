@@ -42,17 +42,9 @@ UpdatePlayerFlag::
 	lockall
 # 24 "data/maps/Clayhaven_PokemonCenter_1F/scripts.pory"
 	msgbox UpdatePlayerFlag_Text_0
-# 25 "data/maps/Clayhaven_PokemonCenter_1F/scripts.pory"
-	setflag FLAG_HIDE_MAHOGANY_HILLS_OBJECT
 # 26 "data/maps/Clayhaven_PokemonCenter_1F/scripts.pory"
-	setflag FLAG_XP_ALL_ON
-# 27 "data/maps/Clayhaven_PokemonCenter_1F/scripts.pory"
-	setflag FLAG_HIDE_TOWN2_HOUSE3_GIRL
-# 28 "data/maps/Clayhaven_PokemonCenter_1F/scripts.pory"
-	setflag FLAG_HIDE_FIRST_ENCOUNTER_ROB
-# 29 "data/maps/Clayhaven_PokemonCenter_1F/scripts.pory"
 	msgbox UpdatePlayerFlag_Text_1
-# 30 "data/maps/Clayhaven_PokemonCenter_1F/scripts.pory"
+# 27 "data/maps/Clayhaven_PokemonCenter_1F/scripts.pory"
 	releaseall
 	return
 
@@ -62,5 +54,5 @@ UpdatePlayerFlag_Text_0:
 	.string "Updating$"
 
 UpdatePlayerFlag_Text_1:
-# 29 "data/maps/Clayhaven_PokemonCenter_1F/scripts.pory"
+# 26 "data/maps/Clayhaven_PokemonCenter_1F/scripts.pory"
 	.string "Updated$"

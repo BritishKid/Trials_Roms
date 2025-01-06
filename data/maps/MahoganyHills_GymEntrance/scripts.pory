@@ -56,7 +56,7 @@ script MahoganyHills_Robert_Postbattle {
     msgbox(format("That was an incredible battle, you are stronger than people say."), MSGBOX_AUTOCLOSE)
     msgbox(format("Why don't you take this, it will be very helpful."), MSGBOX_AUTOCLOSE)
     giveitem(ITEM_ABILITY_PATCH, 1)
-    msgbox(format("You can use it on a Pokemon to unlock their hidden ability."), MSGBOX_AUTOCLOSE)
+    msgbox(format("You can use it on a Pokémon to unlock their hidden ability."), MSGBOX_AUTOCLOSE)
     setvar(VAR_ROBERT_STATUS, 2)
     setflag(FLAG_HIDE_FIRST_ENCOUNTER_ROB)
 }

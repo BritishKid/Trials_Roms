@@ -44,6 +44,24 @@ SINGLE_BATTLE_TEST("Scrappy allows to hit Ghost-type Pokémon with Normal- and F
     }
 }
 
+
+SINGLE_BATTLE_TEST("BoneZone allows to hit Flying-type Pokémon with Ground-type moves")
+{
+    u32 move;
+    PARAMETRIZE { move = MOVE_BONE_CLUB; }
+
+    GIVEN {
+        PLAYER(SPECIES_CUBONE) { Ability(ABILITY_BONE_ZONE); };
+        OPPONENT(SPECIES_PIDGEOT);
+    } WHEN {
+        TURN { MOVE(player, move); }
+    } SCENE {
+        ANIMATION(ANIM_TYPE_MOVE, move, player);
+        HP_BAR(opponent);
+    }
+}
+
+
 SINGLE_BATTLE_TEST("Scrappy doesn't bypass a Ghost-type's Wonder Guard")
 {
     u32 move;

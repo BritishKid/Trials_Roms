@@ -205,11 +205,11 @@ CoralBeach_Pyukumuku_Clean_Up::
 # 112 "data/maps/CoralBeach_1/scripts.pory"
 	msgbox CoralBeach_Pyukumuku_Clean_Up_Text_1
 # 113 "data/maps/CoralBeach_1/scripts.pory"
-	fadescreen FADE_FROM_BLACK
+	removeobject 5
 # 114 "data/maps/CoralBeach_1/scripts.pory"
-	removeobject 3
-# 115 "data/maps/CoralBeach_1/scripts.pory"
 	setflag FLAG_CLEANED_UP_PYUKUMUKU_6
+# 115 "data/maps/CoralBeach_1/scripts.pory"
+	fadescreen FADE_FROM_BLACK
 # 116 "data/maps/CoralBeach_1/scripts.pory"
 	giveitem ITEM_BIG_PEARL
 # 117 "data/maps/CoralBeach_1/scripts.pory"
@@ -337,7 +337,7 @@ CoralBeach_Pyukumuku_Clean_Up_Text_1:
 CoralBeach_Pyukumuku_Clean_Up_Text_2:
 # 117 "data/maps/CoralBeach_1/scripts.pory"
 	.string "You found a big pearl under the\n"
-	.string "Pokemon.$"
+	.string "Pokémon.$"
 
 Beach1_WillyWomby_Intro::
 # 124 "data/maps/CoralBeach_1/scripts.pory"

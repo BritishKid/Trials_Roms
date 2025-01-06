@@ -40,5 +40,5 @@ ClayHaven_House1_EventScript_Bookcase1_Text_1:
 # 17 "data/maps/Clayhaven_House1/scripts.pory"
 	.string "You can use 2 Oran Berries or an Oran\n"
 	.string "Berry with a Potion to create a Berry\l"
-	.string "Juice that Pokemon will use in battle\l"
+	.string "Juice that Pokémon will use in battle\l"
 	.string "themself.$"

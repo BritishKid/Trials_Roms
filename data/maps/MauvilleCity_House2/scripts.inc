@@ -23,7 +23,7 @@ MauvilleCity_House2_EventScript_Woman_1:
 # 18 "data/maps/MauvilleCity_House2/scripts.pory"
 	goto_if_unset FLAG_ACRO_BIKE, MauvilleCity_House2_EventScript_Woman_5
 MauvilleCity_House2_EventScript_Woman_4:
-# 25 "data/maps/MauvilleCity_House2/scripts.pory"
+# 24 "data/maps/MauvilleCity_House2/scripts.pory"
 	releaseall
 	return
 
@@ -40,8 +40,6 @@ MauvilleCity_House2_EventScript_Woman_5:
 # 21 "data/maps/MauvilleCity_House2/scripts.pory"
 	setflag FLAG_ACRO_BIKE
 # 22 "data/maps/MauvilleCity_House2/scripts.pory"
-	playfanfare MUS_OBTAIN_ITEM
-# 23 "data/maps/MauvilleCity_House2/scripts.pory"
 	msgbox MauvilleCity_House2_EventScript_Woman_Text_2
 	goto MauvilleCity_House2_EventScript_Woman_4
 
@@ -56,6 +54,6 @@ MauvilleCity_House2_EventScript_Woman_Text_1:
 	.string "out of here. Please take this!$"
 
 MauvilleCity_House2_EventScript_Woman_Text_2:
-# 23 "data/maps/MauvilleCity_House2/scripts.pory"
+# 22 "data/maps/MauvilleCity_House2/scripts.pory"
 	.string "The ACRO BIKE can be used to reach new\n"
 	.string "places around the region.$"

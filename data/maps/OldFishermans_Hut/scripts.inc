@@ -44,13 +44,13 @@ OldFisherman_EventScript_Fisherman_7:
 
 OldFisherman_EventScript_Fisherman_Text_0:
 # 8 "data/maps/OldFishermans_Hut/scripts.pory"
-	.string "Sometimes you can find giant Pokemon\n"
+	.string "Sometimes you can find giant Pokémon\n"
 	.string "hidden in the water.$"
 
 OldFisherman_EventScript_Fisherman_Text_1:
 # 11 "data/maps/OldFishermans_Hut/scripts.pory"
 	.string "Have you got an interest in catching\n"
-	.string "water Pokemon?$"
+	.string "water Pokémon?$"
 
 OldFisherman_EventScript_Fisherman_Text_2:
 # 13 "data/maps/OldFishermans_Hut/scripts.pory"

@@ -16,5 +16,5 @@ Jenovas_Hidden_Base_EventScript_Jenova::
 
 Jenovas_Hidden_Base_EventScript_Jenova_Text_0:
 # 7 "data/maps/Jenovas_Hidden_Base/scripts.pory"
-	.string "Hi I'm Jenova and you shouldn't be here\n"
-	.string "yet.$"
+	.string "Hi I'm Jenova my secret base is coming\n"
+	.string "soon.$"

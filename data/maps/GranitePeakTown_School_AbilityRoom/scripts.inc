@@ -179,50 +179,48 @@ GranitePeakTown_School_AbilityQuiz_Passed::
 # 68 "data/maps/GranitePeakTown_School_AbilityRoom/scripts.pory"
 	msgbox GranitePeakTown_School_AbilityQuiz_Passed_Text_1
 # 69 "data/maps/GranitePeakTown_School_AbilityRoom/scripts.pory"
-	playfanfare MUS_OBTAIN_ITEM
-# 70 "data/maps/GranitePeakTown_School_AbilityRoom/scripts.pory"
 	giveitem ITEM_ABILITY_CAPSULE, 2
-# 71 "data/maps/GranitePeakTown_School_AbilityRoom/scripts.pory"
+# 70 "data/maps/GranitePeakTown_School_AbilityRoom/scripts.pory"
 	msgbox GranitePeakTown_School_AbilityQuiz_Passed_Text_2
 	return
 
 
 GranitePeakTown_School_AbilityQuiz_Failed::
-# 75 "data/maps/GranitePeakTown_School_AbilityRoom/scripts.pory"
+# 74 "data/maps/GranitePeakTown_School_AbilityRoom/scripts.pory"
 	setvar VAR_PREVENT_LOOPS_SCHOOL, 1
-# 76 "data/maps/GranitePeakTown_School_AbilityRoom/scripts.pory"
+# 75 "data/maps/GranitePeakTown_School_AbilityRoom/scripts.pory"
 	msgbox GranitePeakTown_School_AbilityQuiz_Failed_Text_0
 	return
 
 
 GranitePeak_AbilityClass_Boy1::
-# 80 "data/maps/GranitePeakTown_School_AbilityRoom/scripts.pory"
+# 79 "data/maps/GranitePeakTown_School_AbilityRoom/scripts.pory"
 	trainerbattle_single TRAINER_ABILITYBOY1, AbilityBoy1_Intro, AbilityBoy1_Outro, AbilityStudent_Beaten
-# 81 "data/maps/GranitePeakTown_School_AbilityRoom/scripts.pory"
+# 80 "data/maps/GranitePeakTown_School_AbilityRoom/scripts.pory"
 	msgbox PostBattle_AbilityBoy1, MSGBOX_AUTOCLOSE
 	return
 
 
 GranitePeak_AbilityClass_Boy2::
-# 85 "data/maps/GranitePeakTown_School_AbilityRoom/scripts.pory"
+# 84 "data/maps/GranitePeakTown_School_AbilityRoom/scripts.pory"
 	trainerbattle_single TRAINER_ABILITYBOY2, AbilityBoy2_Intro, AbilityBoy2_Outro, AbilityStudent_Beaten
-# 86 "data/maps/GranitePeakTown_School_AbilityRoom/scripts.pory"
+# 85 "data/maps/GranitePeakTown_School_AbilityRoom/scripts.pory"
 	msgbox PostBattle_AbilityBoy2, MSGBOX_AUTOCLOSE
 	return
 
 
 GranitePeak_AbilityClass_Boy3::
-# 90 "data/maps/GranitePeakTown_School_AbilityRoom/scripts.pory"
+# 89 "data/maps/GranitePeakTown_School_AbilityRoom/scripts.pory"
 	trainerbattle_single TRAINER_ABILITYBOY3, AbilityBoy3_Intro, AbilityBoy3_Outro, AbilityStudent_Beaten
-# 91 "data/maps/GranitePeakTown_School_AbilityRoom/scripts.pory"
+# 90 "data/maps/GranitePeakTown_School_AbilityRoom/scripts.pory"
 	msgbox PostBattle_AbilityBoy3, MSGBOX_AUTOCLOSE
 	return
 
 
 AbilityStudent_Beaten::
-# 96 "data/maps/GranitePeakTown_School_AbilityRoom/scripts.pory"
+# 95 "data/maps/GranitePeakTown_School_AbilityRoom/scripts.pory"
 	addvar VAR_ABILITY_ROOM_STUDENTS, 1
-# 97 "data/maps/GranitePeakTown_School_AbilityRoom/scripts.pory"
+# 96 "data/maps/GranitePeakTown_School_AbilityRoom/scripts.pory"
 	call Increase_Trainers_Beaten
 	return
 
@@ -316,52 +314,52 @@ GranitePeakTown_School_AbilityQuiz_Passed_Text_1:
 	.string "I think you should also have these!$"
 
 GranitePeakTown_School_AbilityQuiz_Passed_Text_2:
-# 71 "data/maps/GranitePeakTown_School_AbilityRoom/scripts.pory"
+# 70 "data/maps/GranitePeakTown_School_AbilityRoom/scripts.pory"
 	.string "Good luck collecting the other patches$"
 
 GranitePeakTown_School_AbilityQuiz_Failed_Text_0:
-# 76 "data/maps/GranitePeakTown_School_AbilityRoom/scripts.pory"
+# 75 "data/maps/GranitePeakTown_School_AbilityRoom/scripts.pory"
 	.string "Talk to some students and reach some resources. Then come back and try again$"
 
 AbilityBoy1_Intro::
-# 102 "data/maps/GranitePeakTown_School_AbilityRoom/scripts.pory"
+# 101 "data/maps/GranitePeakTown_School_AbilityRoom/scripts.pory"
 	.string "Abilities can allow Pokémon to gain new\n"
 	.string "resitences or immunities$"
 
 AbilityBoy1_Outro::
-# 106 "data/maps/GranitePeakTown_School_AbilityRoom/scripts.pory"
+# 105 "data/maps/GranitePeakTown_School_AbilityRoom/scripts.pory"
 	.string "You've brought me back to ground$"
 
 PostBattle_AbilityBoy1::
-# 110 "data/maps/GranitePeakTown_School_AbilityRoom/scripts.pory"
+# 109 "data/maps/GranitePeakTown_School_AbilityRoom/scripts.pory"
 	.string "Abilities like Levitate can give\n"
 	.string "immunities to ground, others like Storm\l"
 	.string "Drain also boost stats.$"
 
 AbilityBoy2_Intro::
-# 115 "data/maps/GranitePeakTown_School_AbilityRoom/scripts.pory"
+# 114 "data/maps/GranitePeakTown_School_AbilityRoom/scripts.pory"
 	.string "The right weather or terrarain can\n"
 	.string "boost certain moves$"
 
 AbilityBoy2_Outro::
-# 119 "data/maps/GranitePeakTown_School_AbilityRoom/scripts.pory"
+# 118 "data/maps/GranitePeakTown_School_AbilityRoom/scripts.pory"
 	.string "It must be raining on my face$"
 
 PostBattle_AbilityBoy2::
-# 123 "data/maps/GranitePeakTown_School_AbilityRoom/scripts.pory"
+# 122 "data/maps/GranitePeakTown_School_AbilityRoom/scripts.pory"
 	.string "Certain abilities or moves only work\n"
 	.string "under weather or$"
 
 AbilityBoy3_Intro::
-# 128 "data/maps/GranitePeakTown_School_AbilityRoom/scripts.pory"
+# 127 "data/maps/GranitePeakTown_School_AbilityRoom/scripts.pory"
 	.string "I love using abilities to slow down my\n"
 	.string "opponents$"
 
 AbilityBoy3_Outro::
-# 132 "data/maps/GranitePeakTown_School_AbilityRoom/scripts.pory"
+# 131 "data/maps/GranitePeakTown_School_AbilityRoom/scripts.pory"
 	.string "Not making contact does stop me$"
 
 PostBattle_AbilityBoy3::
-# 136 "data/maps/GranitePeakTown_School_AbilityRoom/scripts.pory"
+# 135 "data/maps/GranitePeakTown_School_AbilityRoom/scripts.pory"
 	.string "Some abilities can cause issues to your\n"
 	.string "opponent when they make contact.$"

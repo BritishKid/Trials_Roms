@@ -10,7 +10,7 @@ script HemlockGym_Interior_Greeter {
     lockall
     faceplayer
     msgbox(format("Yo Champ in the making! This gym specialises in Poison types. Psychic and Ground moves are the best way to take them out."))
-    msgbox(format("Let me heal up your Pokemon before you go further."))
+    msgbox(format("Let me heal up your Pokémon before you go further."))
     special(HealPlayerParty)
     if(flag(FLAG_LEVEL_CAPS_ON) && !flag(FLAG_BADGE03_GET)) {
         msgbox(format("How about a battle for some fast levels?"), MSGBOX_YESNO)

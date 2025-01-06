@@ -64,7 +64,7 @@ Route1b_EventScript_FisherSign_Text_0:
 
 Route1b_EventScript_Fisherman_Text_0:
 # 14 "data/maps/Route1b/scripts.pory"
-	.string "If only I had a Pokemon that knew SURF\n"
+	.string "If only I had a Pokémon that knew SURF\n"
 	.string "I'd be able to reach that island.$"
 
 Salt7_Intro::
@@ -90,7 +90,7 @@ Route1b_Camper_Intro::
 # 58 "data/maps/Route1b/scripts.pory"
 	.string "My dad used to bring me here all the\n"
 	.string "time, he said the hills had strong\l"
-	.string "Pokemon.$"
+	.string "Pokémon.$"
 
 Route1b_Camper_Outro::
 # 62 "data/maps/Route1b/scripts.pory"
@@ -104,7 +104,7 @@ Route1b_Camper_Postbattle::
 
 Route1b_Bugcatcher_Intro::
 # 70 "data/maps/Route1b/scripts.pory"
-	.string "I love all the different bug Pokemon in\n"
+	.string "I love all the different bug Pokémon in\n"
 	.string "Triver.$"
 
 Route1b_Bugcatcher_Outro::

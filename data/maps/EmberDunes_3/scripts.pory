@@ -1,0 +1,113 @@
+mapscripts EmberDunes_3_MapScripts {}
+
+
+//TODO
+// POKECENTER WOMAN OFFERING TO HEAL AND SAYING YOU CAN HEAD THROUGH CAVE TO REACH TOWN
+// SOMEONE EXPLAINING THAT THIS PYRAMID IS BASED OFF A LOST PYRAMID IN THE WIDER DESERT
+
+script EmberDune_EventScript_GymSign {
+    lockall
+    msgbox(format("Ember Dunes Gym\lBattle the chill down your spine."), MSGBOX_AUTOCLOSE)
+    releaseall
+}
+
+script EmberDune_Trigger_FirstTimeToGym_Center {
+    lockall
+    if(FLAG_VISITED_VERDANTURF_TOWN) {
+        playbgm(MUS_POKE_CENTER)
+        msgbox(format("You're nearly there!"), MSGBOX_AUTOCLOSE)
+        applymovement(1, Movement_NurseToPlayer_Center_EmberDune)
+        waitmovement(1)
+        call(EmberDune_NurseEncounter)
+    }
+    releaseall
+}
+
+script EmberDune_Trigger_FirstTimeToGym_Center {
+    lockall
+    if(FLAG_VISITED_VERDANTURF_TOWN) {
+        playbgm(MUS_POKE_CENTER)
+        msgbox(format("You're nearly there!"), MSGBOX_AUTOCLOSE)
+        applymovement(1, Movement_NurseToPlayer_Right_EmberDune)
+        waitmovement(1)
+        call(EmberDune_NurseEncounter)
+    }
+    releaseall
+}
+
+script EmberDune_Trigger_FirstTimeToGym_Left {
+    lockall
+    if(FLAG_VISITED_VERDANTURF_TOWN){
+        playbgm(MUS_POKE_CENTER)
+        msgbox(format("You're nearly there!"), MSGBOX_AUTOCLOSE)
+        applymovement(1, Movement_NurseToPlayer_Left_EmberDune)
+        waitmovement(1)
+        call(EmberDune_NurseEncounter)
+    }
+    releaseall
+}
+
+script EmberDune_ResetEmberDunesNurse {
+    msgbox(format("Up here is the Ember Dunes gym and you look like you've been a long way already.\lSarah is a strong trainer that you should probably go to town first, its just down the stairs and left through the cave."), MSGBOX_AUTOCLOSE)
+    msgbox(format("Although it's not like I can ever stop a determined trainer but atleast let me heal your party."), MSGBOX_AUTOCLOSE)
+    special(HealPlayerParty)
+    msgbox(format("If you need me I'm setting up a travelling healing spot brave trainers in the desert."), MSGBOX_AUTOCLOSE)
+    setvar(VAR_EMBER_DUNES_GYM_STATE, 1)
+    applymovement(1, Movement_NurseToGround)
+    setflag(FLAG_HIDE_EMBERDUNES_NURSE)
+    removeobject(1)
+    releaseall
+}  
+
+script EmberDune_Trigger_SkipGymIntro {
+    lockall
+    if(flag(FLAG_VISITED_VERDANTURF_TOWN)) {
+        setflag(FLAG_HIDE_EMBERDUNES_NURSE)
+        setvar(VAR_EMBER_DUNES_GYM_STATE, 1)
+        releaseall
+    }
+}
+
+//movement 
+
+movement Movement_NurseToPlayer_Center_EmberDune {
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+}
+
+movement Movement_NurseToPlayer_Right_EmberDune {
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+    face_right
+}
+
+
+movement Movement_NurseToPlayer_Left_EmberDune {
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+    face_left
+}
+
+movement Movement_NurseToGround {
+    walk_up
+    walk_left
+    walk_left
+    walk_left
+    walk_left
+    walk_left
+    walk_left
+    walk_left
+    walk_left
+    walk_left
+}

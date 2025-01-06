@@ -17,10 +17,79 @@
       "map": "MAP_ROUTE6",
       "offset": -6,
       "direction": "left"
+    },
+    {
+      "map": "MAP_FLOWER_GLADE_WALK",
+      "offset": 33,
+      "direction": "up"
     }
   ],
   "object_events": [
-
+    {
+      "graphics_id": "OBJ_EVENT_GFX_PICNICKER",
+      "x": 26,
+      "y": 19,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "FlowerGlade_PicknickerSara_TrainerBattle",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_WOMAN_5",
+      "x": 0,
+      "y": 17,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "FlowerGlade_BattleScript_Lily",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_WOMAN_4",
+      "x": 12,
+      "y": 18,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "FlowerGlade_BattleScript_Rosemary",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 14,
+      "y": 14,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "ITEM_LEFTOVERS",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_ITEM_FLOWERGLAD_LEFTOVERS"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 32,
+      "y": 25,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "ITEM_TM09",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_ITEM_FLOWERGLADE_BULLETSEED"
+    }
   ],
   "warp_events": [
 
@@ -29,6 +98,27 @@
 
   ],
   "bg_events": [
-
+    {
+      "type": "secret_base",
+      "x": 0,
+      "y": 14,
+      "elevation": 0,
+      "secret_base_id": "SECRET_BASE_TREE1_2"
+    },
+    {
+      "type": "secret_base",
+      "x": 1,
+      "y": 14,
+      "elevation": 0,
+      "secret_base_id": "SECRET_BASE_TREE1_1"
+    },
+    {
+      "type": "hidden_item",
+      "x": 0,
+      "y": 24,
+      "elevation": 3,
+      "item": "ITEM_MIRACLE_SEED",
+      "flag": "FLAG_HIDDEN_ITEM_FLOWERGLAD_MIRACLESEED"
+    }
   ]
 }

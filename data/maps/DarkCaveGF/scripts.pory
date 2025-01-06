@@ -6,6 +6,11 @@ script DarkCaveGF_Battle_LostYoungster {
     msgbox(DarkCave_Youngster_PostBattle, MSGBOX_AUTOCLOSE)
 }
 
+script DarkCaveGF_Battle_LostThug {
+    trainerbattle_single(DARKCAVE_THUG, DarkCave_Thug_Intro, DarkCave_Thug_Outro, Increase_Trainers_Beaten)
+    msgbox(DarkCave_Thug_PostBattle, MSGBOX_AUTOCLOSE)
+}
+
 
 //intro 
 
@@ -19,4 +24,16 @@ text DarkCave_Youngster_Outro {
 
 text DarkCave_Youngster_PostBattle {
     format("Oh I'm not that far, that's good.")
+}
+
+text DarkCave_Thug_Intro {
+    format("How did you get past the rest of us?")
+}
+
+text DarkCave_Thug_Outro {
+    format("I guess you really did beat them all.")
+}
+
+text DarkCave_Thug_PostBattle {
+    format("They've just abandoned me in this cave.")
 }

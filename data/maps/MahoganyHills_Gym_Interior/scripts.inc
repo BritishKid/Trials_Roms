@@ -178,7 +178,7 @@ MahoganyHills_Gym_Interior_EventScript_Greeter_Text_0:
 
 MahoganyHills_Gym_Interior_EventScript_Greeter_Text_1:
 # 25 "data/maps/MahoganyHills_Gym_Interior/scripts.pory"
-	.string "Let me heal up your Pokemon before you\n"
+	.string "Let me heal up your Pokémon before you\n"
 	.string "go further.$"
 
 MahoganyHills_Gym_Interior_EventScript_Greeter_Text_2:
@@ -209,7 +209,7 @@ MahoganyHillsGym_Leader_Intro::
 	.string "I am Jaiden a Master from the Winged\l"
 	.string "City.\l"
 	.string "I hope you're prepared to be blown away\l"
-	.string "by my flying type Pokemon.$"
+	.string "by my flying type Pokémon.$"
 
 MahoganyHillsGym_Leader_Outro::
 # 90 "data/maps/MahoganyHills_Gym_Interior/scripts.pory"
@@ -234,7 +234,7 @@ MahoganyHillsGym_Ollie_Outro::
 MahoganyHillsGym_Ollie_Postbattle::
 # 106 "data/maps/MahoganyHills_Gym_Interior/scripts.pory"
 	.string "Now I need to learn about WATER\n"
-	.string "Pokemon.$"
+	.string "Pokémon.$"
 
 MahoganyHillsGym_Skye_Intro::
 # 110 "data/maps/MahoganyHills_Gym_Interior/scripts.pory"

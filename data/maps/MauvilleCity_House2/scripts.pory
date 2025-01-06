@@ -19,7 +19,6 @@ script MauvilleCity_House2_EventScript_Woman {
         msgbox(format("Oh you're the one that kicked the thugs out of here. Please take this!"))
         giveitem(ITEM_ACRO_BIKE)
         setflag(FLAG_ACRO_BIKE)
-        playfanfare(MUS_OBTAIN_ITEM)
         msgbox(format("The ACRO BIKE can be used to reach new places around the region."))
     }
     releaseall

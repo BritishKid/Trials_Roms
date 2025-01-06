@@ -135,449 +135,449 @@ GranitePeakSchool_Mat_TrophyCase::
 # 69 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	msgbox GranitePeakSchool_Mat_TrophyCase_Text_2
 # 70 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
-	trainerbattle_single TRAINERSCHOOLHALL_MAT1, SchoolHall_Mat_Intro, SchoolHall_Mat_Outro, SchoolHall_Mat_Beaten
+	trainerbattle_no_intro TRAINERSCHOOLHALL_MAT1, SchoolHall_Mat_Outro
+# 71 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+	call SchoolHall_Mat_Beaten
 	return
 
 
 SchoolHall_Mat_Beaten::
-# 74 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
-	msgbox SchoolHall_Mat_Beaten_Text_0
 # 75 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
-	msgbox SchoolHall_Mat_Beaten_Text_1
+	msgbox SchoolHall_Mat_Beaten_Text_0
 # 76 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
-	msgbox SchoolHall_Mat_Beaten_Text_2
+	msgbox SchoolHall_Mat_Beaten_Text_1
 # 77 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
-	applymovement 1, Movement_GranitePeakSchool_MatMovesRooms
+	msgbox SchoolHall_Mat_Beaten_Text_2
 # 78 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+	applymovement 1, Movement_GranitePeakSchool_MatMovesRooms
+# 79 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	waitmovement 1
-# 80 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
-	removeobject 1
 # 81 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
-	setflag FLAG_HIDE_MAT_SCHOOL_HALL
+	removeobject 1
 # 82 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
-	setflag FLAG_HIDE_MOVES_ROOM
+	setflag FLAG_HIDE_MAT_SCHOOL_HALL
 # 83 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
-	setvar VAR_MAT_STATE, 1
+	setflag FLAG_HIDE_MOVES_ROOM
 # 84 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+	setvar VAR_MAT_STATE, 1
+# 85 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	clearflag FLAG_HIDE_MAT_MEGA_MANSION
-# 86 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+# 87 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	call Increase_Trainers_Beaten
 	return
 
 
 GranitePeakTown_School_TrophyCase::
-# 90 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
-	lockall
 # 91 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
-	msgbox GranitePeakTown_School_TrophyCase_Text_0
+	lockall
 # 92 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
-	msgbox GranitePeakTown_School_TrophyCase_Text_1
+	msgbox GranitePeakTown_School_TrophyCase_Text_0
 # 93 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+	msgbox GranitePeakTown_School_TrophyCase_Text_1
+# 94 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	msgbox GranitePeakTown_School_TrophyCase_Text_2
-# 95 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+# 96 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	releaseall
 	return
 
 
 GranitePeakTown_School_MatLostID::
-# 99 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
-	lockall
 # 100 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+	lockall
+# 101 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	goto_if_set FLAG_MAT_ID, GranitePeakTown_School_MatLostID_2
 GranitePeakTown_School_MatLostID_1:
-# 103 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+# 104 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	goto_if_unset FLAG_MAT_ID, GranitePeakTown_School_MatLostID_5
 GranitePeakTown_School_MatLostID_4:
-# 107 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+# 108 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	releaseall
 	return
 
 GranitePeakTown_School_MatLostID_2:
-# 101 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+# 102 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	msgbox GranitePeakTown_School_MatLostID_Text_0
 	goto GranitePeakTown_School_MatLostID_1
 
 GranitePeakTown_School_MatLostID_5:
-# 104 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
-	msgbox GranitePeakTown_School_MatLostID_Text_1
 # 105 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+	msgbox GranitePeakTown_School_MatLostID_Text_1
+# 106 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	setflag FLAG_MAT_ID
 	goto GranitePeakTown_School_MatLostID_4
 
 
 GranitePeakTown_SchoolTournament_Teacher::
-# 114 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
-	lockall
 # 115 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
-	faceplayer
+	lockall
 # 116 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+	faceplayer
+# 117 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	goto_if_unset FLAG_CAN_ACCESS_SCHOOL_TOURNAMENT, GranitePeakTown_SchoolTournament_Teacher_2
 GranitePeakTown_SchoolTournament_Teacher_1:
-# 148 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+# 149 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	goto_if_set FLAG_CAN_ACCESS_SCHOOL_TOURNAMENT, GranitePeakTown_SchoolTournament_Teacher_5
 GranitePeakTown_SchoolTournament_Teacher_4:
-# 166 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+# 167 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	releaseall
 	return
 
 GranitePeakTown_SchoolTournament_Teacher_2:
-# 117 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
-	msgbox GranitePeakTown_SchoolTournament_Teacher_Text_0
 # 118 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
-	checkitem ITEM_EVOLUTION_PATCH, 1
+	msgbox GranitePeakTown_SchoolTournament_Teacher_Text_0
 # 119 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+	checkitem ITEM_EVOLUTION_PATCH, 1
+# 120 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	compare VAR_RESULT, FALSE
 	goto_if_eq GranitePeakTown_SchoolTournament_Teacher_8
-# 124 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
-	msgbox GranitePeakTown_SchoolTournament_Teacher_Text_2
 # 125 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
-	checkitem ITEM_MOVES_PATCH, 1
+	msgbox GranitePeakTown_SchoolTournament_Teacher_Text_2
 # 126 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+	checkitem ITEM_MOVES_PATCH, 1
+# 127 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	compare VAR_RESULT, FALSE
 	goto_if_eq GranitePeakTown_SchoolTournament_Teacher_14
-# 131 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
-	msgbox GranitePeakTown_SchoolTournament_Teacher_Text_4
 # 132 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
-	checkitem ITEM_ITEMS_PATCH, 1
+	msgbox GranitePeakTown_SchoolTournament_Teacher_Text_4
 # 133 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+	checkitem ITEM_ITEMS_PATCH, 1
+# 134 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	compare VAR_RESULT, FALSE
 	goto_if_eq GranitePeakTown_SchoolTournament_Teacher_19
-# 138 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
-	msgbox GranitePeakTown_SchoolTournament_Teacher_Text_6
 # 139 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
-	checkitem ITEM_ABILITIES_PATCH, 1
+	msgbox GranitePeakTown_SchoolTournament_Teacher_Text_6
 # 140 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+	checkitem ITEM_ABILITIES_PATCH, 1
+# 141 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	compare VAR_RESULT, FALSE
 	goto_if_eq GranitePeakTown_SchoolTournament_Teacher_25
-# 145 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
-	msgbox GranitePeakTown_SchoolTournament_Teacher_Text_8
 # 146 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+	msgbox GranitePeakTown_SchoolTournament_Teacher_Text_8
+# 147 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	setflag FLAG_CAN_ACCESS_SCHOOL_TOURNAMENT
 	goto GranitePeakTown_SchoolTournament_Teacher_1
 
 GranitePeakTown_SchoolTournament_Teacher_5:
-# 149 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
-	msgbox GranitePeakTown_SchoolTournament_Teacher_Text_9, MSGBOX_YESNO
 # 150 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+	msgbox GranitePeakTown_SchoolTournament_Teacher_Text_9, MSGBOX_YESNO
+# 151 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	compare VAR_RESULT, NO
 	goto_if_eq GranitePeakTown_SchoolTournament_Teacher_11
 GranitePeakTown_SchoolTournament_Teacher_10:
-# 153 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+# 154 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq GranitePeakTown_SchoolTournament_Teacher_16
 	goto GranitePeakTown_SchoolTournament_Teacher_4
 
 GranitePeakTown_SchoolTournament_Teacher_8:
-# 120 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
-	msgbox GranitePeakTown_SchoolTournament_Teacher_Text_1
 # 121 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+	msgbox GranitePeakTown_SchoolTournament_Teacher_Text_1
+# 122 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	releaseall
 	end
 
 GranitePeakTown_SchoolTournament_Teacher_11:
-# 151 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+# 152 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	msgbox GranitePeakTown_SchoolTournament_Teacher_Text_10
 	goto GranitePeakTown_SchoolTournament_Teacher_10
 
 GranitePeakTown_SchoolTournament_Teacher_14:
-# 127 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
-	msgbox GranitePeakTown_SchoolTournament_Teacher_Text_3
 # 128 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+	msgbox GranitePeakTown_SchoolTournament_Teacher_Text_3
+# 129 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	releaseall
 	end
 
 GranitePeakTown_SchoolTournament_Teacher_16:
-# 154 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
-	getpartysize
 # 155 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+	getpartysize
+# 156 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	compare VAR_RESULT, DOME_BATTLE_PARTY_SIZE
 	goto_if_le GranitePeakTown_SchoolTournament_Teacher_21
-# 162 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+# 163 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	msgbox GranitePeakTown_SchoolTournament_Teacher_Text_11
 	goto GranitePeakTown_SchoolTournament_Teacher_4
 
 GranitePeakTown_SchoolTournament_Teacher_19:
-# 134 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
-	msgbox GranitePeakTown_SchoolTournament_Teacher_Text_5
 # 135 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+	msgbox GranitePeakTown_SchoolTournament_Teacher_Text_5
+# 136 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	releaseall
 	end
 
 GranitePeakTown_SchoolTournament_Teacher_21:
-# 157 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
-	setvar VAR_FRONTIER_FACILITY, FRONTIER_FACILITY_DOME
 # 158 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
-	setvar VAR_FRONTIER_BATTLE_MODE, FRONTIER_MODE_SINGLES
+	setvar VAR_FRONTIER_FACILITY, FRONTIER_FACILITY_DOME
 # 159 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+	setvar VAR_FRONTIER_BATTLE_MODE, FRONTIER_MODE_SINGLES
+# 160 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	goto GranitePeakTown_BattleDomeLobby_EventScript_AttendantWelcome
 	goto GranitePeakTown_SchoolTournament_Teacher_4
 
 GranitePeakTown_SchoolTournament_Teacher_25:
-# 141 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
-	msgbox GranitePeakTown_SchoolTournament_Teacher_Text_7
 # 142 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+	msgbox GranitePeakTown_SchoolTournament_Teacher_Text_7
+# 143 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	releaseall
 	end
 
 
 GranitePeakTown_BattleDomeLobby_EventScript_AttendantWelcome::
-# 171 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+# 172 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	goto_if_unset FLAG_BADGE02_GET, GranitePeakTown_BattleDomeLobby_EventScript_AttendantWelcome_2
-# 173 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+# 174 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	goto_if_unset FLAG_BADGE03_GET, GranitePeakTown_BattleDomeLobby_EventScript_AttendantWelcome_3
-# 175 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+# 176 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	goto_if_unset FLAG_BADGE04_GET, GranitePeakTown_BattleDomeLobby_EventScript_AttendantWelcome_4
-# 177 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+# 178 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	goto_if_unset FLAG_BADGE05_GET, GranitePeakTown_BattleDomeLobby_EventScript_AttendantWelcome_5
-# 180 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+# 181 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	setvar VAR_SCHOOL_TOURNAMENT_LEVEL, 50
 GranitePeakTown_BattleDomeLobby_EventScript_AttendantWelcome_1:
-# 183 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
-	setvar VAR_0x8004, FRONTIER_UTIL_FUNC_SET_DATA
 # 184 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
-	setvar VAR_0x8005, FRONTIER_DATA_LVL_MODE
+	setvar VAR_0x8004, FRONTIER_UTIL_FUNC_SET_DATA
 # 185 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
-	setvar VAR_0x8006, FRONTIER_LVL_50
+	setvar VAR_0x8005, FRONTIER_DATA_LVL_MODE
 # 186 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
-	special CallFrontierUtilFunc
+	setvar VAR_0x8006, FRONTIER_LVL_50
 # 187 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+	special CallFrontierUtilFunc
+# 188 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	call GranitePeakTown_SchoolTournamentLobby_EventScript_SaveBeforeChallenge
 	return
 
 GranitePeakTown_BattleDomeLobby_EventScript_AttendantWelcome_2:
-# 172 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+# 173 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	setvar VAR_SCHOOL_TOURNAMENT_LEVEL, 22
 	goto GranitePeakTown_BattleDomeLobby_EventScript_AttendantWelcome_1
 
 GranitePeakTown_BattleDomeLobby_EventScript_AttendantWelcome_3:
-# 174 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+# 175 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	setvar VAR_SCHOOL_TOURNAMENT_LEVEL, 28
 	goto GranitePeakTown_BattleDomeLobby_EventScript_AttendantWelcome_1
 
 GranitePeakTown_BattleDomeLobby_EventScript_AttendantWelcome_4:
-# 176 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+# 177 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	setvar VAR_SCHOOL_TOURNAMENT_LEVEL, 35
 	goto GranitePeakTown_BattleDomeLobby_EventScript_AttendantWelcome_1
 
 GranitePeakTown_BattleDomeLobby_EventScript_AttendantWelcome_5:
-# 178 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+# 179 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	setvar VAR_SCHOOL_TOURNAMENT_LEVEL, 40
 	goto GranitePeakTown_BattleDomeLobby_EventScript_AttendantWelcome_1
 
 
 GranitePeakTown_SchoolTournamentLobby_EventScript_SaveBeforeChallenge::
-# 191 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
-	setvar VAR_TEMP_0, 0
 # 192 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
-	setvar VAR_0x8004, BATTLE_DOME_FUNC_INIT
+	setvar VAR_TEMP_0, 0
 # 193 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
-	special CallBattleDomeFunction
+	setvar VAR_0x8004, BATTLE_DOME_FUNC_INIT
 # 194 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
-	closemessage
-# 195 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
-	delay 2
-# 196 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
-	setvar VAR_TEMP_0, 255
-# 197 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
-	setvar VAR_0x8004, BATTLE_DOME_FUNC_INIT_TRAINERS
-# 198 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	special CallBattleDomeFunction
+# 195 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+	closemessage
+# 196 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+	delay 2
+# 197 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+	setvar VAR_TEMP_0, 255
+# 198 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+	setvar VAR_0x8004, BATTLE_DOME_FUNC_INIT_TRAINERS
 # 199 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+	special CallBattleDomeFunction
+# 200 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	call GranitePeakTown_SchoolTournament_EventScript_EnterChallenge
 	return
 
 
 GranitePeakTown_SchoolTournament_EventScript_EnterChallenge::
-# 203 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
-	setvar VAR_0x8004, BATTLE_DOME_FUNC_SET_TRAINERS
 # 204 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
-	special CallBattleDomeFunction
+	setvar VAR_0x8004, BATTLE_DOME_FUNC_SET_TRAINERS
 # 205 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
-	warp MAP_GRANITE_PEAK_TOWN_TOURNAMENT_WAITING_ROOM, 6, 8
+	special CallBattleDomeFunction
 # 206 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
-	setvar VAR_TEMP_0, 0
+	warp MAP_GRANITE_PEAK_TOWN_TOURNAMENT_WAITING_ROOM, 6, 8
 # 207 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+	setvar VAR_TEMP_0, 0
+# 208 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	waitstate
 	end
 
 
 GranitePeak_BattleDomeLobby_EventScript_BeatChallenge::
-# 214 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
-	lockall
 # 215 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
-	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
+	lockall
 # 216 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
-	setvar VAR_CURRENT_SCHOOL_TOURNAMENT_STATE, 0
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
 # 217 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
-	msgbox GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_Text_0
+	setvar VAR_CURRENT_SCHOOL_TOURNAMENT_STATE, 0
 # 218 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
-	setvar VAR_SCHOOL_TEAM_RESET, 0
+	msgbox GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_Text_0
 # 219 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+	setvar VAR_SCHOOL_TEAM_RESET, 0
+# 220 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	goto_if_set FLAG_TRAINER_TOURNAMENT_WON, GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_2
 GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_1:
-# 236 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+# 237 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	goto_if_unset FLAG_TRAINER_TOURNAMENT_WON, GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_5
 GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_4:
-# 245 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+# 246 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	releaseall
 	return
 
 GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_2:
-# 221 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+# 222 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	goto_if_unset FLAG_BADGE02_GET, GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_8
-# 223 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+# 224 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	goto_if_unset FLAG_BADGE03_GET, GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_9
-# 225 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+# 226 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	goto_if_unset FLAG_BADGE04_GET, GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_10
-# 227 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+# 228 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	goto_if_unset FLAG_BADGE05_GET, GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_11
-# 230 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+# 231 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	addmoney 10000
 GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_7:
-# 232 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+# 233 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	call GranitePeakTown_SchoolTournament_MintPrizeSelection
 	goto GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_1
 
 GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_5:
-# 237 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
-	setflag FLAG_TRAINER_TOURNAMENT_WON
 # 238 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
-	msgbox GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_Text_1
+	setflag FLAG_TRAINER_TOURNAMENT_WON
 # 239 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+	msgbox GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_Text_1
+# 240 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	givedecoration DECOR_SILVER_SHIELD
-# 242 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
-	addmoney 7500
 # 243 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+	addmoney 7500
+# 244 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	call GranitePeakTown_SchoolTournament_MintPrizeSelection
 	goto GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_4
 
 GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_8:
-# 222 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+# 223 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	addmoney 5000
 	goto GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_7
 
 GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_9:
-# 224 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+# 225 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	addmoney 6000
 	goto GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_7
 
 GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_10:
-# 226 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+# 227 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	addmoney 7000
 	goto GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_7
 
 GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_11:
-# 228 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+# 229 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	addmoney 8000
 	goto GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_7
 
 
 GranitePeakTown_SchoolTournament_MintPrizeSelection::
-# 249 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
-	msgbox GranitePeakTown_SchoolTournament_MintPrizeSelection_Text_0
 # 250 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
-	waitmessage
+	msgbox GranitePeakTown_SchoolTournament_MintPrizeSelection_Text_0
 # 251 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
-	multichoice 21, 6, MULTI_NATURE_MINT_SELECTION, TRUE
+	waitmessage
 # 252 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
-	switch VAR_RESULT
+	multichoice 21, 6, MULTI_NATURE_MINT_SELECTION, TRUE
 # 253 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
-	case 0, GranitePeakTown_SchoolTournament_MintPrizeSelection_2
+	switch VAR_RESULT
 # 254 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
-	case 1, GranitePeakTown_SchoolTournament_MintPrizeSelection_3
+	case 0, GranitePeakTown_SchoolTournament_MintPrizeSelection_2
 # 255 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
-	case 2, GranitePeakTown_SchoolTournament_MintPrizeSelection_4
+	case 1, GranitePeakTown_SchoolTournament_MintPrizeSelection_3
 # 256 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
-	case 3, GranitePeakTown_SchoolTournament_MintPrizeSelection_5
+	case 2, GranitePeakTown_SchoolTournament_MintPrizeSelection_4
 # 257 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
-	case 4, GranitePeakTown_SchoolTournament_MintPrizeSelection_6
+	case 3, GranitePeakTown_SchoolTournament_MintPrizeSelection_5
 # 258 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+	case 4, GranitePeakTown_SchoolTournament_MintPrizeSelection_6
+# 259 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	case 5, GranitePeakTown_SchoolTournament_MintPrizeSelection_7
 	return
 
 GranitePeakTown_SchoolTournament_MintPrizeSelection_2:
-# 253 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+# 254 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	giveitem ITEM_ADAMANT_MINT
 	return
 
 GranitePeakTown_SchoolTournament_MintPrizeSelection_3:
-# 254 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+# 255 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	giveitem ITEM_MODEST_MINT
 	return
 
 GranitePeakTown_SchoolTournament_MintPrizeSelection_4:
-# 255 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+# 256 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	giveitem ITEM_BOLD_MINT
 	return
 
 GranitePeakTown_SchoolTournament_MintPrizeSelection_5:
-# 256 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+# 257 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	giveitem ITEM_CALM_MINT
 	return
 
 GranitePeakTown_SchoolTournament_MintPrizeSelection_6:
-# 257 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+# 258 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	giveitem ITEM_JOLLY_MINT
 	return
 
 GranitePeakTown_SchoolTournament_MintPrizeSelection_7:
-# 258 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+# 259 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	giveitem ITEM_TIMID_MINT
 	return
 
 
 GranitePeak_BattleDomeLobby_EventScript_LostChallenge::
-# 264 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
-	lockall
 # 265 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
-	setvar VAR_SCHOOL_TEAM_RESET, 0
+	lockall
 # 266 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
-	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
+	setvar VAR_SCHOOL_TEAM_RESET, 0
 # 267 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
-	msgbox GranitePeak_BattleDomeLobby_EventScript_LostChallenge_Text_0
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
 # 268 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
-	setvar VAR_0x8004, FRONTIER_UTIL_FUNC_SET_PARTY_ORDER
+	msgbox GranitePeak_BattleDomeLobby_EventScript_LostChallenge_Text_0
 # 269 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
-	setvar VAR_0x8005, FRONTIER_PARTY_SIZE
+	setvar VAR_0x8004, FRONTIER_UTIL_FUNC_SET_PARTY_ORDER
 # 270 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
-	special CallFrontierUtilFunc
+	setvar VAR_0x8005, FRONTIER_PARTY_SIZE
 # 271 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
-	frontier_checkairshow
+	special CallFrontierUtilFunc
 # 272 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
-	special HealPlayerParty
+	frontier_checkairshow
 # 273 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+	special HealPlayerParty
+# 274 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	releaseall
 	return
 
 
-# 277 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
-Movement_GranitePeakSchool_MovePlayerLeftOnce:
 # 278 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+Movement_GranitePeakSchool_MovePlayerLeftOnce:
+# 279 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	walk_left
 	step_end
 
-# 281 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
-Movement_GranitePeakSchool_MovePlayerToMat:
 # 282 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+Movement_GranitePeakSchool_MovePlayerToMat:
+# 283 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	walk_up
 	step_end
 
-# 285 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
-Movement_GranitePeakSchool_MatFaceDown:
 # 286 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+Movement_GranitePeakSchool_MatFaceDown:
+# 287 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	face_down
 	step_end
 
-# 289 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
-Movement_GranitePeakSchool_MatExclamation:
 # 290 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+Movement_GranitePeakSchool_MatExclamation:
+# 291 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	emote_exclamation_mark
 	step_end
 
-# 293 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
-Movement_GranitePeakSchool_MatMovesRooms:
 # 294 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
-	walk_left
+Movement_GranitePeakSchool_MatMovesRooms:
 # 295 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	walk_left
 # 296 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
@@ -587,6 +587,8 @@ Movement_GranitePeakSchool_MatMovesRooms:
 # 298 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	walk_left
 # 299 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+	walk_left
+# 300 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	face_up
 	step_end
 
@@ -629,127 +631,124 @@ GranitePeakSchool_Mat_TrophyCase_Text_1:
 GranitePeakSchool_Mat_TrophyCase_Text_2:
 # 69 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	.string "Oh you're a trainer. Let me show you how\n"
-	.string "good the future school champion is!$"
+	.string "good the future school champion is!\p"
+	.string "I won't hold back!$"
 
 SchoolHall_Mat_Beaten_Text_0:
-# 74 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+# 75 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	.string "I still have a lot to learn a but this\n"
 	.string "school is the best place for me to be.$"
 
 SchoolHall_Mat_Beaten_Text_1:
-# 75 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+# 76 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	.string "If I complete all four classes and get\n"
 	.string "their patches I can take part and win\l"
 	.string "the school tournament.$"
 
 SchoolHall_Mat_Beaten_Text_2:
-# 76 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+# 77 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	.string "Let's get going!$"
 
 GranitePeakTown_School_TrophyCase_Text_0:
-# 91 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+# 92 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	.string "It's the Granite Peak School Trainer\n"
 	.string "Trophy.$"
 
 GranitePeakTown_School_TrophyCase_Text_1:
-# 92 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+# 93 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	.string "It's got all the previous winners\n"
 	.string "etched into it...$"
 
 GranitePeakTown_School_TrophyCase_Text_2:
-# 93 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+# 94 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	.string "Jordan$"
 
 GranitePeakTown_School_MatLostID_Text_0:
-# 101 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+# 102 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	.string "It's empty$"
 
 GranitePeakTown_School_MatLostID_Text_1:
-# 104 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+# 105 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	.string "You find someones student ID in the\n"
 	.string "pot:\n"
 	.string "It belongs to Mat$"
 
 GranitePeakTown_SchoolTournament_Teacher_Text_0:
-# 117 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+# 118 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	.string "If you wish to take part in the\n"
 	.string "tournament you must have first\l"
 	.string "completed every class.$"
 
 GranitePeakTown_SchoolTournament_Teacher_Text_1:
-# 120 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+# 121 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	.string "You still need to complete the\n"
 	.string "Evolution test.$"
 
 GranitePeakTown_SchoolTournament_Teacher_Text_2:
-# 124 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+# 125 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	.string "Good job on passing the Evolution test.$"
 
 GranitePeakTown_SchoolTournament_Teacher_Text_3:
-# 127 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+# 128 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	.string "You still need to complete the Moves\n"
 	.string "test.$"
 
 GranitePeakTown_SchoolTournament_Teacher_Text_4:
-# 131 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+# 132 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	.string "Brilliant you have completed the Moves\n"
 	.string "test$"
 
 GranitePeakTown_SchoolTournament_Teacher_Text_5:
-# 134 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+# 135 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	.string "You still need to complete the Items\n"
 	.string "test.$"
 
 GranitePeakTown_SchoolTournament_Teacher_Text_6:
-# 138 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+# 139 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	.string "Great, you also completed the Items\n"
 	.string "test$"
 
 GranitePeakTown_SchoolTournament_Teacher_Text_7:
-# 141 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+# 142 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	.string "You still need to complete the Abiliy\n"
 	.string "test.$"
 
 GranitePeakTown_SchoolTournament_Teacher_Text_8:
-# 145 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+# 146 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	.string "Evolution test as well, fantastic job!$"
 
 GranitePeakTown_SchoolTournament_Teacher_Text_9:
-# 149 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+# 150 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	.string "It looks like you can take part, would\n"
 	.string "you like to?$"
 
 GranitePeakTown_SchoolTournament_Teacher_Text_10:
-# 151 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+# 152 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	.string "Come back when you wish to give it a go.$"
 
 GranitePeakTown_SchoolTournament_Teacher_Text_11:
-# 162 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+# 163 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	.string "Sorry you can't enter with more than 3\n"
 	.string "Pokémon.$"
 
 GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_Text_0:
-# 217 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+# 218 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	.string "Congratulations you managed to beat\n"
 	.string "the others! It was incredible to watch!$"
 
 GranitePeak_BattleDomeLobby_EventScript_BeatChallenge_Text_1:
-# 238 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+# 239 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	.string "For your succes in the tournament take\n"
 	.string "this trophy!$"
 
 GranitePeakTown_SchoolTournament_MintPrizeSelection_Text_0:
-# 249 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+# 250 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	.string "Select your prize!$"
 
 GranitePeak_BattleDomeLobby_EventScript_LostChallenge_Text_0:
-# 267 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+# 268 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	.string "Nice try, better luck next time.$"
 
-SchoolHall_Mat_Intro::
-# 304 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
-	.string "I won't hold back!$"
-
 SchoolHall_Mat_Outro::
-# 308 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+# 305 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	.string "Okay I guess I'm not ready yet.$"

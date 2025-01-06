@@ -8,131 +8,152 @@ MahoganyHills_EventScript_InsectPlate::
 # 7 "data/maps/MahoganyHills_Cave/scripts.pory"
 	msgbox MahoganyHills_EventScript_InsectPlate_Text_0
 # 8 "data/maps/MahoganyHills_Cave/scripts.pory"
+	checkitem ITEM_INSECT_PLATE
+# 9 "data/maps/MahoganyHills_Cave/scripts.pory"
 	goto_if_set FLAG_LEGENDS_PLATE_FOUND, MahoganyHills_EventScript_InsectPlate_3
 MahoganyHills_EventScript_InsectPlate_1:
-# 20 "data/maps/MahoganyHills_Cave/scripts.pory"
+# 21 "data/maps/MahoganyHills_Cave/scripts.pory"
 	compare VAR_PLATEQUEST_STATE, 2
 	goto_if_eq MahoganyHills_EventScript_InsectPlate_8
 MahoganyHills_EventScript_InsectPlate_6:
-# 23 "data/maps/MahoganyHills_Cave/scripts.pory"
+# 24 "data/maps/MahoganyHills_Cave/scripts.pory"
 	compare VAR_PLATEQUEST_STATE, 1
 	goto_if_eq MahoganyHills_EventScript_InsectPlate_14
 MahoganyHills_EventScript_InsectPlate_13:
-# 45 "data/maps/MahoganyHills_Cave/scripts.pory"
+# 46 "data/maps/MahoganyHills_Cave/scripts.pory"
 	releaseall
 	return
 
 MahoganyHills_EventScript_InsectPlate_2:
-# 9 "data/maps/MahoganyHills_Cave/scripts.pory"
-	msgbox MahoganyHills_EventScript_InsectPlate_Text_1, MSGBOX_YESNO
 # 10 "data/maps/MahoganyHills_Cave/scripts.pory"
+	msgbox MahoganyHills_EventScript_InsectPlate_Text_1, MSGBOX_YESNO
+# 11 "data/maps/MahoganyHills_Cave/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq MahoganyHills_EventScript_InsectPlate_11
 	goto MahoganyHills_EventScript_InsectPlate_1
 
 MahoganyHills_EventScript_InsectPlate_3:
-# 8 "data/maps/MahoganyHills_Cave/scripts.pory"
-	goto_if_unset FLAG_INSECT_PLATE_FOUND, MahoganyHills_EventScript_InsectPlate_2
+# 9 "data/maps/MahoganyHills_Cave/scripts.pory"
+	compare VAR_RESULT, NO
+	goto_if_eq MahoganyHills_EventScript_InsectPlate_2
 	goto MahoganyHills_EventScript_InsectPlate_1
 
 MahoganyHills_EventScript_InsectPlate_7:
-# 21 "data/maps/MahoganyHills_Cave/scripts.pory"
+# 22 "data/maps/MahoganyHills_Cave/scripts.pory"
 	msgbox MahoganyHills_EventScript_InsectPlate_Text_2
 	goto MahoganyHills_EventScript_InsectPlate_6
 
 MahoganyHills_EventScript_InsectPlate_8:
-# 20 "data/maps/MahoganyHills_Cave/scripts.pory"
+# 21 "data/maps/MahoganyHills_Cave/scripts.pory"
 	goto_if_unset FLAG_LEGENDS_PLATE_FOUND, MahoganyHills_EventScript_InsectPlate_7
 	goto MahoganyHills_EventScript_InsectPlate_6
 
 MahoganyHills_EventScript_InsectPlate_11:
-# 11 "data/maps/MahoganyHills_Cave/scripts.pory"
-	setvar VAR_0x8004, 1
 # 12 "data/maps/MahoganyHills_Cave/scripts.pory"
-	setvar VAR_0x8005, 1
+	setvar VAR_0x8004, 1
 # 13 "data/maps/MahoganyHills_Cave/scripts.pory"
-	setvar VAR_0x8006, 8
+	setvar VAR_0x8005, 1
 # 14 "data/maps/MahoganyHills_Cave/scripts.pory"
-	setvar VAR_0x8007, 0
+	setvar VAR_0x8006, 8
 # 15 "data/maps/MahoganyHills_Cave/scripts.pory"
-	special ShakeCamera
+	setvar VAR_0x8007, 0
 # 16 "data/maps/MahoganyHills_Cave/scripts.pory"
+	special ShakeCamera
+# 17 "data/maps/MahoganyHills_Cave/scripts.pory"
 	fadescreen FADE_TO_BLACK
+# 18 "data/maps/MahoganyHills_Cave/scripts.pory"
+	warp MAP_HIDDEN_GROTTO_LOST_PLATES_1, 6, 13
 	goto MahoganyHills_EventScript_InsectPlate_1
 
 MahoganyHills_EventScript_InsectPlate_14:
-# 24 "data/maps/MahoganyHills_Cave/scripts.pory"
+# 25 "data/maps/MahoganyHills_Cave/scripts.pory"
 	msgbox MahoganyHills_EventScript_InsectPlate_Text_3
-# 26 "data/maps/MahoganyHills_Cave/scripts.pory"
-	setobjectxy 2, 20, 9
 # 27 "data/maps/MahoganyHills_Cave/scripts.pory"
-	applymovement 2, Movement_AlexToPlayer_MHC
+	setobjectxy 2, 20, 9
 # 28 "data/maps/MahoganyHills_Cave/scripts.pory"
-	waitmovement 2
+	applymovement 2, Movement_AlexToPlayer_MHC
 # 29 "data/maps/MahoganyHills_Cave/scripts.pory"
-	msgbox MahoganyHills_EventScript_InsectPlate_Text_4
+	waitmovement 2
 # 30 "data/maps/MahoganyHills_Cave/scripts.pory"
-	msgbox MahoganyHills_EventScript_InsectPlate_Text_5
+	msgbox MahoganyHills_EventScript_InsectPlate_Text_4
 # 31 "data/maps/MahoganyHills_Cave/scripts.pory"
-	msgbox MahoganyHills_EventScript_InsectPlate_Text_6
+	msgbox MahoganyHills_EventScript_InsectPlate_Text_5
 # 32 "data/maps/MahoganyHills_Cave/scripts.pory"
-	msgbox MahoganyHills_EventScript_InsectPlate_Text_7
+	msgbox MahoganyHills_EventScript_InsectPlate_Text_6
 # 33 "data/maps/MahoganyHills_Cave/scripts.pory"
-	msgbox MahoganyHills_EventScript_InsectPlate_Text_8
+	msgbox MahoganyHills_EventScript_InsectPlate_Text_7
 # 34 "data/maps/MahoganyHills_Cave/scripts.pory"
-	msgbox MahoganyHills_EventScript_InsectPlate_Text_9
+	msgbox MahoganyHills_EventScript_InsectPlate_Text_8
 # 35 "data/maps/MahoganyHills_Cave/scripts.pory"
+	msgbox MahoganyHills_EventScript_InsectPlate_Text_9
+# 36 "data/maps/MahoganyHills_Cave/scripts.pory"
 	msgbox MahoganyHills_EventScript_InsectPlate_Text_10
-# 37 "data/maps/MahoganyHills_Cave/scripts.pory"
+# 38 "data/maps/MahoganyHills_Cave/scripts.pory"
 	giveitem ITEM_HISTORY_BOOK
-# 40 "data/maps/MahoganyHills_Cave/scripts.pory"
-	msgbox MahoganyHills_EventScript_InsectPlate_Text_11
 # 41 "data/maps/MahoganyHills_Cave/scripts.pory"
-	applymovement 2, Movement_AlexLeavesPlayer_MHC
+	msgbox MahoganyHills_EventScript_InsectPlate_Text_11
 # 42 "data/maps/MahoganyHills_Cave/scripts.pory"
-	removeobject 2
+	applymovement 2, Movement_AlexLeavesPlayer_MHC
 # 43 "data/maps/MahoganyHills_Cave/scripts.pory"
+	removeobject 2
+# 44 "data/maps/MahoganyHills_Cave/scripts.pory"
 	setvar VAR_PLATEQUEST_STATE, 2
 	goto MahoganyHills_EventScript_InsectPlate_13
 
 
+MahoganillyHillsCave_TrainerBattle_Gosu::
 # 50 "data/maps/MahoganyHills_Cave/scripts.pory"
-Movement_AlexToPlayer_MHC:
+	trainerbattle_single GOSU_MHC, GosuMCH_Intro, GosuMCH_Outro, Increase_Trainers_Beaten
 # 51 "data/maps/MahoganyHills_Cave/scripts.pory"
-	walk_up
-# 52 "data/maps/MahoganyHills_Cave/scripts.pory"
-	walk_up
-# 53 "data/maps/MahoganyHills_Cave/scripts.pory"
-	walk_up
-# 54 "data/maps/MahoganyHills_Cave/scripts.pory"
-	walk_up
+	msgbox GosuMCH_Postbattle
+	return
+
+
+MahoganillyHillsCave_TrainerBattle_John::
 # 55 "data/maps/MahoganyHills_Cave/scripts.pory"
-	walk_up
+	trainerbattle_single JOHN_MHC, JohnMCH_Intro, JohnMCH_Outro, Increase_Trainers_Beaten
 # 56 "data/maps/MahoganyHills_Cave/scripts.pory"
+	msgbox JohnMCH_Outro
+	return
+
+
+# 82 "data/maps/MahoganyHills_Cave/scripts.pory"
+Movement_AlexToPlayer_MHC:
+# 83 "data/maps/MahoganyHills_Cave/scripts.pory"
 	walk_up
-# 57 "data/maps/MahoganyHills_Cave/scripts.pory"
+# 84 "data/maps/MahoganyHills_Cave/scripts.pory"
+	walk_up
+# 85 "data/maps/MahoganyHills_Cave/scripts.pory"
+	walk_up
+# 86 "data/maps/MahoganyHills_Cave/scripts.pory"
+	walk_up
+# 87 "data/maps/MahoganyHills_Cave/scripts.pory"
+	walk_up
+# 88 "data/maps/MahoganyHills_Cave/scripts.pory"
+	walk_up
+# 89 "data/maps/MahoganyHills_Cave/scripts.pory"
 	walk_up
 	step_end
 
-# 60 "data/maps/MahoganyHills_Cave/scripts.pory"
+# 92 "data/maps/MahoganyHills_Cave/scripts.pory"
 Movement_AlexLeavesPlayer_MHC:
-# 61 "data/maps/MahoganyHills_Cave/scripts.pory"
+# 93 "data/maps/MahoganyHills_Cave/scripts.pory"
 	walk_down
-# 62 "data/maps/MahoganyHills_Cave/scripts.pory"
+# 94 "data/maps/MahoganyHills_Cave/scripts.pory"
 	walk_down
-# 63 "data/maps/MahoganyHills_Cave/scripts.pory"
+# 95 "data/maps/MahoganyHills_Cave/scripts.pory"
 	walk_down
-# 64 "data/maps/MahoganyHills_Cave/scripts.pory"
+# 96 "data/maps/MahoganyHills_Cave/scripts.pory"
 	walk_down
-# 65 "data/maps/MahoganyHills_Cave/scripts.pory"
+# 97 "data/maps/MahoganyHills_Cave/scripts.pory"
 	walk_down
-# 66 "data/maps/MahoganyHills_Cave/scripts.pory"
+# 98 "data/maps/MahoganyHills_Cave/scripts.pory"
 	walk_down
-# 67 "data/maps/MahoganyHills_Cave/scripts.pory"
+# 99 "data/maps/MahoganyHills_Cave/scripts.pory"
 	walk_down
-# 68 "data/maps/MahoganyHills_Cave/scripts.pory"
+# 100 "data/maps/MahoganyHills_Cave/scripts.pory"
 	walk_down
-# 69 "data/maps/MahoganyHills_Cave/scripts.pory"
+# 101 "data/maps/MahoganyHills_Cave/scripts.pory"
 	walk_down
 	step_end
 
@@ -142,59 +163,80 @@ MahoganyHills_EventScript_InsectPlate_Text_0:
 	.string "Pokémon crawling over a plate.$"
 
 MahoganyHills_EventScript_InsectPlate_Text_1:
-# 9 "data/maps/MahoganyHills_Cave/scripts.pory"
+# 10 "data/maps/MahoganyHills_Cave/scripts.pory"
 	.string "Do you want to put the LEGENDS PLATE\n"
 	.string "into the slot?$"
 
 MahoganyHills_EventScript_InsectPlate_Text_2:
-# 21 "data/maps/MahoganyHills_Cave/scripts.pory"
+# 22 "data/maps/MahoganyHills_Cave/scripts.pory"
 	.string "There seems to be a slot in the wall for\n"
 	.string "something. Maybe it's that Key Alex\l"
 	.string "spoke about.$"
 
 MahoganyHills_EventScript_InsectPlate_Text_3:
-# 24 "data/maps/MahoganyHills_Cave/scripts.pory"
+# 25 "data/maps/MahoganyHills_Cave/scripts.pory"
 	.string "You listened to me then.$"
 
 MahoganyHills_EventScript_InsectPlate_Text_4:
-# 29 "data/maps/MahoganyHills_Cave/scripts.pory"
+# 30 "data/maps/MahoganyHills_Cave/scripts.pory"
 	.string "Hello again! This is that carving I\n"
 	.string "mentioned to you.$"
 
 MahoganyHills_EventScript_InsectPlate_Text_5:
-# 30 "data/maps/MahoganyHills_Cave/scripts.pory"
+# 31 "data/maps/MahoganyHills_Cave/scripts.pory"
 	.string "It looks to be carved in the same way as\n"
 	.string "the one in Platefall, it also has a hole\l"
 	.string "in it.$"
 
 MahoganyHills_EventScript_InsectPlate_Text_6:
-# 31 "data/maps/MahoganyHills_Cave/scripts.pory"
+# 32 "data/maps/MahoganyHills_Cave/scripts.pory"
 	.string "People believe the plates are locked\n"
 	.string "and hidden behind carvings like these,\l"
 	.string "but how do you open these doorsways\l"
 	.string "without the plates in the first place?$"
 
 MahoganyHills_EventScript_InsectPlate_Text_7:
-# 32 "data/maps/MahoganyHills_Cave/scripts.pory"
+# 33 "data/maps/MahoganyHills_Cave/scripts.pory"
 	.string "It is a confusing conumdrun.$"
 
 MahoganyHills_EventScript_InsectPlate_Text_8:
-# 33 "data/maps/MahoganyHills_Cave/scripts.pory"
+# 34 "data/maps/MahoganyHills_Cave/scripts.pory"
 	.string "I believe there must be a 19th plate\n"
 	.string "not mentioned, one that acts like a key,\l"
 	.string "although I've struggled to find any\l"
 	.string "proof of it existing yet.$"
 
 MahoganyHills_EventScript_InsectPlate_Text_9:
-# 34 "data/maps/MahoganyHills_Cave/scripts.pory"
+# 35 "data/maps/MahoganyHills_Cave/scripts.pory"
 	.string "That is what we must search for\n"
 	.string "{PLAYER}, the key!$"
 
 MahoganyHills_EventScript_InsectPlate_Text_10:
-# 35 "data/maps/MahoganyHills_Cave/scripts.pory"
+# 36 "data/maps/MahoganyHills_Cave/scripts.pory"
 	.string "Here take this.$"
 
 MahoganyHills_EventScript_InsectPlate_Text_11:
-# 40 "data/maps/MahoganyHills_Cave/scripts.pory"
+# 41 "data/maps/MahoganyHills_Cave/scripts.pory"
 	.string "You can use this to translate any\n"
 	.string "ancient text you stumble upon.$"
+
+GosuMCH_Intro::
+# 60 "data/maps/MahoganyHills_Cave/scripts.pory"
+	.string "$"
+
+GosuMCH_Outro::
+# 64 "data/maps/MahoganyHills_Cave/scripts.pory"
+	.string "$"
+
+GosuMCH_Postbattle::
+# 68 "data/maps/MahoganyHills_Cave/scripts.pory"
+	.string "$"
+
+JohnMCH_Intro::
+# 72 "data/maps/MahoganyHills_Cave/scripts.pory"
+	.string "I forgot my pickaxe so I can't go any\n"
+	.string "deeper.$"
+
+JohnMCH_Outro::
+# 76 "data/maps/MahoganyHills_Cave/scripts.pory"
+	.string "It's a long walk back home.$"

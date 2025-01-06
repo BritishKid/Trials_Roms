@@ -22,10 +22,7 @@ Clayhaven_PokemonCenter_1F_EventScript_Nurse::
 script UpdatePlayerFlag {
 	lockall
 	msgbox("Updating")
-	setflag(FLAG_HIDE_MAHOGANY_HILLS_OBJECT)
-	setflag(FLAG_XP_ALL_ON)
-	setflag(FLAG_HIDE_TOWN2_HOUSE3_GIRL)
-	setflag(FLAG_HIDE_FIRST_ENCOUNTER_ROB)
+	// setflag(FLAG_HIDE_ROUTE4_DOJONPCS_1)
 	msgbox("Updated")
 	releaseall
 }

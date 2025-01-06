@@ -11,21 +11,29 @@ GranitePeakTown_MapScripts_MAP_SCRIPT_ON_TRANSITION:
 
 GranitePeak_EventScript_TownSign::
 # 8 "data/maps/GranitePeakTown/scripts.pory"
+	lockall
+# 9 "data/maps/GranitePeakTown/scripts.pory"
 	msgbox GranitePeak_EventScript_TownSign_Text_0
+# 10 "data/maps/GranitePeakTown/scripts.pory"
+	releaseall
 	return
 
 
 GranitePeak_EventScript_ForSaleSign::
-# 13 "data/maps/GranitePeakTown/scripts.pory"
+# 14 "data/maps/GranitePeakTown/scripts.pory"
+	lockall
+# 16 "data/maps/GranitePeakTown/scripts.pory"
 	msgbox GranitePeak_EventScript_ForSaleSign_Text_0
+# 17 "data/maps/GranitePeakTown/scripts.pory"
+	releaseall
 	return
 
 
 GranitePeak_EventScript_TownSign_Text_0:
-# 8 "data/maps/GranitePeakTown/scripts.pory"
+# 9 "data/maps/GranitePeakTown/scripts.pory"
 	.string "Granite Peak:\n"
 	.string "Look down on an ancient world.$"
 
 GranitePeak_EventScript_ForSaleSign_Text_0:
-# 13 "data/maps/GranitePeakTown/scripts.pory"
+# 16 "data/maps/GranitePeakTown/scripts.pory"
 	.string "FOR SALE$"

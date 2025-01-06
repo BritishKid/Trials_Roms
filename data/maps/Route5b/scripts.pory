@@ -20,11 +20,11 @@ script Route5b_Pyukumuku_Clean_Up_1 {
         msgbox(format("It's a Pyukumuku, you push it back into the water"))
         fadescreen(FADE_TO_BLACK)
         msgbox(format("SPLASH"))
-        fadescreen(FADE_FROM_BLACK)
-        removeobject(2)
+        removeobject(3)
         setflag(FLAG_CLEANED_UP_PYUKUMUKU_1)
+        fadescreen(FADE_FROM_BLACK)
         giveitem(ITEM_STICKY_BARB)
-        msgbox(format("You found a big pearl under the Pokemon."))
+        msgbox(format("You found a big pearl under the Pokémon."))
         playfanfare(MUS_OBTAIN_ITEM)
         call(IncrementNumber_Pyukumukus_Saved)
     release
@@ -35,11 +35,11 @@ script Route5b_Pyukumuku_Clean_Up_2 {
         msgbox(format("It's a Pyukumuku, you push it back into the water"))
         fadescreen(FADE_TO_BLACK)
         msgbox(format("SPLASH"))
-        fadescreen(FADE_FROM_BLACK)
-        removeobject(3)
+        removeobject(4)
         setflag(FLAG_CLEANED_UP_PYUKUMUKU_2)
+        fadescreen(FADE_FROM_BLACK)
         giveitem(ITEM_BIG_PEARL)
-        msgbox(format("You found a big pearl under the Pokemon."))
+        msgbox(format("You found a big pearl under the Pokémon."))
         playfanfare(MUS_OBTAIN_ITEM)
         call(IncrementNumber_Pyukumukus_Saved)
     release
@@ -47,6 +47,11 @@ script Route5b_Pyukumuku_Clean_Up_2 {
 
 script IncrementNumber_Pyukumukus_Saved {
     addvar(VAR_PYUKUMUKUS_SAVED, 1)
+}
+
+script Route5b_WarningTrainer{
+    trainerbattle_single(TRAINER_ROUTE5b_RACHEL, Route5b_Rachel_Intro, Route5b_Rachel_Outro)
+    msgbox(Route5b_Rachel_Postbattle, MSGBOX_AUTOCLOSE)
 }
 
 //text
@@ -59,5 +64,18 @@ text BumbleBoozer_Outro {
 }
 
 text BumbleBoozer_PostBattle {
-    format("")
+    format("...")
+}
+
+
+text Route5b_Rachel_Intro {
+    format("I wouldn't go further east, some thugs have taken over the town and they are very strong. Not even Gym Leader Kevin could beat them.")
+}
+
+text Route5b_Rachel_Outro {
+    format("You're strong, but I'm not sure you're strong enough.")
+}
+
+text Route5b_Rachel_Postbattle {
+    format("You're welcome to try to beat them but without beating Hemlock Gym you won't stand a chance.")
 }

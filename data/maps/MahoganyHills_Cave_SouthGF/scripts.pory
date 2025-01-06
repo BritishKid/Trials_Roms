@@ -1,0 +1,13 @@
+mapscripts MahoganyHills_Cave_SouthGF_MapScripts {}
+
+script MahoganyHills_CaveSouthGF_Reflex {
+    trainerbattle_single(REFLEX_TRAINER, Reflex_Message, Reflex_Message, Increase_Trainers_Beaten)
+    msgbox(Reflex_Message, MSGBOX_AUTOCLOSE)
+    end
+}
+
+//text
+
+text Reflex_Message {
+    format("I am a tree.")
+}

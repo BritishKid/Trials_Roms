@@ -147,7 +147,7 @@ HemlockGym_Interior_Greeter_Text_0:
 
 HemlockGym_Interior_Greeter_Text_1:
 # 13 "data/maps/Hemlock_Gym_Interior/scripts.pory"
-	.string "Let me heal up your Pokemon before you\n"
+	.string "Let me heal up your Pokémon before you\n"
 	.string "go further.$"
 
 HemlockGym_Interior_Greeter_Text_2:

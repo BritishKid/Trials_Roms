@@ -5,7 +5,8 @@ mapscripts MahoganyHills_Cave_MapScripts {
 script MahoganyHills_EventScript_InsectPlate {
     lockall
     msgbox(format("There is a carving of many small bug like Pokémon crawling over a plate."))
-    if(flag(FLAG_LEGENDS_PLATE_FOUND) && !flag(FLAG_INSECT_PLATE_FOUND)) {
+    checkitem(ITEM_INSECT_PLATE)
+    if(flag(FLAG_LEGENDS_PLATE_FOUND) && var(VAR_RESULT) == NO) {
         msgbox(format("Do you want to put the LEGENDS PLATE into the slot?"), MSGBOX_YESNO)
         if(var(VAR_RESULT) == YES) {
             setvar(VAR_0x8004, 1)
@@ -14,7 +15,7 @@ script MahoganyHills_EventScript_InsectPlate {
             setvar(VAR_0x8007, 0)
             special(ShakeCamera)
             fadescreen(FADE_TO_BLACK)
-            // warp(MAP_LOST_PLATES, ) // todo create plate location
+            warp(MAP_HIDDEN_GROTTO_LOST_PLATES_1, 6, 13) 
         }
     }
     if((var(VAR_PLATEQUEST_STATE) == 2) && !flag(FLAG_LEGENDS_PLATE_FOUND)) {
@@ -43,6 +44,37 @@ script MahoganyHills_EventScript_InsectPlate {
         setvar(VAR_PLATEQUEST_STATE, 2)
     }
     releaseall
+}
+
+script MahoganillyHillsCave_TrainerBattle_Gosu {
+    trainerbattle_single(GOSU_MHC, GosuMCH_Intro, GosuMCH_Outro, Increase_Trainers_Beaten)
+    msgbox(GosuMCH_Postbattle)
+}
+
+script MahoganillyHillsCave_TrainerBattle_John {
+    trainerbattle_single(JOHN_MHC, JohnMCH_Intro, JohnMCH_Outro, Increase_Trainers_Beaten)
+    msgbox(JohnMCH_Outro)
+}
+
+//text
+text GosuMCH_Intro {
+    format("")
+}
+
+text GosuMCH_Outro {
+    format("")
+}
+
+text GosuMCH_Postbattle {
+    format("")
+}
+
+text JohnMCH_Intro {
+    format("I forgot my pickaxe so I can't go any deeper.")
+}
+
+text JohnMCH_Outro {
+    format("It's a long walk back home.")
 }
 
 //movement

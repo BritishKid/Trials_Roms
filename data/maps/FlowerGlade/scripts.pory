@@ -1,1 +1,59 @@
 mapscripts FlowerGlade_MapScripts {}
+
+
+script FlowerGlade_PicknickerSara_TrainerBattle {
+    trainerbattle_single(FLOWERGLADE_PICKNICKER_SARA, FlowerGlade_Sara_Intro, FlowerGlade_Sara_Outro, Increase_Trainers_Beaten)
+    msgbox(FlowerGlade_Sarah_PostBattle, MSGBOX_AUTOCLOSE)
+}
+
+
+script FlowerGlade_BattleScript_Rosemary {
+    trainerbattle_single(FLOWERGLADE_FLORAL_TRAINER, FloralTrainer_Intro, FloralTrainer_Outro)
+    msgbox(FloralTrainer_PostBattle, MSGBOX_AUTOCLOSE)
+    release
+}
+
+script FlowerGlade_BattleScript_Lily {
+    trainerbattle_single(FLOWERGLADE_FLORAL_TRAINER_LILY, LilyGarden_Intro, LilyGarden_Outro)
+    msgbox(LilyGarden_PostBattle, MSGBOX_AUTOCLOSE)
+    release
+}
+
+
+//text
+
+text FlowerGlade_Sara_Intro {
+    format("I've just got my 4th badge and came here to train up a little.")
+}
+
+text FlowerGlade_Sara_Outro {
+    format("Wow you're strong as well!")
+}
+
+text FlowerGlade_Sarah_PostBattle {
+    format("I'll probably meet you again in the Champions Guild.")
+}
+
+text FloralTrainer_Intro {
+    format("Welcome to the Flower Glade! Let the petals dance in our battle!")
+}
+
+text FloralTrainer_Outro {
+    format("Oh, your Pokémon are as resilient as flowers in sunlight. Well done!")
+}
+
+text FloralTrainer_PostBattle {
+    format("The fragrance of victory lingers in the air. Keep blooming on your journey!")
+}
+
+text LilyGarden_Intro {
+    format("Welcome to my garden! Let the soothing aroma of nature guide us in our battle!")
+}
+
+text LilyGarden_Outro {
+    format("Your Pokémon's spirit is as radiant as a sunflower. Well played!")
+}
+
+text LilyGarden_PostBattle {
+    format("May your journey continue to blossom with victories. Farewell!")
+}

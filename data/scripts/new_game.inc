@@ -274,6 +274,7 @@ EventScript_ResetAllMapFlags::
 	setflag FLAG_HIDE_TOWN2_HOUSE3_GIRL
 	setflag FLAG_HIDE_FIRST_ENCOUNTER_ROB
 	setflag FLAG_HIDE_SECOND_ENCOUNTER_ROB
+	setflag FLAG_HIDE_ROUTE4_DOJONPCS_1
 	
 	call EventScript_ResetAllBerries
 	end

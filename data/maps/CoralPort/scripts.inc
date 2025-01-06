@@ -293,24 +293,24 @@ SandyShoreCity_Rival_PostbattleScript::
 # 171 "data/maps/CoralPort/scripts.pory"
 	msgbox SandyShoreCity_Rival_PostbattleScript_Text_1
 # 172 "data/maps/CoralPort/scripts.pory"
-	playfanfare MUS_OBTAIN_ITEM
-# 173 "data/maps/CoralPort/scripts.pory"
 	giveitem ITEM_SS_TICKET
-# 174 "data/maps/CoralPort/scripts.pory"
+# 173 "data/maps/CoralPort/scripts.pory"
 	setflag FLAG_RECEIVED_SS_TICKET
-# 175 "data/maps/CoralPort/scripts.pory"
+# 174 "data/maps/CoralPort/scripts.pory"
 	applymovement 7, Movement_SandyBeach_RivalLeaves
-# 176 "data/maps/CoralPort/scripts.pory"
+# 175 "data/maps/CoralPort/scripts.pory"
 	waitmovement 7
-# 177 "data/maps/CoralPort/scripts.pory"
+# 176 "data/maps/CoralPort/scripts.pory"
 	removeobject 7
-# 178 "data/maps/CoralPort/scripts.pory"
+# 177 "data/maps/CoralPort/scripts.pory"
 	releaseall
 	return
 
 
-# 182 "data/maps/CoralPort/scripts.pory"
+# 181 "data/maps/CoralPort/scripts.pory"
 Movement_RivalAppearing_BeachTown:
+# 182 "data/maps/CoralPort/scripts.pory"
+	walk_left
 # 183 "data/maps/CoralPort/scripts.pory"
 	walk_left
 # 184 "data/maps/CoralPort/scripts.pory"
@@ -324,13 +324,13 @@ Movement_RivalAppearing_BeachTown:
 # 188 "data/maps/CoralPort/scripts.pory"
 	walk_left
 # 189 "data/maps/CoralPort/scripts.pory"
-	walk_left
-# 190 "data/maps/CoralPort/scripts.pory"
 	face_up
 	step_end
 
-# 193 "data/maps/CoralPort/scripts.pory"
+# 192 "data/maps/CoralPort/scripts.pory"
 Movement_SandyBeach_RivalLeaves:
+# 193 "data/maps/CoralPort/scripts.pory"
+	walk_right
 # 194 "data/maps/CoralPort/scripts.pory"
 	walk_right
 # 195 "data/maps/CoralPort/scripts.pory"
@@ -341,37 +341,35 @@ Movement_SandyBeach_RivalLeaves:
 	walk_right
 # 198 "data/maps/CoralPort/scripts.pory"
 	walk_right
-# 199 "data/maps/CoralPort/scripts.pory"
-	walk_right
 	step_end
 
 	.align 2
-# 214 "data/maps/CoralPort/scripts.pory"
+# 213 "data/maps/CoralPort/scripts.pory"
 CoastalTown_EvolutionStoneMarket_Elemental:
-# 215 "data/maps/CoralPort/scripts.pory"
+# 214 "data/maps/CoralPort/scripts.pory"
 	.2byte ITEM_FIRE_STONE
-# 216 "data/maps/CoralPort/scripts.pory"
+# 215 "data/maps/CoralPort/scripts.pory"
 	.2byte ITEM_LEAF_STONE
-# 217 "data/maps/CoralPort/scripts.pory"
+# 216 "data/maps/CoralPort/scripts.pory"
 	.2byte ITEM_WATER_STONE
 	.2byte ITEM_NONE
 
 	.align 2
-# 221 "data/maps/CoralPort/scripts.pory"
+# 220 "data/maps/CoralPort/scripts.pory"
 CoralPort_Market_Items:
-# 222 "data/maps/CoralPort/scripts.pory"
+# 221 "data/maps/CoralPort/scripts.pory"
 	.2byte ITEM_HP_UP
-# 223 "data/maps/CoralPort/scripts.pory"
+# 222 "data/maps/CoralPort/scripts.pory"
 	.2byte ITEM_PROTEIN
-# 224 "data/maps/CoralPort/scripts.pory"
+# 223 "data/maps/CoralPort/scripts.pory"
 	.2byte ITEM_IRON
-# 225 "data/maps/CoralPort/scripts.pory"
+# 224 "data/maps/CoralPort/scripts.pory"
 	.2byte ITEM_CALCIUM
-# 226 "data/maps/CoralPort/scripts.pory"
+# 225 "data/maps/CoralPort/scripts.pory"
 	.2byte ITEM_ZINC
-# 227 "data/maps/CoralPort/scripts.pory"
+# 226 "data/maps/CoralPort/scripts.pory"
 	.2byte ITEM_CARBOS
-# 228 "data/maps/CoralPort/scripts.pory"
+# 227 "data/maps/CoralPort/scripts.pory"
 	.2byte ITEM_PP_UP
 	.2byte ITEM_NONE
 
@@ -502,11 +500,11 @@ SandyShoreCity_Rival_PostbattleScript_Text_1:
 	.string "the same$"
 
 SandyShoreCity_Rival_Intro::
-# 204 "data/maps/CoralPort/scripts.pory"
+# 203 "data/maps/CoralPort/scripts.pory"
 	.string "I heard you got the Shoal Badge! You\n"
 	.string "might be able to last more than 15\l"
 	.string "seconds against me now!$"
 
 SandyShoreCity_Rival_Outro::
-# 208 "data/maps/CoralPort/scripts.pory"
+# 207 "data/maps/CoralPort/scripts.pory"
 	.string "How do you keep beating me?$"

@@ -2607,4 +2607,25 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
         .cantBeSwapped = TRUE,
         .cantBeTraced = TRUE,
     },
+    //Custom Abilities
+    [ABILITY_BONE_ZONE] =
+    {
+        .name = _("Bone Zone"),
+        .description = COMPOUND_STRING("Hits Flying-type Pokémon."),
+        .aiRating = 6,
+    },
+
+    [ABILITY_ECHO] =
+    {
+        .name = _("Echo"),
+        .description = COMPOUND_STRING("Sound moves hit twice."),
+        .aiRating = 10,
+    },
+
+    [ABILITY_PURE_RAGE] =
+    {
+        .name = _("Pure Rage"),
+        .description = COMPOUND_STRING("Its stats change when hit."),
+        .aiRating = 2,
+    },
 };

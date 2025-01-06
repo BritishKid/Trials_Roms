@@ -117,15 +117,15 @@
 #define VAR_CRAFTING_STATION_STATE                       0x4061 // Craft Tutorial
 #define VAR_PLATEQUEST_STATE                             0x4062 // Used for plates
 #define VAR_ROUTE104_STATE                               0x4063
-#define VAR_RIVAL_FIGHT_2                               0x4064 //UNUSED
+#define VAR_WATERFALL_CAVE_STATE                               0x4064 //
 #define VAR_EVOLUTION_STONE_HUNTING                               0x4065 // Used
 #define VAR_ROUTE4_DOJO_STATE                               0x4066 // Used
 #define VAR_GYM2_QUESTIONS                               0x4067 // 
 #define VAR_TREECKO_STATE                               0x4068 // Used
 #define VAR_ROUTE110_STATE                               0x4069
 #define VAR_PYUKUMUKUS_SAVED                               0x406A //USED
-#define VAR_ROUTE112_STATE                               0x406B // Unused Var
-#define VAR_ROUTE113_STATE                               0x406C // Unused Var
+#define VAR_EMBERDUNES_BUTTONS_PRESSED                               0x406B 
+#define VAR_DOJOS_CLEARED                               0x406C //
 #define VAR_ROUTE114_STATE                               0x406D // Unused Var
 #define VAR_ROUTE115_STATE                               0x406E // Unused Var
 #define VAR_ROUTE116_STATE                               0x406F

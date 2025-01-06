@@ -32,11 +32,11 @@ Route5b_Pyukumuku_Clean_Up_1::
 # 22 "data/maps/Route5b/scripts.pory"
 	msgbox Route5b_Pyukumuku_Clean_Up_1_Text_1
 # 23 "data/maps/Route5b/scripts.pory"
-	fadescreen FADE_FROM_BLACK
+	removeobject 3
 # 24 "data/maps/Route5b/scripts.pory"
-	removeobject 2
-# 25 "data/maps/Route5b/scripts.pory"
 	setflag FLAG_CLEANED_UP_PYUKUMUKU_1
+# 25 "data/maps/Route5b/scripts.pory"
+	fadescreen FADE_FROM_BLACK
 # 26 "data/maps/Route5b/scripts.pory"
 	giveitem ITEM_STICKY_BARB
 # 27 "data/maps/Route5b/scripts.pory"
@@ -60,11 +60,11 @@ Route5b_Pyukumuku_Clean_Up_2::
 # 37 "data/maps/Route5b/scripts.pory"
 	msgbox Route5b_Pyukumuku_Clean_Up_1_Text_1
 # 38 "data/maps/Route5b/scripts.pory"
-	fadescreen FADE_FROM_BLACK
+	removeobject 4
 # 39 "data/maps/Route5b/scripts.pory"
-	removeobject 3
-# 40 "data/maps/Route5b/scripts.pory"
 	setflag FLAG_CLEANED_UP_PYUKUMUKU_2
+# 40 "data/maps/Route5b/scripts.pory"
+	fadescreen FADE_FROM_BLACK
 # 41 "data/maps/Route5b/scripts.pory"
 	giveitem ITEM_BIG_PEARL
 # 42 "data/maps/Route5b/scripts.pory"
@@ -81,6 +81,14 @@ Route5b_Pyukumuku_Clean_Up_2::
 IncrementNumber_Pyukumukus_Saved::
 # 49 "data/maps/Route5b/scripts.pory"
 	addvar VAR_PYUKUMUKUS_SAVED, 1
+	return
+
+
+Route5b_WarningTrainer::
+# 53 "data/maps/Route5b/scripts.pory"
+	trainerbattle_single TRAINER_ROUTE5b_RACHEL, Route5b_Rachel_Intro, Route5b_Rachel_Outro
+# 54 "data/maps/Route5b/scripts.pory"
+	msgbox Route5b_Rachel_Postbattle, MSGBOX_AUTOCLOSE
 	return
 
 
@@ -101,16 +109,34 @@ Route5b_Pyukumuku_Clean_Up_1_Text_1:
 Route5b_Pyukumuku_Clean_Up_1_Text_2:
 # 27 "data/maps/Route5b/scripts.pory"
 	.string "You found a big pearl under the\n"
-	.string "Pokemon.$"
+	.string "Pokémon.$"
 
 BumbleBoozer_Intro::
-# 53 "data/maps/Route5b/scripts.pory"
+# 58 "data/maps/Route5b/scripts.pory"
 	.string "My victory will be sweet!$"
 
 BumbleBoozer_Outro::
-# 57 "data/maps/Route5b/scripts.pory"
+# 62 "data/maps/Route5b/scripts.pory"
 	.string "Now I'm sour.$"
 
 BumbleBoozer_PostBattle::
-# 61 "data/maps/Route5b/scripts.pory"
-	.string "$"
+# 66 "data/maps/Route5b/scripts.pory"
+	.string "...$"
+
+Route5b_Rachel_Intro::
+# 71 "data/maps/Route5b/scripts.pory"
+	.string "I wouldn't go further east, some thugs\n"
+	.string "have taken over the town and they are\l"
+	.string "very strong. Not even Gym Leader Kevin\l"
+	.string "could beat them.$"
+
+Route5b_Rachel_Outro::
+# 75 "data/maps/Route5b/scripts.pory"
+	.string "You're strong, but I'm not sure you're\n"
+	.string "strong enough.$"
+
+Route5b_Rachel_Postbattle::
+# 79 "data/maps/Route5b/scripts.pory"
+	.string "You're welcome to try to beat them but\n"
+	.string "without beating Hemlock Gym you won't\l"
+	.string "stand a chance.$"

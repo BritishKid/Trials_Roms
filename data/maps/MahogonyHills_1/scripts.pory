@@ -67,7 +67,6 @@ script MahoganyScript_EventScript_Monster_Beaten {
     msgbox(format("The Poochyena dropped something in the battle"))
     msgbox(format("It's the TM for THIEF"))
     giveitem(ITEM_TM_THIEF, 1)
-    playfanfare(MUS_OBTAIN_ITEM)
     setvar(VAR_TOWN_2_QUEST_STATE, 2)
     setflag(FLAG_HIDE_MAHOGANY_HILLS_OBJECT)
     clearflag(FLAG_HIDE_TOWN2_HOUSE3_GIRL)
@@ -79,7 +78,6 @@ script MahogonyHills_1_Eventscript_BerrySkitty {
     msgbox(format("SKITTY!"))
     if(var(VAR_BERRY_SKITTY_STATE) == 0) {
         msgbox(format("The SKITTY seems to hand over a COBA BERRIES."))
-        playfanfare(MUS_OBTAIN_ITEM)
         giveitem(ITEM_COBA_BERRY, 5)
         setvar(VAR_BERRY_SKITTY_STATE, 1)
         setflag(FLAG_HIDE_SKITTY_MAHOGONY_HILLS)
@@ -107,7 +105,7 @@ text MahoganyHills1_Bao_Outro {
 }
 
 text MahoganyHills1_Bao_Postbattle {
-    format("I should probably catch some other Pokemon.")
+    format("I should probably catch some other Pokémon.")
 }
 
 text MahoganyHills1_ToughTrainer_Intro {

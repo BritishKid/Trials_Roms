@@ -36,7 +36,7 @@ Route4_EventScript_WaterStone_Grandson::
 # 26 "data/maps/Route4/scripts.pory"
 	goto_if_unset FLAG_WATER_STONE_SOURCE, Route4_EventScript_WaterStone_Grandson_3
 Route4_EventScript_WaterStone_Grandson_1:
-# 61 "data/maps/Route4/scripts.pory"
+# 60 "data/maps/Route4/scripts.pory"
 	releaseall
 	return
 
@@ -53,7 +53,7 @@ Route4_EventScript_WaterStone_Grandson_2:
 	compare VAR_RESULT, YES
 	goto_if_eq Route4_EventScript_WaterStone_Grandson_7
 Route4_EventScript_WaterStone_Grandson_6:
-# 57 "data/maps/Route4/scripts.pory"
+# 56 "data/maps/Route4/scripts.pory"
 	compare VAR_RESULT, NO
 	goto_if_eq Route4_EventScript_WaterStone_Grandson_9
 	goto Route4_EventScript_WaterStone_Grandson_1
@@ -90,57 +90,57 @@ Route4_EventScript_WaterStone_Grandson_7:
 # 43 "data/maps/Route4/scripts.pory"
 	giveitem ITEM_WATER_STONE
 # 44 "data/maps/Route4/scripts.pory"
-	playfanfare MUS_OBTAIN_ITEM
-# 45 "data/maps/Route4/scripts.pory"
 	msgbox Route4_EventScript_WaterStone_Grandson_Text_9
-# 46 "data/maps/Route4/scripts.pory"
+# 45 "data/maps/Route4/scripts.pory"
 	setflag FLAG_WATER_STONE_SOURCE
-# 47 "data/maps/Route4/scripts.pory"
+# 46 "data/maps/Route4/scripts.pory"
 	goto_if_set FLAG_LEAF_STONE_SOURCE, Route4_EventScript_WaterStone_Grandson_14
 Route4_EventScript_WaterStone_Grandson_11:
-# 52 "data/maps/Route4/scripts.pory"
+# 51 "data/maps/Route4/scripts.pory"
 	applymovement 1, Movement_GrandsonLeaves_WaterStone
-# 53 "data/maps/Route4/scripts.pory"
+# 52 "data/maps/Route4/scripts.pory"
 	waitmovement 1
-# 54 "data/maps/Route4/scripts.pory"
+# 53 "data/maps/Route4/scripts.pory"
 	removeobject 1
-# 55 "data/maps/Route4/scripts.pory"
+# 54 "data/maps/Route4/scripts.pory"
 	clearflag FLAG_CANT_CATCH_MON
 	goto Route4_EventScript_WaterStone_Grandson_6
 
 Route4_EventScript_WaterStone_Grandson_9:
-# 58 "data/maps/Route4/scripts.pory"
+# 57 "data/maps/Route4/scripts.pory"
 	msgbox Route4_EventScript_WaterStone_Grandson_Text_11
 	goto Route4_EventScript_WaterStone_Grandson_1
 
 Route4_EventScript_WaterStone_Grandson_12:
-# 48 "data/maps/Route4/scripts.pory"
+# 47 "data/maps/Route4/scripts.pory"
 	msgbox Route4_EventScript_WaterStone_Grandson_Text_10
-# 49 "data/maps/Route4/scripts.pory"
+# 48 "data/maps/Route4/scripts.pory"
 	setvar VAR_EVOLUTION_STONE_HUNTING, 2
 	goto Route4_EventScript_WaterStone_Grandson_11
 
 Route4_EventScript_WaterStone_Grandson_13:
-# 47 "data/maps/Route4/scripts.pory"
+# 46 "data/maps/Route4/scripts.pory"
 	goto_if_set FLAG_FIRE_STONE_SOURCE, Route4_EventScript_WaterStone_Grandson_12
 	goto Route4_EventScript_WaterStone_Grandson_11
 
 Route4_EventScript_WaterStone_Grandson_14:
-# 47 "data/maps/Route4/scripts.pory"
+# 46 "data/maps/Route4/scripts.pory"
 	goto_if_set FLAG_WATER_STONE_SOURCE, Route4_EventScript_WaterStone_Grandson_13
 	goto Route4_EventScript_WaterStone_Grandson_11
 
 
 StartWaterStoneBattle::
-# 65 "data/maps/Route4/scripts.pory"
+# 64 "data/maps/Route4/scripts.pory"
 	setflag FLAG_CANT_CATCH_MON
-# 66 "data/maps/Route4/scripts.pory"
+# 65 "data/maps/Route4/scripts.pory"
 	dowildbattle
 	return
 
 
-# 96 "data/maps/Route4/scripts.pory"
+# 95 "data/maps/Route4/scripts.pory"
 Movement_GrandsonLeaves_WaterStone:
+# 96 "data/maps/Route4/scripts.pory"
+	walk_up
 # 97 "data/maps/Route4/scripts.pory"
 	walk_up
 # 98 "data/maps/Route4/scripts.pory"
@@ -150,8 +150,6 @@ Movement_GrandsonLeaves_WaterStone:
 # 100 "data/maps/Route4/scripts.pory"
 	walk_up
 # 101 "data/maps/Route4/scripts.pory"
-	walk_up
-# 102 "data/maps/Route4/scripts.pory"
 	walk_up
 	step_end
 
@@ -207,42 +205,42 @@ Route4_EventScript_WaterStone_Grandson_Text_8:
 	.string "Also please take this.$"
 
 Route4_EventScript_WaterStone_Grandson_Text_9:
-# 45 "data/maps/Route4/scripts.pory"
+# 44 "data/maps/Route4/scripts.pory"
 	.string "It's the least I could do in return.$"
 
 Route4_EventScript_WaterStone_Grandson_Text_10:
-# 48 "data/maps/Route4/scripts.pory"
+# 47 "data/maps/Route4/scripts.pory"
 	.string "That's the leaf, fire and water stones\n"
 	.string "sorted. I should return these back to\l"
 	.string "my Grandad$"
 
 Route4_EventScript_WaterStone_Grandson_Text_11:
-# 58 "data/maps/Route4/scripts.pory"
+# 57 "data/maps/Route4/scripts.pory"
 	.string "Well go prepare I don't think I can do\n"
 	.string "this alone.$"
 
 Jakobi_Intro::
-# 70 "data/maps/Route4/scripts.pory"
+# 69 "data/maps/Route4/scripts.pory"
 	.string "Should never came here pal.$"
 
 Jakobi_Outro::
-# 74 "data/maps/Route4/scripts.pory"
-	.string "How could i lose these Pokemon were so\n"
+# 73 "data/maps/Route4/scripts.pory"
+	.string "How could i lose these Pokémon were so\n"
 	.string "expensive.$"
 
 Jakobi_Postbattle::
-# 78 "data/maps/Route4/scripts.pory"
-	.string "How much did your Pokemon Cost?$"
+# 77 "data/maps/Route4/scripts.pory"
+	.string "How much did your Pokémon Cost?$"
 
 Route4Bug_Intro::
-# 82 "data/maps/Route4/scripts.pory"
+# 81 "data/maps/Route4/scripts.pory"
 	.string "I love feeding powerful berries to my\n"
-	.string "bug Pokemon$"
+	.string "bug Pokémon$"
 
 Route4Bug_Outro::
-# 86 "data/maps/Route4/scripts.pory"
+# 85 "data/maps/Route4/scripts.pory"
 	.string "Fine then I will share the berries.$"
 
 Route4Bug_Postbattle::
-# 90 "data/maps/Route4/scripts.pory"
+# 89 "data/maps/Route4/scripts.pory"
 	.string "Make good use of it.$"

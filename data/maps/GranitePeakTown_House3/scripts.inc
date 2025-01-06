@@ -109,7 +109,7 @@ GranitePeakTown_TradeCompleted::
 
 GranitePeakTown_House3_Trader_Text_0:
 # 14 "data/maps/GranitePeakTown_House3/scripts.pory"
-	.string "The Pokemon on this Island are so\n"
+	.string "The Pokémon on this Island are so\n"
 	.string "different than my old home but I don't\l"
 	.string "get much time to go out and catch them.$"
 

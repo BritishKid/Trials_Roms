@@ -7,14 +7,14 @@ mapscripts MauvilleCity_MapScripts {
 
 script MauvilleCity_Pyukumuku_Clean_Up {
     lockall
-    msgbox(format("It's a Pyukumuku, you push it back into the water"))
+    msgbox(format("It's a Pyukumuku, you push it back into the water"), MSGBOX_AUTOCLOSE)
     fadescreen(FADE_TO_BLACK)
     msgbox(format("SPLASH"))
-    fadescreen(FADE_FROM_BLACK)
-    removeobject(3)
     setflag(FLAG_CLEANED_UP_PYUKUMUKU_4)
+    removeobject(2)
+    fadescreen(FADE_FROM_BLACK)
     giveitem(ITEM_BIG_PEARL)
-    msgbox(format("You found a big pearl under the Pokemon."))
+    msgbox(format("You found a big pearl under the Pokémon."), MSGBOX_AUTOCLOSE)
     playfanfare(MUS_OBTAIN_ITEM)
     call(IncrementNumber_Pyukumukus_Saved)
     releaseall
@@ -31,7 +31,7 @@ script ThugCity_EventScript_Blocker1 {
 script Thug1PostScript {
     applymovement(3, Movement_ThugJumpsBack)
     waitmovement(3)
-    msgbox(format("Fine I guess it's my go!"))
+    msgbox(format("Fine I guess it's my go!"), MSGBOX_AUTOCLOSE)
     applymovement(4, Movement_Thug2MovesLeft)
     waitmovement(4)
     trainerbattle_single(THUGCITY_BLOCKER2, Thug2_Intro, Thug2_Outro, ThugsBeaten_Left)
@@ -39,11 +39,11 @@ script Thug1PostScript {
 
 script ThugsBeaten_Left {
     //thugs are both on the left side
-    msgbox(format("We better warn Boss!"))
+    msgbox(format("We better warn Boss!"), MSGBOX_AUTOCLOSE)
     applymovement(3, Movement_ThugsRunRight)
     applymovement(4, Movement_ThugsRunRight)
     waitmovement(4)
-    setflag(flag(FLAG_HIDE_BLOCKER_THUGS))
+    setflag(FLAG_HIDE_BLOCKER_THUGS)
     removeobject(3)
     removeobject(4)
 }
@@ -55,18 +55,18 @@ script ThugCity_EventScript_Blocker2 {
 script Thug2PostScript {
     applymovement(4, Movement_ThugJumpsBack)
     waitmovement(4)
-    msgbox(format("Fine I guess it's my go!"))
+    msgbox(format("Fine I guess it's my go!"), MSGBOX_AUTOCLOSE)
     applymovement(3, Movement_Thug1MovesRight)
     waitmovement(3)
     trainerbattle_single(THUGCITY_BLOCKER1, Thug1_Intro, Thug1_Outro, ThugsBeaten_Right)
 }
 
 script ThugsBeaten_Right {
-    msgbox(format("We better warn Boss!"))
+    msgbox(format("We better warn Boss!"), MSGBOX_AUTOCLOSE)
     applymovement(3, Movement_ThugsRunRight)
     applymovement(4, Movement_ThugsRunRight)
     waitmovement(4)
-    setflag(flag(FLAG_HIDE_BLOCKER_THUGS))
+    setflag(FLAG_HIDE_BLOCKER_THUGS)
     removeobject(3)
     removeobject(4)
 }
@@ -81,13 +81,13 @@ script ThugCity_EventScript_DoorBlockers {
 script ThugCity_EventScript_PokemonCenterBlocker {
     lockall
     faceplayer
-    msgbox(format("Pokecenter is closed mate, but I can fix up your Pokemon.\lIt'll only cost 500!"), MSGBOX_YESNO)
+    msgbox(format("Pokecenter is closed mate, but I can fix up your Pokémon.\lIt'll only cost 500!"), MSGBOX_YESNO)
     if(var(VAR_RESULT) == YES) {
         removemoney(500)
         special(HealPlayerParty)
-        msgbox(format("Definately come again!"))
+        msgbox(format("Definetely come again!"), MSGBOX_AUTOCLOSE)
     } else {
-        msgbox(format("Fine just beat it."))
+        msgbox(format("Fine just beat it."), MSGBOX_AUTOCLOSE)
     }
     releaseall
 }

@@ -1,1 +1,42 @@
 mapscripts DarkCaveB1F_MapScripts {}
+
+
+script DarkCaveB1F_TrainerBattle_Scientist {
+    trainerbattle_single(DARKCAVEB1F_SCIENTIST, DarkCaveB1F_Scientist_Intro, DarkCaveB1F_Scientist_Outro, Increase_Trainers_Beaten)
+    msgbox(DarkCaveB1F_Scientist_PostBattle, MSGBOX_AUTOCLOSE)
+}
+
+script DarkCaveB1F_TrainerBattle_CoolTrainer {
+    trainerbattle_single(DARKCAVEB1F_COOLTRAINER, DarkCaveB1F_CoolTrainer_Intro, DarkCaveB1F_CoolTrainer_Outro, Increase_Trainers_Beaten)
+    msgbox(DarkCaveB1F_CoolTrainer_PostBattle, MSGBOX_AUTOCLOSE)
+}
+
+script Route120_EventScript_Jennifer{
+	trainerbattle_single(TRAINER_JENNIFER, Route120_Text_JenniferIntro, Route120_Text_JenniferDefeat) //change text
+	msgbox(Route120_Text_JenniferPostBattle, MSGBOX_AUTOCLOSE)
+}
+
+//text
+text DarkCaveB1F_Scientist_Intro {
+    format("I've been hearing about powerful Pokémon somewhere nearby.")
+}
+
+text DarkCaveB1F_Scientist_Outro {
+    format("Maybe I should reserach you instead of Pokémon.")
+}
+
+text DarkCaveB1F_Scientist_PostBattle {
+    format("The strongest Pokémon are always the hardest to find.")
+}
+
+text DarkCaveB1F_CoolTrainer_Intro {
+    format("My Pokémon is the strongest.")
+}
+
+text DarkCaveB1F_CoolTrainer_Outro {
+    format("You used more than one Pokémon, that's not fair.")
+}
+
+text DarkCaveB1F_CoolTrainer_PostBattle {
+    format("Must get stronger...")
+}

@@ -13,7 +13,6 @@ script MauvilleCity_House1_EventScript_Pyukumuku {
         msgbox(format("You've found that many! Wow this will be fantastic help to me."))
         msgbox(format("Please take this as thanks!"))
         giveitem(ITEM_ABSORB_BULB)
-        playfanfare(MUS_OBTAIN_ITEM)
         setflag(FLAG_PYUKUMUKU_PRIZE_1)
         msgbox(format("Keep looking out I'm sure there is many more to find."))
     }
@@ -21,7 +20,6 @@ script MauvilleCity_House1_EventScript_Pyukumuku {
         msgbox(format("Wow you can't be stopped. I'm sure I'll be able to learn about therir abilities"))
         msgbox(format("Please take this as thanks!"))
         giveitem(ITEM_TM24)
-        playfanfare(MUS_OBTAIN_ITEM)
         setflag(FLAG_PYUKUMUKU_PRIZE_2)
         msgbox(format("Keep looking out I'm sure there is many more to find."))
     }
@@ -29,7 +27,6 @@ script MauvilleCity_House1_EventScript_Pyukumuku {
         msgbox(format("They must be everywhere, you've been such a good help! I'll get a reserch grant for sure"))
         msgbox(format("Please take this as thanks!"))
         giveitem(ITEM_TM55)
-        playfanfare(MUS_OBTAIN_ITEM)
         setflag(FLAG_PYUKUMUKU_PRIZE_3)
         msgbox(format("Keep looking out I'm sure there is many more to find."))
     }

@@ -20,7 +20,6 @@ script Town2_EventScript_QuestStart {
         msgbox(format("Please take this ELECTRIC GEM as a thank you, it might help"))
         special(DoDomeConfetti)
         giveitem(ITEM_ELECTRIC_GEM)
-        playfanfare(MUS_OBTAIN_ITEM)
         setvar(VAR_TOWN_2_QUEST_STATE, 3)
         // questmenu(QUEST_MENU_COMPLETE_QUEST, QUEST_LOST_GIRL)
     }
@@ -33,6 +32,6 @@ script Town2_EventScript_QuestStart {
 script Town2_House3_EventScript_Girl {
     lockall
     faceplayer
-    msgbox(format("I was trying to find a secret area with rare Pokemon."))
+    msgbox(format("I was trying to find a secret area with rare Pokémon."))
     releaseall
 }

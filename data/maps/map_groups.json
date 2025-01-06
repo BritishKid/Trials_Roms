@@ -44,6 +44,9 @@
     "gMapGroup_MahogonyHills",
     "gMapGroup_ObsidianThicket",
     "gMapGroup_GymInterior",
+    "gMapGroup_HiddenDojos",
+    "gMapGroup_GranitePeakCaves",
+    "gMapGroup_EmberDuneIndoors",
     "gMapGroup_Archived"
   ],
   "gMapGroup_TownsAndRoutes": [
@@ -120,7 +123,12 @@
     "HemlockVillage",
     "MauvilleCity",
     "Route6",
-    "FlowerGlade"
+    "FlowerGlade",
+    "FlowerGladeWalk",
+    "EmberDunes_1",
+    "EmberDunes_2",
+    "Route7",
+    "EmberDunes_3"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",
@@ -361,10 +369,6 @@
     "RusturfTunnel",
     "Underwater_SootopolisCity",
     "DesertRuins",
-    "GraniteCave_1F",
-    "GraniteCave_B1F",
-    "GraniteCave_B2F",
-    "GraniteCave_StevensRoom",
     "PetalburgWoods",
     "MtChimney",
     "JaggedPass",
@@ -670,7 +674,12 @@
     "OldFishermans_Hut"
   ],
   "gMapGroup_IndoorRoute4": [
-    "Route4_Dojo"
+    "Route4_Dojo",
+    "WaterfallCave",
+    "WaterfallCave_PreBreak",
+    "WaterfallCave_PostBreak",
+    "WaterfallCave_SubBasement",
+    "LegendsAltar"
   ],
   "gMapGroup_HiddenBases": [
     "Nathans_Hidden_base",
@@ -680,7 +689,8 @@
   "gMapGroup_HiddenGrottos": [
     "HiddenGrotto_Rowlet",
     "HiddenGrotto_Charmander",
-    "HiddenGrotto_Squirtle"
+    "HiddenGrotto_Squirtle",
+    "HiddenGrotto_LostPlates_1"
   ],
   "gMapGroup_MahogonyHills": [
     "MahogonyHills_1",
@@ -692,7 +702,9 @@
     "MahoganyHills_Secret",
     "MahogonyHills_ResearchStation",
     "MahoganyHills_Cave",
-    "MahoganyHills_GymEntrance"
+    "MahoganyHills_GymEntrance",
+    "MahoganyHills_CaveB1F",
+    "MahoganyHills_Cave_SouthGF"
   ],
   "gMapGroup_ObsidianThicket": [
     "Obsidian_Thicket_1",
@@ -704,6 +716,22 @@
     "MahoganyHills_Gym_Interior",
     "CoralBeach_Gym_Interior",
     "Hemlock_Gym_Interior"
+  ],
+  "gMapGroup_HiddenDojos": [
+
+  ],
+  "gMapGroup_GranitePeakCaves": [
+    "GraniteCave_GF",
+    "GraniteCave_1F",
+    "GraniteCave_B1F",
+    "GraniteCave_B2F",
+    "GraniteCave_StevensRoom"
+  ],
+  "gMapGroup_EmberDuneIndoors": [
+    "EmberDunes_EntryHouse",
+    "EmberDune_CaveGF",
+    "EmberDune_Cave_BF",
+    "EmberDunes_ExitCave"
   ],
   "gMapGroup_Archived": [
     "MossdeepCity_Gym",

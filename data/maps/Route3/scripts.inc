@@ -32,7 +32,7 @@ PostBattle_Route2_Genki::
 
 Route3_HikerIntro::
 # 26 "data/maps/Route3/scripts.pory"
-	.string "I thought my Rock Pokemon would have\n"
+	.string "I thought my Rock Pokémon would have\n"
 	.string "made the gym easy, but it was still\l"
 	.string "tough.$"
 

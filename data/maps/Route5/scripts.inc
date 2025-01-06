@@ -51,11 +51,11 @@ Route5_Pyukumuku_Clean_Up::
 # 31 "data/maps/Route5/scripts.pory"
 	msgbox Route5_Pyukumuku_Clean_Up_Text_1
 # 32 "data/maps/Route5/scripts.pory"
-	fadescreen FADE_FROM_BLACK
-# 33 "data/maps/Route5/scripts.pory"
 	removeobject 3
-# 34 "data/maps/Route5/scripts.pory"
+# 33 "data/maps/Route5/scripts.pory"
 	setflag FLAG_CLEANED_UP_PYUKUMUKU_3
+# 34 "data/maps/Route5/scripts.pory"
+	fadescreen FADE_FROM_BLACK
 # 35 "data/maps/Route5/scripts.pory"
 	giveitem ITEM_BIG_PEARL
 # 36 "data/maps/Route5/scripts.pory"
@@ -96,4 +96,4 @@ Route5_Pyukumuku_Clean_Up_Text_1:
 Route5_Pyukumuku_Clean_Up_Text_2:
 # 36 "data/maps/Route5/scripts.pory"
 	.string "You found a big pearl under the\n"
-	.string "Pokemon.$"
+	.string "Pokémon.$"

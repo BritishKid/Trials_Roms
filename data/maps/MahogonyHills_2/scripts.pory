@@ -40,7 +40,6 @@ script MahoganyHills2_Rival_PostScript {
     msgbox(format("You might have won but I still have more badges than you. That's what matters really."))
     msgbox(format("You should probably take this to, it will help once you've got your first badge."))
     msgbox(format("You have been given a HAND AXE, it could be used to cut small trees."))
-    playfanfare(MUS_OBTAIN_ITEM)
     giveitem(ITEM_HAND_AXE)
     msgbox(format("You won't need to reach the gym it's only a little further north."))
     msgbox(format("Anyway I'm heading to get my next badge, I'll see you there if you don't lose too badly up here."))
@@ -84,7 +83,6 @@ script MahoganyHills_RoxanneBeaten {
     lockall
     msgbox(format("That's impressive, I'm not at my gym but you should still take this."))
     giveitem(ITEM_TM37)
-    playfanfare(MUS_OBTAIN_ITEM)
     setflag(FLAG_RECEIVED_TM_ROCK_TOMB)
     msgbox(format("It's the TM for ROCK TOMB, a great rock type move that will slow your opponent down."))
     setvar(VAR_ROXANNE_ENCOUNTER_STATE, 1)
@@ -110,7 +108,6 @@ script MahoganyHills_RoxanneBeaten_WithoutTrigger {
     lockall
     msgbox(format("That's impressive, I'm not at my gym but you should still take this."))
     giveitem(ITEM_TM37)
-    playfanfare(MUS_OBTAIN_ITEM)
     setflag(FLAG_RECEIVED_TM_ROCK_TOMB)
     setvar(VAR_ROXANNE_ENCOUNTER_STATE, 1)
     msgbox(format("I'll see you around again!"))
@@ -161,7 +158,6 @@ script MahoganyHills_EventScript_MossyStone_Grandson {
             msgbox(format("Okay we are good, thank you for that. I'll see you at the next one."))
             msgbox(format("Also please take this."))
             giveitem(ITEM_LEAF_STONE)
-            playfanfare(MUS_OBTAIN_ITEM)
             msgbox(format("It's the least I could do in return."))
             setflag(FLAG_LEAF_STONE_SOURCE)    
             if(flag(FLAG_LEAF_STONE_SOURCE) && flag(FLAG_WATER_STONE_SOURCE) && flag(FLAG_FIRE_STONE_SOURCE)){

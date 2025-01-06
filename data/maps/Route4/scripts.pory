@@ -41,7 +41,6 @@ script Route4_EventScript_WaterStone_Grandson {
             msgbox(format("Okay we are good, thank you for that. I'll see you at the next one."))
             msgbox(format("Also please take this."))
             giveitem(ITEM_WATER_STONE)
-            playfanfare(MUS_OBTAIN_ITEM)
             msgbox(format("It's the least I could do in return."))
             setflag(FLAG_WATER_STONE_SOURCE)    
             if(flag(FLAG_LEAF_STONE_SOURCE) && flag(FLAG_WATER_STONE_SOURCE) && flag(FLAG_FIRE_STONE_SOURCE)){
@@ -72,15 +71,15 @@ text Jakobi_Intro {
 }
 
 text Jakobi_Outro{ 
-    format("How could i lose these Pokemon were so expensive.")
+    format("How could i lose these Pokémon were so expensive.")
 }
 
 text Jakobi_Postbattle {
-    format("How much did your Pokemon Cost?")
+    format("How much did your Pokémon Cost?")
 }
 
 text Route4Bug_Intro {
-    format("I love feeding powerful berries to my bug Pokemon")
+    format("I love feeding powerful berries to my bug Pokémon")
 }
 
 text Route4Bug_Outro {

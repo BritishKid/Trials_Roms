@@ -76,29 +76,29 @@ Movement_PlayerOutWay_Harbour_ThugCity:
 # 54 "data/maps/MauvillCity_Harbour/scripts.pory"
 Movement_CommanderLeaves:
 # 55 "data/maps/MauvillCity_Harbour/scripts.pory"
-	walk_down_fast
+	walk_fast_down
 # 56 "data/maps/MauvillCity_Harbour/scripts.pory"
-	walk_down_fast
+	walk_fast_down
 # 57 "data/maps/MauvillCity_Harbour/scripts.pory"
-	walk_down_fast
+	walk_fast_down
 # 58 "data/maps/MauvillCity_Harbour/scripts.pory"
-	walk_right_fast
+	walk_fast_right
 # 59 "data/maps/MauvillCity_Harbour/scripts.pory"
-	walk_right_fast
+	walk_fast_right
 # 60 "data/maps/MauvillCity_Harbour/scripts.pory"
-	walk_right_fast
+	walk_fast_right
 # 61 "data/maps/MauvillCity_Harbour/scripts.pory"
-	walk_right_fast
+	walk_fast_right
 # 62 "data/maps/MauvillCity_Harbour/scripts.pory"
-	walk_right_fast
+	walk_fast_right
 # 63 "data/maps/MauvillCity_Harbour/scripts.pory"
-	walk_right_fast
+	walk_fast_right
 # 64 "data/maps/MauvillCity_Harbour/scripts.pory"
-	walk_right_fast
+	walk_fast_right
 # 65 "data/maps/MauvillCity_Harbour/scripts.pory"
-	walk_right_fast
+	walk_fast_right
 # 66 "data/maps/MauvillCity_Harbour/scripts.pory"
-	walk_right_fast
+	walk_fast_right
 	step_end
 
 # 69 "data/maps/MauvillCity_Harbour/scripts.pory"

@@ -22,7 +22,7 @@ script MahoganyHills_Gym_Interior_EventScript_Greeter {
     lockall
     faceplayer
     msgbox(format("Yo Champ in the making! This gym specialises in flying types. Rock, Electric and Ice moves are the best way to take them out."))
-    msgbox(format("Let me heal up your Pokemon before you go further."))
+    msgbox(format("Let me heal up your Pokémon before you go further."))
     special(HealPlayerParty)
     if(flag(FLAG_LEVEL_CAPS_ON) && !flag(FLAG_BADGE01_GET)) {
         msgbox(format("How about a battle for some fast levels?"), MSGBOX_YESNO)
@@ -84,7 +84,7 @@ text GymXpDump_Outro {
 }
 
 text MahoganyHillsGym_Leader_Intro {
-    format("Hi! Welcome to my gym.\lI am Jaiden a Master from the Winged City.\lI hope you're prepared to be blown away by my flying type Pokemon.")
+    format("Hi! Welcome to my gym.\lI am Jaiden a Master from the Winged City.\lI hope you're prepared to be blown away by my flying type Pokémon.")
 }
 
 text MahoganyHillsGym_Leader_Outro {
@@ -104,7 +104,7 @@ text MahoganyHillsGym_Ollie_Outro {
 }
 
 text MahoganyHillsGym_Ollie_Postbattle {
-    format("Now I need to learn about WATER Pokemon.")
+    format("Now I need to learn about WATER Pokémon.")
 }
 
 text MahoganyHillsGym_Skye_Intro {

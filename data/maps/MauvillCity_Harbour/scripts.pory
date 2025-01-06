@@ -52,18 +52,18 @@ movement Movement_PlayerOutWay_Harbour_ThugCity {
 }
 
 movement Movement_CommanderLeaves {
-    walk_down_fast
-    walk_down_fast
-    walk_down_fast
-    walk_right_fast
-    walk_right_fast
-    walk_right_fast
-    walk_right_fast
-    walk_right_fast
-    walk_right_fast
-    walk_right_fast
-    walk_right_fast
-    walk_right_fast
+    walk_fast_down
+    walk_fast_down
+    walk_fast_down
+    walk_fast_right
+    walk_fast_right
+    walk_fast_right
+    walk_fast_right
+    walk_fast_right
+    walk_fast_right
+    walk_fast_right
+    walk_fast_right
+    walk_fast_right
 }
 
 movement Movement_BossToPlayer {

@@ -1,0 +1,74 @@
+mapscripts HiddenGrotto_LostPlates_1_MapScripts {}
+
+
+script InsectPlate_Altar {
+    lockall
+    checkitem(ITEM_INSECT_PLATE, 1)
+    if(var(VAR_RESULT) == NO) {
+        msgbox(format("There is a plate with an ancient bug Pokémon inscribed on it"))
+        msgbox(format("Do you want to take it?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES) {
+            msgbox(format("As you reach for the plate a giant Pokémon jumps out."))
+            setflag(FLAG_CANT_CATCH_MON)
+            settotemboost(1, 0, 1, 1, 0, 1, 0, 0)
+            setwildbattle(SPECIES_GIGALITH, 40, ITEM_INSECT_PLATE)
+            dowildbattle
+            msgbox(format("Accelgor retreats into the cave."))
+            msgbox(format("You pick up the Stone Plate"))
+            giveitem(ITEM_INSECT_PLATE)
+            addvar(VAR_PLATES_FOUND, 1)
+        }
+    }
+    if(var(VAR_RESULT) == YES) {
+        msgbox(format("The alter is empty."))
+    }
+    releaseall
+}
+
+script StonePlate_Altar {
+    lockall
+    checkitem(ITEM_STONE_PLATE, 1)
+    if(var(VAR_RESULT) == NO) {
+        msgbox(format("There is a plate with an ancient rock Pokémon inscribed on it"))
+        msgbox(format("Do you want to take it?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES) {
+            msgbox(format("As you reach for the plate a giant Pokémon jumps out."))
+            setflag(FLAG_CANT_CATCH_MON)
+            settotemboost(1, 0, 1, 1, 0, 1, 0, 0)
+            setwildbattle(SPECIES_GIGALITH, 40, ITEM_STONE_PLATE)
+            dowildbattle
+            msgbox(format("Gigalith retreats into the cave."))
+            msgbox(format("You pick up the Insect Plate"))
+            giveitem(ITEM_STONE_PLATE)
+            addvar(VAR_PLATES_FOUND, 1)
+        }
+    }
+    if(var(VAR_RESULT) == YES) {
+        msgbox(format("The alter is empty."))
+    }
+    releaseall
+}
+
+script EarthPlate_Altar {
+    lockall
+    checkitem(ITEM_EARTH_PLATE, 1)
+    if(var(VAR_RESULT) == NO) {
+        msgbox(format("There is a plate with an ancient ground Pokémon inscribed on it"))
+        msgbox(format("Do you want to take it?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES) {
+            msgbox(format("As you reach for the plate a giant Pokémon jumps out."))
+            setflag(FLAG_CANT_CATCH_MON)
+            settotemboost(1, 0, 1, 1, 0, 1, 0, 0)
+            setwildbattle(SPECIES_HIPPOWDON, 40, ITEM_EARTH_PLATE)
+            dowildbattle
+            msgbox(format("Hippowdon retreats into the cave."))
+            msgbox(format("You pick up the Insect Plate"))
+            giveitem(ITEM_EARTH_PLATE)
+            addvar(VAR_PLATES_FOUND, 1)
+        }
+    }
+    if(var(VAR_RESULT) == YES) {
+        msgbox(format("The alter is empty."))
+    }
+    releaseall
+}

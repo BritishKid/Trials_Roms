@@ -221,7 +221,7 @@ MahoganyHills_Robert_Postbattle_Text_1:
 
 MahoganyHills_Robert_Postbattle_Text_2:
 # 59 "data/maps/MahoganyHills_GymEntrance/scripts.pory"
-	.string "You can use it on a Pokemon to unlock\n"
+	.string "You can use it on a Pokémon to unlock\n"
 	.string "their hidden ability.$"
 
 MahoganyHills1_GymEntrance_EventScript_GymSign_Text_0:

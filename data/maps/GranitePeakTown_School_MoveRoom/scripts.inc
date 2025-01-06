@@ -251,74 +251,74 @@ GranitePeak_School_MoveQuiz_Passsed::
 # 100 "data/maps/GranitePeakTown_School_MoveRoom/scripts.pory"
 	msgbox GranitePeak_School_MoveQuiz_Passsed_Text_2
 # 101 "data/maps/GranitePeakTown_School_MoveRoom/scripts.pory"
-	playfanfare MUS_OBTAIN_ITEM
-# 102 "data/maps/GranitePeakTown_School_MoveRoom/scripts.pory"
 	giveitem ITEM_TM27
-# 103 "data/maps/GranitePeakTown_School_MoveRoom/scripts.pory"
+# 102 "data/maps/GranitePeakTown_School_MoveRoom/scripts.pory"
 	setvar VAR_MOVE_ROOM_STUDENTS, 5
-# 105 "data/maps/GranitePeakTown_School_MoveRoom/scripts.pory"
+# 104 "data/maps/GranitePeakTown_School_MoveRoom/scripts.pory"
 	msgbox GranitePeak_School_MoveQuiz_Passsed_Text_3, MSGBOX_AUTOCLOSE
-# 106 "data/maps/GranitePeakTown_School_MoveRoom/scripts.pory"
+# 105 "data/maps/GranitePeakTown_School_MoveRoom/scripts.pory"
 	applymovement 5, Movement_Mat_Leaves
-# 107 "data/maps/GranitePeakTown_School_MoveRoom/scripts.pory"
+# 106 "data/maps/GranitePeakTown_School_MoveRoom/scripts.pory"
 	removeobject 5
-# 108 "data/maps/GranitePeakTown_School_MoveRoom/scripts.pory"
+# 107 "data/maps/GranitePeakTown_School_MoveRoom/scripts.pory"
 	setflag FLAG_HIDE_MOVES_ROOM
-# 109 "data/maps/GranitePeakTown_School_MoveRoom/scripts.pory"
+# 108 "data/maps/GranitePeakTown_School_MoveRoom/scripts.pory"
 	releaseall
 	return
 
 
 GranitePeak_School_Mat_Move_Room::
-# 113 "data/maps/GranitePeakTown_School_MoveRoom/scripts.pory"
+# 112 "data/maps/GranitePeakTown_School_MoveRoom/scripts.pory"
 	lockall
-# 114 "data/maps/GranitePeakTown_School_MoveRoom/scripts.pory"
+# 113 "data/maps/GranitePeakTown_School_MoveRoom/scripts.pory"
 	msgbox GranitePeak_School_Mat_Move_Room_Text_0
-# 115 "data/maps/GranitePeakTown_School_MoveRoom/scripts.pory"
+# 114 "data/maps/GranitePeakTown_School_MoveRoom/scripts.pory"
 	releaseall
 	return
 
 
 GranitePeak_MoveClass_Girl1::
-# 120 "data/maps/GranitePeakTown_School_MoveRoom/scripts.pory"
+# 119 "data/maps/GranitePeakTown_School_MoveRoom/scripts.pory"
 	trainerbattle_single TRAINER_MOVEGIRL1, MoveGirl1_Intro, MoveGirl1_Outro, MoveStudent_Beaten
-# 121 "data/maps/GranitePeakTown_School_MoveRoom/scripts.pory"
+# 120 "data/maps/GranitePeakTown_School_MoveRoom/scripts.pory"
 	msgbox PostBattle_MoveGirl1, MSGBOX_AUTOCLOSE
 	return
 
 
 GranitePeak_MoveClass_Girl2::
-# 126 "data/maps/GranitePeakTown_School_MoveRoom/scripts.pory"
+# 125 "data/maps/GranitePeakTown_School_MoveRoom/scripts.pory"
 	trainerbattle_single TRAINER_MOVEGIRL2, MoveGirl2_Intro, MoveGirl2_Outro, MoveStudent_Beaten
-# 127 "data/maps/GranitePeakTown_School_MoveRoom/scripts.pory"
+# 126 "data/maps/GranitePeakTown_School_MoveRoom/scripts.pory"
 	msgbox PostBattle_MoveGirl2, MSGBOX_AUTOCLOSE
 	return
 
 
 GranitePeak_MoveClass_Boy::
-# 132 "data/maps/GranitePeakTown_School_MoveRoom/scripts.pory"
+# 131 "data/maps/GranitePeakTown_School_MoveRoom/scripts.pory"
 	trainerbattle_single TRAINER_MOVEBOY, MoveBoy_Intro, MoveBoy_Outro, MoveStudent_Beaten
-# 133 "data/maps/GranitePeakTown_School_MoveRoom/scripts.pory"
+# 132 "data/maps/GranitePeakTown_School_MoveRoom/scripts.pory"
 	msgbox PostBattle_MoveBoy, MSGBOX_AUTOCLOSE
 	return
 
 
 MoveStudent_Beaten::
-# 137 "data/maps/GranitePeakTown_School_MoveRoom/scripts.pory"
+# 136 "data/maps/GranitePeakTown_School_MoveRoom/scripts.pory"
 	addvar VAR_MOVE_ROOM_STUDENTS, 1
-# 138 "data/maps/GranitePeakTown_School_MoveRoom/scripts.pory"
+# 137 "data/maps/GranitePeakTown_School_MoveRoom/scripts.pory"
 	call Increase_Trainers_Beaten
 	return
 
 
-# 142 "data/maps/GranitePeakTown_School_MoveRoom/scripts.pory"
+# 141 "data/maps/GranitePeakTown_School_MoveRoom/scripts.pory"
 Movement_Surprised_MoveClass:
-# 143 "data/maps/GranitePeakTown_School_MoveRoom/scripts.pory"
+# 142 "data/maps/GranitePeakTown_School_MoveRoom/scripts.pory"
 	emote_exclamation_mark
 	step_end
 
-# 146 "data/maps/GranitePeakTown_School_MoveRoom/scripts.pory"
+# 145 "data/maps/GranitePeakTown_School_MoveRoom/scripts.pory"
 Movement_MatAppearing_MoveClass:
+# 146 "data/maps/GranitePeakTown_School_MoveRoom/scripts.pory"
+	walk_fast_up
 # 147 "data/maps/GranitePeakTown_School_MoveRoom/scripts.pory"
 	walk_fast_up
 # 148 "data/maps/GranitePeakTown_School_MoveRoom/scripts.pory"
@@ -327,21 +327,19 @@ Movement_MatAppearing_MoveClass:
 	walk_fast_up
 # 150 "data/maps/GranitePeakTown_School_MoveRoom/scripts.pory"
 	walk_fast_up
-# 151 "data/maps/GranitePeakTown_School_MoveRoom/scripts.pory"
-	walk_fast_up
 	step_end
 
-# 154 "data/maps/GranitePeakTown_School_MoveRoom/scripts.pory"
+# 153 "data/maps/GranitePeakTown_School_MoveRoom/scripts.pory"
 Movement_Mat_Leaves:
-# 155 "data/maps/GranitePeakTown_School_MoveRoom/scripts.pory"
+# 154 "data/maps/GranitePeakTown_School_MoveRoom/scripts.pory"
 	jump_in_place_down
+# 155 "data/maps/GranitePeakTown_School_MoveRoom/scripts.pory"
+	walk_fast_down
 # 156 "data/maps/GranitePeakTown_School_MoveRoom/scripts.pory"
 	walk_fast_down
 # 157 "data/maps/GranitePeakTown_School_MoveRoom/scripts.pory"
 	walk_fast_down
 # 158 "data/maps/GranitePeakTown_School_MoveRoom/scripts.pory"
-	walk_fast_down
-# 159 "data/maps/GranitePeakTown_School_MoveRoom/scripts.pory"
 	walk_fast_down
 	step_end
 
@@ -488,53 +486,53 @@ GranitePeak_School_MoveQuiz_Passsed_Text_2:
 	.string "Take this TM as well$"
 
 GranitePeak_School_MoveQuiz_Passsed_Text_3:
-# 105 "data/maps/GranitePeakTown_School_MoveRoom/scripts.pory"
+# 104 "data/maps/GranitePeakTown_School_MoveRoom/scripts.pory"
 	.string "One more to go and then I can win the\n"
 	.string "tournament$"
 
 GranitePeak_School_Mat_Move_Room_Text_0:
-# 114 "data/maps/GranitePeakTown_School_MoveRoom/scripts.pory"
+# 113 "data/maps/GranitePeakTown_School_MoveRoom/scripts.pory"
 	.string "I've learnt so much to improve my team!$"
 
 MoveGirl1_Intro::
-# 163 "data/maps/GranitePeakTown_School_MoveRoom/scripts.pory"
+# 162 "data/maps/GranitePeakTown_School_MoveRoom/scripts.pory"
 	.string "The right move is very important! I\n"
 	.string "using them to stop the opponent from\l"
 	.string "hitting back hard$"
 
 MoveGirl1_Outro::
-# 167 "data/maps/GranitePeakTown_School_MoveRoom/scripts.pory"
+# 166 "data/maps/GranitePeakTown_School_MoveRoom/scripts.pory"
 	.string "I just going to switch out of this\n"
 	.string "class.$"
 
 PostBattle_MoveGirl1::
-# 171 "data/maps/GranitePeakTown_School_MoveRoom/scripts.pory"
+# 170 "data/maps/GranitePeakTown_School_MoveRoom/scripts.pory"
 	.string "Switch out moves allow you to keep\n"
 	.string "momentum going.$"
 
 MoveGirl2_Intro::
-# 175 "data/maps/GranitePeakTown_School_MoveRoom/scripts.pory"
+# 174 "data/maps/GranitePeakTown_School_MoveRoom/scripts.pory"
 	.string "I've worked out the perfect technique\n"
 	.string "to win every fight.$"
 
 MoveGirl2_Outro::
-# 179 "data/maps/GranitePeakTown_School_MoveRoom/scripts.pory"
+# 178 "data/maps/GranitePeakTown_School_MoveRoom/scripts.pory"
 	.string "I just need more Pokémon to fill it out.$"
 
 PostBattle_MoveGirl2::
-# 183 "data/maps/GranitePeakTown_School_MoveRoom/scripts.pory"
+# 182 "data/maps/GranitePeakTown_School_MoveRoom/scripts.pory"
 	.string "I'll become unstoppable I just need to\n"
 	.string "catch more Pokémon.$"
 
 MoveBoy_Intro::
-# 187 "data/maps/GranitePeakTown_School_MoveRoom/scripts.pory"
+# 186 "data/maps/GranitePeakTown_School_MoveRoom/scripts.pory"
 	.string "Can't win if you're asleep!$"
 
 MoveBoy_Outro::
-# 191 "data/maps/GranitePeakTown_School_MoveRoom/scripts.pory"
+# 190 "data/maps/GranitePeakTown_School_MoveRoom/scripts.pory"
 	.string "Right, Okay....$"
 
 PostBattle_MoveBoy::
-# 195 "data/maps/GranitePeakTown_School_MoveRoom/scripts.pory"
+# 194 "data/maps/GranitePeakTown_School_MoveRoom/scripts.pory"
 	.string "I need to find a mushroom Pokémon so I\n"
 	.string "can use Spore.$"

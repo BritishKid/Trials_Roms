@@ -66,7 +66,6 @@ script GranitePeakTown_School_AbilityQuiz_Passed {
     giveitem(ITEM_ABILITIES_PATCH, 1)
     // subquestmenu(QUEST_MENU_COMPLETE_QUEST, QUEST_POKEMON_LEAGUE, SUB_QUEST_SCHOOL_ABILITY_PATCH)
     msgbox(format("I think you should also have these!"))
-    playfanfare(MUS_OBTAIN_ITEM)
     giveitem(ITEM_ABILITY_CAPSULE, 2)
     msgbox(format("Good luck collecting the other patches"))
 }

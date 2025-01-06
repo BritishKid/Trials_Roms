@@ -1251,6 +1251,19 @@ static void Cmd_attackcanceler(void)
         return;
     }
 
+    //Check is echo ability active
+    if (gSpecialStatuses[gBattlerAttacker].parentalBondState == PARENTAL_BOND_OFF
+     && GetBattlerAbility(gBattlerAttacker) == ABILITY_ECHO
+     && !(gAbsentBattlerFlags & gBitTable[gBattlerTarget])
+     && gMovesInfo[gCurrentMove].soundMove == TRUE
+     && GetActiveGimmick(gBattlerAttacker) != GIMMICK_Z_MOVE)
+    {
+        gSpecialStatuses[gBattlerAttacker].parentalBondState = PARENTAL_BOND_1ST_HIT;
+        gMultiHitCounter = 2;
+        PREPARE_BYTE_NUMBER_BUFFER(gBattleScripting.multihitString, 1, 0)
+        return;
+    }
+
     // Check Protean activation.
     if (ProteanTryChangeType(gBattlerAttacker, attackerAbility, gCurrentMove, moveType))
     {

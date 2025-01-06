@@ -11,7 +11,7 @@ script Route1b_EventScript_FisherSign {
 script Route1b_EventScript_Fisherman {
     lockall
     faceplayer
-    msgbox(format("If only I had a Pokemon that knew SURF I'd be able to reach that island."))
+    msgbox(format("If only I had a Pokémon that knew SURF I'd be able to reach that island."))
     releaseall
 }
 
@@ -56,7 +56,7 @@ text PostBattle_Salt7 {
 }
 
 text Route1b_Camper_Intro {
-    format("My dad used to bring me here all the time, he said the hills had strong Pokemon.")
+    format("My dad used to bring me here all the time, he said the hills had strong Pokémon.")
 }
 
 text Route1b_Camper_Outro {
@@ -68,7 +68,7 @@ text Route1b_Camper_Postbattle {
 }
 
 text Route1b_Bugcatcher_Intro {
-    format("I love all the different bug Pokemon in Triver.")
+    format("I love all the different bug Pokémon in Triver.")
 }
 
 text Route1b_Bugcatcher_Outro {

@@ -5,10 +5,14 @@ mapscripts GranitePeakTown_MapScripts {
 }
 
 script GranitePeak_EventScript_TownSign {
+    lockall
     msgbox(format("Granite Peak:\nLook down on an ancient world."))
+    releaseall
 }
 
 script GranitePeak_EventScript_ForSaleSign {
+    lockall
     //todo if statement for when player buys
     msgbox(format("FOR SALE"))
+    releaseall
 }

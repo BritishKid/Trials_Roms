@@ -30,6 +30,13 @@
       "elevation": 0,
       "dest_map": "MAP_DARK_CAVE_B1F",
       "dest_warp_id": "3"
+    },
+    {
+      "x": 20,
+      "y": 2,
+      "elevation": 0,
+      "dest_map": "MAP_HIDDEN_GROTTO_LOST_PLATES_1",
+      "dest_warp_id": "1"
     }
   ],
   "coord_events": [

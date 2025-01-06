@@ -104,7 +104,7 @@ LittlerootTown_ProfessorBirchsLab_EventScript_BulbasaurSelection::
 # 48 "data/maps/Test/scripts.pory"
 	goto_if_unset FLAG_LEFTOVERS_ORPHANAGE, LittlerootTown_ProfessorBirchsLab_EventScript_BulbasaurSelection_2
 LittlerootTown_ProfessorBirchsLab_EventScript_BulbasaurSelection_1:
-# 64 "data/maps/Test/scripts.pory"
+# 65 "data/maps/Test/scripts.pory"
 	releaseall
 	return
 
@@ -121,7 +121,7 @@ LittlerootTown_ProfessorBirchsLab_EventScript_BulbasaurSelection_4:
 	compare VAR_RESULT, YES
 	goto_if_eq LittlerootTown_ProfessorBirchsLab_EventScript_BulbasaurSelection_8
 LittlerootTown_ProfessorBirchsLab_EventScript_BulbasaurSelection_7:
-# 62 "data/maps/Test/scripts.pory"
+# 63 "data/maps/Test/scripts.pory"
 	hidemonpic
 	goto LittlerootTown_ProfessorBirchsLab_EventScript_BulbasaurSelection_1
 
@@ -132,90 +132,92 @@ LittlerootTown_ProfessorBirchsLab_EventScript_BulbasaurSelection_5:
 
 LittlerootTown_ProfessorBirchsLab_EventScript_BulbasaurSelection_8:
 # 55 "data/maps/Test/scripts.pory"
-	givemon SPECIES_BULBASAUR, 5, ITEM_ORAN_BERRY
+	msgbox LittlerootTown_ProfessorBirchsLab_EventScript_BulbasaurSelection_Text_1, MSGBOX_YESNO
 # 56 "data/maps/Test/scripts.pory"
-	playfanfare MUS_OBTAIN_ITEM
+	givemon SPECIES_BULBASAUR, 5, ITEM_ORAN_BERRY, isShiny = VAR_RESULT
 # 57 "data/maps/Test/scripts.pory"
-	setflag FLAG_RECEIVED_BULBSAUR
+	playfanfare MUS_OBTAIN_ITEM
 # 58 "data/maps/Test/scripts.pory"
-	removeobject 7
+	setflag FLAG_RECEIVED_BULBSAUR
 # 59 "data/maps/Test/scripts.pory"
-	setflag FLAG_LEFTOVERS_ORPHANAGE
+	removeobject 7
 # 60 "data/maps/Test/scripts.pory"
+	setflag FLAG_LEFTOVERS_ORPHANAGE
+# 61 "data/maps/Test/scripts.pory"
 	setvar VAR_STARTER_SELECTION_STATE, 2
 	goto LittlerootTown_ProfessorBirchsLab_EventScript_BulbasaurSelection_7
 
 
 ProffesorLab_Proffesor::
-# 68 "data/maps/Test/scripts.pory"
-	lockall
 # 69 "data/maps/Test/scripts.pory"
-	faceplayer
+	lockall
 # 70 "data/maps/Test/scripts.pory"
+	faceplayer
+# 71 "data/maps/Test/scripts.pory"
 	compare VAR_STARTER_SELECTION_STATE, 1
 	goto_if_gt ProffesorLab_Proffesor_2
 ProffesorLab_Proffesor_1:
-# 73 "data/maps/Test/scripts.pory"
+# 74 "data/maps/Test/scripts.pory"
 	compare VAR_STARTER_SELECTION_STATE, 1
 	goto_if_eq ProffesorLab_Proffesor_5
 ProffesorLab_Proffesor_4:
-# 76 "data/maps/Test/scripts.pory"
+# 77 "data/maps/Test/scripts.pory"
 	compare VAR_STARTER_SELECTION_STATE, 0
 	goto_if_eq ProffesorLab_Proffesor_8
 ProffesorLab_Proffesor_7:
-# 80 "data/maps/Test/scripts.pory"
+# 81 "data/maps/Test/scripts.pory"
 	releaseall
 	return
 
 ProffesorLab_Proffesor_2:
-# 71 "data/maps/Test/scripts.pory"
+# 72 "data/maps/Test/scripts.pory"
 	msgbox ProffesorLab_Proffesor_Text_0
 	goto ProffesorLab_Proffesor_1
 
 ProffesorLab_Proffesor_5:
-# 74 "data/maps/Test/scripts.pory"
+# 75 "data/maps/Test/scripts.pory"
 	msgbox ProffesorLab_Proffesor_Text_1
 	goto ProffesorLab_Proffesor_4
 
 ProffesorLab_Proffesor_8:
-# 77 "data/maps/Test/scripts.pory"
-	msgbox ProffesorLab_Proffesor_Text_2
 # 78 "data/maps/Test/scripts.pory"
+	msgbox ProffesorLab_Proffesor_Text_2
+# 79 "data/maps/Test/scripts.pory"
 	setvar VAR_STARTER_SELECTION_STATE, 1
 	goto ProffesorLab_Proffesor_7
 
 
 ProffessorLab_Trigger_PlayerAttemptsToLeave::
-# 84 "data/maps/Test/scripts.pory"
-	lockall
 # 85 "data/maps/Test/scripts.pory"
-	msgbox ProffessorLab_Trigger_PlayerAttemptsToLeave_Text_0
+	lockall
 # 86 "data/maps/Test/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_ProffesorsLab_PlayerSurprised
+	msgbox ProffessorLab_Trigger_PlayerAttemptsToLeave_Text_0
 # 87 "data/maps/Test/scripts.pory"
-	waitmovement OBJ_EVENT_ID_PLAYER
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_ProffesorsLab_PlayerSurprised
 # 88 "data/maps/Test/scripts.pory"
-	msgbox ProffessorLab_Trigger_PlayerAttemptsToLeave_Text_1
-# 89 "data/maps/Test/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_proffesorsLab_StepUp
-# 90 "data/maps/Test/scripts.pory"
 	waitmovement OBJ_EVENT_ID_PLAYER
+# 89 "data/maps/Test/scripts.pory"
+	msgbox ProffessorLab_Trigger_PlayerAttemptsToLeave_Text_1
+# 90 "data/maps/Test/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_proffesorsLab_StepUp
 # 91 "data/maps/Test/scripts.pory"
+	waitmovement OBJ_EVENT_ID_PLAYER
+# 92 "data/maps/Test/scripts.pory"
 	releaseall
 	return
 
 
-# 94 "data/maps/Test/scripts.pory"
-Movement_ProffesorsLab_PlayerSurprised:
 # 95 "data/maps/Test/scripts.pory"
-	emote_exclamation_mark
+Movement_ProffesorsLab_PlayerSurprised:
 # 96 "data/maps/Test/scripts.pory"
+	emote_exclamation_mark
+# 97 "data/maps/Test/scripts.pory"
 	face_up
 	step_end
 
-# 99 "data/maps/Test/scripts.pory"
-Movement_proffesorsLab_StepUp:
 # 100 "data/maps/Test/scripts.pory"
+Movement_proffesorsLab_StepUp:
+# 101 "data/maps/Test/scripts.pory"
 	walk_up
 	step_end
 
@@ -235,24 +237,28 @@ LittlerootTown_ProfessorBirchsLab_EventScript_BulbasaurSelection_Text_0:
 # 50 "data/maps/Test/scripts.pory"
 	.string "Do you want to select Bulbasaur?$"
 
+LittlerootTown_ProfessorBirchsLab_EventScript_BulbasaurSelection_Text_1:
+# 55 "data/maps/Test/scripts.pory"
+	.string "Would you like the pokemon to be shiny?$"
+
 ProffesorLab_Proffesor_Text_0:
-# 71 "data/maps/Test/scripts.pory"
+# 72 "data/maps/Test/scripts.pory"
 	.string "Good luck on your adventure.$"
 
 ProffesorLab_Proffesor_Text_1:
-# 74 "data/maps/Test/scripts.pory"
+# 75 "data/maps/Test/scripts.pory"
 	.string "I caught them all myself, they are very\n"
 	.string "rare.$"
 
 ProffesorLab_Proffesor_Text_2:
-# 77 "data/maps/Test/scripts.pory"
-	.string "Please take a Pokemon$"
+# 78 "data/maps/Test/scripts.pory"
+	.string "Please take a Pokémon$"
 
 ProffessorLab_Trigger_PlayerAttemptsToLeave_Text_0:
-# 85 "data/maps/Test/scripts.pory"
+# 86 "data/maps/Test/scripts.pory"
 	.string "HEY WAIT!$"
 
 ProffessorLab_Trigger_PlayerAttemptsToLeave_Text_1:
-# 88 "data/maps/Test/scripts.pory"
-	.string "You will need Pokemon to continue your\n"
+# 89 "data/maps/Test/scripts.pory"
+	.string "You will need Pokémon to continue your\n"
 	.string "journey.$"

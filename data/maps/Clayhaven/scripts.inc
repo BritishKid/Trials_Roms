@@ -69,44 +69,44 @@ Clayhaven_BridgeMart_Employee::
 # 39 "data/maps/Clayhaven/scripts.pory"
 	giveitem ITEM_POTION, 3
 # 40 "data/maps/Clayhaven/scripts.pory"
-	playfanfare MUS_OBTAIN_ITEM
-# 41 "data/maps/Clayhaven/scripts.pory"
 	msgbox Clayhaven_BridgeMart_Employee_Text_5, MSGBOX_AUTOCLOSE
-# 42 "data/maps/Clayhaven/scripts.pory"
+# 41 "data/maps/Clayhaven/scripts.pory"
 	setvar VAR_CLAYHAVEN_STATE, 1
-# 43 "data/maps/Clayhaven/scripts.pory"
+# 42 "data/maps/Clayhaven/scripts.pory"
 	msgbox Clayhaven_BridgeMart_Employee_Text_6, MSGBOX_AUTOCLOSE
-# 44 "data/maps/Clayhaven/scripts.pory"
+# 43 "data/maps/Clayhaven/scripts.pory"
 	applymovement 2, Movement_Clayhaven_MartEmployeeLeaves
-# 45 "data/maps/Clayhaven/scripts.pory"
+# 44 "data/maps/Clayhaven/scripts.pory"
 	waitmovement 2
-# 46 "data/maps/Clayhaven/scripts.pory"
+# 45 "data/maps/Clayhaven/scripts.pory"
 	setflag FLAG_HIDE_CLAYHAVEN_MART_EMPLOYEE
-# 47 "data/maps/Clayhaven/scripts.pory"
+# 46 "data/maps/Clayhaven/scripts.pory"
 	removeobject 2
-# 48 "data/maps/Clayhaven/scripts.pory"
+# 47 "data/maps/Clayhaven/scripts.pory"
 	releaseall
 	return
 
 
 Clayhaven_EventScript_Hiker::
-# 52 "data/maps/Clayhaven/scripts.pory"
+# 51 "data/maps/Clayhaven/scripts.pory"
 	lockall
-# 53 "data/maps/Clayhaven/scripts.pory"
+# 52 "data/maps/Clayhaven/scripts.pory"
 	msgbox Clayhaven_EventScript_Hiker_Text_0
-# 54 "data/maps/Clayhaven/scripts.pory"
+# 53 "data/maps/Clayhaven/scripts.pory"
 	releaseall
 	return
 
 
-# 59 "data/maps/Clayhaven/scripts.pory"
+# 58 "data/maps/Clayhaven/scripts.pory"
 Movement_Clayhaven_Surprise:
-# 60 "data/maps/Clayhaven/scripts.pory"
+# 59 "data/maps/Clayhaven/scripts.pory"
 	emote_exclamation_mark
 	step_end
 
-# 63 "data/maps/Clayhaven/scripts.pory"
+# 62 "data/maps/Clayhaven/scripts.pory"
 Movement_Clayhaven_MartEmployeeComesDown:
+# 63 "data/maps/Clayhaven/scripts.pory"
+	walk_down
 # 64 "data/maps/Clayhaven/scripts.pory"
 	walk_down
 # 65 "data/maps/Clayhaven/scripts.pory"
@@ -115,12 +115,12 @@ Movement_Clayhaven_MartEmployeeComesDown:
 	walk_down
 # 67 "data/maps/Clayhaven/scripts.pory"
 	walk_down
-# 68 "data/maps/Clayhaven/scripts.pory"
-	walk_down
 	step_end
 
-# 71 "data/maps/Clayhaven/scripts.pory"
+# 70 "data/maps/Clayhaven/scripts.pory"
 Movement_Clayhaven_MartEmployeeLeaves:
+# 71 "data/maps/Clayhaven/scripts.pory"
+	walk_up
 # 72 "data/maps/Clayhaven/scripts.pory"
 	walk_up
 # 73 "data/maps/Clayhaven/scripts.pory"
@@ -132,8 +132,6 @@ Movement_Clayhaven_MartEmployeeLeaves:
 # 76 "data/maps/Clayhaven/scripts.pory"
 	walk_up
 # 77 "data/maps/Clayhaven/scripts.pory"
-	walk_up
-# 78 "data/maps/Clayhaven/scripts.pory"
 	walk_up
 	step_end
 
@@ -171,7 +169,7 @@ Clayhaven_BridgeMart_Employee_Text_2:
 
 Clayhaven_BridgeMart_Employee_Text_3:
 # 36 "data/maps/Clayhaven/scripts.pory"
-	.string "If you're looking for the Pokemon Gym\n"
+	.string "If you're looking for the Pokémon Gym\n"
 	.string "you can head south and head into\l"
 	.string "Mahogany Hills where Jaiden built it.$"
 
@@ -180,16 +178,16 @@ Clayhaven_BridgeMart_Employee_Text_4:
 	.string "Have these as a sign of good faith.$"
 
 Clayhaven_BridgeMart_Employee_Text_5:
-# 41 "data/maps/Clayhaven/scripts.pory"
+# 40 "data/maps/Clayhaven/scripts.pory"
 	.string "You were given 6 berry juices and 3\n"
 	.string "potions.$"
 
 Clayhaven_BridgeMart_Employee_Text_6:
-# 43 "data/maps/Clayhaven/scripts.pory"
+# 42 "data/maps/Clayhaven/scripts.pory"
 	.string "Good luck!$"
 
 Clayhaven_EventScript_Hiker_Text_0:
-# 53 "data/maps/Clayhaven/scripts.pory"
+# 52 "data/maps/Clayhaven/scripts.pory"
 	.string "If you're ever unsure where to go follow\n"
 	.string "the padded down grass. It shows a\l"
 	.string "journey of a hundred other trainers\l"

@@ -12045,7 +12045,7 @@
               {
                 "min_level": 5,
                 "max_level": 8,
-                "species": "SPECIES_UNOWN_E"
+                "species": "SPECIES_UNOWN_B"
               },
               {
                 "min_level": 5,
@@ -12327,7 +12327,7 @@
               {
                 "min_level": 5,
                 "max_level": 9,
-                "species": "SPECIES_MURKROW"
+                "species": "SPECIES_TINKATINK"
               }
             ]
           }
@@ -12391,7 +12391,7 @@
               {
                 "min_level": 6,
                 "max_level": 10,
-                "species": "SPECIES_STUFFUL"
+                "species": "SPECIES_TINKATINK"
               },
               {
                 "min_level": 10,
@@ -12591,6 +12591,71 @@
         {
           "map": "MAP_MAHOGANY_HILLS_6",
           "base_label": "gMahoganyHills_60",
+          "land_mons": {
+            "encounter_rate": 50,
+            "mons": [
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_GRUBBIN"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_YANMA"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_SLAKOTH"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_MURKROW"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_APPLIN"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_SCYTHER"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_PINSIR"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_HERACROSS"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_IMPIDIMP"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_APPLIN"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_IMPIDIMP"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_APPLIN"
+              }
+            ]
+          },
           "fishing_mons": {
             "encounter_rate": 100,
             "mons": [
@@ -14202,7 +14267,7 @@
               {
                 "min_level": 12,
                 "max_level": 20,
-                "species": "SPECIES_UNOWN"
+                "species": "SPECIES_UNOWN_G"
               },
               {
                 "min_level": 12,
@@ -14297,6 +14362,475 @@
                 "min_level": 12,
                 "max_level": 20,
                 "species": "SPECIES_PAWNIARD"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_WATERFALL_CAVE_SUB_BASEMENT",
+          "base_label": "gWaterfallCave_SubBasement0",
+          "land_mons": {
+            "encounter_rate": 10,
+            "mons": [
+              {
+                "min_level": 15,
+                "max_level": 15,
+                "species": "SPECIES_UNOWN"
+              },
+              {
+                "min_level": 15,
+                "max_level": 15,
+                "species": "SPECIES_UNOWN_C"
+              },
+              {
+                "min_level": 15,
+                "max_level": 15,
+                "species": "SPECIES_UNOWN_R"
+              },
+              {
+                "min_level": 15,
+                "max_level": 15,
+                "species": "SPECIES_UNOWN_E"
+              },
+              {
+                "min_level": 15,
+                "max_level": 15,
+                "species": "SPECIES_UNOWN_U"
+              },
+              {
+                "min_level": 15,
+                "max_level": 15,
+                "species": "SPECIES_UNOWN_S"
+              },
+              {
+                "min_level": 15,
+                "max_level": 15,
+                "species": "SPECIES_UNOWN_C"
+              },
+              {
+                "min_level": 15,
+                "max_level": 15,
+                "species": "SPECIES_UNOWN_R"
+              },
+              {
+                "min_level": 15,
+                "max_level": 15,
+                "species": "SPECIES_UNOWN_E"
+              },
+              {
+                "min_level": 15,
+                "max_level": 15,
+                "species": "SPECIES_UNOWN_U"
+              },
+              {
+                "min_level": 15,
+                "max_level": 15,
+                "species": "SPECIES_UNOWN_S"
+              },
+              {
+                "min_level": 15,
+                "max_level": 15,
+                "species": "SPECIES_UNOWN"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_MAHOGANY_HILLS_CAVE_SOUTH_GF",
+          "base_label": "gMahoganyHills_Cave_SouthGF0",
+          "land_mons": {
+            "encounter_rate": 10,
+            "mons": [
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_GOLBAT"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_PARASECT"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_LOUDRED"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_WIMPOD"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_HOUNDOUR"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_GLIGAR"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_TEDDIURSA"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_TEDDIURSA"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_PARAS"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_GOLBAT"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_GOLBAT"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_GOLBAT"
+              }
+            ]
+          },
+          "fishing_mons": {
+            "encounter_rate": 100,
+            "mons": [
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_MAGIKARP"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_BARBOACH"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_MAHOGANY_HILLS_CAVE_B1F",
+          "base_label": "gMahoganyHills_CaveB1F0",
+          "land_mons": {
+            "encounter_rate": 10,
+            "mons": [
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_GOLBAT"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_PARASECT"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_LOUDRED"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_WIMPOD"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_HOUNDOUR"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_GLIGAR"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_TEDDIURSA"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_TEDDIURSA"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_PARAS"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_GOLBAT"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_GOLBAT"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_GOLBAT"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_EMBER_DUNE_CAVE_GF",
+          "base_label": "gEmberDune_CaveGF0",
+          "land_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 15,
+                "max_level": 22,
+                "species": "SPECIES_DIGLETT"
+              },
+              {
+                "min_level": 15,
+                "max_level": 22,
+                "species": "SPECIES_SANDILE"
+              },
+              {
+                "min_level": 15,
+                "max_level": 22,
+                "species": "SPECIES_CUBONE"
+              },
+              {
+                "min_level": 15,
+                "max_level": 22,
+                "species": "SPECIES_CACNEA"
+              },
+              {
+                "min_level": 15,
+                "max_level": 22,
+                "species": "SPECIES_DIGLETT_ALOLAN"
+              },
+              {
+                "min_level": 15,
+                "max_level": 22,
+                "species": "SPECIES_BRONZOR"
+              },
+              {
+                "min_level": 15,
+                "max_level": 22,
+                "species": "SPECIES_SOLROCK"
+              },
+              {
+                "min_level": 15,
+                "max_level": 22,
+                "species": "SPECIES_RHYHORN"
+              },
+              {
+                "min_level": 15,
+                "max_level": 22,
+                "species": "SPECIES_YUNGOOS"
+              },
+              {
+                "min_level": 15,
+                "max_level": 22,
+                "species": "SPECIES_YUNGOOS"
+              },
+              {
+                "min_level": 15,
+                "max_level": 22,
+                "species": "SPECIES_SKORUPI"
+              },
+              {
+                "min_level": 15,
+                "max_level": 22,
+                "species": "SPECIES_SKORUPI"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_EMBER_DUNES_2",
+          "base_label": "gEmberDunes_20",
+          "land_mons": {
+            "encounter_rate": 25,
+            "mons": [
+              {
+                "min_level": 15,
+                "max_level": 22,
+                "species": "SPECIES_SANDILE"
+              },
+              {
+                "min_level": 15,
+                "max_level": 22,
+                "species": "SPECIES_GOLETT"
+              },
+              {
+                "min_level": 15,
+                "max_level": 22,
+                "species": "SPECIES_CACNEA"
+              },
+              {
+                "min_level": 15,
+                "max_level": 22,
+                "species": "SPECIES_RHYHORN"
+              },
+              {
+                "min_level": 15,
+                "max_level": 22,
+                "species": "SPECIES_BALTOY"
+              },
+              {
+                "min_level": 15,
+                "max_level": 22,
+                "species": "SPECIES_MARACTUS"
+              },
+              {
+                "min_level": 15,
+                "max_level": 22,
+                "species": "SPECIES_HELIOPTILE"
+              },
+              {
+                "min_level": 15,
+                "max_level": 22,
+                "species": "SPECIES_HIPPOPOTAS"
+              },
+              {
+                "min_level": 15,
+                "max_level": 22,
+                "species": "SPECIES_VULLABY"
+              },
+              {
+                "min_level": 15,
+                "max_level": 22,
+                "species": "SPECIES_BRAMBLIN"
+              },
+              {
+                "min_level": 15,
+                "max_level": 22,
+                "species": "SPECIES_VULLABY"
+              },
+              {
+                "min_level": 15,
+                "max_level": 22,
+                "species": "SPECIES_BRAMBLIN"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_EMBER_DUNE_CAVE_BF",
+          "base_label": "gEmberDune_Cave_BF0",
+          "land_mons": {
+            "encounter_rate": 25,
+            "mons": [
+              {
+                "min_level": 15,
+                "max_level": 22,
+                "species": "SPECIES_DIGLETT"
+              },
+              {
+                "min_level": 5,
+                "max_level": 22,
+                "species": "SPECIES_SANDILE"
+              },
+              {
+                "min_level": 15,
+                "max_level": 22,
+                "species": "SPECIES_CUBONE"
+              },
+              {
+                "min_level": 15,
+                "max_level": 22,
+                "species": "SPECIES_UNOWN_V"
+              },
+              {
+                "min_level": 15,
+                "max_level": 22,
+                "species": "SPECIES_DIGLETT_ALOLAN"
+              },
+              {
+                "min_level": 15,
+                "max_level": 22,
+                "species": "SPECIES_BRONZOR"
+              },
+              {
+                "min_level": 15,
+                "max_level": 22,
+                "species": "SPECIES_LUNATONE"
+              },
+              {
+                "min_level": 15,
+                "max_level": 22,
+                "species": "SPECIES_RHYHORN"
+              },
+              {
+                "min_level": 15,
+                "max_level": 22,
+                "species": "SPECIES_YUNGOOS"
+              },
+              {
+                "min_level": 15,
+                "max_level": 22,
+                "species": "SPECIES_YUNGOOS"
+              },
+              {
+                "min_level": 15,
+                "max_level": 22,
+                "species": "SPECIES_BRONZOR"
+              },
+              {
+                "min_level": 15,
+                "max_level": 22,
+                "species": "SPECIES_DIGLETT_ALOLAN"
               }
             ]
           }

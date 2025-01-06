@@ -19,11 +19,11 @@ Town2_EventScript_QuestStart_4:
 	compare VAR_TOWN_2_QUEST_STATE, 2
 	goto_if_eq Town2_EventScript_QuestStart_8
 Town2_EventScript_QuestStart_7:
-# 27 "data/maps/Clayhaven_House2/scripts.pory"
+# 26 "data/maps/Clayhaven_House2/scripts.pory"
 	compare VAR_TOWN_2_QUEST_STATE, 3
 	goto_if_eq Town2_EventScript_QuestStart_11
 Town2_EventScript_QuestStart_10:
-# 30 "data/maps/Clayhaven_House2/scripts.pory"
+# 29 "data/maps/Clayhaven_House2/scripts.pory"
 	releaseall
 	return
 
@@ -53,25 +53,23 @@ Town2_EventScript_QuestStart_8:
 # 22 "data/maps/Clayhaven_House2/scripts.pory"
 	giveitem ITEM_ELECTRIC_GEM
 # 23 "data/maps/Clayhaven_House2/scripts.pory"
-	playfanfare MUS_OBTAIN_ITEM
-# 24 "data/maps/Clayhaven_House2/scripts.pory"
 	setvar VAR_TOWN_2_QUEST_STATE, 3
 	goto Town2_EventScript_QuestStart_7
 
 Town2_EventScript_QuestStart_11:
-# 28 "data/maps/Clayhaven_House2/scripts.pory"
+# 27 "data/maps/Clayhaven_House2/scripts.pory"
 	msgbox Town2_EventScript_QuestStart_Text_4
 	goto Town2_EventScript_QuestStart_10
 
 
 Town2_House3_EventScript_Girl::
-# 34 "data/maps/Clayhaven_House2/scripts.pory"
+# 33 "data/maps/Clayhaven_House2/scripts.pory"
 	lockall
-# 35 "data/maps/Clayhaven_House2/scripts.pory"
+# 34 "data/maps/Clayhaven_House2/scripts.pory"
 	faceplayer
-# 36 "data/maps/Clayhaven_House2/scripts.pory"
+# 35 "data/maps/Clayhaven_House2/scripts.pory"
 	msgbox Town2_House3_EventScript_Girl_Text_0
-# 37 "data/maps/Clayhaven_House2/scripts.pory"
+# 36 "data/maps/Clayhaven_House2/scripts.pory"
 	releaseall
 	return
 
@@ -100,11 +98,11 @@ Town2_EventScript_QuestStart_Text_3:
 	.string "thank you, it might help$"
 
 Town2_EventScript_QuestStart_Text_4:
-# 28 "data/maps/Clayhaven_House2/scripts.pory"
+# 27 "data/maps/Clayhaven_House2/scripts.pory"
 	.string "She won't be allowed out alone anytime\n"
 	.string "soon.$"
 
 Town2_House3_EventScript_Girl_Text_0:
-# 36 "data/maps/Clayhaven_House2/scripts.pory"
+# 35 "data/maps/Clayhaven_House2/scripts.pory"
 	.string "I was trying to find a secret area with\n"
-	.string "rare Pokemon.$"
+	.string "rare Pokémon.$"

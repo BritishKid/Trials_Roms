@@ -40,7 +40,6 @@ script TreeckoSecretGrotto_Entrance {
         msgbox(format("Wow that was such a strong Pokémon! You are an incredible trainer, I want to get strong myself and be like you!"))
         msgbox(format("My mother gave me this, I think it would help you more than me"))
         giveitem(ITEM_TM54)
-        playfanfare(MUS_OBTAIN_ITEM)
         msgbox(format("That sceptile reminded me a lot about our old Treecko, but it was a different colour."))
         setvar(VAR_TREECKO_STATE, 2)
         // questmenu(QUEST_MENU_COMPLETE_QUEST, QUEST_FINDING_TREECKO)

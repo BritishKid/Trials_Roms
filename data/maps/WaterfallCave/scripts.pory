@@ -1,0 +1,206 @@
+mapscripts WaterfallCave_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION {
+        if(var(VAR_WATERFALL_CAVE_STATE) < 3) {
+            hideobjectat(4, MAP_WATERFALL_CAVE) //should hide master for early point
+        }
+        if(var(VAR_WATERFALL_CAVE_STATE) > 2) {
+            //when the cave is cleared set the blocker into middle and show the master
+            showobjectat(4, MAP_WATERFALL_CAVE)
+            setobjectxyperm(1, 4, 6)
+        }
+    }
+}
+
+script WaterfallCave_BlackBelt1 {
+    lockall
+    faceplayer
+    msgbox(format("Hey shrimp, you think you're tough enough to take us?"), MSGBOX_AUTOCLOSE)
+    releaseall
+}
+
+script WaterfallCave_BlackBelt2 {
+    lockall
+    faceplayer
+    msgbox(format("We've been training here with our master for years."), MSGBOX_AUTOCLOSE)
+    releaseall
+}
+
+script WatervallCave_Blackbelt3 {
+    lockall
+    faceplayer
+    if(var(VAR_WATERFALL_CAVE_STATE) == 0) {
+        msgbox(format("Welcome to our waterfall. We are training here to unlock the full potential of our Pokémon.\lDo you think you could take us on?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES){
+            msgbox(format("Very good, go prepare youself for battle."), MSGBOX_AUTOCLOSE)
+            //todo add quest in menu when added
+            applymovement(OBJ_EVENT_ID_PLAYER, Movement_WaterfallCave_PreparePlayer)
+            waitmovement(OBJ_EVENT_ID_PLAYER)
+            msgbox(format("Prepare yourself for the first challenge"), MSGBOX_AUTOCLOSE)
+            applymovement(2, Movement_WaterfallCave_BlackBelt1Prepare)
+            waitmovement(2)
+            trainerbattle_no_intro(TRAINER_WATERFALLCAVE_BLACKBELT1, WaterfallCave_Blackbelt1_Outro)
+            call(WaterfallCave_Blackbelt1_Beaten)
+        }
+        else {
+            msgbox(format("I thought you looked too weak."), MSGBOX_AUTOCLOSE)
+        }
+    if(var(VAR_WATERFALL_CAVE_STATE) == 1) {
+        call(WaterfallCave_MasterChallenge)
+    }
+    if(var(VAR_WATERFALL_CAVE_STATE) >= 2) {
+        msgbox(format("You're incredible, how did you manage to beat the master!"))
+    }
+    }
+    releaseall
+}
+
+script WaterfallCave_Blackbelt1_Beaten {
+    applymovement(2, Movement_WaterfallCave_Blackbelt1_Return)
+    waitmovement(2)
+    msgbox(format("Time for your second challenge."), MSGBOX_AUTOCLOSE)
+    applymovement(3, Movement_WaterfallCave_Blackbelt2_Prepare)
+    waitmovement(3)
+    trainerbattle_no_intro(TRAINER_WATERFALLCAVE_BLACKBELT2, WaterfallCave_Blackbelt1_Outro)
+    call(WaterfallCave_Blackbelt2_Beaten)
+}
+
+script WaterfallCave_Blackbelt2_Beaten {
+    applymovement(3, Movement_WaterfallCave_Blackbelt2_Return)
+    waitmovement(3)
+    msgbox(format("You're not as bad as we thought, but you still have to beat me if you want to see the master."))
+    applymovement(1, Movement_WaterfallCave_Blackbelt3_Prepare)
+    waitmovement(1)
+    trainerbattle_no_intro(TRAINER_WATERFALLCAVE_BLACKBELT3, WaterfallCave_Blackbelt1_Outro)
+    call(WatercallCave_Blackbelts_Beaten)
+}
+
+script WatercallCave_Blackbelts_Beaten {
+    msgbox(format("You managed to beat us all! We thought you might knock out a few of our Pokémon but that was outstanding.\pWe think you might have what it takes to take on our master. We train everyday in hopes to one day beat his challenge and get his reward but non of us have go close."), MSGBOX_AUTOCLOSE)
+    call(WaterfallCave_MasterChallenge)
+}
+
+script WaterfallCave_MasterChallenge {
+    msgbox(format("Would you like to challenge out Master?"), MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES) {
+        setvar(VAR_WATERFALL_CAVE_STATE, 1)
+        msgbox(format("Fantastic come with me."))
+        fadescreen(FADE_TO_BLACK)
+        warp(MAP_WATERFALL_CAVE_PRE_BREAK, 6, 4)
+    }
+    else {
+        msgbox(format("Try another time then."))
+        if(var(VAR_WATERFALL_CAVE_STATE) == 0) {
+            setvar(VAR_WATERFALL_CAVE_STATE, 1)
+            applymovement(1, Movement_WaterfallCave_Blackbelt3_Returns)
+            waitmovement(1)
+        }
+    }
+}
+
+script WaterfallCave_Expert_PostWin {
+    lockall
+    faceplayer
+    if(var(VAR_WATERFALL_CAVE_STATE) == 4) {
+        msgbox(format("I should fix the floor, loads of Unowns keeps flying out and causing us problems."))
+    }
+    if(var(VAR_WATERFALL_CAVE_STATE) == 3) {
+        msgbox(format("I kept that Tyrogue ready for you."))
+        call(GivePlayerTyrogueWaterfallCave)
+    }
+    if(var(VAR_WATERFALL_CAVE_STATE) == 2) {
+        setvar(VAR_WATERFALL_CAVE_STATE, 3)
+        msgbox(format("Wow our battle was so extreme is destroyed my dojo! Hopefully you didn't get hurt too much!"))
+        msgbox(format("But yes you deserve a reward! Here take this Pokémon"))
+        call(GivePlayerTyrogueWaterfallCave)
+        msgbox(format("We need to fix that floor though, the Unowns in that cave caused me problems getting out."))
+    }
+    releaseall
+}
+
+
+script GivePlayerTyrogueWaterfallCave {
+        givemon(SPECIES_TYROGUE, 5, ITEM_BLACK_BELT)
+        playfanfare(MUS_OBTAIN_ITEM)
+        if (var(VAR_RESULT) == MON_GIVEN_TO_PARTY) {
+            msgbox("Recieved Tyrogue")
+            call(NicknamePartyMon)
+        }
+        elif (var(VAR_RESULT) == MON_GIVEN_TO_PC) {
+            msgbox("Recieved Tyrogue")
+            call(NicknameBoxMon)
+        }
+        else {
+            hidemonpic
+            msgbox(format("You don't have enough space. Come back and you get it soon."))
+        }
+        setvar(VAR_WATERFALL_CAVE_STATE, 4)
+}
+
+//text 
+text WaterfallCave_Blackbelt1_Outro {
+    format("Just incredible.")
+}
+
+//movement
+
+movement Movement_WaterfallCave_PreparePlayer {
+    walk_down
+    walk_down
+    walk_left
+    walk_left
+    face_right
+}
+
+movement Movement_WaterfallCave_BlackBelt1Prepare {
+    walk_down
+    walk_right
+    walk_right
+    walk_right
+    walk_right
+    walk_down
+    walk_down
+    face_left
+}
+
+movement Movement_WaterfallCave_Blackbelt1_Return{
+    walk_up
+    walk_up
+    walk_left
+    walk_left
+    walk_left
+    walk_left
+    walk_up
+    face_down
+}
+
+movement Movement_WaterfallCave_Blackbelt2_Prepare {
+    walk_down
+    walk_down
+    walk_down
+    face_left
+}
+
+movement Movement_WaterfallCave_Blackbelt2_Return {
+    walk_up
+    walk_up
+    walk_up
+    face_down
+}
+
+movement Movement_WaterfallCave_Blackbelt3_Prepare {
+    walk_down
+    walk_right
+    walk_right
+    walk_down
+    walk_down
+    face_left
+}
+
+movement Movement_WaterfallCave_Blackbelt3_Returns {
+    walk_up
+    walk_up
+    walk_left
+    walk_left
+    walk_up
+    face_down
+}

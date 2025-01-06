@@ -144,7 +144,7 @@
     {
       "id": "LAYOUT_VERDANTURF_TOWN",
       "name": "VerdanturfTown_Layout",
-      "width": 20,
+      "width": 40,
       "height": 20,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Mauville",
@@ -1314,8 +1314,8 @@
     {
       "id": "LAYOUT_GRANITE_CAVE_1F",
       "name": "GraniteCave_1F_Layout",
-      "width": 42,
-      "height": 15,
+      "width": 35,
+      "height": 35,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/GraniteCave_1F/border.bin",
@@ -5010,6 +5010,186 @@
       "secondary_tileset": "gTileset_Facility",
       "border_filepath": "data/layouts/MauvillCity_Harbour/border.bin",
       "blockdata_filepath": "data/layouts/MauvillCity_Harbour/map.bin"
+    },
+    {
+      "id": "LAYOUT_FLOWER_GLADE_WALK",
+      "name": "FlowerGladeWalk_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_EverGrande",
+      "border_filepath": "data/layouts/FlowerGladeWalk/border.bin",
+      "blockdata_filepath": "data/layouts/FlowerGladeWalk/map.bin"
+    },
+    {
+      "id": "LAYOUT_WATERFALL_CAVE",
+      "name": "WaterfallCave_Layout",
+      "width": 13,
+      "height": 12,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/WaterfallCave/border.bin",
+      "blockdata_filepath": "data/layouts/WaterfallCave/map.bin"
+    },
+    {
+      "id": "LAYOUT_WATERFALL_CAVE_PRE_BREAK",
+      "name": "WaterfallCave_PreBreak_Layout",
+      "width": 13,
+      "height": 7,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/WaterfallCave_PreBreak/border.bin",
+      "blockdata_filepath": "data/layouts/WaterfallCave_PreBreak/map.bin"
+    },
+    {
+      "id": "LAYOUT_WATERFALL_CAVE_POST_BREAK",
+      "name": "WaterfallCave_PostBreak_Layout",
+      "width": 13,
+      "height": 7,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/WaterfallCave_PostBreak/border.bin",
+      "blockdata_filepath": "data/layouts/WaterfallCave_PostBreak/map.bin"
+    },
+    {
+      "id": "LAYOUT_WATERFALL_CAVE_SUB_BASEMENT",
+      "name": "WaterfallCave_SubBasement_Layout",
+      "width": 24,
+      "height": 22,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/WaterfallCave_SubBasement/border.bin",
+      "blockdata_filepath": "data/layouts/WaterfallCave_SubBasement/map.bin"
+    },
+    {
+      "id": "LAYOUT_MAHOGANY_HILLS_CAVE_B1F",
+      "name": "MahoganyHills_CaveB1F_Layout",
+      "width": 10,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/MahoganyHills_CaveB1F/border.bin",
+      "blockdata_filepath": "data/layouts/MahoganyHills_CaveB1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_MAHOGANY_HILLS_CAVE_SOUTH_GF",
+      "name": "MahoganyHills_Cave_SouthGF_Layout",
+      "width": 39,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/MahoganyHills_Cave_SouthGF/border.bin",
+      "blockdata_filepath": "data/layouts/MahoganyHills_Cave_SouthGF/map.bin"
+    },
+    {
+      "id": "LAYOUT_GRANITE_CAVE_GF",
+      "name": "GraniteCave_GF_Layout",
+      "width": 28,
+      "height": 12,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/GraniteCave_GF/border.bin",
+      "blockdata_filepath": "data/layouts/GraniteCave_GF/map.bin"
+    },
+    {
+      "id": "LAYOUT_LEGENDS_ALTAR",
+      "name": "LegendsAltar_Layout",
+      "width": 29,
+      "height": 29,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/LegendsAltar/border.bin",
+      "blockdata_filepath": "data/layouts/LegendsAltar/map.bin"
+    },
+    {
+      "id": "LAYOUT_HIDDEN_GROTTO_LOST_PLATES_1",
+      "name": "HiddenGrotto_LostPlates_1_Layout",
+      "width": 44,
+      "height": 40,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/HiddenGrotto_LostPlates_1/border.bin",
+      "blockdata_filepath": "data/layouts/HiddenGrotto_LostPlates_1/map.bin"
+    },
+    {
+      "id": "LAYOUT_EMBER_DUNES_1",
+      "name": "EmberDunes_1_Layout",
+      "width": 20,
+      "height": 18,
+      "primary_tileset": "gTileset_Desert",
+      "secondary_tileset": "gTileset_desert_village",
+      "border_filepath": "data/layouts/EmberDunes_1/border.bin",
+      "blockdata_filepath": "data/layouts/EmberDunes_1/map.bin"
+    },
+    {
+      "id": "LAYOUT_EMBER_DUNES_2",
+      "name": "EmberDunes_2_Layout",
+      "width": 50,
+      "height": 50,
+      "primary_tileset": "gTileset_Desert",
+      "secondary_tileset": "gTileset_desert_village",
+      "border_filepath": "data/layouts/EmberDunes_2/border.bin",
+      "blockdata_filepath": "data/layouts/EmberDunes_2/map.bin"
+    },
+    {
+      "id": "LAYOUT_EMBER_DUNES_ENTRY_HOUSE",
+      "name": "EmberDunes_EntryHouse_Layout",
+      "width": 19,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattlePyramid",
+      "border_filepath": "data/layouts/EmberDunes_EntryHouse/border.bin",
+      "blockdata_filepath": "data/layouts/EmberDunes_EntryHouse/map.bin"
+    },
+    {
+      "id": "LAYOUT_EMBER_DUNE_CAVE_GF",
+      "name": "EmberDune_CaveGF_Layout",
+      "width": 50,
+      "height": 20,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/EmberDune_CaveGF/border.bin",
+      "blockdata_filepath": "data/layouts/EmberDune_CaveGF/map.bin"
+    },
+    {
+      "id": "LAYOUT_EMBER_DUNE_CAVE_BF",
+      "name": "EmberDune_Cave_BF_Layout",
+      "width": 20,
+      "height": 25,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/EmberDune_Cave_BF/border.bin",
+      "blockdata_filepath": "data/layouts/EmberDune_Cave_BF/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE7",
+      "name": "Route7_Layout",
+      "width": 40,
+      "height": 45,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/Route7/border.bin",
+      "blockdata_filepath": "data/layouts/Route7/map.bin"
+    },
+    {
+      "id": "LAYOUT_EMBER_DUNES_3",
+      "name": "EmberDunes_3_Layout",
+      "width": 40,
+      "height": 39,
+      "primary_tileset": "gTileset_Desert",
+      "secondary_tileset": "gTileset_desert_pyramid_exterior",
+      "border_filepath": "data/layouts/EmberDunes_3/border.bin",
+      "blockdata_filepath": "data/layouts/EmberDunes_3/map.bin"
+    },
+    {
+      "id": "LAYOUT_EMBER_DUNES_EXIT_CAVE",
+      "name": "EmberDunes_ExitCave_Layout",
+      "width": 19,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattlePyramid",
+      "border_filepath": "data/layouts/EmberDunes_ExitCave/border.bin",
+      "blockdata_filepath": "data/layouts/EmberDunes_ExitCave/map.bin"
     }
   ]
 }

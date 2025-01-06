@@ -150,7 +150,6 @@ script BeachGym_Gym_Leader_PostbattleScript {
     setvar(VAR_RIVAL_STATE, 4)
     clearflag(FLAG_TURN_ON_INCREASED_XP)
     msgbox(format("Also please take this TM"))
-    playfanfare(MUS_OBTAIN_ITEM)
     giveitem(ITEM_TM03)
     releaseall
 }
@@ -165,7 +164,7 @@ script BeachGym_EventScript_Greeter {
     lockall
     faceplayer
     msgbox(format("Yo Champ in the making! This gym specialises in Water types. Grass and Electric moves are the best way to take them out."))
-    msgbox(format("Let me heal up your Pokemon before you go further."))
+    msgbox(format("Let me heal up your Pokémon before you go further."))
     special(HealPlayerParty)
     if(flag(FLAG_LEVEL_CAPS_ON) && !flag(FLAG_BADGE02_GET)) {
         msgbox(format("How about a battle for some fast levels?"), MSGBOX_YESNO)

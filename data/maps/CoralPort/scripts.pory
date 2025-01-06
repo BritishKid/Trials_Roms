@@ -169,7 +169,6 @@ script SandyShoreCity_Rival_PostbattleScript {
     setvar(VAR_RIVAL_STATE, 5)
     msgbox(format("The ferry has arrived so I'm going to jump across to the other islands. They have more gyms for me to collect"))
     msgbox(format("I bought you a ticket so you could do the same"))
-    playfanfare(MUS_OBTAIN_ITEM)
     giveitem(ITEM_SS_TICKET)
     setflag(FLAG_RECEIVED_SS_TICKET)
     applymovement(7, Movement_SandyBeach_RivalLeaves)

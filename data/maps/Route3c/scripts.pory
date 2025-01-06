@@ -1,19 +1,33 @@
 mapscripts Route3c_MapScripts {
     MAP_SCRIPT_ON_TRANSITION {
-        if(var(VAR_HIDDEN_MOUNTAIN_PASS) > 0) {
-            setmetatile(9, 8, METATILE_General_Grass, FALSE)
-            setmetatile(10, 8, METATILE_General_Grass, FALSE)
-            setmetatile(8, 8, METATILE_General_GrassRockWallRight, TRUE)
-            setmetatile(11, 8, METATILE_General_GrassRockCorner, TRUE)
-            setmetatile(9, 7, METATILE_General_CaveEntrance_Bottom, FALSE)
-            setmetatile(10, 7, METATILE_General_RockWall_GrassBase, TRUE)
-            setmetatile(8, 7, METATILE_General_RockCornerRight, TRUE)
-            setmetatile(11, 7, METATILE_General_RockCornerLeft, TRUE)
-            setmetatile(9, 6, METATILE_General_CaveEntrance_Top, TRUE)
-        }
+        //sort out charmander
+        call(Open_Charander_Cave)
     }
 }
 
+script Open_Charander_Cave {
+    //todo make this run properly with transition (or do we make this default)
+    setmetatile(9, 8, METATILE_General_Grass, FALSE)
+    setmetatile(10, 8, METATILE_General_Grass, FALSE)
+    setmetatile(8, 8, METATILE_General_GrassRockWallRight, TRUE)
+    setmetatile(11, 8, METATILE_General_GrassRockCorner, TRUE)
+    setmetatile(9, 7, METATILE_General_CaveEntrance_Bottom, FALSE)
+    setmetatile(10, 7, METATILE_General_RockWall_GrassBase, TRUE)
+    setmetatile(8, 7, METATILE_General_RockCornerRight, TRUE)
+    setmetatile(11, 7, METATILE_General_RockCornerLeft, TRUE)
+    setmetatile(9, 6, METATILE_General_CaveEntrance_Top, TRUE)
+    return
+}
+
+script Route3c_EventScript_CharmanderWarp {
+    //todo make this not needed
+    lockall
+    msgbox(format("The mountain seems to have been split, would you like to squeeze through?"), MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES) {
+        warp(MAP_HIDDEN_GROTTO_CHARMANDER, 7, 8)
+    }
+    releaseall
+}
 
 script Route3c_TrainerBattle_Hiker {
     trainerbattle_single(ROUTE3C_HIKER, Route3c_Hiker_Intro, Route3c_Hiker_Outro, Increase_Trainers_Beaten)
@@ -22,7 +36,7 @@ script Route3c_TrainerBattle_Hiker {
 }
 
 script Route3c_TrainerBattle_CamperSurprise {
-    trainerbattle_single(ROUTE3C_CAMPER Route3Hidden_Intro, Route3Hidden_Outro, Route3c_EventScript_CamperBeaten, Increase_Trainers_Beaten)
+    trainerbattle_single(ROUTE3C_CAMPER Route3Hidden_Intro, Route3Hidden_Outro, Route3c_EventScript_CamperBeaten)
     msgbox(Route3Hidden_PostBattle, MSGBOX_AUTOCLOSE)
     end
 }   
@@ -34,15 +48,16 @@ script Route3c_TrainerBattle_RichBoy {
 
 script Route3c_EventScript_CamperBeaten {
     setvar(VAR_HIDDEN_MOUNTAIN_PASS, 1)
+    call(Increase_Trainers_Beaten)
 }
 
 //text script
 text Route3c_Hiker_Intro {
-    format("I've caught some incredibly storng Pokemon up here.")
+    format("I've caught some incredibly storng Pokémon up here.")
 }
 
 text Route3c_Hiker_Outro {
-    format("I guess I need to keep exploring for stronger Pokemon.")
+    format("I guess I need to keep exploring for stronger Pokémon.")
 }
 
 text Route3c_Hiker_Postbattle {
@@ -54,7 +69,7 @@ text Route3Hidden_Intro {
 }
 
 text Route3Hidden_Outro {
-    format("That explosion blew the band right off my Graveller")
+    format("That explosion moved the very mountain.")
 }
 
 text Route3Hidden_PostBattle {

@@ -13,21 +13,21 @@ MauvilleCity_Pyukumuku_Clean_Up::
 # 9 "data/maps/MauvilleCity/scripts.pory"
 	lockall
 # 10 "data/maps/MauvilleCity/scripts.pory"
-	msgbox MauvilleCity_Pyukumuku_Clean_Up_Text_0
+	msgbox MauvilleCity_Pyukumuku_Clean_Up_Text_0, MSGBOX_AUTOCLOSE
 # 11 "data/maps/MauvilleCity/scripts.pory"
 	fadescreen FADE_TO_BLACK
 # 12 "data/maps/MauvilleCity/scripts.pory"
 	msgbox MauvilleCity_Pyukumuku_Clean_Up_Text_1
 # 13 "data/maps/MauvilleCity/scripts.pory"
-	fadescreen FADE_FROM_BLACK
-# 14 "data/maps/MauvilleCity/scripts.pory"
-	removeobject 3
-# 15 "data/maps/MauvilleCity/scripts.pory"
 	setflag FLAG_CLEANED_UP_PYUKUMUKU_4
+# 14 "data/maps/MauvilleCity/scripts.pory"
+	removeobject 2
+# 15 "data/maps/MauvilleCity/scripts.pory"
+	fadescreen FADE_FROM_BLACK
 # 16 "data/maps/MauvilleCity/scripts.pory"
 	giveitem ITEM_BIG_PEARL
 # 17 "data/maps/MauvilleCity/scripts.pory"
-	msgbox MauvilleCity_Pyukumuku_Clean_Up_Text_2
+	msgbox MauvilleCity_Pyukumuku_Clean_Up_Text_2, MSGBOX_AUTOCLOSE
 # 18 "data/maps/MauvilleCity/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
 # 19 "data/maps/MauvilleCity/scripts.pory"
@@ -49,7 +49,7 @@ Thug1PostScript::
 # 33 "data/maps/MauvilleCity/scripts.pory"
 	waitmovement 3
 # 34 "data/maps/MauvilleCity/scripts.pory"
-	msgbox Thug1PostScript_Text_0
+	msgbox Thug1PostScript_Text_0, MSGBOX_AUTOCLOSE
 # 35 "data/maps/MauvilleCity/scripts.pory"
 	applymovement 4, Movement_Thug2MovesLeft
 # 36 "data/maps/MauvilleCity/scripts.pory"
@@ -61,7 +61,7 @@ Thug1PostScript::
 
 ThugsBeaten_Left::
 # 42 "data/maps/MauvilleCity/scripts.pory"
-	msgbox ThugsBeaten_Left_Text_0
+	msgbox ThugsBeaten_Left_Text_0, MSGBOX_AUTOCLOSE
 # 43 "data/maps/MauvilleCity/scripts.pory"
 	applymovement 3, Movement_ThugsRunRight
 # 44 "data/maps/MauvilleCity/scripts.pory"
@@ -69,7 +69,7 @@ ThugsBeaten_Left::
 # 45 "data/maps/MauvilleCity/scripts.pory"
 	waitmovement 4
 # 46 "data/maps/MauvilleCity/scripts.pory"
-	setflag flag ( FLAG_HIDE_BLOCKER_THUGS )
+	setflag FLAG_HIDE_BLOCKER_THUGS
 # 47 "data/maps/MauvilleCity/scripts.pory"
 	removeobject 3
 # 48 "data/maps/MauvilleCity/scripts.pory"
@@ -89,7 +89,7 @@ Thug2PostScript::
 # 57 "data/maps/MauvilleCity/scripts.pory"
 	waitmovement 4
 # 58 "data/maps/MauvilleCity/scripts.pory"
-	msgbox Thug1PostScript_Text_0
+	msgbox Thug1PostScript_Text_0, MSGBOX_AUTOCLOSE
 # 59 "data/maps/MauvilleCity/scripts.pory"
 	applymovement 3, Movement_Thug1MovesRight
 # 60 "data/maps/MauvilleCity/scripts.pory"
@@ -101,7 +101,7 @@ Thug2PostScript::
 
 ThugsBeaten_Right::
 # 65 "data/maps/MauvilleCity/scripts.pory"
-	msgbox ThugsBeaten_Left_Text_0
+	msgbox ThugsBeaten_Left_Text_0, MSGBOX_AUTOCLOSE
 # 66 "data/maps/MauvilleCity/scripts.pory"
 	applymovement 3, Movement_ThugsRunRight
 # 67 "data/maps/MauvilleCity/scripts.pory"
@@ -109,7 +109,7 @@ ThugsBeaten_Right::
 # 68 "data/maps/MauvilleCity/scripts.pory"
 	waitmovement 4
 # 69 "data/maps/MauvilleCity/scripts.pory"
-	setflag flag ( FLAG_HIDE_BLOCKER_THUGS )
+	setflag FLAG_HIDE_BLOCKER_THUGS
 # 70 "data/maps/MauvilleCity/scripts.pory"
 	removeobject 3
 # 71 "data/maps/MauvilleCity/scripts.pory"
@@ -140,7 +140,7 @@ ThugCity_EventScript_PokemonCenterBlocker::
 	compare VAR_RESULT, YES
 	goto_if_eq ThugCity_EventScript_PokemonCenterBlocker_2
 # 90 "data/maps/MauvilleCity/scripts.pory"
-	msgbox ThugCity_EventScript_PokemonCenterBlocker_Text_2
+	msgbox ThugCity_EventScript_PokemonCenterBlocker_Text_2, MSGBOX_AUTOCLOSE
 ThugCity_EventScript_PokemonCenterBlocker_1:
 # 92 "data/maps/MauvilleCity/scripts.pory"
 	releaseall
@@ -152,7 +152,7 @@ ThugCity_EventScript_PokemonCenterBlocker_2:
 # 87 "data/maps/MauvilleCity/scripts.pory"
 	special HealPlayerParty
 # 88 "data/maps/MauvilleCity/scripts.pory"
-	msgbox ThugCity_EventScript_PokemonCenterBlocker_Text_1
+	msgbox ThugCity_EventScript_PokemonCenterBlocker_Text_1, MSGBOX_AUTOCLOSE
 	goto ThugCity_EventScript_PokemonCenterBlocker_1
 
 
@@ -253,7 +253,7 @@ MauvilleCity_Pyukumuku_Clean_Up_Text_1:
 MauvilleCity_Pyukumuku_Clean_Up_Text_2:
 # 17 "data/maps/MauvilleCity/scripts.pory"
 	.string "You found a big pearl under the\n"
-	.string "Pokemon.$"
+	.string "Pokémon.$"
 
 Thug1PostScript_Text_0:
 # 34 "data/maps/MauvilleCity/scripts.pory"
@@ -271,12 +271,12 @@ ThugCity_EventScript_DoorBlockers_Text_0:
 ThugCity_EventScript_PokemonCenterBlocker_Text_0:
 # 84 "data/maps/MauvilleCity/scripts.pory"
 	.string "Pokecenter is closed mate, but I can\n"
-	.string "fix up your Pokemon.\l"
+	.string "fix up your Pokémon.\l"
 	.string "It'll only cost 500!$"
 
 ThugCity_EventScript_PokemonCenterBlocker_Text_1:
 # 88 "data/maps/MauvilleCity/scripts.pory"
-	.string "Definately come again!$"
+	.string "Definetely come again!$"
 
 ThugCity_EventScript_PokemonCenterBlocker_Text_2:
 # 90 "data/maps/MauvilleCity/scripts.pory"

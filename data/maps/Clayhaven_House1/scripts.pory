@@ -14,6 +14,6 @@ script Clayhaven_House1_EventScript_CraftingMaster {
 script ClayHaven_House1_EventScript_Bookcase1 {
     lockall
     msgbox(format("You find a book about berry crafting."))//todo add more recipes
-    msgbox(format("You can use 2 Oran Berries or an Oran Berry with a Potion to create a Berry Juice that Pokemon will use in battle themself."))
+    msgbox(format("You can use 2 Oran Berries or an Oran Berry with a Potion to create a Berry Juice that Pokémon will use in battle themself."))
     releaseall
 }

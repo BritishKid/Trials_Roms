@@ -1197,3 +1197,39 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/DarkCave1F/scripts.inc"
 
 	.include "data/maps/MauvillCity_Harbour/scripts.inc"
+
+	.include "data/maps/FlowerGladeWalk/scripts.inc"
+
+	.include "data/maps/WaterfallCave/scripts.inc"
+
+	.include "data/maps/WaterfallCave_PreBreak/scripts.inc"
+
+	.include "data/maps/WaterfallCave_PostBreak/scripts.inc"
+
+	.include "data/maps/WaterfallCave_SubBasement/scripts.inc"
+
+	.include "data/maps/MahoganyHills_CaveB1F/scripts.inc"
+
+	.include "data/maps/MahoganyHills_Cave_SouthGF/scripts.inc"
+
+	.include "data/maps/GraniteCave_GF/scripts.inc"
+
+	.include "data/maps/LegendsAltar/scripts.inc"
+
+	.include "data/maps/HiddenGrotto_LostPlates_1/scripts.inc"
+
+	.include "data/maps/EmberDunes_1/scripts.inc"
+
+	.include "data/maps/EmberDunes_2/scripts.inc"
+
+	.include "data/maps/EmberDunes_EntryHouse/scripts.inc"
+
+	.include "data/maps/EmberDune_CaveGF/scripts.inc"
+
+	.include "data/maps/EmberDune_Cave_BF/scripts.inc"
+
+	.include "data/maps/Route7/scripts.inc"
+
+	.include "data/maps/EmberDunes_3/scripts.inc"
+
+	.include "data/maps/EmberDunes_ExitCave/scripts.inc"

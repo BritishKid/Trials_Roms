@@ -24,7 +24,7 @@ text PostBattle_Route2_Genki {
 }
 
 text Route3_HikerIntro {
-    format("I thought my Rock Pokemon would have made the gym easy, but it was still tough.")
+    format("I thought my Rock Pokémon would have made the gym easy, but it was still tough.")
 }
 
 text Route3_HikerOutro {

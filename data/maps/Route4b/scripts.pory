@@ -116,7 +116,7 @@ text Route4_Blackbelt_PostBattle {
 }
 
 text Route4_Viktor_Intro {
-    format("My Pokemon are being trained for the School Tournament.")
+    format("My Pokémon are being trained for the School Tournament.")
 }
 
 text Route4_Viktor_Outro {

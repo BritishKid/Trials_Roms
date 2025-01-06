@@ -5512,6 +5512,22 @@ u32 AbilityBattleEffects(u32 caseID, u32 battler, u32 ability, u32 special, u32 
                 effect++;
             }
             break;
+        case ABILITY_PURE_RAGE:
+            if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
+             && TARGET_TURN_DAMAGED
+             && IsBattlerAlive(battler)
+             && IS_MOVE_PHYSICAL(gCurrentMove)
+             && (CompareStat(battler, STAT_ATK, MAX_STAT_STAGE, CMP_LESS_THAN) // Don't activate if both attack and acc cannot be raised.
+               || CompareStat(battler, STAT_ACC, MIN_STAT_STAGE, CMP_GREATER_THAN)))
+            {
+                if (gMovesInfo[gCurrentMove].effect == EFFECT_HIT_ESCAPE && CanBattlerSwitch(gBattlerAttacker))
+                    gProtectStructs[battler].disableEjectPack = TRUE;  // Set flag for target
+
+                BattleScriptPushCursor();
+                gBattlescriptCurrInstr = BattleScript_PureRageActivates;
+                effect++;
+            }
+            break;
         case ABILITY_CURSED_BODY:
             if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
              && TARGET_TURN_DAMAGED
@@ -10337,7 +10353,16 @@ static inline void MulByTypeEffectiveness(uq4_12_t *modifier, u32 move, u32 move
         mod = UQ_4_12(1.0);
         if (recordAbilities)
             RecordAbilityBattle(battlerAtk, abilityAtk);
+    }    
+    else if ((moveType == TYPE_GROUND) && (GetBattlerType(battlerDef, 0, FALSE) == TYPE_FLYING || GetBattlerAbility(battlerDef) == ABILITY_LEVITATE)
+        && (GetBattlerAbility(battlerAtk) == ABILITY_BONE_ZONE))
+        // && modifier == UQ_4_12(0.0))
+    {
+        mod = UQ_4_12(1.0);
+        if (recordAbilities)
+            RecordAbilityBattle(battlerAtk, abilityAtk);
     }
+
 
     if (moveType == TYPE_PSYCHIC && defType == TYPE_DARK && gStatuses3[battlerDef] & STATUS3_MIRACLE_EYED && mod == UQ_4_12(0.0))
         mod = UQ_4_12(1.0);
@@ -10422,7 +10447,8 @@ static inline uq4_12_t CalcTypeEffectivenessMultiplierInternal(u32 move, u32 mov
         if (B_GLARE_GHOST < GEN_4 && move == MOVE_GLARE && IS_BATTLER_OF_TYPE(battlerDef, TYPE_GHOST))
             modifier = UQ_4_12(0.0);
     }
-    else if (moveType == TYPE_GROUND && !IsBattlerGrounded2(battlerDef, TRUE) && !(gMovesInfo[move].ignoreTypeIfFlyingAndUngrounded))
+    else if (moveType == TYPE_GROUND && !IsBattlerGrounded2(battlerDef, TRUE) && !(gMovesInfo[move].ignoreTypeIfFlyingAndUngrounded)
+    && !(GetBattlerAbility(battlerAtk) == ABILITY_BONE_ZONE)) //lets bone zone hit levitating pokemon
     {
         modifier = UQ_4_12(0.0);
         if (recordAbilities && defAbility == ABILITY_LEVITATE)
@@ -10459,6 +10485,18 @@ static inline uq4_12_t CalcTypeEffectivenessMultiplierInternal(u32 move, u32 mov
             gBattleCommunication[MISS_TYPE] = B_MSG_AVOIDED_DMG;
             RecordAbilityBattle(battlerDef, gBattleMons[battlerDef].ability);
         }
+    }
+    //Add custom abilities here
+    if ((moveType == TYPE_GROUND) 
+    && ((GetBattlerType(battlerDef, 0, FALSE) == TYPE_FLYING) 
+        || (GetBattlerType(battlerDef, 1, FALSE) == TYPE_FLYING) 
+        || (GetBattlerType(battlerDef, 2, FALSE) == TYPE_FLYING))
+        && (GetBattlerAbility(battlerAtk) == ABILITY_BONE_ZONE)
+        && modifier == UQ_4_12(0.0))
+    {
+        modifier = UQ_4_12(1.0);
+        if (recordAbilities)
+            RecordAbilityBattle(battlerAtk, ABILITY_BONE_ZONE);
     }
 
     // Signal for the trainer slide-in system.

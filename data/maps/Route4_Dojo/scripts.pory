@@ -1,4 +1,10 @@
-mapscripts Route4_Dojo_MapScripts {}
+mapscripts Route4_Dojo_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION {
+        if(var(VAR_DOJOS_CLEARED) > 0 && flag(FLAG_HIDE_ROUTE4_DOJONPCS_1)) {
+            clearflag(FLAG_HIDE_ROUTE4_DOJONPCS_1)
+        }
+    }
+}
 
 script Brawley_Route4_Dojo {
     lockall
@@ -7,13 +13,42 @@ script Brawley_Route4_Dojo {
     }
     if(var(VAR_ROUTE4_DOJO_STATE) == 0) {
     msgbox(format("Welcome to my new Dojo!\lThis will soon be full of martial artists from all over the world hunting down the ancient dojos in these mountains."))
-    msgbox(format("Enough talk, I can see you're a Pokemon Trainer so I know what you came for."))
+    msgbox(format("Enough talk, I can see you're a Pokémon Trainer so I know what you came for."))
     trainerbattle_no_intro(TRAINER_BRAWLY_1, Brawley_Route4_Outro)
     msgbox(format("Well done kid, you might have what it takes to become a black belt"))
     setvar(VAR_ROUTE4_DOJO_STATE, 1)
     }
     releaseall
 }
+
+script Route4_Dojo_EventScript_BlackBelt1 {
+    lockall
+    msgbox(format("Yo how is your training going?"))
+    //todo add something for base state??
+    if(var(VAR_ROUTE4_DOJO_STATE) == 1) {
+        msgbox(format("You beat Brawley, that battle was intense!\nYou should take this!"))
+        giveitem(ITEM_FOCUS_BAND)
+        msgbox(format("A Focus Band can help your Pokemon take a hit and keep on fighting."))
+        setvar(VAR_ROUTE4_DOJO_STATE, 2)
+    }
+    if(var(VAR_ROUTE4_DOJO_STATE) == 2 && var(VAR_DOJOS_CLEARED) > 0) {
+        msgbox(format("Word is you've found some hidden masters in these mountains and showed them your skill.\nYou're going to be a blackbelt in no time."))
+        giveitem(ITEM_EXPERT_BELT)
+        msgbox(format("Keep looking for more masters it'll be worth it!"))
+        setvar(VAR_ROUTE4_DOJO_STATE, 3)
+    }
+    // if(var(VAR_ROUTE4_DOJO_STATE) == 3) {//todo add reward when more dojos added
+        //todo add more rewards based on finding more dojos in mountain
+    // }
+    releaseall
+}
+
+script Route4_Dojo_EventScript_BlackBelt2 {
+    lockall
+    msgbox(format("I've heard that the strongest fighters can go to a special scroll to evolve a Pokemon into its ultimate form.\nI haven't met anyone do it themselves though."))
+    releaseall
+}
+//todo fill out based on all the growth of dojos
 
 //text
 text Brawley_Route4_Outro {

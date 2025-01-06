@@ -1,0 +1,23 @@
+mapscripts EmberDune_Cave_BF_MapScripts {}
+
+
+script GroundPlate_EventScript_EmberDuneCave {
+    lockall
+    msgbox(format("There is a carving of many ground Pokemon lumbering over a plate."))
+    checkitem(ITEM_EARTH_PLATE)
+    if(flag(FLAG_LEGENDS_PLATE_FOUND) && var(VAR_RESULT) == NO) {
+        msgbox(format("Do you want to put the LEGENDS PLATE into the slot?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES) {
+            setvar(VAR_0x8004, 1)
+            setvar(VAR_0x8005, 1)
+            setvar(VAR_0x8006, 8)
+            setvar(VAR_0x8007, 0)
+            special(ShakeCamera)
+            fadescreen(FADE_TO_BLACK)
+            warp(MAP_HIDDEN_GROTTO_LOST_PLATES_1, 36, 13) 
+        }
+    }
+    if((var(VAR_PLATEQUEST_STATE) == 2) && !flag(FLAG_LEGENDS_PLATE_FOUND)) {
+        msgbox(format("There seems to be a slot in the wall for something. Maybe it's that Key Alex spoke about."))
+    }
+}

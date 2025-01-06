@@ -15,7 +15,6 @@ script SwampTown_KingsRock_Boy {
     if(!flag(FLAG_RECEIVED_KINGS_ROCK)){
         msgbox(format("Here have this one"))
         giveitem(ITEM_KINGS_ROCK, 1)
-        playfanfare(MUS_OBTAIN_ITEM)
     }
     releaseall
 }
@@ -36,7 +35,7 @@ script HemlockVillage_EventScript_BlackBelt {
 script HemlockVillage_EventScript_Man {
     lockall
     faceplayer
-    msgbox(format("I'm sure I can hear Pokemon hiding in these trees."))
+    msgbox(format("I'm sure I can hear Pokémon hiding in these trees."))
     releaseall
 }
 

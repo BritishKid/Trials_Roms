@@ -246,7 +246,7 @@ Route4_Blackbelt_PostBattle::
 
 Route4_Viktor_Intro::
 # 118 "data/maps/Route4b/scripts.pory"
-	.string "My Pokemon are being trained for the\n"
+	.string "My Pokémon are being trained for the\n"
 	.string "School Tournament.$"
 
 Route4_Viktor_Outro::

@@ -4,6 +4,6 @@ mapscripts Jenovas_Hidden_Base_MapScripts {}
 script Jenovas_Hidden_Base_EventScript_Jenova {
     lockall
     faceplayer
-    msgbox(format("Hi I'm Jenova and you shouldn't be here yet."))
+    msgbox(format("Hi I'm Jenova my secret base is coming soon."))
     releaseall
 }

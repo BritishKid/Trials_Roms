@@ -11,6 +11,7 @@ script Clayhaven_House3_EventScript_Woman {
         msgbox(format("You're a trainer? Take this it could help in your journey."))
         giveitem(ITEM_TM52)
         setflag(FLAG_RECEIVED_TM_CUT)
+        msgbox(format("It's the TM for cut, a very useful move in battle."))
     }
     releaseall
 }

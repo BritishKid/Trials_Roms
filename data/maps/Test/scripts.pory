@@ -75,7 +75,7 @@ script ProffesorLab_Proffesor {
         msgbox(format("I caught them all myself, they are very rare."))
     }
     if(var(VAR_STARTER_SELECTION_STATE) == 0) {
-        msgbox(format("Please take a Pokemon"))
+        msgbox(format("Please take a Pokémon"))
         setvar(VAR_STARTER_SELECTION_STATE, 1)
     }
     releaseall
@@ -86,7 +86,7 @@ script ProffessorLab_Trigger_PlayerAttemptsToLeave {
     msgbox(format("HEY WAIT!"))
     applymovement(OBJ_EVENT_ID_PLAYER, Movement_ProffesorsLab_PlayerSurprised)
     waitmovement(OBJ_EVENT_ID_PLAYER)
-    msgbox(format("You will need Pokemon to continue your journey."))
+    msgbox(format("You will need Pokémon to continue your journey."))
     applymovement(OBJ_EVENT_ID_PLAYER, Movement_proffesorsLab_StepUp)
     waitmovement(OBJ_EVENT_ID_PLAYER)
     releaseall

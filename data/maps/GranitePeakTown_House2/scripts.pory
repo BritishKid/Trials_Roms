@@ -31,7 +31,6 @@ script GranitePeak_House2_EventScript_Woman {
     if(!flag(FLAG_RECIEVE_CHARCOAL)) {
         msgbox(format("Last time he came with a lot of these, here have one."))
         giveitem(ITEM_CHARCOAL)
-        playfanfare(MUS_OBTAIN_ITEM)
         setflag(FLAG_RECIEVE_CHARCOAL)
     }
     if(flag(FLAG_RECIEVE_CHARCOAL)) {

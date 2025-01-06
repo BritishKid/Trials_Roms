@@ -1,1 +1,23 @@
 mapscripts Obsidian_Thicket_2_MapScripts {}
+
+
+script Derek_ObsidianThicket2 {
+    trainerbattle_single(TRAINER_DEREK_OBSIDIAN_THICKET, Derek_ObisidianThicket_Intro, Derek_ObisidianThicket_Outro, Increase_Trainers_Beaten)
+    msgbox(PostBattle_Derek_ObisidianThicket, MSGBOX_AUTOCLOSE)
+}
+
+
+
+//text
+
+text Derek_ObisidianThicket_Intro {
+    format("Treecko lives somewhere in these trees")
+}
+
+text Derek_ObisidianThicket_Outro{
+    format("I've heard a ton of rumours")
+}
+
+text PostBattle_Derek_ObisidianThicket {
+    format("If you find them please tell me")
+}

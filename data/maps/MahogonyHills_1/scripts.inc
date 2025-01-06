@@ -129,63 +129,63 @@ MahoganyScript_EventScript_Monster_Beaten::
 # 69 "data/maps/MahogonyHills_1/scripts.pory"
 	giveitem ITEM_TM_THIEF, 1
 # 70 "data/maps/MahogonyHills_1/scripts.pory"
-	playfanfare MUS_OBTAIN_ITEM
-# 71 "data/maps/MahogonyHills_1/scripts.pory"
 	setvar VAR_TOWN_2_QUEST_STATE, 2
-# 72 "data/maps/MahogonyHills_1/scripts.pory"
+# 71 "data/maps/MahogonyHills_1/scripts.pory"
 	setflag FLAG_HIDE_MAHOGANY_HILLS_OBJECT
-# 73 "data/maps/MahogonyHills_1/scripts.pory"
+# 72 "data/maps/MahogonyHills_1/scripts.pory"
 	clearflag FLAG_HIDE_TOWN2_HOUSE3_GIRL
 	return
 
 
 MahogonyHills_1_Eventscript_BerrySkitty::
-# 77 "data/maps/MahogonyHills_1/scripts.pory"
+# 76 "data/maps/MahogonyHills_1/scripts.pory"
 	lockall
-# 78 "data/maps/MahogonyHills_1/scripts.pory"
+# 77 "data/maps/MahogonyHills_1/scripts.pory"
 	faceplayer
-# 79 "data/maps/MahogonyHills_1/scripts.pory"
+# 78 "data/maps/MahogonyHills_1/scripts.pory"
 	msgbox MahogonyHills_1_Eventscript_BerrySkitty_Text_0
-# 80 "data/maps/MahogonyHills_1/scripts.pory"
+# 79 "data/maps/MahogonyHills_1/scripts.pory"
 	compare VAR_BERRY_SKITTY_STATE, 0
 	goto_if_eq MahogonyHills_1_Eventscript_BerrySkitty_2
 MahogonyHills_1_Eventscript_BerrySkitty_1:
-# 87 "data/maps/MahogonyHills_1/scripts.pory"
+# 85 "data/maps/MahogonyHills_1/scripts.pory"
 	releaseall
 	return
 
 MahogonyHills_1_Eventscript_BerrySkitty_2:
-# 81 "data/maps/MahogonyHills_1/scripts.pory"
+# 80 "data/maps/MahogonyHills_1/scripts.pory"
 	msgbox MahogonyHills_1_Eventscript_BerrySkitty_Text_1
-# 82 "data/maps/MahogonyHills_1/scripts.pory"
-	playfanfare MUS_OBTAIN_ITEM
-# 83 "data/maps/MahogonyHills_1/scripts.pory"
+# 81 "data/maps/MahogonyHills_1/scripts.pory"
 	giveitem ITEM_COBA_BERRY, 5
-# 84 "data/maps/MahogonyHills_1/scripts.pory"
+# 82 "data/maps/MahogonyHills_1/scripts.pory"
 	setvar VAR_BERRY_SKITTY_STATE, 1
-# 85 "data/maps/MahogonyHills_1/scripts.pory"
+# 83 "data/maps/MahogonyHills_1/scripts.pory"
 	setflag FLAG_HIDE_SKITTY_MAHOGONY_HILLS
 	goto MahogonyHills_1_Eventscript_BerrySkitty_1
 
 
 Battle_MahoganyHills_Bao::
-# 91 "data/maps/MahogonyHills_1/scripts.pory"
+# 89 "data/maps/MahogonyHills_1/scripts.pory"
 	trainerbattle_single MAHOGANYHILLS1_BAO, MahoganyHills1_Bao_Intro, MahoganyHills1_Bao_Outro, Increase_Trainers_Beaten
-# 92 "data/maps/MahogonyHills_1/scripts.pory"
+# 90 "data/maps/MahogonyHills_1/scripts.pory"
 	msgbox MahoganyHills1_Bao_Postbattle, MSGBOX_AUTOCLOSE
 	return
 
 
 Battle_MahoganyHills_ToughChild::
-# 96 "data/maps/MahogonyHills_1/scripts.pory"
+# 94 "data/maps/MahogonyHills_1/scripts.pory"
 	trainerbattle_single MAHOGANYHILLS1_TOUGH_TRAINER, MahoganyHills1_ToughTrainer_Intro, MahoganyHills1_ToughTrainer_Outro, Increase_Trainers_Beaten
-# 97 "data/maps/MahogonyHills_1/scripts.pory"
+# 95 "data/maps/MahogonyHills_1/scripts.pory"
 	msgbox MahoganyHills1_ToughTrainer_Postbattle, MSGBOX_AUTOCLOSE
 	return
 
 
-# 126 "data/maps/MahogonyHills_1/scripts.pory"
+# 124 "data/maps/MahogonyHills_1/scripts.pory"
 Movement_Child_Being_Chased:
+# 125 "data/maps/MahogonyHills_1/scripts.pory"
+	walk_fast_up
+# 126 "data/maps/MahogonyHills_1/scripts.pory"
+	walk_fast_up
 # 127 "data/maps/MahogonyHills_1/scripts.pory"
 	walk_fast_up
 # 128 "data/maps/MahogonyHills_1/scripts.pory"
@@ -198,41 +198,37 @@ Movement_Child_Being_Chased:
 	walk_fast_up
 # 132 "data/maps/MahogonyHills_1/scripts.pory"
 	walk_fast_up
-# 133 "data/maps/MahogonyHills_1/scripts.pory"
-	walk_fast_up
-# 134 "data/maps/MahogonyHills_1/scripts.pory"
-	walk_fast_up
 	step_end
 
-# 137 "data/maps/MahogonyHills_1/scripts.pory"
+# 135 "data/maps/MahogonyHills_1/scripts.pory"
 Movement_Child_Hidding_Behind_Player_Right:
+# 136 "data/maps/MahogonyHills_1/scripts.pory"
+	walk_fast_left
+# 137 "data/maps/MahogonyHills_1/scripts.pory"
+	walk_fast_up
 # 138 "data/maps/MahogonyHills_1/scripts.pory"
-	walk_fast_left
+	walk_fast_up
 # 139 "data/maps/MahogonyHills_1/scripts.pory"
-	walk_fast_up
-# 140 "data/maps/MahogonyHills_1/scripts.pory"
-	walk_fast_up
-# 141 "data/maps/MahogonyHills_1/scripts.pory"
 	walk_fast_right
+# 140 "data/maps/MahogonyHills_1/scripts.pory"
+	face_down
+	step_end
+
 # 142 "data/maps/MahogonyHills_1/scripts.pory"
-	face_down
-	step_end
-
-# 144 "data/maps/MahogonyHills_1/scripts.pory"
 Movement_Child_Hidding_Behind_Player_Left:
+# 143 "data/maps/MahogonyHills_1/scripts.pory"
+	walk_fast_up
+# 144 "data/maps/MahogonyHills_1/scripts.pory"
+	walk_fast_up
 # 145 "data/maps/MahogonyHills_1/scripts.pory"
-	walk_fast_up
-# 146 "data/maps/MahogonyHills_1/scripts.pory"
-	walk_fast_up
-# 147 "data/maps/MahogonyHills_1/scripts.pory"
 	walk_fast_left
-# 148 "data/maps/MahogonyHills_1/scripts.pory"
+# 146 "data/maps/MahogonyHills_1/scripts.pory"
 	face_down
 	step_end
 
-# 151 "data/maps/MahogonyHills_1/scripts.pory"
+# 149 "data/maps/MahogonyHills_1/scripts.pory"
 Movement_MahoganyHills_ExclamationMark:
-# 152 "data/maps/MahogonyHills_1/scripts.pory"
+# 150 "data/maps/MahogonyHills_1/scripts.pory"
 	emote_exclamation_mark
 	step_end
 
@@ -271,38 +267,38 @@ MahoganyScript_EventScript_Monster_Beaten_Text_3:
 	.string "It's the TM for THIEF$"
 
 MahogonyHills_1_Eventscript_BerrySkitty_Text_0:
-# 79 "data/maps/MahogonyHills_1/scripts.pory"
+# 78 "data/maps/MahogonyHills_1/scripts.pory"
 	.string "SKITTY!$"
 
 MahogonyHills_1_Eventscript_BerrySkitty_Text_1:
-# 81 "data/maps/MahogonyHills_1/scripts.pory"
+# 80 "data/maps/MahogonyHills_1/scripts.pory"
 	.string "The SKITTY seems to hand over a COBA\n"
 	.string "BERRIES.$"
 
 MahoganyHills1_Bao_Intro::
-# 101 "data/maps/MahogonyHills_1/scripts.pory"
+# 99 "data/maps/MahogonyHills_1/scripts.pory"
 	.string "I keep trying but failing to beat the\n"
 	.string "gym.$"
 
 MahoganyHills1_Bao_Outro::
-# 105 "data/maps/MahogonyHills_1/scripts.pory"
+# 103 "data/maps/MahogonyHills_1/scripts.pory"
 	.string "You might have a chance.$"
 
 MahoganyHills1_Bao_Postbattle::
-# 109 "data/maps/MahogonyHills_1/scripts.pory"
+# 107 "data/maps/MahogonyHills_1/scripts.pory"
 	.string "I should probably catch some other\n"
-	.string "Pokemon.$"
+	.string "Pokémon.$"
 
 MahoganyHills1_ToughTrainer_Intro::
-# 113 "data/maps/MahogonyHills_1/scripts.pory"
+# 111 "data/maps/MahogonyHills_1/scripts.pory"
 	.string "I learnt so many battle strategies at\n"
 	.string "school.$"
 
 MahoganyHills1_ToughTrainer_Outro::
-# 117 "data/maps/MahogonyHills_1/scripts.pory"
+# 115 "data/maps/MahogonyHills_1/scripts.pory"
 	.string "Wow. You must be top of your class!$"
 
 MahoganyHills1_ToughTrainer_Postbattle::
-# 121 "data/maps/MahogonyHills_1/scripts.pory"
+# 119 "data/maps/MahogonyHills_1/scripts.pory"
 	.string "Wait you've never been to school in\n"
 	.string "GRANITE PEAK?$"

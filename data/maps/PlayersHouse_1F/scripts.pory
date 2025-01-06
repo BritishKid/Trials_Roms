@@ -22,7 +22,7 @@ script PlayersHouse_1F_Trigger_StartJourney {
     special(EnableNationalPokedex)
     msgbox(format("Oh wow! Your POKEMON is so much weaker than RIVALNAME, you probably need this to catch up."), MSGBOX_DEFAULT)
     giveitem(ITEM_EXP_SHARE)
-	// setflag(FLAG_RECEIVED_EXP_SHARE)
+	// setflag(FLAG_HIDE_EMBERDUNES_NURSE)
     msgbox(format("Anyway I'm going to get some juice!"), MSGBOX_DEFAULT)
     setflag(FLAG_RECEIVED_STARTER)
     setvar(VAR_RIVAL_STATE, 2)

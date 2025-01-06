@@ -47,19 +47,6 @@
       "trainer_sight_or_berry_tree_id": "ITEM_STAR_PIECE",
       "script": "Common_EventScript_FindItem",
       "flag": "FLAG_ITEM_CRYSTAL_COVE_STAR_PIECE"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_BRANDON",
-      "x": 15,
-      "y": 11,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "COMINGSOON",
-      "flag": "0"
     }
   ],
   "warp_events": [
@@ -82,6 +69,14 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "COMINGSOON"
+    },
+    {
+      "type": "hidden_item",
+      "x": 4,
+      "y": 6,
+      "elevation": 3,
+      "item": "ITEM_ULTRA_BALL",
+      "flag": "FLAG_HIDDEN_ITEM_CRYSTAL_COVE_ULTRA_BALL"
     }
   ]
 }

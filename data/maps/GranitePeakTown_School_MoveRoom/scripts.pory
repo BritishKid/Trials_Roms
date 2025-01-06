@@ -98,7 +98,6 @@ script GranitePeak_School_MoveQuiz_Passsed {
     // msgbox(format("Recieved Move Patch. This shows you've passed the class."))
     msgbox(format("Remember you need all patches to take part in the tournament."))
     msgbox(format("Take this TM as well"))
-    playfanfare(MUS_OBTAIN_ITEM)
     giveitem(ITEM_TM27)
     setvar(VAR_MOVE_ROOM_STUDENTS, 5)
     // subquestmenu(QUEST_MENU_COMPLETE_QUEST, QUEST_POKEMON_LEAGUE, SUB_QUEST_SCHOOL_MOVE_PATCH)

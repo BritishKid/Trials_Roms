@@ -54,7 +54,6 @@ script Route3_EventScript_FireStone_Grandson {
             msgbox(format("Okay we are good, thank you for that. I'll see you at the next one."))
             msgbox(format("Also please take this."))
             giveitem(ITEM_FIRE_STONE)
-            playfanfare(MUS_OBTAIN_ITEM)
             msgbox(format("It's the least I could do in return."))
             setflag(FLAG_FIRE_STONE_SOURCE)    
             if(flag(FLAG_LEAF_STONE_SOURCE) && flag(FLAG_WATER_STONE_SOURCE) && flag(FLAG_FIRE_STONE_SOURCE)){
@@ -119,7 +118,7 @@ text CamperDave_Postbattle {
 }
 
 text Rose_Intro {
-    format("My sister told she found rare Pokemon here.")
+    format("My sister told she found rare Pokémon here.")
 }
 
 text Rose_Outro {

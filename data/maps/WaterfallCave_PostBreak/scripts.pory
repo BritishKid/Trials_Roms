@@ -1,0 +1,10 @@
+mapscripts WaterfallCave_PostBreak_MapScripts {}
+
+script WaterfallCave_PostBreak_BackDown {
+    lock
+    msgbox(format("It leads back deeper into the cave, do you want to go down?"), MSGBOX_YESNO) 
+    if(var(VAR_RESULT) == YES) {
+        warp(MAP_WATERFALL_CAVE_SUB_BASEMENT, 15, 19)
+    }
+    release
+}

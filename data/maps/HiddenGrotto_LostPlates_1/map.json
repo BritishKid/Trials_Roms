@@ -1,0 +1,71 @@
+{
+  "id": "MAP_HIDDEN_GROTTO_LOST_PLATES_1",
+  "name": "HiddenGrotto_LostPlates_1",
+  "layout": "LAYOUT_HIDDEN_GROTTO_LOST_PLATES_1",
+  "music": "MUS_CAVE_OF_ORIGIN",
+  "region_map_section": "MAPSEC_NONE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_UNDERGROUND",
+  "allow_cycling": true,
+  "allow_escaping": true,
+  "allow_running": true,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": 0,
+  "object_events": [
+
+  ],
+  "warp_events": [
+    {
+      "x": 6,
+      "y": 13,
+      "elevation": 0,
+      "dest_map": "MAP_MAHOGANY_HILLS_CAVE",
+      "dest_warp_id": "2"
+    },
+    {
+      "x": 21,
+      "y": 13,
+      "elevation": 0,
+      "dest_map": "MAP_DARK_CAVE_B2F",
+      "dest_warp_id": "2"
+    },
+    {
+      "x": 36,
+      "y": 13,
+      "elevation": 0,
+      "dest_map": "MAP_EMBER_DUNE_CAVE_BF",
+      "dest_warp_id": "2"
+    }
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 6,
+      "y": 7,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "InsectPlate_Altar"
+    },
+    {
+      "type": "sign",
+      "x": 21,
+      "y": 7,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "StonePlate_Altar"
+    },
+    {
+      "type": "sign",
+      "x": 36,
+      "y": 7,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "StonePlate_Altar"
+    }
+  ]
+}

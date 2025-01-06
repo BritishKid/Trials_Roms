@@ -66,8 +66,9 @@ script GranitePeakSchool_Mat_TrophyCase {
     msgbox(format("Hi, I'm Mat and I'm going to be the very best!"))
     applymovement(1, Movement_GranitePeakSchool_MatExclamation)
     waitmovement(1)
-    msgbox(format("Oh you're a trainer. Let me show you how good the future school champion is!"))
-    trainerbattle_single(TRAINERSCHOOLHALL_MAT1, SchoolHall_Mat_Intro, SchoolHall_Mat_Outro, SchoolHall_Mat_Beaten)
+    msgbox(format("Oh you're a trainer. Let me show you how good the future school champion is!\pI won't hold back!"))
+    trainerbattle_no_intro(TRAINERSCHOOLHALL_MAT1, SchoolHall_Mat_Outro)
+    call(SchoolHall_Mat_Beaten)
 }
 
 script SchoolHall_Mat_Beaten {
@@ -300,10 +301,6 @@ movement Movement_GranitePeakSchool_MatMovesRooms {
 }
 
 //text
-
-text SchoolHall_Mat_Intro {
-    format("I won't hold back!")
-}
 
 text SchoolHall_Mat_Outro {
     format("Okay I guess I'm not ready yet.")

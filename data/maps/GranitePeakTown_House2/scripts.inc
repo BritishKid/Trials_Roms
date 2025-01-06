@@ -70,10 +70,10 @@ GranitePeak_House2_EventScript_Woman::
 # 31 "data/maps/GranitePeakTown_House2/scripts.pory"
 	goto_if_unset FLAG_RECIEVE_CHARCOAL, GranitePeak_House2_EventScript_Woman_2
 GranitePeak_House2_EventScript_Woman_1:
-# 37 "data/maps/GranitePeakTown_House2/scripts.pory"
+# 36 "data/maps/GranitePeakTown_House2/scripts.pory"
 	goto_if_set FLAG_RECIEVE_CHARCOAL, GranitePeak_House2_EventScript_Woman_5
 GranitePeak_House2_EventScript_Woman_4:
-# 40 "data/maps/GranitePeakTown_House2/scripts.pory"
+# 39 "data/maps/GranitePeakTown_House2/scripts.pory"
 	releaseall
 	return
 
@@ -83,13 +83,11 @@ GranitePeak_House2_EventScript_Woman_2:
 # 33 "data/maps/GranitePeakTown_House2/scripts.pory"
 	giveitem ITEM_CHARCOAL
 # 34 "data/maps/GranitePeakTown_House2/scripts.pory"
-	playfanfare MUS_OBTAIN_ITEM
-# 35 "data/maps/GranitePeakTown_House2/scripts.pory"
 	setflag FLAG_RECIEVE_CHARCOAL
 	goto GranitePeak_House2_EventScript_Woman_1
 
 GranitePeak_House2_EventScript_Woman_5:
-# 38 "data/maps/GranitePeakTown_House2/scripts.pory"
+# 37 "data/maps/GranitePeakTown_House2/scripts.pory"
 	msgbox GranitePeak_House2_EventScript_Woman_Text_2
 	goto GranitePeak_House2_EventScript_Woman_4
 
@@ -144,6 +142,6 @@ GranitePeak_House2_EventScript_Woman_Text_1:
 	.string "here have one.$"
 
 GranitePeak_House2_EventScript_Woman_Text_2:
-# 38 "data/maps/GranitePeakTown_House2/scripts.pory"
+# 37 "data/maps/GranitePeakTown_House2/scripts.pory"
 	.string "If you every find him be prepared for a\n"
 	.string "tough fight.$"
