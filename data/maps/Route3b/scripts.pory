@@ -59,6 +59,7 @@ script Route3_EventScript_FireStone_Grandson {
             if(flag(FLAG_LEAF_STONE_SOURCE) && flag(FLAG_WATER_STONE_SOURCE) && flag(FLAG_FIRE_STONE_SOURCE)){
                 msgbox(format("That's the leaf, fire and water stones sorted. I should return these back to my Grandad"))
                 setvar(VAR_EVOLUTION_STONE_HUNTING, 2)
+                clearflag(FLAG_HIDE_GRANDSON_STONE_CORAL_PORT)
             }
             // subquestmenu(QUEST_MENU_COMPLETE_QUEST, QUEST_POKEMON_LEAGUE, SUB_QUEST_FIRE_STONE)
             applymovement(7, Movement_GrandsonLeaves_FireStone)

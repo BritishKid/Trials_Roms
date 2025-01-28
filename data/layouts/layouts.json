@@ -5330,6 +5330,16 @@
       "secondary_tileset": "gTileset_GenericBuilding",
       "border_filepath": "data/layouts/Quarry_ForemanHouse/border.bin",
       "blockdata_filepath": "data/layouts/Quarry_ForemanHouse/map.bin"
+    },
+    {
+      "id": "LAYOUT_GRANITE_PEAK_PEAK1",
+      "name": "GranitePeak_Peak1_Layout",
+      "width": 35,
+      "height": 25,
+      "primary_tileset": "gTileset_General_Snow",
+      "secondary_tileset": "gTileset_EverGrande",
+      "border_filepath": "data/layouts/GranitePeak_Peak1/border.bin",
+      "blockdata_filepath": "data/layouts/GranitePeak_Peak1/map.bin"
     }
   ]
 }

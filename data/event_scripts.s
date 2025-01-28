@@ -1261,3 +1261,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/Quarry_WorkerHousing/scripts.inc"
 
 	.include "data/maps/Quarry_ForemanHouse/scripts.inc"
+
+	.include "data/maps/GranitePeak_Peak1/scripts.inc"

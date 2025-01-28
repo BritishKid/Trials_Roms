@@ -105,6 +105,18 @@ script CoralPort_EventScript_OldMan_Market  {
     releaseall
 }
 
+script CoralPort_EventScript_Grandson {
+    if(var(VAR_EVOLUTION_STONE_HUNTING) == 2) {
+        msgbox(format("Hey thanks for all that help I think you should have this for all your good work."))
+        giveitem(ITEM_TM_LIGHT_SCREEN)
+        giveitem(ITEM_TM_REFLECT)
+        msgbox(format("It's the TMs for light screen and reflect. They should help you with whats coming next."))
+        msgbox(format("I'm heading back out to find the thunder and ice stone sources so I could do with your help again!"))
+        setvar(VAR_EVOLUTION_STONE_HUNTING, 3)
+        setflag(FLAG_HIDE_GRANDSON_STONE_CORAL_PORT)
+    }
+}
+
 script CoralPort_EventScript_Woman_Market {
     //marketshop selling something   
     lockall

@@ -1045,7 +1045,7 @@
 #define FLAG_HIDE_ROUTE_120_KECLEON_5                               0x3DC
 #define FLAG_HIDE_ROUTE_119_KECLEON_1                               0x3DD
 #define FLAG_HIDE_ROUTE_119_KECLEON_2                               0x3DE
-#define FLAG_HIDE_ROUTE_101_BOY                                     0x3DF
+#define FLAG_HIDE_GRANDSON_STONE_CORAL_PORT                                     0x3DF
 #define FLAG_HIDE_WEATHER_INSTITUTE_2F_AQUA_GRUNT_M                 0x3E0
 #define FLAG_HIDE_LILYCOVE_POKEMON_CENTER_CONTEST_LADY_MON          0x3E1
 #define FLAG_HIDE_MT_CHIMNEY_LAVA_COOKIE_LADY                       0x3E2
@@ -1316,8 +1316,8 @@
 #define FLAG_UNUSED_0x4E8                                           0x4E8 // Unused Flag
 #define FLAG_UNUSED_0x4E9                                           0x4E9 // Unused Flag
 #define FLAG_UNUSED_0x4EA                                           0x4EA // Unused Flag
-#define FLAG_UNUSED_0x4EB                                           0x4EB // Unused Flag
-#define FLAG_UNUSED_0x4EC                                           0x4EC // Unused Flag
+#define FLAG_THUNDER_STONE_SOURCE                                           0x4EB // Unused Flag
+#define FLAG_ICE_STONE_SOURCE                                           0x4EC // Unused Flag
 #define FLAG_LEAF_STONE_SOURCE                                           0x4ED // Unused Flag
 #define FLAG_WATER_STONE_SOURCE                                           0x4EE // Unused Flag
 #define FLAG_FIRE_STONE_SOURCE                                           0x4EF // Unused Flag

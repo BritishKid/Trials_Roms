@@ -3,6 +3,6 @@ mapscripts GraniteCave_1F_MapScripts {}
 
 script GraniteCave_1F_EventScript_Hiker {
     lockall
-    msgbox(format("Be careful heading up the summit is cold!"))
+    msgbox(format("Be careful heading up, the summit is cold!"))
     releaseall
 }

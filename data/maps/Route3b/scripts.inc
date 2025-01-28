@@ -60,7 +60,7 @@ Route3_EventScript_FireStone_Grandson::
 # 39 "data/maps/Route3b/scripts.pory"
 	goto_if_unset FLAG_FIRE_STONE_SOURCE, Route3_EventScript_FireStone_Grandson_3
 Route3_EventScript_FireStone_Grandson_1:
-# 73 "data/maps/Route3b/scripts.pory"
+# 74 "data/maps/Route3b/scripts.pory"
 	release
 	return
 
@@ -77,7 +77,7 @@ Route3_EventScript_FireStone_Grandson_2:
 	compare VAR_RESULT, YES
 	goto_if_eq Route3_EventScript_FireStone_Grandson_7
 Route3_EventScript_FireStone_Grandson_6:
-# 69 "data/maps/Route3b/scripts.pory"
+# 70 "data/maps/Route3b/scripts.pory"
 	compare VAR_RESULT, NO
 	goto_if_eq Route3_EventScript_FireStone_Grandson_9
 	goto Route3_EventScript_FireStone_Grandson_1
@@ -120,18 +120,18 @@ Route3_EventScript_FireStone_Grandson_7:
 # 59 "data/maps/Route3b/scripts.pory"
 	goto_if_set FLAG_LEAF_STONE_SOURCE, Route3_EventScript_FireStone_Grandson_14
 Route3_EventScript_FireStone_Grandson_11:
-# 64 "data/maps/Route3b/scripts.pory"
-	applymovement 7, Movement_GrandsonLeaves_FireStone
 # 65 "data/maps/Route3b/scripts.pory"
-	waitmovement 7
+	applymovement 7, Movement_GrandsonLeaves_FireStone
 # 66 "data/maps/Route3b/scripts.pory"
-	removeobject 7
+	waitmovement 7
 # 67 "data/maps/Route3b/scripts.pory"
+	removeobject 7
+# 68 "data/maps/Route3b/scripts.pory"
 	clearflag FLAG_CANT_CATCH_MON
 	goto Route3_EventScript_FireStone_Grandson_6
 
 Route3_EventScript_FireStone_Grandson_9:
-# 70 "data/maps/Route3b/scripts.pory"
+# 71 "data/maps/Route3b/scripts.pory"
 	msgbox Route3_EventScript_FireStone_Grandson_Text_11
 	goto Route3_EventScript_FireStone_Grandson_1
 
@@ -140,6 +140,8 @@ Route3_EventScript_FireStone_Grandson_12:
 	msgbox Route3_EventScript_FireStone_Grandson_Text_10
 # 61 "data/maps/Route3b/scripts.pory"
 	setvar VAR_EVOLUTION_STONE_HUNTING, 2
+# 62 "data/maps/Route3b/scripts.pory"
+	clearflag FLAG_HIDE_GRANDSON_STONE_CORAL_PORT
 	goto Route3_EventScript_FireStone_Grandson_11
 
 Route3_EventScript_FireStone_Grandson_13:
@@ -154,17 +156,15 @@ Route3_EventScript_FireStone_Grandson_14:
 
 
 StartFireStoneBattle::
-# 77 "data/maps/Route3b/scripts.pory"
-	setflag FLAG_CANT_CATCH_MON
 # 78 "data/maps/Route3b/scripts.pory"
+	setflag FLAG_CANT_CATCH_MON
+# 79 "data/maps/Route3b/scripts.pory"
 	dowildbattle
 	return
 
 
-# 145 "data/maps/Route3b/scripts.pory"
-Movement_GrandsonLeaves_FireStone:
 # 146 "data/maps/Route3b/scripts.pory"
-	walk_up
+Movement_GrandsonLeaves_FireStone:
 # 147 "data/maps/Route3b/scripts.pory"
 	walk_up
 # 148 "data/maps/Route3b/scripts.pory"
@@ -178,6 +178,8 @@ Movement_GrandsonLeaves_FireStone:
 # 152 "data/maps/Route3b/scripts.pory"
 	walk_up
 # 153 "data/maps/Route3b/scripts.pory"
+	walk_up
+# 154 "data/maps/Route3b/scripts.pory"
 	walk_up
 	step_end
 
@@ -243,78 +245,78 @@ Route3_EventScript_FireStone_Grandson_Text_10:
 	.string "my Grandad$"
 
 Route3_EventScript_FireStone_Grandson_Text_11:
-# 70 "data/maps/Route3b/scripts.pory"
+# 71 "data/maps/Route3b/scripts.pory"
 	.string "Well go prepare I don't think I can do\n"
 	.string "this alone.$"
 
 LassAlex_Intro::
-# 84 "data/maps/Route3b/scripts.pory"
+# 85 "data/maps/Route3b/scripts.pory"
 	.string "Hey there! I'm Lass Alex, braving the\n"
 	.string "heights for a mountainous Pokémon\l"
 	.string "battle. Ready to take on the challenge?$"
 
 LassAlex_Outro::
-# 88 "data/maps/Route3b/scripts.pory"
+# 89 "data/maps/Route3b/scripts.pory"
 	.string "Wow, you really conquered the summit of\n"
 	.string "this battle! Your skills shine like the\l"
 	.string "mountain peak. Keep that determination\l"
 	.string "on your journey!$"
 
 LassAlex_PostBattle::
-# 92 "data/maps/Route3b/scripts.pory"
+# 93 "data/maps/Route3b/scripts.pory"
 	.string "Fantastic battle! If you ever want to\n"
 	.string "climb to new heights in Pokémon battles\l"
 	.string "or just chat, find me along your\l"
 	.string "mountainous journey.$"
 
 FishermanNeet_Intro::
-# 96 "data/maps/Route3b/scripts.pory"
+# 97 "data/maps/Route3b/scripts.pory"
 	.string "I'm going to go and catch a Totodile.$"
 
 FishermanNeet_Outro::
-# 100 "data/maps/Route3b/scripts.pory"
+# 101 "data/maps/Route3b/scripts.pory"
 	.string "Now I have to go to Clay Haven on the\n"
 	.string "way$"
 
 FishermanNeet_Postbattle::
-# 104 "data/maps/Route3b/scripts.pory"
+# 105 "data/maps/Route3b/scripts.pory"
 	.string "Totodile Island is meant to be on Route\n"
 	.string "1.$"
 
 CamperDave_Intro::
-# 108 "data/maps/Route3b/scripts.pory"
+# 109 "data/maps/Route3b/scripts.pory"
 	.string "It's a long way down!$"
 
 CamperDave_Outro::
-# 112 "data/maps/Route3b/scripts.pory"
+# 113 "data/maps/Route3b/scripts.pory"
 	.string "I was distracted by the drop.$"
 
 CamperDave_Postbattle::
-# 116 "data/maps/Route3b/scripts.pory"
+# 117 "data/maps/Route3b/scripts.pory"
 	.string "Imagine flying through the valley.$"
 
 Rose_Intro::
-# 120 "data/maps/Route3b/scripts.pory"
+# 121 "data/maps/Route3b/scripts.pory"
 	.string "My sister told she found rare Pokémon\n"
 	.string "here.$"
 
 Rose_Outro::
-# 124 "data/maps/Route3b/scripts.pory"
+# 125 "data/maps/Route3b/scripts.pory"
 	.string "She is probably just confused.$"
 
 Rose_Postbattle::
-# 128 "data/maps/Route3b/scripts.pory"
+# 129 "data/maps/Route3b/scripts.pory"
 	.string "I'm never going to find it...$"
 
 Lily_Intro::
-# 132 "data/maps/Route3b/scripts.pory"
+# 133 "data/maps/Route3b/scripts.pory"
 	.string "Did you see Bulbasaur anywhere?$"
 
 Lily_Outro::
-# 136 "data/maps/Route3b/scripts.pory"
+# 137 "data/maps/Route3b/scripts.pory"
 	.string "They must be close.$"
 
 Lily_Postbattle::
-# 140 "data/maps/Route3b/scripts.pory"
+# 141 "data/maps/Route3b/scripts.pory"
 	.string "I caught one here years ago, but it's\n"
 	.string "changed so much.$"

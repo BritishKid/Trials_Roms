@@ -14,5 +14,5 @@ GraniteCave_1F_EventScript_Hiker::
 
 GraniteCave_1F_EventScript_Hiker_Text_0:
 # 6 "data/maps/GraniteCave_1F/scripts.pory"
-	.string "Be careful heading up the summit is\n"
+	.string "Be careful heading up, the summit is\n"
 	.string "cold!$"

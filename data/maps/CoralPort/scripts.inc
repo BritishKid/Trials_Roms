@@ -197,179 +197,203 @@ CoralPort_EventScript_OldMan_Market_8:
 	goto CoralPort_EventScript_OldMan_Market_7
 
 
-CoralPort_EventScript_Woman_Market::
+CoralPort_EventScript_Grandson::
+# 109 "data/maps/CoralPort/scripts.pory"
+	compare VAR_EVOLUTION_STONE_HUNTING, 2
+	goto_if_eq CoralPort_EventScript_Grandson_1
+	return
+
+CoralPort_EventScript_Grandson_1:
 # 110 "data/maps/CoralPort/scripts.pory"
-	lockall
+	msgbox CoralPort_EventScript_Grandson_Text_0
 # 111 "data/maps/CoralPort/scripts.pory"
-	msgbox CoralPort_EventScript_Woman_Market_Text_0
+	giveitem ITEM_TM_LIGHT_SCREEN
 # 112 "data/maps/CoralPort/scripts.pory"
-	waitmessage
+	giveitem ITEM_TM_REFLECT
 # 113 "data/maps/CoralPort/scripts.pory"
-	pokemart CoralPort_Market_Items
+	msgbox CoralPort_EventScript_Grandson_Text_1
 # 114 "data/maps/CoralPort/scripts.pory"
+	msgbox CoralPort_EventScript_Grandson_Text_2
+# 115 "data/maps/CoralPort/scripts.pory"
+	setvar VAR_EVOLUTION_STONE_HUNTING, 3
+# 116 "data/maps/CoralPort/scripts.pory"
+	setflag FLAG_HIDE_GRANDSON_STONE_CORAL_PORT
+	return
+
+
+CoralPort_EventScript_Woman_Market::
+# 122 "data/maps/CoralPort/scripts.pory"
+	lockall
+# 123 "data/maps/CoralPort/scripts.pory"
+	msgbox CoralPort_EventScript_Woman_Market_Text_0
+# 124 "data/maps/CoralPort/scripts.pory"
+	waitmessage
+# 125 "data/maps/CoralPort/scripts.pory"
+	pokemart CoralPort_Market_Items
+# 126 "data/maps/CoralPort/scripts.pory"
 	releaseall
 	return
 
 
 CoralPort_EventScript_Fishman_Market::
-# 118 "data/maps/CoralPort/scripts.pory"
+# 130 "data/maps/CoralPort/scripts.pory"
 	lockall
-# 121 "data/maps/CoralPort/scripts.pory"
+# 133 "data/maps/CoralPort/scripts.pory"
 	compare VAR_GIANT_FISH_STATE, 0
 	goto_if_gt CoralPort_EventScript_Fishman_Market_2
 CoralPort_EventScript_Fishman_Market_1:
-# 125 "data/maps/CoralPort/scripts.pory"
+# 137 "data/maps/CoralPort/scripts.pory"
 	compare VAR_GIANT_FISH_STATE, 0
 	goto_if_eq CoralPort_EventScript_Fishman_Market_5
 CoralPort_EventScript_Fishman_Market_4:
-# 136 "data/maps/CoralPort/scripts.pory"
+# 148 "data/maps/CoralPort/scripts.pory"
 	releaseall
 	return
 
 CoralPort_EventScript_Fishman_Market_2:
-# 122 "data/maps/CoralPort/scripts.pory"
+# 134 "data/maps/CoralPort/scripts.pory"
 	msgbox CoralPort_EventScript_Fishman_Market_Text_0
 	goto CoralPort_EventScript_Fishman_Market_1
 
 CoralPort_EventScript_Fishman_Market_5:
-# 126 "data/maps/CoralPort/scripts.pory"
+# 138 "data/maps/CoralPort/scripts.pory"
 	msgbox CoralPort_EventScript_Fishman_Market_Text_1, MSGBOX_YESNO
-# 127 "data/maps/CoralPort/scripts.pory"
+# 139 "data/maps/CoralPort/scripts.pory"
 	compare VAR_RESULT, NO
 	goto_if_eq CoralPort_EventScript_Fishman_Market_7
-# 130 "data/maps/CoralPort/scripts.pory"
+# 142 "data/maps/CoralPort/scripts.pory"
 	msgbox CoralPort_EventScript_Fishman_Market_Text_3
-# 131 "data/maps/CoralPort/scripts.pory"
+# 143 "data/maps/CoralPort/scripts.pory"
 	msgbox CoralPort_EventScript_Fishman_Market_Text_4
-# 133 "data/maps/CoralPort/scripts.pory"
+# 145 "data/maps/CoralPort/scripts.pory"
 	setvar VAR_GIANT_FISH_STATE, 1
 	goto CoralPort_EventScript_Fishman_Market_4
 
 CoralPort_EventScript_Fishman_Market_7:
-# 128 "data/maps/CoralPort/scripts.pory"
+# 140 "data/maps/CoralPort/scripts.pory"
 	msgbox CoralPort_EventScript_Fishman_Market_Text_2
 	goto CoralPort_EventScript_Fishman_Market_4
 
 
 SandyShoreCity_RivalBlocking_Boat::
-# 140 "data/maps/CoralPort/scripts.pory"
+# 152 "data/maps/CoralPort/scripts.pory"
 	lockall
-# 141 "data/maps/CoralPort/scripts.pory"
+# 153 "data/maps/CoralPort/scripts.pory"
 	msgbox SandyShoreCity_RivalBlocking_Boat_Text_0
-# 142 "data/maps/CoralPort/scripts.pory"
+# 154 "data/maps/CoralPort/scripts.pory"
 	msgbox SandyShoreCity_RivalBlocking_Boat_Text_1
-# 143 "data/maps/CoralPort/scripts.pory"
+# 155 "data/maps/CoralPort/scripts.pory"
 	msgbox SandyShoreCity_RivalBlocking_Boat_Text_2
-# 144 "data/maps/CoralPort/scripts.pory"
+# 156 "data/maps/CoralPort/scripts.pory"
 	releaseall
 	return
 
 
 SandyShoreCity_RivalBattleForTicket::
-# 148 "data/maps/CoralPort/scripts.pory"
+# 160 "data/maps/CoralPort/scripts.pory"
 	lockall
-# 149 "data/maps/CoralPort/scripts.pory"
+# 161 "data/maps/CoralPort/scripts.pory"
 	msgbox SandyShoreCity_RivalBattleForTicket_Text_0, MSGBOX_AUTOCLOSE
-# 150 "data/maps/CoralPort/scripts.pory"
+# 162 "data/maps/CoralPort/scripts.pory"
 	addobject 7
-# 151 "data/maps/CoralPort/scripts.pory"
+# 163 "data/maps/CoralPort/scripts.pory"
 	setobjectxy 7, 10, 12
-# 152 "data/maps/CoralPort/scripts.pory"
+# 164 "data/maps/CoralPort/scripts.pory"
 	applymovement 7, Movement_RivalAppearing_BeachTown
-# 153 "data/maps/CoralPort/scripts.pory"
-	waitmovement 7
-# 154 "data/maps/CoralPort/scripts.pory"
-	trainerbattle_single TRAINER_SANDYSHORE_CITY_RIVAL, SandyShoreCity_Rival_Intro, SandyShoreCity_Rival_Outro, SandyShoreCity_Rival_PostbattleScript
 # 165 "data/maps/CoralPort/scripts.pory"
-	releaseall
-	return
-
-
-SandyShoreCity_Rival_PostbattleScript::
-# 169 "data/maps/CoralPort/scripts.pory"
-	setvar VAR_RIVAL_STATE, 5
-# 170 "data/maps/CoralPort/scripts.pory"
-	msgbox SandyShoreCity_Rival_PostbattleScript_Text_0
-# 171 "data/maps/CoralPort/scripts.pory"
-	msgbox SandyShoreCity_Rival_PostbattleScript_Text_1
-# 172 "data/maps/CoralPort/scripts.pory"
-	giveitem ITEM_SS_TICKET
-# 173 "data/maps/CoralPort/scripts.pory"
-	setflag FLAG_RECEIVED_SS_TICKET
-# 174 "data/maps/CoralPort/scripts.pory"
-	applymovement 7, Movement_SandyBeach_RivalLeaves
-# 175 "data/maps/CoralPort/scripts.pory"
 	waitmovement 7
-# 176 "data/maps/CoralPort/scripts.pory"
-	removeobject 7
+# 166 "data/maps/CoralPort/scripts.pory"
+	trainerbattle_single TRAINER_SANDYSHORE_CITY_RIVAL, SandyShoreCity_Rival_Intro, SandyShoreCity_Rival_Outro, SandyShoreCity_Rival_PostbattleScript
 # 177 "data/maps/CoralPort/scripts.pory"
 	releaseall
 	return
 
 
+SandyShoreCity_Rival_PostbattleScript::
 # 181 "data/maps/CoralPort/scripts.pory"
-Movement_RivalAppearing_BeachTown:
+	setvar VAR_RIVAL_STATE, 5
 # 182 "data/maps/CoralPort/scripts.pory"
-	walk_left
+	msgbox SandyShoreCity_Rival_PostbattleScript_Text_0
 # 183 "data/maps/CoralPort/scripts.pory"
-	walk_left
+	msgbox SandyShoreCity_Rival_PostbattleScript_Text_1
 # 184 "data/maps/CoralPort/scripts.pory"
-	walk_left
+	giveitem ITEM_SS_TICKET
 # 185 "data/maps/CoralPort/scripts.pory"
-	walk_left
+	setflag FLAG_RECEIVED_SS_TICKET
 # 186 "data/maps/CoralPort/scripts.pory"
-	walk_left
+	applymovement 7, Movement_SandyBeach_RivalLeaves
 # 187 "data/maps/CoralPort/scripts.pory"
-	walk_left
+	waitmovement 7
 # 188 "data/maps/CoralPort/scripts.pory"
-	walk_left
+	removeobject 7
 # 189 "data/maps/CoralPort/scripts.pory"
+	releaseall
+	return
+
+
+# 193 "data/maps/CoralPort/scripts.pory"
+Movement_RivalAppearing_BeachTown:
+# 194 "data/maps/CoralPort/scripts.pory"
+	walk_left
+# 195 "data/maps/CoralPort/scripts.pory"
+	walk_left
+# 196 "data/maps/CoralPort/scripts.pory"
+	walk_left
+# 197 "data/maps/CoralPort/scripts.pory"
+	walk_left
+# 198 "data/maps/CoralPort/scripts.pory"
+	walk_left
+# 199 "data/maps/CoralPort/scripts.pory"
+	walk_left
+# 200 "data/maps/CoralPort/scripts.pory"
+	walk_left
+# 201 "data/maps/CoralPort/scripts.pory"
 	face_up
 	step_end
 
-# 192 "data/maps/CoralPort/scripts.pory"
+# 204 "data/maps/CoralPort/scripts.pory"
 Movement_SandyBeach_RivalLeaves:
-# 193 "data/maps/CoralPort/scripts.pory"
+# 205 "data/maps/CoralPort/scripts.pory"
 	walk_right
-# 194 "data/maps/CoralPort/scripts.pory"
+# 206 "data/maps/CoralPort/scripts.pory"
 	walk_right
-# 195 "data/maps/CoralPort/scripts.pory"
+# 207 "data/maps/CoralPort/scripts.pory"
 	walk_right
-# 196 "data/maps/CoralPort/scripts.pory"
+# 208 "data/maps/CoralPort/scripts.pory"
 	walk_right
-# 197 "data/maps/CoralPort/scripts.pory"
+# 209 "data/maps/CoralPort/scripts.pory"
 	walk_right
-# 198 "data/maps/CoralPort/scripts.pory"
+# 210 "data/maps/CoralPort/scripts.pory"
 	walk_right
 	step_end
 
 	.align 2
-# 213 "data/maps/CoralPort/scripts.pory"
+# 225 "data/maps/CoralPort/scripts.pory"
 CoastalTown_EvolutionStoneMarket_Elemental:
-# 214 "data/maps/CoralPort/scripts.pory"
+# 226 "data/maps/CoralPort/scripts.pory"
 	.2byte ITEM_FIRE_STONE
-# 215 "data/maps/CoralPort/scripts.pory"
+# 227 "data/maps/CoralPort/scripts.pory"
 	.2byte ITEM_LEAF_STONE
-# 216 "data/maps/CoralPort/scripts.pory"
+# 228 "data/maps/CoralPort/scripts.pory"
 	.2byte ITEM_WATER_STONE
 	.2byte ITEM_NONE
 
 	.align 2
-# 220 "data/maps/CoralPort/scripts.pory"
+# 232 "data/maps/CoralPort/scripts.pory"
 CoralPort_Market_Items:
-# 221 "data/maps/CoralPort/scripts.pory"
+# 233 "data/maps/CoralPort/scripts.pory"
 	.2byte ITEM_HP_UP
-# 222 "data/maps/CoralPort/scripts.pory"
+# 234 "data/maps/CoralPort/scripts.pory"
 	.2byte ITEM_PROTEIN
-# 223 "data/maps/CoralPort/scripts.pory"
+# 235 "data/maps/CoralPort/scripts.pory"
 	.2byte ITEM_IRON
-# 224 "data/maps/CoralPort/scripts.pory"
+# 236 "data/maps/CoralPort/scripts.pory"
 	.2byte ITEM_CALCIUM
-# 225 "data/maps/CoralPort/scripts.pory"
+# 237 "data/maps/CoralPort/scripts.pory"
 	.2byte ITEM_ZINC
-# 226 "data/maps/CoralPort/scripts.pory"
+# 238 "data/maps/CoralPort/scripts.pory"
 	.2byte ITEM_CARBOS
-# 227 "data/maps/CoralPort/scripts.pory"
+# 239 "data/maps/CoralPort/scripts.pory"
 	.2byte ITEM_PP_UP
 	.2byte ITEM_NONE
 
@@ -437,74 +461,91 @@ CoralPort_EventScript_OldMan_Market_Text_7:
 	.string "He should be around somewhere looking\n"
 	.string "for the source of the evolution stones$"
 
+CoralPort_EventScript_Grandson_Text_0:
+# 110 "data/maps/CoralPort/scripts.pory"
+	.string "Hey thanks for all that help I think you\n"
+	.string "should have this for all your good work.$"
+
+CoralPort_EventScript_Grandson_Text_1:
+# 113 "data/maps/CoralPort/scripts.pory"
+	.string "It's the TMs for light screen and\n"
+	.string "reflect. They should help you with\l"
+	.string "whats coming next.$"
+
+CoralPort_EventScript_Grandson_Text_2:
+# 114 "data/maps/CoralPort/scripts.pory"
+	.string "I'm heading back out to find the\n"
+	.string "thunder and ice stone sources so I\l"
+	.string "could do with your help again!$"
+
 CoralPort_EventScript_Woman_Market_Text_0:
-# 111 "data/maps/CoralPort/scripts.pory"
+# 123 "data/maps/CoralPort/scripts.pory"
 	.string "Hey would you like some items to help\n"
 	.string "you in your battles?$"
 
 CoralPort_EventScript_Fishman_Market_Text_0:
-# 122 "data/maps/CoralPort/scripts.pory"
+# 134 "data/maps/CoralPort/scripts.pory"
 	.string "How are you doing finding the giant\n"
 	.string "fish?$"
 
 CoralPort_EventScript_Fishman_Market_Text_1:
-# 126 "data/maps/CoralPort/scripts.pory"
+# 138 "data/maps/CoralPort/scripts.pory"
 	.string "Hi do you like fishing?$"
 
 CoralPort_EventScript_Fishman_Market_Text_2:
-# 128 "data/maps/CoralPort/scripts.pory"
+# 140 "data/maps/CoralPort/scripts.pory"
 	.string "Then why did you come to a fishing\n"
 	.string "village?$"
 
 CoralPort_EventScript_Fishman_Market_Text_3:
-# 130 "data/maps/CoralPort/scripts.pory"
+# 142 "data/maps/CoralPort/scripts.pory"
 	.string "That's what I like to hear.$"
 
 CoralPort_EventScript_Fishman_Market_Text_4:
-# 131 "data/maps/CoralPort/scripts.pory"
+# 143 "data/maps/CoralPort/scripts.pory"
 	.string "There are rumours of giant fish Pokémon\n"
 	.string "lurking around Triver. If you can find\l"
 	.string "and catch them with your lure I'll be\l"
 	.string "sure to reward you.$"
 
 SandyShoreCity_RivalBlocking_Boat_Text_0:
-# 141 "data/maps/CoralPort/scripts.pory"
+# 153 "data/maps/CoralPort/scripts.pory"
 	.string "Hey {PLAYER} you've finally managed\n"
 	.string "to catch up. I've been here for ages.$"
 
 SandyShoreCity_RivalBlocking_Boat_Text_1:
-# 142 "data/maps/CoralPort/scripts.pory"
+# 154 "data/maps/CoralPort/scripts.pory"
 	.string "The ferry across the island hasn't\n"
 	.string "arrived yet so I'm just enjoying the sun\l"
 	.string "before I keep going$"
 
 SandyShoreCity_RivalBlocking_Boat_Text_2:
-# 143 "data/maps/CoralPort/scripts.pory"
+# 155 "data/maps/CoralPort/scripts.pory"
 	.string "I'd offer to battle you but looking at\n"
 	.string "how light your badge case is I don't\l"
 	.string "think it would be fair.$"
 
 SandyShoreCity_RivalBattleForTicket_Text_0:
-# 149 "data/maps/CoralPort/scripts.pory"
+# 161 "data/maps/CoralPort/scripts.pory"
 	.string "Wait!$"
 
 SandyShoreCity_Rival_PostbattleScript_Text_0:
-# 170 "data/maps/CoralPort/scripts.pory"
+# 182 "data/maps/CoralPort/scripts.pory"
 	.string "The ferry has arrived so I'm going to\n"
 	.string "jump across to the other islands. They\l"
 	.string "have more gyms for me to collect$"
 
 SandyShoreCity_Rival_PostbattleScript_Text_1:
-# 171 "data/maps/CoralPort/scripts.pory"
+# 183 "data/maps/CoralPort/scripts.pory"
 	.string "I bought you a ticket so you could do\n"
 	.string "the same$"
 
 SandyShoreCity_Rival_Intro::
-# 203 "data/maps/CoralPort/scripts.pory"
+# 215 "data/maps/CoralPort/scripts.pory"
 	.string "I heard you got the Shoal Badge! You\n"
 	.string "might be able to last more than 15\l"
 	.string "seconds against me now!$"
 
 SandyShoreCity_Rival_Outro::
-# 207 "data/maps/CoralPort/scripts.pory"
+# 219 "data/maps/CoralPort/scripts.pory"
 	.string "How do you keep beating me?$"

@@ -277,7 +277,7 @@ LittlerootTown_ProfessorBirchsLab_EventScript_AgreeToSeeRival::
 # 139 "data/maps/LittlerootTown_ProfessorBirchsLab/scripts.pory"
 	msgbox LittlerootTown_ProfessorBirchsLab_Text_GetRivalToTeachYou, MSGBOX_DEFAULT
 # 140 "data/maps/LittlerootTown_ProfessorBirchsLab/scripts.pory"
-	clearflag FLAG_HIDE_ROUTE_101_BOY
+	clearflag FLAG_HIDE_GRANDSON_STONE_CORAL_PORT
 # 141 "data/maps/LittlerootTown_ProfessorBirchsLab/scripts.pory"
 	setvar VAR_BIRCH_LAB_STATE, 3
 # 142 "data/maps/LittlerootTown_ProfessorBirchsLab/scripts.pory"

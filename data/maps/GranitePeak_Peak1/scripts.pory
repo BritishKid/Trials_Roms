@@ -1,0 +1,53 @@
+mapscripts GranitePeak_Peak1_MapScripts {}
+
+
+
+script GranitePeak_Peak_EventScript_IceStone {
+    lockall
+    msgbox(format("A cold air seems to comes from the rock."))
+    releaseall
+}
+
+script GranitePeak_Peak_EventScript_IceStone_Grandson {
+    lockall
+    msgbox(format("Interesting...is this it?"))
+    // questmenu(QUEST_MENU_CHECK_ACTIVE, QUEST_EVOLUTION_STONE_MART)
+    if(!flag(FLAG_ICE_STONE_SOURCE) && var(VAR_EVOLUTION_STONE_HUNTING) == 3) {
+        faceplayer
+        msgbox(format("Hey good to see you again, this looks to be the source of ice stones. Are you ready to fight off the Pokemon that will appear?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES) {
+            msgbox(format("Brilliant, prepare yourself I'm going to start to harvest now."))
+            setwildbattle(SPECIES_BERGMITE, 30, ITEM_ORAN_BERRY)
+            call(StartIceStoneBattle)
+            msgbox(format("Thank you, but I can see more coming!"))
+            setwildbattle(SPECIES_VANILLISH, 33, ITEM_ORAN_BERRY)
+            call(StartIceStoneBattle)
+            msgbox(format("Great job but I think something bigger is coming"))
+            setwildbattle(SPECIES_GLACEON, 35, ITEM_ORAN_BERRY)
+            call(StartIceStoneBattle)
+            msgbox(format("Okay we are good, thank you for that. I'll see you at the next one."))
+            msgbox(format("Also please take this."))
+            giveitem(ITEM_ICE_STONE)
+            msgbox(format("It's the least I could do in return."))
+            setflag(FLAG_ICE_STONE_SOURCE)    
+            if(flag(FLAG_ICE_STONE_SOURCE) && flag(FLAG_THUNDER_STONE_SOURCE)){
+                msgbox(format("That's the ice and thunder stones sorted. I should return these back to my Grandad"))
+                setvar(VAR_EVOLUTION_STONE_HUNTING, 4)
+            }
+            // subquestmenu(QUEST_MENU_COMPLETE_QUEST, QUEST_POKEMON_LEAGUE, SUB_QUEST_WATER_STONE)
+            // applymovement(1, Movement_GrandsonLeaves_IceStone)
+            // waitmovement(1)
+            // removeobject(1)
+            clearflag(FLAG_CANT_CATCH_MON)
+        }
+        if(var(VAR_RESULT) == NO) {
+            msgbox(format("Well go prepare I don't think I can do this alone."))
+        }
+    }
+    releaseall
+}
+
+script StartIceStoneBattle {
+    setflag(FLAG_CANT_CATCH_MON)
+    dowildbattle
+}
