@@ -1,0 +1,35 @@
+mapscripts Quarry_WorkerHousing_MapScripts {}
+
+
+script Quarry_WorkerHousing_Worker1 {
+    lockall
+    faceplayer
+    if(!flag(FLAG_HIDE_QUARRY_WORKERS)) {
+        msgbox(format("A giant silver Pokémon has taken over the Quarry, if it doesn't calm down it will collapse it all."))
+    }
+    elif(flag(FLAG_HIDE_QUARRY_WORKERS)){
+        msgbox(format("I should get back to work, but it's very comfortable here."))
+    }
+    releaseall
+}
+
+script Quarry_WorkerHousing_Worker2 {
+    lockall
+    faceplayer
+    msgbox(format("Some of the workers are still trapped! When will the rescue team get here to help them?"))
+    releaseall
+}
+
+script Quarry_WorkerHousing_Worker3 {
+    lockall
+    faceplayer
+    msgbox(format("If I had my Pokémon with me I'd save the Quarry"))
+    releaseall
+}
+
+script Quarry_WorkerHousing_Worker4 {
+    lockall
+    faceplayer
+    msgbox(format("If Pokémon keep causing issue we will have to close the quarry down permanently."))
+    releaseall
+}

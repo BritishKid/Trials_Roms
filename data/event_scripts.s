@@ -1233,3 +1233,31 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/EmberDunes_3/scripts.inc"
 
 	.include "data/maps/EmberDunes_ExitCave/scripts.inc"
+
+	.include "data/maps/EmberDunes_Gym/scripts.inc"
+
+	.include "data/maps/Quarry/scripts.inc"
+
+	.include "data/maps/Quarry_Entrance/scripts.inc"
+
+	.include "data/maps/Quarry_GF/scripts.inc"
+
+	.include "data/maps/Quarry_BF1/scripts.inc"
+
+	.include "data/maps/Quarry_BF2/scripts.inc"
+
+	.include "data/maps/Quarry_End/scripts.inc"
+
+	.include "data/maps/QuarrySecret/scripts.inc"
+
+	.include "data/maps/Route7_Daycare/scripts.inc"
+
+	.include "data/maps/Tapadap_Hidden_Base/scripts.inc"
+
+	.include "data/maps/HiddenGrotto_Bulbasaur/scripts.inc"
+
+	.include "data/maps/Route5c/scripts.inc"
+
+	.include "data/maps/Quarry_WorkerHousing/scripts.inc"
+
+	.include "data/maps/Quarry_ForemanHouse/scripts.inc"

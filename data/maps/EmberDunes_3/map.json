@@ -37,6 +37,19 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
       "flag": "FLAG_HIDE_EMBERDUNES_NURSE"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_BRENDAN_NORMAL",
+      "x": 28,
+      "y": 14,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EventScript_Gym4_Robert_FindLater",
+      "flag": "FLAG_HIDE_FOURTH_ENCOUNTER_ROB"
     }
   ],
   "warp_events": [
@@ -58,7 +71,7 @@
       "x": 27,
       "y": 8,
       "elevation": 0,
-      "dest_map": "MAP_EMBER_DUNES_3",
+      "dest_map": "MAP_EMBER_DUNES_GYM",
       "dest_warp_id": "0"
     }
   ],
@@ -107,6 +120,15 @@
       "var": "VAR_EMBER_DUNES_GYM_STATE",
       "var_value": "0",
       "script": "EmberDune_Trigger_SkipGymIntro"
+    },
+    {
+      "type": "trigger",
+      "x": 27,
+      "y": 14,
+      "elevation": 0,
+      "var": "VAR_ROBERT_STATUS",
+      "var_value": "6",
+      "script": "EventScript_Gym4_MeetRob"
     }
   ],
   "bg_events": [

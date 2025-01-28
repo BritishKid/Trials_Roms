@@ -557,11 +557,11 @@ LittlerootTown_ProfessorBirchsLab_EventScript_Aide::
 # 279 "data/maps/LittlerootTown_ProfessorBirchsLab/scripts.pory"
 	goto_if_ge VAR_BIRCH_LAB_STATE, 3, LittlerootTown_ProfessorBirchsLab_EventScript_AideReceivedStarter
 # 280 "data/maps/LittlerootTown_ProfessorBirchsLab/scripts.pory"
-	goto_if_set FLAG_BIRCH_AIDE_MET, LittlerootTown_ProfessorBirchsLab_EventScript_AideAlreadyMet
+	goto_if_set FLAG_HIDE_FOURTH_ENCOUNTER_ROB, LittlerootTown_ProfessorBirchsLab_EventScript_AideAlreadyMet
 # 281 "data/maps/LittlerootTown_ProfessorBirchsLab/scripts.pory"
 	msgbox LittlerootTown_ProfessorBirchsLab_Text_BirchAwayOnFieldwork, MSGBOX_DEFAULT
 # 282 "data/maps/LittlerootTown_ProfessorBirchsLab/scripts.pory"
-	setflag FLAG_BIRCH_AIDE_MET
+	setflag FLAG_HIDE_FOURTH_ENCOUNTER_ROB
 # 283 "data/maps/LittlerootTown_ProfessorBirchsLab/scripts.pory"
 	release
 # 284 "data/maps/LittlerootTown_ProfessorBirchsLab/scripts.pory"

@@ -6,7 +6,7 @@ Route4_TrainerBattle_Jakobi::
 # 5 "data/maps/Route4/scripts.pory"
 	trainerbattle_single ROUTE4_COOLTRAINER_JAKOBI, Jakobi_Intro, Jakobi_Outro, Increase_Trainers_Beaten
 # 6 "data/maps/Route4/scripts.pory"
-	msgbox Jakobi_Postbattle, MSGBOX_DEFAULT
+	msgbox Jakobi_Postbattle, MSGBOX_AUTOCLOSE
 	end
 
 
@@ -14,7 +14,7 @@ Route4_TrainerBattle_ToughBug::
 # 11 "data/maps/Route4/scripts.pory"
 	trainerbattle_single ROUTE4_BUGCATCHER, Route4Bug_Intro, Route4Bug_Outro, Increase_Trainers_Beaten
 # 12 "data/maps/Route4/scripts.pory"
-	msgbox Route4Bug_Postbattle, MSGBOX_DEFAULT
+	msgbox Route4Bug_Postbattle, MSGBOX_AUTOCLOSE
 	end
 
 

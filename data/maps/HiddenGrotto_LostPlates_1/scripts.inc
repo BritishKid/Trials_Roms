@@ -164,6 +164,60 @@ EarthPlate_Altar_7:
 	goto EarthPlate_Altar_1
 
 
+IronPlate_Alter::
+# 77 "data/maps/HiddenGrotto_LostPlates_1/scripts.pory"
+	lockall
+# 78 "data/maps/HiddenGrotto_LostPlates_1/scripts.pory"
+	checkitem ITEM_IRON_PLATE, 1
+# 79 "data/maps/HiddenGrotto_LostPlates_1/scripts.pory"
+	compare VAR_RESULT, NO
+	goto_if_eq IronPlate_Alter_2
+IronPlate_Alter_1:
+# 94 "data/maps/HiddenGrotto_LostPlates_1/scripts.pory"
+	compare VAR_RESULT, YES
+	goto_if_eq IronPlate_Alter_5
+IronPlate_Alter_4:
+# 97 "data/maps/HiddenGrotto_LostPlates_1/scripts.pory"
+	releaseall
+	return
+
+IronPlate_Alter_2:
+# 80 "data/maps/HiddenGrotto_LostPlates_1/scripts.pory"
+	msgbox IronPlate_Alter_Text_0
+# 81 "data/maps/HiddenGrotto_LostPlates_1/scripts.pory"
+	msgbox InsectPlate_Altar_Text_1, MSGBOX_YESNO
+# 82 "data/maps/HiddenGrotto_LostPlates_1/scripts.pory"
+	compare VAR_RESULT, YES
+	goto_if_eq IronPlate_Alter_7
+	goto IronPlate_Alter_1
+
+IronPlate_Alter_5:
+# 95 "data/maps/HiddenGrotto_LostPlates_1/scripts.pory"
+	msgbox InsectPlate_Altar_Text_5
+	goto IronPlate_Alter_4
+
+IronPlate_Alter_7:
+# 83 "data/maps/HiddenGrotto_LostPlates_1/scripts.pory"
+	msgbox InsectPlate_Altar_Text_2
+# 84 "data/maps/HiddenGrotto_LostPlates_1/scripts.pory"
+	setflag FLAG_CANT_CATCH_MON
+# 85 "data/maps/HiddenGrotto_LostPlates_1/scripts.pory"
+	settotemboost 1, 0, 1, 1, 0, 1, 0, 0
+# 86 "data/maps/HiddenGrotto_LostPlates_1/scripts.pory"
+	setwildbattle SPECIES_ORTHWORM, 40, ITEM_IRON_PLATE
+# 87 "data/maps/HiddenGrotto_LostPlates_1/scripts.pory"
+	dowildbattle
+# 88 "data/maps/HiddenGrotto_LostPlates_1/scripts.pory"
+	msgbox IronPlate_Alter_Text_1
+# 89 "data/maps/HiddenGrotto_LostPlates_1/scripts.pory"
+	msgbox IronPlate_Alter_Text_2
+# 90 "data/maps/HiddenGrotto_LostPlates_1/scripts.pory"
+	giveitem ITEM_IRON_PLATE
+# 91 "data/maps/HiddenGrotto_LostPlates_1/scripts.pory"
+	addvar VAR_PLATES_FOUND, 1
+	goto IronPlate_Alter_1
+
+
 InsectPlate_Altar_Text_0:
 # 8 "data/maps/HiddenGrotto_LostPlates_1/scripts.pory"
 	.string "There is a plate with an ancient bug\n"
@@ -211,3 +265,16 @@ EarthPlate_Altar_Text_0:
 EarthPlate_Altar_Text_1:
 # 64 "data/maps/HiddenGrotto_LostPlates_1/scripts.pory"
 	.string "Hippowdon retreats into the cave.$"
+
+IronPlate_Alter_Text_0:
+# 80 "data/maps/HiddenGrotto_LostPlates_1/scripts.pory"
+	.string "There is a plate with an ancient steel\n"
+	.string "Pokémon inscribed on it$"
+
+IronPlate_Alter_Text_1:
+# 88 "data/maps/HiddenGrotto_LostPlates_1/scripts.pory"
+	.string "Orthworm retreats into the cave.$"
+
+IronPlate_Alter_Text_2:
+# 89 "data/maps/HiddenGrotto_LostPlates_1/scripts.pory"
+	.string "You pick up the Iron Plate$"

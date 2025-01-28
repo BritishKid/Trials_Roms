@@ -138,10 +138,10 @@
 #define VAR_ROUTE123_STATE                               0x4076 // Unused Var
 #define VAR_ROUTE124_STATE                               0x4077 // Unused Var
 #define VAR_ROUTE125_STATE                               0x4078 // Unused Var
-#define VAR_ROUTE126_STATE                               0x4079 // Unused Var
+#define VAR_CRYSTALS_CHECKED                               0x4079 // Used
 #define VAR_HIDDEN_MOUNTAIN_PASS                               0x407A // Used
 #define VAR_ROUTE128_STATE                               0x407B
-#define VAR_ROUTE129_STATE                               0x407C // Unused Var
+#define VAR_STEVEN_QUEST_STATE                               0x407C // Used
 #define VAR_SCHOOL_TOURNAMENT_LEVEL                               0x407D //Used to determine max level of school tournament
 #define VAR_SCHOOL_TEAM_RESET                               0x407E // used Var
 #define VAR_CURRENT_SCHOOL_TOURNAMENT_STATE                               0x407F // Used
@@ -185,7 +185,7 @@
 #define VAR_TRICK_HOUSE_BEING_WATCHED_STATE              0x40A5
 #define VAR_TRICK_HOUSE_FOUND_TRICK_MASTER               0x40A6
 #define VAR_TRICK_HOUSE_ENTRANCE_STATE                   0x40A7
-#define VAR_UNUSED_0x40A8                                0x40A8 // Unused Var
+#define VAR_EMBER_DUNES_GYM_STATE                        0x40A8 // 
 #define VAR_CYCLING_CHALLENGE_STATE                      0x40A9
 #define VAR_SLATEPORT_MUSEUM_1F_STATE                    0x40AA
 #define VAR_TRICK_HOUSE_PUZZLE_1_STATE                   0x40AB
@@ -204,11 +204,11 @@
 #define VAR_PLATES_FOUND                                0x40B8 //Used counts plates found
 #define VAR_MT_PYRE_STATE                                0x40B9
 #define VAR_NEW_MAUVILLE_STATE                           0x40BA
-#define VAR_UNUSED_0x40BB                                0x40BB // Unused Var
+#define VAR_QUARRY_STATE                                0x40BB 
 #define VAR_BRAVO_TRAINER_BATTLE_TOWER_ON                0x40BC
 #define VAR_JAGGED_PASS_ASH_WEATHER                      0x40BD
 #define VAR_GLASS_WORKSHOP_STATE                         0x40BE
-#define VAR_METEOR_FALLS_STATE                           0x40BF
+#define VAR_LOST_LAKE_STATE                           0x40BF
 #define VAR_SOOTOPOLIS_MYSTERY_EVENTS_STATE              0x40C0
 #define VAR_TRICK_HOUSE_PRIZE_PICKUP                     0x40C1
 #define VAR_PACIFIDLOG_TM_RECEIVED_DAY                   0x40C2

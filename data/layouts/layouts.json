@@ -1244,7 +1244,7 @@
     {
       "id": "LAYOUT_METEOR_FALLS_1F_1R",
       "name": "MeteorFalls_1F_1R_Layout",
-      "width": 30,
+      "width": 36,
       "height": 42,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_MeteorFalls",
@@ -1334,8 +1334,8 @@
     {
       "id": "LAYOUT_GRANITE_CAVE_B2F",
       "name": "GraniteCave_B2F_Layout",
-      "width": 32,
-      "height": 26,
+      "width": 14,
+      "height": 30,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/GraniteCave_B2F/border.bin",
@@ -5165,9 +5165,9 @@
       "id": "LAYOUT_ROUTE7",
       "name": "Route7_Layout",
       "width": 40,
-      "height": 45,
+      "height": 69,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Cave",
+      "secondary_tileset": "gTileset_Mauville",
       "border_filepath": "data/layouts/Route7/border.bin",
       "blockdata_filepath": "data/layouts/Route7/map.bin"
     },
@@ -5190,6 +5190,146 @@
       "secondary_tileset": "gTileset_BattlePyramid",
       "border_filepath": "data/layouts/EmberDunes_ExitCave/border.bin",
       "blockdata_filepath": "data/layouts/EmberDunes_ExitCave/map.bin"
+    },
+    {
+      "id": "LAYOUT_EMBER_DUNES_GYM",
+      "name": "EmberDunes_Gym_Layout",
+      "width": 13,
+      "height": 36,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattlePyramid",
+      "border_filepath": "data/layouts/EmberDunes_Gym/border.bin",
+      "blockdata_filepath": "data/layouts/EmberDunes_Gym/map.bin"
+    },
+    {
+      "id": "LAYOUT_QUARRY",
+      "name": "Quarry_Layout",
+      "width": 50,
+      "height": 50,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Mauville",
+      "border_filepath": "data/layouts/Quarry/border.bin",
+      "blockdata_filepath": "data/layouts/Quarry/map.bin"
+    },
+    {
+      "id": "LAYOUT_QUARRY_ENTRANCE",
+      "name": "Quarry_Entrance_Layout",
+      "width": 9,
+      "height": 12,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/Quarry_Entrance/border.bin",
+      "blockdata_filepath": "data/layouts/Quarry_Entrance/map.bin"
+    },
+    {
+      "id": "LAYOUT_QUARRY_GF",
+      "name": "Quarry_GF_Layout",
+      "width": 38,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/Quarry_GF/border.bin",
+      "blockdata_filepath": "data/layouts/Quarry_GF/map.bin"
+    },
+    {
+      "id": "LAYOUT_QUARRY_BF1",
+      "name": "Quarry_BF1_Layout",
+      "width": 20,
+      "height": 35,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/Quarry_BF1/border.bin",
+      "blockdata_filepath": "data/layouts/Quarry_BF1/map.bin"
+    },
+    {
+      "id": "LAYOUT_QUARRY_BF2",
+      "name": "Quarry_BF2_Layout",
+      "width": 20,
+      "height": 40,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/Quarry_BF2/border.bin",
+      "blockdata_filepath": "data/layouts/Quarry_BF2/map.bin"
+    },
+    {
+      "id": "LAYOUT_QUARRY_END",
+      "name": "Quarry_End_Layout",
+      "width": 20,
+      "height": 40,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/Quarry_End/border.bin",
+      "blockdata_filepath": "data/layouts/Quarry_End/map.bin"
+    },
+    {
+      "id": "LAYOUT_QUARRY_SECRET",
+      "name": "QuarrySecret_Layout",
+      "width": 11,
+      "height": 8,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/QuarrySecret/border.bin",
+      "blockdata_filepath": "data/layouts/QuarrySecret/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE7_DAYCARE",
+      "name": "Route7_Daycare_Layout",
+      "width": 50,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Mauville",
+      "border_filepath": "data/layouts/Route7_Daycare/border.bin",
+      "blockdata_filepath": "data/layouts/Route7_Daycare/map.bin"
+    },
+    {
+      "id": "LAYOUT_TAPADAP_HIDDEN_BASE",
+      "name": "Tapadap_Hidden_Base_Layout",
+      "width": 14,
+      "height": 11,
+      "primary_tileset": "gTileset_SecretBase",
+      "secondary_tileset": "gTileset_SecretBaseTree",
+      "border_filepath": "data/layouts/Tapadap_Hidden_Base/border.bin",
+      "blockdata_filepath": "data/layouts/Tapadap_Hidden_Base/map.bin"
+    },
+    {
+      "id": "LAYOUT_HIDDEN_GROTTO_BULBASAUR",
+      "name": "HiddenGrotto_Bulbasaur_Layout",
+      "width": 16,
+      "height": 10,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Rustboro",
+      "border_filepath": "data/layouts/HiddenGrotto_Bulbasaur/border.bin",
+      "blockdata_filepath": "data/layouts/HiddenGrotto_Bulbasaur/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE5C",
+      "name": "Route5c_Layout",
+      "width": 13,
+      "height": 36,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Mossdeep",
+      "border_filepath": "data/layouts/Route5c/border.bin",
+      "blockdata_filepath": "data/layouts/Route5c/map.bin"
+    },
+    {
+      "id": "LAYOUT_QUARRY_WORKER_HOUSING",
+      "name": "Quarry_WorkerHousing_Layout",
+      "width": 12,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/Quarry_WorkerHousing/border.bin",
+      "blockdata_filepath": "data/layouts/Quarry_WorkerHousing/map.bin"
+    },
+    {
+      "id": "LAYOUT_QUARRY_FOREMAN_HOUSE",
+      "name": "Quarry_ForemanHouse_Layout",
+      "width": 10,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/Quarry_ForemanHouse/border.bin",
+      "blockdata_filepath": "data/layouts/Quarry_ForemanHouse/map.bin"
     }
   ]
 }

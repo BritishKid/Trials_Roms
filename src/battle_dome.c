@@ -1989,7 +1989,7 @@ static void InitDomeTrainers(void)
         }
 
         // Choose party
-        for (j = 0; j < FRONTIER_PARTY_SIZE; j++)
+        for (j = 0; j < FRONTIER_PARTY_SIZE; j++) //gets size
         {
             do
             {

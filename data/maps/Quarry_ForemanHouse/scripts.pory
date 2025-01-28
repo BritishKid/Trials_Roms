@@ -1,0 +1,24 @@
+mapscripts Quarry_ForemanHouse_MapScripts {}
+
+
+script Quarry_Foreman_InHouse {
+    lockall
+    faceplayer
+    if(var(VAR_QUARRY_STATE) == 4) {
+            msgbox(format("We are finally able to get back to work in the Quarry"))
+    }
+    if(var(VAR_QUARRY_STATE) == 0) {
+        msgbox(format("We've had to close the Quarry due to the wild Pokémon running rampant"))
+    } 
+    elif (var(VAR_QUARRY_STATE) > 3) {
+        msgbox(format("I told you to stay out the Quarry, it's very dangerous right now."))
+    }
+    elif (var(VAR_QUARRY_STATE) == 3) {
+        msgbox(format("You're the one who cleared out the quarry and saved my men? That's amazing!"))
+        msgbox(format("Please take this as a thank you"))
+        giveitem(ITEM_TM_IRON_TAIL)
+        msgbox(format("It contains Iron Tail, a lot of the miners use it with their Pokémon to help with their work."))
+        setvar(VAR_QUARRY_STATE, 4) 
+    }
+    releaseall
+}

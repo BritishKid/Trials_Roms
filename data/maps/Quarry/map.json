@@ -1,0 +1,54 @@
+{
+  "id": "MAP_QUARRY",
+  "name": "Quarry",
+  "layout": "LAYOUT_QUARRY",
+  "music": "MUS_RG_ROUTE11",
+  "region_map_section": "MAPSEC_QUARRY",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_ROUTE",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_ROUTE7",
+      "offset": -42,
+      "direction": "right"
+    }
+  ],
+  "object_events": [
+
+  ],
+  "warp_events": [
+    {
+      "x": 16,
+      "y": 14,
+      "elevation": 0,
+      "dest_map": "MAP_QUARRY_ENTRANCE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 38,
+      "y": 12,
+      "elevation": 0,
+      "dest_map": "MAP_QUARRY_WORKER_HOUSING",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 42,
+      "y": 12,
+      "elevation": 0,
+      "dest_map": "MAP_QUARRY_FOREMAN_HOUSE",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ]
+}

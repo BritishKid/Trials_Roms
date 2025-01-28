@@ -1,0 +1,35 @@
+mapscripts Route7_Daycare_MapScripts {}
+
+
+script Route7_Daycare_TrainerBattle_DragonTamer {
+    trainerbattle_single(ROUTE7_DRAGONTAMER, Route7_DragonTamer_Intro, Route7DragonTamer_Outro, Route7DragonTamer_PostScript)
+    msgbox(Route7DragonTamer_Postbattle, MSGBOX_AUTOCLOSE)
+}
+
+script Route7DragonTamer_PostScript {
+    msgbox(format("That was incredible! I think you have what it takes to tame your own dragons."))
+    msgbox(format("I just got an egg from one of my Pokemon in the daycare why don't you take it."))
+    giveegg(SPECIES_DRUDDIGON)
+    call(Increase_Trainers_Beaten)
+    releaseall
+}
+
+//text 
+text Route7_DragonTamer_Intro {
+    format("I've spent my life trying to tame some of the strongest possible Pokemon.")
+}
+
+text Route7DragonTamer_Outro {
+    format("Obviously I need to spend more time training.")
+}
+
+text Route7DragonTamer_Postbattle {
+    format("How's that egg getting along?")
+}
+
+
+//locked door but use klefki to enter -- inside the house is some clues to where to find a mythical maybe marshadow?
+ // -- we could tie to the haunted
+
+
+//gender changer for pokemon

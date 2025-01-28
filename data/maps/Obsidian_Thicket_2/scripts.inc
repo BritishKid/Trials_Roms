@@ -11,13 +11,13 @@ Derek_ObsidianThicket2::
 
 
 Derek_ObisidianThicket_Intro::
-# 13 "data/maps/Obsidian_Thicket_2/scripts.pory"
+# 19 "data/maps/Obsidian_Thicket_2/scripts.pory"
 	.string "Treecko lives somewhere in these trees$"
 
 Derek_ObisidianThicket_Outro::
-# 17 "data/maps/Obsidian_Thicket_2/scripts.pory"
+# 23 "data/maps/Obsidian_Thicket_2/scripts.pory"
 	.string "I've heard a ton of rumours$"
 
 PostBattle_Derek_ObisidianThicket::
-# 21 "data/maps/Obsidian_Thicket_2/scripts.pory"
+# 27 "data/maps/Obsidian_Thicket_2/scripts.pory"
 	.string "If you find them please tell me$"

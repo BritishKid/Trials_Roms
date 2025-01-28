@@ -15,6 +15,7 @@ script SwampTown_KingsRock_Boy {
     if(!flag(FLAG_RECEIVED_KINGS_ROCK)){
         msgbox(format("Here have this one"))
         giveitem(ITEM_KINGS_ROCK, 1)
+        setflag(FLAG_RECEIVED_KINGS_ROCK)
     }
     releaseall
 }

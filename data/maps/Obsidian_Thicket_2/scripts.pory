@@ -6,6 +6,12 @@ script Derek_ObsidianThicket2 {
     msgbox(PostBattle_Derek_ObisidianThicket, MSGBOX_AUTOCLOSE)
 }
 
+//flannery
+//wants to reach the volcano but doesn't have surf so talks about going the long way round
+//battle her
+//she gives an item and says she will meet you again in the volcano
+
+
 
 
 //text

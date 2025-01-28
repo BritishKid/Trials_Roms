@@ -13,8 +13,8 @@ script EmberDune_EventScript_GymSign {
 
 script EmberDune_Trigger_FirstTimeToGym_Center {
     lockall
-    if(FLAG_VISITED_VERDANTURF_TOWN) {
-        playbgm(MUS_POKE_CENTER)
+    if(flag(FLAG_VISITED_VERDANTURF_TOWN)) {
+        // playbgm(MUS_POKE_CENTER)
         msgbox(format("You're nearly there!"), MSGBOX_AUTOCLOSE)
         applymovement(1, Movement_NurseToPlayer_Center_EmberDune)
         waitmovement(1)
@@ -23,10 +23,10 @@ script EmberDune_Trigger_FirstTimeToGym_Center {
     releaseall
 }
 
-script EmberDune_Trigger_FirstTimeToGym_Center {
+script EmberDune_Trigger_FirstTimeToGym_Right {
     lockall
-    if(FLAG_VISITED_VERDANTURF_TOWN) {
-        playbgm(MUS_POKE_CENTER)
+    if(flag(FLAG_VISITED_VERDANTURF_TOWN)) {
+        // playbgm(MUS_POKE_CENTER)
         msgbox(format("You're nearly there!"), MSGBOX_AUTOCLOSE)
         applymovement(1, Movement_NurseToPlayer_Right_EmberDune)
         waitmovement(1)
@@ -37,8 +37,8 @@ script EmberDune_Trigger_FirstTimeToGym_Center {
 
 script EmberDune_Trigger_FirstTimeToGym_Left {
     lockall
-    if(FLAG_VISITED_VERDANTURF_TOWN){
-        playbgm(MUS_POKE_CENTER)
+    if(flag(FLAG_VISITED_VERDANTURF_TOWN)){
+        // playbgm(MUS_POKE_CENTER)
         msgbox(format("You're nearly there!"), MSGBOX_AUTOCLOSE)
         applymovement(1, Movement_NurseToPlayer_Left_EmberDune)
         waitmovement(1)
@@ -47,7 +47,7 @@ script EmberDune_Trigger_FirstTimeToGym_Left {
     releaseall
 }
 
-script EmberDune_ResetEmberDunesNurse {
+script EmberDune_NurseEncounter {
     msgbox(format("Up here is the Ember Dunes gym and you look like you've been a long way already.\lSarah is a strong trainer that you should probably go to town first, its just down the stairs and left through the cave."), MSGBOX_AUTOCLOSE)
     msgbox(format("Although it's not like I can ever stop a determined trainer but atleast let me heal your party."), MSGBOX_AUTOCLOSE)
     special(HealPlayerParty)
@@ -68,8 +68,70 @@ script EmberDune_Trigger_SkipGymIntro {
     }
 }
 
-//movement 
 
+script EventScript_Gym4_MeetRob {
+    lockall
+    msgbox(format("You made it!"))
+    removeobject(2)
+    addobject(2)
+    setobjectxy(2,27,20)
+    applymovement(2, Movement_Gym2_Robert_Approaches)
+    waitmovement(2)
+    msgbox(format("You've been making huge wave as amongst the trainers on your way here."))
+    clearflag(FLAG_HIDE_FOURTH_ENCOUNTER_ROB)
+    if(var(VAR_TRAINERS_BEATEN_CHECK) >= 60){ 
+        msgbox(format("Are you ready to go again?"), MSGBOX_YESNO)
+            if(var(VAR_RESULT) == YES) {
+                trainerbattle_single(TRAINER_FOURTH_ENCOUNTER_ROBERT, MahoganyHills_Robert_Intro, MahoganyHills_Robert_Outro, EventScript_Gym4_RobertBeaten)
+            }
+            else{
+                msgbox(format("Oh that's a shame. I'll see you another time then."))
+                applymovement(2, Movement_Gym4_RobToRight)
+                waitmovement(2)
+                setvar(VAR_ROBERT_STATUS, 7)
+            }
+    } else {
+        msgbox(format("Oh you've been slacking, you're not ready."))
+        applymovement(2, Movement_Gym4_RobToRight)
+        waitmovement(2)
+        setvar(VAR_ROBERT_STATUS, 7)
+    }
+    releaseall
+}
+
+script EventScript_Gym4_Robert_FindLater {
+    if(var(VAR_ROBERT_STATUS)==7) {
+        msgbox(format("Oh it's you.\n Hello"))
+        if(var(VAR_TRAINERS_BEATEN_CHECK) >= 60){ 
+        msgbox(format("Are you ready to go again?"), MSGBOX_YESNO)
+            if(var(VAR_RESULT) == YES) {
+                trainerbattle_single(TRAINER_FOURTH_ENCOUNTER_ROBERT, MahoganyHills_Robert_Intro, MahoganyHills_Robert_Outro, EventScript_Gym2_RobertBeaten)
+            }
+        } else {
+            msgbox(format("Oh that's a shame. I'll see you another time then."))
+        }
+    } 
+    if(var(VAR_ROBERT_STATUS) == 8) {
+        msgbox(format("I'll train some more and beat you by the next gym."))
+    }
+    releaseall
+}
+
+
+script EventScript_Gym4_RobertBeaten {
+    msgbox(format("Wow you're incredible, here take this!"))
+    giveitem(ITEM_ABILITY_PATCH, 1) //todo improve
+    msgbox(format("You can use it to bring out the Hidden Ability for your Pokémon.\p It can make your Pokémon much stronger!"))
+    if(var(VAR_ROBERT_STATUS) == 6)  {
+        msgbox(format("Anyway I'll catch you later!"))
+        call(EventScript_Gym3_RobertLeaves)
+    }
+    setvar(VAR_ROBERT_STATUS, 8)
+    setflag(FLAG_HIDE_FOURTH_ENCOUNTER_ROB)
+    releaseall
+}
+
+//movement 
 movement Movement_NurseToPlayer_Center_EmberDune {
     walk_down
     walk_down
@@ -110,4 +172,10 @@ movement Movement_NurseToGround {
     walk_left
     walk_left
     walk_left
+}
+
+movement Movement_Gym4_RobToRight {
+    walk_right
+    walk_up
+    face_down
 }

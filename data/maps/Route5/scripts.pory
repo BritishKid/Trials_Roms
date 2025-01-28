@@ -26,15 +26,34 @@ script Route5_Sign_Directinos {
 
 script Route5_Pyukumuku_Clean_Up {
     lock
-        msgbox(format("It's a Pyukumuku, you push it back into the water"))
-        fadescreen(FADE_TO_BLACK)
-        msgbox(format("SPLASH"))
-        removeobject(3)
-        setflag(FLAG_CLEANED_UP_PYUKUMUKU_3)
-        fadescreen(FADE_FROM_BLACK)
-        giveitem(ITEM_BIG_PEARL)
-        msgbox(format("You found a big pearl under the Pokémon."))
-        playfanfare(MUS_OBTAIN_ITEM)
-        call(IncrementNumber_Pyukumukus_Saved)
+    msgbox(format("It's a Pyukumuku, you push it back into the water"))
+    fadescreen(FADE_TO_BLACK)
+    msgbox(format("SPLASH"))
+    removeobject(3)
+    setflag(FLAG_CLEANED_UP_PYUKUMUKU_3)
+    fadescreen(FADE_FROM_BLACK)
+    giveitem(ITEM_BIG_PEARL)
+    msgbox(format("You found a big pearl under the Pokémon."))
+    playfanfare(MUS_OBTAIN_ITEM)
+    call(IncrementNumber_Pyukumukus_Saved)
     release
+}
+
+script Route5_Trainerbattle_DogWalker {
+    trainerbattle_single(ROUTE5_DOGWALKER, Route5_Dogwalker_Intro, Route5_Dogwalker_Outro, Increase_Trainers_Beaten)
+    msgbox(Route5_Dogwalker_Postbattle, MSGBOX_AUTOCLOSE)
+}
+
+//text
+
+text Route5_Dogwalker_Intro {
+    format("We love stretching our legs on this beach.")
+}
+
+text Route5_Dogwalker_Outro {
+    format("Exercise will make the pain of the loss go away.")
+}
+
+text Route5_Dogwalker_Postbattle {
+    format("We should head back the suns heading down.")
 }

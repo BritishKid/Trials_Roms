@@ -16,8 +16,8 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_HIKER",
-      "x": 3,
-      "y": 2,
+      "x": 18,
+      "y": 17,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
@@ -30,15 +30,15 @@
   ],
   "warp_events": [
     {
-      "x": 2,
-      "y": 2,
+      "x": 29,
+      "y": 30,
       "elevation": 3,
-      "dest_map": "MAP_ROUTE106",
+      "dest_map": "MAP_GRANITE_CAVE_GF",
       "dest_warp_id": "0"
     },
     {
-      "x": 1,
-      "y": 2,
+      "x": 0,
+      "y": 5,
       "elevation": 3,
       "dest_map": "MAP_GRANITE_CAVE_B1F",
       "dest_warp_id": "0"

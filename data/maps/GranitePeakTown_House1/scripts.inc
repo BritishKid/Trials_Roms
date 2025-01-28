@@ -26,7 +26,7 @@ GranitePeakTown_House1_Alex_4:
 # 24 "data/maps/GranitePeakTown_House1/scripts.pory"
 	goto_if_set FLAG_LEGENDS_PLATE_FOUND, GranitePeakTown_House1_Alex_10
 GranitePeakTown_House1_Alex_9:
-# 28 "data/maps/GranitePeakTown_House1/scripts.pory"
+# 27 "data/maps/GranitePeakTown_House1/scripts.pory"
 	releaseall
 	return
 

@@ -42,160 +42,200 @@ EmberDune_Charr_AceTrainer::
 	return
 
 
+EmberDune_FossilBoy_Battle::
+# 31 "data/maps/EmberDunes_2/scripts.pory"
+	trainerbattle_single EMBERDUNE_FOSSILBOY, FossilBoy_Intro, FossilBoy_Outro, Fossilboy_PostScript
+# 32 "data/maps/EmberDunes_2/scripts.pory"
+	msgbox FossilBoy_Postbattle, MSGBOX_AUTOCLOSE
+	return
+
+
+Fossilboy_PostScript::
+# 36 "data/maps/EmberDunes_2/scripts.pory"
+	msgbox Fossilboy_PostScript_Text_0
+# 37 "data/maps/EmberDunes_2/scripts.pory"
+	giveitem ITEM_JAW_FOSSIL
+# 38 "data/maps/EmberDunes_2/scripts.pory"
+	call Increase_Trainers_Beaten
+# 39 "data/maps/EmberDunes_2/scripts.pory"
+	releaseall
+	return
+
+
 EmberDunes_1_EventScript_SecretButton1::
-# 34 "data/maps/EmberDunes_2/scripts.pory"
+# 45 "data/maps/EmberDunes_2/scripts.pory"
 	lockall
-# 35 "data/maps/EmberDunes_2/scripts.pory"
+# 46 "data/maps/EmberDunes_2/scripts.pory"
 	goto_if_unset FLAG_EMBER_DUNES_BUTTON_1_PRESSED, EmberDunes_1_EventScript_SecretButton1_2
-# 47 "data/maps/EmberDunes_2/scripts.pory"
+# 58 "data/maps/EmberDunes_2/scripts.pory"
 	msgbox EmberDunes_1_EventScript_SecretButton1_Text_3
 EmberDunes_1_EventScript_SecretButton1_1:
-# 49 "data/maps/EmberDunes_2/scripts.pory"
+# 60 "data/maps/EmberDunes_2/scripts.pory"
 	releaseall
 	return
 
 EmberDunes_1_EventScript_SecretButton1_2:
-# 36 "data/maps/EmberDunes_2/scripts.pory"
+# 47 "data/maps/EmberDunes_2/scripts.pory"
 	msgbox EmberDunes_1_EventScript_SecretButton1_Text_0, MSGBOX_YESNO
-# 37 "data/maps/EmberDunes_2/scripts.pory"
+# 48 "data/maps/EmberDunes_2/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq EmberDunes_1_EventScript_SecretButton1_6
 EmberDunes_1_EventScript_SecretButton1_5:
-# 42 "data/maps/EmberDunes_2/scripts.pory"
+# 53 "data/maps/EmberDunes_2/scripts.pory"
 	compare VAR_RESULT, NO
 	goto_if_eq EmberDunes_1_EventScript_SecretButton1_8
 	goto EmberDunes_1_EventScript_SecretButton1_1
 
 EmberDunes_1_EventScript_SecretButton1_6:
-# 38 "data/maps/EmberDunes_2/scripts.pory"
+# 49 "data/maps/EmberDunes_2/scripts.pory"
 	msgbox EmberDunes_1_EventScript_SecretButton1_Text_1
-# 39 "data/maps/EmberDunes_2/scripts.pory"
+# 50 "data/maps/EmberDunes_2/scripts.pory"
 	addvar VAR_EMBERDUNES_BUTTONS_PRESSED, 1
-# 40 "data/maps/EmberDunes_2/scripts.pory"
+# 51 "data/maps/EmberDunes_2/scripts.pory"
 	setflag FLAG_EMBER_DUNES_BUTTON_1_PRESSED
 	goto EmberDunes_1_EventScript_SecretButton1_5
 
 EmberDunes_1_EventScript_SecretButton1_8:
-# 43 "data/maps/EmberDunes_2/scripts.pory"
+# 54 "data/maps/EmberDunes_2/scripts.pory"
 	msgbox EmberDunes_1_EventScript_SecretButton1_Text_2
 	goto EmberDunes_1_EventScript_SecretButton1_1
 
 
 EmberDunes_1_EventScript_SecretButton2::
-# 53 "data/maps/EmberDunes_2/scripts.pory"
+# 64 "data/maps/EmberDunes_2/scripts.pory"
 	lockall
-# 54 "data/maps/EmberDunes_2/scripts.pory"
+# 65 "data/maps/EmberDunes_2/scripts.pory"
 	goto_if_unset FLAG_EMBER_DUNES_BUTTON_2_PRESSED, EmberDunes_1_EventScript_SecretButton2_2
-# 66 "data/maps/EmberDunes_2/scripts.pory"
+# 77 "data/maps/EmberDunes_2/scripts.pory"
 	msgbox EmberDunes_1_EventScript_SecretButton1_Text_3
 EmberDunes_1_EventScript_SecretButton2_1:
-# 68 "data/maps/EmberDunes_2/scripts.pory"
+# 79 "data/maps/EmberDunes_2/scripts.pory"
 	releaseall
 	return
 
 EmberDunes_1_EventScript_SecretButton2_2:
-# 55 "data/maps/EmberDunes_2/scripts.pory"
+# 66 "data/maps/EmberDunes_2/scripts.pory"
 	msgbox EmberDunes_1_EventScript_SecretButton1_Text_0, MSGBOX_YESNO
-# 56 "data/maps/EmberDunes_2/scripts.pory"
+# 67 "data/maps/EmberDunes_2/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq EmberDunes_1_EventScript_SecretButton2_6
 EmberDunes_1_EventScript_SecretButton2_5:
-# 61 "data/maps/EmberDunes_2/scripts.pory"
+# 72 "data/maps/EmberDunes_2/scripts.pory"
 	compare VAR_RESULT, NO
 	goto_if_eq EmberDunes_1_EventScript_SecretButton2_8
 	goto EmberDunes_1_EventScript_SecretButton2_1
 
 EmberDunes_1_EventScript_SecretButton2_6:
-# 57 "data/maps/EmberDunes_2/scripts.pory"
+# 68 "data/maps/EmberDunes_2/scripts.pory"
 	msgbox EmberDunes_1_EventScript_SecretButton1_Text_1
-# 58 "data/maps/EmberDunes_2/scripts.pory"
+# 69 "data/maps/EmberDunes_2/scripts.pory"
 	addvar VAR_EMBERDUNES_BUTTONS_PRESSED, 1
-# 59 "data/maps/EmberDunes_2/scripts.pory"
+# 70 "data/maps/EmberDunes_2/scripts.pory"
 	setflag FLAG_EMBER_DUNES_BUTTON_2_PRESSED
 	goto EmberDunes_1_EventScript_SecretButton2_5
 
 EmberDunes_1_EventScript_SecretButton2_8:
-# 62 "data/maps/EmberDunes_2/scripts.pory"
+# 73 "data/maps/EmberDunes_2/scripts.pory"
 	msgbox EmberDunes_1_EventScript_SecretButton1_Text_2
 	goto EmberDunes_1_EventScript_SecretButton2_1
 
 
-EmberDunes_1_EventScript_SecretButton1_Text_0:
+Fossilboy_PostScript_Text_0:
 # 36 "data/maps/EmberDunes_2/scripts.pory"
+	.string "Wow why don't you take one of the spare\n"
+	.string "Jaw fossils I found?$"
+
+EmberDunes_1_EventScript_SecretButton1_Text_0:
+# 47 "data/maps/EmberDunes_2/scripts.pory"
 	.string "It's covered in sand but you can make\n"
 	.string "out a button on it.\p"
 	.string "Press the button?$"
 
 EmberDunes_1_EventScript_SecretButton1_Text_1:
-# 38 "data/maps/EmberDunes_2/scripts.pory"
+# 49 "data/maps/EmberDunes_2/scripts.pory"
 	.string "You press the button$"
 
 EmberDunes_1_EventScript_SecretButton1_Text_2:
-# 43 "data/maps/EmberDunes_2/scripts.pory"
+# 54 "data/maps/EmberDunes_2/scripts.pory"
 	.string "Probably the smart choice.$"
 
 EmberDunes_1_EventScript_SecretButton1_Text_3:
-# 47 "data/maps/EmberDunes_2/scripts.pory"
+# 58 "data/maps/EmberDunes_2/scripts.pory"
 	.string "I've already pressed this button. I\n"
 	.string "wonder why I did that.$"
 
 Conor_Intro::
-# 73 "data/maps/EmberDunes_2/scripts.pory"
+# 84 "data/maps/EmberDunes_2/scripts.pory"
 	.string "I hope your ready because I've been\n"
 	.string "training recently$"
 
 Conor_Outro::
-# 77 "data/maps/EmberDunes_2/scripts.pory"
+# 88 "data/maps/EmberDunes_2/scripts.pory"
 	.string "Wow. I guess I need to get back to\n"
 	.string "training$"
 
 Conor_PostBattle::
-# 81 "data/maps/EmberDunes_2/scripts.pory"
+# 92 "data/maps/EmberDunes_2/scripts.pory"
 	.string "This is an amazing place to train.$"
 
 DesertManiac_Intro::
-# 85 "data/maps/EmberDunes_2/scripts.pory"
+# 96 "data/maps/EmberDunes_2/scripts.pory"
 	.string "I hope your ready because I've been\n"
 	.string "training recently$"
 
 DesertManiac_Outro::
-# 89 "data/maps/EmberDunes_2/scripts.pory"
+# 100 "data/maps/EmberDunes_2/scripts.pory"
 	.string "Wow. I guess I need to get back to\n"
 	.string "training$"
 
 DesertManiac_PostBattle::
-# 93 "data/maps/EmberDunes_2/scripts.pory"
+# 104 "data/maps/EmberDunes_2/scripts.pory"
 	.string "This is an amazing place to train.$"
 
 Jordan_Intro::
-# 97 "data/maps/EmberDunes_2/scripts.pory"
+# 108 "data/maps/EmberDunes_2/scripts.pory"
 	.string "Well done for making it this far, but now\n"
 	.string "your time ends$"
 
 Jordan_Outro::
-# 101 "data/maps/EmberDunes_2/scripts.pory"
+# 112 "data/maps/EmberDunes_2/scripts.pory"
 	.string "Seens you've bested me. Well done!$"
 
 Jordan_PostBattle::
-# 105 "data/maps/EmberDunes_2/scripts.pory"
+# 116 "data/maps/EmberDunes_2/scripts.pory"
 	.string "I'm going to follow the footsteps of a\n"
 	.string "legendary trainer and become the very\l"
 	.string "best$"
 
 Charr_Intro::
-# 109 "data/maps/EmberDunes_2/scripts.pory"
+# 120 "data/maps/EmberDunes_2/scripts.pory"
 	.string "Jordan is unstoppable, he trains so\n"
 	.string "hard to be the best$"
 
 Charr_Outro::
-# 113 "data/maps/EmberDunes_2/scripts.pory"
+# 124 "data/maps/EmberDunes_2/scripts.pory"
 	.string "I didn't think he could lose!$"
 
 Charr_PostBattle::
-# 117 "data/maps/EmberDunes_2/scripts.pory"
+# 128 "data/maps/EmberDunes_2/scripts.pory"
 	.string "Jordan is going to keep training and we\n"
 	.string "will beat you next time we see you.$"
 
 JordanNotEnoughMons::
-# 121 "data/maps/EmberDunes_2/scripts.pory"
+# 132 "data/maps/EmberDunes_2/scripts.pory"
 	.string "Shame you don't have enough Pokémon$"
+
+FossilBoy_Intro::
+# 136 "data/maps/EmberDunes_2/scripts.pory"
+	.string "This is a great place to find ancient\n"
+	.string "fossils.$"
+
+FossilBoy_Outro::
+# 140 "data/maps/EmberDunes_2/scripts.pory"
+	.string "They should be the strongest Pokemon.$"
+
+FossilBoy_Postbattle::
+# 144 "data/maps/EmberDunes_2/scripts.pory"
+	.string "I'm taking these south to the port as\n"
+	.string "their is a scientist who can revive\l"
+	.string "them.$"

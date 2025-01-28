@@ -69,6 +69,14 @@ Route5_Pyukumuku_Clean_Up::
 	return
 
 
+Route5_Trainerbattle_DogWalker::
+# 43 "data/maps/Route5/scripts.pory"
+	trainerbattle_single ROUTE5_DOGWALKER, Route5_Dogwalker_Intro, Route5_Dogwalker_Outro, Increase_Trainers_Beaten
+# 44 "data/maps/Route5/scripts.pory"
+	msgbox Route5_Dogwalker_Postbattle, MSGBOX_AUTOCLOSE
+	return
+
+
 Route5_IslandBoat_Text_0:
 # 8 "data/maps/Route5/scripts.pory"
 	.string "Would you like to travel to Island 1?$"
@@ -97,3 +105,18 @@ Route5_Pyukumuku_Clean_Up_Text_2:
 # 36 "data/maps/Route5/scripts.pory"
 	.string "You found a big pearl under the\n"
 	.string "Pokémon.$"
+
+Route5_Dogwalker_Intro::
+# 49 "data/maps/Route5/scripts.pory"
+	.string "We love stretching our legs on this\n"
+	.string "beach.$"
+
+Route5_Dogwalker_Outro::
+# 53 "data/maps/Route5/scripts.pory"
+	.string "Exercise will make the pain of the loss\n"
+	.string "go away.$"
+
+Route5_Dogwalker_Postbattle::
+# 57 "data/maps/Route5/scripts.pory"
+	.string "We should head back the suns heading\n"
+	.string "down.$"

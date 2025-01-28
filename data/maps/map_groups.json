@@ -47,6 +47,7 @@
     "gMapGroup_HiddenDojos",
     "gMapGroup_GranitePeakCaves",
     "gMapGroup_EmberDuneIndoors",
+    "gMapGroup_QuarryIndoors",
     "gMapGroup_Archived"
   ],
   "gMapGroup_TownsAndRoutes": [
@@ -58,7 +59,6 @@
     "DewfordTown",
     "LavaridgeTown",
     "FallarborTown",
-    "VerdanturfTown",
     "PacifidlogTown",
     "Route104",
     "Route105",
@@ -118,17 +118,21 @@
     "Crystal_Cove"
   ],
   "gMapGroup_Island2": [
-    "Route5",
-    "Route5b",
     "HemlockVillage",
     "MauvilleCity",
+    "VerdanturfTown",
+    "Route5",
+    "Route5b",
+    "Route5c",
     "Route6",
+    "Route7",
     "FlowerGlade",
     "FlowerGladeWalk",
     "EmberDunes_1",
     "EmberDunes_2",
-    "Route7",
-    "EmberDunes_3"
+    "EmberDunes_3",
+    "Quarry",
+    "Route7_Daycare"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",
@@ -473,7 +477,13 @@
     "DarkCaveGF",
     "DarkCaveB1F",
     "DarkCaveB2F",
-    "DarkCave1F"
+    "DarkCave1F",
+    "Quarry_Entrance",
+    "Quarry_GF",
+    "Quarry_BF1",
+    "Quarry_BF2",
+    "Quarry_End",
+    "QuarrySecret"
   ],
   "gMapGroup_IndoorDynamic": [
     "SecretBase_RedCave1",
@@ -684,13 +694,15 @@
   "gMapGroup_HiddenBases": [
     "Nathans_Hidden_base",
     "Jenovas_Hidden_Base",
-    "Robs_Hidden_Base"
+    "Robs_Hidden_Base",
+    "Tapadap_Hidden_Base"
   ],
   "gMapGroup_HiddenGrottos": [
     "HiddenGrotto_Rowlet",
     "HiddenGrotto_Charmander",
     "HiddenGrotto_Squirtle",
-    "HiddenGrotto_LostPlates_1"
+    "HiddenGrotto_LostPlates_1",
+    "HiddenGrotto_Bulbasaur"
   ],
   "gMapGroup_MahogonyHills": [
     "MahogonyHills_1",
@@ -715,7 +727,8 @@
   "gMapGroup_GymInterior": [
     "MahoganyHills_Gym_Interior",
     "CoralBeach_Gym_Interior",
-    "Hemlock_Gym_Interior"
+    "Hemlock_Gym_Interior",
+    "EmberDunes_Gym"
   ],
   "gMapGroup_HiddenDojos": [
 
@@ -732,6 +745,10 @@
     "EmberDune_CaveGF",
     "EmberDune_Cave_BF",
     "EmberDunes_ExitCave"
+  ],
+  "gMapGroup_QuarryIndoors": [
+    "Quarry_WorkerHousing",
+    "Quarry_ForemanHouse"
   ],
   "gMapGroup_Archived": [
     "MossdeepCity_Gym",

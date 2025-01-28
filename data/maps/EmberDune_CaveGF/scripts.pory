@@ -1,1 +1,32 @@
 mapscripts EmberDune_CaveGF_MapScripts {}
+
+
+script EmbderDune_CaveGF_TrainerBattle_IceMan {
+    trainerbattle_single(EMBERDUNECAVE_ICEMAN, EmberDune_CaveGF_IceMan_Intro, EmberDune_CaveGF_IceMan_Outro, EmberDune_CaveGF_IceMan_PostScript)
+    msgbox(EmberDune_CaveGF_IceMan_Postbattle)
+}
+
+
+script EmberDune_CaveGF_IceMan_PostScript {
+    msgbox(format("I hid in this cave to stay out the heat, but I've also got this ice to keep me cool."))
+    msgbox(format("Here take a bit it will help with the intense sun."))
+    giveitem(ITEM_NEVER_MELT_ICE, 1)
+    call(Increase_Trainers_Beaten)
+    releaseall
+}
+
+//battle tate and liza? or one then another then both later to gain access to the larger desert instead of strength?
+
+//text
+
+text EmberDune_CaveGF_IceMan_Intro {
+    format("I love dessert")
+}
+
+text EmberDune_CaveGF_IceMan_Outro {
+    format("It's the only thing keeping me cool.")
+}
+
+text EmberDune_CaveGF_IceMan_Postbattle {
+    format("I hope that's helping with this heat.")
+}

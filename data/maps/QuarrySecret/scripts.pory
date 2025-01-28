@@ -1,0 +1,23 @@
+mapscripts QuarrySecret_MapScripts {}
+
+script QuarrySecret_MetalPlate {
+    lock
+    msgbox(format("There is a carving of many steel like Pokémon crawling over a plate."))
+    checkitem(ITEM_IRON_PLATE)
+    if(flag(FLAG_LEGENDS_PLATE_FOUND) && var(VAR_RESULT) == NO) {
+        msgbox(format("Do you want to put the LEGENDS PLATE in the slot?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES){
+            setvar(VAR_0x8004, 1) //horizontal
+            setvar(VAR_0x8005, 1) //vertical
+            setvar(VAR_0x8006, 8)  //number
+            setvar(VAR_0x8007, 0) //delay
+            special(ShakeCamera)
+            fadescreen(FADE_TO_BLACK)
+            warp(MAP_HIDDEN_GROTTO_LOST_PLATES_1, 6, 12)
+        }   
+    }
+    if((var(VAR_PLATEQUEST_STATE) == 2) && !flag(FLAG_LEGENDS_PLATE_FOUND)) {
+        msgbox(format("There seems to be a slot in the wall for something. Maybe it's that Key Alex spoke about."))
+    }
+    release
+}

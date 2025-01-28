@@ -29,15 +29,15 @@ MahoganyTown_EventScript_LostGirl_Right::
 # 15 "data/maps/MahogonyHills_1/scripts.pory"
 	lockall
 # 16 "data/maps/MahogonyHills_1/scripts.pory"
-	addobject 5
+	addobject 4
 # 17 "data/maps/MahogonyHills_1/scripts.pory"
-	setobjectxy 5, 23, 31
+	setobjectxy 4, 23, 31
 # 18 "data/maps/MahogonyHills_1/scripts.pory"
 	call MahoganyScript_EventScript_ChildRunning
 # 19 "data/maps/MahogonyHills_1/scripts.pory"
-	applymovement 5, Movement_Child_Hidding_Behind_Player_Right
+	applymovement 4, Movement_Child_Hidding_Behind_Player_Right
 # 20 "data/maps/MahogonyHills_1/scripts.pory"
-	waitmovement 5
+	waitmovement 4
 # 21 "data/maps/MahogonyHills_1/scripts.pory"
 	call MahoganyScript_EventScript_Monster_Setup
 # 22 "data/maps/MahogonyHills_1/scripts.pory"
@@ -51,15 +51,15 @@ MahoganyTown_EventScript_LostGirl_Left::
 # 27 "data/maps/MahogonyHills_1/scripts.pory"
 	lockall
 # 28 "data/maps/MahogonyHills_1/scripts.pory"
-	addobject 5
+	addobject 4
 # 29 "data/maps/MahogonyHills_1/scripts.pory"
-	setobjectxy 5, 23, 31
+	setobjectxy 4, 23, 31
 # 30 "data/maps/MahogonyHills_1/scripts.pory"
 	call MahoganyScript_EventScript_ChildRunning
 # 31 "data/maps/MahogonyHills_1/scripts.pory"
-	applymovement 5, Movement_Child_Hidding_Behind_Player_Left
+	applymovement 4, Movement_Child_Hidding_Behind_Player_Left
 # 32 "data/maps/MahogonyHills_1/scripts.pory"
-	waitmovement 5
+	waitmovement 4
 # 33 "data/maps/MahogonyHills_1/scripts.pory"
 	call MahoganyScript_EventScript_Monster_Setup
 # 34 "data/maps/MahogonyHills_1/scripts.pory"
@@ -75,9 +75,9 @@ MahoganyScript_EventScript_ChildRunning::
 # 40 "data/maps/MahogonyHills_1/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_MahoganyHills_ExclamationMark
 # 41 "data/maps/MahogonyHills_1/scripts.pory"
-	applymovement 5, Movement_Child_Being_Chased
+	applymovement 4, Movement_Child_Being_Chased
 # 42 "data/maps/MahogonyHills_1/scripts.pory"
-	waitmovement 5
+	waitmovement 4
 # 43 "data/maps/MahogonyHills_1/scripts.pory"
 	msgbox MahoganyScript_EventScript_ChildRunning_Text_1
 	return
@@ -87,13 +87,13 @@ MahoganyScript_EventScript_Monster_Setup::
 # 47 "data/maps/MahogonyHills_1/scripts.pory"
 	msgbox MahoganyScript_EventScript_Monster_Setup_Text_0
 # 48 "data/maps/MahogonyHills_1/scripts.pory"
-	addobject 7
+	addobject 5
 # 49 "data/maps/MahogonyHills_1/scripts.pory"
-	setobjectxy 7, 23, 31
+	setobjectxy 5, 23, 31
 # 50 "data/maps/MahogonyHills_1/scripts.pory"
-	applymovement 7, Movement_Child_Being_Chased
+	applymovement 5, Movement_Child_Being_Chased
 # 51 "data/maps/MahogonyHills_1/scripts.pory"
-	waitmovement 7
+	waitmovement 5
 # 52 "data/maps/MahogonyHills_1/scripts.pory"
 	msgbox MahoganyScript_EventScript_Monster_Setup_Text_1
 # 53 "data/maps/MahogonyHills_1/scripts.pory"
@@ -109,7 +109,7 @@ MahoganyScript_EventScript_Monster_Setup::
 
 MahoganyScript_EventScript_Monster_Beaten::
 # 60 "data/maps/MahogonyHills_1/scripts.pory"
-	removeobject 7
+	removeobject 5
 # 61 "data/maps/MahogonyHills_1/scripts.pory"
 	clearflag FLAG_CANT_CATCH_MON
 # 62 "data/maps/MahogonyHills_1/scripts.pory"
@@ -117,11 +117,11 @@ MahoganyScript_EventScript_Monster_Beaten::
 # 63 "data/maps/MahogonyHills_1/scripts.pory"
 	msgbox MahoganyScript_EventScript_Monster_Beaten_Text_1
 # 64 "data/maps/MahogonyHills_1/scripts.pory"
-	applymovement 5, Movement_Child_Being_Chased
+	applymovement 4, Movement_Child_Being_Chased
 # 65 "data/maps/MahogonyHills_1/scripts.pory"
-	waitmovement 5
+	waitmovement 4
 # 66 "data/maps/MahogonyHills_1/scripts.pory"
-	removeobject 5
+	removeobject 4
 # 67 "data/maps/MahogonyHills_1/scripts.pory"
 	msgbox MahoganyScript_EventScript_Monster_Beaten_Text_2
 # 68 "data/maps/MahogonyHills_1/scripts.pory"

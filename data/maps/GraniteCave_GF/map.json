@@ -30,11 +30,11 @@
   ],
   "warp_events": [
     {
-      "x": 16,
-      "y": 10,
+      "x": 23,
+      "y": 1,
       "elevation": 0,
-      "dest_map": "MAP_ROUTE3C",
-      "dest_warp_id": "3"
+      "dest_map": "MAP_GRANITE_CAVE_1F",
+      "dest_warp_id": "0"
     },
     {
       "x": 3,

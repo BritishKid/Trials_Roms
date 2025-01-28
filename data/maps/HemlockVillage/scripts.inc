@@ -25,7 +25,7 @@ SwampTown_KingsRock_Boy::
 # 15 "data/maps/HemlockVillage/scripts.pory"
 	goto_if_unset FLAG_RECEIVED_KINGS_ROCK, SwampTown_KingsRock_Boy_2
 SwampTown_KingsRock_Boy_1:
-# 19 "data/maps/HemlockVillage/scripts.pory"
+# 20 "data/maps/HemlockVillage/scripts.pory"
 	releaseall
 	return
 
@@ -34,76 +34,78 @@ SwampTown_KingsRock_Boy_2:
 	msgbox SwampTown_KingsRock_Boy_Text_1
 # 17 "data/maps/HemlockVillage/scripts.pory"
 	giveitem ITEM_KINGS_ROCK, 1
+# 18 "data/maps/HemlockVillage/scripts.pory"
+	setflag FLAG_RECEIVED_KINGS_ROCK
 	goto SwampTown_KingsRock_Boy_1
 
 
 HemlockVillage_EventScript_BlackBelt::
-# 23 "data/maps/HemlockVillage/scripts.pory"
-	lockall
 # 24 "data/maps/HemlockVillage/scripts.pory"
-	faceplayer
+	lockall
 # 25 "data/maps/HemlockVillage/scripts.pory"
+	faceplayer
+# 26 "data/maps/HemlockVillage/scripts.pory"
 	goto_if_unset FLAG_REMOVED_MOSSDEEP_ROCK, HemlockVillage_EventScript_BlackBelt_2
 HemlockVillage_EventScript_BlackBelt_1:
-# 28 "data/maps/HemlockVillage/scripts.pory"
+# 29 "data/maps/HemlockVillage/scripts.pory"
 	goto_if_set FLAG_REMOVED_MOSSDEEP_ROCK, HemlockVillage_EventScript_BlackBelt_5
 HemlockVillage_EventScript_BlackBelt_4:
-# 32 "data/maps/HemlockVillage/scripts.pory"
+# 33 "data/maps/HemlockVillage/scripts.pory"
 	releaseall
 	return
 
 HemlockVillage_EventScript_BlackBelt_2:
-# 26 "data/maps/HemlockVillage/scripts.pory"
+# 27 "data/maps/HemlockVillage/scripts.pory"
 	msgbox HemlockVillage_EventScript_BlackBelt_Text_0
 	goto HemlockVillage_EventScript_BlackBelt_1
 
 HemlockVillage_EventScript_BlackBelt_5:
-# 29 "data/maps/HemlockVillage/scripts.pory"
+# 30 "data/maps/HemlockVillage/scripts.pory"
 	msgbox HemlockVillage_EventScript_BlackBelt_Text_1
 	goto HemlockVillage_EventScript_BlackBelt_4
 
 
 HemlockVillage_EventScript_Man::
-# 36 "data/maps/HemlockVillage/scripts.pory"
-	lockall
 # 37 "data/maps/HemlockVillage/scripts.pory"
-	faceplayer
+	lockall
 # 38 "data/maps/HemlockVillage/scripts.pory"
-	msgbox HemlockVillage_EventScript_Man_Text_0
+	faceplayer
 # 39 "data/maps/HemlockVillage/scripts.pory"
+	msgbox HemlockVillage_EventScript_Man_Text_0
+# 40 "data/maps/HemlockVillage/scripts.pory"
 	releaseall
 	return
 
 
 SwampTown_RockToSmash::
-# 43 "data/maps/HemlockVillage/scripts.pory"
-	lockall
 # 44 "data/maps/HemlockVillage/scripts.pory"
-	checkitem ITEM_PICKAXE, 1
+	lockall
 # 45 "data/maps/HemlockVillage/scripts.pory"
+	checkitem ITEM_PICKAXE, 1
+# 46 "data/maps/HemlockVillage/scripts.pory"
 	compare VAR_RESULT, FALSE
 	goto_if_eq SwampTown_RockToSmash_2
 SwampTown_RockToSmash_1:
-# 48 "data/maps/HemlockVillage/scripts.pory"
+# 49 "data/maps/HemlockVillage/scripts.pory"
 	compare VAR_RESULT, TRUE
 	goto_if_eq SwampTown_RockToSmash_5
 SwampTown_RockToSmash_4:
-# 63 "data/maps/HemlockVillage/scripts.pory"
+# 64 "data/maps/HemlockVillage/scripts.pory"
 	releaseall
 	return
 
 SwampTown_RockToSmash_2:
-# 46 "data/maps/HemlockVillage/scripts.pory"
+# 47 "data/maps/HemlockVillage/scripts.pory"
 	msgbox SwampTown_RockToSmash_Text_0
 	goto SwampTown_RockToSmash_1
 
 SwampTown_RockToSmash_5:
-# 49 "data/maps/HemlockVillage/scripts.pory"
-	msgbox SwampTown_RockToSmash_Text_1, MSGBOX_YESNO
 # 50 "data/maps/HemlockVillage/scripts.pory"
+	msgbox SwampTown_RockToSmash_Text_1, MSGBOX_YESNO
+# 51 "data/maps/HemlockVillage/scripts.pory"
 	compare VAR_RESULT, NO
 	goto_if_eq SwampTown_RockToSmash_8
-# 53 "data/maps/HemlockVillage/scripts.pory"
+# 54 "data/maps/HemlockVillage/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq SwampTown_RockToSmash_10
 	goto SwampTown_RockToSmash_4
@@ -112,22 +114,22 @@ SwampTown_RockToSmash_8:
 	end
 
 SwampTown_RockToSmash_10:
-# 54 "data/maps/HemlockVillage/scripts.pory"
-	setflag FLAG_REMOVED_MOSSDEEP_ROCK
 # 55 "data/maps/HemlockVillage/scripts.pory"
-	removeobject 5
+	setflag FLAG_REMOVED_MOSSDEEP_ROCK
 # 56 "data/maps/HemlockVillage/scripts.pory"
-	applymovement 4, Movement_SwampTown_SurprisedBrother
+	removeobject 5
 # 57 "data/maps/HemlockVillage/scripts.pory"
-	waitmovement 4
+	applymovement 4, Movement_SwampTown_SurprisedBrother
 # 58 "data/maps/HemlockVillage/scripts.pory"
+	waitmovement 4
+# 59 "data/maps/HemlockVillage/scripts.pory"
 	msgbox SwampTown_RockToSmash_Text_2
 	goto SwampTown_RockToSmash_4
 
 
-# 70 "data/maps/HemlockVillage/scripts.pory"
-Movement_SwampTown_SurprisedBrother:
 # 71 "data/maps/HemlockVillage/scripts.pory"
+Movement_SwampTown_SurprisedBrother:
+# 72 "data/maps/HemlockVillage/scripts.pory"
 	emote_exclamation_mark
 	step_end
 
@@ -146,28 +148,28 @@ SwampTown_KingsRock_Boy_Text_1:
 	.string "Here have this one$"
 
 HemlockVillage_EventScript_BlackBelt_Text_0:
-# 26 "data/maps/HemlockVillage/scripts.pory"
+# 27 "data/maps/HemlockVillage/scripts.pory"
 	.string "I'm trying to prove to my brother I can\n"
 	.string "smash rocks like him..$"
 
 HemlockVillage_EventScript_BlackBelt_Text_1:
-# 29 "data/maps/HemlockVillage/scripts.pory"
+# 30 "data/maps/HemlockVillage/scripts.pory"
 	.string "How in the world did you do that?$"
 
 HemlockVillage_EventScript_Man_Text_0:
-# 38 "data/maps/HemlockVillage/scripts.pory"
+# 39 "data/maps/HemlockVillage/scripts.pory"
 	.string "I'm sure I can hear Pokémon hiding in\n"
 	.string "these trees.$"
 
 SwampTown_RockToSmash_Text_0:
-# 46 "data/maps/HemlockVillage/scripts.pory"
+# 47 "data/maps/HemlockVillage/scripts.pory"
 	.string "It's a rugged rock.$"
 
 SwampTown_RockToSmash_Text_1:
-# 49 "data/maps/HemlockVillage/scripts.pory"
+# 50 "data/maps/HemlockVillage/scripts.pory"
 	.string "This rock appears to be breakable.\nWould you like to use your Pickaxe?$"
 
 SwampTown_RockToSmash_Text_2:
-# 58 "data/maps/HemlockVillage/scripts.pory"
+# 59 "data/maps/HemlockVillage/scripts.pory"
 	.string "How did a scrawny lout like you manage\n"
 	.string "that?$"

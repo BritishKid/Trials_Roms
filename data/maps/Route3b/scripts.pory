@@ -130,7 +130,7 @@ text Rose_Postbattle {
 }
 
 text Lily_Intro {
-    format("Did you see Bulbsaur anywhere?")
+    format("Did you see Bulbasaur anywhere?")
 }
 
 text Lily_Outro {

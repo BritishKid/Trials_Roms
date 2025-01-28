@@ -13,11 +13,11 @@ mapscripts MahogonyHills_1_MapScripts {
 
 script MahoganyTown_EventScript_LostGirl_Right {
     lockall
-    addobject(5)
-    setobjectxy(5, 23, 31)
+    addobject(4)
+    setobjectxy(4, 23, 31)
     call(MahoganyScript_EventScript_ChildRunning)
-    applymovement(5, Movement_Child_Hidding_Behind_Player_Right)
-    waitmovement(5)
+    applymovement(4, Movement_Child_Hidding_Behind_Player_Right)
+    waitmovement(4)
     call(MahoganyScript_EventScript_Monster_Setup)
     call(MahoganyScript_EventScript_Monster_Beaten)
     releaseall
@@ -25,11 +25,11 @@ script MahoganyTown_EventScript_LostGirl_Right {
 
 script MahoganyTown_EventScript_LostGirl_Left {
     lockall
-    addobject(5)
-    setobjectxy(5, 23, 31)
+    addobject(4)
+    setobjectxy(4, 23, 31)
     call(MahoganyScript_EventScript_ChildRunning)
-    applymovement(5, Movement_Child_Hidding_Behind_Player_Left)
-    waitmovement(5)
+    applymovement(4, Movement_Child_Hidding_Behind_Player_Left)
+    waitmovement(4)
     call(MahoganyScript_EventScript_Monster_Setup)
     call(MahoganyScript_EventScript_Monster_Beaten)
     releaseall
@@ -38,17 +38,17 @@ script MahoganyTown_EventScript_LostGirl_Left {
 script MahoganyScript_EventScript_ChildRunning {
     msgbox(format("AHHHHH! HELP!"))
     applymovement(OBJ_EVENT_ID_PLAYER, Movement_MahoganyHills_ExclamationMark)
-    applymovement(5, Movement_Child_Being_Chased)
-    waitmovement(5)
+    applymovement(4, Movement_Child_Being_Chased)
+    waitmovement(4)
     msgbox(format("PLEASE HELP ME, IT'S A MONSTER"))
 }
 
 script MahoganyScript_EventScript_Monster_Setup {
     msgbox(format("IT'S GETTING CLOSER!"))
-    addobject(7)
-    setobjectxy(7, 23, 31)
-    applymovement(7, Movement_Child_Being_Chased)
-    waitmovement(7)
+    addobject(5)
+    setobjectxy(5, 23, 31)
+    applymovement(5, Movement_Child_Being_Chased)
+    waitmovement(5)
     msgbox(format("A giant Poochyena charges up to you!"))
     setflag(FLAG_CANT_CATCH_MON)
     settotemboost(1,1,1,1,0,0,0,0)
@@ -57,13 +57,13 @@ script MahoganyScript_EventScript_Monster_Setup {
 }
 
 script MahoganyScript_EventScript_Monster_Beaten {
-    removeobject(7)
+    removeobject(5)
     clearflag(FLAG_CANT_CATCH_MON)
     msgbox("Oh wow you did it!")
     msgbox(format("What my dad want's me back? I should rush home. Thanks again!"))
-    applymovement(5, Movement_Child_Being_Chased)
-    waitmovement(5)
-    removeobject(5)
+    applymovement(4, Movement_Child_Being_Chased)
+    waitmovement(4)
+    removeobject(4)
     msgbox(format("The Poochyena dropped something in the battle"))
     msgbox(format("It's the TM for THIEF"))
     giveitem(ITEM_TM_THIEF, 1)

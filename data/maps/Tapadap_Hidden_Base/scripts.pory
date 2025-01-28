@@ -1,0 +1,29 @@
+mapscripts Tapadap_Hidden_Base_MapScripts {}
+
+script Taps_Computer {
+    lockall
+    msgbox(format("Well done to Tap for getting the first recorded shiny in the game!"))
+    releaseall
+}
+
+script Tapadap_SecretBase {
+    lockall
+    faceplayer
+    msgbox(format("Hi I'm Tapadapbadadap"))
+    msgbox(format("BATTLE HERE BUT NOT FOR YOU VIEWERS ITS SPOILERS"))
+    //give shiny hoppip
+    releaseall
+}
+
+script Taps_Hidden_Base_EventScript_Find_MeowthDoll {
+    lockall
+    if(!flag(FLAG_FOUND_MEOWTH_DOLL)) {
+        msgbox(format("It's Tap's Meowth doll."))
+        adddecoration(DECOR_MEOWTH_DOLL)
+        setflag(FLAG_FOUND_MEOWTH_DOLL)
+        msgbox(format("You've unlocked the MEOWTH DOLL for your secret base."))
+    } else {
+        msgbox(format("It's Tap's Meowth doll."))
+    }
+    releaseall  
+}

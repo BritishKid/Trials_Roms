@@ -3,13 +3,13 @@ mapscripts Route4_MapScripts {}
 
 script Route4_TrainerBattle_Jakobi {
     trainerbattle_single(ROUTE4_COOLTRAINER_JAKOBI, Jakobi_Intro, Jakobi_Outro, Increase_Trainers_Beaten)
-    msgbox(Jakobi_Postbattle, MSGBOX_DEFAULT)
+    msgbox(Jakobi_Postbattle, MSGBOX_AUTOCLOSE)
     end
 }
 
 script Route4_TrainerBattle_ToughBug {
     trainerbattle_single(ROUTE4_BUGCATCHER, Route4Bug_Intro, Route4Bug_Outro, Increase_Trainers_Beaten)
-    msgbox(Route4Bug_Postbattle, MSGBOX_DEFAULT)
+    msgbox(Route4Bug_Postbattle, MSGBOX_AUTOCLOSE)
     end
 }
 

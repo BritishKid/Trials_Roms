@@ -1,0 +1,24 @@
+mapscripts VerdanturfTown_House_MapScripts {
+
+}
+
+script VerdanturfTown_EventScript_CraftingTable {
+    lockall
+    call(CraftTutorial_EventScript_Table)
+    releaseall
+}
+
+
+script VerdanturfTownHouse_EventScript_OldWoman {
+    lockall
+    checkitem(ITEM_DOWSING_MACHINE)
+    if(var(VAR_RESULT) == YES) {
+        msgbox(format("Have you found anything out there?"))
+    }
+    else {
+        msgbox(format("I used to pick up lots of litter dropped by other trainers but as I've got old I can't travel so far. My young trainer why don't you take this and keep up my good work."))
+        giveitem(ITEM_DOWSING_MACHINE)
+        msgbox(format("You'll be surprised at what you can find."))
+    }
+    releaseall
+}

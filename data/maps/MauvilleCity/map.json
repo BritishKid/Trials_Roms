@@ -22,6 +22,11 @@
       "map": "MAP_ROUTE5B",
       "offset": -15,
       "direction": "left"
+    },
+    {
+      "map": "MAP_ROUTE5C",
+      "offset": 13,
+      "direction": "left"
     }
   ],
   "object_events": [
@@ -128,6 +133,19 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "ThugCity_Mart_EventScript_Clerk",
       "flag": "FLAG_HIDE_THUG_CITY_OVERWORLD_INHABITANTS"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 11,
+      "y": 24,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "ITEM_TM_REST",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_ITEM_ROUTE_106_PROTEIN"
     }
   ],
   "warp_events": [

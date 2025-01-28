@@ -27,6 +27,17 @@ script EmberDune_Charr_AceTrainer {
     release
 }
 
+script EmberDune_FossilBoy_Battle {
+    trainerbattle_single(EMBERDUNE_FOSSILBOY, FossilBoy_Intro, FossilBoy_Outro, Fossilboy_PostScript)
+    msgbox(FossilBoy_Postbattle, MSGBOX_AUTOCLOSE)
+}
+
+script Fossilboy_PostScript {
+    msgbox(format("Wow why don't you take one of the spare Jaw fossils I found?"))
+    giveitem(ITEM_JAW_FOSSIL)
+    call(Increase_Trainers_Beaten)
+    releaseall
+}
 
 //legendary encounter
 
@@ -120,4 +131,16 @@ text Charr_PostBattle {
 
 text JordanNotEnoughMons {
     format("Shame you don't have enough Pokémon")
+}
+
+text FossilBoy_Intro {
+    format("This is a great place to find ancient fossils.")
+}
+
+text FossilBoy_Outro {
+    format("They should be the strongest Pokemon.")
+}
+
+text FossilBoy_Postbattle {
+    format("I'm taking these south to the port as their is a scientist who can revive them.") //TODO ADD THE NAME OF THE PORT CITY
 }

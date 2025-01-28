@@ -1,0 +1,127 @@
+mapscripts EmberDunes_Gym_MapScripts {}
+
+
+script Gym4_EventScript_Greeter {
+    lockall
+    faceplayer
+    msgbox(format("Yo Champ in the making! This gym specialises in Ghost types. Ghost, Dark and Crystal moves are the best way to take them out."))
+    msgbox(format("Let me heal up your Pokémon before you go further."))
+    special(HealPlayerParty)
+    if(flag(FLAG_LEVEL_CAPS_ON) && !flag(FLAG_BADGE04_GET)) {
+        msgbox(format("How about a battle for some fast levels?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES) {
+            cleartrainerflag(GYM_XP_DUMP)
+            trainerbattle_no_intro(GYM_XP_DUMP, GymXpDump_Outro)
+        }
+     }
+    releaseall
+}
+
+//leader
+
+
+script Gym4_EventScript_GymLeader_Sarah {
+    lockall
+    trainerbattle_single(TRAINER_SARAH_GYMLEADER, Gym4_Sarah_Intro, Gym4_Sarah_Outro, Gym4_Sarah_PostbattleScript)
+    msgbox(Gym4_Sarah_PostBattle, MSGBOX_AUTOCLOSE)
+    releaseall
+}
+
+script Gym4_Sarah_PostbattleScript {
+    msgbox(format("Fantastic! You're well on your way to becoming a champion.")) //todo change
+    playfanfare(MUS_OBTAIN_BADGE)
+    msgbox(format("You obtained the Ruin Badge."))
+    special(DoDomeConfetti)
+    // subquestmenu(QUEST_MENU_COMPLETE_QUEST, QUEST_POKEMON_LEAGUE, SUB_QUEST_RUIN_BADGE)
+    setflag(FLAG_BADGE04_GET)
+    msgbox(format("Also please take this TM it contains Shadow Ball"))
+    playfanfare(MUS_OBTAIN_ITEM)
+    giveitem(ITEM_TM30)
+    releaseall
+}
+
+script Gym4_Trainer_Ollie {
+    trainerbattle_single(TRAINER_OLLIE_GYM4, Gym4_Ollie_Intro, Gym4_Ollie_Outro)
+    msgbox(Gym4_Ollie_PostBattle, MSGBOX_AUTOCLOSE)
+    releaseall
+}
+
+script Gym4_Trainer_Bitters {
+    trainerbattle_single(TRAINER_BITTERS_GYM4, Gym4_Bitter_Intro, Gym4_Bitter_Outro)
+    msgbox(Gym4_Bitter_PostBattle, MSGBOX_AUTOCLOSE)
+    releaseall
+}
+
+script Gym4_Trainer_GymTrainer1 {
+    trainerbattle_single(TRAINER_TRAINER1_GYM4, Gym4_Trainer1_Intro, Gym4_Trainer1_Outro)
+    msgbox(Gym4_Trainer1_PostBattle, MSGBOX_AUTOCLOSE)
+    releaseall
+}
+
+script Gym4_Trainer_Ay {
+    trainerbattle_single(TRAINER_AY_GYM4, Gym4_Ay_Intro, Gym4_Ay_Outro)
+    msgbox(Gym4_Ay_PostBattle, MSGBOX_AUTOCLOSE)
+    releaseall
+}
+
+//text
+text Gym4_Sarah_Intro {
+    format("")
+}
+
+text Gym4_Sarah_Outro {
+    format("")
+}
+
+text Gym4_Sarah_PostBattle {
+    format("")
+}
+
+
+text Gym4_Bitter_Intro {
+    format("Boo\nDid i get ya?")
+}
+
+text Gym4_Bitter_Outro {
+    format("Aww man didnt get ya")
+}
+
+text Gym4_Bitter_PostBattle {
+    format("I'll have to hide better.")
+}
+
+text Gym4_Trainer1_Intro {
+    format("...?")
+}
+
+text Gym4_Trainer1_Outro {
+    format("...!")
+}
+
+text Gym4_Trainer1_PostBattle {
+    format("...")
+}
+
+text Gym4_Ay_Intro {
+    format("Hey, looks like you've seen a ghost")
+}
+
+text Gym4_Ay_Outro {
+    format("This place still gives me the creeps.")
+}
+
+text Gym4_Ay_PostBattle {
+    format("Welp...I've seen a ghost")
+}
+
+text Gym4_Ollie_Intro {
+    format("This place is spooky, Steelix will learn so much.")
+}
+
+text Gym4_Ollie_Outro {
+    format("You almost made it a real ghost type!")
+}
+
+text Gym4_Ollie_PostBattle {
+    format("I might pop into the Quarry on my way south, I heard it's great to train my Steelix.")
+}

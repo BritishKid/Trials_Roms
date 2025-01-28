@@ -17,6 +17,11 @@
       "map": "MAP_EMBER_DUNES_2",
       "offset": 0,
       "direction": "right"
+    },
+    {
+      "map": "MAP_EMBER_DUNES_3",
+      "offset": -20,
+      "direction": "down"
     }
   ],
   "object_events": [

@@ -147,7 +147,7 @@ FrontPageRob_Outro::
 
 PostBattle_FrontPageRob::
 # 74 "data/maps/Robs_Hidden_Base/scripts.pory"
-	.string "$"
+	.string "I need to study less and train more.$"
 
 Beat_FrontPageRob::
 # 78 "data/maps/Robs_Hidden_Base/scripts.pory"

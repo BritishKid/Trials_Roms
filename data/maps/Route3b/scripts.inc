@@ -308,7 +308,7 @@ Rose_Postbattle::
 
 Lily_Intro::
 # 132 "data/maps/Route3b/scripts.pory"
-	.string "Did you see Bulbsaur anywhere?$"
+	.string "Did you see Bulbasaur anywhere?$"
 
 Lily_Outro::
 # 136 "data/maps/Route3b/scripts.pory"

@@ -17,6 +17,11 @@
       "map": "MAP_ROUTE7",
       "offset": 0,
       "direction": "left"
+    },
+    {
+      "map": "MAP_ROUTE7_DAYCARE",
+      "offset": -30,
+      "direction": "up"
     }
   ],
   "object_events": [
@@ -109,7 +114,15 @@
       "y": 5,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "VerdanturfTown_EventScript_RusturfTunnelSign"
+      "script": "VerdanturfTown_EventScript_DayCareSign"
+    },
+    {
+      "type": "hidden_item",
+      "x": 2,
+      "y": 4,
+      "elevation": 3,
+      "item": "ITEM_WHITE_HERB",
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE_123_HYPER_POTION"
     }
   ]
 }

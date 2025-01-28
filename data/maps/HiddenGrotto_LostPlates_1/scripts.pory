@@ -72,3 +72,27 @@ script EarthPlate_Altar {
     }
     releaseall
 }
+
+script IronPlate_Alter {
+    lockall
+    checkitem(ITEM_IRON_PLATE, 1)
+    if(var(VAR_RESULT) == NO) {
+        msgbox(format("There is a plate with an ancient steel Pokémon inscribed on it"))
+        msgbox(format("Do you want to take it?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES) {
+            msgbox(format("As you reach for the plate a giant Pokémon jumps out."))
+            setflag(FLAG_CANT_CATCH_MON)
+            settotemboost(1, 0, 1, 1, 0, 1, 0, 0)
+            setwildbattle(SPECIES_ORTHWORM, 40, ITEM_IRON_PLATE)
+            dowildbattle
+            msgbox(format("Orthworm retreats into the cave."))
+            msgbox(format("You pick up the Iron Plate"))
+            giveitem(ITEM_IRON_PLATE)
+            addvar(VAR_PLATES_FOUND, 1)
+        }
+    }
+    if(var(VAR_RESULT) == YES) {
+        msgbox(format("The alter is empty."))
+    }
+    releaseall
+}

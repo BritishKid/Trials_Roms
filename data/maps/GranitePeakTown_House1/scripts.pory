@@ -24,7 +24,6 @@ script GranitePeakTown_House1_Alex {
     if(flag(FLAG_LEGENDS_PLATE_FOUND)) {
         msgbox(format("Tips on where to find plates will be here!"))
     }
-
     releaseall
 }
 

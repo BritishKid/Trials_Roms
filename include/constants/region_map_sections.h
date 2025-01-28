@@ -64,8 +64,8 @@
 #define MAPSEC_RUSTURF_TUNNEL               0x3C
 #define MAPSEC_ABANDONED_SHIP               0x3D
 #define MAPSEC_NEW_MAUVILLE                 0x3E
-#define MAPSEC_METEOR_FALLS                 0x3F
-#define MAPSEC_METEOR_FALLS2                0x40
+#define MAPSEC_LOST_LAKE                 0x3F
+#define MAPSEC_LOST_LAKE2                0x40
 #define MAPSEC_MT_PYRE                      0x41
 #define MAPSEC_OBSIDIAN_THICKET_OLD             0x42
 #define MAPSEC_SHOAL_CAVE                   0x43
@@ -85,7 +85,7 @@
 #define MAPSEC_ISLAND_CAVE                  0x51
 #define MAPSEC_DESERT_RUINS                 0x52
 #define MAPSEC_ANCIENT_TOMB                 0x53
-#define MAPSEC_INSIDE_OF_TRUCK              0x54
+#define MAPSEC_QUARRY              0x54
 #define MAPSEC_SKY_PILLAR                   0x55
 #define MAPSEC_SECRET_BASE                  0x56
 #define MAPSEC_DYNAMIC                      0x57

@@ -1,0 +1,15 @@
+mapscripts VerdanturfTown_MapScripts {
+
+}
+
+script VerdanturfTown_EventScript_DayCareSign {
+    lockall
+    msgbox(format("Pokemon Day Care:\lLet use look after your little friends!"))
+    releaseall
+}
+
+script VerdanturfTown_EventScript_TownSign {
+    lockall
+    msgbox(format("TODO NAME TOWN:\lWORDS BUT YES"))
+    releaseall
+}

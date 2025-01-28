@@ -1,1 +1,61 @@
 mapscripts Route7_MapScripts {}
+
+script Route7_TrainerBattle_Mai {
+    trainerbattle_single(ROUTE7_MAI, Route7_Mai_Intro, Route7_Mai_Outro, Increase_Trainers_Beaten) 
+    msgbox(Route7_Mai_Postbattle, MSGBOX_AUTOCLOSE)
+}
+
+script Route7_CoolTrainer_Sean {
+    trainerbattle_single(ROUTE7_SEAN, Route7_Sean_Intro, Route7_Sean_Outro, Increase_Trainers_Beaten) 
+    msgbox(Route7_Sean_Postbattle, MSGBOX_AUTOCLOSE)
+}
+
+script Route7_HappyDad {
+    trainerbattle_single(ROUTE7_HAPPYDAD, Route7_HappyDad_Intro, Route7_HappyDad_Outro, Increase_Trainers_Beaten) 
+    msgbox(Route7_HappyDad_Postbattle, MSGBOX_AUTOCLOSE)
+}
+
+
+//Trainer: middle aged wholesome dad type whose pokemon are all the kid's pets, but evolved
+ // Usraring, Rock ruff evo, Glameow, Ampbiom
+
+//text
+
+text Route7_Mai_Intro {
+    format("I spent ages trying to get this special Altaria.")
+}
+
+text Route7_Mai_Outro {
+    format("I still have to finish training it.")
+}
+
+text Route7_Mai_Postbattle {
+    format("4 weeks and they lost their first fight...")
+}
+
+text Route7_Sean_Intro {
+    format("This is my private berry patch, I use it to grow the rarest of berries.")
+}
+
+text Route7_Sean_Outro {
+    format("That never happens.")
+}
+
+text Route7_Sean_Postbattle {
+    format("Fine, you can use these berry patches. Just don't tell anyone you beat me.")
+}
+
+text Route7_HappyDad_Intro {
+    format("")
+}
+
+text Route7_HappyDad_Outro {
+    format("")
+} 
+
+text Route7_HappyDad_Postbattle {
+    format("")
+}
+
+//Trainer: middle aged wholesome dad type whose pokemon are all the kid's pets, but evolved
+ // Usraring, Rock ruff evo, Glameow, Ampbiom

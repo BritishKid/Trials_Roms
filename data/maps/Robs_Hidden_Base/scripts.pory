@@ -72,7 +72,7 @@ text FrontPageRob_Outro {
 }
 
 text PostBattle_FrontPageRob {
-    format("")
+    format("I need to study less and train more.")
 }
 
 text Beat_FrontPageRob {

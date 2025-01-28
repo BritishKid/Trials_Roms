@@ -44,7 +44,7 @@
 
 #define FLAG_FOUND_GULPIN_DOLL    0x20 // Used
 #define FLAG_FOUND_MUDKIP_DOLL    0x21 // Used
-#define FLAG_UNUSED_0x022    0x22 // Unused Flag
+#define FLAG_FOUND_MEOWTH_DOLL    0x22 // Used
 #define FLAG_RECEIVED_BULBSAUR    0x23 // Unused Flag
 #define FLAG_RECEIVED_SQUIRTLE    0x24 // Unused Flag
 #define FLAG_RECEIVED_CHARMANDER    0x25 // Unused Flag
@@ -110,16 +110,16 @@
 
 #define FLAG_HIDE_CONTEST_POKE_BALL          0x56  // Always set after new game, object it hides is added directly
 #define FLAG_SALT7_BEATEN_FIRST_ENCOUNTER    0x57 //used
-#define FLAG_BIRCH_AIDE_MET                  0x58
+#define FLAG_HIDE_FOURTH_ENCOUNTER_ROB                  0x58
 #define FLAG_ACRO_BIKE                   0x59 //used
-#define FLAG_RECEIVED_BIKE                   0x5A
+#define FLAG_HIDE_QUARRY_FOREMAN_IN_QUARRY                   0x5A //was recieved bike
 #define FLAG_WATTSON_REMATCH_AVAILABLE       0x5B
 #define FLAG_COLLECTED_ALL_SILVER_SYMBOLS    0x5C
 #define FLAG_GOOD_LUCK_SAFARI_ZONE           0x5D // Set after talking to NPC blocking Safari Zone entrance/exit once.
-#define FLAG_RECEIVED_WAILMER_PAIL           0x5E
+#define FLAG_RECEIVED_WAILMER_PAIL           0x5E //used
 #define FLAG_RECEIVED_POKEBLOCK_CASE         0x5F
-#define FLAG_RECEIVED_SECRET_POWER           0x60
-#define FLAG_MET_TEAM_AQUA_HARBOR            0x61
+#define FLAG_RECEIVED_SECRET_POWER           0x60 // used
+#define FLAG_HIDE_STEELIX            0x61
 #define FLAG_TV_EXPLAINED                    0x62
 #define FLAG_MAUVILLE_GYM_BARRIERS_STATE     0x63
 #define FLAG_REMOVED_MOSSDEEP_ROCK           0x64 // Leftover from the RS version of Mossdeep Gym, functionally unused
@@ -547,14 +547,14 @@
 
 // Hidden Items
 #define FLAG_HIDDEN_ITEMS_START                                                         0x1F4
-#define FLAG_HIDDEN_ITEM_LAVARIDGE_TOWN_ICE_HEAL             (FLAG_HIDDEN_ITEMS_START + 0x00)
+#define FLAG_HIDDEN_ITEM_QUARRY_ROCKY_HELMET             (FLAG_HIDDEN_ITEMS_START + 0x00)
 #define FLAG_ITEM_HEMLOCK_VILLAGE_NET_BALL                  (FLAG_HIDDEN_ITEMS_START + 0x01)
 #define FLAG_HIDDEN_ITEM_ROUTE_111_STARDUST                  (FLAG_HIDDEN_ITEMS_START + 0x02)
 #define FLAG_HIDDEN_ITEM_ROUTE_113_ETHER                     (FLAG_HIDDEN_ITEMS_START + 0x03)
 #define FLAG_HIDDEN_ITEM_ROUTE_114_CARBOS                    (FLAG_HIDDEN_ITEMS_START + 0x04)
 #define FLAG_HIDDEN_ITEM_ROUTE_119_CALCIUM                   (FLAG_HIDDEN_ITEMS_START + 0x05)
 #define FLAG_HIDDEN_ITEM_ROUTE_119_ULTRA_BALL                (FLAG_HIDDEN_ITEMS_START + 0x06)
-#define FLAG_HIDDEN_ITEM_ROUTE_123_SUPER_REPEL               (FLAG_HIDDEN_ITEMS_START + 0x07)
+#define FLAG_HIDDEN_ITEM_QUARRY_LINKINGCORE               (FLAG_HIDDEN_ITEMS_START + 0x07)
 #define FLAG_HIDDEN_ITEM_UNDERWATER_124_CARBOS               (FLAG_HIDDEN_ITEMS_START + 0x08)
 #define FLAG_HIDDEN_ITEM_UNDERWATER_124_GREEN_SHARD          (FLAG_HIDDEN_ITEMS_START + 0x09)
 #define FLAG_HIDDEN_ITEM_UNDERWATER_124_PEARL                (FLAG_HIDDEN_ITEMS_START + 0x0A)
@@ -692,7 +692,7 @@
 #define FLAG_UNUSED_0x281  0x281 // Unused Flag
 
 #define FLAG_GIANT_AZUMARILL_BEATEN  0x282
-#define FLAG_UNUSED_0x283  0x283 // Unused Flag
+#define FLAG_GIANT_GOREBYSS_BEATEN  0x283 // Unused Flag
 #define FLAG_UNUSED_0x284  0x284 // Unused Flag
 #define FLAG_UNUSED_0x285  0x285 // Unused Flag
 #define FLAG_UNUSED_0x286  0x286 // Unused Flag
@@ -910,7 +910,7 @@
 #define FLAG_HIDE_MAGMA_HIDEOUT_4F_GROUDON                          0x355
 #define FLAG_HIDE_SOOTOPOLIS_CITY_RESIDENTS                         0x356
 #define FLAG_HIDE_SKY_PILLAR_WALLACE                                0x357
-#define FLAG_HIDE_MT_PYRE_SUMMIT_MAXIE                              0x358
+#define FLAG_HIDE_QUARRY_WORKERS                              0x358
 #define FLAG_HIDE_MAGMA_HIDEOUT_GRUNTS                              0x359
 #define FLAG_HIDE_VICTORY_ROAD_ENTRANCE_WALLY                       0x35A
 #define FLAG_HIDE_SEAFLOOR_CAVERN_ROOM_9_KYOGRE                     0x35B
@@ -1176,7 +1176,7 @@
 #define FLAG_ITEM_MAHOGANYHILLS_3_CELL_BATTERY                      0x45D
 #define FLAG_ITEM_FLOWERGLADE_BULLETSEED                              0x45E
 #define FLAG_ITEM_SAFARI_ZONE_NORTH_CALCIUM                         0x45F
-#define FLAG_ITEM_MT_PYRE_3F_SUPER_REPEL                            0x460
+#define FLAG_ITEM_QUARRY_KINGS_ROCK                            0x460
 #define FLAG_ITEM_ROUTE_118_HYPER_POTION                            0x461
 #define FLAG_ITEM_NEW_MAUVILLE_FULL_HEAL                            0x462
 #define FLAG_ITEM_NEW_MAUVILLE_PARALYZE_HEAL                        0x463
@@ -1223,7 +1223,7 @@
 #define FLAG_ITEM_MAGMA_HIDEOUT_2F_2R_MAX_ELIXIR                    0x48C
 #define FLAG_ITEM_MAGMA_HIDEOUT_2F_2R_FULL_RESTORE                  0x48D
 #define FLAG_ITEM_MAGMA_HIDEOUT_3F_1R_NUGGET                        0x48E
-#define FLAG_ITEM_MAGMA_HIDEOUT_3F_2R_PP_MAX                        0x48F
+#define FLAG_ITEM_QUARRY_TM47_STEELWING                        0x48F
 #define FLAG_ITEM_MAGMA_HIDEOUT_4F_MAX_REVIVE                       0x490
 #define FLAG_ITEM_SAFARI_ZONE_NORTH_EAST_NUGGET                     0x491
 #define FLAG_ITEM_SAFARI_ZONE_SOUTH_EAST_BIG_PEARL                  0x492

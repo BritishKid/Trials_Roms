@@ -16,7 +16,7 @@ script BedrockTown_LabSign {
 
 script BedrockTown_EventScript_HollyAid {
     lockall
-    msgbox(format("Sorry no one is allowed through with Professor Holly's permission."), MSGBOX_DEFAULT)
+    msgbox(format("Sorry no one is allowed through without Professor Holly's permission."), MSGBOX_DEFAULT)
     releaseall
 }
 

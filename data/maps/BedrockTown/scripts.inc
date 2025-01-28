@@ -54,7 +54,7 @@ BedrockTown_LabSign_Text_0:
 
 BedrockTown_EventScript_HollyAid_Text_0:
 # 19 "data/maps/BedrockTown/scripts.pory"
-	.string "Sorry no one is allowed through with\n"
+	.string "Sorry no one is allowed through without\n"
 	.string "Professor Holly's permission.$"
 
 COMINGSOON_Text_0:

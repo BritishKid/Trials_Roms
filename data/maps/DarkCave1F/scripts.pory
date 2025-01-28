@@ -3,15 +3,55 @@ mapscripts DarkCave1F_MapScripts {}
 
 script DarkCave1F_EventScript_Steven {
     lockall
-    msgbox(format("These crystals are fascinating."))
-    msgbox(format("STEVEN QUEST COMING SOON!")) //todo
+    if(var(VAR_STEVEN_QUEST_STATE) == 3) {
+        faceplayer
+        msgbox(format("I'm almost finished here, I'll catch up with you at Crystal Caves."))
+    }
+    if(var(VAR_STEVEN_QUEST_STATE) == 2) {
+        faceplayer
+        msgbox(format("Oh you're back, did you have any luck?"), MSGBOX_DEFAULT)
+        msgbox(format("Oh I see, so some energy used to be here but it's faded out of this cave."), MSGBOX_DEFAULT)
+        msgbox(format("It feels like the energy that some Pokemon can control but...not like anything i've felt before."), MSGBOX_DEFAULT)
+        msgbox(format("..."), MSGBOX_DEFAULT)
+        msgbox(format("OH YES!\nTriver has the Crystal Caves! The Pokemon found there emit the same energy that's where we should go next!"))
+        setvar(VAR_STEVEN_QUEST_STATE, 3)
+        msgbox(format("You should meet me there, I'm just going to take a few more samples and catch right up!"))
+    }
+    if(var(VAR_STEVEN_QUEST_STATE) == 1) {
+        faceplayer
+        msgbox(format("Have you had any luck finding anything yet?"), MSGBOX_DEFAULT)
+    }
+    if(var(VAR_STEVEN_QUEST_STATE) == 0) {
+        msgbox(format("These crystals are fascinating."), MSGBOX_DEFAULT)
+        msgbox(format("Although...something feels off about the rest of this cave."), MSGBOX_DEFAULT)
+        faceplayer
+        msgbox(format("Oh hello."))
+        msgbox(format("I've heard so much about the crystals in Triver that I've come over from Hoenn to look into them more but this seems to be the only crystal that isn't lifeless."), MSGBOX_DEFAULT)
+        msgbox(format("If you have some time do you mind taking a look at some of the other crystals and see if you can notice anything special about them?"))
+        setvar(VAR_STEVEN_QUEST_STATE, 1)
+    }
     releaseall
 }
 
-
 //blue stone scripts
-script DarkCave_DepletedBlueStone {
+script DarkCave_DepletedBlueStone { //todo fix single repeat issue
     lockall
-    msgbox(format("It's been depleted"))
+    if(var(VAR_STEVEN_QUEST_STATE) == 1) {
+        msgbox(format("This crystal seems dull and lifeless but a faint energy lingers, but it's almost gone..."))
+        addvar(VAR_CRYSTALS_CHECKED, 1)
+        if(var(VAR_CRYSTALS_CHECKED) == 4) {
+            setvar(VAR_STEVEN_QUEST_STATE, 2)
+            msgbox(format("I've probably got enough information to share with Steven."))
+        }
+    }
+    else {
+        msgbox(format("It's a very small crystal."))
+    }
+    releaseall
+}
+
+script DarkCave_FullBlueStone {
+    lockall
+    msgbox(format("There is a huge crystal in this rock, it's emitting alot of heat but it's cold to the touch."))
     releaseall
 }
