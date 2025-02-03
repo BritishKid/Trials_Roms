@@ -32,6 +32,11 @@
       "map": "MAP_ROUTE5C",
       "offset": 28,
       "direction": "down"
+    },
+    {
+      "map": "MAP_OBSIDIAN_THICKET_4",
+      "offset": 16,
+      "direction": "left"
     }
   ],
   "object_events": [

@@ -51,10 +51,10 @@ Giant_Azumarill::
 	compare VAR_GIANT_FISH_STATE, 1
 	goto_if_eq Giant_Azumarill_4
 Giant_Azumarill_3:
-# 51 "data/maps/Route1a/scripts.pory"
+# 52 "data/maps/Route1a/scripts.pory"
 	msgbox Giant_Azumarill_Text_3
 Giant_Azumarill_1:
-# 53 "data/maps/Route1a/scripts.pory"
+# 54 "data/maps/Route1a/scripts.pory"
 	releaseall
 	return
 
@@ -89,6 +89,8 @@ Giant_Azumarill_7:
 # 42 "data/maps/Route1a/scripts.pory"
 	setflag FLAG_GIANT_AZUMARILL_BEATEN
 # 43 "data/maps/Route1a/scripts.pory"
+	addvar VAR_GIANT_FISH_BEATEN, 1
+# 44 "data/maps/Route1a/scripts.pory"
 	clearflag FLAG_CANT_CATCH_MON
 	goto Giant_Azumarill_1
 
@@ -130,6 +132,6 @@ Giant_Azumarill_Text_2:
 	.string "something behind$"
 
 Giant_Azumarill_Text_3:
-# 51 "data/maps/Route1a/scripts.pory"
+# 52 "data/maps/Route1a/scripts.pory"
 	.string "You see a giant Pokémon swimming under\n"
 	.string "the surface$"

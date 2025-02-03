@@ -126,7 +126,7 @@
 #define VAR_PYUKUMUKUS_SAVED                               0x406A //USED
 #define VAR_EMBERDUNES_BUTTONS_PRESSED                               0x406B 
 #define VAR_DOJOS_CLEARED                               0x406C //
-#define VAR_ROUTE114_STATE                               0x406D // Unused Var
+#define VAR_GIANT_FISH_BEATEN                               0x406D //Used
 #define VAR_ROUTE115_STATE                               0x406E // Unused Var
 #define VAR_ROUTE116_STATE                               0x406F
 #define VAR_ROUTE117_STATE                               0x4070 // Unused Var

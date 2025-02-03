@@ -148,7 +148,7 @@
 
 #define FLAG_LANDMARK_MIRAGE_TOWER           0x78
 #define FLAG_RECEIVED_TM_BRICK_BREAK         0x79
-#define FLAG_RECEIVED_HM_SURF                0x7A
+#define FLAG_RECEIVED_HM_SURF                0x7A //unused in code now
 #define FLAG_RECEIVED_HM_DIVE                0x7B
 #define FLAG_REGISTER_RIVAL_POKENAV          0x7C
 #define FLAG_DEFEATED_RIVAL_ROUTE_104        0x7D
@@ -158,10 +158,10 @@
 #define FLAG_KYOGRE_ESCAPED_SEAFLOOR_CAVERN  0x81
 #define FLAG_DEFEATED_RIVAL_ROUTE103         0x82
 #define FLAG_RECEIVED_DOLL_LANETTE           0x83
-#define FLAG_RECEIVED_POTION_OLDALE          0x84
-#define FLAG_RECEIVED_AMULET_COIN            0x85
+#define FLAG_RECEIVED_POTION_OLDALE          0x84 //unused
+#define FLAG_RECEIVED_AMULET_COIN            0x85 //UNUSED
 #define FLAG_PENDING_DAYCARE_EGG             0x86
-#define FLAG_THANKED_FOR_PLAYING_WITH_WALLY  0x87
+#define FLAG_THANKED_FOR_PLAYING_WITH_WALLY  0x87 //unused
 #define FLAG_ENABLE_FIRST_WALLY_POKENAV_CALL 0x88 // Set after defeating Wally outside Mauville Gym. Will activate a call later to register Wally.
 #define FLAG_RECEIVED_TM_CUT                 0x89 // now a tm
 #define FLAG_SCOTT_CALL_FORTREE_GYM          0x8A // Triggers call from Scott after defeating Winona
@@ -693,7 +693,7 @@
 
 #define FLAG_GIANT_AZUMARILL_BEATEN  0x282
 #define FLAG_GIANT_GOREBYSS_BEATEN  0x283 // Unused Flag
-#define FLAG_UNUSED_0x284  0x284 // Unused Flag
+#define FLAG_GIANT_KINGLER_BEATEN  0x284 // Unused Flag
 #define FLAG_UNUSED_0x285  0x285 // Unused Flag
 #define FLAG_UNUSED_0x286  0x286 // Unused Flag
 #define FLAG_UNUSED_0x287  0x287 // Unused Flag
@@ -1230,7 +1230,7 @@
 
 #define FLAG_HIDE_FIRST_ENCOUNTER_ROB                                           0x493 // Used
 #define FLAG_HIDE_CLAYHAVEN_MART_EMPLOYEE                                           0x494 
-#define FLAG_UNUSED_0x495                                           0x495 // Unused Flag
+#define FLAG_HIDE_FLANNERY_OBSIDIANTHICKET                                           0x495 //
 #define FLAG_UNUSED_0x496                                           0x496 // Unused Flag
 #define FLAG_UNUSED_0x497                                           0x497 // Unused Flag
 #define FLAG_UNUSED_0x498                                           0x498 // Unused Flag

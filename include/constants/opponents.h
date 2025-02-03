@@ -121,7 +121,7 @@
 #define ROUTE7_MAI                      115
 #define ROUTE7_SEAN        116
 #define ROUTE7_HAPPYDAD                     117
-#define TRAINER_BRIANNA                     118
+#define CRYSTALCOVER_GERALD                     118
 #define TRAINER_NAOMI                       119
 #define TRAINER_CINDY_3                     120
 #define TRAINER_CINDY_4                     121

@@ -37,13 +37,13 @@ script MahogonyHills2_EventScript_RivalEncounter {
 script MahoganyHills2_Rival_PostScript {
     setvar(VAR_RIVAL_STATE, 3)
     setflag(FLAG_MAHOGANY_HILLS_RIVAL_BEATEN)
-    msgbox(format("You might have won but I still have more badges than you. That's what matters really."))
-    msgbox(format("You should probably take this to, it will help once you've got your first badge."))
-    msgbox(format("You have been given a HAND AXE, it could be used to cut small trees."))
+    msgbox(format("You might have won but I still have more badges than you. That's what matters really."),MSGBOX_AUTOCLOSE)
+    msgbox(format("You should probably take this to, it will help once you've got your first badge."),MSGBOX_AUTOCLOSE)
+    msgbox(format("You have been given a HAND AXE, it could be used to cut small trees."),MSGBOX_AUTOCLOSE)
     giveitem(ITEM_HAND_AXE)
-    msgbox(format("You won't need to reach the gym it's only a little further north."))
-    msgbox(format("Anyway I'm heading to get my next badge, I'll see you there if you don't lose too badly up here."))
-    msgbox(format("See ya nerd!"))
+    msgbox(format("You won't need to reach the gym it's only a little further north."),MSGBOX_AUTOCLOSE)
+    msgbox(format("Anyway I'm heading to get my next badge, I'll see you there if you don't lose too badly up here."),MSGBOX_AUTOCLOSE)
+    msgbox(format("See ya nerd!"),MSGBOX_AUTOCLOSE)
     applymovement(5, Movement_Rival_Leaves_Player_MahoganyHills2)
     waitmovement(5)
     removeobject(5)
@@ -81,12 +81,12 @@ script MahoganyHills2_Trigger_RoxanneEncounter {
 
 script MahoganyHills_RoxanneBeaten {
     lockall
-    msgbox(format("That's impressive, I'm not at my gym but you should still take this."))
+    msgbox(format("That's impressive, I'm not at my gym but you should still take this."),MSGBOX_AUTOCLOSE)
     giveitem(ITEM_TM37)
     setflag(FLAG_RECEIVED_TM_ROCK_TOMB)
-    msgbox(format("It's the TM for ROCK TOMB, a great rock type move that will slow your opponent down."))
+    msgbox(format("It's the TM for ROCK TOMB, a great rock type move that will slow your opponent down."),MSGBOX_AUTOCLOSE)
     setvar(VAR_ROXANNE_ENCOUNTER_STATE, 1)
-    msgbox(format("I'll see you around again!"))
+    msgbox(format("I'll see you around again!"),MSGBOX_AUTOCLOSE)
     applymovement(OBJ_EVENT_ID_PLAYER, MahoganyHills1_MoveOutTheWay_Player)
     waitmovement(OBJ_EVENT_ID_PLAYER)
     applymovement(7, MahoganyHills1_RoxanneLeaves)
@@ -99,18 +99,18 @@ script MahoganyHills2_EventScript_RoxanneEncounter { //Used if they speak to rox
     lockall
     faceplayer
     msgbox(format("Hi there, I've just been visiting Darwin to get new fossils. He has a little research station and has found the forest to be incredible for finding fossils."))
-    msgbox(format("I'm visiting from Hoenn and by that look I can tell you're a trainer."))
+    msgbox(format("I'm visiting from Hoenn and by that look I can tell you're a trainer.") ,MSGBOX_AUTOCLOSE)
     trainerbattle_single(TRAINER_ROXANNE_1, MahoganyHills_Roxanne_Battle_Intro, MahoganyHills_Roxanne_Battle_Outro, MahoganyHills_RoxanneBeaten)
     
 }
 
 script MahoganyHills_RoxanneBeaten_WithoutTrigger {
     lockall
-    msgbox(format("That's impressive, I'm not at my gym but you should still take this."))
+    msgbox(format("That's impressive, I'm not at my gym but you should still take this.") ,MSGBOX_AUTOCLOSE)
     giveitem(ITEM_TM37)
     setflag(FLAG_RECEIVED_TM_ROCK_TOMB)
     setvar(VAR_ROXANNE_ENCOUNTER_STATE, 1)
-    msgbox(format("I'll see you around again!"))
+    msgbox(format("I'll see you around again!"),MSGBOX_AUTOCLOSE)
     applymovement(OBJ_EVENT_ID_PLAYER, MahoganyHills1_MoveOutTheWay_Player_WithoutTrigger)
     waitmovement(OBJ_EVENT_ID_PLAYER)
     applymovement(7, Movement_MahoganyHills_RoxanneComingCloser)

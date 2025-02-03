@@ -17,6 +17,11 @@
       "map": "MAP_HEMLOCK_VILLAGE",
       "offset": 0,
       "direction": "up"
+    },
+    {
+      "map": "MAP_ROUTE5C",
+      "offset": 30,
+      "direction": "up"
     }
   ],
   "object_events": [

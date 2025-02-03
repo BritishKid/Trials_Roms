@@ -69,19 +69,19 @@ MahoganyHills2_Rival_PostScript::
 # 39 "data/maps/MahogonyHills_2/scripts.pory"
 	setflag FLAG_MAHOGANY_HILLS_RIVAL_BEATEN
 # 40 "data/maps/MahogonyHills_2/scripts.pory"
-	msgbox MahoganyHills2_Rival_PostScript_Text_0
+	msgbox MahoganyHills2_Rival_PostScript_Text_0, MSGBOX_AUTOCLOSE
 # 41 "data/maps/MahogonyHills_2/scripts.pory"
-	msgbox MahoganyHills2_Rival_PostScript_Text_1
+	msgbox MahoganyHills2_Rival_PostScript_Text_1, MSGBOX_AUTOCLOSE
 # 42 "data/maps/MahogonyHills_2/scripts.pory"
-	msgbox MahoganyHills2_Rival_PostScript_Text_2
+	msgbox MahoganyHills2_Rival_PostScript_Text_2, MSGBOX_AUTOCLOSE
 # 43 "data/maps/MahogonyHills_2/scripts.pory"
 	giveitem ITEM_HAND_AXE
 # 44 "data/maps/MahogonyHills_2/scripts.pory"
-	msgbox MahoganyHills2_Rival_PostScript_Text_3
+	msgbox MahoganyHills2_Rival_PostScript_Text_3, MSGBOX_AUTOCLOSE
 # 45 "data/maps/MahogonyHills_2/scripts.pory"
-	msgbox MahoganyHills2_Rival_PostScript_Text_4
+	msgbox MahoganyHills2_Rival_PostScript_Text_4, MSGBOX_AUTOCLOSE
 # 46 "data/maps/MahogonyHills_2/scripts.pory"
-	msgbox MahoganyHills2_Rival_PostScript_Text_5
+	msgbox MahoganyHills2_Rival_PostScript_Text_5, MSGBOX_AUTOCLOSE
 # 47 "data/maps/MahogonyHills_2/scripts.pory"
 	applymovement 5, Movement_Rival_Leaves_Player_MahoganyHills2
 # 48 "data/maps/MahogonyHills_2/scripts.pory"
@@ -145,17 +145,17 @@ MahoganyHills_RoxanneBeaten::
 # 83 "data/maps/MahogonyHills_2/scripts.pory"
 	lockall
 # 84 "data/maps/MahogonyHills_2/scripts.pory"
-	msgbox MahoganyHills_RoxanneBeaten_Text_0
+	msgbox MahoganyHills_RoxanneBeaten_Text_0, MSGBOX_AUTOCLOSE
 # 85 "data/maps/MahogonyHills_2/scripts.pory"
 	giveitem ITEM_TM37
 # 86 "data/maps/MahogonyHills_2/scripts.pory"
 	setflag FLAG_RECEIVED_TM_ROCK_TOMB
 # 87 "data/maps/MahogonyHills_2/scripts.pory"
-	msgbox MahoganyHills_RoxanneBeaten_Text_1
+	msgbox MahoganyHills_RoxanneBeaten_Text_1, MSGBOX_AUTOCLOSE
 # 88 "data/maps/MahogonyHills_2/scripts.pory"
 	setvar VAR_ROXANNE_ENCOUNTER_STATE, 1
 # 89 "data/maps/MahogonyHills_2/scripts.pory"
-	msgbox MahoganyHills_RoxanneBeaten_Text_2
+	msgbox MahoganyHills_RoxanneBeaten_Text_2, MSGBOX_AUTOCLOSE
 # 90 "data/maps/MahogonyHills_2/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, MahoganyHills1_MoveOutTheWay_Player
 # 91 "data/maps/MahogonyHills_2/scripts.pory"
@@ -179,7 +179,7 @@ MahoganyHills2_EventScript_RoxanneEncounter::
 # 101 "data/maps/MahogonyHills_2/scripts.pory"
 	msgbox MahoganyHills2_Trigger_RoxanneEncounter_Text_0
 # 102 "data/maps/MahogonyHills_2/scripts.pory"
-	msgbox MahoganyHills2_Trigger_RoxanneEncounter_Text_1
+	msgbox MahoganyHills2_Trigger_RoxanneEncounter_Text_1, MSGBOX_AUTOCLOSE
 # 103 "data/maps/MahogonyHills_2/scripts.pory"
 	trainerbattle_single TRAINER_ROXANNE_1, MahoganyHills_Roxanne_Battle_Intro, MahoganyHills_Roxanne_Battle_Outro, MahoganyHills_RoxanneBeaten
 	return
@@ -189,7 +189,7 @@ MahoganyHills_RoxanneBeaten_WithoutTrigger::
 # 108 "data/maps/MahogonyHills_2/scripts.pory"
 	lockall
 # 109 "data/maps/MahogonyHills_2/scripts.pory"
-	msgbox MahoganyHills_RoxanneBeaten_Text_0
+	msgbox MahoganyHills_RoxanneBeaten_Text_0, MSGBOX_AUTOCLOSE
 # 110 "data/maps/MahogonyHills_2/scripts.pory"
 	giveitem ITEM_TM37
 # 111 "data/maps/MahogonyHills_2/scripts.pory"
@@ -197,7 +197,7 @@ MahoganyHills_RoxanneBeaten_WithoutTrigger::
 # 112 "data/maps/MahogonyHills_2/scripts.pory"
 	setvar VAR_ROXANNE_ENCOUNTER_STATE, 1
 # 113 "data/maps/MahogonyHills_2/scripts.pory"
-	msgbox MahoganyHills_RoxanneBeaten_Text_2
+	msgbox MahoganyHills_RoxanneBeaten_Text_2, MSGBOX_AUTOCLOSE
 # 114 "data/maps/MahogonyHills_2/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, MahoganyHills1_MoveOutTheWay_Player_WithoutTrigger
 # 115 "data/maps/MahogonyHills_2/scripts.pory"

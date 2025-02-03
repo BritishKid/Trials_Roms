@@ -40,6 +40,7 @@ script Giant_Azumarill {
             msgbox(format("The Azumarill flees and leaves something behind"))
             giveitem(ITEM_LUMINOUS_MOSS)
             setflag(FLAG_GIANT_AZUMARILL_BEATEN)
+            addvar(VAR_GIANT_FISH_BEATEN, 1)
             clearflag(FLAG_CANT_CATCH_MON)
             // clearflag(FLAG_CANNOT_RUN_FROM_BATTLE)
         }

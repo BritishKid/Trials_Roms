@@ -1,0 +1,30 @@
+mapscripts GranitePeakTown_WallysHouse_MapScripts {
+    
+}
+
+//todo add cat sprites to overworld
+
+
+script GranitePeakTown_House5_EventScript_CatLady { //maybe legendary beasts?
+    lockall
+    faceplayer
+    msgbox(format("I love cat Pokemon, I want to get them all. I've been hunting rumours about 3 giant ones that are as fast as the wind but no-one has ever got close to them."))
+    //todo fill out more with legendary beasts
+    releaseall
+}
+
+script GranitePeakTown_House5_EventScript_Skitty {
+    lockall
+    faceplayer
+    msgbox(format("Meow")) //todo give berries
+    releaseall
+}
+
+script GranitePeakTown_House5_EventScript_Meowth {
+    lockall
+    faceplayer
+    msgbox(format("You stroke the Meowth under the chin."))
+    playmoncry(SPECIES_MEOWTH, CRY_MODE_NORMAL)
+    msgbox(format("It purrs softly."))
+    releaseall
+}

@@ -1,137 +1,62 @@
-.set LOCALID_WALLYS_DAD, 1
-
 GranitePeakTown_WallysHouse_MapScripts::
-	map_script MAP_SCRIPT_ON_FRAME_TABLE, GranitePeakTown_WallysHouse_OnFrame
-	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, GranitePeakTown_WallysHouse_OnWarp
 	.byte 0
 
-GranitePeakTown_WallysHouse_OnWarp:
-	map_script_2 VAR_GRANITE_PEAK_STATE, 4, GranitePeakTown_WallysHouse_EventScript_PlayerWallysDadFaceEachOther
-	.2byte 0
 
-GranitePeakTown_WallysHouse_EventScript_PlayerWallysDadFaceEachOther::
-	turnobject OBJ_EVENT_ID_PLAYER, DIR_EAST
-	turnobject LOCALID_WALLYS_DAD, DIR_WEST
-	end
-
-GranitePeakTown_WallysHouse_OnFrame:
-	map_script_2 VAR_GRANITE_PEAK_STATE, 4, GranitePeakTown_WallysHouse_EventScript_GiveHMSurf
-	.2byte 0
-
-GranitePeakTown_WallysHouse_EventScript_GiveHMSurf::
+GranitePeakTown_House5_EventScript_CatLady::
+# 9 "data/maps/GranitePeakTown_WallysHouse/scripts.pory"
 	lockall
-	msgbox GranitePeakTown_WallysHouse_Text_PleaseExcuseUs, MSGBOX_DEFAULT
-	giveitem ITEM_HM_SURF
-	setflag FLAG_RECEIVED_HM_SURF
-	msgbox GranitePeakTown_WallysHouse_Text_SurfGoAllSortsOfPlaces, MSGBOX_DEFAULT
-	setvar VAR_GRANITE_PEAK_STATE, 5
+# 10 "data/maps/GranitePeakTown_WallysHouse/scripts.pory"
+	faceplayer
+# 11 "data/maps/GranitePeakTown_WallysHouse/scripts.pory"
+	msgbox GranitePeakTown_House5_EventScript_CatLady_Text_0
+# 13 "data/maps/GranitePeakTown_WallysHouse/scripts.pory"
 	releaseall
-	end
+	return
 
-GranitePeakTown_WallysHouse_EventScript_WallysDad::
-	lock
+
+GranitePeakTown_House5_EventScript_Skitty::
+# 17 "data/maps/GranitePeakTown_WallysHouse/scripts.pory"
+	lockall
+# 18 "data/maps/GranitePeakTown_WallysHouse/scripts.pory"
 	faceplayer
-	goto_if_set FLAG_DEFEATED_WALLY_VICTORY_ROAD, GranitePeakTown_WallysHouse_EventScript_DefeatedWallyInVictoryRoad
-	goto_if_set FLAG_RECEIVED_HM_SURF, GranitePeakTown_WallysHouse_EventScript_ReceievedHMSurf
-	goto_if_set FLAG_THANKED_FOR_PLAYING_WITH_WALLY, GranitePeakTown_WallysHouse_EventScript_PlayedWithWally
-	msgbox GranitePeakTown_WallysHouse_Text_ThanksForPlayingWithWally, MSGBOX_DEFAULT
-	setflag FLAG_THANKED_FOR_PLAYING_WITH_WALLY
-	release
-	end
+# 19 "data/maps/GranitePeakTown_WallysHouse/scripts.pory"
+	msgbox GranitePeakTown_House5_EventScript_Skitty_Text_0
+# 20 "data/maps/GranitePeakTown_WallysHouse/scripts.pory"
+	releaseall
+	return
 
-GranitePeakTown_WallysHouse_EventScript_ReceievedHMSurf::
-	msgbox GranitePeakTown_WallysHouse_Text_WallyIsComingHomeSoon, MSGBOX_DEFAULT
-	release
-	end
 
-GranitePeakTown_WallysHouse_EventScript_DefeatedWallyInVictoryRoad::
-	msgbox GranitePeakTown_WallysHouse_Text_YouMetWallyInEverGrandeCity, MSGBOX_DEFAULT
-	release
-	end
-
-GranitePeakTown_WallysHouse_EventScript_PlayedWithWally::
-	msgbox GranitePeakTown_WallysHouse_Text_WonderHowWallyIsDoing, MSGBOX_DEFAULT
-	release
-	end
-
-GranitePeakTown_WallysHouse_EventScript_WallysMom::
-	lock
+GranitePeakTown_House5_EventScript_Meowth::
+# 24 "data/maps/GranitePeakTown_WallysHouse/scripts.pory"
+	lockall
+# 25 "data/maps/GranitePeakTown_WallysHouse/scripts.pory"
 	faceplayer
-	goto_if_set FLAG_RECEIVED_HM_SURF, GranitePeakTown_WallysHouse_EventScript_ReceivedHMSurf
-	msgbox GranitePeakTown_WallysHouse_Text_WallyWasReallyHappy, MSGBOX_DEFAULT
-	release
-	end
+# 26 "data/maps/GranitePeakTown_WallysHouse/scripts.pory"
+	msgbox GranitePeakTown_House5_EventScript_Meowth_Text_0
+# 27 "data/maps/GranitePeakTown_WallysHouse/scripts.pory"
+	playmoncry SPECIES_MEOWTH, CRY_MODE_NORMAL
+# 28 "data/maps/GranitePeakTown_WallysHouse/scripts.pory"
+	msgbox GranitePeakTown_House5_EventScript_Meowth_Text_1
+# 29 "data/maps/GranitePeakTown_WallysHouse/scripts.pory"
+	releaseall
+	return
 
-GranitePeakTown_WallysHouse_EventScript_ReceivedHMSurf::
-	msgbox GranitePeakTown_WallysHouse_Text_WallyLeftWithoutTelling, MSGBOX_DEFAULT
-	release
-	end
 
-GranitePeakTown_WallysHouse_Text_ThanksForPlayingWithWally:
-	.string "You're…\n"
-	.string "Ah, you must be {PLAYER}{KUN}, right?\p"
-	.string "Thank you for playing with WALLY a\n"
-	.string "little while ago.\p"
-	.string "He's been frail and sickly ever\n"
-	.string "since he was a baby.\p"
-	.string "We've sent him to stay with my relatives\n"
-	.string "in VERDANTURF TOWN for a while.\p"
-	.string "The air is a lot cleaner there\n"
-	.string "than it is here.\p"
-	.string "What's that? Where's WALLY?\n"
-	.string "He's already left, our WALLY.\p"
-	.string "I wonder where he could have\n"
-	.string "gotten by now?$"
+GranitePeakTown_House5_EventScript_CatLady_Text_0:
+# 11 "data/maps/GranitePeakTown_WallysHouse/scripts.pory"
+	.string "I love cat Pokemon, I want to get them\n"
+	.string "all. I've been hunting rumours about 3\l"
+	.string "giant ones that are as fast as the wind\l"
+	.string "but no-one has ever got close to them.$"
 
-GranitePeakTown_WallysHouse_Text_WonderHowWallyIsDoing:
-	.string "I wonder how our WALLY is doing?$"
+GranitePeakTown_House5_EventScript_Skitty_Text_0:
+# 19 "data/maps/GranitePeakTown_WallysHouse/scripts.pory"
+	.string "Meow$"
 
-GranitePeakTown_WallysHouse_Text_PleaseExcuseUs:
-	.string "{PLAYER}{KUN}! Please excuse us for\n"
-	.string "dragging you here this way.\p"
-	.string "But our WALLY's become very healthy\n"
-	.string "since he went to VERDANTURF TOWN.\p"
-	.string "We owe it all to you!\p"
-	.string "When WALLY left town, you helped\n"
-	.string "him catch a POKéMON, right?\p"
-	.string "I think that made WALLY really\n"
-	.string "happy.\p"
-	.string "Actually, not just WALLY.\n"
-	.string "It made me, his father, happy too.\p"
-	.string "Happy that he's gained such a great\n"
-	.string "friend as you.\p"
-	.string "This isn't a bribe or anything, but\n"
-	.string "I'd really like you to have this.$"
+GranitePeakTown_House5_EventScript_Meowth_Text_0:
+# 26 "data/maps/GranitePeakTown_WallysHouse/scripts.pory"
+	.string "You stroke the Meowth under the chin.$"
 
-GranitePeakTown_WallysHouse_Text_SurfGoAllSortsOfPlaces:
-	.string "If your POKéMON can SURF, you'll be\n"
-	.string "able to go to all sorts of places.$"
-
-GranitePeakTown_WallysHouse_Text_WallyIsComingHomeSoon:
-	.string "WALLY's coming home soon.\n"
-	.string "I'm looking forward to that.$"
-
-GranitePeakTown_WallysHouse_Text_YouMetWallyInEverGrandeCity:
-	.string "Oh? You met WALLY in\n"
-	.string "EVER GRANDE CITY?\p"
-	.string "Oh, {PLAYER}{KUN}, don't be silly.\p"
-	.string "He may have gotten healthy, but he\n"
-	.string "can't go somewhere far away like\l"
-	.string "that all by himself.$"
-
-GranitePeakTown_WallysHouse_Text_WallyWasReallyHappy:
-	.string "WALLY was really happy when he told\n"
-	.string "us that he caught a POKéMON.\p"
-	.string "It's been ages since I've seen him\n"
-	.string "smile like that.$"
-
-GranitePeakTown_WallysHouse_Text_WallyLeftWithoutTelling:
-	.string "I want you to keep this a secret\n"
-	.string "from my husband…\p"
-	.string "But our WALLY left VERDANTURF TOWN\n"
-	.string "without telling anyone.\p"
-	.string "You know, WALLY is frail, but\n"
-	.string "he's surprisingly strong-willed.\p"
-	.string "I'm sure that he'll come back safe\n"
-	.string "and sound one day!$"
-
+GranitePeakTown_House5_EventScript_Meowth_Text_1:
+# 28 "data/maps/GranitePeakTown_WallysHouse/scripts.pory"
+	.string "It purrs softly.$"

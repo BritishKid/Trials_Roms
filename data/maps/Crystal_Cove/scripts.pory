@@ -1,1 +1,22 @@
 mapscripts Crystal_Cove_MapScripts {}
+
+
+script CrystalCove_TrainerBattle_Gerald {
+    trainerbattle_single(CRYSTALCOVER_GERALD, CrystalCove_Gerald_Intro, CrystalCove_Gerald_Outro, Increase_Trainers_Beaten)
+    msgbox(CrystalCove_Gerald_PostBattle, MSGBOX_AUTOCLOSE) //todo rematch and he has slowking?
+}
+
+
+//text
+
+text CrystalCove_Gerald_Intro {
+    format("I can't get my Slowpoke to evolve...")
+}
+
+text CrystalCove_Gerald_Outro {
+    format("Maybe I should take them to the daycare...")
+}
+
+text CrystalCove_Gerald_PostBattle {
+    format("I need to find someone who knows how to get a Slowbro...")
+}

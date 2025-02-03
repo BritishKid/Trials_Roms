@@ -20,8 +20,13 @@
     },
     {
       "map": "MAP_HEMLOCK_VILLAGE",
-      "offset": -7,
+      "offset": -8,
       "direction": "right"
+    },
+    {
+      "map": "MAP_OBSIDIAN_THICKET_4",
+      "offset": 22,
+      "direction": "up"
     }
   ],
   "object_events": [
@@ -48,7 +53,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "Obsidian_Thicket_2_EventScript_Flannery",
       "flag": "0"
     }
   ],

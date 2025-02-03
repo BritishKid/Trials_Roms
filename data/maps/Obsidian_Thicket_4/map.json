@@ -12,7 +12,33 @@
   "allow_running": false,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": 0,
+  "connections": [
+    {
+      "map": "MAP_ROUTE5",
+      "offset": -31,
+      "direction": "up"
+    },
+    {
+      "map": "MAP_ROUTE5B",
+      "offset": -16,
+      "direction": "right"
+    },
+    {
+      "map": "MAP_HEMLOCK_VILLAGE",
+      "offset": 12,
+      "direction": "right"
+    },
+    {
+      "map": "MAP_OBSIDIAN_THICKET_1",
+      "offset": 0,
+      "direction": "left"
+    },
+    {
+      "map": "MAP_OBSIDIAN_THICKET_2",
+      "offset": -22,
+      "direction": "down"
+    }
+  ],
   "object_events": [
 
   ],

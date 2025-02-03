@@ -27,6 +27,11 @@
       "map": "MAP_ROUTE7_DAYCARE",
       "offset": 10,
       "direction": "up"
+    },
+    {
+      "map": "MAP_LILYCOVE_CITY",
+      "offset": 42,
+      "direction": "right"
     }
   ],
   "object_events": [

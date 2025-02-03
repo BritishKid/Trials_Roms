@@ -54,8 +54,8 @@
     {
       "id": "LAYOUT_LILYCOVE_CITY",
       "name": "LilycoveCity_Layout",
-      "width": 80,
-      "height": 40,
+      "width": 76,
+      "height": 45,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Lilycove",
       "border_filepath": "data/layouts/LilycoveCity/border.bin",
@@ -4874,7 +4874,7 @@
     {
       "id": "LAYOUT_OBSIDIAN_THICKET_2",
       "name": "Obsidian_Thicket_2_Layout",
-      "width": 30,
+      "width": 33,
       "height": 50,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Mossdeep",
@@ -4894,8 +4894,8 @@
     {
       "id": "LAYOUT_OBSIDIAN_THICKET_4",
       "name": "Obsidian_Thicket_4_Layout",
-      "width": 41,
-      "height": 42,
+      "width": 11,
+      "height": 20,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Mossdeep",
       "border_filepath": "data/layouts/Obsidian_Thicket_4/border.bin",

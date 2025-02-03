@@ -37,10 +37,10 @@ Giant_Gorebyss::
 	compare VAR_GIANT_FISH_STATE, 1
 	goto_if_eq Giant_Gorebyss_4
 Giant_Gorebyss_3:
-# 45 "data/maps/CoralBeach_2/scripts.pory"
+# 46 "data/maps/CoralBeach_2/scripts.pory"
 	msgbox Giant_Gorebyss_Text_3
 Giant_Gorebyss_1:
-# 47 "data/maps/CoralBeach_2/scripts.pory"
+# 48 "data/maps/CoralBeach_2/scripts.pory"
 	releaseall
 	return
 
@@ -75,6 +75,8 @@ Giant_Gorebyss_7:
 # 36 "data/maps/CoralBeach_2/scripts.pory"
 	setflag FLAG_GIANT_GOREBYSS_BEATEN
 # 37 "data/maps/CoralBeach_2/scripts.pory"
+	addvar VAR_GIANT_FISH_BEATEN, 1
+# 38 "data/maps/CoralBeach_2/scripts.pory"
 	clearflag FLAG_CANT_CATCH_MON
 	goto Giant_Gorebyss_1
 
@@ -109,6 +111,6 @@ Giant_Gorebyss_Text_2:
 	.string "something behind$"
 
 Giant_Gorebyss_Text_3:
-# 45 "data/maps/CoralBeach_2/scripts.pory"
+# 46 "data/maps/CoralBeach_2/scripts.pory"
 	.string "You see a giant Pokémon swimming under\n"
 	.string "the surface$"

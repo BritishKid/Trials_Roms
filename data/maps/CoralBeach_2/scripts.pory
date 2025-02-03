@@ -34,6 +34,7 @@ script Giant_Gorebyss {
             msgbox(format("The Gorebyss flees and leaves something behind"))
             giveitem(ITEM_DEEP_SEA_SCALE)
             setflag(FLAG_GIANT_GOREBYSS_BEATEN)
+            addvar(VAR_GIANT_FISH_BEATEN, 1)
             clearflag(FLAG_CANT_CATCH_MON)
             // clearflag(FLAG_CANNOT_RUN_FROM_BATTLE)
         }

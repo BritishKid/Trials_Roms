@@ -196,7 +196,7 @@
     {
       "type": "trigger",
       "x": 37,
-      "y": 9,
+      "y": 10,
       "elevation": 0,
       "var": "VAR_ROXANNE_ENCOUNTER_STATE",
       "var_value": "0",

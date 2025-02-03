@@ -130,6 +130,12 @@ script CoralPort_EventScript_Fishman_Market {
     lockall
     // questmenu(QUEST_MENU_CHECK_ACTIVE, QUEST_GIANT_FISH)
     // if(!var(VAR_RESULT)){
+    if(var(VAR_GIANT_FISH_BEATEN) > 3 && !flag(FLAG_RECEIVED_GOOD_ROD)) {
+        msgbox(format("Wow you've managed to find a few already, that's worth an upgrade."))
+        giveitem(ITEM_GOOD_ROD)
+        msgbox(format("That Good Rod should help lure the more hidden Pokemon in bodies of water."))
+        setflag(FLAG_RECEIVED_GOOD_ROD)
+    }
     if(var(VAR_GIANT_FISH_STATE) > 0){
         msgbox(format("How are you doing finding the giant fish?"))
         //todo check over what ones have been found etc

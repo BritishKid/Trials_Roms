@@ -6,6 +6,30 @@ script Derek_ObsidianThicket2 {
     msgbox(PostBattle_Derek_ObisidianThicket, MSGBOX_AUTOCLOSE)
 }
 
+script Obsidian_Thicket_2_EventScript_Flannery {
+    lockall //TODO IMPROVE ALL THIS SHITTY TEXT
+    checkitem(ITEM_TM_OVERHEAT)
+    if(var(VAR_RESULT) == FALSE) {
+        msgbox(format("I've heard Mt. Obsidian has an incredibly strong fire Pokemon but I don't have any Pokemon that can surf across this water to reach it. I'll probably have to go all the way round instead."))
+        faceplayer
+        trainerbattle_single(TRAINER_FLANNERY_1, OT2_Flannery_Intro, OT2_Flannery_Outro, Obsidian_Thicket_2_EventScript_Flannery_Postbattle)
+    }
+    else {
+        faceplayer
+        msgbox(format("I wonder what i'll find in the Volcano."))
+    }
+    releaseall
+}
+
+script Obsidian_Thicket_2_EventScript_Flannery_Postbattle {
+    msgbox(format("Wow if we were in Hoenn that would be worthy of the Heat Badge, but over here I can't give you anything official but you could take the TM for Overheat."), MSGBOX_AUTOCLOSE)
+    giveitem(ITEM_TM_OVERHEAT)
+    addvar(VAR_TRAINERS_BEATEN_CHECK, 1)
+    msgbox(format("Hoenn is so full of water you'd think I'd have taught a Pokemon surf by now."))
+    setflag(FLAG_HIDE_FLANNERY_OBSIDIANTHICKET) //todo implement to flannery when we want to move her, currently not needed cause we haven't got her second encounter
+    
+    releaseall
+}
 //flannery
 //wants to reach the volcano but doesn't have surf so talks about going the long way round
 //battle her
@@ -26,4 +50,12 @@ text Derek_ObisidianThicket_Outro{
 
 text PostBattle_Derek_ObisidianThicket {
     format("If you find them please tell me")
+}
+
+text OT2_Flannery_Intro {
+    format("Anyway you seem like a trainer so why don't we battle.")
+}
+
+text OT2_Flannery_Outro {
+    format("Wow that got heated!")
 }

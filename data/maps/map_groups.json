@@ -53,7 +53,6 @@
   "gMapGroup_TownsAndRoutes": [
     "SlateportCity",
     "RustboroCity",
-    "LilycoveCity",
     "SootopolisCity",
     "EverGrandeCity",
     "DewfordTown",
@@ -122,6 +121,7 @@
     "HemlockVillage",
     "MauvilleCity",
     "VerdanturfTown",
+    "LilycoveCity",
     "Route5",
     "Route5b",
     "Route5c",

@@ -15,7 +15,7 @@
   "connections": [
     {
       "map": "MAP_OBSIDIAN_THICKET_2",
-      "offset": 7,
+      "offset": 8,
       "direction": "left"
     },
     {
@@ -32,6 +32,11 @@
       "map": "MAP_ROUTE5C",
       "offset": 0,
       "direction": "right"
+    },
+    {
+      "map": "MAP_OBSIDIAN_THICKET_4",
+      "offset": -12,
+      "direction": "left"
     }
   ],
   "object_events": [
