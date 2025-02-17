@@ -1,0 +1,8 @@
+mapscripts MegaTower_MapScripts {}
+
+
+script MegaTower_Sign {
+    lockall
+    msgbox(format("Only those who prove their strength may wield the power of Mega Evolution."))
+    releaseall
+}

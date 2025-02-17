@@ -100,15 +100,15 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 28,
+      "x": 29,
       "y": 2,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "Route4_EventScript_WaterStone"
     },
     {
       "type": "sign",
-      "x": 29,
+      "x": 28,
       "y": 2,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",

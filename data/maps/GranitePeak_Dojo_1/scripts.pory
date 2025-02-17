@@ -1,0 +1,184 @@
+mapscripts GranitePeak_Dojo_1_MapScripts {}
+
+
+script GranitePeak_Dojo_1_EventScript_BlackBelt {
+    lockall
+    faceplayer
+    msgbox(format("Our master is just so strong, no matter how much I train she can defend against it."))
+    releaseall
+}
+
+script GranitePeak_Dojo_1_EventScript_BlackBelt_2 {
+    lockall
+    faceplayer
+    msgbox(format("Training here take so much out of me and my Pokemon."))
+    releaseall
+}
+
+script GranitePeak_Dojo_1_EventScript_BlackBelt_3 {
+    lockall
+    faceplayer
+    msgbox(format("I'm going to take on the league challenge soon, I just need to finish my training here."))
+    releaseall
+}
+
+script GranitePeak_Dojo_1_EventScript_ItemBall {
+    lockall
+    msgbox(format("I can't just take thing's that don't belong to me."))
+    releaseall
+}
+
+script GranitePeak_Dojo_1_EventScript_Expert {
+    lockall
+    faceplayer
+    if(flag(FLAG_DOJO1_BEATEN)) {
+        msgbox(format("Keep up with your training!"))
+    }
+    if(!flag(FLAG_DOJO1_BEATEN)) {
+        msgbox(format("Welcome to my Dojo, this is where I teach my students the art of patience in a battle."), MSGBOX_DEFAULT)
+        msgbox(format("We focus on taking our time to tire our opponents to gain the upper hand. A rare skill but invaluable."), MSGBOX_DEFAULT)
+        msgbox(format("I see you're a Pokemon trainer yourself, do you think you have what it takes to overcome the Test of Patience?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES) {
+            msgbox(format("Let's see if you have what it takes."), MSGBOX_AUTOCLOSE)
+            applymovement(4, Movement_RightBlackbelt_ToRafters)
+            applymovement(OBJ_EVENT_ID_PLAYER, Movement_PlayerTo_Battle_1)
+            waitmovement(OBJ_EVENT_ID_PLAYER)
+            trainerbattle_single(DOJO1_BLACKBELT1, Dojo1_Blackbelt1_Intro, Dojo1_Blackbelt1_Outro, Dojo1_Blackbelt1_PostScript)
+        }
+        if(var(VAR_RESULT) == NO) {
+            msgbox(format("That's not surprising. It's not a challenge for everyone."))
+        }
+    }
+
+    releaseall
+}
+
+script Dojo1_Blackbelt1_PostScript {
+    applymovement(3, Movement_LeftBlackbelt_ToRafters)
+    applymovement(2, Movement_RafterBlackbelt_To_Battle)
+    waitmovement(2)
+    trainerbattle_single(DOJO1_BLACKBELT2, Dojo1_Blackbelt2_Intro, Dojo1_Blackbelt2_Outro, Dojo1_Blackbelt2_PostScript)
+}
+
+script Dojo1_Blackbelt2_PostScript {
+    applymovement(2, Movement_RafterBlackbelt_ToRafter)
+    applymovement(1, Movement_Expert_To_Battle)
+    waitmovement(1)
+    trainerbattle_single(DOJO1_EXPERT, Dojo1_Expert_Intro, Dojo1_Expert_Outro, Dojo1_Beaten_Postscript)
+}
+
+script Dojo1_Beaten_Postscript {
+    msgbox(format("Wow you are strong. Not many trainers have been able to break through my defence."))
+    applymovement(1, Movement_ExpertToTM)
+    waitmovement(1)
+    setflag(FLAG_DOJO1_BEATEN)
+    removeobject(5)
+    applymovement(1, Movement_Dojo1_Expert_To_Player)
+    waitmovement(1)
+    msgbox(format("You should take this TM, it contains Bulk Up."), MSGBOX_DEFAULT)
+    giveitem(ITEM_TM_BULK_UP)
+    msgbox(format("It can help bring up the offence and defence of a Pokemon."))
+    msgbox(format("You've impressed today, you should come back when you've earnt you own black belt and maybe we could spar again."))
+    releaseall
+}
+
+//text
+text Dojo1_Blackbelt1_Intro {
+    format("Don't think I'll take it easy on you because you're new.")
+}
+
+text Dojo1_Blackbelt1_Outro {
+    format("Again I have underestimated my opponent.")
+}
+
+text Dojo1_Blackbelt2_Intro {
+    format("Offence will only get you so far.")
+}
+
+text Dojo1_Blackbelt2_Outro {
+    format("That was fierce, but it's not over yet.")
+}
+
+
+text Dojo1_Expert_Intro {
+    format("Well you're better than we could of expected but can you get past a true defensive master?")
+}
+
+text Dojo1_Expert_Outro {
+    format("...")
+}
+
+//movement
+
+movement Movement_RightBlackbelt_ToRafters {
+    walk_right
+    walk_right
+    walk_right
+    walk_right
+    face_left
+}
+
+movement Movement_PlayerTo_Battle_1 {
+    walk_down
+    walk_down
+    walk_down
+    walk_right
+    face_left
+}
+
+movement Movement_LeftBlackbelt_ToRafters {
+    walk_left
+    walk_left
+    walk_left
+    walk_left
+    face_right
+}
+
+movement Movement_RafterBlackbelt_To_Battle {
+    walk_right
+    walk_right
+    walk_right
+    walk_right
+    walk_right
+    walk_down
+    face_right
+}
+
+movement Movement_RafterBlackbelt_ToRafter {
+    walk_up
+    walk_left
+    walk_left
+    walk_left
+    walk_left
+    walk_left
+    face_right
+}
+
+movement Movement_Expert_To_Battle {
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+    walk_left
+    walk_left
+    face_right
+}
+
+movement Movement_ExpertToTM {
+    walk_right
+    walk_up
+    walk_up
+    walk_up
+}
+
+movement Movement_Dojo1_Expert_To_Player {
+    walk_down
+    walk_down
+    walk_down
+    walk_right
+}
+
+//Battle 2 black belts before battling the expert
+//expert specialises in defence
+//Uses moves to stall out the player
+//reward is

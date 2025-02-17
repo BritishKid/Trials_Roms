@@ -133,7 +133,8 @@
     "EmberDunes_2",
     "EmberDunes_3",
     "Quarry",
-    "Route7_Daycare"
+    "Route7_Daycare",
+    "MegaTower"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",
@@ -732,14 +733,15 @@
     "EmberDunes_Gym"
   ],
   "gMapGroup_HiddenDojos": [
-
+    "GranitePeak_Dojo_1"
   ],
   "gMapGroup_GranitePeakCaves": [
     "GraniteCave_GF",
     "GraniteCave_1F",
     "GraniteCave_B1F",
     "GraniteCave_B2F",
-    "GraniteCave_StevensRoom"
+    "GraniteCave_StevensRoom",
+    "GranitePeak_Maze_1"
   ],
   "gMapGroup_EmberDuneIndoors": [
     "EmberDunes_EntryHouse",

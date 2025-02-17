@@ -1388,7 +1388,7 @@ Class: Cooltrainer
 Pic: Cooltrainer M
 Gender: Male
 Music: Interviewer
-Double Battle: Yes
+Double Battle: No
 AI: Check Bad Move
 
 ONIX
@@ -3049,47 +3049,103 @@ Shellder
 Level: 23
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 
-=== TRAINER_NAOMI ===
-Name: NAOMI
-Class: Lady
-Pic: Lady
-Gender: Female
-Music: Female
-Items: Full Restore
+=== DOJO1_BLACKBELT1 ===
+Name: RYO
+Class: Black Belt
+Pic: Black Belt
+Gender: Male
+Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Roselia @ Nugget
-Level: 45
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Timburr  
+Ability: Guts  
+Level: 22  
+EVs: 252 HP / 252 Def / 4 Atk  
+Impish Nature  
+- Low Kick  
+- Rock Throw  
+- Bulk Up  
+- Knock Off  
 
-=== TRAINER_CINDY_3 ===
+Makuhita
+Ability: Thick Fat  
+Level: 23  
+EVs: 252 HP / 252 SpD / 4 Atk  
+Careful Nature  
+- Arm Thrust  
+- Whirlwind  
+- Bulk Up  
+- Knock Off  
+
+
+=== DOJO1_BLACKBELT2 ===
+Name: MEI
+Class: Black Belt
+Pic: Black Belt
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Croagunk
+Ability: Dry Skin  
+Level: 22  
+EVs: 252 HP / 252 SpD / 4 Atk  
+Careful Nature  
+- Drain Punch  
+- Fake Out  
+- Taunt  
+- Poison Sting  
+
+Mienfoo 
+Ability: Regenerator  
+Level: 23  
+EVs: 252 HP / 252 Def / 4 Spe  
+Jolly Nature  
+- Drain Punch  
+- Fake Out  
+- U-turn  
+- Detect  
+
+=== DOJO1_EXPERT ===
 Name: CINDY
-Class: Lady
-Pic: Lady
+Class: Expert
+Pic: Expert F
 Gender: Female
 Music: Female
 Items: Full Restore
 Double Battle: No
 AI: Check Bad Move
 
-Linoone @ Nugget
-Level: 27
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+Hitmontop  
+Ability: Intimidate  
+Level: 22  
+EVs: 252 HP / 252 Def / 4 Spe  
+Impish Nature  
+- Triple Kick  
+- Fake Out  
+- Detect  
+- Rapid Spin  
 
-=== TRAINER_CINDY_4 ===
-Name: CINDY
-Class: Lady
-Pic: Lady
-Gender: Female
-Music: Female
-Items: Full Restore
-Double Battle: No
-AI: Check Bad Move
+Timburr
+Ability: Guts  
+Level: 23  
+EVs: 252 HP / 252 Atk / 4 SpD  
+Adamant Nature  
+- Drain Punch  
+- Knock Off  
+- Bulk Up  
+- Rock Throw  
 
-Linoone @ Nugget
-Level: 30
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
+Hariyama @ Leftovers  
+Ability: Thick Fat  
+Level: 24  
+EVs: 252 HP / 252 Atk / 4 Def  
+Adamant Nature  
+- Force Palm  
+- Knock Off  
+- Whirlwind  
 
 === TRAINER_CINDY_5 ===
 Name: CINDY

@@ -42,9 +42,13 @@ UpdatePlayerFlag::
 	lockall
 # 24 "data/maps/Clayhaven_PokemonCenter_1F/scripts.pory"
 	msgbox UpdatePlayerFlag_Text_0
+# 25 "data/maps/Clayhaven_PokemonCenter_1F/scripts.pory"
+	setflag FLAG_RECEIVED_RUNNING_SHOES
 # 26 "data/maps/Clayhaven_PokemonCenter_1F/scripts.pory"
-	msgbox UpdatePlayerFlag_Text_1
+	setflag FLAG_ADVENTURE_STARTED
 # 27 "data/maps/Clayhaven_PokemonCenter_1F/scripts.pory"
+	msgbox UpdatePlayerFlag_Text_1
+# 28 "data/maps/Clayhaven_PokemonCenter_1F/scripts.pory"
 	releaseall
 	return
 
@@ -54,5 +58,5 @@ UpdatePlayerFlag_Text_0:
 	.string "Updating$"
 
 UpdatePlayerFlag_Text_1:
-# 26 "data/maps/Clayhaven_PokemonCenter_1F/scripts.pory"
+# 27 "data/maps/Clayhaven_PokemonCenter_1F/scripts.pory"
 	.string "Updated$"

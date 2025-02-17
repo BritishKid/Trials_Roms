@@ -122,9 +122,9 @@
 #define ROUTE7_SEAN        116
 #define ROUTE7_HAPPYDAD                     117
 #define CRYSTALCOVER_GERALD                     118
-#define TRAINER_NAOMI                       119
-#define TRAINER_CINDY_3                     120
-#define TRAINER_CINDY_4                     121
+#define DOJO1_BLACKBELT1                       119
+#define DOJO1_BLACKBELT2                     120
+#define DOJO1_EXPERT                     121
 #define TRAINER_CINDY_5                     122
 #define TRAINER_CINDY_6                     123
 #define TRAINER_MELISSA                     124

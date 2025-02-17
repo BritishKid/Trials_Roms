@@ -22,7 +22,8 @@ Clayhaven_PokemonCenter_1F_EventScript_Nurse::
 script UpdatePlayerFlag {
 	lockall
 	msgbox("Updating")
-	// setflag(FLAG_HIDE_ROUTE4_DOJONPCS_1)
+	setflag(FLAG_RECEIVED_RUNNING_SHOES)
+	setflag(FLAG_ADVENTURE_STARTED)
 	msgbox("Updated")
 	releaseall
 }

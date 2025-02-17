@@ -1,0 +1,82 @@
+raw `
+LilycoveCity_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, LilycoveCity_OnTransition
+	.byte 0
+
+LilycoveCity_OnTransition:
+	setflag FLAG_VISITED_LILYCOVE_CITY
+	end
+    LilycoveCity_EventScript_BerryGentleman::
+	lock
+	faceplayer
+	dotimebasedevents
+	goto_if_set FLAG_DAILY_LILYCOVE_RECEIVED_BERRY, LilycoveCity_EventScript_ReceivedBerry
+	msgbox LilycoveCity_Text_BerrySuitsYou, MSGBOX_DEFAULT
+	random 10
+	addvar VAR_RESULT, FIRST_BERRY_INDEX
+	giveitem VAR_RESULT
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	setflag FLAG_DAILY_LILYCOVE_RECEIVED_BERRY
+	msgbox LilycoveCity_Text_BecauseYoureTrainer, MSGBOX_DEFAULT
+	release
+	end
+
+LilycoveCity_EventScript_ReceivedBerry::
+	msgbox LilycoveCity_Text_PokeblocksSuitPokemon, MSGBOX_DEFAULT
+	release
+	end
+
+LilycoveCity_EventScript_ExpertM1::
+	msgbox LilycoveCity_Text_SeaRemainsForeverYoung, MSGBOX_SIGN
+	end
+
+LilycoveCity_EventScript_ExpertF::
+	msgbox LilycoveCity_Text_SixtyYearsAgoHusbandProposed, MSGBOX_SIGN
+	end
+
+LilycoveCity_Text_SeaRemainsForeverYoung:
+	.string "Even as we grow old and wrinkled,\n"
+	.string "the sea remains forever young with\l"
+	.string "the vivid brilliance of life…\p"
+	.string "Fwohoho fwohohohoho…$"
+
+LilycoveCity_Text_SixtyYearsAgoHusbandProposed:
+	.string "It was sixty years ago that my husband\n"
+	.string "proposed to me here.\l"
+	.string "The sea remains as beautiful as ever.\p"
+	.string "Mufufufu mufufufufufu…$"
+    
+    `
+
+script LilycoveCity_EventScript_FatMan {
+    lockall
+    faceplayer
+    msgbox(format("How do I get out of here?"), MSGBOX_AUTOCLOSE)
+    releaseall
+}
+
+script LilycoveCity_EventScript_SchoolKidM {
+    lockall
+    faceplayer
+    msgbox(format("My brother says the rarest Pokemon are found down this waterfall, but it's such a long drop I'm always too scared to look."), MSGBOX_AUTOCLOSE)
+    releaseall
+}
+
+script LilycoveCity_EventScript_Sailor1 {
+    lockall
+    faceplayer
+    msgbox(format("There are so many hidden islands in the sea full of unique Pokemon."))
+    releaseall
+}
+
+script LilycoveCity_EventScript_CitySign {
+	lockall
+	msgbox(format("CITY NEEDS NAME"))
+	releaseall
+}
+
+script LilycoveCity_EventScript_DepartmentStoreSign {
+	lockall
+	msgbox("COMING SOON")
+	releaseall
+}

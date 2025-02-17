@@ -17,11 +17,6 @@
       "map": "MAP_ROUTE6",
       "offset": -6,
       "direction": "left"
-    },
-    {
-      "map": "MAP_FLOWER_GLADE_WALK",
-      "offset": 33,
-      "direction": "up"
     }
   ],
   "object_events": [

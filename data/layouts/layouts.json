@@ -4765,7 +4765,7 @@
       "id": "LAYOUT_ROUTE4C",
       "name": "Route4c_Layout",
       "width": 35,
-      "height": 31,
+      "height": 38,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Slateport",
       "border_filepath": "data/layouts/Route4c/border.bin",
@@ -4904,7 +4904,7 @@
     {
       "id": "LAYOUT_ROUTE5B",
       "name": "Route5b_Layout",
-      "width": 41,
+      "width": 43,
       "height": 28,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Mossdeep",
@@ -5340,6 +5340,36 @@
       "secondary_tileset": "gTileset_EverGrande",
       "border_filepath": "data/layouts/GranitePeak_Peak1/border.bin",
       "blockdata_filepath": "data/layouts/GranitePeak_Peak1/map.bin"
+    },
+    {
+      "id": "LAYOUT_MEGA_TOWER",
+      "name": "MegaTower_Layout",
+      "width": 20,
+      "height": 30,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_BattleFrontierOutsideEast",
+      "border_filepath": "data/layouts/MegaTower/border.bin",
+      "blockdata_filepath": "data/layouts/MegaTower/map.bin"
+    },
+    {
+      "id": "LAYOUT_GRANITE_PEAK_MAZE_1",
+      "name": "GranitePeak_Maze_1_Layout",
+      "width": 40,
+      "height": 40,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/GranitePeak_Maze_1/border.bin",
+      "blockdata_filepath": "data/layouts/GranitePeak_Maze_1/map.bin"
+    },
+    {
+      "id": "LAYOUT_DOJO_1",
+      "name": "GranitePeak_Dojo_1_Layout",
+      "width": 20,
+      "height": 12,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Dojo_Interior",
+      "border_filepath": "data/layouts/GranitePeak_Dojo_1/border.bin",
+      "blockdata_filepath": "data/layouts/GranitePeak_Dojo_1/map.bin"
     }
   ]
 }

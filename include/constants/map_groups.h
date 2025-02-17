@@ -89,6 +89,7 @@
 #define MAP_EMBER_DUNES_3     (13 | (2 << 8))
 #define MAP_QUARRY            (14 | (2 << 8))
 #define MAP_ROUTE7_DAYCARE    (15 | (2 << 8))
+#define MAP_MEGA_TOWER        (16 | (2 << 8))
 
 // gMapGroup_IndoorLittleroot
 #define MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_1F    (0 | (3 << 8))
@@ -687,6 +688,7 @@
 #define MAP_EMBER_DUNES_GYM             (3 | (43 << 8))
 
 // gMapGroup_HiddenDojos
+#define MAP_GRANITE_PEAK_DOJO_1 (0 | (44 << 8))
 
 // gMapGroup_GranitePeakCaves
 #define MAP_GRANITE_CAVE_GF           (0 | (45 << 8))
@@ -694,6 +696,7 @@
 #define MAP_GRANITE_CAVE_B1F          (2 | (45 << 8))
 #define MAP_GRANITE_CAVE_B2F          (3 | (45 << 8))
 #define MAP_GRANITE_CAVE_STEVENS_ROOM (4 | (45 << 8))
+#define MAP_GRANITE_PEAK_MAZE_1       (5 | (45 << 8))
 
 // gMapGroup_EmberDuneIndoors
 #define MAP_EMBER_DUNES_ENTRY_HOUSE (0 | (46 << 8))

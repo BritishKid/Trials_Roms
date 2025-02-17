@@ -27,41 +27,43 @@ Route7_HappyDad::
 
 
 Route7_Mai_Intro::
-# 24 "data/maps/Route7/scripts.pory"
+# 20 "data/maps/Route7/scripts.pory"
 	.string "I spent ages trying to get this special\n"
 	.string "Altaria.$"
 
 Route7_Mai_Outro::
-# 28 "data/maps/Route7/scripts.pory"
+# 24 "data/maps/Route7/scripts.pory"
 	.string "I still have to finish training it.$"
 
 Route7_Mai_Postbattle::
-# 32 "data/maps/Route7/scripts.pory"
+# 28 "data/maps/Route7/scripts.pory"
 	.string "4 weeks and they lost their first\n"
 	.string "fight...$"
 
 Route7_Sean_Intro::
-# 36 "data/maps/Route7/scripts.pory"
+# 32 "data/maps/Route7/scripts.pory"
 	.string "This is my private berry patch, I use it\n"
 	.string "to grow the rarest of berries.$"
 
 Route7_Sean_Outro::
-# 40 "data/maps/Route7/scripts.pory"
+# 36 "data/maps/Route7/scripts.pory"
 	.string "That never happens.$"
 
 Route7_Sean_Postbattle::
-# 44 "data/maps/Route7/scripts.pory"
+# 40 "data/maps/Route7/scripts.pory"
 	.string "Fine, you can use these berry patches.\n"
 	.string "Just don't tell anyone you beat me.$"
 
 Route7_HappyDad_Intro::
-# 48 "data/maps/Route7/scripts.pory"
-	.string "$"
+# 44 "data/maps/Route7/scripts.pory"
+	.string "I borrowed some Pokemon from my\n"
+	.string "children.$"
 
 Route7_HappyDad_Outro::
-# 52 "data/maps/Route7/scripts.pory"
-	.string "$"
+# 48 "data/maps/Route7/scripts.pory"
+	.string "Oh this isn't good.$"
 
 Route7_HappyDad_Postbattle::
-# 56 "data/maps/Route7/scripts.pory"
-	.string "$"
+# 52 "data/maps/Route7/scripts.pory"
+	.string "I took them for a walk and they ended\n"
+	.string "up getting bigger...$"

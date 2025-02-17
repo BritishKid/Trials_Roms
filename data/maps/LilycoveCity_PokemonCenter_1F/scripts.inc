@@ -1,68 +1,38 @@
-.set LOCALID_NURSE, 1
+# 1 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
 
+# 2 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
+
+# 3 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
 LilycoveCity_PokemonCenter_1F_MapScripts::
+# 4 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
 	map_script MAP_SCRIPT_ON_TRANSITION, LilycoveCity_PokemonCenter_1F_OnTransition
+# 5 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
 	map_script MAP_SCRIPT_ON_RESUME, CableClub_OnResume
+# 6 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
 	.byte 0
+# 7 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
 
+# 8 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
 LilycoveCity_PokemonCenter_1F_OnTransition:
+# 9 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
 	setrespawn HEAL_LOCATION_LILYCOVE_CITY
-	goto LilycoveCity_PokemonCenter_1F_EventScript_SetLilycoveLadyGfx
+# 10 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
 	end
+# 11 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
 
-@ SetLilycoveLadyGfx returns TRUE if its the Contest Lady
-LilycoveCity_PokemonCenter_1F_EventScript_SetLilycoveLadyGfx::
-	special SetLilycoveLadyGfx
-	goto_if_eq VAR_RESULT, FALSE, LilycoveCity_PokemonCenter_1F_EventScript_HideContestLadyMon
-	goto_if_eq VAR_RESULT, TRUE, LilycoveCity_PokemonCenter_1F_EventScript_ShowContestLadyMon
-	end
+# 12 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
 
-LilycoveCity_PokemonCenter_1F_EventScript_HideContestLadyMon::
-	setflag FLAG_HIDE_LILYCOVE_POKEMON_CENTER_CONTEST_LADY_MON
-	end
-
-LilycoveCity_PokemonCenter_1F_EventScript_ShowContestLadyMon::
-	clearflag FLAG_HIDE_LILYCOVE_POKEMON_CENTER_CONTEST_LADY_MON
-	end
-
+# 13 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
 LilycoveCity_PokemonCenter_1F_EventScript_Nurse::
+# 14 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
 	setvar VAR_0x800B, LOCALID_NURSE
+# 15 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
 	call Common_EventScript_PkmnCenterNurse
+# 16 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
 	waitmessage
+# 17 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
 	waitbuttonpress
+# 18 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
 	release
+# 19 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
 	end
-
-LilycoveCity_PokemonCenter_1F_EventScript_Boy::
-	msgbox LilycoveCity_PokemonCenter_1F_Text_HowManyKindsOfPokemon, MSGBOX_NPC
-	end
-
-LilycoveCity_PokemonCenter_1F_EventScript_Maniac::
-	lock
-	faceplayer
-	goto_if_set FLAG_BADGE07_GET, LilycoveCity_PokemonCenter_1F_EventScript_ManiacBadTeamGone
-	msgbox LilycoveCity_PokemonCenter_1F_Text_HeardAboutRottenScoundrels, MSGBOX_DEFAULT
-	release
-	end
-
-LilycoveCity_PokemonCenter_1F_EventScript_ManiacBadTeamGone::
-	msgbox LilycoveCity_PokemonCenter_1F_Text_HaventSeenRottenScoundrels, MSGBOX_DEFAULT
-	release
-	end
-
-LilycoveCity_PokemonCenter_1F_Text_HowManyKindsOfPokemon:
-	.string "I wonder how many kinds of POKéMON\n"
-	.string "there are in the world.\p"
-	.string "It'd be great to cross seas and\n"
-	.string "trade POKéMON with people far away.$"
-
-LilycoveCity_PokemonCenter_1F_Text_HeardAboutRottenScoundrels:
-	.string "I've been hearing about some rotten\n"
-	.string "scoundrels who steal POKéMON and rip\l"
-	.string "off METEORITES.$"
-
-LilycoveCity_PokemonCenter_1F_Text_HaventSeenRottenScoundrels:
-	.string "Those rotten scoundrels who steal\n"
-	.string "POKéMON and rip off METEORITES…\p"
-	.string "I haven't seen them around recently.$"
-

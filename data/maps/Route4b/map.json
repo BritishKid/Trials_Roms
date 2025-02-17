@@ -20,7 +20,7 @@
     },
     {
       "map": "MAP_ROUTE4C",
-      "offset": 36,
+      "offset": 29,
       "direction": "left"
     },
     {
@@ -123,6 +123,20 @@
       "elevation": 0,
       "dest_map": "MAP_WATERFALL_CAVE",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 11,
+      "y": 38,
+      "elevation": 0,
+      "dest_map": "MAP_GRANITE_PEAK_MAZE_1",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 8,
+      "y": 34,
+      "elevation": 0,
+      "dest_map": "MAP_GRANITE_PEAK_MAZE_1",
+      "dest_warp_id": "10"
     }
   ],
   "coord_events": [

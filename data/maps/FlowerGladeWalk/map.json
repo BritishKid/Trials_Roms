@@ -12,23 +12,7 @@
   "allow_running": true,
   "show_map_name": false,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": [
-    {
-      "map": "MAP_FLOWER_GLADE_WALK",
-      "offset": 0,
-      "direction": "up"
-    },
-    {
-      "map": "MAP_FLOWER_GLADE_WALK",
-      "offset": 0,
-      "direction": "down"
-    },
-    {
-      "map": "MAP_FLOWER_GLADE",
-      "offset": -33,
-      "direction": "down"
-    }
-  ],
+  "connections": 0,
   "object_events": [
 
   ],

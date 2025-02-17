@@ -20,12 +20,12 @@
     },
     {
       "map": "MAP_ROUTE4B",
-      "offset": -36,
+      "offset": -29,
       "direction": "right"
     },
     {
       "map": "MAP_CRYSTAL_COVE",
-      "offset": 15,
+      "offset": 22,
       "direction": "right"
     }
   ],
@@ -35,14 +35,14 @@
   "warp_events": [
     {
       "x": 29,
-      "y": 5,
+      "y": 12,
       "elevation": 0,
       "dest_map": "MAP_SANDY_CLIFF_CAVE",
       "dest_warp_id": "0"
     },
     {
       "x": 14,
-      "y": 6,
+      "y": 13,
       "elevation": 0,
       "dest_map": "MAP_SANDY_CLIFF_CAVE",
       "dest_warp_id": "1"
@@ -55,7 +55,7 @@
     {
       "type": "hidden_item",
       "x": 4,
-      "y": 5,
+      "y": 12,
       "elevation": 3,
       "item": "ITEM_FULL_RESTORE",
       "flag": "FLAG_HIDDEN_ITEM_ROUTE_104_HEART_SCALE"
@@ -63,9 +63,9 @@
     {
       "type": "hidden_item",
       "x": 11,
-      "y": 25,
+      "y": 32,
       "elevation": 3,
-      "item": "ITEM_RARE_CANDY",
+      "item": "ITEM_ABSORB_BULB",
       "flag": "FLAG_HIDDEN_ITEM_ROUTE_4C_RARE_CANDY"
     }
   ]

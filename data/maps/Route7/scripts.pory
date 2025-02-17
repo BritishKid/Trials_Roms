@@ -16,10 +16,6 @@ script Route7_HappyDad {
 }
 
 
-//Trainer: middle aged wholesome dad type whose pokemon are all the kid's pets, but evolved
- // Usraring, Rock ruff evo, Glameow, Ampbiom
-
-//text
 
 text Route7_Mai_Intro {
     format("I spent ages trying to get this special Altaria.")
@@ -46,15 +42,15 @@ text Route7_Sean_Postbattle {
 }
 
 text Route7_HappyDad_Intro {
-    format("")
+    format("I borrowed some Pokemon from my children.")
 }
 
 text Route7_HappyDad_Outro {
-    format("")
+    format("Oh this isn't good.")
 } 
 
 text Route7_HappyDad_Postbattle {
-    format("")
+    format("I took them for a walk and they ended up getting bigger...")
 }
 
 //Trainer: middle aged wholesome dad type whose pokemon are all the kid's pets, but evolved

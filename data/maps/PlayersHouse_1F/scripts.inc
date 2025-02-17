@@ -33,96 +33,96 @@ PlayersHouse_1F_Trigger_StartJourney::
 # 19 "data/maps/PlayersHouse_1F/scripts.pory"
 	setflag FLAG_SYS_POKEDEX_GET
 # 21 "data/maps/PlayersHouse_1F/scripts.pory"
-	setflag FLAG_SYS_B_DASH
+	setflag FLAG_RECEIVED_RUNNING_SHOES
 # 22 "data/maps/PlayersHouse_1F/scripts.pory"
-	special EnableNationalPokedex
+	setflag FLAG_SYS_B_DASH
 # 23 "data/maps/PlayersHouse_1F/scripts.pory"
-	msgbox PlayersHouse_1F_Trigger_StartJourney_Text_4, MSGBOX_DEFAULT
+	setflag FLAG_ADVENTURE_STARTED
 # 24 "data/maps/PlayersHouse_1F/scripts.pory"
-	giveitem ITEM_EXP_SHARE
+	special EnableNationalPokedex
+# 25 "data/maps/PlayersHouse_1F/scripts.pory"
+	msgbox PlayersHouse_1F_Trigger_StartJourney_Text_4, MSGBOX_DEFAULT
 # 26 "data/maps/PlayersHouse_1F/scripts.pory"
-	msgbox PlayersHouse_1F_Trigger_StartJourney_Text_5, MSGBOX_DEFAULT
-# 27 "data/maps/PlayersHouse_1F/scripts.pory"
-	setflag FLAG_RECEIVED_STARTER
+	giveitem ITEM_EXP_SHARE
 # 28 "data/maps/PlayersHouse_1F/scripts.pory"
-	setvar VAR_RIVAL_STATE, 2
+	msgbox PlayersHouse_1F_Trigger_StartJourney_Text_5, MSGBOX_DEFAULT
 # 29 "data/maps/PlayersHouse_1F/scripts.pory"
-	applymovement 1, PlayersHouse_1F_RivalBrother_ToSink
+	setflag FLAG_RECEIVED_STARTER
 # 30 "data/maps/PlayersHouse_1F/scripts.pory"
-	waitmovement 1
+	setvar VAR_RIVAL_STATE, 2
 # 31 "data/maps/PlayersHouse_1F/scripts.pory"
+	applymovement 1, PlayersHouse_1F_RivalBrother_ToSink
+# 32 "data/maps/PlayersHouse_1F/scripts.pory"
+	waitmovement 1
+# 33 "data/maps/PlayersHouse_1F/scripts.pory"
 	releaseall
 	return
 
 
 PlayersHouse_1F_EventScript_LittleBoy::
-# 35 "data/maps/PlayersHouse_1F/scripts.pory"
-	lockall
-# 36 "data/maps/PlayersHouse_1F/scripts.pory"
-	faceplayer
 # 37 "data/maps/PlayersHouse_1F/scripts.pory"
-	msgbox PlayersHouse_1F_EventScript_LittleBoy_Text_0, MSGBOX_DEFAULT
+	lockall
 # 38 "data/maps/PlayersHouse_1F/scripts.pory"
+	faceplayer
+# 39 "data/maps/PlayersHouse_1F/scripts.pory"
+	msgbox PlayersHouse_1F_EventScript_LittleBoy_Text_0, MSGBOX_DEFAULT
+# 40 "data/maps/PlayersHouse_1F/scripts.pory"
 	releaseall
 	return
 
 
 PlayersHouse_GF_EventScript_Itemball::
-# 42 "data/maps/PlayersHouse_1F/scripts.pory"
-	lockall
-# 43 "data/maps/PlayersHouse_1F/scripts.pory"
-	giveitem ITEM_POKE_BALL, 5
 # 44 "data/maps/PlayersHouse_1F/scripts.pory"
-	setflag FLAG_ITEM_FIRST_POKEBALLS
+	lockall
 # 45 "data/maps/PlayersHouse_1F/scripts.pory"
-	removeobject 2
+	giveitem ITEM_POKE_BALL, 5
 # 46 "data/maps/PlayersHouse_1F/scripts.pory"
+	setflag FLAG_ITEM_FIRST_POKEBALLS
+# 47 "data/maps/PlayersHouse_1F/scripts.pory"
+	removeobject 2
+# 48 "data/maps/PlayersHouse_1F/scripts.pory"
 	releaseall
 	return
 
 
 PlayersHouse_GF_EventScript_Television::
-# 50 "data/maps/PlayersHouse_1F/scripts.pory"
-	lockall
-# 51 "data/maps/PlayersHouse_1F/scripts.pory"
-	msgbox PlayersHouse_GF_EventScript_Television_Text_0
 # 52 "data/maps/PlayersHouse_1F/scripts.pory"
+	lockall
+# 53 "data/maps/PlayersHouse_1F/scripts.pory"
+	msgbox PlayersHouse_GF_EventScript_Television_Text_0
+# 54 "data/maps/PlayersHouse_1F/scripts.pory"
 	releaseall
 	return
 
 
 PlayersHouse_GF_EventScript_Fridge::
-# 56 "data/maps/PlayersHouse_1F/scripts.pory"
-	lockall
-# 57 "data/maps/PlayersHouse_1F/scripts.pory"
-	msgbox PlayersHouse_GF_EventScript_Fridge_Text_0
 # 58 "data/maps/PlayersHouse_1F/scripts.pory"
+	lockall
+# 59 "data/maps/PlayersHouse_1F/scripts.pory"
+	msgbox PlayersHouse_GF_EventScript_Fridge_Text_0
+# 60 "data/maps/PlayersHouse_1F/scripts.pory"
 	releaseall
 	return
 
 
-# 62 "data/maps/PlayersHouse_1F/scripts.pory"
-PlayersHouse_1F_RivalBrother_WalksClose:
-# 63 "data/maps/PlayersHouse_1F/scripts.pory"
-	walk_up
 # 64 "data/maps/PlayersHouse_1F/scripts.pory"
+PlayersHouse_1F_RivalBrother_WalksClose:
+# 65 "data/maps/PlayersHouse_1F/scripts.pory"
+	walk_up
+# 66 "data/maps/PlayersHouse_1F/scripts.pory"
 	walk_up
 	step_end
 
-# 67 "data/maps/PlayersHouse_1F/scripts.pory"
-PlayersHouse_1F_RivalBrother_ToSink:
-# 68 "data/maps/PlayersHouse_1F/scripts.pory"
-	walk_left
 # 69 "data/maps/PlayersHouse_1F/scripts.pory"
-	walk_left
+PlayersHouse_1F_RivalBrother_ToSink:
 # 70 "data/maps/PlayersHouse_1F/scripts.pory"
 	walk_left
 # 71 "data/maps/PlayersHouse_1F/scripts.pory"
-	walk_up
+	walk_left
 # 72 "data/maps/PlayersHouse_1F/scripts.pory"
 	walk_left
 # 73 "data/maps/PlayersHouse_1F/scripts.pory"
-	walk_left
+	walk_up
 # 74 "data/maps/PlayersHouse_1F/scripts.pory"
 	walk_left
 # 75 "data/maps/PlayersHouse_1F/scripts.pory"
@@ -130,6 +130,10 @@ PlayersHouse_1F_RivalBrother_ToSink:
 # 76 "data/maps/PlayersHouse_1F/scripts.pory"
 	walk_left
 # 77 "data/maps/PlayersHouse_1F/scripts.pory"
+	walk_left
+# 78 "data/maps/PlayersHouse_1F/scripts.pory"
+	walk_left
+# 79 "data/maps/PlayersHouse_1F/scripts.pory"
 	face_up
 	step_end
 
@@ -158,24 +162,24 @@ PlayersHouse_1F_Trigger_StartJourney_Text_3:
 	.string "remember which one it was?$"
 
 PlayersHouse_1F_Trigger_StartJourney_Text_4:
-# 23 "data/maps/PlayersHouse_1F/scripts.pory"
+# 25 "data/maps/PlayersHouse_1F/scripts.pory"
 	.string "Oh wow! Your POKEMON is so much weaker\n"
 	.string "than RIVALNAME, you probably need this\l"
 	.string "to catch up.$"
 
 PlayersHouse_1F_Trigger_StartJourney_Text_5:
-# 26 "data/maps/PlayersHouse_1F/scripts.pory"
+# 28 "data/maps/PlayersHouse_1F/scripts.pory"
 	.string "Anyway I'm going to get some juice!$"
 
 PlayersHouse_1F_EventScript_LittleBoy_Text_0:
-# 37 "data/maps/PlayersHouse_1F/scripts.pory"
+# 39 "data/maps/PlayersHouse_1F/scripts.pory"
 	.string "Where is your juice?$"
 
 PlayersHouse_GF_EventScript_Television_Text_0:
-# 51 "data/maps/PlayersHouse_1F/scripts.pory"
+# 53 "data/maps/PlayersHouse_1F/scripts.pory"
 	.string "It's a show about cartoon dogs.\l"
 	.string "I'm not going to listen to them.$"
 
 PlayersHouse_GF_EventScript_Fridge_Text_0:
-# 57 "data/maps/PlayersHouse_1F/scripts.pory"
+# 59 "data/maps/PlayersHouse_1F/scripts.pory"
 	.string "I need to buy more juice.$"

@@ -1263,3 +1263,9 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/Quarry_ForemanHouse/scripts.inc"
 
 	.include "data/maps/GranitePeak_Peak1/scripts.inc"
+
+	.include "data/maps/MegaTower/scripts.inc"
+
+	.include "data/maps/GranitePeak_Maze_1/scripts.inc"
+
+	.include "data/maps/GranitePeak_Dojo_1/scripts.inc"
