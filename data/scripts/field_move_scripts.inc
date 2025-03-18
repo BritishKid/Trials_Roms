@@ -403,8 +403,8 @@ Text_FailSweetScent:
 	.string "Looks like there's nothing here…$"
 
 Text_UsedSmallSaw:
-	.string "You used the small saw$"
+	.string "You used the Hand Axe.$"
 
 	
 Text_UsedPickaxe:
-	.string "You used the pickaxe$"
+	.string "You used the Pickaxe$"

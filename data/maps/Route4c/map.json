@@ -27,6 +27,11 @@
       "map": "MAP_CRYSTAL_COVE",
       "offset": 22,
       "direction": "right"
+    },
+    {
+      "map": "MAP_CORAL_BEACH_1",
+      "offset": 20,
+      "direction": "left"
     }
   ],
   "object_events": [

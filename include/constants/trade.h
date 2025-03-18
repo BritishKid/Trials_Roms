@@ -7,7 +7,7 @@
 // In-game Trade IDs
 #define INGAME_TRADE_MAGNEMITE 0
 #define INGAME_TRADE_MUDBRAY 1
-#define INGAME_TRADE_HORSEA 2
+#define INGAME_TRADE_HAUNTER 2
 #define INGAME_TRADE_MEOWTH 3
 
 // Return values for CanTradeSelectedMon and CanSpinTradeMon

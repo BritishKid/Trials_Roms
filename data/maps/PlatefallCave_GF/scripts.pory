@@ -46,7 +46,7 @@ script Platefall_Cave_Alex_General {
 script Platefall_Cave_Maniac {
     lockall
     faceplayer
-    msgbox(format("Many history books talk about a rare Pokémon hidden deep in these mountains, but they are very hard to traverse"))
+    msgbox(format("Many history books talk about a rare Pokémon hidden deep in these mountains, but they are very hard to traverse."))
     releaseall
 }
 

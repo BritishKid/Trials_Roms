@@ -1,1 +1,52 @@
 mapscripts HiddenGrotto_Bulbasaur_MapScripts {}
+
+script HiddenGrotto_Bulbasaur_MegaStone_EventScript {
+    lockall
+    if(!flag(FLAG_VENUSAUR_MEGASTONE_FOUND)) {
+        msgbox(format("There seems to be a green marble like object on the altar."))
+        playmoncry(SPECIES_VENUSAUR, CRY_MODE_ENCOUNTER)
+        applymovement(OBJ_EVENT_ID_PLAYER, Movement_MegaStoneGrotto_PlayerSurpised)
+        waitmovement(OBJ_EVENT_ID_PLAYER)
+        clearflag(FLAG_HIDDEN_MEGA) //todo custom mega sprite for overworld current is placeholder
+        addobject(2)
+        applymovement(2, Movement_VenusaurArrives)
+        waitmovement(2)
+        msgbox(format("VENUSAUR!"))
+        call(MegaVenusaurBattle)
+        call(MegaVenusaurBeaten)
+    } else {
+        msgbox(format("There is an indent from where I found the Venusaurite"))
+    }
+}
+
+script MegaVenusaurBattle {
+    settotemboost(1, 1, 2, 1, 1, 2, 0, 0)
+    setflag(FLAG_CANT_CATCH_MON)
+    setwildbattle(SPECIES_VENUSAUR_MEGA, 45, ITEM_VENUSAURITE)
+    dowildbattle
+}
+
+script MegaVenusaurBeaten {
+    setflag(FLAG_HIDDEN_MEGA)
+    clearflag(FLAG_CANT_CATCH_MON)
+    removeobject(2)
+    msgbox(format("The Venusaur retreats."))
+    msgbox(format("You take the Mega Stone from the altar."))
+    giveitem(ITEM_VENUSAURITE)
+    setflag(FLAG_VENUSAUR_MEGASTONE_FOUND)
+}
+
+//movement
+
+script Movement_MegaStoneVenusaur_PlayerSurpised {
+    emote_exclamation_mark
+}
+
+script Movement_VenusaurArrives {
+    walk_right
+    walk_right
+    walk_right
+    walk_right
+    walk_right
+    walk_right
+}

@@ -37,7 +37,7 @@ script Clayhaven_BridgeMart_Employee {
     msgbox(format("Have these as a sign of good faith."), MSGBOX_AUTOCLOSE)
     giveitem(ITEM_BERRY_JUICE, 6)
     giveitem(ITEM_POTION, 3)
-    msgbox(format("You were given 6 berry juices and 3 potions."), MSGBOX_AUTOCLOSE)
+    msgbox(format("You were given 6 Berry Juices and 3 Potions."), MSGBOX_AUTOCLOSE)
     setvar(VAR_CLAYHAVEN_STATE, 1)
     msgbox(format("Good luck!"), MSGBOX_AUTOCLOSE)
     applymovement(2, Movement_Clayhaven_MartEmployeeLeaves)

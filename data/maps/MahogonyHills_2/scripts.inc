@@ -179,7 +179,7 @@ MahoganyHills2_EventScript_RoxanneEncounter::
 # 101 "data/maps/MahogonyHills_2/scripts.pory"
 	msgbox MahoganyHills2_Trigger_RoxanneEncounter_Text_0
 # 102 "data/maps/MahogonyHills_2/scripts.pory"
-	msgbox MahoganyHills2_Trigger_RoxanneEncounter_Text_1, MSGBOX_AUTOCLOSE
+	msgbox MahoganyHills2_EventScript_RoxanneEncounter_Text_0, MSGBOX_AUTOCLOSE
 # 103 "data/maps/MahogonyHills_2/scripts.pory"
 	trainerbattle_single TRAINER_ROXANNE_1, MahoganyHills_Roxanne_Battle_Intro, MahoganyHills_Roxanne_Battle_Outro, MahoganyHills_RoxanneBeaten
 	return
@@ -189,7 +189,7 @@ MahoganyHills_RoxanneBeaten_WithoutTrigger::
 # 108 "data/maps/MahogonyHills_2/scripts.pory"
 	lockall
 # 109 "data/maps/MahogonyHills_2/scripts.pory"
-	msgbox MahoganyHills_RoxanneBeaten_Text_0, MSGBOX_AUTOCLOSE
+	msgbox MahoganyHills_RoxanneBeaten_WithoutTrigger_Text_0, MSGBOX_AUTOCLOSE
 # 110 "data/maps/MahogonyHills_2/scripts.pory"
 	giveitem ITEM_TM37
 # 111 "data/maps/MahogonyHills_2/scripts.pory"
@@ -515,43 +515,44 @@ MahoganyHills2_Trigger_BridgeRight_Text_0:
 MahogonyHills2_EventScript_RivalEncounter_Text_0:
 # 33 "data/maps/MahogonyHills_2/scripts.pory"
 	.string "I thought you would eventually get\n"
-	.string "here, guess you had to come see my new\l"
+	.string "here; guess you had to come see my new\l"
 	.string "badge.\l"
 	.string "My Pokémon barely broke a sweat\l"
-	.string "beating the gym leader. In fact they\l"
-	.string "got so much energy left they could still\l"
-	.string "beat you!$"
+	.string "beating the gym leader. In fact, they\l"
+	.string "have so much energy left they could\l"
+	.string "still beat you!$"
 
 MahoganyHills2_Rival_PostScript_Text_0:
 # 40 "data/maps/MahogonyHills_2/scripts.pory"
-	.string "You might have won but I still have more\n"
-	.string "badges than you. That's what matters\l"
-	.string "really.$"
+	.string "You might have won, but I still have\n"
+	.string "more badges than you. That's what\l"
+	.string "matters, really.$"
 
 MahoganyHills2_Rival_PostScript_Text_1:
 # 41 "data/maps/MahogonyHills_2/scripts.pory"
-	.string "You should probably take this to, it will\n"
-	.string "help once you've got your first badge.$"
+	.string "You should probably take this too; it\n"
+	.string "will help once you've got your first\l"
+	.string "badge.$"
 
 MahoganyHills2_Rival_PostScript_Text_2:
 # 42 "data/maps/MahogonyHills_2/scripts.pory"
-	.string "You have been given a HAND AXE, it could\n"
+	.string "You have been given a Hand Axe; it could\n"
 	.string "be used to cut small trees.$"
 
 MahoganyHills2_Rival_PostScript_Text_3:
 # 44 "data/maps/MahogonyHills_2/scripts.pory"
-	.string "You won't need to reach the gym it's\n"
+	.string "You won't need to reach the gym; it's\n"
 	.string "only a little further north.$"
 
 MahoganyHills2_Rival_PostScript_Text_4:
 # 45 "data/maps/MahogonyHills_2/scripts.pory"
-	.string "Anyway I'm heading to get my next\n"
-	.string "badge, I'll see you there if you don't\l"
+	.string "Anyway, I'm heading to get my next\n"
+	.string "badge; I'll see you there if you don't\l"
 	.string "lose too badly up here.$"
 
 MahoganyHills2_Rival_PostScript_Text_5:
 # 46 "data/maps/MahogonyHills_2/scripts.pory"
-	.string "See ya nerd!$"
+	.string "See ya, nerd!$"
 
 MahoganyHills2_Trigger_RoxanneEncounter_Text_0:
 # 76 "data/maps/MahogonyHills_2/scripts.pory"
@@ -563,28 +564,38 @@ MahoganyHills2_Trigger_RoxanneEncounter_Text_0:
 
 MahoganyHills2_Trigger_RoxanneEncounter_Text_1:
 # 77 "data/maps/MahogonyHills_2/scripts.pory"
-	.string "I'm visiting from Hoenn and by that look\n"
-	.string "I can tell you're a trainer.$"
+	.string "I'm visiting from Hoenn, and by that\n"
+	.string "look, I can tell you're a trainer.$"
 
 MahoganyHills_RoxanneBeaten_Text_0:
 # 84 "data/maps/MahogonyHills_2/scripts.pory"
-	.string "That's impressive, I'm not at my gym but\n"
+	.string "That's impressive. I'm not at my gym, but\n"
 	.string "you should still take this.$"
 
 MahoganyHills_RoxanneBeaten_Text_1:
 # 87 "data/maps/MahogonyHills_2/scripts.pory"
-	.string "It's the TM for ROCK TOMB, a great rock\n"
-	.string "type move that will slow your opponent\l"
-	.string "down.$"
+	.string "It's the TM for Rock Tomb, a great\n"
+	.string "rock-type move that will slow your\l"
+	.string "opponent down.$"
 
 MahoganyHills_RoxanneBeaten_Text_2:
 # 89 "data/maps/MahogonyHills_2/scripts.pory"
 	.string "I'll see you around again!$"
 
+MahoganyHills2_EventScript_RoxanneEncounter_Text_0:
+# 102 "data/maps/MahogonyHills_2/scripts.pory"
+	.string "I'm visiting from Hoenn and by that look\n"
+	.string "I can tell you're a trainer.$"
+
+MahoganyHills_RoxanneBeaten_WithoutTrigger_Text_0:
+# 109 "data/maps/MahogonyHills_2/scripts.pory"
+	.string "That's impressive, I'm not at my gym but\n"
+	.string "you should still take this.$"
+
 MahoganyHills2_Josh_PostScript_Text_0:
 # 125 "data/maps/MahogonyHills_2/scripts.pory"
-	.string "Wow with money you'd be unstoppable.\n"
-	.string "Why don't you take this.$"
+	.string "Wow, with money you'd be unstoppable.\n"
+	.string "Why don't you take this?$"
 
 MahoganyHills_EventScript_MossyStone_Text_0:
 # 133 "data/maps/MahogonyHills_2/scripts.pory"
@@ -592,7 +603,7 @@ MahoganyHills_EventScript_MossyStone_Text_0:
 
 MahoganyHills_EventScript_MossyStone_Grandson_Text_0:
 # 139 "data/maps/MahogonyHills_2/scripts.pory"
-	.string "Interesting...is this it?$"
+	.string "Interesting…Is this it?$"
 
 MahoganyHills_EventScript_MossyStone_Grandson_Text_1:
 # 143 "data/maps/MahogonyHills_2/scripts.pory"
@@ -653,7 +664,7 @@ MahoganyHills_EventScript_MossyStone_Grandson_Text_11:
 
 MahoganyHills2_Rival_Intro::
 # 274 "data/maps/MahogonyHills_2/scripts.pory"
-	.string "Don't worry this won't take long.$"
+	.string "Don't worry; this won't take long.$"
 
 MahoganyHills2_Rival_Outro::
 # 278 "data/maps/MahogonyHills_2/scripts.pory"
@@ -667,8 +678,8 @@ MahoganyHills2_Luke_Intro::
 
 MahoganyHills2_Luke_Outro::
 # 286 "data/maps/MahogonyHills_2/scripts.pory"
-	.string "Wow you're stronger than the bug\n"
-	.string "trainers around here.$"
+	.string "Wow, you're stronger than the bug\n"
+	.string "catchers around here.$"
 
 MahoganyHills2_Luke_Postbattle::
 # 290 "data/maps/MahogonyHills_2/scripts.pory"
@@ -677,22 +688,22 @@ MahoganyHills2_Luke_Postbattle::
 
 MahoganyHills_Roxanne_Battle_Intro::
 # 294 "data/maps/MahogonyHills_2/scripts.pory"
-	.string "How about a battle then.$"
+	.string "How about a battle then?$"
 
 MahoganyHills_Roxanne_Battle_Outro::
 # 298 "data/maps/MahogonyHills_2/scripts.pory"
-	.string "Wow, if we were in Hoenn you'd have just\n"
-	.string "earnt a badge!$"
+	.string "Wow, if we were in Hoenn, you'd have just\n"
+	.string "earned a badge!$"
 
 MahoganyHills2_Carlie_Intro::
 # 302 "data/maps/MahogonyHills_2/scripts.pory"
-	.string "If I win I'm gonna buy groceries from\n"
+	.string "If I win, I'm going to buy groceries with\n"
 	.string "the money.$"
 
 MahoganyHills2_Carlie_Outro::
 # 306 "data/maps/MahogonyHills_2/scripts.pory"
-	.string "Guess it's gonna be unseasoned noodles\n"
-	.string "today.$"
+	.string "Guess it's going to be unseasoned\n"
+	.string "noodles today.$"
 
 MahoganyHills2_Carlie_PostBattle::
 # 310 "data/maps/MahogonyHills_2/scripts.pory"
@@ -700,7 +711,7 @@ MahoganyHills2_Carlie_PostBattle::
 
 MahoganyHills2_Josh_Intro::
 # 314 "data/maps/MahogonyHills_2/scripts.pory"
-	.string "Money is a trainers best friend.$"
+	.string "Money is a trainer's best friend.$"
 
 MahoganyHills2_Josh_Outro::
 # 318 "data/maps/MahogonyHills_2/scripts.pory"

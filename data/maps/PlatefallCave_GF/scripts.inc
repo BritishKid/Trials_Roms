@@ -225,4 +225,4 @@ Platefall_Cave_Maniac_Text_0:
 	.string "Many history books talk about a rare\n"
 	.string "Pokémon hidden deep in these\l"
 	.string "mountains, but they are very hard to\l"
-	.string "traverse$"
+	.string "traverse.$"

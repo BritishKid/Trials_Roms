@@ -34,7 +34,7 @@ script Route3_EventScript_FireStone {
 
 script Route3_EventScript_FireStone_Grandson {
     lock
-    msgbox(format("Interesting...is this it?"))
+    msgbox(format("Interesting…Is this it?"))
     // questmenu(QUEST_MENU_CHECK_ACTIVE, QUEST_EVOLUTION_STONE_MART)
     if(!flag(FLAG_FIRE_STONE_SOURCE) && var(VAR_EVOLUTION_STONE_HUNTING) == 1) {
         faceplayer

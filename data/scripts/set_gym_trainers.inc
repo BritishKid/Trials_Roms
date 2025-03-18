@@ -76,10 +76,10 @@ SootopolisCity_Gym_SetGymTrainers::
 	settrainerflag TRAINER_ANDREA
 	settrainerflag TRAINER_CRISSY
 	settrainerflag CRYSTALCOVER_GERALD
-	settrainerflag TRAINER_CONNIE
-	settrainerflag TRAINER_BRIDGET
-	settrainerflag TRAINER_OLIVIA
-	settrainerflag TRAINER_TIFFANY
+	settrainerflag MEGATOWER3F_TRAINER1
+	settrainerflag MEGATOWER3F_TRAINER2
+	settrainerflag MEGATOWER3F_TRAINERACE
+	settrainerflag MEGATOWER4F_TRAINER1
 	settrainerflag TRAINER_BETHANY
 	settrainerflag TRAINER_ANNIKA
 	settrainerflag ROUTE7_MAI

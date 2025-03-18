@@ -1936,7 +1936,7 @@ Azumarill
 Level: 25
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Boltund
+Manectric
 Level: 25
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -2046,7 +2046,7 @@ Boldore
 Level: 32
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
-Boltund
+Manectric
 Level: 32
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
@@ -3147,39 +3147,65 @@ Adamant Nature
 - Knock Off  
 - Whirlwind  
 
-=== TRAINER_CINDY_5 ===
-Name: CINDY
-Class: Lady
-Pic: Lady
-Gender: Female
-Music: Female
-Items: Full Restore
+=== MEGATOWER1F_TRAINER1 ===
+Name: YUKI
+Class: Bug Catcher
+Pic: Bug Catcher
+Gender: Male
+Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Linoone @ Nugget
-Level: 33
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+Palpitoad @ Eviolite  
+Ability: Swift Swim  
+Level: 38  
+EVs: 252 HP / 252 Def / 4 SpA  
+Bold Nature  
+- Scald  
+- Mud Shot  
+- Toxic  
+- Aqua Ring  
 
-=== TRAINER_CINDY_6 ===
-Name: CINDY
-Class: Lady
-Pic: Lady
-Gender: Female
-Music: Female
-Items: Full Restore
+Ariados @ Black Sludge  
+Ability: Swarm  
+Level: 39  
+EVs: 252 HP / 252 Atk / 4 SpD  
+Adamant Nature  
+- Leech Life  
+- Poison Jab  
+- Sticky Web  
+- Sucker Punch  
+
+=== MEGATOWER1F_TRAINER2 ===
+Name: DAISUKE
+Class: Ninja Boy
+Pic: Ninja Boy
+Gender: Male
+Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Linoone @ Nugget
-Level: 36
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
-- Fury Swipes
-- Mud Sport
-- Odor Sleuth
-- Sand Attack
+Qwilfish @ Black Sludge  
+Ability: Swift Swim  
+Level: 39  
+EVs: 252 HP / 252 Atk / 4 Spe  
+Jolly Nature  
+- Waterfall  
+- Toxic Spikes  
+- Taunt  
+- Poison Jab  
 
-=== TRAINER_MELISSA ===
+Parasect @ Leftovers  
+Ability: Dry Skin  
+Level: 40  
+EVs: 252 HP / 252 SpD / 4 Def  
+Careful Nature  
+- Spore  
+- Leech Life  
+- Protect  
+- Knock Off  
+
+=== MEGATOWER1F_TRAINERACE ===
 Name: MELISSA
 Class: Beauty
 Pic: Beauty
@@ -3188,293 +3214,449 @@ Music: Female
 Double Battle: No
 AI: Check Bad Move
 
-Marill
-Level: 21
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Toxicroak @ Black Sludge  
+Ability: Dry Skin  
+Level: 41  
+EVs: 252 HP / 252 Atk / 4 Spe  
+Jolly Nature  
+- Drain Punch  
+- Poison Jab  
+- Swords Dance  
+- Sucker Punch  
 
-=== TRAINER_SHEILA ===
-Name: SHEILA
-Class: Beauty
-Pic: Beauty
+Ludicolo @ Leftovers  
+Ability: Swift Swim  
+Level: 41  
+EVs: 252 HP / 252 SpA / 4 Spe  
+Modest Nature  
+- Scald  
+- Giga Drain  
+- Ice Beam  
+- Leech Seed  
+
+Swampert @ Leftovers  
+Ability: Torrent  
+Level: 42  
+EVs: 252 Atk / 252 HP / 4 Spe  
+Adamant Nature  
+- Waterfall  
+- Earthquake  
+- Ice Punch  
+- Bulk Up  
+
+=== MEGATOWER2F_TRAINER1 ===
+Name: SIENNA
+Class: Picnicker
+Pic: Picnicker
 Gender: Female
 Music: Female
 Double Battle: No
 AI: Check Bad Move
 
-Shroomish
-Level: 21
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Rapidash @ Charcoal  
+Ability: Flash Fire  
+Level: 38  
+EVs: 252 Atk / 252 Spe / 4 HP  
+Jolly Nature  
+- Flare Blitz  
+- Wild Charge  
+- Quick Attack  
+- Agility  
 
-=== TRAINER_SHIRLEY ===
-Name: SHIRLEY
-Class: Beauty
-Pic: Beauty
-Gender: Female
-Music: Female
-Double Battle: No
-AI: Check Bad Move
+Torkoal @ Grass Gem  
+Ability: Drought  
+Level: 39  
+EVs: 252 HP / 252 SpA / 4 SpD  
+Modest Nature  
+- Lava Plume  
+- Solar Beam  
+- Yawn  
+- Stealth Rock  
 
-Numel
-Level: 21
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_JESSICA_1 ===
-Name: JESSICA
-Class: Beauty
-Pic: Beauty
-Gender: Female
-Music: Female
-Double Battle: No
-AI: Check Bad Move
-
-Kecleon
-Level: 29
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Bind
-- Lick
-- Fury Swipes
-- Feint Attack
-
-Seviper
-Level: 29
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Poison Tail
-- Screech
-- Glare
-- Crunch
-
-=== TRAINER_CONNIE ===
-Name: CONNIE
-Class: Beauty
-Pic: Beauty
-Gender: Female
-Music: Female
-Double Battle: No
-AI: Check Bad Move
-
-Goldeen
-Level: 40
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-
-=== TRAINER_BRIDGET ===
-Name: BRIDGET
-Class: Beauty
-Pic: Beauty
-Gender: Female
-Music: Female
-Double Battle: No
-AI: Check Bad Move
-
-Azumarill
-Level: 40
-IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
-
-=== TRAINER_OLIVIA ===
-Name: OLIVIA
-Class: Beauty
-Pic: Beauty
-Gender: Female
-Music: Female
-Double Battle: No
-AI: Check Bad Move
-
-Clamperl
-Level: 35
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Iron Defense
-- Whirlpool
-- Rain Dance
-- Water Pulse
-
-Corphish
-Level: 37
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Taunt
-- Crabhammer
-- Water Pulse
-
-Lombre
-Level: 39
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Uproar
-- Fury Swipes
-- Fake Out
-- Water Pulse
-
-=== TRAINER_TIFFANY ===
-Name: TIFFANY
-Class: Beauty
-Pic: Beauty
-Gender: Female
-Music: Female
-Double Battle: No
-AI: Check Bad Move
-
-Carvanha
-Level: 39
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-
-Sharpedo
-Level: 39
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-
-=== TRAINER_JESSICA_2 ===
-Name: JESSICA
-Class: Beauty
-Pic: Beauty
-Gender: Female
-Music: Female
-Double Battle: No
-AI: Check Bad Move
-
-Kecleon
-Level: 35
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
-- Bind
-- Lick
-- Fury Swipes
-- Feint Attack
-
-Seviper
-Level: 35
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
-- Poison Tail
-- Screech
-- Glare
-- Crunch
-
-=== TRAINER_JESSICA_3 ===
-Name: JESSICA
-Class: Beauty
-Pic: Beauty
-Gender: Female
-Music: Female
-Double Battle: No
-AI: Check Bad Move
-
-Kecleon
-Level: 38
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
-- Bind
-- Lick
-- Fury Swipes
-- Feint Attack
-
-Seviper
-Level: 38
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
-- Poison Tail
-- Screech
-- Glare
-- Crunch
-
-=== TRAINER_JESSICA_4 ===
-Name: JESSICA
-Class: Beauty
-Pic: Beauty
-Gender: Female
-Music: Female
-Double Battle: No
-AI: Check Bad Move
-
-Kecleon
-Level: 41
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-- Bind
-- Lick
-- Fury Swipes
-- Feint Attack
-
-Seviper
-Level: 41
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-- Poison Tail
-- Screech
-- Glare
-- Crunch
-
-=== TRAINER_JESSICA_5 ===
-Name: JESSICA
-Class: Beauty
-Pic: Beauty
-Gender: Female
-Music: Female
-Double Battle: No
-AI: Check Bad Move
-
-Kecleon
-Level: 44
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
-- Bind
-- Lick
-- Fury Swipes
-- Feint Attack
-
-Seviper
-Level: 44
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
-- Poison Tail
-- Screech
-- Glare
-- Crunch
-
-=== TRAINER_WINSTON_1 ===
-Name: WINSTON
-Class: Rich Boy
-Pic: Rich Boy
+=== MEGATOWER2F_TRAINER2 ===
+Name: Hiro
+Class: Hiker
+Pic: Hiker
 Gender: Male
-Music: Rich
-Items: Full Restore
+Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Zigzagoon @ Nugget
-Level: 7
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Houndoom @ Wise Glasses  
+Ability: Flash Fire  
+Level: 39  
+EVs: 252 SpA / 252 Spe / 4 HP  
+Timid Nature  
+- Flamethrower  
+- Solar Beam  
+- Dark Pulse  
+- Nasty Plot  
 
-=== TRAINER_MOLLIE ===
-Name: MOLLIE
-Class: Expert
-Pic: Expert F
+Leafeon @ Leftovers  
+Ability: Chlorophyll  
+Level: 40  
+EVs: 252 Atk / 252 Spe / 4 HP  
+Adamant Nature  
+- Leaf Blade  
+- X-Scissor  
+- Synthesis  
+- Sunny Day  
+
+=== MEGATOWER2F_TRAINERACE ===
+Name: KATSU
+Class: Cooltrainer
+Pic: Cooltrainer M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Arcanine @ Leftovers  
+Ability: Flash Fire  
+Level: 41  
+EVs: 252 HP / 252 Atk / 4 Spe  
+Jolly Nature  
+- Flare Blitz  
+- Extreme Speed  
+- Will-O-Wisp  
+- Morning Sun  
+
+Exeggutor @ Sitrus Berry  
+Ability: Chlorophyll  
+Level: 41  
+EVs: 252 SpA / 252 HP / 4 Spe  
+Modest Nature  
+- Solar Beam  
+- Psychic  
+- Sleep Powder  
+- Giga Drain  
+
+Camerupt @ White Herb  
+Ability: Solid Rock  
+Level: 42  
+EVs: 252 SpA / 252 HP / 4 SpD  
+Quiet Nature  
+- Eruption  
+- Earth Power  
+- Overheat  
+- Rock Slide
+
+=== MEGATOWER3F_TRAINER1 ===
+Name: HANA
+Class: Beauty
+Pic: Beauty
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Lilligant @ Miracle Seed  
+Ability: Chlorophyll  
+Level: 38  
+EVs: 252 SpA / 252 Spe / 4 HP  
+Modest Nature  
+- Giga Drain  
+- Sleep Powder  
+- Quiver Dance  
+- Aromatherapy  
+
+Tangela @ Eviolite  
+Ability: Regenerator  
+Level: 39  
+EVs: 252 HP / 252 Def / 4 SpA  
+Bold Nature  
+- Giga Drain  
+- Knock Off  
+- Sleep Powder  
+- Leech Seed  
+
+=== MEGATOWER3F_TRAINER2 ===
+Name: OLIVIA
+Class: Pokemaniac
+Pic: Pokemaniac
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Roserade @ Black Sludge  
+Ability: Technician  
+Level: 39  
+EVs: 252 SpA / 252 Spe / 4 HP  
+Timid Nature  
+- Giga Drain  
+- Sludge Bomb  
+- Hidden Power  
+- Spikes  
+
+Tropius @ Leftovers  
+Ability: Harvest  
+Level: 40  
+EVs: 252 HP / 252 Def / 4 SpD  
+Careful Nature  
+- Leech Seed  
+- Substitute  
+- Air Slash  
+- Protect  
+
+=== MEGATOWER3F_TRAINERACE ===
+Name: JENOVA
+Class: Cooltrainer
+Pic: Cooltrainer F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Florges @ Sitrus Berry  
+Ability: Flower Veil  
+Level: 41  
+EVs: 252 HP / 252 SpA / 4 SpD  
+Modest Nature  
+- Moonblast  
+- Wish  
+- Protect  
+- Energy Ball  
+
+Tsareena @ Assault Vest  
+Ability: Queenly Majesty  
+Level: 41  
+EVs: 252 Atk / 252 HP / 4 Spe  
+Adamant Nature  
+- Trop Kick  
+- High Jump Kick  
+- Play Rough  
+- Rapid Spin  
+
+Altaria @ Leftovers  
+Ability: Natural Cure  
+Level: 42  
+EVs: 252 HP / 252 SpD / 4 SpA  
+Calm Nature  
+- Dragon Pulse  
+- Moonblast  
+- Roost  
+- Cotton Guard
+
+=== MEGATOWER4F_TRAINER1 ===
+Name: ANNIE
+Class: Picnicker
+Pic: Picnicker
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Sandaconda @ Leftovers  
+Ability: Shed Skin  
+Level: 38  
+EVs: 252 HP / 252 Atk / 4 SpD  
+Adamant Nature  
+- Earthquake  
+- Stone Edge  
+- Glare  
+- Rest  
+
+Cradily @ Smooth Rock  
+Ability: Sand Force  
+Level: 39  
+EVs: 252 HP / 252 SpD / 4 SpA  
+Calm Nature  
+- Giga Drain  
+- Rock Slide  
+- Toxic  
+- Recover  
+
+=== MEGATOWER4F_TRAINER2 ===
+Name: KEN
+Class: Camper
+Pic: Camper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Gabite @ Dragon Gem  
+Ability: Sand Veil  
+Level: 39  
+EVs: 252 Atk / 252 Spe / 4 HP  
+Jolly Nature  
+- Dragon Claw  
+- Earthquake  
+- Fire Fang  
+- Swords Dance  
+
+Excadrill @ Soft Sand  
+Ability: Sand Rush  
+Level: 40  
+EVs: 252 Atk / 252 Spe / 4 HP  
+Jolly Nature  
+- Iron Head  
+- Earthquake  
+- Rock Slide  
+- Swords Dance  
+
+=== MEGATOWER4F_TRAINERACE ===
+Name: RAOUL
+Class: Cooltrainer
+Pic: Cooltrainer M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Excadrill @ Leftovers  
+Ability: Sand Rush  
+Level: 41  
+EVs: 252 Atk / 252 Spe / 4 HP  
+Jolly Nature  
+- Earthquake  
+- Iron Head  
+- Swords Dance  
+- Rapid Spin  
+
+Flygon @ Life Orb  
+Ability: Levitate  
+Level: 41  
+EVs: 252 Atk / 252 Spe / 4 HP  
+Jolly Nature  
+- Dragon Claw  
+- Earthquake  
+- Fire Punch  
+- U-turn  
+
+Sandaconda @ Soft Sand  
+Ability: Sand Spit  
+Level: 42  
+EVs: 252 HP / 252 Atk / 4 Def  
+Adamant Nature  
+- Coil  
+- Earthquake  
+- Stone Edge  
+- Glare  
+
+=== MEGATOWER5F_TRAINERACE1 ===
+Name: MELISSA
+Class: Beauty
+Pic: Beauty
 Gender: Female
 Music: Intense
 Double Battle: No
 AI: Check Bad Move
 
-Whiscash
-Level: 33
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Swampert @ Swampertite  
+Ability: Torrent  
+Level: 42  
+EVs: 252 Atk / 252 HP / 4 Spe  
+Adamant Nature  
+- Waterfall  
+- Earthquake  
+- Ice Punch  
+- Bulk Up  
 
-Meditite
-Level: 33
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-
-=== TRAINER_GARRET ===
-Name: GARRET
-Class: Rich Boy
-Pic: Rich Boy
+=== MEGATOWER5F_TRAINERACE2 ===
+Name: KATSU
+Class: Cooltrainer
+Pic: Cooltrainer M
 Gender: Male
-Music: Rich
-Items: Full Restore
+Music: Intense
 Double Battle: No
 AI: Check Bad Move
 
-Azumarill @ Nugget
-Level: 45
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Camerupt @ Cameruptite
+Ability: Solid Rock  
+Level: 42  
+EVs: 252 SpA / 252 HP / 4 SpD  
+Quiet Nature  
+- Eruption  
+- Earth Power  
+- Overheat  
+- Rock Slide
 
-=== TRAINER_WINSTON_2 ===
-Name: WINSTON
-Class: Rich Boy
-Pic: Rich Boy
-Gender: Male
-Music: Rich
-Items: Full Restore
+=== MEGATOWER5F_TRAINERACE3 ===
+Name: JENOVA
+Class: Cooltrainer
+Pic: Cooltrainer F
+Gender: Female
+Music: Intense
 Double Battle: No
 AI: Check Bad Move
 
-Linoone @ Nugget
-Level: 27
+Altaria @ Altarianite  
+Ability: Natural Cure  
+Level: 42  
+EVs: 252 HP / 252 SpD / 4 SpA  
+Calm Nature  
+- Dragon Pulse  
+- Moonblast  
+- Roost  
+- Cotton Guard
+
+=== MEGATOWER5F_TRAINERACE4 ===
+Name: RAOUL
+Class: Cooltrainer
+Pic: Cooltrainer M
+Gender: Male
+Music: Intense
+Double Battle: No
+AI: Check Bad Move
+
+Sandaconda @ Sandacondite  
+Ability: Sand Spit  
+Level: 42  
+EVs: 252 HP / 252 Atk / 4 Def  
+Adamant Nature  
+- Sandstorm  
+- Earthquake  
+- Stone Edge  
+- Glare  
+
+=== MEGATOWER5F_TRAINEREXPERT ===
+Name: ORION
+Class: Expert
+Pic: Expert M
+Gender: Male
+Music: Intense
+Double Battle: No
+AI: Check Bad Move
+
+Gyarados @ Gyaradosite  
+Ability: Intimidate
+Level: 43 
+EVs: 252 Atk / 252 Spe / 4 HP  
+Adamant Nature  
+- Dragon Dance  
+- Waterfall  
+- Crunch  
+- Ice Fang  
+
+=== MEGATOWER_RIVAL ===
+Name: RIVAL NAME
+Class: PKMN Trainer 1
+Pic: Brendan
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Gigalith
+Level: 40
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Shiftry
+Level: 40
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Azumarill
+Level: 40
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Manectric @ Manectite
+Level: 40
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Perrserker
+Level: 40
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_WINSTON_3 ===

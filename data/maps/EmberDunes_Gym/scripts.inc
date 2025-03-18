@@ -65,52 +65,54 @@ Gym4_Sarah_PostbattleScript::
 # 36 "data/maps/EmberDunes_Gym/scripts.pory"
 	setflag FLAG_BADGE04_GET
 # 37 "data/maps/EmberDunes_Gym/scripts.pory"
-	msgbox Gym4_Sarah_PostbattleScript_Text_2
+	clearflag FLAG_TURN_ON_INCREASED_XP
 # 38 "data/maps/EmberDunes_Gym/scripts.pory"
-	playfanfare MUS_OBTAIN_ITEM
+	msgbox Gym4_Sarah_PostbattleScript_Text_2
 # 39 "data/maps/EmberDunes_Gym/scripts.pory"
-	giveitem ITEM_TM30
+	playfanfare MUS_OBTAIN_ITEM
 # 40 "data/maps/EmberDunes_Gym/scripts.pory"
+	giveitem ITEM_TM30
+# 41 "data/maps/EmberDunes_Gym/scripts.pory"
 	releaseall
 	return
 
 
 Gym4_Trainer_Ollie::
-# 44 "data/maps/EmberDunes_Gym/scripts.pory"
-	trainerbattle_single TRAINER_OLLIE_GYM4, Gym4_Ollie_Intro, Gym4_Ollie_Outro
 # 45 "data/maps/EmberDunes_Gym/scripts.pory"
-	msgbox Gym4_Ollie_PostBattle, MSGBOX_AUTOCLOSE
+	trainerbattle_single TRAINER_OLLIE_GYM4, Gym4_Ollie_Intro, Gym4_Ollie_Outro
 # 46 "data/maps/EmberDunes_Gym/scripts.pory"
+	msgbox Gym4_Ollie_PostBattle, MSGBOX_AUTOCLOSE
+# 47 "data/maps/EmberDunes_Gym/scripts.pory"
 	releaseall
 	return
 
 
 Gym4_Trainer_Bitters::
-# 50 "data/maps/EmberDunes_Gym/scripts.pory"
-	trainerbattle_single TRAINER_BITTERS_GYM4, Gym4_Bitter_Intro, Gym4_Bitter_Outro
 # 51 "data/maps/EmberDunes_Gym/scripts.pory"
-	msgbox Gym4_Bitter_PostBattle, MSGBOX_AUTOCLOSE
+	trainerbattle_single TRAINER_BITTERS_GYM4, Gym4_Bitter_Intro, Gym4_Bitter_Outro
 # 52 "data/maps/EmberDunes_Gym/scripts.pory"
+	msgbox Gym4_Bitter_PostBattle, MSGBOX_AUTOCLOSE
+# 53 "data/maps/EmberDunes_Gym/scripts.pory"
 	releaseall
 	return
 
 
 Gym4_Trainer_GymTrainer1::
-# 56 "data/maps/EmberDunes_Gym/scripts.pory"
-	trainerbattle_single TRAINER_TRAINER1_GYM4, Gym4_Trainer1_Intro, Gym4_Trainer1_Outro
 # 57 "data/maps/EmberDunes_Gym/scripts.pory"
-	msgbox Gym4_Trainer1_PostBattle, MSGBOX_AUTOCLOSE
+	trainerbattle_single TRAINER_TRAINER1_GYM4, Gym4_Trainer1_Intro, Gym4_Trainer1_Outro
 # 58 "data/maps/EmberDunes_Gym/scripts.pory"
+	msgbox Gym4_Trainer1_PostBattle, MSGBOX_AUTOCLOSE
+# 59 "data/maps/EmberDunes_Gym/scripts.pory"
 	releaseall
 	return
 
 
 Gym4_Trainer_Ay::
-# 62 "data/maps/EmberDunes_Gym/scripts.pory"
-	trainerbattle_single TRAINER_AY_GYM4, Gym4_Ay_Intro, Gym4_Ay_Outro
 # 63 "data/maps/EmberDunes_Gym/scripts.pory"
-	msgbox Gym4_Ay_PostBattle, MSGBOX_AUTOCLOSE
+	trainerbattle_single TRAINER_AY_GYM4, Gym4_Ay_Intro, Gym4_Ay_Outro
 # 64 "data/maps/EmberDunes_Gym/scripts.pory"
+	msgbox Gym4_Ay_PostBattle, MSGBOX_AUTOCLOSE
+# 65 "data/maps/EmberDunes_Gym/scripts.pory"
 	releaseall
 	return
 
@@ -142,70 +144,70 @@ Gym4_Sarah_PostbattleScript_Text_1:
 	.string "You obtained the Ruin Badge.$"
 
 Gym4_Sarah_PostbattleScript_Text_2:
-# 37 "data/maps/EmberDunes_Gym/scripts.pory"
+# 38 "data/maps/EmberDunes_Gym/scripts.pory"
 	.string "Also please take this TM it contains\n"
 	.string "Shadow Ball$"
 
 Gym4_Sarah_Intro::
-# 68 "data/maps/EmberDunes_Gym/scripts.pory"
+# 69 "data/maps/EmberDunes_Gym/scripts.pory"
 	.string "$"
 
 Gym4_Sarah_Outro::
-# 72 "data/maps/EmberDunes_Gym/scripts.pory"
+# 73 "data/maps/EmberDunes_Gym/scripts.pory"
 	.string "$"
 
 Gym4_Sarah_PostBattle::
-# 76 "data/maps/EmberDunes_Gym/scripts.pory"
+# 77 "data/maps/EmberDunes_Gym/scripts.pory"
 	.string "$"
 
 Gym4_Bitter_Intro::
-# 81 "data/maps/EmberDunes_Gym/scripts.pory"
+# 82 "data/maps/EmberDunes_Gym/scripts.pory"
 	.string "Boo\n"
 	.string "Did i get ya?$"
 
 Gym4_Bitter_Outro::
-# 85 "data/maps/EmberDunes_Gym/scripts.pory"
+# 86 "data/maps/EmberDunes_Gym/scripts.pory"
 	.string "Aww man didnt get ya$"
 
 Gym4_Bitter_PostBattle::
-# 89 "data/maps/EmberDunes_Gym/scripts.pory"
+# 90 "data/maps/EmberDunes_Gym/scripts.pory"
 	.string "I'll have to hide better.$"
 
 Gym4_Trainer1_Intro::
-# 93 "data/maps/EmberDunes_Gym/scripts.pory"
+# 94 "data/maps/EmberDunes_Gym/scripts.pory"
 	.string "...?$"
 
 Gym4_Trainer1_Outro::
-# 97 "data/maps/EmberDunes_Gym/scripts.pory"
+# 98 "data/maps/EmberDunes_Gym/scripts.pory"
 	.string "...!$"
 
 Gym4_Trainer1_PostBattle::
-# 101 "data/maps/EmberDunes_Gym/scripts.pory"
+# 102 "data/maps/EmberDunes_Gym/scripts.pory"
 	.string "...$"
 
 Gym4_Ay_Intro::
-# 105 "data/maps/EmberDunes_Gym/scripts.pory"
+# 106 "data/maps/EmberDunes_Gym/scripts.pory"
 	.string "Hey, looks like you've seen a ghost$"
 
 Gym4_Ay_Outro::
-# 109 "data/maps/EmberDunes_Gym/scripts.pory"
+# 110 "data/maps/EmberDunes_Gym/scripts.pory"
 	.string "This place still gives me the creeps.$"
 
 Gym4_Ay_PostBattle::
-# 113 "data/maps/EmberDunes_Gym/scripts.pory"
+# 114 "data/maps/EmberDunes_Gym/scripts.pory"
 	.string "Welp...I've seen a ghost$"
 
 Gym4_Ollie_Intro::
-# 117 "data/maps/EmberDunes_Gym/scripts.pory"
+# 118 "data/maps/EmberDunes_Gym/scripts.pory"
 	.string "This place is spooky, Steelix will learn\n"
 	.string "so much.$"
 
 Gym4_Ollie_Outro::
-# 121 "data/maps/EmberDunes_Gym/scripts.pory"
+# 122 "data/maps/EmberDunes_Gym/scripts.pory"
 	.string "You almost made it a real ghost type!$"
 
 Gym4_Ollie_PostBattle::
-# 125 "data/maps/EmberDunes_Gym/scripts.pory"
+# 126 "data/maps/EmberDunes_Gym/scripts.pory"
 	.string "I might pop into the Quarry on my way\n"
 	.string "south, I heard it's great to train my\l"
 	.string "Steelix.$"

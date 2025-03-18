@@ -13,6 +13,7 @@ script Steelix_Encounter_Quarry {
     giveitem(ITEM_STEELIXITE, 1)
     playfanfare(MUS_OBTAIN_ITEM)
     setvar(VAR_QUARRY_STATE, 3)// beaten steelix
+    removeobject(2)
     setflag(FLAG_HIDE_STEELIX)
     releaseall
 }

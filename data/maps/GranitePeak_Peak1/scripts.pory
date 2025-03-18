@@ -10,7 +10,7 @@ script GranitePeak_Peak_EventScript_IceStone {
 
 script GranitePeak_Peak_EventScript_IceStone_Grandson {
     lockall
-    msgbox(format("Interesting...is this it?"))
+    msgbox(format("Interesting…Is this it?"))
     // questmenu(QUEST_MENU_CHECK_ACTIVE, QUEST_EVOLUTION_STONE_MART)
     if(!flag(FLAG_ICE_STONE_SOURCE) && var(VAR_EVOLUTION_STONE_HUNTING) == 3) {
         faceplayer

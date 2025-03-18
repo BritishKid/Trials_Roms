@@ -90,6 +90,7 @@
 #define MAP_QUARRY            (14 | (2 << 8))
 #define MAP_ROUTE7_DAYCARE    (15 | (2 << 8))
 #define MAP_MEGA_TOWER        (16 | (2 << 8))
+#define MAP_LOST_MANSION      (17 | (2 << 8))
 
 // gMapGroup_IndoorLittleroot
 #define MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_1F    (0 | (3 << 8))
@@ -253,6 +254,12 @@
 #define MAP_LILYCOVE_CITY_DEPARTMENT_STORE_5F       (20 | (15 << 8))
 #define MAP_LILYCOVE_CITY_DEPARTMENT_STORE_ROOFTOP  (21 | (15 << 8))
 #define MAP_LILYCOVE_CITY_DEPARTMENT_STORE_ELEVATOR (22 | (15 << 8))
+#define MAP_LILYCOVE_CITY_MEGA_TOWER_GF             (23 | (15 << 8))
+#define MAP_LILYCOVE_CITY_MEGA_TOWER_1F             (24 | (15 << 8))
+#define MAP_LILYCOVE_CITY_MEGA_TOWER_2F             (25 | (15 << 8))
+#define MAP_LILYCOVE_CITY_MEGA_TOWER_3F             (26 | (15 << 8))
+#define MAP_LILYCOVE_CITY_MEGA_TOWER_4F             (27 | (15 << 8))
+#define MAP_LILYCOVE_CITY_MEGA_TOWER_5F             (28 | (15 << 8))
 
 // gMapGroup_IndoorHemlock
 #define MAP_HEMLOCK_VILLAGE_HOUSE1            (0 | (16 << 8))

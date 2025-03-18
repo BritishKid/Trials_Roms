@@ -15258,7 +15258,7 @@
               {
                 "min_level": 18,
                 "max_level": 23,
-                "species": "SPECIES_COMBEE"
+                "species": "SPECIES_SWABLU"
               },
               {
                 "min_level": 18,
@@ -15822,6 +15822,229 @@
                 "min_level": 12,
                 "max_level": 15,
                 "species": "SPECIES_SAWK"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_QUARRY",
+          "base_label": "gQuarry0",
+          "land_mons": {
+            "encounter_rate": 15,
+            "mons": [
+              {
+                "min_level": 18,
+                "max_level": 25,
+                "species": "SPECIES_MANKEY"
+              },
+              {
+                "min_level": 18,
+                "max_level": 25,
+                "species": "SPECIES_YUNGOOS"
+              },
+              {
+                "min_level": 18,
+                "max_level": 25,
+                "species": "SPECIES_MANKEY"
+              },
+              {
+                "min_level": 18,
+                "max_level": 25,
+                "species": "SPECIES_YUNGOOS"
+              },
+              {
+                "min_level": 18,
+                "max_level": 25,
+                "species": "SPECIES_TANDEMAUS"
+              },
+              {
+                "min_level": 18,
+                "max_level": 25,
+                "species": "SPECIES_ROOKIDEE"
+              },
+              {
+                "min_level": 18,
+                "max_level": 25,
+                "species": "SPECIES_TANDEMAUS"
+              },
+              {
+                "min_level": 18,
+                "max_level": 25,
+                "species": "SPECIES_GLIGAR"
+              },
+              {
+                "min_level": 18,
+                "max_level": 25,
+                "species": "SPECIES_DRILBUR"
+              },
+              {
+                "min_level": 18,
+                "max_level": 25,
+                "species": "SPECIES_NACLI"
+              },
+              {
+                "min_level": 18,
+                "max_level": 25,
+                "species": "SPECIES_NACLI"
+              },
+              {
+                "min_level": 18,
+                "max_level": 25,
+                "species": "SPECIES_ORTHWORM"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_HIDDEN_GROTTO_SQUIRTLE",
+          "base_label": "gHiddenGrotto_Squirtle0",
+          "land_mons": {
+            "encounter_rate": 10,
+            "mons": [
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_SQUIRTLE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_SQUIRTLE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_SQUIRTLE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_SQUIRTLE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_SQUIRTLE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_SQUIRTLE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_SQUIRTLE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_SQUIRTLE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_SQUIRTLE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_SQUIRTLE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_SQUIRTLE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_SQUIRTLE"
+              }
+            ]
+          },
+          "water_mons": {
+            "encounter_rate": 4,
+            "mons": [
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_SQUIRTLE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_SQUIRTLE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_SQUIRTLE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_SQUIRTLE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_SQUIRTLE"
+              }
+            ]
+          },
+          "fishing_mons": {
+            "encounter_rate": 100,
+            "mons": [
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_SQUIRTLE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_SQUIRTLE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_SQUIRTLE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_SQUIRTLE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_SQUIRTLE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_SQUIRTLE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_SQUIRTLE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_SQUIRTLE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_SQUIRTLE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_BLASTOISE"
               }
             ]
           }

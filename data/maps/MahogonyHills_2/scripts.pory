@@ -30,20 +30,20 @@ script MahoganyHills2_Trigger_BridgeLeft {
 }
 
 script MahogonyHills2_EventScript_RivalEncounter {
-    msgbox(format("I thought you would eventually get here, guess you had to come see my new badge.\lMy Pokémon barely broke a sweat beating the gym leader. In fact they got so much energy left they could still beat you!"))
+    msgbox(format("I thought you would eventually get here; guess you had to come see my new badge.\lMy Pokémon barely broke a sweat beating the gym leader. In fact, they have so much energy left they could still beat you!"))
     trainerbattle_single(TRAINER_RIVAL_MAHOGONYHILL2, MahoganyHills2_Rival_Intro, MahoganyHills2_Rival_Outro, MahoganyHills2_Rival_PostScript)
 }
 
 script MahoganyHills2_Rival_PostScript {
     setvar(VAR_RIVAL_STATE, 3)
     setflag(FLAG_MAHOGANY_HILLS_RIVAL_BEATEN)
-    msgbox(format("You might have won but I still have more badges than you. That's what matters really."),MSGBOX_AUTOCLOSE)
-    msgbox(format("You should probably take this to, it will help once you've got your first badge."),MSGBOX_AUTOCLOSE)
-    msgbox(format("You have been given a HAND AXE, it could be used to cut small trees."),MSGBOX_AUTOCLOSE)
+    msgbox(format("You might have won, but I still have more badges than you. That's what matters, really."),MSGBOX_AUTOCLOSE)
+    msgbox(format("You should probably take this too; it will help once you've got your first badge."),MSGBOX_AUTOCLOSE)
+    msgbox(format("You have been given a Hand Axe; it could be used to cut small trees."),MSGBOX_AUTOCLOSE)
     giveitem(ITEM_HAND_AXE)
-    msgbox(format("You won't need to reach the gym it's only a little further north."),MSGBOX_AUTOCLOSE)
-    msgbox(format("Anyway I'm heading to get my next badge, I'll see you there if you don't lose too badly up here."),MSGBOX_AUTOCLOSE)
-    msgbox(format("See ya nerd!"),MSGBOX_AUTOCLOSE)
+    msgbox(format("You won't need to reach the gym; it's only a little further north."),MSGBOX_AUTOCLOSE)
+    msgbox(format("Anyway, I'm heading to get my next badge; I'll see you there if you don't lose too badly up here."),MSGBOX_AUTOCLOSE)
+    msgbox(format("See ya, nerd!"),MSGBOX_AUTOCLOSE)
     applymovement(5, Movement_Rival_Leaves_Player_MahoganyHills2)
     waitmovement(5)
     removeobject(5)
@@ -74,17 +74,17 @@ script MahoganyHills2_Trigger_RoxanneEncounter {
     lockall
     applymovement(7, Movement_MahoganyHills_RoxanneComingCloser)
     msgbox(format("Hi there, I've just been visiting Darwin to get new fossils. He has a little research station and has found the forest to be incredible for finding fossils."))
-    msgbox(format("I'm visiting from Hoenn and by that look I can tell you're a trainer."))
+    msgbox(format("I'm visiting from Hoenn, and by that look, I can tell you're a trainer."))
     trainerbattle_single(TRAINER_ROXANNE_1, MahoganyHills_Roxanne_Battle_Intro, MahoganyHills_Roxanne_Battle_Outro, MahoganyHills_RoxanneBeaten)
     releaseall
 }
 
 script MahoganyHills_RoxanneBeaten {
     lockall
-    msgbox(format("That's impressive, I'm not at my gym but you should still take this."),MSGBOX_AUTOCLOSE)
+    msgbox(format("That's impressive. I'm not at my gym, but you should still take this."),MSGBOX_AUTOCLOSE)
     giveitem(ITEM_TM37)
     setflag(FLAG_RECEIVED_TM_ROCK_TOMB)
-    msgbox(format("It's the TM for ROCK TOMB, a great rock type move that will slow your opponent down."),MSGBOX_AUTOCLOSE)
+    msgbox(format("It's the TM for Rock Tomb, a great rock-type move that will slow your opponent down."),MSGBOX_AUTOCLOSE)
     setvar(VAR_ROXANNE_ENCOUNTER_STATE, 1)
     msgbox(format("I'll see you around again!"),MSGBOX_AUTOCLOSE)
     applymovement(OBJ_EVENT_ID_PLAYER, MahoganyHills1_MoveOutTheWay_Player)
@@ -122,7 +122,7 @@ script MahoganyHills_RoxanneBeaten_WithoutTrigger {
 }
 
 script MahoganyHills2_Josh_PostScript {
-    msgbox(format("Wow with money you'd be unstoppable. Why don't you take this."))
+    msgbox(format("Wow, with money you'd be unstoppable. Why don't you take this?"))
     giveitem(ITEM_AMULET_COIN)
     call(Increase_Trainers_Beaten)
     releaseall
@@ -136,7 +136,7 @@ script MahoganyHills_EventScript_MossyStone {
 
 script MahoganyHills_EventScript_MossyStone_Grandson {
     lock
-    msgbox(format("Interesting...is this it?"))    
+    msgbox(format("Interesting…Is this it?"))    
     // questmenu(QUEST_MENU_CHECK_ACTIVE, QUEST_EVOLUTION_STONE_MART)
     if(!flag(FLAG_LEAF_STONE_SOURCE) && var(VAR_EVOLUTION_STONE_HUNTING) == 1) {
         faceplayer
@@ -272,7 +272,7 @@ movement Movement_GrandsonLeavs {
 //text script
 
 text MahoganyHills2_Rival_Intro {
-    format("Don't worry this won't take long.")
+    format("Don't worry; this won't take long.")
 }
 
 text MahoganyHills2_Rival_Outro {
@@ -284,7 +284,7 @@ text MahoganyHills2_Luke_Intro {
 }
 
 text MahoganyHills2_Luke_Outro {
-    format("Wow you're stronger than the bug trainers around here.")
+    format("Wow, you're stronger than the bug catchers around here.")
 }
 
 text MahoganyHills2_Luke_Postbattle {
@@ -292,19 +292,19 @@ text MahoganyHills2_Luke_Postbattle {
 }
 
 text MahoganyHills_Roxanne_Battle_Intro {
-    format("How about a battle then.")
+    format("How about a battle then?")
 }
 
 text MahoganyHills_Roxanne_Battle_Outro {
-    format("Wow, if we were in Hoenn you'd have just earnt a badge!")
+    format("Wow, if we were in Hoenn, you'd have just earned a badge!")
 }
 
 text MahoganyHills2_Carlie_Intro {
-    format("If I win I'm gonna buy groceries from the money.")
+    format("If I win, I'm going to buy groceries with the money.")
 }
 
 text MahoganyHills2_Carlie_Outro {
-    format("Guess it's gonna be unseasoned noodles today.")
+    format("Guess it's going to be unseasoned noodles today.")
 }
 
 text MahoganyHills2_Carlie_PostBattle {
@@ -312,7 +312,7 @@ text MahoganyHills2_Carlie_PostBattle {
 }
 
 text MahoganyHills2_Josh_Intro {
-    format("Money is a trainers best friend.")
+    format("Money is a trainer's best friend.")
 }
 
 text MahoganyHills2_Josh_Outro {

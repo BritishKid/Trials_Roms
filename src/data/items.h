@@ -14627,4 +14627,25 @@ const struct Item gItemsInfo[] =
         .iconPic = gItemIcon_FlamePlate,
         .iconPalette = gItemIconPalette_FlamePlate,
     },
+
+    //custom megas
+
+    
+
+    [ITEM_SANDACONDITE] =
+    {
+        .name = _("Sandacondite"),
+        .price = 0,
+        .holdEffect = HOLD_EFFECT_MEGA_STONE,
+        .description = COMPOUND_STRING(
+            "This stone enables\n"
+            "Sandaconda to Mega\n"
+            "Evolve in battle."),
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 80,
+        .iconPic = gItemIcon_Kangaskhanite,
+        .iconPalette = gItemIconPalette_Kangaskhanite, //temporary
+    },
 };

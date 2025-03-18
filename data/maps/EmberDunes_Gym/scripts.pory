@@ -31,9 +31,10 @@ script Gym4_Sarah_PostbattleScript {
     msgbox(format("Fantastic! You're well on your way to becoming a champion.")) //todo change
     playfanfare(MUS_OBTAIN_BADGE)
     msgbox(format("You obtained the Ruin Badge."))
-    special(DoDomeConfetti)
+    special(DoDomeConfetti)    
     // subquestmenu(QUEST_MENU_COMPLETE_QUEST, QUEST_POKEMON_LEAGUE, SUB_QUEST_RUIN_BADGE)
     setflag(FLAG_BADGE04_GET)
+    clearflag(FLAG_TURN_ON_INCREASED_XP)
     msgbox(format("Also please take this TM it contains Shadow Ball"))
     playfanfare(MUS_OBTAIN_ITEM)
     giveitem(ITEM_TM30)

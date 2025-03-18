@@ -22,6 +22,16 @@
       "map": "MAP_ROUTE7_DAYCARE",
       "offset": -30,
       "direction": "up"
+    },
+    {
+      "map": "MAP_LOST_MANSION",
+      "offset": 0,
+      "direction": "down"
+    },
+    {
+      "map": "MAP_MEGA_TOWER",
+      "offset": 12,
+      "direction": "right"
     }
   ],
   "object_events": [

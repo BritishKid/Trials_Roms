@@ -162,7 +162,7 @@ Route4_EventScript_WaterStone_Text_0:
 
 Route4_EventScript_WaterStone_Grandson_Text_0:
 # 24 "data/maps/Route4/scripts.pory"
-	.string "Interesting...is this it?$"
+	.string "Interesting…Is this it?$"
 
 Route4_EventScript_WaterStone_Grandson_Text_1:
 # 28 "data/maps/Route4/scripts.pory"

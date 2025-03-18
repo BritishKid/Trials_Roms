@@ -155,26 +155,26 @@ MahoganyHills3_EventScript_RootFossil_10:
 
 MahoganyHills3_EventScript_Darwin_Text_0:
 # 8 "data/maps/MahogonyHills_3/scripts.pory"
-	.string "Go ahead pick a fossil.$"
+	.string "Go ahead, pick a fossil.$"
 
 MahoganyHills3_EventScript_Darwin_Text_1:
 # 11 "data/maps/MahogonyHills_3/scripts.pory"
-	.string "Come find me in my lab I'll be able to\n"
+	.string "Come find me in my lab; I'll be able to\n"
 	.string "revive it for you.$"
 
 MahoganyHills3_EventScript_Darwin_Text_2:
 # 14 "data/maps/MahogonyHills_3/scripts.pory"
-	.string "Oh hello. Are you interested in fossils\n"
-	.string "aswell?$"
+	.string "Oh, hello. Are you interested in fossils\n"
+	.string "as well?$"
 
 MahoganyHills3_EventScript_Darwin_Text_3:
 # 16 "data/maps/MahogonyHills_3/scripts.pory"
 	.string "Oh lovely. Why don't you pick one to\n"
-	.string "have.$"
+	.string "have?$"
 
 MahoganyHills3_EventScript_Darwin_Text_4:
 # 20 "data/maps/MahogonyHills_3/scripts.pory"
-	.string "That's a shame, they are just\n"
+	.string "That's a shame; they are just\n"
 	.string "fantastic.$"
 
 MahoganyHills3_EventScript_ClawFossil_Text_0:

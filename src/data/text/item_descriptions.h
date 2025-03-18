@@ -4005,3 +4005,8 @@ static const u8 sCraftBundleDesc[] = _(
     "A roll-out tool kit\n"
     "packed full of\n"
     "crafting supplies.");
+
+static const u8 sGyaradositeDesc[] = _(
+    "This stone enables\n"
+    "Sandaconda to Mega\n"
+    "Evolve in battle.");

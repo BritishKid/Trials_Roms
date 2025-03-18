@@ -10065,6 +10065,13 @@ static inline uq4_12_t GetDefenderAbilitiesModifier(u32 move, u32 moveType, u32 
         if (IS_MOVE_SPECIAL(move))
             return UQ_4_12(0.5);
         break;
+    case ABILITY_SAND_FORTRESS:
+        if (gBattleWeather & B_WEATHER_SANDSTORM)
+            if (IS_MOVE_SPECIAL(move) )
+                return UQ_4_12(0.5);
+            if (IS_MOVE_PHYSICAL(move))
+                return UQ_4_12(0.5);
+        break;
     }
     return UQ_4_12(1.0);
 }

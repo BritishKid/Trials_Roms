@@ -272,8 +272,8 @@ MahogonyHills_1_Eventscript_BerrySkitty_Text_0:
 
 MahogonyHills_1_Eventscript_BerrySkitty_Text_1:
 # 80 "data/maps/MahogonyHills_1/scripts.pory"
-	.string "The SKITTY seems to hand over a COBA\n"
-	.string "BERRIES.$"
+	.string "The Skitty seems to hand over some\n"
+	.string "Coba Berries.$"
 
 MahoganyHills1_Bao_Intro::
 # 99 "data/maps/MahogonyHills_1/scripts.pory"

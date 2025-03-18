@@ -1,0 +1,71 @@
+mapscripts LilycoveCity_MegaTower_1F_MapScripts {
+}
+
+script LilycoveCity_MegaTower_1F_Trainer1 {
+    trainerbattle_single(MEGATOWER1F_TRAINER1, Megatower1F_Trainer1_Intro, Megatower1F_Trainer1_Outro)
+    msgbox(Megatower1F_Trainer1_PostBattle, MSGBOX_AUTOCLOSE)
+    end
+}
+
+script LilycoveCity_MegaTower_1F_Trainer2 {
+    trainerbattle_single(MEGATOWER1F_TRAINER2, Megatower1F_Trainer2_Intro, Megatower1F_Trainer2_Outro)
+    msgbox(Megatower1F_Trainer2_PostBattle, MSGBOX_AUTOCLOSE)
+    end
+}
+
+script LilycoveCity_MegaTower_1F_FloorAce {
+    trainerbattle_single(MEGATOWER1F_TRAINERACE, Megatower1F_TrainerAce_Intro, Megatower1F_TrainerAce_Outro, Megatower1F_TrainerAce_Beaten)
+    msgbox(Megatower1F_TrainerAce_PostBattle, MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Megatower1F_TrainerAce_Beaten {
+    msgbox(format("The true power of Pokemon unlocked by Mega Evolution isn't easy to control but you've started to show signs that you might be able to handle it."), MSGBOX_DEFAULT)
+    applymovement(3, Movement_AceTrainerMovesAway)
+    waitmovement(3)
+    msgbox(format("Good luck on your journey."))
+}
+
+//text
+
+text Megatower1F_Trainer1_Intro {
+    format("Your challenge starts here!\lGood luck!")
+}
+
+text Megatower1F_Trainer1_Outro {
+    format("No too bad, but you have a long way to go still.")
+}
+
+text Megatower1F_Trainer1_PostBattle {
+    format("Keep it up, I don't want to see you back down here again so keep fighting smart.")
+}
+
+text Megatower1F_Trainer2_Intro {
+    format("This tower is older than even my grandmother!")
+}
+
+text Megatower1F_Trainer2_Outro {
+    format("She is the strongest trainer I know.")
+}
+
+text Megatower1F_Trainer2_PostBattle {
+    format("She got me this job when she left, she works at the champions guild now.")
+}
+
+text Megatower1F_TrainerAce_Intro {
+    format("So you made it to me. This tower is old and stands tall as a true challenge for trainers wanting to become serious so don't expect me to hold back.")
+}
+
+text Megatower1F_TrainerAce_Outro {
+    format("Well fought, but you are just getting started!")
+    }
+
+text Megatower1F_TrainerAce_PostBattle {
+    format("I'll be seeing you again very soon.")
+}
+
+//movement 
+movement Movement_AceTrainerMovesAway {
+    walk_left
+    face_right
+}

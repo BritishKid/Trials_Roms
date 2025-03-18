@@ -177,11 +177,11 @@ Movement_PlayerSurprised_MHGE:
 MahoganyHills1_GymEntrance_Trigger_RobEncounter_Text_0:
 # 10 "data/maps/MahoganyHills_GymEntrance/scripts.pory"
 	.string "I've been hearing all about a tough\n"
-	.string "trainer, could it be you?$"
+	.string "trainer; could it be you?$"
 
 MahoganyHills1_GymEntrance_Trigger_RobEncounter_Text_1:
 # 15 "data/maps/MahoganyHills_GymEntrance/scripts.pory"
-	.string "Yes you fit the desription.$"
+	.string "Yes, you fit the description.$"
 
 MahoganyHills1_GymEntrance_Trigger_RobEncounter_Text_2:
 # 19 "data/maps/MahoganyHills_GymEntrance/scripts.pory"
@@ -189,12 +189,12 @@ MahoganyHills1_GymEntrance_Trigger_RobEncounter_Text_2:
 
 MahoganyHills1_GymEntrance_EventScript_RobertSpoke_Text_0:
 # 30 "data/maps/MahoganyHills_GymEntrance/scripts.pory"
-	.string "I can't wait to battle you again when we\n"
-	.string "are stronger.$"
+	.string "I can't want to battle you again when\n"
+	.string "we are stronger.$"
 
 MahoganyHills1_GymEntrance_EventScript_RobertSpoke_Text_1:
 # 33 "data/maps/MahoganyHills_GymEntrance/scripts.pory"
-	.string "I've been hearing alot about you.$"
+	.string "I've been hearing a lot about you.$"
 
 MahoganyHills1_GymEntrance_EventScript_RobertSpoke_Text_2:
 # 37 "data/maps/MahoganyHills_GymEntrance/scripts.pory"
@@ -203,20 +203,20 @@ MahoganyHills1_GymEntrance_EventScript_RobertSpoke_Text_2:
 MahoganyHills1_GymEntrance_Robert_Battle_Text_0:
 # 43 "data/maps/MahoganyHills_GymEntrance/scripts.pory"
 	.string "Would you like to battle, or are the\n"
-	.string "rumours a lie?$"
+	.string "rumors a lie?$"
 
 MahoganyHills1_GymEntrance_Robert_Battle_Text_1:
 # 48 "data/maps/MahoganyHills_GymEntrance/scripts.pory"
-	.string "Oh okay$"
+	.string "Oh, okay.$"
 
 MahoganyHills_Robert_Postbattle_Text_0:
 # 56 "data/maps/MahoganyHills_GymEntrance/scripts.pory"
-	.string "That was an incredible battle, you are\n"
+	.string "That was an incredible battle; you are\n"
 	.string "stronger than people say.$"
 
 MahoganyHills_Robert_Postbattle_Text_1:
 # 57 "data/maps/MahoganyHills_GymEntrance/scripts.pory"
-	.string "Why don't you take this, it will be very\n"
+	.string "Why don't you take this? It will be very\n"
 	.string "helpful.$"
 
 MahoganyHills_Robert_Postbattle_Text_2:
@@ -234,5 +234,5 @@ MahoganyHills_Robert_Intro::
 
 MahoganyHills_Robert_Outro::
 # 75 "data/maps/MahoganyHills_GymEntrance/scripts.pory"
-	.string "The rumours where wrong,\l"
+	.string "The rumors were false;\l"
 	.string "you're much stronger.$"

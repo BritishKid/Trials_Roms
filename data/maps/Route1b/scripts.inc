@@ -52,27 +52,27 @@ Route1_TrainerScript_Camper::
 
 Route1_TrainerScript_BugCatcher::
 # 39 "data/maps/Route1b/scripts.pory"
-	trainerbattle_single TRAINER_BUGCATCHER_ROUTE1B, Route1b_Camper_Intro, Route1b_Camper_Outro, Increase_Trainers_Beaten
+	trainerbattle_single TRAINER_BUGCATCHER_ROUTE1B, Route1b_Bugcatcher_Intro, Route1b_Bugcatcher_Outro, Increase_Trainers_Beaten
 # 40 "data/maps/Route1b/scripts.pory"
-	msgbox Route1b_Camper_Postbattle, MSGBOX_AUTOCLOSE
+	msgbox Route1b_Bugcatcher_Postbattle, MSGBOX_AUTOCLOSE
 	return
 
 
 Route1b_EventScript_FisherSign_Text_0:
 # 7 "data/maps/Route1b/scripts.pory"
-	.string "The Old Fishers House$"
+	.string "The Old Fisher's House$"
 
 Route1b_EventScript_Fisherman_Text_0:
 # 14 "data/maps/Route1b/scripts.pory"
-	.string "If only I had a Pokémon that knew SURF\n"
+	.string "If only I had a Pokémon that knew SURF,\n"
 	.string "I'd be able to reach that island.$"
 
 Salt7_Intro::
 # 46 "data/maps/Route1b/scripts.pory"
 	.string "The guy in that house there gave me an\n"
 	.string "old rod! I'm going to use it to catch all\l"
-	.string "the Gyrados I can find! I've already got\l"
-	.string "some. Here let me show you$"
+	.string "the Gyarados I can find! I already\l"
+	.string "caught some. Here, let me show you.$"
 
 Salt7_Outro::
 # 50 "data/maps/Route1b/scripts.pory"
@@ -89,7 +89,7 @@ PostBattle_Salt7::
 Route1b_Camper_Intro::
 # 58 "data/maps/Route1b/scripts.pory"
 	.string "My dad used to bring me here all the\n"
-	.string "time, he said the hills had strong\l"
+	.string "time; he said the hills had strong\l"
 	.string "Pokémon.$"
 
 Route1b_Camper_Outro::

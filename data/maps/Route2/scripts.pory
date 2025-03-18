@@ -6,7 +6,7 @@ script Route2_EventScript_BerryGirl {
     lockall
     faceplayer
     if(!flag(FLAG_RECEIVED_WAILMER_PAIL)){
-        msgbox(format("Hey you must have seen all these berry patches around the place.\lYou can use them to grow your own berries.\lHere take some, I have spare."))
+        msgbox(format("Hey, you must have seen all these berry patches around the place. You can use them to grow your own berries. Here, take some; I have spare."))
         giveitem(ITEM_CHERI_BERRY, 5)
         giveitem(ITEM_LEPPA_BERRY, 5)
         giveitem(ITEM_PERSIM_BERRY, 5)
@@ -40,7 +40,7 @@ script Battle_Route2_Jenova {
 
 //text
 text Route2_Trainer3_Intro {
-    format("My sister loves planting Berries, she travels all over the region to find more.")
+    format("My sister loves planting berries; she travels all over the region to find more.")
 }
 
 text Route2_Trainer3_Outro {
@@ -69,11 +69,11 @@ text Route2_Jenova_Intro {
 }
 
 text Route2_Jenova_Outro {
-    format("Oh i guess my mom was lying when she said Mew can't be defeated.")
+    format("Oh, I guess my mum was lying when she said Mew couldn't be defeated")
 }
 
 text Route2_Jenova_Postbattle {
-    format("What else did she lie about.")
+    format("What else did she lie about?")
 }
 
 script Increase_Trainers_Beaten {

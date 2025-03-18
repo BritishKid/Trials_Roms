@@ -1856,6 +1856,9 @@ static const u16 sSandacondaFormSpeciesIdTable[] = {
 #if P_GIGANTAMAX_FORMS
     SPECIES_SANDACONDA_GIGANTAMAX,
 #endif
+#if P_MEGA_EVOLUTIONS
+    SPECIES_SANDACONDA_MEGA,
+#endif
     FORM_SPECIES_END,
 };
 #endif //P_FAMILY_SILICOBRA

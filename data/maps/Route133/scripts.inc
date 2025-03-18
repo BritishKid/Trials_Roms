@@ -27,7 +27,7 @@ Route133_EventScript_Beck::
 	end
 
 Route133_EventScript_Mollie::
-	trainerbattle_single TRAINER_MOLLIE, Route133_Text_MollieIntro, Route133_Text_MollieDefeat
+	trainerbattle_single MEGATOWER5F_TRAINERACE4, Route133_Text_MollieIntro, Route133_Text_MollieDefeat
 	msgbox Route133_Text_MolliePostBattle, MSGBOX_AUTOCLOSE
 	end
 

@@ -144,7 +144,7 @@
     {
       "id": "LAYOUT_VERDANTURF_TOWN",
       "name": "VerdanturfTown_Layout",
-      "width": 40,
+      "width": 41,
       "height": 20,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Mauville",
@@ -4725,7 +4725,7 @@
       "id": "LAYOUT_HIDDEN_GROTTO_CHARMANDER",
       "name": "HiddenGrotto_Charmander_Layout",
       "width": 12,
-      "height": 12,
+      "height": 25,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/HiddenGrotto_Charmander/border.bin",
@@ -4835,7 +4835,7 @@
       "id": "LAYOUT_HIDDEN_GROTTO_SQUIRTLE",
       "name": "HiddenGrotto_Squirtle_Layout",
       "width": 20,
-      "height": 20,
+      "height": 40,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Rustboro",
       "border_filepath": "data/layouts/HiddenGrotto_Squirtle/border.bin",
@@ -5295,7 +5295,7 @@
       "id": "LAYOUT_HIDDEN_GROTTO_BULBASAUR",
       "name": "HiddenGrotto_Bulbasaur_Layout",
       "width": 16,
-      "height": 10,
+      "height": 20,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Rustboro",
       "border_filepath": "data/layouts/HiddenGrotto_Bulbasaur/border.bin",
@@ -5370,6 +5370,76 @@
       "secondary_tileset": "gTileset_Dojo_Interior",
       "border_filepath": "data/layouts/GranitePeak_Dojo_1/border.bin",
       "blockdata_filepath": "data/layouts/GranitePeak_Dojo_1/map.bin"
+    },
+    {
+      "id": "LAYOUT_LILYCOVE_CITY_MEGA_TOWER_GF",
+      "name": "LilycoveCity_MegaTower_GF_Layout",
+      "width": 14,
+      "height": 10,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattleArena",
+      "border_filepath": "data/layouts/LilycoveCity_MegaTower_GF/border.bin",
+      "blockdata_filepath": "data/layouts/LilycoveCity_MegaTower_GF/map.bin"
+    },
+    {
+      "id": "LAYOUT_LILYCOVE_CITY_MEGA_TOWER_1F",
+      "name": "LilycoveCity_MegaTower_1F_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Mossdeep",
+      "border_filepath": "data/layouts/LilycoveCity_MegaTower_1F/border.bin",
+      "blockdata_filepath": "data/layouts/LilycoveCity_MegaTower_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_LILYCOVE_CITY_MEGA_TOWER_2F",
+      "name": "LilycoveCity_MegaTower_2F_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Lavaridge",
+      "border_filepath": "data/layouts/LilycoveCity_MegaTower_2F/border.bin",
+      "blockdata_filepath": "data/layouts/LilycoveCity_MegaTower_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_LILYCOVE_CITY_MEGA_TOWER_3F",
+      "name": "Lilycove_City_MegaTower_3F_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_EverGrande",
+      "border_filepath": "data/layouts/Lilycove_City_MegaTower_3F/border.bin",
+      "blockdata_filepath": "data/layouts/Lilycove_City_MegaTower_3F/map.bin"
+    },
+    {
+      "id": "LAYOUT_LILYCOVE_CITY_MEGA_TOWER_4F",
+      "name": "Lilycove_City_MegaTower_4F_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Mauville",
+      "border_filepath": "data/layouts/Lilycove_City_MegaTower_4F/border.bin",
+      "blockdata_filepath": "data/layouts/Lilycove_City_MegaTower_4F/map.bin"
+    },
+    {
+      "id": "LAYOUT_LILYCOVE_CITY_MEGA_TOWER_5F",
+      "name": "Lilycove_City_MegaTower_5F_Layout",
+      "width": 12,
+      "height": 13,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattleArena",
+      "border_filepath": "data/layouts/Lilycove_City_MegaTower_5F/border.bin",
+      "blockdata_filepath": "data/layouts/Lilycove_City_MegaTower_5F/map.bin"
+    },
+    {
+      "id": "LAYOUT_LOST_MANSION",
+      "name": "Lost_Mansion_Layout",
+      "width": 41,
+      "height": 22,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_BattleFrontierOutsideEast",
+      "border_filepath": "data/layouts/Lost_Mansion/border.bin",
+      "blockdata_filepath": "data/layouts/Lost_Mansion/map.bin"
     }
   ]
 }

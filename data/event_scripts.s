@@ -1269,3 +1269,17 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/GranitePeak_Maze_1/scripts.inc"
 
 	.include "data/maps/GranitePeak_Dojo_1/scripts.inc"
+
+	.include "data/maps/LilycoveCity_MegaTower_GF/scripts.inc"
+
+	.include "data/maps/LilycoveCity_MegaTower_1F/scripts.inc"
+
+	.include "data/maps/LilycoveCity_MegaTower_2F/scripts.inc"
+
+	.include "data/maps/Lilycove_City_MegaTower_3F/scripts.inc"
+
+	.include "data/maps/Lilycove_City_MegaTower_4F/scripts.inc"
+
+	.include "data/maps/Lilycove_City_MegaTower_5F/scripts.inc"
+
+	.include "data/maps/Lost_Mansion/scripts.inc"

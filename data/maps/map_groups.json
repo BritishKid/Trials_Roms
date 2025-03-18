@@ -134,7 +134,8 @@
     "EmberDunes_3",
     "Quarry",
     "Route7_Daycare",
-    "MegaTower"
+    "MegaTower",
+    "Lost_Mansion"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",
@@ -297,7 +298,13 @@
     "LilycoveCity_DepartmentStore_4F",
     "LilycoveCity_DepartmentStore_5F",
     "LilycoveCity_DepartmentStoreRooftop",
-    "LilycoveCity_DepartmentStoreElevator"
+    "LilycoveCity_DepartmentStoreElevator",
+    "LilycoveCity_MegaTower_GF",
+    "LilycoveCity_MegaTower_1F",
+    "LilycoveCity_MegaTower_2F",
+    "Lilycove_City_MegaTower_3F",
+    "Lilycove_City_MegaTower_4F",
+    "Lilycove_City_MegaTower_5F"
   ],
   "gMapGroup_IndoorHemlock": [
     "HemlockVillage_House1",

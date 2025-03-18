@@ -2628,4 +2628,11 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
         .description = COMPOUND_STRING("Its stats change when hit."),
         .aiRating = 2,
     },
+
+    [ABILITY_SAND_FORTRESS] =
+    {
+        .name = _("Sand Fortress"),
+        .description = COMPOUND_STRING("Boosts defences in sand."),
+        .aiRating = 2,
+    },
 };

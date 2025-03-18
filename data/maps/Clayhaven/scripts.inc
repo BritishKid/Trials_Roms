@@ -179,8 +179,8 @@ Clayhaven_BridgeMart_Employee_Text_4:
 
 Clayhaven_BridgeMart_Employee_Text_5:
 # 40 "data/maps/Clayhaven/scripts.pory"
-	.string "You were given 6 berry juices and 3\n"
-	.string "potions.$"
+	.string "You were given 6 Berry Juices and 3\n"
+	.string "Potions.$"
 
 Clayhaven_BridgeMart_Employee_Text_6:
 # 42 "data/maps/Clayhaven/scripts.pory"

@@ -68,11 +68,10 @@ Increase_Trainers_Beaten::
 
 Route2_EventScript_BerryGirl_Text_0:
 # 9 "data/maps/Route2/scripts.pory"
-	.string "Hey you must have seen all these berry\n"
-	.string "patches around the place.\l"
-	.string "You can use them to grow your own\l"
-	.string "berries.\l"
-	.string "Here take some, I have spare.$"
+	.string "Hey, you must have seen all these berry\n"
+	.string "patches around the place. You can use\l"
+	.string "them to grow your own berries. Here,\l"
+	.string "take some; I have spare.$"
 
 Route2_EventScript_BerryGirl_Text_1:
 # 13 "data/maps/Route2/scripts.pory"
@@ -86,7 +85,7 @@ Route2_EventScript_BerryGirl_Text_2:
 
 Route2_Trainer3_Intro::
 # 42 "data/maps/Route2/scripts.pory"
-	.string "My sister loves planting Berries, she\n"
+	.string "My sister loves planting berries; she\n"
 	.string "travels all over the region to find more.$"
 
 Route2_Trainer3_Outro::
@@ -117,9 +116,9 @@ Route2_Jenova_Intro::
 
 Route2_Jenova_Outro::
 # 71 "data/maps/Route2/scripts.pory"
-	.string "Oh i guess my mom was lying when she\n"
-	.string "said Mew can't be defeated.$"
+	.string "Oh, I guess my mum was lying when she\n"
+	.string "said Mew couldn't be defeated$"
 
 Route2_Jenova_Postbattle::
 # 75 "data/maps/Route2/scripts.pory"
-	.string "What else did she lie about.$"
+	.string "What else did she lie about?$"

@@ -190,7 +190,7 @@ Route3_EventScript_FireStone_Text_0:
 
 Route3_EventScript_FireStone_Grandson_Text_0:
 # 37 "data/maps/Route3b/scripts.pory"
-	.string "Interesting...is this it?$"
+	.string "Interesting…Is this it?$"
 
 Route3_EventScript_FireStone_Grandson_Text_1:
 # 41 "data/maps/Route3b/scripts.pory"

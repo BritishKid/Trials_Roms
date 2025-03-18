@@ -10455,8 +10455,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         )
         .levelUpLearnset = sHaunterLevelUpLearnset,
         .teachableLearnset = sHaunterTeachableLearnset,
-        .evolutions = EVOLUTION({EVO_TRADE, 0, SPECIES_GENGAR},
-                                {EVO_ITEM, ITEM_LINKING_CORD, SPECIES_GENGAR}),
+        .evolutions = EVOLUTION({EVO_ITEM, ITEM_LINKING_CORD, SPECIES_GENGAR}),
     },
 
 #if P_UPDATED_ABILITIES >= GEN_7

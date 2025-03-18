@@ -119,7 +119,7 @@
 #define FLAG_RECEIVED_WAILMER_PAIL           0x5E //used
 #define FLAG_RECEIVED_POKEBLOCK_CASE         0x5F
 #define FLAG_RECEIVED_SECRET_POWER           0x60 // used
-#define FLAG_HIDE_STEELIX            0x61
+#define FLAG_HIDE_STEELIX                    0x61
 #define FLAG_TV_EXPLAINED                    0x62
 #define FLAG_MAUVILLE_GYM_BARRIERS_STATE     0x63
 #define FLAG_REMOVED_MOSSDEEP_ROCK           0x64 // Leftover from the RS version of Mossdeep Gym, functionally unused
@@ -191,7 +191,7 @@
 #define FLAG_CUTE_PAINTING_MADE              0xA2
 #define FLAG_SMART_PAINTING_MADE             0xA3
 #define FLAG_TOUGH_PAINTING_MADE             0xA4
-#define FLAG_RECEIVED_TM_ROCK_TOMB           0xA5 //unused
+#define FLAG_MEGATOWER_NPC_TRADE_COMPLETED   0xA5
 #define FLAG_RECEIVED_TM_BULK_UP             0xA6 //unused
 #define FLAG_RECEIVED_TM_SHOCK_WAVE          0xA7
 #define FLAG_RECEIVED_TM_OVERHEAT            0xA8
@@ -465,7 +465,7 @@
 #define FLAG_REMATCH_WALLACE                 0x1A9
 
 #define FLAG_HIDE_BLOCKER_THUGS                    0x1AA //
-#define FLAG_HIDE_ALL_THUG_CITY_THUGS                    0x1AB // Unused Flag
+#define FLAG_HIDE_ALL_THUG_CITY_THUGS                    0x1AB // 
 
 #define FLAG_DEFEATED_DEOXYS                 0x1AC
 #define FLAG_BATTLED_DEOXYS                  0x1AD
@@ -710,9 +710,10 @@
 #define FLAG_UNUSED_0x292  0x292 // Unused Flag
 #define FLAG_UNUSED_0x293  0x293 // Unused Flag
 #define FLAG_UNUSED_0x294  0x294 // Unused Flag
-#define FLAG_UNUSED_0x295  0x295 // Unused Flag
-#define FLAG_UNUSED_0x296  0x296 // Unused Flag
-#define FLAG_UNUSED_0x297  0x297 // Unused Flag
+
+#define FLAG_BLASTOISE_MEGASTONE_FOUND  0x295
+#define FLAG_CHARIZARD_Y_MEGASTONE_FOUND  0x296
+#define FLAG_VENUSAUR_MEGASTONE_FOUND  0x297
 #define FLAG_UNUSED_0x298  0x298 // Unused Flag
 #define FLAG_UNUSED_0x299  0x299 // Unused Flag
 #define FLAG_UNUSED_0x29A  0x29A // Unused Flag
@@ -843,11 +844,11 @@
 #define FLAG_HIDE_ROUTE_119_SCOTT                                   0x312
 #define FLAG_HIDE_LILYCOVE_MOTEL_SCOTT                              0x313
 #define FLAG_HIDE_MOSSDEEP_CITY_SCOTT                               0x314
-#define FLAG_HIDE_FANCLUB_OLD_LADY                                  0x315
+#define FLAG_HIDE_EXPERT_MEGATOWER                                  0x315
 #define FLAG_HIDE_FANCLUB_BOY                                       0x316
 #define FLAG_HIDE_FANCLUB_LITTLE_BOY                                0x317
 #define FLAG_HIDE_FANCLUB_LADY                                      0x318
-#define FLAG_HIDE_EVER_GRANDE_POKEMON_CENTER_1F_SCOTT               0x319
+#define FLAG_HIDE_MEGATOWER_RIVAL               0x319
 #define FLAG_XP_ALL_ON                                              0x31A //used
 #define FLAG_HIDE_LITTLEROOT_TOWN_BIRCH                             0x31B
 #define FLAG_HIDE_ROUTE_111_GABBY_AND_TY_1                          0x31C
@@ -888,7 +889,7 @@
 #define FLAG_HIDE_SEAFLOOR_CAVERN_ROOM_9_MAGMA_GRUNTS               0x33F
 #define FLAG_HIDE_LILYCOVE_CONTEST_HALL_BLEND_MASTER                0x340
 #define FLAG_HIDE_GRANITE_CAVE_STEVEN                               0x341
-#define FLAG_HIDE_ROUTE_128_STEVEN                                  0x342
+#define FLAG_HIDDEN_MEGA                                  0x342
 #define FLAG_HIDE_SLATEPORT_CITY_GABBY_AND_TY                       0x343
 #define FLAG_HIDE_BATTLE_FRONTIER_RECEPTION_GATE_SCOTT              0x344
 #define FLAG_HIDE_ROUTE_110_BIRCH                                   0x345
@@ -905,7 +906,7 @@
 #define FLAG_HIDE_SLATEPORT_CITY_HARBOR_SUBMARINE_SHADOW            0x350
 #define FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_2F_PICHU_DOLL          0x351
 #define FLAG_HIDE_MAGMA_HIDEOUT_4F_GROUDON_ASLEEP                   0x352
-#define FLAG_HIDE_ROUTE_119_RIVAL                                   0x353
+#define FLAG_HIDE_ALEX_MHC                                   0x353
 #define FLAG_HIDE_LILYCOVE_CITY_AQUA_GRUNTS                         0x354
 #define FLAG_HIDE_MAGMA_HIDEOUT_4F_GROUDON                          0x355
 #define FLAG_HIDE_SOOTOPOLIS_CITY_RESIDENTS                         0x356
@@ -1231,7 +1232,7 @@
 #define FLAG_HIDE_FIRST_ENCOUNTER_ROB                                           0x493 // Used
 #define FLAG_HIDE_CLAYHAVEN_MART_EMPLOYEE                                           0x494 
 #define FLAG_HIDE_FLANNERY_OBSIDIANTHICKET                                           0x495 //
-#define FLAG_UNUSED_0x496                                           0x496 // Unused Flag
+#define FLAG_MEGA_TOWER_BEATEN                                           0x496 //
 #define FLAG_UNUSED_0x497                                           0x497 // Unused Flag
 #define FLAG_UNUSED_0x498                                           0x498 // Unused Flag
 #define FLAG_UNUSED_0x499                                           0x499 // Unused Flag
@@ -1295,7 +1296,8 @@
 #define FLAG_UNUSED_0x4D3                                           0x4D3 // Unused Flag
 #define FLAG_UNUSED_0x4D4                                           0x4D4 // Unused Flag
 #define FLAG_UNUSED_0x4D5                                           0x4D5 // Unused Flag
-#define FLAG_UNUSED_0x4D6                                           0x4D6 // Unused Flag
+
+#define FLAG_RECEIVED_TM_ROCK_TOMB                                           0x4D6 // Unused Flag
 #define FLAG_UNUSED_0x4D7                                           0x4D7 // Unused Flag
 #define FLAG_UNUSED_0x4D8                                           0x4D8 // Unused Flag
 #define FLAG_UNUSED_0x4D9                                           0x4D9 // Unused Flag

@@ -5,19 +5,19 @@ script MahoganyHills3_EventScript_Darwin {
     lockall
     faceplayer
     if(var(VAR_MAHOGONY_FOSSIL_SELECTION) == 1) {
-        msgbox(format("Go ahead pick a fossil."))
+        msgbox(format("Go ahead, pick a fossil."))
     }
     if(var(VAR_MAHOGONY_FOSSIL_SELECTION) == 2) {
-        msgbox(format("Come find me in my lab I'll be able to revive it for you."))
+        msgbox(format("Come find me in my lab; I'll be able to revive it for you."))
     }
     if(var(VAR_MAHOGONY_FOSSIL_SELECTION) == 0){
-        msgbox(format("Oh hello. Are you interested in fossils aswell?"), MSGBOX_YESNO)
+        msgbox(format("Oh, hello. Are you interested in fossils as well?"), MSGBOX_YESNO)
         if(var(VAR_RESULT) == YES) {
-            msgbox(format("Oh lovely. Why don't you pick one to have."))
+            msgbox(format("Oh lovely. Why don't you pick one to have?"))
             setvar(VAR_MAHOGONY_FOSSIL_SELECTION, 1)
         }
         else {
-            msgbox(format("That's a shame, they are just fantastic."))
+            msgbox(format("That's a shame; they are just fantastic."))
         }
     }
     releaseall

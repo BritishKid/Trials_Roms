@@ -4,14 +4,14 @@ mapscripts Route1b_MapScripts {
 
 script Route1b_EventScript_FisherSign {
     lockall
-    msgbox(format("The Old Fishers House"), MSGBOX_DEFAULT)
+    msgbox(format("The Old Fisher's House"), MSGBOX_DEFAULT)
     releaseall
 }
 
 script Route1b_EventScript_Fisherman {
     lockall
     faceplayer
-    msgbox(format("If only I had a Pokémon that knew SURF I'd be able to reach that island."))
+    msgbox(format("If only I had a Pokémon that knew SURF, I'd be able to reach that island."))
     releaseall
 }
 
@@ -36,15 +36,15 @@ script Route1_TrainerScript_Camper {
 }
 
 script Route1_TrainerScript_BugCatcher {
-    trainerbattle_single(TRAINER_BUGCATCHER_ROUTE1B, Route1b_Camper_Intro, Route1b_Camper_Outro, Increase_Trainers_Beaten)
-        msgbox(Route1b_Camper_Postbattle, MSGBOX_AUTOCLOSE)
+    trainerbattle_single(TRAINER_BUGCATCHER_ROUTE1B, Route1b_Bugcatcher_Intro, Route1b_Bugcatcher_Outro, Increase_Trainers_Beaten)
+        msgbox(Route1b_Bugcatcher_Postbattle, MSGBOX_AUTOCLOSE)
 
 }
 
 //text scripts
 
 text Salt7_Intro {
-    format("The guy in that house there gave me an old rod! I'm going to use it to catch all the Gyrados I can find! I've already got some. Here let me show you")
+    format("The guy in that house there gave me an old rod! I'm going to use it to catch all the Gyarados I can find! I already caught some. Here, let me show you.")
 }
 
 text Salt7_Outro {
@@ -56,7 +56,7 @@ text PostBattle_Salt7 {
 }
 
 text Route1b_Camper_Intro {
-    format("My dad used to bring me here all the time, he said the hills had strong Pokémon.")
+    format("My dad used to bring me here all the time; he said the hills had strong Pokémon.")
 }
 
 text Route1b_Camper_Outro {

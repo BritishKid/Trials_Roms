@@ -32,6 +32,11 @@
       "map": "MAP_LILYCOVE_CITY",
       "offset": 42,
       "direction": "right"
+    },
+    {
+      "map": "MAP_LOST_MANSION",
+      "offset": 20,
+      "direction": "right"
     }
   ],
   "object_events": [

@@ -2875,6 +2875,63 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .formChangeTable = sSandacondaFormChangeTable,
     },
 #endif //P_GIGANTAMAX_FORMS
+
+#if P_MEGA_EVOLUTIONS
+    [SPECIES_SANDACONDA_MEGA] =
+    {
+        .baseHP        = 72,
+        .baseAttack    = 140,
+        .baseDefense   = 160,
+        .baseSpeed     = 31,
+        .baseSpAttack  = 75,
+        .baseSpDefense = 100,
+        .types = MON_TYPES(TYPE_GROUND, TYPE_ROCK), //synergise better with sandstorm boost
+        .catchRate = 120,
+        .expYield = 179,
+        .evYield_Defense = 2,
+        .genderRatio = PERCENT_FEMALE(50),
+        .eggCycles = 20,
+        .friendship = STANDARD_FRIENDSHIP,
+        .growthRate = GROWTH_MEDIUM_FAST,
+        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD, EGG_GROUP_DRAGON),
+        .abilities = {ABILITY_SAND_FORTRESS, ABILITY_SAND_FORTRESS, ABILITY_SAND_FORTRESS },
+        .bodyColor = BODY_COLOR_GREEN,
+        .speciesName = _("Sandaconda"),
+        .cryId = CRY_SANDACONDA,
+        .natDexNum = NATIONAL_DEX_SANDACONDA,
+        .categoryName = _("Sand Snake"),
+        .height = 220,
+        .weight = 0,
+        .description = COMPOUND_STRING(
+            "Its sand pouch has grown to tremendous\n"
+            "proportions. More than 1,000,000 tons of\n"
+            "sand now swirl around its body with enough\n"
+            "speed and power to pulverize a skyscraper."),
+        .pokemonScale = 256,
+        .pokemonOffset = 0,
+        .trainerScale = 610,
+        .trainerOffset = 17,
+        .frontPic = gMonFrontPic_SandacondaGigantamax,
+        .frontPicSize = MON_COORDS_SIZE(64, 64),
+        .frontPicYOffset = 1,
+        .frontAnimFrames = sAnims_SandacondaGigantamax,
+        //.frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
+        .backPic = gMonBackPic_SandacondaGigantamax,
+        .backPicSize = MON_COORDS_SIZE(64, 64),
+        .backPicYOffset = 5,
+        //.backAnimId = BACK_ANIM_NONE,
+        .palette = gMonPalette_SandacondaGigantamax,
+        .shinyPalette = gMonShinyPalette_SandacondaGigantamax,
+        .iconSprite = gMonIcon_SandacondaGigantamax,
+        .iconPalIndex = 1,
+        FOOTPRINT(Sandaconda)
+        .isMegaEvolution = TRUE,
+        .levelUpLearnset = sSandacondaLevelUpLearnset,
+        .teachableLearnset = sSandacondaTeachableLearnset,
+        .formSpeciesIdTable = sSandacondaFormSpeciesIdTable,
+        .formChangeTable = sSandacondaFormChangeTable,
+    },
+#endif //P_MEGA_EVOLUTIONS
 #endif //P_FAMILY_SILICOBRA
 
 #if P_FAMILY_CRAMORANT

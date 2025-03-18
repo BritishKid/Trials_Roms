@@ -7,12 +7,12 @@ script MahoganyHills1_GymEntrance_Trigger_RobEncounter {
     setobjectxy(1, 17, 21)
     clearflag(FLAG_HIDE_FIRST_ENCOUNTER_ROB)
     setvar(VAR_ROBERT_STATUS, 1)
-    msgbox(format("I've been hearing all about a tough trainer, could it be you?"), MSGBOX_AUTOCLOSE)
+    msgbox(format("I've been hearing all about a tough trainer; could it be you?"), MSGBOX_AUTOCLOSE)
     applymovement(OBJ_EVENT_ID_PLAYER, Movement_PlayerSurprised_MHGE)
     applymovement(1, Movement_Robert_Gym1_TowardsPlayer)
     waitmovement(1)
     if(var(VAR_TRAINERS_BEATEN_CHECK) > 8) {
-        msgbox(format("Yes you fit the desription."), MSGBOX_AUTOCLOSE)
+        msgbox(format("Yes, you fit the description."), MSGBOX_AUTOCLOSE)
         call(MahoganyHills1_GymEntrance_Robert_Battle)
     }
     else {
@@ -27,10 +27,10 @@ script MahoganyHills1_GymEntrance_EventScript_RobertSpoke {
     lockall
     faceplayer
     if(var(VAR_ROBERT_STATUS) == 2) {
-        msgbox(format("I can't wait to battle you again when we are stronger."), MSGBOX_AUTOCLOSE)
+        msgbox(format("I can't want to battle you again when we are stronger."), MSGBOX_AUTOCLOSE)
     }
     if(var(VAR_TRAINERS_BEATEN_CHECK) > 8 && var(VAR_ROBERT_STATUS) < 2) {
-        msgbox(format("I've been hearing alot about you."), MSGBOX_AUTOCLOSE)
+        msgbox(format("I've been hearing a lot about you."), MSGBOX_AUTOCLOSE)
         call(MahoganyHills1_GymEntrance_Robert_Battle)
     }
     if(var(VAR_TRAINERS_BEATEN_CHECK) < 8 && var(VAR_ROBERT_STATUS) < 2) {
@@ -40,12 +40,12 @@ script MahoganyHills1_GymEntrance_EventScript_RobertSpoke {
 }
 
 script MahoganyHills1_GymEntrance_Robert_Battle {
-    msgbox(format("Would you like to battle, or are the rumours a lie?"), MSGBOX_YESNO)
+    msgbox(format("Would you like to battle, or are the rumors a lie?"), MSGBOX_YESNO)
     if(var(VAR_RESULT) == YES) {
         trainerbattle_single(TRAINER_ROBERT_MAHOGANYHILLSGYM, MahoganyHills_Robert_Intro, MahoganyHills_Robert_Outro, MahoganyHills_Robert_Postbattle)
     }
     else {
-        msgbox(format("Oh okay"), MSGBOX_AUTOCLOSE)
+        msgbox(format("Oh, okay."), MSGBOX_AUTOCLOSE)
         applymovement(1, Movement_Robert_Gym1_ResetPosition)
         waitmovement(1)
         end
@@ -53,8 +53,8 @@ script MahoganyHills1_GymEntrance_Robert_Battle {
 }
 
 script MahoganyHills_Robert_Postbattle {
-    msgbox(format("That was an incredible battle, you are stronger than people say."), MSGBOX_AUTOCLOSE)
-    msgbox(format("Why don't you take this, it will be very helpful."), MSGBOX_AUTOCLOSE)
+    msgbox(format("That was an incredible battle; you are stronger than people say."), MSGBOX_AUTOCLOSE)
+    msgbox(format("Why don't you take this? It will be very helpful."), MSGBOX_AUTOCLOSE)
     giveitem(ITEM_ABILITY_PATCH, 1)
     msgbox(format("You can use it on a Pokémon to unlock their hidden ability."), MSGBOX_AUTOCLOSE)
     setvar(VAR_ROBERT_STATUS, 2)
@@ -73,7 +73,7 @@ text MahoganyHills_Robert_Intro {
 }
 
 text MahoganyHills_Robert_Outro {
-    format("The rumours where wrong,\l you're much stronger.")
+    format("The rumors were false;\lyou're much stronger.")
 }
 
 //movement

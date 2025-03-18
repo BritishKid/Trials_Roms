@@ -112,7 +112,7 @@ GranitePeak_Peak_EventScript_IceStone_Text_0:
 
 GranitePeak_Peak_EventScript_IceStone_Grandson_Text_0:
 # 13 "data/maps/GranitePeak_Peak1/scripts.pory"
-	.string "Interesting...is this it?$"
+	.string "Interesting…Is this it?$"
 
 GranitePeak_Peak_EventScript_IceStone_Grandson_Text_1:
 # 17 "data/maps/GranitePeak_Peak1/scripts.pory"

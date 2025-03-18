@@ -122,7 +122,7 @@ MahoganyHillsGymInterior_TrainerBattle_Ollie::
 # 59 "data/maps/MahoganyHills_Gym_Interior/scripts.pory"
 	trainerbattle_single TRAINER_OLLIE_MAHOGANYHILLSGYM, MahoganyHillsGym_Ollie_Intro, MahoganyHillsGym_Ollie_Outro, Increase_Trainers_Beaten
 # 60 "data/maps/MahoganyHills_Gym_Interior/scripts.pory"
-	msgbox MahoganyHillsGym_Ollie_Postbattle, MSGBOX_DEFAULT
+	msgbox MahoganyHillsGym_Ollie_Postbattle, MSGBOX_AUTOCLOSE
 	return
 
 
@@ -130,7 +130,7 @@ MahoganyHillsGymInterior_TrainerBattle_Skye::
 # 64 "data/maps/MahoganyHills_Gym_Interior/scripts.pory"
 	trainerbattle_single TRAINER_SKYE_MAHOGANYHILLSGYM, MahoganyHillsGym_Skye_Intro, MahoganyHillsGym_Skye_Outro, Increase_Trainers_Beaten
 # 65 "data/maps/MahoganyHills_Gym_Interior/scripts.pory"
-	msgbox MahoganyHillsGym_Skye_Postbattle, MSGBOX_DEFAULT
+	msgbox MahoganyHillsGym_Skye_Postbattle, MSGBOX_AUTOCLOSE
 	return
 
 
@@ -171,10 +171,10 @@ MahoganyHills_Gym_Interior_EventScript_GymSign_Text_3:
 
 MahoganyHills_Gym_Interior_EventScript_Greeter_Text_0:
 # 24 "data/maps/MahoganyHills_Gym_Interior/scripts.pory"
-	.string "Yo Champ in the making! This gym\n"
-	.string "specialises in flying types. Rock,\l"
-	.string "Electric and Ice moves are the best way\l"
-	.string "to take them out.$"
+	.string "Yo, Champ in the making! This gym\n"
+	.string "specializes in flying types. Rock,\l"
+	.string "Electric, and Ice moves are the best\l"
+	.string "ways to take them out.$"
 
 MahoganyHills_Gym_Interior_EventScript_Greeter_Text_1:
 # 25 "data/maps/MahoganyHills_Gym_Interior/scripts.pory"
@@ -188,16 +188,16 @@ MahoganyHills_Gym_Interior_EventScript_Greeter_Text_2:
 
 MahoganyHillsGym_Leader_Postscript_Text_0:
 # 46 "data/maps/MahoganyHills_Gym_Interior/scripts.pory"
-	.string "That was a hard fought battle you\n"
+	.string "That was a hard-fought battle; you\n"
 	.string "deserve this gym badge.$"
 
 MahoganyHillsGym_Leader_Postscript_Text_1:
 # 49 "data/maps/MahoganyHills_Gym_Interior/scripts.pory"
-	.string "You have obtained the Gale Badge$"
+	.string "You have obtained the Gale Badge.$"
 
 MahoganyHillsGym_Leader_Postscript_Text_2:
 # 53 "data/maps/MahoganyHills_Gym_Interior/scripts.pory"
-	.string "Also please take this TM.$"
+	.string "Also, please take this TM.$"
 
 GymXpDump_Outro::
 # 82 "data/maps/MahoganyHills_Gym_Interior/scripts.pory"
@@ -206,10 +206,10 @@ GymXpDump_Outro::
 MahoganyHillsGym_Leader_Intro::
 # 86 "data/maps/MahoganyHills_Gym_Interior/scripts.pory"
 	.string "Hi! Welcome to my gym.\l"
-	.string "I am Jaiden a Master from the Winged\l"
+	.string "I am Jaiden, a Master from the Winged\l"
 	.string "City.\l"
 	.string "I hope you're prepared to be blown away\l"
-	.string "by my flying type Pokémon.$"
+	.string "by my flying-type Pokémon.$"
 
 MahoganyHillsGym_Leader_Outro::
 # 90 "data/maps/MahoganyHills_Gym_Interior/scripts.pory"
@@ -218,8 +218,8 @@ MahoganyHillsGym_Leader_Outro::
 
 MahoganyHillsGym_Leader_Postbattle::
 # 94 "data/maps/MahoganyHills_Gym_Interior/scripts.pory"
-	.string "Good luck on the rest of your journey,\n"
-	.string "you will become a Champion in no time!$"
+	.string "Good luck on the rest of your journey;\n"
+	.string "you will become a champion in no time!$"
 
 MahoganyHillsGym_Ollie_Intro::
 # 98 "data/maps/MahoganyHills_Gym_Interior/scripts.pory"
@@ -239,12 +239,12 @@ MahoganyHillsGym_Ollie_Postbattle::
 MahoganyHillsGym_Skye_Intro::
 # 110 "data/maps/MahoganyHills_Gym_Interior/scripts.pory"
 	.string "Not many trainers get past me to\n"
-	.string "Jaiden, I doubt you will.$"
+	.string "Jaiden; I doubt you will.$"
 
 MahoganyHillsGym_Skye_Outro::
 # 114 "data/maps/MahoganyHills_Gym_Interior/scripts.pory"
 	.string "Most trainers coming here are bug\n"
-	.string "trainers to be fair.$"
+	.string "trainers, to be fair.$"
 
 MahoganyHillsGym_Skye_Postbattle::
 # 118 "data/maps/MahoganyHills_Gym_Interior/scripts.pory"
@@ -257,12 +257,12 @@ MahoganyHillsGym_Wright_Intro::
 
 MahoganyHillsGym_Wright_Outro::
 # 126 "data/maps/MahoganyHills_Gym_Interior/scripts.pory"
-	.string "It's meant to be amazing$"
+	.string "It's meant to be amazing.$"
 
 MahoganyHillsGym_Wright_PostbattleScript::
 # 130 "data/maps/MahoganyHills_Gym_Interior/scripts.pory"
 	.string "I really can't wait to finally get to the\n"
-	.string "Winged City$"
+	.string "Winged City.$"
 
 MahoganyHillsGym_Andy_Intro::
 # 134 "data/maps/MahoganyHills_Gym_Interior/scripts.pory"
@@ -271,7 +271,7 @@ MahoganyHillsGym_Andy_Intro::
 
 MahoganyHillsGym_Andy_Outro::
 # 138 "data/maps/MahoganyHills_Gym_Interior/scripts.pory"
-	.string "You should join to!$"
+	.string "You should join too!$"
 
 MahoganyHillsGym_Andy_PostbattleScript::
 # 142 "data/maps/MahoganyHills_Gym_Interior/scripts.pory"
