@@ -28,7 +28,7 @@ script Megatower4F_TrainerAce_Beaten {
 //text
 
 text Megatower4F_Trainer1_Intro {
-    format("I hate sand, it's course and rough and gets everywhere.")
+    format("I hate sand, it's coarse and rough and gets everywhere.")
 }
 
 text Megatower4F_Trainer1_Outro {

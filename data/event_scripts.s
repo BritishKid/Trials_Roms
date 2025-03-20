@@ -1283,3 +1283,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/Lilycove_City_MegaTower_5F/scripts.inc"
 
 	.include "data/maps/Lost_Mansion/scripts.inc"
+
+	.include "data/maps/BedrockTown_ProfessorHollysLab/scripts.inc"

@@ -640,9 +640,10 @@
 #define MAP_ROUTE124_DIVING_TREASURE_HUNTERS_HOUSE (0 | (35 << 8))
 
 // gMapGroup_IndoorBedrock
-#define MAP_PLAYERS_BEDROOM  (0 | (36 << 8))
-#define MAP_PLAYERS_HOUSE_1F (1 | (36 << 8))
-#define MAP_RIVALS_HOUSE_1F  (2 | (36 << 8))
+#define MAP_PLAYERS_BEDROOM                   (0 | (36 << 8))
+#define MAP_PLAYERS_HOUSE_1F                  (1 | (36 << 8))
+#define MAP_RIVALS_HOUSE_1F                   (2 | (36 << 8))
+#define MAP_BEDROCK_TOWN_PROFESSOR_HOLLYS_LAB (3 | (36 << 8))
 
 // gMapGroup_IndoorRoute1
 #define MAP_OLD_FISHERMANS_HUT (0 | (37 << 8))

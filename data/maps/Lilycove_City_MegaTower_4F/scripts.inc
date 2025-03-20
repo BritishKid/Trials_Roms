@@ -58,7 +58,7 @@ Megatower4F_TrainerAce_Beaten_Text_1:
 
 Megatower4F_Trainer1_Intro::
 # 30 "data/maps/Lilycove_City_MegaTower_4F/scripts.pory"
-	.string "I hate sand, it's course and rough and\n"
+	.string "I hate sand, it's coarse and rough and\n"
 	.string "gets everywhere.$"
 
 Megatower4F_Trainer1_Outro::

@@ -1265,7 +1265,7 @@
       "id": "LAYOUT_METEOR_FALLS_B1F_1R",
       "name": "MeteorFalls_B1F_1R_Layout",
       "width": 29,
-      "height": 38,
+      "height": 20,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_MeteorFalls",
       "border_filepath": "data/layouts/MeteorFalls_B1F_1R/border.bin",
@@ -5345,7 +5345,7 @@
       "id": "LAYOUT_MEGA_TOWER",
       "name": "MegaTower_Layout",
       "width": 20,
-      "height": 30,
+      "height": 50,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_BattleFrontierOutsideEast",
       "border_filepath": "data/layouts/MegaTower/border.bin",
@@ -5440,6 +5440,16 @@
       "secondary_tileset": "gTileset_BattleFrontierOutsideEast",
       "border_filepath": "data/layouts/Lost_Mansion/border.bin",
       "blockdata_filepath": "data/layouts/Lost_Mansion/map.bin"
+    },
+    {
+      "id": "LAYOUT_BEDROCK_TOWN_PROFESSOR_HOLLYS_LAB",
+      "name": "BedrockTown_ProfessorHollysLab_Layout",
+      "width": 13,
+      "height": 13,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Lab",
+      "border_filepath": "data/layouts/BedrockTown_ProfessorHollysLab/border.bin",
+      "blockdata_filepath": "data/layouts/BedrockTown_ProfessorHollysLab/map.bin"
     }
   ]
 }

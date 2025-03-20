@@ -687,7 +687,8 @@
   "gMapGroup_IndoorBedrock": [
     "PlayersBedroom",
     "PlayersHouse_1F",
-    "RivalsHouse_1F"
+    "RivalsHouse_1F",
+    "BedrockTown_ProfessorHollysLab"
   ],
   "gMapGroup_IndoorRoute1": [
     "OldFishermans_Hut"

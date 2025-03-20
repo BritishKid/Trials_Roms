@@ -30,7 +30,7 @@
     },
     {
       "map": "MAP_MEGA_TOWER",
-      "offset": 12,
+      "offset": -8,
       "direction": "right"
     }
   ],
