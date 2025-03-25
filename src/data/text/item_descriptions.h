@@ -3710,7 +3710,7 @@ static const u8 sDevonScopeDesc[] = _(
 static const u8 sBasementKeyDesc[] = _(
     "The key for New\n"
     "Mauville beneath\n"
-    "Mauville City.");
+    "Fall Harbour.");
 
 static const u8 sScannerDesc[] = _(
     "A device found\n"

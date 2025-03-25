@@ -1,6 +1,6 @@
 {
-  "id": "MAP_MAUVILL_CITY_HARBOUR",
-  "name": "MauvillCity_Harbour",
+  "id": "MAP_FALL_HARBOUR_HARBOUR",
+  "name": "FallHarbour_Harbour",
   "layout": "LAYOUT_MAUVILL_CITY_HARBOUR",
   "music": "MUS_FORTREE",
   "region_map_section": "MAPSEC_FALL_HARBOUR",
@@ -85,14 +85,14 @@
       "x": 11,
       "y": 14,
       "elevation": 0,
-      "dest_map": "MAP_MAUVILLE_CITY",
+      "dest_map": "MAP_FALL_HARBOUR",
       "dest_warp_id": "3"
     },
     {
       "x": 12,
       "y": 14,
       "elevation": 0,
-      "dest_map": "MAP_MAUVILLE_CITY",
+      "dest_map": "MAP_FALL_HARBOUR",
       "dest_warp_id": "3"
     }
   ],

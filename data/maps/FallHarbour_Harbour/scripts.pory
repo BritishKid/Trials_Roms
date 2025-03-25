@@ -1,4 +1,4 @@
-mapscripts MauvillCity_Harbour_MapScripts {}
+mapscripts FallHarbour_Harbour_MapScripts {}
 
 
 script ThugCity_Harbour_EventScript_ThugCommander {

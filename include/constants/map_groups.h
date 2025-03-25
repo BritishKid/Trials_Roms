@@ -74,7 +74,7 @@
 
 // gMapGroup_Island2
 #define MAP_HEMLOCK_VILLAGE   (0 | (2 << 8))
-#define MAP_MAUVILLE_CITY     (1 | (2 << 8))
+#define MAP_FALL_HARBOUR      (1 | (2 << 8))
 #define MAP_VERDANTURF_TOWN   (2 | (2 << 8))
 #define MAP_LILYCOVE_CITY     (3 | (2 << 8))
 #define MAP_ROUTE5            (4 | (2 << 8))
@@ -188,16 +188,16 @@
 #define MAP_SLATEPORT_CITY_POKEMON_CENTER_2F       (12 | (11 << 8))
 #define MAP_SLATEPORT_CITY_MART                    (13 | (11 << 8))
 
-// gMapGroup_IndoorMauville
-#define MAP_MAUVILLE_CITY_GYM               (0 | (12 << 8))
-#define MAP_MAUVILLE_CITY_BIKE_SHOP         (1 | (12 << 8))
-#define MAP_MAUVILLE_CITY_HOUSE1            (2 | (12 << 8))
-#define MAP_MAUVILLE_CITY_GAME_CORNER       (3 | (12 << 8))
-#define MAP_MAUVILLE_CITY_HOUSE2            (4 | (12 << 8))
-#define MAP_MAUVILLE_CITY_POKEMON_CENTER_1F (5 | (12 << 8))
-#define MAP_MAUVILLE_CITY_POKEMON_CENTER_2F (6 | (12 << 8))
-#define MAP_MAUVILLE_CITY_MART              (7 | (12 << 8))
-#define MAP_MAUVILL_CITY_HARBOUR            (8 | (12 << 8))
+// gMapGroup_IndoorFallHarbour
+#define MAP_MAUVILLE_CITY_GYM              (0 | (12 << 8))
+#define MAP_MAUVILLE_CITY_BIKE_SHOP        (1 | (12 << 8))
+#define MAP_FALL_HARBOUR_HOUSE1            (2 | (12 << 8))
+#define MAP_MAUVILLE_CITY_GAME_CORNER      (3 | (12 << 8))
+#define MAP_FALL_HARBOUR_HOUSE2            (4 | (12 << 8))
+#define MAP_FALL_HARBOUR_POKEMON_CENTER_1F (5 | (12 << 8))
+#define MAP_FALL_HARBOUR_POKEMON_CENTER_2F (6 | (12 << 8))
+#define MAP_MAUVILLE_CITY_MART             (7 | (12 << 8))
+#define MAP_FALL_HARBOUR_HARBOUR           (8 | (12 << 8))
 
 // gMapGroup_IndoorRustboro
 #define MAP_RUSTBORO_CITY_DEVON_CORP_1F     (0 | (13 << 8))

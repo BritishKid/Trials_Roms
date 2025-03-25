@@ -12,7 +12,7 @@
     "gMapGroup_IndoorPacifidlog",
     "gMapGroup_IndoorGranitePeak",
     "gMapGroup_IndoorSlateport",
-    "gMapGroup_IndoorMauville",
+    "gMapGroup_IndoorFallHarbour",
     "gMapGroup_IndoorRustboro",
     "gMapGroup_IndoorCoralPort",
     "gMapGroup_IndoorLilycove",
@@ -119,7 +119,7 @@
   ],
   "gMapGroup_Island2": [
     "HemlockVillage",
-    "MauvilleCity",
+    "FallHarbour",
     "VerdanturfTown",
     "LilycoveCity",
     "Route5",
@@ -233,16 +233,16 @@
     "SlateportCity_PokemonCenter_2F",
     "SlateportCity_Mart"
   ],
-  "gMapGroup_IndoorMauville": [
+  "gMapGroup_IndoorFallHarbour": [
     "MauvilleCity_Gym",
     "MauvilleCity_BikeShop",
-    "MauvilleCity_House1",
+    "FallHarbour_House1",
     "MauvilleCity_GameCorner",
-    "MauvilleCity_House2",
-    "MauvilleCity_PokemonCenter_1F",
-    "MauvilleCity_PokemonCenter_2F",
+    "FallHarbour_House2",
+    "FallHarbour_PokemonCenter_1F",
+    "FallHarbour_PokemonCenter_2F",
     "MauvilleCity_Mart",
-    "MauvillCity_Harbour"
+    "FallHarbour_Harbour"
   ],
   "gMapGroup_IndoorRustboro": [
     "RustboroCity_DevonCorp_1F",

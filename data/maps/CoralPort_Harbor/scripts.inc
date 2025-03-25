@@ -45,7 +45,7 @@ Island1_TravelByBoat_10:
 
 Island1_TravelByBoat_12:
 # 15 "data/maps/CoralPort_Harbor/scripts.pory"
-	warp MAP_MAUVILL_CITY_HARBOUR, 8, 11
+	warp MAP_FALL_HARBOUR_HARBOUR, 8, 11
 	goto Island1_TravelByBoat_1
 
 

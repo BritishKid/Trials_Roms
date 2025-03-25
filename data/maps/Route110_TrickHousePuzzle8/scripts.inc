@@ -13,7 +13,6 @@ Route110_TrickHousePuzzle8_EventScript_FoundScroll::
 	end
 
 Route110_TrickHousePuzzle8_EventScript_Vincent::
-	trainerbattle_single THUGCITY_BLOCKER1, Route110_TrickHousePuzzle8_Text_VincentIntro, Route110_TrickHousePuzzle8_Text_VincentDefeat
 	msgbox Route110_TrickHousePuzzle8_Text_VincentPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -23,7 +22,6 @@ Route110_TrickHousePuzzle8_EventScript_Keira::
 	end
 
 Route110_TrickHousePuzzle8_EventScript_Leroy::
-	trainerbattle_single THUGCITY_BLOCKER1, Route110_TrickHousePuzzle8_Text_LeroyIntro, Route110_TrickHousePuzzle8_Text_LeroyDefeat
 	msgbox Route110_TrickHousePuzzle8_Text_LeroyPostBattle, MSGBOX_AUTOCLOSE
 	end
 

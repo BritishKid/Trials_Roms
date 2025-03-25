@@ -12,7 +12,7 @@ script Island1_TravelByBoat {
                 warp(MAP_ROUTE5, 24, 6)
             }
             if(flag(FLAG_HIDE_BLOCKER_THUGS)) {
-                warp(MAP_MAUVILL_CITY_HARBOUR, 8, 11)
+                warp(MAP_FALL_HARBOUR_HARBOUR, 8, 11)
             }
         }
     }

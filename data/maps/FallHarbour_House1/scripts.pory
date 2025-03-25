@@ -1,8 +1,8 @@
-mapscripts MauvilleCity_House1_MapScripts {
+mapscripts FallHarbour_House1_MapScripts {
 
 }
 
-script MauvilleCity_House1_EventScript_Pyukumuku {
+script FallHarbour_EventScript_Pyukumuku {
     lockall
     faceplayer
     msgbox(format("I've been researching Pyukumuku, they are a really fascinating Pokémon."))

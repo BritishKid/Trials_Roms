@@ -1,11 +1,11 @@
-mapscripts MauvilleCity_MapScripts {
+mapscripts FallHarbour_MapScripts {
     MAP_SCRIPT_ON_TRANSITION {
-        	setflag(FLAG_VISITED_MAUVILLE_CITY)
+        	setflag(FLAG_VISITED_FALL_HARBOUR)
     }
 }
 
 
-script MauvilleCity_Pyukumuku_Clean_Up {
+script FallHarbour_Pyukumuku_Clean_Up {
     lockall
     msgbox(format("It's a Pyukumuku, you push it back into the water"), MSGBOX_AUTOCLOSE)
     fadescreen(FADE_TO_BLACK)
@@ -24,8 +24,8 @@ script MauvilleCity_Pyukumuku_Clean_Up {
 //blocking entrance to city thugs
 //placeholder using magma sprites until i add new custom ones
 
-script ThugCity_EventScript_Blocker1 {
-    trainerbattle_single(THUGCITY_BLOCKER1, Thug1_Intro, Thug1_Outro, Thug1PostScript) //battle on the left
+script FallHarbour_EventScript_Blocker1 {
+    trainerbattle_single(FALLHARBOUR_BLOCKER1, Thug1_Intro, Thug1_Outro, Thug1PostScript) //battle on the left
 }
 
 script Thug1PostScript {
@@ -34,7 +34,7 @@ script Thug1PostScript {
     msgbox(format("Fine I guess it's my go!"), MSGBOX_AUTOCLOSE)
     applymovement(4, Movement_Thug2MovesLeft)
     waitmovement(4)
-    trainerbattle_single(THUGCITY_BLOCKER2, Thug2_Intro, Thug2_Outro, ThugsBeaten_Left)
+    trainerbattle_single(FALLHARBOUR_BLOCKER2, Thug2_Intro, Thug2_Outro, ThugsBeaten_Left)
 }
 
 script ThugsBeaten_Left {
@@ -48,8 +48,8 @@ script ThugsBeaten_Left {
     removeobject(4)
 }
 
-script ThugCity_EventScript_Blocker2 {
-    trainerbattle_single(THUGCITY_BLOCKER2, Thug2_Intro, Thug2_Outro, Thug2PostScript) // battle on right
+script FallHarbour_EventScript_Blocker2 {
+    trainerbattle_single(FALLHARBOUR_BLOCKER2, Thug2_Intro, Thug2_Outro, Thug2PostScript) // battle on right
 }
 
 script Thug2PostScript {
@@ -58,7 +58,7 @@ script Thug2PostScript {
     msgbox(format("Fine I guess it's my go!"), MSGBOX_AUTOCLOSE)
     applymovement(3, Movement_Thug1MovesRight)
     waitmovement(3)
-    trainerbattle_single(THUGCITY_BLOCKER1, Thug1_Intro, Thug1_Outro, ThugsBeaten_Right)
+    trainerbattle_single(FALLHARBOUR_BLOCKER1, Thug1_Intro, Thug1_Outro, ThugsBeaten_Right)
 }
 
 script ThugsBeaten_Right {
@@ -71,14 +71,14 @@ script ThugsBeaten_Right {
     removeobject(4)
 }
 
-script ThugCity_EventScript_DoorBlockers {
+script FallHarbour_EventScript_DoorBlockers {
     lockall
     faceplayer
     msgbox(format("Boss says no-ones getting in or out so beat it."))
     releaseall
 }
 
-script ThugCity_EventScript_PokemonCenterBlocker {
+script FallHarbour_EventScript_PokemonCenterBlocker {
     lockall
     faceplayer
     msgbox(format("Pokecenter is closed mate, but I can fix up your Pokémon.\lIt'll only cost 500!"), MSGBOX_YESNO)
@@ -142,18 +142,18 @@ movement Movement_ThugsRunRight {
 //mart
 
 raw `
-ThugCity_Mart_EventScript_Clerk::
+FallHarbour_Mart_EventScript_Clerk::
 	lock
 	faceplayer
 	message gText_HowMayIServeYou
 	waitmessage
-	pokemart ThugCity_VariableMart
+	pokemart FallHarbour_VariableMart
 	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
 	release
 	end
 
 	.align 2
-ThugCity_VariableMart:
+FallHarbour_VariableMart:
 	.2byte ITEM_POKE_BALL, 150
 	.2byte ITEM_REVIVE, 1000
 	.2byte ITEM_REPEL, 250

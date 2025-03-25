@@ -923,219 +923,219 @@ static const struct Story sStorytellerStories[] = {
     // The 50 below is replaced with GAME_STAT_SAVED_GAME
     {
         50, 1,
-        MauvilleCity_PokemonCenter_1F_Text_SavedGameTitle,
-        MauvilleCity_PokemonCenter_1F_Text_SavedGameAction,
-        MauvilleCity_PokemonCenter_1F_Text_SavedGameStory
+        FallHarbour_PokemonCenter_1F_Text_SavedGameTitle,
+        FallHarbour_PokemonCenter_1F_Text_SavedGameAction,
+        FallHarbour_PokemonCenter_1F_Text_SavedGameStory
     },
     {
         GAME_STAT_STARTED_TRENDS, 1,
-        MauvilleCity_PokemonCenter_1F_Text_TrendsStartedTitle,
-        MauvilleCity_PokemonCenter_1F_Text_TrendsStartedAction,
-        MauvilleCity_PokemonCenter_1F_Text_TrendsStartedStory
+        FallHarbour_PokemonCenter_1F_Text_TrendsStartedTitle,
+        FallHarbour_PokemonCenter_1F_Text_TrendsStartedAction,
+        FallHarbour_PokemonCenter_1F_Text_TrendsStartedStory
     },
     {
         GAME_STAT_PLANTED_BERRIES, 1,
-        MauvilleCity_PokemonCenter_1F_Text_BerriesPlantedTitle,
-        MauvilleCity_PokemonCenter_1F_Text_BerriesPlantedAction,
-        MauvilleCity_PokemonCenter_1F_Text_BerriesPlantedStory
+        FallHarbour_PokemonCenter_1F_Text_BerriesPlantedTitle,
+        FallHarbour_PokemonCenter_1F_Text_BerriesPlantedAction,
+        FallHarbour_PokemonCenter_1F_Text_BerriesPlantedStory
     },
     {
         GAME_STAT_TRADED_BIKES, 1,
-        MauvilleCity_PokemonCenter_1F_Text_BikeTradesTitle,
-        MauvilleCity_PokemonCenter_1F_Text_BikeTradesAction,
-        MauvilleCity_PokemonCenter_1F_Text_BikeTradesStory
+        FallHarbour_PokemonCenter_1F_Text_BikeTradesTitle,
+        FallHarbour_PokemonCenter_1F_Text_BikeTradesAction,
+        FallHarbour_PokemonCenter_1F_Text_BikeTradesStory
     },
     {
         GAME_STAT_GOT_INTERVIEWED, 1,
-        MauvilleCity_PokemonCenter_1F_Text_InterviewsTitle,
-        MauvilleCity_PokemonCenter_1F_Text_InterviewsAction,
-        MauvilleCity_PokemonCenter_1F_Text_InterviewsStory
+        FallHarbour_PokemonCenter_1F_Text_InterviewsTitle,
+        FallHarbour_PokemonCenter_1F_Text_InterviewsAction,
+        FallHarbour_PokemonCenter_1F_Text_InterviewsStory
     },
     {
         GAME_STAT_TRAINER_BATTLES, 1,
-        MauvilleCity_PokemonCenter_1F_Text_TrainerBattlesTitle,
-        MauvilleCity_PokemonCenter_1F_Text_TrainerBattlesAction,
-        MauvilleCity_PokemonCenter_1F_Text_TrainerBattlesStory
+        FallHarbour_PokemonCenter_1F_Text_TrainerBattlesTitle,
+        FallHarbour_PokemonCenter_1F_Text_TrainerBattlesAction,
+        FallHarbour_PokemonCenter_1F_Text_TrainerBattlesStory
     },
     {
         GAME_STAT_POKEMON_CAPTURES, 1,
-        MauvilleCity_PokemonCenter_1F_Text_PokemonCaughtTitle,
-        MauvilleCity_PokemonCenter_1F_Text_PokemonCaughtAction,
-        MauvilleCity_PokemonCenter_1F_Text_PokemonCaughtStory
+        FallHarbour_PokemonCenter_1F_Text_PokemonCaughtTitle,
+        FallHarbour_PokemonCenter_1F_Text_PokemonCaughtAction,
+        FallHarbour_PokemonCenter_1F_Text_PokemonCaughtStory
     },
     {
         GAME_STAT_FISHING_ENCOUNTERS, 1,
-        MauvilleCity_PokemonCenter_1F_Text_FishingPokemonCaughtTitle,
-        MauvilleCity_PokemonCenter_1F_Text_FishingPokemonCaughtAction,
-        MauvilleCity_PokemonCenter_1F_Text_FishingPokemonCaughtStory
+        FallHarbour_PokemonCenter_1F_Text_FishingPokemonCaughtTitle,
+        FallHarbour_PokemonCenter_1F_Text_FishingPokemonCaughtAction,
+        FallHarbour_PokemonCenter_1F_Text_FishingPokemonCaughtStory
     },
     {
         GAME_STAT_HATCHED_EGGS, 1,
-        MauvilleCity_PokemonCenter_1F_Text_EggsHatchedTitle,
-        MauvilleCity_PokemonCenter_1F_Text_EggsHatchedAction,
-        MauvilleCity_PokemonCenter_1F_Text_EggsHatchedStory
+        FallHarbour_PokemonCenter_1F_Text_EggsHatchedTitle,
+        FallHarbour_PokemonCenter_1F_Text_EggsHatchedAction,
+        FallHarbour_PokemonCenter_1F_Text_EggsHatchedStory
     },
     {
         GAME_STAT_EVOLVED_POKEMON, 1,
-        MauvilleCity_PokemonCenter_1F_Text_PokemonEvolvedTitle,
-        MauvilleCity_PokemonCenter_1F_Text_PokemonEvolvedAction,
-        MauvilleCity_PokemonCenter_1F_Text_PokemonEvolvedStory
+        FallHarbour_PokemonCenter_1F_Text_PokemonEvolvedTitle,
+        FallHarbour_PokemonCenter_1F_Text_PokemonEvolvedAction,
+        FallHarbour_PokemonCenter_1F_Text_PokemonEvolvedStory
     },
     {
         GAME_STAT_USED_POKECENTER, 1,
-        MauvilleCity_PokemonCenter_1F_Text_UsedPokemonCenterTitle,
-        MauvilleCity_PokemonCenter_1F_Text_UsedPokemonCenterAction,
-        MauvilleCity_PokemonCenter_1F_Text_UsedPokemonCenterStory
+        FallHarbour_PokemonCenter_1F_Text_UsedPokemonCenterTitle,
+        FallHarbour_PokemonCenter_1F_Text_UsedPokemonCenterAction,
+        FallHarbour_PokemonCenter_1F_Text_UsedPokemonCenterStory
     },
     {
         GAME_STAT_RESTED_AT_HOME, 1,
-        MauvilleCity_PokemonCenter_1F_Text_RestedAtHomeTitle,
-        MauvilleCity_PokemonCenter_1F_Text_RestedAtHomeAction,
-        MauvilleCity_PokemonCenter_1F_Text_RestedAtHomeStory
+        FallHarbour_PokemonCenter_1F_Text_RestedAtHomeTitle,
+        FallHarbour_PokemonCenter_1F_Text_RestedAtHomeAction,
+        FallHarbour_PokemonCenter_1F_Text_RestedAtHomeStory
     },
     {
         GAME_STAT_ENTERED_SAFARI_ZONE, 1,
-        MauvilleCity_PokemonCenter_1F_Text_SafariGamesTitle,
-        MauvilleCity_PokemonCenter_1F_Text_SafariGamesAction,
-        MauvilleCity_PokemonCenter_1F_Text_SafariGamesStory
+        FallHarbour_PokemonCenter_1F_Text_SafariGamesTitle,
+        FallHarbour_PokemonCenter_1F_Text_SafariGamesAction,
+        FallHarbour_PokemonCenter_1F_Text_SafariGamesStory
     },
     {
         GAME_STAT_USED_CUT, 1,
-        MauvilleCity_PokemonCenter_1F_Text_UsedCutTitle,
-        MauvilleCity_PokemonCenter_1F_Text_UsedCutAction,
-        MauvilleCity_PokemonCenter_1F_Text_UsedCutStory
+        FallHarbour_PokemonCenter_1F_Text_UsedCutTitle,
+        FallHarbour_PokemonCenter_1F_Text_UsedCutAction,
+        FallHarbour_PokemonCenter_1F_Text_UsedCutStory
     },
     {
         GAME_STAT_USED_ROCK_SMASH, 1,
-        MauvilleCity_PokemonCenter_1F_Text_UsedRockSmashTitle,
-        MauvilleCity_PokemonCenter_1F_Text_UsedRockSmashAction,
-        MauvilleCity_PokemonCenter_1F_Text_UsedRockSmashStory
+        FallHarbour_PokemonCenter_1F_Text_UsedRockSmashTitle,
+        FallHarbour_PokemonCenter_1F_Text_UsedRockSmashAction,
+        FallHarbour_PokemonCenter_1F_Text_UsedRockSmashStory
     },
     {
         GAME_STAT_MOVED_SECRET_BASE, 1,
-        MauvilleCity_PokemonCenter_1F_Text_MovedBasesTitle,
-        MauvilleCity_PokemonCenter_1F_Text_MovedBasesAction,
-        MauvilleCity_PokemonCenter_1F_Text_MovedBasesStory
+        FallHarbour_PokemonCenter_1F_Text_MovedBasesTitle,
+        FallHarbour_PokemonCenter_1F_Text_MovedBasesAction,
+        FallHarbour_PokemonCenter_1F_Text_MovedBasesStory
     },
     {
         GAME_STAT_USED_SPLASH, 1,
-        MauvilleCity_PokemonCenter_1F_Text_UsedSplashTitle,
-        MauvilleCity_PokemonCenter_1F_Text_UsedSplashAction,
-        MauvilleCity_PokemonCenter_1F_Text_UsedSplashStory
+        FallHarbour_PokemonCenter_1F_Text_UsedSplashTitle,
+        FallHarbour_PokemonCenter_1F_Text_UsedSplashAction,
+        FallHarbour_PokemonCenter_1F_Text_UsedSplashStory
     },
     {
         GAME_STAT_USED_STRUGGLE, 1,
-        MauvilleCity_PokemonCenter_1F_Text_UsedStruggleTitle,
-        MauvilleCity_PokemonCenter_1F_Text_UsedStruggleAction,
-        MauvilleCity_PokemonCenter_1F_Text_UsedStruggleStory
+        FallHarbour_PokemonCenter_1F_Text_UsedStruggleTitle,
+        FallHarbour_PokemonCenter_1F_Text_UsedStruggleAction,
+        FallHarbour_PokemonCenter_1F_Text_UsedStruggleStory
     },
     {
         GAME_STAT_SLOT_JACKPOTS, 1,
-        MauvilleCity_PokemonCenter_1F_Text_SlotJackpotsTitle,
-        MauvilleCity_PokemonCenter_1F_Text_SlotJackpotsAction,
-        MauvilleCity_PokemonCenter_1F_Text_SlotJackpotsStory
+        FallHarbour_PokemonCenter_1F_Text_SlotJackpotsTitle,
+        FallHarbour_PokemonCenter_1F_Text_SlotJackpotsAction,
+        FallHarbour_PokemonCenter_1F_Text_SlotJackpotsStory
     },
     {
         GAME_STAT_CONSECUTIVE_ROULETTE_WINS, 2,
-        MauvilleCity_PokemonCenter_1F_Text_RouletteWinsTitle,
-        MauvilleCity_PokemonCenter_1F_Text_RouletteWinsAction,
-        MauvilleCity_PokemonCenter_1F_Text_RouletteWinsStory
+        FallHarbour_PokemonCenter_1F_Text_RouletteWinsTitle,
+        FallHarbour_PokemonCenter_1F_Text_RouletteWinsAction,
+        FallHarbour_PokemonCenter_1F_Text_RouletteWinsStory
     },
     {
         GAME_STAT_ENTERED_BATTLE_TOWER, 1,
-        MauvilleCity_PokemonCenter_1F_Text_BattleTowerChallengesTitle,
-        MauvilleCity_PokemonCenter_1F_Text_BattleTowerChallengesAction,
-        MauvilleCity_PokemonCenter_1F_Text_BattleTowerChallengesStory
+        FallHarbour_PokemonCenter_1F_Text_BattleTowerChallengesTitle,
+        FallHarbour_PokemonCenter_1F_Text_BattleTowerChallengesAction,
+        FallHarbour_PokemonCenter_1F_Text_BattleTowerChallengesStory
     },
     {
         GAME_STAT_POKEBLOCKS, 1,
-        MauvilleCity_PokemonCenter_1F_Text_MadePokeblocksTitle,
-        MauvilleCity_PokemonCenter_1F_Text_MadePokeblocksAction,
-        MauvilleCity_PokemonCenter_1F_Text_MadePokeblocksStory
+        FallHarbour_PokemonCenter_1F_Text_MadePokeblocksTitle,
+        FallHarbour_PokemonCenter_1F_Text_MadePokeblocksAction,
+        FallHarbour_PokemonCenter_1F_Text_MadePokeblocksStory
     },
     {
         GAME_STAT_ENTERED_CONTEST, 1,
-        MauvilleCity_PokemonCenter_1F_Text_EnteredContestsTitle,
-        MauvilleCity_PokemonCenter_1F_Text_EnteredContestsAction,
-        MauvilleCity_PokemonCenter_1F_Text_EnteredContestsStory
+        FallHarbour_PokemonCenter_1F_Text_EnteredContestsTitle,
+        FallHarbour_PokemonCenter_1F_Text_EnteredContestsAction,
+        FallHarbour_PokemonCenter_1F_Text_EnteredContestsStory
     },
     {
         GAME_STAT_WON_CONTEST, 1,
-        MauvilleCity_PokemonCenter_1F_Text_WonContestsTitle,
-        MauvilleCity_PokemonCenter_1F_Text_WonContestsAction,
-        MauvilleCity_PokemonCenter_1F_Text_WonContestsStory
+        FallHarbour_PokemonCenter_1F_Text_WonContestsTitle,
+        FallHarbour_PokemonCenter_1F_Text_WonContestsAction,
+        FallHarbour_PokemonCenter_1F_Text_WonContestsStory
     },
     {
         GAME_STAT_SHOPPED, 1,
-        MauvilleCity_PokemonCenter_1F_Text_TimesShoppedTitle,
-        MauvilleCity_PokemonCenter_1F_Text_TimesShoppedAction,
-        MauvilleCity_PokemonCenter_1F_Text_TimesShoppedStory
+        FallHarbour_PokemonCenter_1F_Text_TimesShoppedTitle,
+        FallHarbour_PokemonCenter_1F_Text_TimesShoppedAction,
+        FallHarbour_PokemonCenter_1F_Text_TimesShoppedStory
     },
     {
         GAME_STAT_USED_ITEMFINDER, 1,
-        MauvilleCity_PokemonCenter_1F_Text_UsedItemFinderTitle,
-        MauvilleCity_PokemonCenter_1F_Text_UsedItemFinderAction,
-        MauvilleCity_PokemonCenter_1F_Text_UsedItemFinderStory
+        FallHarbour_PokemonCenter_1F_Text_UsedItemFinderTitle,
+        FallHarbour_PokemonCenter_1F_Text_UsedItemFinderAction,
+        FallHarbour_PokemonCenter_1F_Text_UsedItemFinderStory
     },
     {
         GAME_STAT_GOT_RAINED_ON, 1,
-        MauvilleCity_PokemonCenter_1F_Text_TimesRainedTitle,
-        MauvilleCity_PokemonCenter_1F_Text_TimesRainedAction,
-        MauvilleCity_PokemonCenter_1F_Text_TimesRainedStory
+        FallHarbour_PokemonCenter_1F_Text_TimesRainedTitle,
+        FallHarbour_PokemonCenter_1F_Text_TimesRainedAction,
+        FallHarbour_PokemonCenter_1F_Text_TimesRainedStory
     },
     {
         GAME_STAT_CHECKED_POKEDEX, 1,
-        MauvilleCity_PokemonCenter_1F_Text_CheckedPokedexTitle,
-        MauvilleCity_PokemonCenter_1F_Text_CheckedPokedexAction,
-        MauvilleCity_PokemonCenter_1F_Text_CheckedPokedexStory
+        FallHarbour_PokemonCenter_1F_Text_CheckedPokedexTitle,
+        FallHarbour_PokemonCenter_1F_Text_CheckedPokedexAction,
+        FallHarbour_PokemonCenter_1F_Text_CheckedPokedexStory
     },
     {
         GAME_STAT_RECEIVED_RIBBONS, 1,
-        MauvilleCity_PokemonCenter_1F_Text_ReceivedRibbonsTitle,
-        MauvilleCity_PokemonCenter_1F_Text_ReceivedRibbonsAction,
-        MauvilleCity_PokemonCenter_1F_Text_ReceivedRibbonsStory
+        FallHarbour_PokemonCenter_1F_Text_ReceivedRibbonsTitle,
+        FallHarbour_PokemonCenter_1F_Text_ReceivedRibbonsAction,
+        FallHarbour_PokemonCenter_1F_Text_ReceivedRibbonsStory
     },
     {
         GAME_STAT_JUMPED_DOWN_LEDGES, 1,
-        MauvilleCity_PokemonCenter_1F_Text_LedgesJumpedTitle,
-        MauvilleCity_PokemonCenter_1F_Text_LedgesJumpedAction,
-        MauvilleCity_PokemonCenter_1F_Text_LedgesJumpedStory
+        FallHarbour_PokemonCenter_1F_Text_LedgesJumpedTitle,
+        FallHarbour_PokemonCenter_1F_Text_LedgesJumpedAction,
+        FallHarbour_PokemonCenter_1F_Text_LedgesJumpedStory
     },
     {
         GAME_STAT_WATCHED_TV, 1,
-        MauvilleCity_PokemonCenter_1F_Text_TVWatchedTitle,
-        MauvilleCity_PokemonCenter_1F_Text_TVWatchedAction,
-        MauvilleCity_PokemonCenter_1F_Text_TVWatchedStory
+        FallHarbour_PokemonCenter_1F_Text_TVWatchedTitle,
+        FallHarbour_PokemonCenter_1F_Text_TVWatchedAction,
+        FallHarbour_PokemonCenter_1F_Text_TVWatchedStory
     },
     {
         GAME_STAT_CHECKED_CLOCK, 1,
-        MauvilleCity_PokemonCenter_1F_Text_CheckedClockTitle,
-        MauvilleCity_PokemonCenter_1F_Text_CheckedClockAction,
-        MauvilleCity_PokemonCenter_1F_Text_CheckedClockStory
+        FallHarbour_PokemonCenter_1F_Text_CheckedClockTitle,
+        FallHarbour_PokemonCenter_1F_Text_CheckedClockAction,
+        FallHarbour_PokemonCenter_1F_Text_CheckedClockStory
     },
     {
         GAME_STAT_WON_POKEMON_LOTTERY, 1,
-        MauvilleCity_PokemonCenter_1F_Text_WonLotteryTitle,
-        MauvilleCity_PokemonCenter_1F_Text_WonLotteryAction,
-        MauvilleCity_PokemonCenter_1F_Text_WonLotteryStory
+        FallHarbour_PokemonCenter_1F_Text_WonLotteryTitle,
+        FallHarbour_PokemonCenter_1F_Text_WonLotteryAction,
+        FallHarbour_PokemonCenter_1F_Text_WonLotteryStory
     },
     {
         GAME_STAT_USED_DAYCARE, 1,
-        MauvilleCity_PokemonCenter_1F_Text_UsedDaycareTitle,
-        MauvilleCity_PokemonCenter_1F_Text_UsedDaycareAction,
-        MauvilleCity_PokemonCenter_1F_Text_UsedDaycareStory
+        FallHarbour_PokemonCenter_1F_Text_UsedDaycareTitle,
+        FallHarbour_PokemonCenter_1F_Text_UsedDaycareAction,
+        FallHarbour_PokemonCenter_1F_Text_UsedDaycareStory
     },
     {
         GAME_STAT_RODE_CABLE_CAR, 1,
-        MauvilleCity_PokemonCenter_1F_Text_RodeCableCarTitle,
-        MauvilleCity_PokemonCenter_1F_Text_RodeCableCarAction,
-        MauvilleCity_PokemonCenter_1F_Text_RodeCableCarStory
+        FallHarbour_PokemonCenter_1F_Text_RodeCableCarTitle,
+        FallHarbour_PokemonCenter_1F_Text_RodeCableCarAction,
+        FallHarbour_PokemonCenter_1F_Text_RodeCableCarStory
     },
     {
         GAME_STAT_ENTERED_HOT_SPRINGS, 1,
-        MauvilleCity_PokemonCenter_1F_Text_HotSpringsTitle,
-        MauvilleCity_PokemonCenter_1F_Text_HotSpringsAction,
-        MauvilleCity_PokemonCenter_1F_Text_HotSpringsStory
+        FallHarbour_PokemonCenter_1F_Text_HotSpringsTitle,
+        FallHarbour_PokemonCenter_1F_Text_HotSpringsAction,
+        FallHarbour_PokemonCenter_1F_Text_HotSpringsStory
     }
 };
 

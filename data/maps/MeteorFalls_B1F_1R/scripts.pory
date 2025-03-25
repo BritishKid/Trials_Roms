@@ -1,5 +1,54 @@
 mapscripts MeteorFalls_B1F_1R_MapScripts {
+  //todo better water and fishing encounters
+}
 
+script LostLake_Area2_Aide {
+    lockall
+    faceplayer
+    msgbox(format("We are getting so close, I'm sure of it."))
+    releaseall
+}
+script LostLake_B1F_1R_Trigger_GoodraFight {
+    lockall
+    msgbox(format("GOOOOOOO!"))
+    playmoncry(SPECIES_GOODRA_HISUIAN, CRY_MODE_ENCOUNTER)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_LostLake_Surprise)
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+    msgbox(format("You see a large Pokemon in the shadows getting closer."), MSGBOX_AUTOCLOSE)
+    applymovement(1, Movement_LostLake_GoodraComing)
+    waitmovement(1)
+    releaseall
+    call(LostLake_GoodraTotem)
+    call(LostLake_PostGoodraFight)
+    releaseall
+}
+
+script LostLake_GoodraTotem {
+    setflag(FLAG_CANT_CATCH_MON)
+    settotemboost(1, 1, 1, 1, 2, 1, 0, 0)
+    setwildbattle(SPECIES_GOODRA_HISUIAN, 40)
+    dowildbattle
+}
+
+script LostLake_PostGoodraFight {
+    setflag(FLAG_HIDE_GOODRA_HISUIAN)
+    removeobject(1)
+    clearflag(FLAG_CANT_CATCH_MON)
+    clearflag(FLAG_HIDE_LOSTLAKE_AREA2_HOLLYCREW)
+    msgbox(format("The Goodra retreats"), MSGBOX_DEFAULT)
+    applymovement(2, Movement_ProffessorAndAideToPlayer_LostLake2)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_PlayerFacesUp)
+    applymovement(3, Movement_ProffessorAndAideToPlayer_LostLake2)
+    waitmovement(2)
+    msgbox(format("That was incredible! That Pokémon… it wasn’t just defending itself, it was guarding something. Was it her nest or something bigger?"), MSGBOX_DEFAULT)
+    msgbox(format("Every attempt we've had to try and go deeper that Pokemon kept pushing us back, now we can finally see what is ahead."), MSGBOX_DEFAULT)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_PlayerMovesOutTheWay)
+    applymovement(2, Movement_ProfessorRunsToArea3_LostLake)
+    waitmovement(2)
+    setflag(FLAG_HIDE_LOSTLAKE_AREA2_HOLLYCREW)
+    removeobject(2)
+    setvar(VAR_LOST_LAKE_STATE, 3)
+    releaseall
 }
 
 //Here the player will battle a totem pokemon of hisuin goodra
@@ -7,3 +56,54 @@ mapscripts MeteorFalls_B1F_1R_MapScripts {
 // player comes back with other 2 lake legendaries and cutscene fills the area with water so they can surf to and take on
 
 //also in this area is something top right to go deeper or around (lead to dreepy/goomy) and some powerful things
+
+
+//movement
+
+movement Movement_LostLake_Surprise {
+    face_down
+    emote_exclamation_mark
+}
+
+movement Movement_LostLake_GoodraComing {
+    walk_up
+    walk_up
+    walk_up
+    walk_up
+    walk_up
+    walk_up
+}
+
+movement Movement_ProffessorAndAideToPlayer_LostLake2 {
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+}
+
+movement Movement_PlayerFacesUp {
+    face_up
+}
+
+movement Movement_PlayerMovesOutTheWay {
+    walk_left
+    face_down
+}
+
+movement Movement_ProfessorRunsToArea3_LostLake {
+    walk_fast_down
+    walk_fast_down
+    walk_fast_down
+    walk_fast_down
+    walk_fast_down
+    walk_fast_down
+    walk_fast_down
+    walk_fast_right
+    walk_fast_right
+    walk_fast_right
+    walk_fast_right
+    walk_fast_right
+}

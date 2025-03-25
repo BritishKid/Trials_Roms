@@ -79,8 +79,8 @@
 #define HEMLOCKGYM_TRAINER_OLLIE                       73
 #define HEMLOCKGYM_TRAINER_CHLOE                        74
 #define TRAINER_SANDYSHORE_CITY_RIVAL                      75
-#define THUGCITY_BLOCKER1                      76
-#define THUGCITY_BLOCKER2                        77
+#define FALLHARBOUR_BLOCKER1                      76
+#define FALLHARBOUR_BLOCKER2                        77
 #define THUGCITY_COMMANDER                     78
 #define DARKCAVE_YOUNGSTER                        79
 #define FLOWERGLADE_PICKNICKER_SARA                       80

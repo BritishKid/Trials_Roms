@@ -384,7 +384,7 @@ GranitePeakTown_Gym_EventScript_NormanBattle::
 	special ResetHealLocationFromDewford
 	call EventScript_HideMrBriney
 	setflag FLAG_HIDE_MAUVILLE_GYM_WATTSON
-	clearflag FLAG_HIDE_MAUVILLE_CITY_WATTSON
+	clearflag FLAG_HIDE_FALL_HARBOUR_WATTSON
 	setvar VAR_0x8008, 5
 	call Common_EventScript_SetGymTrainers
 	clearflag FLAG_HIDE_DEWFORD_HALL_SLUDGE_BOMB_MAN

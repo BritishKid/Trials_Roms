@@ -15,9 +15,22 @@
   "connections": 0,
   "object_events": [
     {
-      "graphics_id": "OBJ_EVENT_GFX_QUINTY_PLUMP",
+      "graphics_id": "OBJ_EVENT_GFX_GOODRA_HISUIN",
       "x": 9,
-      "y": 10,
+      "y": 17,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_GOODRA_HISUIAN"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_GRETA",
+      "x": 9,
+      "y": 2,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -25,7 +38,20 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "FLAG_HIDE_LOSTLAKE_AREA2_HOLLYCREW"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SCIENTIST_1",
+      "x": 10,
+      "y": 3,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "LostLake_Area2_Aide",
+      "flag": "FLAG_HIDE_LOSTLAKE_AREA2_HOLLYCREW"
     }
   ],
   "warp_events": [
@@ -51,7 +77,7 @@
       "dest_warp_id": "0"
     },
     {
-      "x": 27,
+      "x": 26,
       "y": 7,
       "elevation": 0,
       "dest_map": "MAP_METEOR_FALLS_B1F_1R",
@@ -61,7 +87,7 @@
       "x": 20,
       "y": 18,
       "elevation": 0,
-      "dest_map": "MAP_METEOR_FALLS_B1F_1R",
+      "dest_map": "MAP_METEOR_FALLS_B1F_2R",
       "dest_warp_id": "0"
     },
     {
@@ -74,11 +100,13 @@
   ],
   "coord_events": [
     {
-      "type": "weather",
+      "type": "trigger",
       "x": 9,
       "y": 9,
       "elevation": 0,
-      "weather": "COORD_EVENT_WEATHER_SUNNY_CLOUDS"
+      "var": "VAR_LOST_LAKE_STATE",
+      "var_value": "2",
+      "script": "LostLake_B1F_1R_Trigger_GoodraFight"
     }
   ],
   "bg_events": [

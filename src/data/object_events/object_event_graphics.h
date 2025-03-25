@@ -416,6 +416,13 @@ const u32 gObjectEventPic_StrangeBall[] = INCBIN_U32("graphics/object_events/pic
 #endif //ITEM_STRANGE_BALL
 #endif //OW_FOLLOWERS_POKEBALLS
 
+//custom sprites
+const u32 gObjectEventPic_SteelixOW[] = INCBIN_U32("graphics/pokemon/steelix/overworld.4bpp");
+const u16 gObjectEventPal_SteelixOW[] = INCBIN_U16("graphics/pokemon/steelix/overworld_normal.gbapal");
+
+const u32 gObjectEventPic_HisuianGoodraOW[] = INCBIN_U32("graphics/pokemon/goodra/hisuian/overworld.4bpp");
+const u16 gObjectEventPal_HisuianGoodraOW[] = INCBIN_U16("graphics/pokemon/goodra/hisuian/overworld_normal.gbapal");
+
 #if OW_FOLLOWERS_POKEBALLS
 // Palettes are small, so always include all of the palettes (no #ifdef)
 // Vanilla

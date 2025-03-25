@@ -2,14 +2,13 @@ mapscripts Quarry_End_MapScripts {}
 
 script Steelix_Encounter_Quarry {
     lockall
-    msgbox(format("Let's pretend this is a steelix sprite!"))
     playmoncry(SPECIES_STEELIX, CRY_MODE_ENCOUNTER)
     call(GiantSteelixEncounter)
     call(FallenWorkerComesIn)
     call(MegaSteelixEncounter_Quarry)
     clearflag(FLAG_CANT_CATCH_MON)
     msgbox(format("Wow you're incredible how did you manage to beat him?"))
-    msgbox(format("Where the Steelix was you find an item"))
+    msgbox(format("You see something glistening where the Steelix was."))
     giveitem(ITEM_STEELIXITE, 1)
     playfanfare(MUS_OBTAIN_ITEM)
     setvar(VAR_QUARRY_STATE, 3)// beaten steelix
@@ -20,6 +19,7 @@ script Steelix_Encounter_Quarry {
 
 script FallenWorker_Injured {
     lockall
+    faceplayer
     if(!flag(FLAG_HIDE_STEELIX)){
         msgbox(format("Oh someone else foolish enough to come down here?\pI went to try and clear away the Pokémon that was causing problems but it was too strong for me!"))
     } else {
@@ -29,7 +29,7 @@ script FallenWorker_Injured {
 }
 
 script GiantSteelixEncounter {
-    msgbox(format("The giant STEELIX lunges at you!"))
+    msgbox(format("The giant Steelix lunges at you!"))
     setflag(FLAG_CANT_CATCH_MON)
     settotemboost(1, 0, 1,0, 0, 0, 0, 0)
     setwildbattle(SPECIES_STEELIX, 40, ITEM_SITRUS_BERRY)
@@ -37,7 +37,8 @@ script GiantSteelixEncounter {
 }
 
 script FallenWorkerComesIn {
-    setobjectxy(2, 9, 18)
+    setobjectxy(1, 9, 18) //TODO MAKE THIS WORK
+    removeobject(2)
     msgbox(format("That wasn't the Steelix I remember seeing! That was far too small, like a child!"))
     playmoncry(SPECIES_STEELIX, CRY_MODE_ENCOUNTER)
 }

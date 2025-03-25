@@ -107,7 +107,7 @@ gStdScripts_End::
 
 	.include "data/maps/GranitePeakTown/scripts.inc"
 	.include "data/maps/SlateportCity/scripts.inc"
-	.include "data/maps/MauvilleCity/scripts.inc"
+	.include "data/maps/FallHarbour/scripts.inc"
 	.include "data/maps/RustboroCity/scripts.inc"
 	.include "data/maps/CoralPort/scripts.inc"
 	.include "data/maps/LilycoveCity/scripts.inc"
@@ -232,11 +232,11 @@ gStdScripts_End::
 	.include "data/maps/SlateportCity_Mart/scripts.inc"
 	.include "data/maps/MauvilleCity_Gym/scripts.inc"
 	.include "data/maps/MauvilleCity_BikeShop/scripts.inc"
-	.include "data/maps/MauvilleCity_House1/scripts.inc"
+	.include "data/maps/FallHarbour_House1/scripts.inc"
 	.include "data/maps/MauvilleCity_GameCorner/scripts.inc"
-	.include "data/maps/MauvilleCity_House2/scripts.inc"
-	.include "data/maps/MauvilleCity_PokemonCenter_1F/scripts.inc"
-	.include "data/maps/MauvilleCity_PokemonCenter_2F/scripts.inc"
+	.include "data/maps/FallHarbour_House2/scripts.inc"
+	.include "data/maps/FallHarbour_PokemonCenter_1F/scripts.inc"
+	.include "data/maps/FallHarbour_PokemonCenter_2F/scripts.inc"
 	.include "data/maps/MauvilleCity_Mart/scripts.inc"
 	.include "data/maps/RustboroCity_DevonCorp_1F/scripts.inc"
 	.include "data/maps/RustboroCity_DevonCorp_2F/scripts.inc"
@@ -1196,7 +1196,7 @@ EventScript_VsSeekerChargingDone::
 
 	.include "data/maps/DarkCave1F/scripts.inc"
 
-	.include "data/maps/MauvillCity_Harbour/scripts.inc"
+	.include "data/maps/FallHarbour_Harbour/scripts.inc"
 
 	.include "data/maps/FlowerGladeWalk/scripts.inc"
 

@@ -52,7 +52,7 @@ FallarborTown_PokemonCenter_1F_EventScript_LanetteExitWest::
 FallarborTown_PokemonCenter_1F_EventScript_LanetteExited::
 	playse SE_SLIDING_DOOR
 	removeobject LOCALID_LANETTE
-	clearflag FLAG_HIDE_LANETTES_HOUSE_LANETTE
+	clearflag FLAG_HIDE_LOSTLAKE_AREA2_HOLLYCREW
 	release
 	end
 

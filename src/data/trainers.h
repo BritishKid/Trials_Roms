@@ -4719,7 +4719,7 @@ F_TRAINER_FEMALE |
         },
     },
 #line 1948
-    [THUGCITY_BLOCKER1] =
+    [FALLHARBOUR_BLOCKER1] =
     {
 #line 1949
         .trainerName = _("THUG"),
@@ -4762,7 +4762,7 @@ F_TRAINER_FEMALE |
         },
     },
 #line 1965
-    [THUGCITY_BLOCKER2] =
+    [FALLHARBOUR_BLOCKER2] =
     {
 #line 1966
         .trainerName = _("THUG"),

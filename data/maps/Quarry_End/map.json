@@ -16,8 +16,8 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_HIKER",
-      "x": 4,
-      "y": 31,
+      "x": 8,
+      "y": 17,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -28,7 +28,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_BIG_RHYDON_DOLL",
+      "graphics_id": "OBJ_EVENT_GFX_STEELIX",
       "x": 11,
       "y": 16,
       "elevation": 0,

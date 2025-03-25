@@ -158,8 +158,8 @@
 #define FLAG_KYOGRE_ESCAPED_SEAFLOOR_CAVERN  0x81
 #define FLAG_DEFEATED_RIVAL_ROUTE103         0x82
 #define FLAG_RECEIVED_DOLL_LANETTE           0x83
-#define FLAG_RECEIVED_POTION_OLDALE          0x84 //unused
-#define FLAG_HIDE_BEDROCK_AIDE            0x85 //UNUSED
+#define FLAG_HIDE_GOODRA_HISUIAN             0x84 //
+#define FLAG_HIDE_BEDROCK_AIDE               0x85 //
 #define FLAG_PENDING_DAYCARE_EGG             0x86
 #define FLAG_THANKED_FOR_PLAYING_WITH_WALLY  0x87 //unused
 #define FLAG_ENABLE_FIRST_WALLY_POKENAV_CALL 0x88 // Set after defeating Wally outside Mauville Gym. Will activate a call later to register Wally.
@@ -514,7 +514,7 @@
 #define FLAG_ENABLE_TATE_AND_LIZA_MATCH_CALL 0x1D8
 #define FLAG_ENABLE_JUAN_MATCH_CALL          0x1D9
 
-#define FLAG_UNUSED_0x1DA                    0x1DA // Unused Flag
+#define FLAG_OVERWORLD_FOLLOWS                    0x1DA 
 
 #define FLAG_SHOWN_MYSTIC_TICKET             0x1DB
 #define FLAG_DEFEATED_HO_OH                  0x1DC
@@ -820,7 +820,7 @@
 #define FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_TRUCK                  0x2FA
 #define FLAG_HIDE_DEOXYS                                            0x2FB
 #define FLAG_HIDE_BIRTH_ISLAND_DEOXYS_TRIANGLE                      0x2FC
-#define FLAG_HIDE_MAUVILLE_CITY_SCOTT                               0x2FD
+#define FLAG_HIDE_FALL_HARBOUR_SCOTT                               0x2FD
 #define FLAG_HIDE_VERDANTURF_TOWN_SCOTT                             0x2FE
 #define FLAG_HIDE_FALLARBOR_TOWN_BATTLE_TENT_SCOTT                  0x2FF
 #define FLAG_HIDE_ROUTE_111_VICTOR_WINSTRATE                        0x300
@@ -859,8 +859,8 @@
 #define FLAG_HIDE_HO_OH                                             0x321
 #define FLAG_HIDE_LILYCOVE_CONTEST_HALL_REPORTER                    0x322
 #define FLAG_HIDE_SLATEPORT_CITY_CONTEST_REPORTER                   0x323
-#define FLAG_HIDE_MAUVILLE_CITY_WALLY                               0x324
-#define FLAG_HIDE_MAUVILLE_CITY_WALLYS_UNCLE                        0x325
+#define FLAG_HIDE_FALL_HARBOUR_WALLY                               0x324
+#define FLAG_HIDE_FALL_HARBOUR_WALLYS_UNCLE                        0x325
 #define FLAG_HIDE_VERDANTURF_TOWN_WANDAS_HOUSE_WALLY                0x326
 #define FLAG_HIDE_RUSTURF_TUNNEL_WANDAS_BOYFRIEND                   0x327
 #define FLAG_HIDE_VERDANTURF_TOWN_WANDAS_HOUSE_WANDAS_BOYFRIEND     0x328
@@ -925,7 +925,7 @@
 #define FLAG_HIDE_THUG_CITY_OVERWORLD_INHABITANTS                                          0x363 // Set, however has no purpose.
 #define FLAG_HIDE_LITTLEROOT_TOWN_FAT_MAN                           0x364
 #define FLAG_HIDE_SLATEPORT_CITY_STERNS_SHIPYARD_MR_BRINEY          0x365
-#define FLAG_HIDE_LANETTES_HOUSE_LANETTE                            0x366
+#define FLAG_HIDE_LOSTLAKE_AREA2_HOLLYCREW                            0x366
 #define FLAG_HIDE_FALLORBOR_POKEMON_CENTER_LANETTE                  0x367
 #define FLAG_HIDE_TRICK_HOUSE_ENTRANCE_MAN                          0x368
 #define FLAG_HIDE_LILYCOVE_CONTEST_HALL_BLEND_MASTER_REPLACEMENT    0x369
@@ -967,7 +967,7 @@
 #define FLAG_HIDE_LILYCOVE_HARBOR_FERRY_SAILOR                      0x38D
 #define FLAG_HIDE_SOUTHERN_ISLAND_EON_STONE                         0x38E
 #define FLAG_HIDE_SOUTHERN_ISLAND_UNCHOSEN_EON_DUO_MON              0x38F
-#define FLAG_HIDE_MAUVILLE_CITY_WATTSON                             0x390
+#define FLAG_HIDE_FALL_HARBOUR_WATTSON                             0x390
 #define FLAG_HIDE_MAUVILLE_GYM_WATTSON                              0x391
 #define FLAG_HIDE_ROUTE_121_TEAM_AQUA_GRUNTS                        0x392
 #define FLAG_UNKNOWN_0x393                                          0x393 // Set, however has no purpose.
@@ -1173,7 +1173,7 @@
 #define FLAG_ITEM_SHOAL_CAVE_ICE_ROOM_NEVER_MELT_ICE                0x459
 #define FLAG_ITEM_ROUTE_1B_GREAT_BALL                               0x45A
 #define FLAG_ITEM_ROUTE_1B_ANTIDOTE                                 0x45B
-#define FLAG_ITEM_MAUVILLE_CITY_X_SPEED                             0x45C
+#define FLAG_ITEM_FALL_HARBOUR_X_SPEED                             0x45C
 #define FLAG_ITEM_MAHOGANYHILLS_3_CELL_BATTERY                      0x45D
 #define FLAG_ITEM_FLOWERGLADE_BULLETSEED                              0x45E
 #define FLAG_ITEM_SAFARI_ZONE_NORTH_CALCIUM                         0x45F
@@ -1385,7 +1385,7 @@
 #define FLAG_VISITED_PACIFIDLOG_TOWN                (SYSTEM_FLAGS + 0x15)
 #define FLAG_VISITED_GRANITE_PEAK_TOWN                 (SYSTEM_FLAGS + 0x16)
 #define FLAG_VISITED_SLATEPORT_CITY                 (SYSTEM_FLAGS + 0x17)
-#define FLAG_VISITED_MAUVILLE_CITY                  (SYSTEM_FLAGS + 0x18)
+#define FLAG_VISITED_FALL_HARBOUR                  (SYSTEM_FLAGS + 0x18)
 #define FLAG_VISITED_RUSTBORO_CITY                  (SYSTEM_FLAGS + 0x19)
 #define FLAG_VISITED_CORAL_PORT                   (SYSTEM_FLAGS + 0x1A)
 #define FLAG_VISITED_LILYCOVE_CITY                  (SYSTEM_FLAGS + 0x1B)

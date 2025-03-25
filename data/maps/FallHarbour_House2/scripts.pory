@@ -1,15 +1,15 @@
-mapscripts MauvilleCity_House2_MapScripts {
+mapscripts FallHarbour_House2_MapScripts {
 }
 
 
-script MauvilleCity_House2_EventScript_CraftingTable {
+script FallHarbour_House2_EventScript_CraftingTable {
     lockall
     call(CraftTutorial_EventScript_Table)
     releaseall
 }
 
 
-script MauvilleCity_House2_EventScript_Woman {
+script FallHarbour_House2_EventScript_Woman {
     lockall
     faceplayer
     if(flag(FLAG_ACRO_BIKE)) {

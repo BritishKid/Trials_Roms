@@ -22,14 +22,14 @@
       "blockdata_filepath": "data/layouts/SlateportCity/map.bin"
     },
     {
-      "id": "LAYOUT_MAUVILLE_CITY",
-      "name": "MauvilleCity_Layout",
+      "id": "LAYOUT_FALL_HARBOUR",
+      "name": "FallHarbour_Layout",
       "width": 37,
       "height": 25,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Lilycove",
-      "border_filepath": "data/layouts/MauvilleCity/border.bin",
-      "blockdata_filepath": "data/layouts/MauvilleCity/map.bin"
+      "border_filepath": "data/layouts/FallHarbour/border.bin",
+      "blockdata_filepath": "data/layouts/FallHarbour/map.bin"
     },
     {
       "id": "LAYOUT_RUSTBORO_CITY",
@@ -1274,8 +1274,8 @@
     {
       "id": "LAYOUT_METEOR_FALLS_B1F_2R",
       "name": "MeteorFalls_B1F_2R_Layout",
-      "width": 11,
-      "height": 18,
+      "width": 40,
+      "height": 30,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_MeteorFalls",
       "border_filepath": "data/layouts/MeteorFalls_B1F_2R/border.bin",
@@ -5003,13 +5003,13 @@
     },
     {
       "id": "LAYOUT_MAUVILL_CITY_HARBOUR",
-      "name": "MauvillCity_Harbour_Layout",
+      "name": "FallHarbour_Harbour_Layout",
       "width": 24,
       "height": 15,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Facility",
-      "border_filepath": "data/layouts/MauvillCity_Harbour/border.bin",
-      "blockdata_filepath": "data/layouts/MauvillCity_Harbour/map.bin"
+      "border_filepath": "data/layouts/FallHarbour_Harbour/border.bin",
+      "blockdata_filepath": "data/layouts/FallHarbour_Harbour/map.bin"
     },
     {
       "id": "LAYOUT_FLOWER_GLADE_WALK",
