@@ -14558,7 +14558,7 @@ const struct Item gItemsInfo[] =
         .name = _("Evolution Patch"),
         .price = 0,
         .description = COMPOUND_STRING(
-            "Awarded for completing\n"
+            "Awarded from the\n"
             "evolution class."),
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
@@ -14573,7 +14573,7 @@ const struct Item gItemsInfo[] =
         .name = _("Items Patch"),
         .price = 0,
         .description = COMPOUND_STRING(
-            "Awarded for completing\n"
+            "Awarded from the\n"
             "items class."),
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
@@ -14588,7 +14588,7 @@ const struct Item gItemsInfo[] =
         .name = _("Moves Patch"),
         .price = 0,
         .description = COMPOUND_STRING(
-            "Awarded for completing\n"
+            "Awarded from the\n"
             "moves class."),
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
@@ -14603,7 +14603,7 @@ const struct Item gItemsInfo[] =
         .name = _("Abilities Patch"),
         .price = 0,
         .description = COMPOUND_STRING(
-            "Awarded for completing\n"
+            "Awarded from the\n"
             "abilities class."),
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,

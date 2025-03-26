@@ -19,11 +19,6 @@
       "direction": "up"
     },
     {
-      "map": "MAP_ROUTE5B",
-      "offset": -16,
-      "direction": "right"
-    },
-    {
       "map": "MAP_HEMLOCK_VILLAGE",
       "offset": 12,
       "direction": "right"
@@ -37,6 +32,11 @@
       "map": "MAP_OBSIDIAN_THICKET_2",
       "offset": -22,
       "direction": "down"
+    },
+    {
+      "map": "MAP_ROUTE5B",
+      "offset": -16,
+      "direction": "right"
     }
   ],
   "object_events": [

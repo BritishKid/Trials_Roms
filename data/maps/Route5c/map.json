@@ -27,6 +27,11 @@
       "map": "MAP_ROUTE6",
       "offset": 12,
       "direction": "right"
+    },
+    {
+      "map": "MAP_FALL_HARBOUR",
+      "offset": -13,
+      "direction": "right"
     }
   ],
   "object_events": [

@@ -22,6 +22,11 @@
       "map": "MAP_MAHOGANY_HILLS_5",
       "offset": 0,
       "direction": "right"
+    },
+    {
+      "map": "MAP_MAHOGANY_HILLS_7",
+      "offset": 8,
+      "direction": "up"
     }
   ],
   "object_events": [

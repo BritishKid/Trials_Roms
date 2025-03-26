@@ -153,7 +153,7 @@
     },
     {
       "x": 59,
-      "y": 39,
+      "y": 40,
       "elevation": 0,
       "dest_map": "MAP_BREAKWATER_PORT_MOVE_DELETERS_HOUSE",
       "dest_warp_id": "0"
@@ -246,6 +246,20 @@
       "elevation": 3,
       "item": "ITEM_HEART_SCALE",
       "flag": "FLAG_HIDDEN_ITEM_BREAKWATER_PORT_HEART_SCALE"
+    },
+    {
+      "type": "secret_base",
+      "x": 41,
+      "y": 5,
+      "elevation": 0,
+      "secret_base_id": "SECRET_BASE_TREE2_1"
+    },
+    {
+      "type": "secret_base",
+      "x": 42,
+      "y": 5,
+      "elevation": 0,
+      "secret_base_id": "SECRET_BASE_TREE2_2"
     }
   ]
 }

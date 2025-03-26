@@ -32,6 +32,11 @@
       "map": "MAP_OBSIDIAN_THICKET_4",
       "offset": 16,
       "direction": "left"
+    },
+    {
+      "map": "MAP_FALL_HARBOUR",
+      "offset": 15,
+      "direction": "right"
     }
   ],
   "object_events": [

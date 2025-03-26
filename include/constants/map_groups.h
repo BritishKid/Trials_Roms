@@ -682,6 +682,7 @@
 #define MAP_MAHOGANY_HILLS_GYM_ENTRANCE     (9 | (41 << 8))
 #define MAP_MAHOGANY_HILLS_CAVE_B1F         (10 | (41 << 8))
 #define MAP_MAHOGANY_HILLS_CAVE_SOUTH_GF    (11 | (41 << 8))
+#define MAP_MAHOGANY_HILLS_7                (12 | (41 << 8))
 
 // gMapGroup_ObsidianThicket
 #define MAP_OBSIDIAN_THICKET_1 (0 | (42 << 8))

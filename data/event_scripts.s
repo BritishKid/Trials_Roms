@@ -1285,3 +1285,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/Lost_Mansion/scripts.inc"
 
 	.include "data/maps/BedrockTown_ProfessorHollysLab/scripts.inc"
+
+	.include "data/maps/MahoganyHills_7/scripts.inc"

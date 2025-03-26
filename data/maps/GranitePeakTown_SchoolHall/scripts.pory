@@ -247,17 +247,25 @@ script GranitePeak_BattleDomeLobby_EventScript_BeatChallenge {
 }
 
 script GranitePeakTown_SchoolTournament_MintPrizeSelection {
-    msgbox("Select your prize!")
-    waitmessage()
-    multichoice(21,6, MULTI_NATURE_MINT_SELECTION, TRUE)
-    switch(var(VAR_RESULT)) {
-        case 0: giveitem(ITEM_ADAMANT_MINT)
-        case 1: giveitem(ITEM_MODEST_MINT)
-        case 2: giveitem(ITEM_BOLD_MINT)
-        case 3: giveitem(ITEM_CALM_MINT)
-        case 4: giveitem(ITEM_JOLLY_MINT)
-        case 5: giveitem(ITEM_TIMID_MINT)
-    }
+    // msgbox("Select your prize!",MSGBOX_DEFAULT)
+    // waitmessage()
+    // multichoice(17,0, MULTI_NATURE_MINT_SELECTION, TRUE) //todo fix the multi choice
+    // switch(var(VAR_RESULT)) {
+    //     case 0: giveitem(ITEM_ADAMANT_MINT)
+    //     case 1: giveitem(ITEM_MODEST_MINT)
+    //     case 2: giveitem(ITEM_BOLD_MINT)
+    //     case 3: giveitem(ITEM_CALM_MINT)
+    //     case 4: giveitem(ITEM_JOLLY_MINT)
+    //     case 5: giveitem(ITEM_TIMID_MINT)
+    // }
+    //temporary until we fix multi choice
+    msgbox(format("Also take each of these."))
+    giveitem(ITEM_ADAMANT_MINT)
+    giveitem(ITEM_MODEST_MINT)
+    giveitem(ITEM_BOLD_MINT)
+    giveitem(ITEM_CALM_MINT)
+    giveitem(ITEM_JOLLY_MINT)
+    giveitem(ITEM_TIMID_MINT)
 }
 
 // Losing the Tournament
