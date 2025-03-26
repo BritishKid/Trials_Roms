@@ -1,0 +1,251 @@
+{
+  "id": "MAP_BREAKWATER_PORT",
+  "name": "BreakwaterPort",
+  "layout": "LAYOUT_BREAKWATER_PORT",
+  "music": "MUS_LILYCOVE",
+  "region_map_section": "MAPSEC_BREAKWATER_PORT",
+  "requires_flash": false,
+  "weather": "WEATHER_SUNNY",
+  "map_type": "MAP_TYPE_CITY",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_ROUTE7",
+      "offset": -42,
+      "direction": "left"
+    },
+    {
+      "map": "MAP_MEGA_TOWER",
+      "offset": 41,
+      "direction": "up"
+    },
+    {
+      "map": "MAP_LOST_MANSION",
+      "offset": 0,
+      "direction": "up"
+    }
+  ],
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_EXPERT_M",
+      "x": 60,
+      "y": 34,
+      "elevation": 5,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "BreakwaterPort_EventScript_ExpertM1",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_EXPERT_F",
+      "x": 59,
+      "y": 34,
+      "elevation": 5,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "BreakwaterPort_EventScript_ExpertF",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 43,
+      "y": 13,
+      "elevation": 5,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "ITEM_TM_GIGA_DRAIN",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_ITEM_BREAKWATER_PORT_MAX_REPEL"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_GENTLEMAN",
+      "x": 52,
+      "y": 28,
+      "elevation": 5,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "BreakwaterPort_EventScript_BerryGentleman",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SCHOOL_KID_M",
+      "x": 23,
+      "y": 27,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "BreakwaterPort_EventScript_SchoolKidM",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_FAT_MAN",
+      "x": 53,
+      "y": 15,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "BreakwaterPort_EventScript_FatMan",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SAILOR",
+      "x": 54,
+      "y": 43,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "BreakwaterPort_EventScript_Sailor1",
+      "flag": "0"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 46,
+      "y": 22,
+      "elevation": 0,
+      "dest_map": "MAP_BREAKWATER_PORT_DEPARTMENT_STORE_1F",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 52,
+      "y": 23,
+      "elevation": 0,
+      "dest_map": "MAP_BREAKWATER_PORT_POKEMON_CENTER_1F",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 42,
+      "y": 29,
+      "elevation": 0,
+      "dest_map": "MAP_BREAKWATER_PORT_POKEMON_TRAINER_FAN_CLUB",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 69,
+      "y": 27,
+      "elevation": 1,
+      "dest_map": "MAP_AQUA_HIDEOUT_1F",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 59,
+      "y": 39,
+      "elevation": 0,
+      "dest_map": "MAP_BREAKWATER_PORT_MOVE_DELETERS_HOUSE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 31,
+      "y": 39,
+      "elevation": 0,
+      "dest_map": "MAP_BREAKWATER_PORT_HOUSE1",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 37,
+      "y": 40,
+      "elevation": 0,
+      "dest_map": "MAP_BREAKWATER_PORT_HOUSE2",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 43,
+      "y": 40,
+      "elevation": 0,
+      "dest_map": "MAP_BREAKWATER_PORT_HOUSE3",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 71,
+      "y": 33,
+      "elevation": 0,
+      "dest_map": "MAP_BREAKWATER_PORT_HARBOR",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 26,
+      "y": 8,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "COMINGSOON"
+    },
+    {
+      "type": "sign",
+      "x": 53,
+      "y": 23,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "Common_EventScript_ShowPokemonCenterSign"
+    },
+    {
+      "type": "sign",
+      "x": 47,
+      "y": 23,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "BreakwaterPort_EventScript_DepartmentStoreSign"
+    },
+    {
+      "type": "sign",
+      "x": 54,
+      "y": 23,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "Common_EventScript_ShowPokemonCenterSign"
+    },
+    {
+      "type": "sign",
+      "x": 40,
+      "y": 31,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "BreakwaterPort_EventScript_CitySign"
+    },
+    {
+      "type": "hidden_item",
+      "x": 71,
+      "y": 14,
+      "elevation": 0,
+      "item": "ITEM_POKE_BALL",
+      "flag": "FLAG_HIDDEN_ITEM_BREAKWATER_PORT_POKE_BALL"
+    },
+    {
+      "type": "hidden_item",
+      "x": 70,
+      "y": 14,
+      "elevation": 3,
+      "item": "ITEM_HEART_SCALE",
+      "flag": "FLAG_HIDDEN_ITEM_BREAKWATER_PORT_HEART_SCALE"
+    }
+  ]
+}

@@ -13,7 +13,7 @@ script EmberDune_EventScript_GymSign {
 
 script EmberDune_Trigger_FirstTimeToGym_Center {
     lockall
-    if(flag(FLAG_VISITED_VERDANTURF_TOWN)) {
+    if(flag(FLAG_VISITED_EMBERFALL_TOWN)) {
         // playbgm(MUS_POKE_CENTER)
         msgbox(format("You're nearly there!"), MSGBOX_AUTOCLOSE)
         applymovement(1, Movement_NurseToPlayer_Center_EmberDune)
@@ -25,7 +25,7 @@ script EmberDune_Trigger_FirstTimeToGym_Center {
 
 script EmberDune_Trigger_FirstTimeToGym_Right {
     lockall
-    if(flag(FLAG_VISITED_VERDANTURF_TOWN)) {
+    if(flag(FLAG_VISITED_EMBERFALL_TOWN)) {
         // playbgm(MUS_POKE_CENTER)
         msgbox(format("You're nearly there!"), MSGBOX_AUTOCLOSE)
         applymovement(1, Movement_NurseToPlayer_Right_EmberDune)
@@ -37,7 +37,7 @@ script EmberDune_Trigger_FirstTimeToGym_Right {
 
 script EmberDune_Trigger_FirstTimeToGym_Left {
     lockall
-    if(flag(FLAG_VISITED_VERDANTURF_TOWN)){
+    if(flag(FLAG_VISITED_EMBERFALL_TOWN)){
         // playbgm(MUS_POKE_CENTER)
         msgbox(format("You're nearly there!"), MSGBOX_AUTOCLOSE)
         applymovement(1, Movement_NurseToPlayer_Left_EmberDune)
@@ -61,7 +61,7 @@ script EmberDune_NurseEncounter {
 
 script EmberDune_Trigger_SkipGymIntro {
     lockall
-    if(flag(FLAG_VISITED_VERDANTURF_TOWN)) {
+    if(flag(FLAG_VISITED_EMBERFALL_TOWN)) {
         setflag(FLAG_HIDE_EMBERDUNES_NURSE)
         setvar(VAR_EMBER_DUNES_GYM_STATE, 1)
         releaseall

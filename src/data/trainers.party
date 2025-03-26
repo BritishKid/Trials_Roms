@@ -268,7 +268,7 @@ Level: 12
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_RIVAL_MAHOGONYHILL2 ===
-Name: RIVAL NAME
+Name: CASSIUS
 Class: PKMN Trainer 1
 Pic: Brendan
 Gender: Male
@@ -1916,7 +1916,7 @@ Level: 26
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
 === TRAINER_SANDYSHORE_CITY_RIVAL ===
-Name: RIVAL NAME
+Name: CASSIUS
 Class: PKMN Trainer 1
 Pic: Brendan
 Gender: Male
@@ -3631,7 +3631,7 @@ Adamant Nature
 - Ice Fang  
 
 === MEGATOWER_RIVAL ===
-Name: RIVAL NAME
+Name: CASSIUS
 Class: PKMN Trainer 1
 Pic: Brendan
 Gender: Male

@@ -70,7 +70,7 @@
       "x": 11,
       "y": 32,
       "elevation": 3,
-      "item": "ITEM_ABSORB_BULB",
+      "item": "ITEM_MOON_STONE",
       "flag": "FLAG_HIDDEN_ITEM_ROUTE_4C_RARE_CANDY"
     }
   ]

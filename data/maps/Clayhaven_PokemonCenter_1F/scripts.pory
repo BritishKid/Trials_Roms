@@ -19,11 +19,16 @@ Clayhaven_PokemonCenter_1F_EventScript_Nurse::
 	end
 `
 
-script UpdatePlayerFlag {
+script ClayHaven_PokemonCenter_Picknicker {
 	lockall
-	msgbox("Updating")
-	setflag(FLAG_RECEIVED_RUNNING_SHOES)
-	setflag(FLAG_ADVENTURE_STARTED)
-	msgbox("Updated")
+	faceplayer
+	msgbox(format("Triver is a unique region, it's the only one where the gyms aren't inside the towns and cities. It can make tiring having to go back to heal so make sure you stock up at the Mart."))
+	releaseall
+}
+
+script ClayHaven_PokemonCenter_Camper {
+	lockall
+	faceplayer
+	msgbox(format("Some trainers are much stronger than others, it's these guys in red that keep sending me back here to heal. Maybe I'll just avoid them next time."))
 	releaseall
 }

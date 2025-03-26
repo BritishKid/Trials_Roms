@@ -1164,7 +1164,7 @@ GranitePeakTown_Gym_Text_DadOhYoureWallyRight:
 
 GranitePeakTown_Gym_Text_WallyIveNeverCaughtAPokemon:
 	.string "WALLY: I'm going to go stay with my\n"
-	.string "relatives in VERDANTURF TOWN.\p"
+	.string "relatives in EMBERFALL TOWN.\p"
 	.string "I thought I would be lonely by myself,\n"
 	.string "so I wanted to take a POKéMON along.\p"
 	.string "But I've never caught a POKéMON before.\n"

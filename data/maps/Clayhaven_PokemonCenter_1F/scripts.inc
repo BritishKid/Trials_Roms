@@ -37,26 +37,41 @@ Clayhaven_PokemonCenter_1F_EventScript_Nurse::
 # 19 "data/maps/Clayhaven_PokemonCenter_1F/scripts.pory"
 	end
 
-UpdatePlayerFlag::
+ClayHaven_PokemonCenter_Picknicker::
 # 23 "data/maps/Clayhaven_PokemonCenter_1F/scripts.pory"
 	lockall
 # 24 "data/maps/Clayhaven_PokemonCenter_1F/scripts.pory"
-	msgbox UpdatePlayerFlag_Text_0
+	faceplayer
 # 25 "data/maps/Clayhaven_PokemonCenter_1F/scripts.pory"
-	setflag FLAG_RECEIVED_RUNNING_SHOES
+	msgbox ClayHaven_PokemonCenter_Picknicker_Text_0
 # 26 "data/maps/Clayhaven_PokemonCenter_1F/scripts.pory"
-	setflag FLAG_ADVENTURE_STARTED
-# 27 "data/maps/Clayhaven_PokemonCenter_1F/scripts.pory"
-	msgbox UpdatePlayerFlag_Text_1
-# 28 "data/maps/Clayhaven_PokemonCenter_1F/scripts.pory"
 	releaseall
 	return
 
 
-UpdatePlayerFlag_Text_0:
-# 24 "data/maps/Clayhaven_PokemonCenter_1F/scripts.pory"
-	.string "Updating$"
+ClayHaven_PokemonCenter_Camper::
+# 30 "data/maps/Clayhaven_PokemonCenter_1F/scripts.pory"
+	lockall
+# 31 "data/maps/Clayhaven_PokemonCenter_1F/scripts.pory"
+	faceplayer
+# 32 "data/maps/Clayhaven_PokemonCenter_1F/scripts.pory"
+	msgbox ClayHaven_PokemonCenter_Camper_Text_0
+# 33 "data/maps/Clayhaven_PokemonCenter_1F/scripts.pory"
+	releaseall
+	return
 
-UpdatePlayerFlag_Text_1:
-# 27 "data/maps/Clayhaven_PokemonCenter_1F/scripts.pory"
-	.string "Updated$"
+
+ClayHaven_PokemonCenter_Picknicker_Text_0:
+# 25 "data/maps/Clayhaven_PokemonCenter_1F/scripts.pory"
+	.string "Triver is a unique region, it's the only\n"
+	.string "one where the gyms aren't inside the\l"
+	.string "towns and cities. It can make tiring\l"
+	.string "having to go back to heal so make sure\l"
+	.string "you stock up at the Mart.$"
+
+ClayHaven_PokemonCenter_Camper_Text_0:
+# 32 "data/maps/Clayhaven_PokemonCenter_1F/scripts.pory"
+	.string "Some trainers are much stronger than\n"
+	.string "others, it's these guys in red that keep\l"
+	.string "sending me back here to heal. Maybe I'll\l"
+	.string "just avoid them next time.$"

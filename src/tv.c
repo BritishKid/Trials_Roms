@@ -835,8 +835,8 @@ void UpdateTVScreensOnMap(int width, int height)
         break;
 //  case PLAYERS_HOUSE_TV_NONE:
     default:
-        if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(LILYCOVE_CITY_COVE_LILY_MOTEL_1F)
-         && gSaveBlock1Ptr->location.mapNum == MAP_NUM(LILYCOVE_CITY_COVE_LILY_MOTEL_1F))
+        if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(BREAKWATER_PORT_COVE_LILY_MOTEL_1F)
+         && gSaveBlock1Ptr->location.mapNum == MAP_NUM(BREAKWATER_PORT_COVE_LILY_MOTEL_1F))
         {
             // NPC in Lilycove Hotel is always watching TV
             SetTVMetatilesOnMap(width, height, METATILE_Building_TV_On);
@@ -2656,8 +2656,8 @@ static bool8 ShouldApplyPokeNewsEffect(u8 newsKind)
             return TRUE;
         return FALSE;
     case POKENEWS_LILYCOVE:
-        if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(LILYCOVE_CITY_DEPARTMENT_STORE_ROOFTOP)
-         && gSaveBlock1Ptr->location.mapNum == MAP_NUM(LILYCOVE_CITY_DEPARTMENT_STORE_ROOFTOP))
+        if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(BREAKWATER_PORT_DEPARTMENT_STORE_ROOFTOP)
+         && gSaveBlock1Ptr->location.mapNum == MAP_NUM(BREAKWATER_PORT_DEPARTMENT_STORE_ROOFTOP))
             return TRUE;
         return FALSE;
     }

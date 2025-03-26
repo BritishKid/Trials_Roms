@@ -217,7 +217,7 @@ const struct FollowerMsgInfoExtended gFollowerConditionalMessages[COND_MSG_COUNT
         .emotion = FOLLOWER_EMOTION_SURPRISE,
         .conditions =
         {
-            MATCH_MAP(LILYCOVE_CITY_DEPARTMENT_STORE_ELEVATOR),
+            MATCH_MAP(BREAKWATER_PORT_DEPARTMENT_STORE_ELEVATOR),
         },
     },
     [COND_MSG_ICE_ROOM] =

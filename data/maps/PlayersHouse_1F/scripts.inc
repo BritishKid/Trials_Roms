@@ -143,7 +143,7 @@ PlayersHouse_1F_Trigger_StartJourney_Text_0:
 
 PlayersHouse_1F_Trigger_StartJourney_Text_1:
 # 13 "data/maps/PlayersHouse_1F/scripts.pory"
-	.string "RIVALNAME sent me over to see what you\n"
+	.string "Cassius sent me over to see what you\n"
 	.string "were doing and distract you but I guess\l"
 	.string "I made too much noise. He's rushed off\l"
 	.string "to MAHOGONY HILLS to start his gym\l"
@@ -164,8 +164,8 @@ PlayersHouse_1F_Trigger_StartJourney_Text_3:
 PlayersHouse_1F_Trigger_StartJourney_Text_4:
 # 25 "data/maps/PlayersHouse_1F/scripts.pory"
 	.string "Oh wow! Your POKEMON is so much weaker\n"
-	.string "than RIVALNAME, you probably need this\l"
-	.string "to catch up.$"
+	.string "than Cassius, you probably need this to\l"
+	.string "catch up.$"
 
 PlayersHouse_1F_Trigger_StartJourney_Text_5:
 # 28 "data/maps/PlayersHouse_1F/scripts.pory"

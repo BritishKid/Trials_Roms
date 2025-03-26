@@ -1,0 +1,82 @@
+raw `
+BreakwaterPort_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, BreakwaterPort_OnTransition
+	.byte 0
+
+BreakwaterPort_OnTransition:
+	setflag FLAG_VISITED_BREAKWATER_PORT
+	end
+    BreakwaterPort_EventScript_BerryGentleman::
+	lock
+	faceplayer
+	dotimebasedevents
+	goto_if_set FLAG_DAILY_LILYCOVE_RECEIVED_BERRY, BreakwaterPort_EventScript_ReceivedBerry
+	msgbox BreakwaterPort_Text_BerrySuitsYou, MSGBOX_DEFAULT
+	random 10
+	addvar VAR_RESULT, FIRST_BERRY_INDEX
+	giveitem VAR_RESULT
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	setflag FLAG_DAILY_LILYCOVE_RECEIVED_BERRY
+	msgbox BreakwaterPort_Text_BecauseYoureTrainer, MSGBOX_DEFAULT
+	release
+	end
+
+BreakwaterPort_EventScript_ReceivedBerry::
+	msgbox BreakwaterPort_Text_PokeblocksSuitPokemon, MSGBOX_DEFAULT
+	release
+	end
+
+BreakwaterPort_EventScript_ExpertM1::
+	msgbox BreakwaterPort_Text_SeaRemainsForeverYoung, MSGBOX_SIGN
+	end
+
+BreakwaterPort_EventScript_ExpertF::
+	msgbox BreakwaterPort_Text_SixtyYearsAgoHusbandProposed, MSGBOX_SIGN
+	end
+
+BreakwaterPort_Text_SeaRemainsForeverYoung:
+	.string "Even as we grow old and wrinkled,\n"
+	.string "the sea remains forever young with\l"
+	.string "the vivid brilliance of life…\p"
+	.string "Fwohoho fwohohohoho…$"
+
+BreakwaterPort_Text_SixtyYearsAgoHusbandProposed:
+	.string "It was sixty years ago that my husband\n"
+	.string "proposed to me here.\l"
+	.string "The sea remains as beautiful as ever.\p"
+	.string "Mufufufu mufufufufufu…$"
+    
+    `
+
+script BreakwaterPort_EventScript_FatMan {
+    lockall
+    faceplayer
+    msgbox(format("How do I get out of here?"), MSGBOX_AUTOCLOSE)
+    releaseall
+}
+
+script BreakwaterPort_EventScript_SchoolKidM {
+    lockall
+    faceplayer
+    msgbox(format("My brother says the rarest Pokemon are found down this waterfall, but it's such a long drop I'm always too scared to look."), MSGBOX_AUTOCLOSE)
+    releaseall
+}
+
+script BreakwaterPort_EventScript_Sailor1 {
+    lockall
+    faceplayer
+    msgbox(format("There are so many hidden islands in the sea full of unique Pokemon."))
+    releaseall
+}
+
+script BreakwaterPort_EventScript_CitySign {
+	lockall
+	msgbox(format("CITY NEEDS NAME"))
+	releaseall
+}
+
+script BreakwaterPort_EventScript_DepartmentStoreSign {
+	lockall
+	msgbox("COMING SOON")
+	releaseall
+}

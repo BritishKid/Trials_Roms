@@ -1,0 +1,71 @@
+mapscripts BreakwaterPort_MegaTower_3F_MapScripts {}
+
+
+script BreakwaterPort_MegaTower_3F_Trainer1 {
+    trainerbattle_single(MEGATOWER3F_TRAINER1, Megatower3F_Trainer1_Intro, Megatower3F_Trainer1_Outro)
+    msgbox(Megatower3F_Trainer1_PostBattle, MSGBOX_AUTOCLOSE)
+    end
+}
+
+script BreakwaterPort_MegaTower_3F_Trainer2 {
+    trainerbattle_single(MEGATOWER3F_TRAINER2, Megatower3F_Trainer2_Intro, Megatower3F_Trainer2_Outro)
+    msgbox(Megatower3F_Trainer2_PostBattle, MSGBOX_AUTOCLOSE)
+    end
+}
+
+script BreakwaterPort_MegaTower_3F_FloorAce {
+    trainerbattle_single(MEGATOWER3F_TRAINERACE, Megatower3F_TrainerAce_Intro, Megatower3F_TrainerAce_Outro, Megatower3F_TrainerAce_Beaten)
+    msgbox(Megatower3F_TrainerAce_PostBattle, MSGBOX_AUTOCLOSE)
+    end
+}
+
+script Megatower3F_TrainerAce_Beaten {
+    msgbox(format("When some Pokemon Mega Evolve they can be used in entirely different ways."), MSGBOX_DEFAULT)
+    applymovement(1, Movement_MegaTower3_AceTrainerMovesAway)
+    waitmovement(1)
+    msgbox(format("Just one more floor to go, until..."))
+}
+
+//text
+
+text Megatower3F_Trainer1_Intro {
+    format("It took years for th is tower be built, growing the trees here instead of moving them somewhere else took the most time.")
+}
+
+text Megatower3F_Trainer1_Outro {
+    format("It truly shows the human spirits boundless potential.")
+}
+
+text Megatower3F_Trainer1_PostBattle {
+    format("The original architect dead long before it was finished, they never got to see the final outcome.") //with dialga/celbi quest we could link to this? maybe you are the architect
+}
+
+text Megatower3F_Trainer2_Intro {
+    format("I love the smell of all the flowers.")
+}
+
+text Megatower3F_Trainer2_Outro {
+    format("The smell was distracting me too much.")
+}
+
+text Megatower3F_Trainer2_PostBattle {
+    format("This is one of my favourite places in all of Triver.")
+}
+
+text Megatower3F_TrainerAce_Intro {
+    format("I got here on skill, so don't let the look of my Pokemon fool you.")
+}
+
+text Megatower3F_TrainerAce_Outro {
+    format("I appreciate your silence.")
+    }
+
+text Megatower3F_TrainerAce_PostBattle {
+    format("Not many make it this far, and it won't be getting any easier.")
+}
+
+//movement 
+movement Movement_MegaTower3_AceTrainerMovesAway {
+    walk_left
+    face_right
+}

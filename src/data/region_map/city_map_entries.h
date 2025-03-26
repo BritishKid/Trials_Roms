@@ -26,7 +26,7 @@ static const struct CityMapEntry sPokenavCityMaps[NUM_CITY_MAPS] =
         .tilemap = gPokenavCityMap_Fallarbor_0,
     },
     {
-        .mapSecId = MAPSEC_VERDANTURF_TOWN,
+        .mapSecId = MAPSEC_EMBERFALL_TOWN,
         .index = 0,
         .tilemap = gPokenavCityMap_Verdanturf_0,
     },
@@ -76,12 +76,12 @@ static const struct CityMapEntry sPokenavCityMaps[NUM_CITY_MAPS] =
         .tilemap = gPokenavCityMap_Fortree_0,
     },
     {
-        .mapSecId = MAPSEC_LILYCOVE_CITY,
+        .mapSecId = MAPSEC_BREAKWATER_PORT,
         .index = 0,
         .tilemap = gPokenavCityMap_Lilycove_0,
     },
     {
-        .mapSecId = MAPSEC_LILYCOVE_CITY,
+        .mapSecId = MAPSEC_BREAKWATER_PORT,
         .index = 1,
         .tilemap = gPokenavCityMap_Lilycove_1,
     },

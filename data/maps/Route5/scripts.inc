@@ -45,85 +45,87 @@ Route5_Pyukumuku_Clean_Up::
 # 28 "data/maps/Route5/scripts.pory"
 	lock
 # 29 "data/maps/Route5/scripts.pory"
-	msgbox Route5_Pyukumuku_Clean_Up_Text_0
+	faceplayer
 # 30 "data/maps/Route5/scripts.pory"
-	fadescreen FADE_TO_BLACK
+	msgbox Route5_Pyukumuku_Clean_Up_Text_0
 # 31 "data/maps/Route5/scripts.pory"
-	msgbox Route5_Pyukumuku_Clean_Up_Text_1
+	fadescreen FADE_TO_BLACK
 # 32 "data/maps/Route5/scripts.pory"
-	removeobject 3
+	msgbox Route5_Pyukumuku_Clean_Up_Text_1
 # 33 "data/maps/Route5/scripts.pory"
-	setflag FLAG_CLEANED_UP_PYUKUMUKU_3
+	removeobject 3
 # 34 "data/maps/Route5/scripts.pory"
-	fadescreen FADE_FROM_BLACK
+	setflag FLAG_CLEANED_UP_PYUKUMUKU_3
 # 35 "data/maps/Route5/scripts.pory"
-	giveitem ITEM_BIG_PEARL
+	fadescreen FADE_FROM_BLACK
 # 36 "data/maps/Route5/scripts.pory"
-	msgbox Route5_Pyukumuku_Clean_Up_Text_2
+	giveitem ITEM_BIG_PEARL
 # 37 "data/maps/Route5/scripts.pory"
-	playfanfare MUS_OBTAIN_ITEM
+	msgbox Route5_Pyukumuku_Clean_Up_Text_2
 # 38 "data/maps/Route5/scripts.pory"
-	call IncrementNumber_Pyukumukus_Saved
+	playfanfare MUS_OBTAIN_ITEM
 # 39 "data/maps/Route5/scripts.pory"
+	call IncrementNumber_Pyukumukus_Saved
+# 40 "data/maps/Route5/scripts.pory"
 	release
 	return
 
 
 Route5_Trainerbattle_DogWalker::
-# 43 "data/maps/Route5/scripts.pory"
-	trainerbattle_single ROUTE5_DOGWALKER, Route5_Dogwalker_Intro, Route5_Dogwalker_Outro, Increase_Trainers_Beaten
 # 44 "data/maps/Route5/scripts.pory"
+	trainerbattle_single ROUTE5_DOGWALKER, Route5_Dogwalker_Intro, Route5_Dogwalker_Outro, Increase_Trainers_Beaten
+# 45 "data/maps/Route5/scripts.pory"
 	msgbox Route5_Dogwalker_Postbattle, MSGBOX_AUTOCLOSE
 	return
 
 
 Giant_Kingler::
-# 48 "data/maps/Route5/scripts.pory"
+# 49 "data/maps/Route5/scripts.pory"
 	lockall
-# 50 "data/maps/Route5/scripts.pory"
+# 51 "data/maps/Route5/scripts.pory"
 	compare VAR_GIANT_FISH_STATE, 1
 	goto_if_eq Giant_Kingler_4
 Giant_Kingler_3:
-# 72 "data/maps/Route5/scripts.pory"
+# 73 "data/maps/Route5/scripts.pory"
 	msgbox Giant_Kingler_Text_3
 Giant_Kingler_1:
-# 74 "data/maps/Route5/scripts.pory"
+# 75 "data/maps/Route5/scripts.pory"
 	releaseall
 	return
 
 Giant_Kingler_2:
-# 51 "data/maps/Route5/scripts.pory"
-	msgbox Giant_Kingler_Text_0, MSGBOX_YESNO
 # 52 "data/maps/Route5/scripts.pory"
+	msgbox Giant_Kingler_Text_0, MSGBOX_YESNO
+# 53 "data/maps/Route5/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq Giant_Kingler_7
 	end
 
 Giant_Kingler_4:
-# 50 "data/maps/Route5/scripts.pory"
+# 51 "data/maps/Route5/scripts.pory"
 	goto_if_unset FLAG_GIANT_KINGLER_BEATEN, Giant_Kingler_2
 	goto Giant_Kingler_3
 
 Giant_Kingler_7:
-# 53 "data/maps/Route5/scripts.pory"
+# 54 "data/maps/Route5/scripts.pory"
 	setflag FLAG_CANT_CATCH_MON
-# 55 "data/maps/Route5/scripts.pory"
-	msgbox Giant_Kingler_Text_1
 # 56 "data/maps/Route5/scripts.pory"
-	settotemboost 1, 1, 1, 1, 0, 1, 0, 0
+	msgbox Giant_Kingler_Text_1
 # 57 "data/maps/Route5/scripts.pory"
-	setwildbattle SPECIES_KINGLER, 35, ITEM_SITRUS_BERRY
+	settotemboost 1, 1, 1, 1, 0, 1, 0, 0
 # 58 "data/maps/Route5/scripts.pory"
+	setwildbattle SPECIES_KINGLER, 35, ITEM_SITRUS_BERRY
+# 59 "data/maps/Route5/scripts.pory"
 	dowildbattle
-# 60 "data/maps/Route5/scripts.pory"
-	msgbox Giant_Kingler_Text_2
 # 61 "data/maps/Route5/scripts.pory"
-	giveitem ITEM_GRIP_CLAW
+	msgbox Giant_Kingler_Text_2
 # 62 "data/maps/Route5/scripts.pory"
-	setflag FLAG_GIANT_KINGLER_BEATEN
+	giveitem ITEM_GRIP_CLAW
 # 63 "data/maps/Route5/scripts.pory"
-	addvar VAR_GIANT_FISH_BEATEN, 1
+	setflag FLAG_GIANT_KINGLER_BEATEN
 # 64 "data/maps/Route5/scripts.pory"
+	addvar VAR_GIANT_FISH_BEATEN, 1
+# 65 "data/maps/Route5/scripts.pory"
 	clearflag FLAG_CANT_CATCH_MON
 	goto Giant_Kingler_1
 
@@ -144,50 +146,50 @@ Route5_Sign_Directinos_Text_1:
 	.string "<- Hemlock Village$"
 
 Route5_Pyukumuku_Clean_Up_Text_0:
-# 29 "data/maps/Route5/scripts.pory"
+# 30 "data/maps/Route5/scripts.pory"
 	.string "It's a Pyukumuku, you push it back into\n"
 	.string "the water$"
 
 Route5_Pyukumuku_Clean_Up_Text_1:
-# 31 "data/maps/Route5/scripts.pory"
+# 32 "data/maps/Route5/scripts.pory"
 	.string "SPLASH$"
 
 Route5_Pyukumuku_Clean_Up_Text_2:
-# 36 "data/maps/Route5/scripts.pory"
+# 37 "data/maps/Route5/scripts.pory"
 	.string "You found a big pearl under the\n"
 	.string "Pokémon.$"
 
 Giant_Kingler_Text_0:
-# 51 "data/maps/Route5/scripts.pory"
+# 52 "data/maps/Route5/scripts.pory"
 	.string "You see a giant Pokémon scuttling\n"
 	.string "under the surface, do you want to\l"
 	.string "attempt to catch it?$"
 
 Giant_Kingler_Text_1:
-# 55 "data/maps/Route5/scripts.pory"
+# 56 "data/maps/Route5/scripts.pory"
 	.string "It leaps out at you$"
 
 Giant_Kingler_Text_2:
-# 60 "data/maps/Route5/scripts.pory"
+# 61 "data/maps/Route5/scripts.pory"
 	.string "The Kingler flees and leaves something\n"
 	.string "behind$"
 
 Giant_Kingler_Text_3:
-# 72 "data/maps/Route5/scripts.pory"
+# 73 "data/maps/Route5/scripts.pory"
 	.string "You see a giant Pokémon scuttling\n"
 	.string "under the surface$"
 
 Route5_Dogwalker_Intro::
-# 79 "data/maps/Route5/scripts.pory"
+# 80 "data/maps/Route5/scripts.pory"
 	.string "We love stretching our legs on this\n"
 	.string "beach.$"
 
 Route5_Dogwalker_Outro::
-# 83 "data/maps/Route5/scripts.pory"
+# 84 "data/maps/Route5/scripts.pory"
 	.string "Exercise will make the pain of the loss\n"
 	.string "go away.$"
 
 Route5_Dogwalker_Postbattle::
-# 87 "data/maps/Route5/scripts.pory"
+# 88 "data/maps/Route5/scripts.pory"
 	.string "We should head back the suns heading\n"
 	.string "down.$"

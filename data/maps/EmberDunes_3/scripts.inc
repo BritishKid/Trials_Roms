@@ -16,7 +16,7 @@ EmberDune_Trigger_FirstTimeToGym_Center::
 # 15 "data/maps/EmberDunes_3/scripts.pory"
 	lockall
 # 16 "data/maps/EmberDunes_3/scripts.pory"
-	goto_if_set FLAG_VISITED_VERDANTURF_TOWN, EmberDune_Trigger_FirstTimeToGym_Center_2
+	goto_if_set FLAG_VISITED_EMBERFALL_TOWN, EmberDune_Trigger_FirstTimeToGym_Center_2
 EmberDune_Trigger_FirstTimeToGym_Center_1:
 # 23 "data/maps/EmberDunes_3/scripts.pory"
 	releaseall
@@ -38,7 +38,7 @@ EmberDune_Trigger_FirstTimeToGym_Right::
 # 27 "data/maps/EmberDunes_3/scripts.pory"
 	lockall
 # 28 "data/maps/EmberDunes_3/scripts.pory"
-	goto_if_set FLAG_VISITED_VERDANTURF_TOWN, EmberDune_Trigger_FirstTimeToGym_Right_2
+	goto_if_set FLAG_VISITED_EMBERFALL_TOWN, EmberDune_Trigger_FirstTimeToGym_Right_2
 EmberDune_Trigger_FirstTimeToGym_Right_1:
 # 35 "data/maps/EmberDunes_3/scripts.pory"
 	releaseall
@@ -60,7 +60,7 @@ EmberDune_Trigger_FirstTimeToGym_Left::
 # 39 "data/maps/EmberDunes_3/scripts.pory"
 	lockall
 # 40 "data/maps/EmberDunes_3/scripts.pory"
-	goto_if_set FLAG_VISITED_VERDANTURF_TOWN, EmberDune_Trigger_FirstTimeToGym_Left_2
+	goto_if_set FLAG_VISITED_EMBERFALL_TOWN, EmberDune_Trigger_FirstTimeToGym_Left_2
 EmberDune_Trigger_FirstTimeToGym_Left_1:
 # 47 "data/maps/EmberDunes_3/scripts.pory"
 	releaseall
@@ -104,7 +104,7 @@ EmberDune_Trigger_SkipGymIntro::
 # 63 "data/maps/EmberDunes_3/scripts.pory"
 	lockall
 # 64 "data/maps/EmberDunes_3/scripts.pory"
-	goto_if_set FLAG_VISITED_VERDANTURF_TOWN, EmberDune_Trigger_SkipGymIntro_1
+	goto_if_set FLAG_VISITED_EMBERFALL_TOWN, EmberDune_Trigger_SkipGymIntro_1
 	return
 
 EmberDune_Trigger_SkipGymIntro_1:

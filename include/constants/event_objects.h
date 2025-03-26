@@ -244,11 +244,15 @@
 #define OBJ_EVENT_GFX_OW_MON                     240
 #define OBJ_EVENT_GFX_STEELIX                    241
 #define OBJ_EVENT_GFX_GOODRA_HISUIN              242
+#define OBJ_EVENT_GFX_CHARIZARD                  243
+#define OBJ_EVENT_GFX_VENUSAUR                   244
+#define OBJ_EVENT_GFX_BLASTOISE                  245
+#define OBJ_EVENT_GFX_PYUKUMUKU                  246
 
 // NOTE: The maximum amount of object events has been expanded from 255 to 65535.
 // Since dynamic graphics ids still require at least 16 free values, the actual limit
 // is 65519, but even considering follower Pokémon, this should be more than enough :)
-#define NUM_OBJ_EVENT_GFX                        243
+#define NUM_OBJ_EVENT_GFX                        247
 
 
 // These are dynamic object gfx ids.
@@ -330,7 +334,7 @@
 #define LOCALID_OLDALE_MART_CLERK 1
 #define LOCALID_LAVARIDGE_MART_CLERK 1
 #define LOCALID_FALLARBOR_MART_CLERK 1
-#define LOCALID_VERDANTURF_MART_CLERK 1
+#define LOCALID_EMBERFALL_MART_CLERK 1
 #define LOCALID_PETALBURG_MART_CLERK 1
 #define LOCALID_SLATEPORT_MART_CLERK 1
 #define LOCALID_MAUVILLE_MART_CLERK 1
@@ -380,7 +384,11 @@
 #define OBJ_EVENT_PAL_TAG_RS_MAY                  0x1123
 #define OBJ_EVENT_PAL_TAG_STEELIX                 0x1124
 #define OBJ_EVENT_PAL_TAG_HISUIAN_GOODRA          0x1125
-#define OBJ_EVENT_PAL_TAG_DYNAMIC                 0x1126
+#define OBJ_EVENT_PAL_TAG_CHARIZARD               0x1126
+#define OBJ_EVENT_PAL_TAG_VENUSAUR                0x1127
+#define OBJ_EVENT_PAL_TAG_BLASTOISE               0x1128
+#define OBJ_EVENT_PAL_TAG_PYUKUMUKU               0x1129
+#define OBJ_EVENT_PAL_TAG_DYNAMIC                 0x112A
 
 #if OW_FOLLOWERS_POKEBALLS
 // Vanilla

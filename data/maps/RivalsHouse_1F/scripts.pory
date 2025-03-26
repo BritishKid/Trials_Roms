@@ -1,1 +1,9 @@
 mapscripts RivalsHouse_1F_MapScripts {}
+
+
+script RivalsHouse_EventScript_ItemBall {
+    //todo make this something useful eventually
+    lockall
+    msgbox(format("It's a ball with a note on it:\lHere is your own Pokemon little bro. I'm sure you will use it to join me at becoming a champion one day when you are older.\l -Cassius"))
+    releaseall
+}

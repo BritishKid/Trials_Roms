@@ -1,0 +1,29 @@
+raw `.set LOCALID_NURSE, 1
+
+HemlockVillage_PokemonCenter_1F_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, HemlockVillage_PokemonCenter_1F_OnTransition
+	map_script MAP_SCRIPT_ON_RESUME, CableClub_OnResume
+	.byte 0
+
+HemlockVillage_PokemonCenter_1F_OnTransition:
+	setrespawn HEAL_LOCATION_HEMLOCK_VILLAGE
+	end
+
+HemlockVillage_PokemonCenter_1F_EventScript_Nurse::
+	setvar VAR_0x800B, LOCALID_NURSE
+	call Common_EventScript_PkmnCenterNurse
+	waitmessage
+	waitbuttonpress
+	release
+	end
+
+
+`
+
+script HemlockVillage_PokemonCenter_1F_EventScript_Nerd {
+    lockall
+    faceplayer
+    //todo make craftable item that prevents poison
+    msgbox(format("Hemlock gym is full of strong poison Pokemon, I wonder if you could make something for your Pokemon to hold so it didn't get poisoned."))
+    releaseall
+}

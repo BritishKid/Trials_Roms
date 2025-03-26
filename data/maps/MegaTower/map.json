@@ -3,7 +3,7 @@
   "name": "MegaTower",
   "layout": "LAYOUT_MEGA_TOWER",
   "music": "MUS_LILYCOVE",
-  "region_map_section": "MAPSEC_LILYCOVE_CITY",
+  "region_map_section": "MAPSEC_BREAKWATER_PORT",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_ROUTE",
@@ -14,7 +14,7 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "map": "MAP_LILYCOVE_CITY",
+      "map": "MAP_BREAKWATER_PORT",
       "offset": -41,
       "direction": "down"
     },
@@ -24,7 +24,7 @@
       "direction": "left"
     },
     {
-      "map": "MAP_VERDANTURF_TOWN",
+      "map": "MAP_EMBERFALL_TOWN",
       "offset": 8,
       "direction": "left"
     }
@@ -49,7 +49,7 @@
       "x": 10,
       "y": 29,
       "elevation": 0,
-      "dest_map": "MAP_LILYCOVE_CITY_MEGA_TOWER_GF",
+      "dest_map": "MAP_BREAKWATER_PORT_MEGA_TOWER_GF",
       "dest_warp_id": "0"
     }
   ],

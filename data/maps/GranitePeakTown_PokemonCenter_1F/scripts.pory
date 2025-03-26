@@ -1,0 +1,39 @@
+raw `.set LOCALID_NURSE, 1
+
+GranitePeakTown_PokemonCenter_1F_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, GranitePeakTown_PokemonCenter_1F_OnTransition
+	map_script MAP_SCRIPT_ON_RESUME, CableClub_OnResume
+	.byte 0
+
+GranitePeakTown_PokemonCenter_1F_OnTransition:
+	setrespawn HEAL_LOCATION_GRANITE_PEAK
+	call Common_EventScript_UpdateBrineyLocation
+	end
+
+GranitePeakTown_PokemonCenter_1F_EventScript_Nurse::
+	setvar VAR_0x800B, LOCALID_NURSE
+	call Common_EventScript_PkmnCenterNurse
+	waitmessage
+	waitbuttonpress
+	release`
+
+script GranitePeakTown_PokemonCenter_1F_EventScript_FatMan {
+    lockall
+    faceplayer
+    msgbox(format("This town is very high up but it's nothing compared to the Winged City."))
+    releaseall
+}
+
+script GranitePeakTown_PokemonCenter_1F_EventScript_Woman {
+    lockall
+    faceplayer
+    msgbox(format("I've just got my Orange Belt from taking on the ancient dojos."))
+    releaseall
+}
+
+script GranitePeakTown_PokemonCenter_1F_EventScript_Youngster {
+    lockall
+    faceplayer
+    msgbox(format("Hey, did you know that the...errr\l...\l...\lI forget."))
+    releaseall
+}

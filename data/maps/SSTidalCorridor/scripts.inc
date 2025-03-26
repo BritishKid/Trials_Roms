@@ -122,10 +122,10 @@ SSTidalCorridor_EventScript_ExitSailor::
 	end
 
 SSTidalCorridor_EventScript_ExitLilycove::
-	setrespawn HEAL_LOCATION_LILYCOVE_CITY
+	setrespawn HEAL_LOCATION_BREAKWATER_PORT
 	msgbox SSTidalCorridor_Text_WeveArrived, MSGBOX_DEFAULT
 	call_if_set FLAG_RECEIVED_TM_SNATCH, SSTidalCorridor_EventScript_HideSnatchGiver
-	warp MAP_LILYCOVE_CITY_HARBOR, 8, 11
+	warp MAP_BREAKWATER_PORT_HARBOR, 8, 11
 	waitstate
 	release
 	end
@@ -288,7 +288,7 @@ SSTidal_Text_MadeLandInSlateport:
 	.string "Thank you for sailing with us.$"
 
 SSTidal_Text_MadeLandInLilycove:
-	.string "We have made land in LILYCOVE CITY.\n"
+	.string "We have made land in BREAKWATER PORT.\n"
 	.string "Thank you for sailing with us.$"
 
 SSTidalCorridor_Text_CanRestInCabin2:

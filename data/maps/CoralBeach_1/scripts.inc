@@ -199,34 +199,34 @@ CoralBeach_Pyukumuku_Clean_Up::
 # 109 "data/maps/CoralBeach_1/scripts.pory"
 	lock
 # 110 "data/maps/CoralBeach_1/scripts.pory"
-	msgbox CoralBeach_Pyukumuku_Clean_Up_Text_0
+	faceplayer
 # 111 "data/maps/CoralBeach_1/scripts.pory"
-	fadescreen FADE_TO_BLACK
+	msgbox CoralBeach_Pyukumuku_Clean_Up_Text_0
 # 112 "data/maps/CoralBeach_1/scripts.pory"
-	msgbox CoralBeach_Pyukumuku_Clean_Up_Text_1
+	fadescreen FADE_TO_BLACK
 # 113 "data/maps/CoralBeach_1/scripts.pory"
-	removeobject 5
+	msgbox CoralBeach_Pyukumuku_Clean_Up_Text_1
 # 114 "data/maps/CoralBeach_1/scripts.pory"
-	setflag FLAG_CLEANED_UP_PYUKUMUKU_6
+	removeobject 5
 # 115 "data/maps/CoralBeach_1/scripts.pory"
-	fadescreen FADE_FROM_BLACK
+	setflag FLAG_CLEANED_UP_PYUKUMUKU_6
 # 116 "data/maps/CoralBeach_1/scripts.pory"
-	giveitem ITEM_BIG_PEARL
+	fadescreen FADE_FROM_BLACK
 # 117 "data/maps/CoralBeach_1/scripts.pory"
-	msgbox CoralBeach_Pyukumuku_Clean_Up_Text_2
+	giveitem ITEM_BIG_PEARL
 # 118 "data/maps/CoralBeach_1/scripts.pory"
-	playfanfare MUS_OBTAIN_ITEM
+	msgbox CoralBeach_Pyukumuku_Clean_Up_Text_2
 # 119 "data/maps/CoralBeach_1/scripts.pory"
-	call IncrementNumber_Pyukumukus_Saved
+	playfanfare MUS_OBTAIN_ITEM
 # 120 "data/maps/CoralBeach_1/scripts.pory"
+	call IncrementNumber_Pyukumukus_Saved
+# 121 "data/maps/CoralBeach_1/scripts.pory"
 	release
 	return
 
 
-# 161 "data/maps/CoralBeach_1/scripts.pory"
-Movement_Gym2_Robert_Approaches:
 # 162 "data/maps/CoralBeach_1/scripts.pory"
-	walk_up
+Movement_Gym2_Robert_Approaches:
 # 163 "data/maps/CoralBeach_1/scripts.pory"
 	walk_up
 # 164 "data/maps/CoralBeach_1/scripts.pory"
@@ -235,24 +235,24 @@ Movement_Gym2_Robert_Approaches:
 	walk_up
 # 166 "data/maps/CoralBeach_1/scripts.pory"
 	walk_up
+# 167 "data/maps/CoralBeach_1/scripts.pory"
+	walk_up
 	step_end
 
-# 169 "data/maps/CoralBeach_1/scripts.pory"
-Movement_Gym2_RobertMoves:
 # 170 "data/maps/CoralBeach_1/scripts.pory"
-	walk_right
+Movement_Gym2_RobertMoves:
 # 171 "data/maps/CoralBeach_1/scripts.pory"
 	walk_right
 # 172 "data/maps/CoralBeach_1/scripts.pory"
-	walk_up
+	walk_right
 # 173 "data/maps/CoralBeach_1/scripts.pory"
+	walk_up
+# 174 "data/maps/CoralBeach_1/scripts.pory"
 	face_down
 	step_end
 
-# 176 "data/maps/CoralBeach_1/scripts.pory"
-Movement_Gym2_RobertLeaves:
 # 177 "data/maps/CoralBeach_1/scripts.pory"
-	walk_down
+Movement_Gym2_RobertLeaves:
 # 178 "data/maps/CoralBeach_1/scripts.pory"
 	walk_down
 # 179 "data/maps/CoralBeach_1/scripts.pory"
@@ -263,11 +263,13 @@ Movement_Gym2_RobertLeaves:
 	walk_down
 # 182 "data/maps/CoralBeach_1/scripts.pory"
 	walk_down
+# 183 "data/maps/CoralBeach_1/scripts.pory"
+	walk_down
 	step_end
 
-# 185 "data/maps/CoralBeach_1/scripts.pory"
-Movement_Gym2_Robert_ExclamationMark:
 # 186 "data/maps/CoralBeach_1/scripts.pory"
+Movement_Gym2_Robert_ExclamationMark:
+# 187 "data/maps/CoralBeach_1/scripts.pory"
 	emote_exclamation_mark
 	step_end
 
@@ -326,55 +328,55 @@ EventScript_Gym2_Robert_FindLater_Text_1:
 	.string "Hemlock gym.$"
 
 CoralBeach_Pyukumuku_Clean_Up_Text_0:
-# 110 "data/maps/CoralBeach_1/scripts.pory"
+# 111 "data/maps/CoralBeach_1/scripts.pory"
 	.string "It's a Pyukumuku, you push it back into\n"
 	.string "the water$"
 
 CoralBeach_Pyukumuku_Clean_Up_Text_1:
-# 112 "data/maps/CoralBeach_1/scripts.pory"
+# 113 "data/maps/CoralBeach_1/scripts.pory"
 	.string "SPLASH$"
 
 CoralBeach_Pyukumuku_Clean_Up_Text_2:
-# 117 "data/maps/CoralBeach_1/scripts.pory"
+# 118 "data/maps/CoralBeach_1/scripts.pory"
 	.string "You found a big pearl under the\n"
 	.string "Pokémon.$"
 
 Beach1_WillyWomby_Intro::
-# 124 "data/maps/CoralBeach_1/scripts.pory"
+# 125 "data/maps/CoralBeach_1/scripts.pory"
 	.string "I was given a wierd blue egg from some\n"
 	.string "guy!$"
 
 Beach1_WillyWomby_Outro::
-# 128 "data/maps/CoralBeach_1/scripts.pory"
+# 129 "data/maps/CoralBeach_1/scripts.pory"
 	.string "The Pokémon that hatched is cute, I\n"
 	.string "wonder where he got it$"
 
 Beach1_WillyWomby_PostBattle::
-# 132 "data/maps/CoralBeach_1/scripts.pory"
+# 133 "data/maps/CoralBeach_1/scripts.pory"
 	.string "He got on the ferry to cross the\n"
 	.string "channel.$"
 
 Beach1_Damon_Intro::
-# 136 "data/maps/CoralBeach_1/scripts.pory"
+# 137 "data/maps/CoralBeach_1/scripts.pory"
 	.string "Have you seen how many awesome purple\n"
 	.string "Pokémon I have?!$"
 
 Beach1_Damon_Outro::
-# 140 "data/maps/CoralBeach_1/scripts.pory"
+# 141 "data/maps/CoralBeach_1/scripts.pory"
 	.string "OH NO!$"
 
 Beach1_Damon_PostBattle::
-# 144 "data/maps/CoralBeach_1/scripts.pory"
+# 145 "data/maps/CoralBeach_1/scripts.pory"
 	.string "I'm going to make them soo strong.$"
 
 Beach1_Clair_Intro::
-# 148 "data/maps/CoralBeach_1/scripts.pory"
+# 149 "data/maps/CoralBeach_1/scripts.pory"
 	.string "I feel a presence around here!$"
 
 Beach1_Clair_Outro::
-# 152 "data/maps/CoralBeach_1/scripts.pory"
+# 153 "data/maps/CoralBeach_1/scripts.pory"
 	.string "It's getting closer!$"
 
 Beach1_Clair_PostBattle::
-# 156 "data/maps/CoralBeach_1/scripts.pory"
+# 157 "data/maps/CoralBeach_1/scripts.pory"
 	.string "Nevermind it was just gas.$"

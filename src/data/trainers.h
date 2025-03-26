@@ -511,7 +511,7 @@ F_TRAINER_FEMALE |
     [TRAINER_RIVAL_MAHOGONYHILL2] =
     {
 #line 271
-        .trainerName = _("RIVAL NAME"),
+        .trainerName = _("CASSIUS"),
 #line 272
         .trainerClass = TRAINER_CLASS_PKMN_TRAINER_1,
 #line 273
@@ -4646,7 +4646,7 @@ F_TRAINER_FEMALE |
     [TRAINER_SANDYSHORE_CITY_RIVAL] =
     {
 #line 1919
-        .trainerName = _("RIVAL NAME"),
+        .trainerName = _("CASSIUS"),
 #line 1920
         .trainerClass = TRAINER_CLASS_PKMN_TRAINER_1,
 #line 1921
@@ -8944,7 +8944,7 @@ F_TRAINER_FEMALE |
     [MEGATOWER_RIVAL] =
     {
 #line 3634
-        .trainerName = _("RIVAL NAME"),
+        .trainerName = _("CASSIUS"),
 #line 3635
         .trainerClass = TRAINER_CLASS_PKMN_TRAINER_1,
 #line 3636

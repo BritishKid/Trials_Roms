@@ -123,7 +123,7 @@ gPokeNewsTextBlendMaster_Upcoming::
 	.string "We have big news for everyone\n"
 	.string "involved in the making of {POKEBLOCK}S.\p"
 	.string "The legendary BLEND MASTER will be\n"
-	.string "appearing in LILYCOVE CITY with just\l"
+	.string "appearing in BREAKWATER PORT with just\l"
 	.string "a mere {STR_VAR_1}-day wait to go!\p"
 	.string "The BLEND MASTER is said to be\n"
 	.string "the best in all HOENN when it comes to\l"

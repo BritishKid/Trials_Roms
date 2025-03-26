@@ -423,6 +423,18 @@ const u16 gObjectEventPal_SteelixOW[] = INCBIN_U16("graphics/pokemon/steelix/ove
 const u32 gObjectEventPic_HisuianGoodraOW[] = INCBIN_U32("graphics/pokemon/goodra/hisuian/overworld.4bpp");
 const u16 gObjectEventPal_HisuianGoodraOW[] = INCBIN_U16("graphics/pokemon/goodra/hisuian/overworld_normal.gbapal");
 
+const u32 gObjectEventPic_CharizardOW[] = INCBIN_U32("graphics/pokemon/charizard/overworld.4bpp");
+const u16 gObjectEventPal_CharizardOW[] = INCBIN_U16("graphics/pokemon/charizard/overworld_normal.gbapal");
+
+const u32 gObjectEventPic_VenusaurOW[] = INCBIN_U32("graphics/pokemon/venusaur/overworld.4bpp");
+const u16 gObjectEventPal_VenusaurOW[] = INCBIN_U16("graphics/pokemon/venusaur/overworld_normal.gbapal");
+
+const u32 gObjectEventPic_BlastoiseOW[] = INCBIN_U32("graphics/pokemon/blastoise/overworld.4bpp");
+const u16 gObjectEventPal_BlastoiseOW[] = INCBIN_U16("graphics/pokemon/blastoise/overworld_normal.gbapal");
+
+const u32 gObjectEventPic_PyukumukuOW[] = INCBIN_U32("graphics/pokemon/pyukumuku/overworld.4bpp");
+const u16 gObjectEventPal_PyukumukuOW[] = INCBIN_U16("graphics/pokemon/pyukumuku/overworld_normal.gbapal");
+
 #if OW_FOLLOWERS_POKEBALLS
 // Palettes are small, so always include all of the palettes (no #ifdef)
 // Vanilla

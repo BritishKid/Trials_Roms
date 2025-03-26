@@ -1279,14 +1279,14 @@ static u8 Debug_CheckToggleFlags(u8 id)
                 FlagGet(FLAG_VISITED_DEWFORD_TOWN) &&
                 FlagGet(FLAG_VISITED_LAVARIDGE_TOWN) &&
                 FlagGet(FLAG_VISITED_FALLARBOR_TOWN) &&
-                FlagGet(FLAG_VISITED_VERDANTURF_TOWN) &&
+                FlagGet(FLAG_VISITED_EMBERFALL_TOWN) &&
                 FlagGet(FLAG_VISITED_PACIFIDLOG_TOWN) &&
                 FlagGet(FLAG_VISITED_GRANITE_PEAK_TOWN) &&
                 FlagGet(FLAG_VISITED_SLATEPORT_CITY) &&
                 FlagGet(FLAG_VISITED_FALL_HARBOUR) &&
                 FlagGet(FLAG_VISITED_RUSTBORO_CITY) &&
                 FlagGet(FLAG_VISITED_CORAL_PORT) &&
-                FlagGet(FLAG_VISITED_LILYCOVE_CITY) &&
+                FlagGet(FLAG_VISITED_BREAKWATER_PORT) &&
                 FlagGet(FLAG_VISITED_HEMLOCK_VILLAGE) &&
                 FlagGet(FLAG_VISITED_SOOTOPOLIS_CITY) &&
                 FlagGet(FLAG_VISITED_EVER_GRANDE_CITY) &&
@@ -2786,14 +2786,14 @@ static void DebugAction_FlagsVars_ToggleFlyFlags(u8 taskId)
         FlagClear(FLAG_VISITED_DEWFORD_TOWN);
         FlagClear(FLAG_VISITED_LAVARIDGE_TOWN);
         FlagClear(FLAG_VISITED_FALLARBOR_TOWN);
-        FlagClear(FLAG_VISITED_VERDANTURF_TOWN);
+        FlagClear(FLAG_VISITED_EMBERFALL_TOWN);
         FlagClear(FLAG_VISITED_PACIFIDLOG_TOWN);
         FlagClear(FLAG_VISITED_GRANITE_PEAK_TOWN);
         FlagClear(FLAG_VISITED_SLATEPORT_CITY);
         FlagClear(FLAG_VISITED_FALL_HARBOUR);
         FlagClear(FLAG_VISITED_RUSTBORO_CITY);
         FlagClear(FLAG_VISITED_CORAL_PORT);
-        FlagClear(FLAG_VISITED_LILYCOVE_CITY);
+        FlagClear(FLAG_VISITED_BREAKWATER_PORT);
         FlagClear(FLAG_VISITED_HEMLOCK_VILLAGE);
         FlagClear(FLAG_VISITED_SOOTOPOLIS_CITY);
         FlagClear(FLAG_VISITED_EVER_GRANDE_CITY);
@@ -2808,14 +2808,14 @@ static void DebugAction_FlagsVars_ToggleFlyFlags(u8 taskId)
         FlagSet(FLAG_VISITED_DEWFORD_TOWN);
         FlagSet(FLAG_VISITED_LAVARIDGE_TOWN);
         FlagSet(FLAG_VISITED_FALLARBOR_TOWN);
-        FlagSet(FLAG_VISITED_VERDANTURF_TOWN);
+        FlagSet(FLAG_VISITED_EMBERFALL_TOWN);
         FlagSet(FLAG_VISITED_PACIFIDLOG_TOWN);
         FlagSet(FLAG_VISITED_GRANITE_PEAK_TOWN);
         FlagSet(FLAG_VISITED_SLATEPORT_CITY);
         FlagSet(FLAG_VISITED_FALL_HARBOUR);
         FlagSet(FLAG_VISITED_RUSTBORO_CITY);
         FlagSet(FLAG_VISITED_CORAL_PORT);
-        FlagSet(FLAG_VISITED_LILYCOVE_CITY);
+        FlagSet(FLAG_VISITED_BREAKWATER_PORT);
         FlagSet(FLAG_VISITED_HEMLOCK_VILLAGE);
         FlagSet(FLAG_VISITED_SOOTOPOLIS_CITY);
         FlagSet(FLAG_VISITED_EVER_GRANDE_CITY);

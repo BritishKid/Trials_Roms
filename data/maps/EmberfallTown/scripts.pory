@@ -1,0 +1,20 @@
+raw `EmberfallTown_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, EmberfallTown_OnTransition
+	.byte 0
+
+EmberfallTown_OnTransition:
+	setflag FLAG_VISITED_EMBERFALL_TOWN
+	end
+`
+
+script EmberfallTown_EventScript_DayCareSign {
+    lockall
+    msgbox(format("Pokemon Day Care:\lLet use look after your little friends!"))
+    releaseall
+}
+
+script EmberfallTown_EventScript_TownSign {
+    lockall
+    msgbox(format("TODO NAME TOWN:\lWORDS BUT YES"))
+    releaseall
+}

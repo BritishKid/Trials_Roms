@@ -8463,8 +8463,8 @@
           }
         },
         {
-          "map": "MAP_LILYCOVE_CITY",
-          "base_label": "gLilycoveCity",
+          "map": "MAP_BREAKWATER_PORT",
+          "base_label": "gBreakwaterPort",
           "land_mons": {
             "encounter_rate": 25,
             "mons": [
@@ -15358,8 +15358,8 @@
           }
         },
         {
-          "map": "MAP_VERDANTURF_TOWN",
-          "base_label": "gVerdanturfTown0",
+          "map": "MAP_EMBERFALL_TOWN",
+          "base_label": "gEmberfallTown0",
           "land_mons": {
             "encounter_rate": 25,
             "mons": [

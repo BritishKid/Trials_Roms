@@ -14,7 +14,7 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "map": "MAP_VERDANTURF_TOWN",
+      "map": "MAP_EMBERFALL_TOWN",
       "offset": 0,
       "direction": "right"
     },
@@ -29,7 +29,7 @@
       "direction": "up"
     },
     {
-      "map": "MAP_LILYCOVE_CITY",
+      "map": "MAP_BREAKWATER_PORT",
       "offset": 42,
       "direction": "right"
     },

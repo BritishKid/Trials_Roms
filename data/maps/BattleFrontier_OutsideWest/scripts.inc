@@ -56,7 +56,7 @@ BattleFrontier_OutsideWest_EventScript_FerryToLilycove::
 	goto_if_eq VAR_RESULT, NO, BattleFrontier_OutsideWest_EventScript_ChooseNewFerryDestination
 	msgbox BattleFrontier_OutsideWest_Text_PleaseBoardFerry, MSGBOX_DEFAULT
 	call BattleFrontier_OutsideWest_EventScript_BoardFerry
-	warp MAP_LILYCOVE_CITY_HARBOR, 8, 11
+	warp MAP_BREAKWATER_PORT_HARBOR, 8, 11
 	waitstate
 	release
 	end
@@ -343,7 +343,7 @@ BattleFrontier_OutsideWest_Text_SlateportItIs:
 	.string "SLATEPORT CITY it is, then!$"
 
 BattleFrontier_OutsideWest_Text_LilycoveItIs:
-	.string "LILYCOVE CITY it is, then!$"
+	.string "BREAKWATER PORT it is, then!$"
 
 BattleFrontier_OutsideWest_Text_SailWithUsAnotherTime:
 	.string "Please sail with us another time!$"

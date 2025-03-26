@@ -410,41 +410,41 @@ ContestHall_EventScript_SetExitWarp::
 	return
 
 ContestHall_EventScript_SetExitWarpNormalContest::
-	warp MAP_LILYCOVE_CITY_CONTEST_LOBBY, 14, 4
+	warp MAP_BREAKWATER_PORT_CONTEST_LOBBY, 14, 4
 	waitstate
 	end
 
 ContestHall_EventScript_SetExitWarpSuperContest::
-	warp MAP_LILYCOVE_CITY_CONTEST_LOBBY, 14, 4
+	warp MAP_BREAKWATER_PORT_CONTEST_LOBBY, 14, 4
 	waitstate
 	end
 
 ContestHall_EventScript_SetExitWarpHyperContest::
-	warp MAP_LILYCOVE_CITY_CONTEST_LOBBY, 14, 4
+	warp MAP_BREAKWATER_PORT_CONTEST_LOBBY, 14, 4
 	waitstate
 	end
 
 ContestHall_EventScript_SetExitWarpMasterContest::
-	warp MAP_LILYCOVE_CITY_CONTEST_LOBBY, 14, 4
+	warp MAP_BREAKWATER_PORT_CONTEST_LOBBY, 14, 4
 	waitstate
 	end
 
 ContestHall_EventScript_SetExitWarpLinkContest::
-	warp MAP_LILYCOVE_CITY_CONTEST_LOBBY, 15, 4
+	warp MAP_BREAKWATER_PORT_CONTEST_LOBBY, 15, 4
 	waitstate
 	end
 
-LilycoveCity_ContestLobby_EventScript_SetPlayerGfx::
+BreakwaterPort_ContestLobby_EventScript_SetPlayerGfx::
 	checkplayergender
-	goto_if_eq VAR_RESULT, MALE, LilycoveCity_ContestLobby_EventScript_SetPlayerGfxBrendan
-	goto_if_eq VAR_RESULT, FEMALE, LilycoveCity_ContestLobby_EventScript_SetPlayerGfxMay
+	goto_if_eq VAR_RESULT, MALE, BreakwaterPort_ContestLobby_EventScript_SetPlayerGfxBrendan
+	goto_if_eq VAR_RESULT, FEMALE, BreakwaterPort_ContestLobby_EventScript_SetPlayerGfxMay
 	return
 
-LilycoveCity_ContestLobby_EventScript_SetPlayerGfxBrendan::
+BreakwaterPort_ContestLobby_EventScript_SetPlayerGfxBrendan::
 	setvar VAR_OBJ_GFX_ID_3, OBJ_EVENT_GFX_RIVAL_BRENDAN_NORMAL
 	return
 
-LilycoveCity_ContestLobby_EventScript_SetPlayerGfxMay::
+BreakwaterPort_ContestLobby_EventScript_SetPlayerGfxMay::
 	setvar VAR_OBJ_GFX_ID_3, OBJ_EVENT_GFX_RIVAL_MAY_NORMAL
 	return
 

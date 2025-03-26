@@ -1,0 +1,58 @@
+raw `Clayhaven_Mart_MapScripts::
+	.byte 0
+
+Clayhaven_Mart_EventScript_Clerk::
+	lock
+	faceplayer
+	message gText_HowMayIServeYou
+	waitmessage
+	goto_if_set FLAG_ADVENTURE_STARTED, Clayhaven_Mart_ExpandedItems
+	pokemart Clayhaven_Mart_Pokemart_Basic
+	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	release
+	end
+
+	.align 2
+Clayhaven_Mart_Pokemart_Basic:
+	.2byte ITEM_POKE_BALL
+	.2byte ITEM_NET_BALL
+	.2byte ITEM_POTION
+	.2byte ITEM_ANTIDOTE
+	.2byte ITEM_PARALYZE_HEAL
+	.2byte ITEM_AWAKENING
+	.2byte ITEM_NONE
+	release
+	end
+
+Clayhaven_Mart_ExpandedItems::
+	pokemart Clayhaven_Mart_Pokemart_Expanded
+	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	release
+	end
+
+	.align 2
+Clayhaven_Mart_Pokemart_Expanded:
+	.2byte ITEM_POKE_BALL
+	.2byte ITEM_NET_BALL
+	.2byte ITEM_POTION
+	.2byte ITEM_ANTIDOTE
+	.2byte ITEM_PARALYZE_HEAL
+	.2byte ITEM_AWAKENING
+	.2byte ITEM_NONE
+	release
+	end`
+
+
+script Clayhaven_Mart_EventScript_Boy {
+    lockall
+    faceplayer
+    msgbox(format("Some shops sell special Pokeballs to try and drum up business."))
+    releaseall
+}
+
+script Clayhaven_Mart_EventScript_Woman {
+    lockall
+    faceplayer
+    msgbox(format("I'm learning to craft from my big sister, then I never need to buy anything again."))
+    releaseall
+}

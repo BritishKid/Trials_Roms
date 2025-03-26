@@ -1,4 +1,4 @@
-LilycoveCity_ContestLobby_Text_InterviewRequest:
+BreakwaterPort_ContestLobby_Text_InterviewRequest:
 	.string "Oh, hello! You were in a POKéMON\n"
 	.string "CONTEST, weren't you?\l"
 	.string "It's easy to tell from your POKéMON.\p"
@@ -7,13 +7,13 @@ LilycoveCity_ContestLobby_Text_InterviewRequest:
 	.string "If I may, would you be willing to answer\n"
 	.string "a few questions?$"
 
-LilycoveCity_ContestLobby_Text_DescribeContest:
+BreakwaterPort_ContestLobby_Text_DescribeContest:
 	.string "Oh, you will?\n"
 	.string "Thank you.\p"
 	.string "Briefly, how would you describe the\n"
 	.string "CONTEST you just entered?$"
 
-LilycoveCity_ContestLobby_Text_WhatImageWhenYouHearX:
+BreakwaterPort_ContestLobby_Text_WhatImageWhenYouHearX:
 	.string "Ah, I see.\n"
 	.string "That's a very edifying comment.\p"
 	.string "You get a good feel for what\n"
@@ -22,7 +22,7 @@ LilycoveCity_ContestLobby_Text_WhatImageWhenYouHearX:
 	.string "When you hear the word “{STR_VAR_2},”\n"
 	.string "what image do you get?$"
 
-LilycoveCity_ContestLobby_Text_ThatsAllForInterview:
+BreakwaterPort_ContestLobby_Text_ThatsAllForInterview:
 	.string "I see!\p"
 	.string "So that's how you imagine the concept\n"
 	.string "of “{STR_VAR_2}” to be.\p"
@@ -34,12 +34,12 @@ LilycoveCity_ContestLobby_Text_ThatsAllForInterview:
 	.string "make it to television.\l"
 	.string "I hope you'll look forward to it!$"
 
-LilycoveCity_ContestLobby_Text_PleaseDoShareStoryWithMe:
+BreakwaterPort_ContestLobby_Text_PleaseDoShareStoryWithMe:
 	.string "Oh, too bad…\p"
 	.string "Well, if you come across a good story,\n"
 	.string "please do share it with me.$"
 
-LilycoveCity_ContestLobby_Text_LookingForwardToNextContest:
+BreakwaterPort_ContestLobby_Text_LookingForwardToNextContest:
 	.string "I'll be looking forward to your next\n"
 	.string "POKéMON CONTEST.$"
 
@@ -612,44 +612,44 @@ gTV3CheersForPokeblocksText05::
 	.string "Tune in next time!\n"
 	.string "Our slogan is “3 CHEERS FOR {POKEBLOCK}S!”$"
 
-LilycoveCity_PokemonTrainerFanClub_Text_WhatsYourOpinionOfTrainer::
+BreakwaterPort_PokemonTrainerFanClub_Text_WhatsYourOpinionOfTrainer::
 	.string "Hi, there!\p"
 	.string "I'm a big fan of {STR_VAR_1}.\n"
 	.string "What's your opinion of {STR_VAR_1}?$"
 
-LilycoveCity_PokemonTrainerFanClub_Text_ThatsWhatYouThink::
+BreakwaterPort_PokemonTrainerFanClub_Text_ThatsWhatYouThink::
 	.string "I see, I see. That's what you think\n"
 	.string "about the TRAINER.$"
 
-LilycoveCity_PokemonTrainerFanClub_Text_HaveYouForgottenTrainer::
+BreakwaterPort_PokemonTrainerFanClub_Text_HaveYouForgottenTrainer::
 	.string "Have you completely forgotten\n"
 	.string "about {STR_VAR_1}?$"
 
-LilycoveCity_PokemonTrainerFanClub_Text_WhatsYourOpinionOfTrainer2::
+BreakwaterPort_PokemonTrainerFanClub_Text_WhatsYourOpinionOfTrainer2::
 	.string "I'm a big fan of {STR_VAR_1}.\n"
 	.string "What's your opinion of {STR_VAR_1}?$"
 
-LilycoveCity_PokemonTrainerFanClub_Text_HowStrongRateTrainer::
+BreakwaterPort_PokemonTrainerFanClub_Text_HowStrongRateTrainer::
 	.string "How strong would you rate {STR_VAR_1}\n"
 	.string "on a scale of one hundred?$"
 
-LilycoveCity_PokemonTrainerFanClub_Text_HaveYouForgottenTrainer2::
+BreakwaterPort_PokemonTrainerFanClub_Text_HaveYouForgottenTrainer2::
 	.string "Have you completely forgotten\n"
 	.string "about {STR_VAR_1}?$"
 
-LilycoveCity_PokemonTrainerFanClub_Text_YouShouldMeetTrainer::
+BreakwaterPort_PokemonTrainerFanClub_Text_YouShouldMeetTrainer::
 	.string "Oh, I see!\n"
 	.string "You should meet {STR_VAR_1} sometime.\l"
 	.string "I'm sure you'll become a fan, too!$"
 
-LilycoveCity_PokemonTrainerFanClub_Text_ThankYouIllShareThisInfo::
+BreakwaterPort_PokemonTrainerFanClub_Text_ThankYouIllShareThisInfo::
 	.string "I see, I see.\p"
 	.string "Thank you!\n"
 	.string "That's very useful to know.\p"
 	.string "I'll share this information with other\n"
 	.string "{STR_VAR_1} fans and discuss it.$"
 
-LilycoveCity_PokemonTrainerFanClub_HopeYouCatchTVSpecial::
+BreakwaterPort_PokemonTrainerFanClub_HopeYouCatchTVSpecial::
 	.string "There's going to be a TV special on\n"
 	.string "{STR_VAR_1} very soon.\p"
 	.string "I hope you catch it!$"

@@ -290,7 +290,7 @@ static const struct MenuAction MultichoiceList_HowsFishing[] =
 
 static const struct MenuAction MultichoiceList_SSTidalSlateportWithBF[] =
 {
-    {gText_LilycoveCity},
+    {gText_BreakwaterPort},
     {gText_BattleFrontier},
     {gText_Exit},
 };
@@ -298,7 +298,7 @@ static const struct MenuAction MultichoiceList_SSTidalSlateportWithBF[] =
 static const struct MenuAction MultichoiceList_SSTidalBattleFrontier[] =
 {
     {gText_SlateportCity},
-    {gText_LilycoveCity},
+    {gText_BreakwaterPort},
     {gText_Exit},
 };
 
@@ -310,7 +310,7 @@ static const struct MenuAction MultichoiceList_RightLeft[] =
 
 static const struct MenuAction MultichoiceList_SSTidalSlateportNoBF[] =
 {
-    {gText_LilycoveCity},
+    {gText_BreakwaterPort},
     {gText_Exit},
 };
 

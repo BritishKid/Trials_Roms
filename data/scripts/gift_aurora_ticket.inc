@@ -42,7 +42,7 @@ sText_AuroraTicketForYou:
 
 sText_AuroraTicketUseAtPort:
 	.string "It appears to be for use at the\n"
-	.string "LILYCOVE CITY port.\p"
+	.string "BREAKWATER PORT port.\p"
 	.string "Why not give it a try and see what\n"
 	.string "it is about?$"
 

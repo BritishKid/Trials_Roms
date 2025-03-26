@@ -26,6 +26,7 @@ script Route5_Sign_Directinos {
 
 script Route5_Pyukumuku_Clean_Up {
     lock
+    faceplayer
     msgbox(format("It's a Pyukumuku, you push it back into the water"))
     fadescreen(FADE_TO_BLACK)
     msgbox(format("SPLASH"))

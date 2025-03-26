@@ -243,6 +243,10 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Follower;
 //custom
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Steelix;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GoodraHisuin;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Charizard;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Venusaur;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Blastoise;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Pyukumuku;
 
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Bard;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Hipster;
@@ -496,7 +500,12 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_OW_MON] =                   &gObjectEventGraphicsInfo_Follower,
     [OBJ_EVENT_GFX_STEELIX] =                  &gObjectEventGraphicsInfo_Steelix,
     [OBJ_EVENT_GFX_GOODRA_HISUIN] =            &gObjectEventGraphicsInfo_GoodraHisuin,
+    [OBJ_EVENT_GFX_CHARIZARD] =                &gObjectEventGraphicsInfo_Charizard,
+    [OBJ_EVENT_GFX_VENUSAUR] =                 &gObjectEventGraphicsInfo_Venusaur,
+    [OBJ_EVENT_GFX_BLASTOISE] =                &gObjectEventGraphicsInfo_Blastoise,
+    [OBJ_EVENT_GFX_PYUKUMUKU] =                &gObjectEventGraphicsInfo_Pyukumuku,
 };
+
 
 const struct ObjectEventGraphicsInfo *const gMauvilleOldManGraphicsInfoPointers[] = {
     [MAUVILLE_MAN_BARD]        = &gObjectEventGraphicsInfo_Bard,
