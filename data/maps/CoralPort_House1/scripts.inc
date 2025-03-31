@@ -1,98 +1,82 @@
 CoralPort_House1_MapScripts::
 	.byte 0
 
-CoralPort_House1_EventScript_Trader::
-	lock
+
+CoralPort_House1_Mat::
+# 6 "data/maps/CoralPort_House1/scripts.pory"
+	lockall
+# 7 "data/maps/CoralPort_House1/scripts.pory"
 	faceplayer
-	goto_if_set FLAG_HEMLOCK_NPC_TRADE_COMPLETED, CoralPort_House1_EventScript_TradeCompleted
-	setvar VAR_0x8008, INGAME_TRADE_MUDBRAY
-	copyvar VAR_0x8004, VAR_0x8008
-	specialvar VAR_RESULT, GetInGameTradeSpeciesInfo
-	copyvar VAR_0x8009, VAR_RESULT
-	msgbox CoralPort_House1_Text_YouWillTradeWontYou, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, CoralPort_House1_EventScript_DeclineTrade
-	special ChoosePartyMon
-	waitstate
-	copyvar VAR_0x800A, VAR_0x8004
-	goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, CoralPort_House1_EventScript_DeclineTrade
-	copyvar VAR_0x8005, VAR_0x800A
-	specialvar VAR_RESULT, GetTradeSpecies
-	copyvar VAR_0x800B, VAR_RESULT
-	goto_if_ne VAR_RESULT, VAR_0x8009, CoralPort_House1_EventScript_NotRequestedMon
-	copyvar VAR_0x8004, VAR_0x8008
-	copyvar VAR_0x8005, VAR_0x800A
-	special CreateInGameTradePokemon
-	special DoInGameTradeScene
-	waitstate
-	bufferspeciesname STR_VAR_1, VAR_0x8009
-	msgbox CoralPort_House1_Text_MonYouTakeCare, MSGBOX_DEFAULT
-	setflag FLAG_HEMLOCK_NPC_TRADE_COMPLETED
-	release
-	end
+# 8 "data/maps/CoralPort_House1/scripts.pory"
+	goto_if_set FLAG_HIDE_MAT_CORALPORT, CoralPort_House1_Mat_2
+CoralPort_House1_Mat_1:
+# 11 "data/maps/CoralPort_House1/scripts.pory"
+	goto_if_unset FLAG_HIDE_MAT_CORALPORT, CoralPort_House1_Mat_5
+CoralPort_House1_Mat_4:
+# 24 "data/maps/CoralPort_House1/scripts.pory"
+	releaseall
+	return
 
-CoralPort_House1_EventScript_DeclineTrade::
-	msgbox CoralPort_House1_Text_YouWontTradeMe, MSGBOX_DEFAULT
-	release
-	end
+CoralPort_House1_Mat_2:
+# 9 "data/maps/CoralPort_House1/scripts.pory"
+	msgbox CoralPort_House1_Mat_Text_0
+	goto CoralPort_House1_Mat_1
 
-CoralPort_House1_EventScript_NotRequestedMon::
-	bufferspeciesname STR_VAR_1, VAR_0x8009
-	msgbox CoralPort_House1_Text_ThisIsntAMon, MSGBOX_DEFAULT
-	release
-	end
+CoralPort_House1_Mat_5:
+# 12 "data/maps/CoralPort_House1/scripts.pory"
+	msgbox CoralPort_House1_Mat_Text_1
+# 13 "data/maps/CoralPort_House1/scripts.pory"
+	goto_if_unset FLAG_MAT_ID, CoralPort_House1_Mat_8
+CoralPort_House1_Mat_7:
+# 16 "data/maps/CoralPort_House1/scripts.pory"
+	goto_if_set FLAG_MAT_ID, CoralPort_House1_Mat_10
+	goto CoralPort_House1_Mat_4
 
-CoralPort_House1_EventScript_TradeCompleted::
-	msgbox CoralPort_House1_Text_GoingToMakeVolbeatStrong, MSGBOX_DEFAULT
-	release
-	end
+CoralPort_House1_Mat_8:
+# 14 "data/maps/CoralPort_House1/scripts.pory"
+	msgbox CoralPort_House1_Mat_Text_2
+	goto CoralPort_House1_Mat_7
 
-CoralPort_House1_EventScript_ExpertF::
-	msgbox CoralPort_House1_Text_TradingMemoriesWithOthers, MSGBOX_NPC
-	end
+CoralPort_House1_Mat_10:
+# 17 "data/maps/CoralPort_House1/scripts.pory"
+	msgbox CoralPort_House1_Mat_Text_3
+# 18 "data/maps/CoralPort_House1/scripts.pory"
+	giveitem ITEM_TM_RETURN
+# 19 "data/maps/CoralPort_House1/scripts.pory"
+	msgbox CoralPort_House1_Mat_Text_4
+# 20 "data/maps/CoralPort_House1/scripts.pory"
+	setflag FLAG_HIDE_MAT_CORALPORT
+# 21 "data/maps/CoralPort_House1/scripts.pory"
+	clearflag FLAG_HIDE_MAT_MEGA_MANSION
+	goto CoralPort_House1_Mat_4
 
-CoralPort_House1_EventScript_Zigzagoon::
-	lock
-	faceplayer
-	waitse
-	playmoncry SPECIES_ZIGZAGOON, CRY_MODE_NORMAL
-	msgbox CoralPort_House1_Text_Zigzagoon, MSGBOX_DEFAULT
-	waitmoncry
-	release
-	end
 
-CoralPort_House1_Text_YouWillTradeWontYou:
-	.string "Wrooooaaar! I need it!\n"
-	.string "I have to get me a {STR_VAR_1}!\l"
-	.string "I'll do anything for it!\p"
-	.string "…Uh… Did you hear that?\n"
-	.string "My shout from the bottom of my heart?\p"
-	.string "Having heard that, you will trade\n"
-	.string "your {STR_VAR_1} for my {STR_VAR_2},\l"
-	.string "won't you?$"
+CoralPort_House1_Mat_Text_0:
+# 9 "data/maps/CoralPort_House1/scripts.pory"
+	.string "Once I've finished packing I'll be on my\n"
+	.string "way.$"
 
-CoralPort_House1_Text_MonYouTakeCare:
-	.string "Oh, yeah, right on!\p"
-	.string "{STR_VAR_1}, welcome!\n"
-	.string "{STR_VAR_2}, you take care!$"
+CoralPort_House1_Mat_Text_1:
+# 12 "data/maps/CoralPort_House1/scripts.pory"
+	.string "Hello again! I'm heading across the\n"
+	.string "water soon now I've finished school I\l"
+	.string "want to get my Mega Stone! There is a\l"
+	.string "giant tower in Breakwater Port with a\l"
+	.string "really tough challenge, but I think I\l"
+	.string "can do it!$"
 
-CoralPort_House1_Text_ThisIsntAMon:
-	.string "Uh, no, I don't think so.\n"
-	.string "That isn't a {STR_VAR_1}.$"
+CoralPort_House1_Mat_Text_2:
+# 14 "data/maps/CoralPort_House1/scripts.pory"
+	.string "Before I go I need to find something\n"
+	.string "I've lost...$"
 
-CoralPort_House1_Text_YouWontTradeMe:
-	.string "No? You won't trade me?\n"
-	.string "Even after I bared my heart to you?$"
+CoralPort_House1_Mat_Text_3:
+# 17 "data/maps/CoralPort_House1/scripts.pory"
+	.string "Wow you found my ID! Thank you so much,\n"
+	.string "please take this.$"
 
-CoralPort_House1_Text_GoingToMakeVolbeatStrong:
-	.string "I'm going to make VOLBEAT super\n"
-	.string "strong from this moment on!\p"
-	.string "I hope you do the same with PLUSLE!$"
-
-CoralPort_House1_Text_TradingMemoriesWithOthers:
-	.string "Trading POKéMON with others…\p"
-	.string "It's as if you're trading your own\n"
-	.string "memories with other people.$"
-
-CoralPort_House1_Text_Zigzagoon:
-	.string "ZIGZAGOON: Gumomoh?$"
-
+CoralPort_House1_Mat_Text_4:
+# 19 "data/maps/CoralPort_House1/scripts.pory"
+	.string "It's Return, a good trainer like you can\n"
+	.string "use it to get the best out of their\l"
+	.string "Pokemon.$"

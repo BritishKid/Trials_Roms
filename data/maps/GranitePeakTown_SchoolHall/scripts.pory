@@ -77,12 +77,12 @@ script SchoolHall_Mat_Beaten {
     msgbox(format("Let's get going!"))
     applymovement(1, Movement_GranitePeakSchool_MatMovesRooms)
     waitmovement(1)
-    // playse() player sound for doorway
+    playse(SE_DOOR)
     removeobject(1)
     setflag(FLAG_HIDE_MAT_SCHOOL_HALL)
     setflag(FLAG_HIDE_MOVES_ROOM)
     setvar(VAR_MAT_STATE, 1)
-    clearflag(FLAG_HIDE_MAT_MEGA_MANSION)
+    clearflag(FLAG_HIDE_MAT_CORALPORT)
     //todo add quest checker
     call(Increase_Trainers_Beaten)
 }

@@ -167,7 +167,7 @@ BreakwaterPort_EventScript_Sailor1_Text_0:
 
 BreakwaterPort_EventScript_CitySign_Text_0:
 # 74 "data/maps/BreakwaterPort/scripts.pory"
-	.string "CITY NEEDS NAME$"
+	.string "Break Water Port$"
 
 BreakwaterPort_EventScript_DepartmentStoreSign_Text_0:
 # 80 "data/maps/BreakwaterPort/scripts.pory"

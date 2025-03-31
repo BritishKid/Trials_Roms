@@ -247,6 +247,8 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Charizard;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Venusaur;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Blastoise;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Pyukumuku;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Zorua;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Meowth;
 
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Bard;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Hipster;
@@ -504,6 +506,8 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_VENUSAUR] =                 &gObjectEventGraphicsInfo_Venusaur,
     [OBJ_EVENT_GFX_BLASTOISE] =                &gObjectEventGraphicsInfo_Blastoise,
     [OBJ_EVENT_GFX_PYUKUMUKU] =                &gObjectEventGraphicsInfo_Pyukumuku,
+    [OBJ_EVENT_GFX_ZORUA] =                    &gObjectEventGraphicsInfo_Zorua,
+    [OBJ_EVENT_GFX_MEOWTH] =                    &gObjectEventGraphicsInfo_Meowth,
 };
 
 

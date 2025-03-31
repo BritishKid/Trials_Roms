@@ -9857,6 +9857,10 @@ static inline u32 CalcDefenseStat(u32 move, u32 battlerAtk, u32 battlerDef, u32 
          && !usesDefStat)
             modifier = uq4_12_multiply_half_down(modifier, UQ_4_12(1.5));
         break;
+    case HOLD_EFFECT_BEDROCK:
+        if(!usesDefStat)
+            modifier = uq4_12_multiply_half_down(modifier, UQ_4_12(1.2));
+        break;
     }
 
     // sandstorm sp.def boost for rock types

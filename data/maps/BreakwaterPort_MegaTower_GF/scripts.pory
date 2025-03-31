@@ -1,6 +1,6 @@
 mapscripts BreakwaterPort_MegaTower_GF_MapScripts {
     MAP_SCRIPT_ON_TRANSITION {
-        //reset all batttles to make repeatable
+        //reset all batles to make repeatable
         cleartrainerflag(MEGATOWER1F_TRAINER1)
         cleartrainerflag(MEGATOWER1F_TRAINER2)
         cleartrainerflag(MEGATOWER1F_TRAINERACE)
@@ -137,9 +137,38 @@ script MegaTower_NoticeBoard {
     msgbox(format("It's a list of everyone who's ever beaten the Mega Tower.")) //todo add some members
     releaseall
 }
+
+script Megatower_EventScript_Mat {
+    lockall
+    faceplayer
+    trainerbattle_single(MEGATOWER_MAT, MegaTower_MatIntro, MegaTower_MatOutro, MegaTowerMat_PostScript)
+    msgbox(MegaTowerMat_PostBattle)
+    releaseall
+}
+
+script MegaTowerMat_PostScript{
+    msgbox(format("No matter how oiften you beat me I'm going to get stronger and beat you."))
+    setflag(FLAG_HIDE_MAT_MEGA_MANSION)
+    setvar(VAR_MAT_STATE, 3) //possible highest so far
+}
+
 //movement
 
 movement MegaTower_GreeterShock {
     emote_exclamation_mark
     face_right
+}
+
+//text
+
+text MegaTower_MatIntro {
+    format("It's you, hello!\lMy name may not have made it on to the cup at school but my name is here nad it's amazing!\lHere why don't I show you.")
+}
+
+text MegaTower_MatOutro {
+    format("You never cease to amaze me.")
+}
+
+text MegaTowerMat_PostBattle {
+    format("Losing doesn't matter too much, I'll still become a Champion!")
 }

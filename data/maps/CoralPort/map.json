@@ -163,7 +163,7 @@
     },
     {
       "x": 30,
-      "y": 7,
+      "y": 8,
       "elevation": 0,
       "dest_map": "MAP_CORAL_PORT_HOUSE1",
       "dest_warp_id": "0"
@@ -234,6 +234,14 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
       "script": "Common_EventScript_ShowPokemartSign"
+    },
+    {
+      "type": "hidden_item",
+      "x": 19,
+      "y": 15,
+      "elevation": 3,
+      "item": "ITEM_HEART_SCALE",
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE_128_HEART_SCALE_2"
     }
   ]
 }

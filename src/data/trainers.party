@@ -3659,19 +3659,39 @@ Perrserker
 Level: 40
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_WINSTON_3 ===
-Name: WINSTON
-Class: Rich Boy
-Pic: Rich Boy
+=== MEGATOWER_MAT ===
+Name: MAT
+Class: School Kid
+Pic: School Kid M
 Gender: Male
-Music: Rich
-Items: Full Restore
+Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Linoone @ Nugget
-Level: 30
+Ampharos
+Level: 41
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Sandslash
+Level: 41
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Umbreon
+Level: 41
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Primeape
+Level: 41
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Glaceon
+Level: 41
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Gengar @ Gengarite
+Level: 41
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
 
 === TRAINER_WINSTON_4 ===
 Name: WINSTON

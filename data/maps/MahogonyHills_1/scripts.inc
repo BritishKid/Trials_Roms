@@ -5,8 +5,8 @@ MahogonyHills_1_MapScripts::
 
 MahogonyHills_1_MapScripts_MAP_SCRIPT_ON_LOAD:
 # 3 "data/maps/MahogonyHills_1/scripts.pory"
-	compare VAR_TOWN_2_QUEST_STATE, 3
-	goto_if_eq MahogonyHills_1_MapScripts_MAP_SCRIPT_ON_LOAD_1
+	compare VAR_ZORUA_QUEST_STATE, 2
+	goto_if_gt MahogonyHills_1_MapScripts_MAP_SCRIPT_ON_LOAD_1
 	return
 
 MahogonyHills_1_MapScripts_MAP_SCRIPT_ON_LOAD_1:
@@ -180,56 +180,98 @@ Battle_MahoganyHills_ToughChild::
 	return
 
 
-# 124 "data/maps/MahogonyHills_1/scripts.pory"
-Movement_Child_Being_Chased:
-# 125 "data/maps/MahogonyHills_1/scripts.pory"
-	walk_fast_up
-# 126 "data/maps/MahogonyHills_1/scripts.pory"
-	walk_fast_up
-# 127 "data/maps/MahogonyHills_1/scripts.pory"
-	walk_fast_up
-# 128 "data/maps/MahogonyHills_1/scripts.pory"
-	walk_fast_up
-# 129 "data/maps/MahogonyHills_1/scripts.pory"
-	walk_fast_up
-# 130 "data/maps/MahogonyHills_1/scripts.pory"
-	walk_fast_up
-# 131 "data/maps/MahogonyHills_1/scripts.pory"
-	walk_fast_up
-# 132 "data/maps/MahogonyHills_1/scripts.pory"
-	walk_fast_up
-	step_end
+MahoganyHill_GymEntrance_Trigger_ZoruaChase4::
+# 100 "data/maps/MahogonyHills_1/scripts.pory"
+	lockall
+# 101 "data/maps/MahogonyHills_1/scripts.pory"
+	applymovement 7, Movement_ZoruaChase4_MahoganyHills
+# 102 "data/maps/MahogonyHills_1/scripts.pory"
+	waitmovement 7
+# 103 "data/maps/MahogonyHills_1/scripts.pory"
+	setflag FLAG_HIDE_ZORUA
+# 104 "data/maps/MahogonyHills_1/scripts.pory"
+	removeobject 7
+# 105 "data/maps/MahogonyHills_1/scripts.pory"
+	playse SE_DOOR
+# 106 "data/maps/MahogonyHills_1/scripts.pory"
+	setvar VAR_ZORUA_QUEST_STATE, 4
+# 107 "data/maps/MahogonyHills_1/scripts.pory"
+	releaseall
+	return
 
-# 135 "data/maps/MahogonyHills_1/scripts.pory"
-Movement_Child_Hidding_Behind_Player_Right:
+
 # 136 "data/maps/MahogonyHills_1/scripts.pory"
-	walk_fast_left
+Movement_Child_Being_Chased:
 # 137 "data/maps/MahogonyHills_1/scripts.pory"
 	walk_fast_up
 # 138 "data/maps/MahogonyHills_1/scripts.pory"
 	walk_fast_up
 # 139 "data/maps/MahogonyHills_1/scripts.pory"
-	walk_fast_right
+	walk_fast_up
 # 140 "data/maps/MahogonyHills_1/scripts.pory"
-	face_down
-	step_end
-
+	walk_fast_up
+# 141 "data/maps/MahogonyHills_1/scripts.pory"
+	walk_fast_up
 # 142 "data/maps/MahogonyHills_1/scripts.pory"
-Movement_Child_Hidding_Behind_Player_Left:
+	walk_fast_up
 # 143 "data/maps/MahogonyHills_1/scripts.pory"
 	walk_fast_up
 # 144 "data/maps/MahogonyHills_1/scripts.pory"
 	walk_fast_up
-# 145 "data/maps/MahogonyHills_1/scripts.pory"
+	step_end
+
+# 147 "data/maps/MahogonyHills_1/scripts.pory"
+Movement_Child_Hidding_Behind_Player_Right:
+# 148 "data/maps/MahogonyHills_1/scripts.pory"
 	walk_fast_left
-# 146 "data/maps/MahogonyHills_1/scripts.pory"
+# 149 "data/maps/MahogonyHills_1/scripts.pory"
+	walk_fast_up
+# 150 "data/maps/MahogonyHills_1/scripts.pory"
+	walk_fast_up
+# 151 "data/maps/MahogonyHills_1/scripts.pory"
+	walk_fast_right
+# 152 "data/maps/MahogonyHills_1/scripts.pory"
 	face_down
 	step_end
 
-# 149 "data/maps/MahogonyHills_1/scripts.pory"
+# 154 "data/maps/MahogonyHills_1/scripts.pory"
+Movement_Child_Hidding_Behind_Player_Left:
+# 155 "data/maps/MahogonyHills_1/scripts.pory"
+	walk_fast_up
+# 156 "data/maps/MahogonyHills_1/scripts.pory"
+	walk_fast_up
+# 157 "data/maps/MahogonyHills_1/scripts.pory"
+	walk_fast_left
+# 158 "data/maps/MahogonyHills_1/scripts.pory"
+	face_down
+	step_end
+
+# 161 "data/maps/MahogonyHills_1/scripts.pory"
 Movement_MahoganyHills_ExclamationMark:
-# 150 "data/maps/MahogonyHills_1/scripts.pory"
+# 162 "data/maps/MahogonyHills_1/scripts.pory"
 	emote_exclamation_mark
+	step_end
+
+# 165 "data/maps/MahogonyHills_1/scripts.pory"
+Movement_ZoruaChase4_MahoganyHills:
+# 166 "data/maps/MahogonyHills_1/scripts.pory"
+	walk_down
+# 167 "data/maps/MahogonyHills_1/scripts.pory"
+	walk_right
+# 168 "data/maps/MahogonyHills_1/scripts.pory"
+	walk_right
+# 169 "data/maps/MahogonyHills_1/scripts.pory"
+	walk_right
+# 170 "data/maps/MahogonyHills_1/scripts.pory"
+	walk_right
+# 171 "data/maps/MahogonyHills_1/scripts.pory"
+	walk_right
+# 172 "data/maps/MahogonyHills_1/scripts.pory"
+	walk_up
+# 173 "data/maps/MahogonyHills_1/scripts.pory"
+	walk_up
+# 174 "data/maps/MahogonyHills_1/scripts.pory"
+	walk_up
 	step_end
 
 MahoganyScript_EventScript_ChildRunning_Text_0:
@@ -276,29 +318,29 @@ MahogonyHills_1_Eventscript_BerrySkitty_Text_1:
 	.string "Coba Berries.$"
 
 MahoganyHills1_Bao_Intro::
-# 99 "data/maps/MahogonyHills_1/scripts.pory"
+# 111 "data/maps/MahogonyHills_1/scripts.pory"
 	.string "I keep trying but failing to beat the\n"
 	.string "gym.$"
 
 MahoganyHills1_Bao_Outro::
-# 103 "data/maps/MahogonyHills_1/scripts.pory"
+# 115 "data/maps/MahogonyHills_1/scripts.pory"
 	.string "You might have a chance.$"
 
 MahoganyHills1_Bao_Postbattle::
-# 107 "data/maps/MahogonyHills_1/scripts.pory"
+# 119 "data/maps/MahogonyHills_1/scripts.pory"
 	.string "I should probably catch some other\n"
 	.string "Pokémon.$"
 
 MahoganyHills1_ToughTrainer_Intro::
-# 111 "data/maps/MahogonyHills_1/scripts.pory"
+# 123 "data/maps/MahogonyHills_1/scripts.pory"
 	.string "I learnt so many battle strategies at\n"
 	.string "school.$"
 
 MahoganyHills1_ToughTrainer_Outro::
-# 115 "data/maps/MahogonyHills_1/scripts.pory"
+# 127 "data/maps/MahogonyHills_1/scripts.pory"
 	.string "Wow. You must be top of your class!$"
 
 MahoganyHills1_ToughTrainer_Postbattle::
-# 119 "data/maps/MahogonyHills_1/scripts.pory"
+# 131 "data/maps/MahogonyHills_1/scripts.pory"
 	.string "Wait you've never been to school in\n"
 	.string "GRANITE PEAK?$"

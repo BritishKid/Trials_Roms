@@ -67,6 +67,16 @@ script MahoganyHills1_GymEntrance_EventScript_GymSign {
     releaseall
 }
 
+script MahoganyHill_GymEntrance_Trigger_ZoruaChase2 {
+    lockall
+    clearflag(FLAG_HIDE_ZORUA)
+    applymovement(3, Movement_ZoruaChase2_MahoganyHills)
+    waitmovement(3)
+    setvar(VAR_ZORUA_QUEST_STATE, 2)
+    setflag(FLAG_HIDE_ZORUA)
+    releaseall
+}
+
 //text 
 text MahoganyHills_Robert_Intro {
     format("This will be an exciting battle!")
@@ -95,4 +105,20 @@ movement Movement_Robert_Gym1_ResetPosition {
 movement Movement_PlayerSurprised_MHGE {
     emote_exclamation_mark
     face_down
+}
+
+movement Movement_ZoruaChase2_MahoganyHills {
+    walk_right
+    walk_right
+    walk_right
+    walk_right
+    walk_right
+    walk_right
+    face_right
+    emote_exclamation_mark
+    walk_fast_down
+    walk_fast_down
+    walk_fast_down
+    walk_fast_down
+    walk_fast_down
 }

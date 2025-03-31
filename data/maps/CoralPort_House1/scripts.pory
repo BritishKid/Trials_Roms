@@ -1,0 +1,25 @@
+mapscripts CoralPort_House1_MapScripts {
+
+}
+
+script CoralPort_House1_Mat {
+    lockall
+    faceplayer
+    if(flag(FLAG_HIDE_MAT_CORALPORT)) {
+        msgbox(format("Once I've finished packing I'll be on my way."))
+    }
+    if(!flag(FLAG_HIDE_MAT_CORALPORT)){
+        msgbox(format("Hello again! I'm heading across the water soon now I've finished school I want to get my Mega Stone! There is a giant tower in Breakwater Port with a really tough challenge, but I think I can do it!"))
+        if(!flag(FLAG_MAT_ID)) {
+            msgbox(format("Before I go I need to find something I've lost..."))
+        }
+        if(flag(FLAG_MAT_ID)) {
+            msgbox(format("Wow you found my ID! Thank you so much, please take this."))
+            giveitem(ITEM_TM_RETURN)
+            msgbox(format("It's Return, a good trainer like you can use it to get the best out of their Pokemon."))
+            setflag(FLAG_HIDE_MAT_CORALPORT)
+            clearflag(FLAG_HIDE_MAT_MEGA_MANSION)
+        }
+    }
+    releaseall
+}

@@ -1,1 +1,92 @@
 mapscripts MahoganyHills_7_MapScripts {}
+
+
+//Zorua appears behind the boys making them run off
+//everytime you get lcose to it , it runs away pushing itself closer to the hidden grotto
+//you can catch in hidden grotto (first totem fight?)
+
+script MahoganyHills_7_EventScript_Boy1 {
+    lockall
+    msgbox(format("There's a strong scary Pokemon up here, we can't let you through. It's not safe."))
+    releaseall
+}
+
+script MahoganyHills_7_EventScript_Boy2 {
+    lockall
+    msgbox(format("We saw a Pokemon with sharp black spikey fur, it's really scary."))
+    releaseall
+}
+
+script MahoganyHills_7_TriggerScript_ScareThemOff {
+    lockall
+    playmoncry(SPECIES_ZORUA, CRY_MODE_ENCOUNTER)
+    applymovement(1, Movement_SurprisedMahogany7_TopBoy)
+    waitmovement(1)
+    msgbox(format("Oh no! It's found us!"))
+    applymovement(2, Movement_SurprisedMahogany7_BottomBoy)
+    waitmovement(2)
+    msgbox(format("RUN!"))
+    setflag(FLAG_HIDE_BOYS_BLOCKING_GYM_SHORTCUT)
+    clearflag(FLAG_HIDE_BOYS_CLAYHAVEN) //boys appear back in clayhaven can give reward if shown a zorua/zoroark
+    applymovement(1, Movement_Mahogany7_BoysFlee)
+    applymovement(2, Movement_Mahogany7_BoysFlee)
+    waitmovement(2)
+    removeobject(1)
+    removeobject(2)
+    clearflag(FLAG_HIDE_ZORUA)
+    applymovement(3, MahoganyHills_ZoruaAppearsFirstTime)
+    waitmovement(3)
+    setvar(VAR_ZORUA_QUEST_STATE, 1)
+    setflag(FLAG_HIDE_ZORUA)
+    removeobject(3)
+    releaseall
+}
+
+script MahoganyHills_7_EventScript_ZoruaBoy {
+    lockall
+    //A quest where you follow a not so chatty kid into the forest that wants to play. After some puzzles it feels the comfort and shows you its true form. A "Shiny" Zorua. Wanting to battle you! (p2)
+    releaseall
+}
+
+//movement
+
+movement Movement_SurprisedMahogany7_TopBoy {
+    emote_question_mark
+    face_down
+}
+
+
+movement Movement_SurprisedMahogany7_BottomBoy {
+    emote_exclamation_mark
+    face_up
+}
+
+movement Movement_Mahogany7_BoysFlee {
+    walk_fast_left
+    walk_fast_left
+    walk_fast_left
+    walk_fast_left
+    walk_fast_left
+    walk_fast_left
+    walk_fast_left
+    walk_fast_left
+}
+
+movement MahoganyHills_ZoruaAppearsFirstTime {
+    walk_right
+    walk_right
+    walk_right
+    walk_right
+    walk_right
+    face_left
+    face_down
+    face_right
+    emote_exclamation_mark
+    walk_fast_up
+    walk_fast_up
+    walk_fast_up
+    walk_fast_up
+    walk_fast_up
+    walk_fast_up
+    walk_fast_up
+}

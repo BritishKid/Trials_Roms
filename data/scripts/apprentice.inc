@@ -202,7 +202,7 @@ Apprentice_EventScript_PickWinSpeech:
 	end
 
 Apprentice_EventScript_SetHideFlags:
-	setflag FLAG_HIDE_APPRENTICE
+	setflag FLAG_HIDE_ZORUA
 	setflag FLAG_DAILY_APPRENTICE_LEAVES
 	return
 

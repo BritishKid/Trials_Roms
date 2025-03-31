@@ -89,6 +89,19 @@
       "trainer_sight_or_berry_tree_id": "ITEM_TM24",
       "script": "Common_EventScript_FindItem",
       "flag": "FLAG_ITEM_ROUTE4_TM24"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK",
+      "x": 1,
+      "y": 3,
+      "elevation": 5,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EventScript_RockSmash",
+      "flag": "FLAG_TEMP_15"
     }
   ],
   "warp_events": [

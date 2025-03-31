@@ -435,6 +435,12 @@ const u16 gObjectEventPal_BlastoiseOW[] = INCBIN_U16("graphics/pokemon/blastoise
 const u32 gObjectEventPic_PyukumukuOW[] = INCBIN_U32("graphics/pokemon/pyukumuku/overworld.4bpp");
 const u16 gObjectEventPal_PyukumukuOW[] = INCBIN_U16("graphics/pokemon/pyukumuku/overworld_normal.gbapal");
 
+const u32 gObjectEventPic_ZoruaOW[] = INCBIN_U32("graphics/pokemon/zorua/overworld.4bpp");
+const u16 gObjectEventPal_ZoruaOW[] = INCBIN_U16("graphics/pokemon/zorua/overworld_normal.gbapal");
+
+const u32 gObjectEventPic_MeowthOW[] = INCBIN_U32("graphics/pokemon/meowth/overworld.4bpp");
+const u16 gObjectEventPal_MeowthOW[] = INCBIN_U16("graphics/pokemon/meowth/overworld_normal.gbapal");
+
 #if OW_FOLLOWERS_POKEBALLS
 // Palettes are small, so always include all of the palettes (no #ifdef)
 // Vanilla

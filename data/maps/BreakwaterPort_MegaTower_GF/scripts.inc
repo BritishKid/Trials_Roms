@@ -277,11 +277,35 @@ MegaTower_NoticeBoard::
 	return
 
 
+Megatower_EventScript_Mat::
 # 142 "data/maps/BreakwaterPort_MegaTower_GF/scripts.pory"
-MegaTower_GreeterShock:
+	lockall
 # 143 "data/maps/BreakwaterPort_MegaTower_GF/scripts.pory"
-	emote_exclamation_mark
+	faceplayer
 # 144 "data/maps/BreakwaterPort_MegaTower_GF/scripts.pory"
+	trainerbattle_single MEGATOWER_MAT, MegaTower_MatIntro, MegaTower_MatOutro, MegaTowerMat_PostScript
+# 145 "data/maps/BreakwaterPort_MegaTower_GF/scripts.pory"
+	msgbox MegaTowerMat_PostBattle
+# 146 "data/maps/BreakwaterPort_MegaTower_GF/scripts.pory"
+	releaseall
+	return
+
+
+MegaTowerMat_PostScript::
+# 150 "data/maps/BreakwaterPort_MegaTower_GF/scripts.pory"
+	msgbox MegaTowerMat_PostScript_Text_0
+# 151 "data/maps/BreakwaterPort_MegaTower_GF/scripts.pory"
+	setflag FLAG_HIDE_MAT_MEGA_MANSION
+# 152 "data/maps/BreakwaterPort_MegaTower_GF/scripts.pory"
+	setvar VAR_MAT_STATE, 3
+	return
+
+
+# 157 "data/maps/BreakwaterPort_MegaTower_GF/scripts.pory"
+MegaTower_GreeterShock:
+# 158 "data/maps/BreakwaterPort_MegaTower_GF/scripts.pory"
+	emote_exclamation_mark
+# 159 "data/maps/BreakwaterPort_MegaTower_GF/scripts.pory"
 	face_right
 	step_end
 
@@ -365,3 +389,25 @@ MegaTower_NoticeBoard_Text_0:
 # 137 "data/maps/BreakwaterPort_MegaTower_GF/scripts.pory"
 	.string "It's a list of everyone who's ever\n"
 	.string "beaten the Mega Tower.$"
+
+MegaTowerMat_PostScript_Text_0:
+# 150 "data/maps/BreakwaterPort_MegaTower_GF/scripts.pory"
+	.string "No matter how oiften you beat me I'm\n"
+	.string "going to get stronger and beat you.$"
+
+MegaTower_MatIntro::
+# 164 "data/maps/BreakwaterPort_MegaTower_GF/scripts.pory"
+	.string "It's you, hello!\l"
+	.string "My name may not have made it on to the\l"
+	.string "cup at school but my name is here nad\l"
+	.string "it's amazing!\l"
+	.string "Here why don't I show you.$"
+
+MegaTower_MatOutro::
+# 168 "data/maps/BreakwaterPort_MegaTower_GF/scripts.pory"
+	.string "You never cease to amaze me.$"
+
+MegaTowerMat_PostBattle::
+# 172 "data/maps/BreakwaterPort_MegaTower_GF/scripts.pory"
+	.string "Losing doesn't matter too much, I'll\n"
+	.string "still become a Champion!$"

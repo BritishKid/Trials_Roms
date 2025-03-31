@@ -71,7 +71,7 @@ script BreakwaterPort_EventScript_Sailor1 {
 
 script BreakwaterPort_EventScript_CitySign {
 	lockall
-	msgbox(format("CITY NEEDS NAME"))
+	msgbox(format("Break Water Port"))
 	releaseall
 }
 

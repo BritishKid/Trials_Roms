@@ -2,9 +2,6 @@ mapscripts GranitePeakTown_WallysHouse_MapScripts {
     
 }
 
-//todo add cat sprites to overworld
-
-
 script GranitePeakTown_House5_EventScript_CatLady { //maybe legendary beasts?
     lockall
     faceplayer

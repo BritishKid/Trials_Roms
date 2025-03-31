@@ -1,6 +1,6 @@
 mapscripts MahogonyHills_1_MapScripts {
     MAP_SCRIPT_ON_LOAD {
-        if(var(VAR_TOWN_2_QUEST_STATE) == 3) {
+        if(var(VAR_ZORUA_QUEST_STATE) > 2) {
             setmetatile(27, 27, METATILE_Forest_Warp_Towards, FALSE)
 	        setmetatile(28, 27, METATILE_Forest_Warp_Towards, FALSE)
             setmetatile(27, 26, METATILE_Forest_Warp_Up, FALSE)
@@ -95,6 +95,18 @@ script Battle_MahoganyHills_ToughChild {
     msgbox(MahoganyHills1_ToughTrainer_Postbattle, MSGBOX_AUTOCLOSE)
 }
 
+
+script MahoganyHill_GymEntrance_Trigger_ZoruaChase4 {
+    lockall
+    applymovement(7, Movement_ZoruaChase4_MahoganyHills)
+    waitmovement(7)
+    setflag(FLAG_HIDE_ZORUA)
+    removeobject(7)
+    playse(SE_DOOR)
+    setvar(VAR_ZORUA_QUEST_STATE, 4)
+    releaseall
+}
+
 //text 
 text MahoganyHills1_Bao_Intro {
     format("I keep trying but failing to beat the gym.")
@@ -148,4 +160,16 @@ movement Movement_Child_Hidding_Behind_Player_Left {
 
 movement Movement_MahoganyHills_ExclamationMark {
     emote_exclamation_mark
+}
+
+movement Movement_ZoruaChase4_MahoganyHills {
+    walk_down
+    walk_right
+    walk_right
+    walk_right
+    walk_right
+    walk_right
+    walk_up
+    walk_up
+    walk_up
 }

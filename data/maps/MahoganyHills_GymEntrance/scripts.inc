@@ -140,38 +140,86 @@ MahoganyHills1_GymEntrance_EventScript_GymSign::
 	return
 
 
-# 80 "data/maps/MahoganyHills_GymEntrance/scripts.pory"
-Movement_Robert_Gym1_TowardsPlayer:
-# 81 "data/maps/MahoganyHills_GymEntrance/scripts.pory"
-	walk_up
-# 82 "data/maps/MahoganyHills_GymEntrance/scripts.pory"
-	walk_up
-# 83 "data/maps/MahoganyHills_GymEntrance/scripts.pory"
-	walk_up
-# 84 "data/maps/MahoganyHills_GymEntrance/scripts.pory"
-	walk_up
-# 85 "data/maps/MahoganyHills_GymEntrance/scripts.pory"
-	walk_up
-# 86 "data/maps/MahoganyHills_GymEntrance/scripts.pory"
-	walk_up
-	step_end
+MahoganyHill_GymEntrance_Trigger_ZoruaChase2::
+# 71 "data/maps/MahoganyHills_GymEntrance/scripts.pory"
+	lockall
+# 72 "data/maps/MahoganyHills_GymEntrance/scripts.pory"
+	clearflag FLAG_HIDE_ZORUA
+# 73 "data/maps/MahoganyHills_GymEntrance/scripts.pory"
+	applymovement 3, Movement_ZoruaChase2_MahoganyHills
+# 74 "data/maps/MahoganyHills_GymEntrance/scripts.pory"
+	waitmovement 3
+# 75 "data/maps/MahoganyHills_GymEntrance/scripts.pory"
+	setvar VAR_ZORUA_QUEST_STATE, 2
+# 76 "data/maps/MahoganyHills_GymEntrance/scripts.pory"
+	setflag FLAG_HIDE_ZORUA
+# 77 "data/maps/MahoganyHills_GymEntrance/scripts.pory"
+	releaseall
+	return
 
-# 89 "data/maps/MahoganyHills_GymEntrance/scripts.pory"
-Movement_Robert_Gym1_ResetPosition:
+
 # 90 "data/maps/MahoganyHills_GymEntrance/scripts.pory"
-	walk_right
+Movement_Robert_Gym1_TowardsPlayer:
 # 91 "data/maps/MahoganyHills_GymEntrance/scripts.pory"
-	walk_right
+	walk_up
 # 92 "data/maps/MahoganyHills_GymEntrance/scripts.pory"
+	walk_up
+# 93 "data/maps/MahoganyHills_GymEntrance/scripts.pory"
+	walk_up
+# 94 "data/maps/MahoganyHills_GymEntrance/scripts.pory"
+	walk_up
+# 95 "data/maps/MahoganyHills_GymEntrance/scripts.pory"
+	walk_up
+# 96 "data/maps/MahoganyHills_GymEntrance/scripts.pory"
+	walk_up
+	step_end
+
+# 99 "data/maps/MahoganyHills_GymEntrance/scripts.pory"
+Movement_Robert_Gym1_ResetPosition:
+# 100 "data/maps/MahoganyHills_GymEntrance/scripts.pory"
+	walk_right
+# 101 "data/maps/MahoganyHills_GymEntrance/scripts.pory"
+	walk_right
+# 102 "data/maps/MahoganyHills_GymEntrance/scripts.pory"
 	face_down
 	step_end
 
-# 95 "data/maps/MahoganyHills_GymEntrance/scripts.pory"
+# 105 "data/maps/MahoganyHills_GymEntrance/scripts.pory"
 Movement_PlayerSurprised_MHGE:
-# 96 "data/maps/MahoganyHills_GymEntrance/scripts.pory"
+# 106 "data/maps/MahoganyHills_GymEntrance/scripts.pory"
 	emote_exclamation_mark
-# 97 "data/maps/MahoganyHills_GymEntrance/scripts.pory"
+# 107 "data/maps/MahoganyHills_GymEntrance/scripts.pory"
 	face_down
+	step_end
+
+# 110 "data/maps/MahoganyHills_GymEntrance/scripts.pory"
+Movement_ZoruaChase2_MahoganyHills:
+# 111 "data/maps/MahoganyHills_GymEntrance/scripts.pory"
+	walk_right
+# 112 "data/maps/MahoganyHills_GymEntrance/scripts.pory"
+	walk_right
+# 113 "data/maps/MahoganyHills_GymEntrance/scripts.pory"
+	walk_right
+# 114 "data/maps/MahoganyHills_GymEntrance/scripts.pory"
+	walk_right
+# 115 "data/maps/MahoganyHills_GymEntrance/scripts.pory"
+	walk_right
+# 116 "data/maps/MahoganyHills_GymEntrance/scripts.pory"
+	walk_right
+# 117 "data/maps/MahoganyHills_GymEntrance/scripts.pory"
+	face_right
+# 118 "data/maps/MahoganyHills_GymEntrance/scripts.pory"
+	emote_exclamation_mark
+# 119 "data/maps/MahoganyHills_GymEntrance/scripts.pory"
+	walk_fast_down
+# 120 "data/maps/MahoganyHills_GymEntrance/scripts.pory"
+	walk_fast_down
+# 121 "data/maps/MahoganyHills_GymEntrance/scripts.pory"
+	walk_fast_down
+# 122 "data/maps/MahoganyHills_GymEntrance/scripts.pory"
+	walk_fast_down
+# 123 "data/maps/MahoganyHills_GymEntrance/scripts.pory"
+	walk_fast_down
 	step_end
 
 MahoganyHills1_GymEntrance_Trigger_RobEncounter_Text_0:
@@ -229,10 +277,10 @@ MahoganyHills1_GymEntrance_EventScript_GymSign_Text_0:
 	.string "Mahogany Hills Gym - Leader Jaiden$"
 
 MahoganyHills_Robert_Intro::
-# 71 "data/maps/MahoganyHills_GymEntrance/scripts.pory"
+# 81 "data/maps/MahoganyHills_GymEntrance/scripts.pory"
 	.string "This will be an exciting battle!$"
 
 MahoganyHills_Robert_Outro::
-# 75 "data/maps/MahoganyHills_GymEntrance/scripts.pory"
+# 85 "data/maps/MahoganyHills_GymEntrance/scripts.pory"
 	.string "The rumors were false;\l"
 	.string "you're much stronger.$"

@@ -56,7 +56,9 @@
     F(GRASS_KNOT) \
     F(ROCK_SMASH) \
     F(CUT) \
-    F(SCALD) 
+    F(SCALD) \
+    F(INCINERATE) \
+    F(DARK_PULSE)
 
 #define FOREACH_HM(F) \
     F(CUT) \

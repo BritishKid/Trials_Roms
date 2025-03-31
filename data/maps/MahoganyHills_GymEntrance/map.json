@@ -50,6 +50,19 @@
       "trainer_sight_or_berry_tree_id": "ITEM_QUICK_CLAW",
       "script": "Common_EventScript_FindItem",
       "flag": "FLAG_ITEM_MAHOGANY_HILLS_GYM_EX_IRON"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ZORUA",
+      "x": 20,
+      "y": 19,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_ZORUA"
     }
   ],
   "warp_events": [
@@ -70,6 +83,15 @@
       "var": "VAR_ROBERT_STATUS",
       "var_value": "0",
       "script": "MahoganyHills1_GymEntrance_Trigger_RobEncounter"
+    },
+    {
+      "type": "trigger",
+      "x": 29,
+      "y": 16,
+      "elevation": 0,
+      "var": "VAR_ZORUA_QUEST_STATE",
+      "var_value": "1",
+      "script": "MahoganyHill_GymEntrance_Trigger_ZoruaChase2"
     }
   ],
   "bg_events": [

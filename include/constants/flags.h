@@ -192,7 +192,7 @@
 #define FLAG_SMART_PAINTING_MADE             0xA3
 #define FLAG_TOUGH_PAINTING_MADE             0xA4
 #define FLAG_MEGATOWER_NPC_TRADE_COMPLETED   0xA5
-#define FLAG_RECEIVED_TM_BULK_UP             0xA6 //unused
+#define FLAG_HIDE_BOYS_BLOCKING_GYM_SHORTCUT 0xA6 
 #define FLAG_RECEIVED_TM_SHOCK_WAVE          0xA7
 #define FLAG_RECEIVED_TM_OVERHEAT            0xA8
 #define FLAG_RECEIVED_TM_FACADE              0xA9
@@ -754,7 +754,7 @@
 
 // Event Flags
 #define FLAG_RECEIVED_STARTER                                       0x2BC //used
-#define FLAG_HIDE_APPRENTICE                                        0x2BD
+#define FLAG_HIDE_ZORUA                                        0x2BD
 #define FLAG_HIDE_POKEMON_CENTER_2F_MYSTERY_GIFT_MAN                0x2BE
 #define FLAG_HIDE_UNION_ROOM_PLAYER_1                               0x2BF
 #define FLAG_HIDE_UNION_ROOM_PLAYER_2                               0x2C0
@@ -807,9 +807,9 @@
 #define FLAG_HIDE_SLATEPORT_CITY_SCOTT                              0x2ED
 #define FLAG_HIDE_ROUTE_101_ZIGZAGOON                               0x2EE
 #define FLAG_HIDE_VICTORY_ROAD_EXIT_WALLY                           0x2EF
-#define FLAG_HIDE_MAT_MEGA_MANSION                       0x2F0
+#define FLAG_HIDE_MAT_CORALPORT                                  0x2F0
 #define FLAG_HIDE_MOSSDEEP_CITY_SPACE_CENTER_1F_STEVEN              0x2F1
-#define FLAG_MAT_ID          0x2F2
+#define FLAG_MAT_ID                                                 0x2F2
 #define FLAG_HIDE_LITTLEROOT_TOWN_PLAYERS_HOUSE_VIGOROTH_2          0x2F3
 #define FLAG_HIDE_MOSSDEEP_CITY_SPACE_CENTER_1F_TEAM_MAGMA          0x2F4
 #define FLAG_HIDE_LITTLEROOT_TOWN_PLAYERS_BEDROOM_MOM               0x2F5
@@ -935,7 +935,7 @@
 #define FLAG_HIDE_MT_CHIMNEY_TRAINERS                               0x36D
 #define FLAG_HIDE_RUSTURF_TUNNEL_AQUA_GRUNT                         0x36E
 #define FLAG_HIDE_RUSTURF_TUNNEL_BRINEY                             0x36F
-#define FLAG_HIDE_RUSTURF_TUNNEL_PEEKO                              0x370
+#define FLAG_HIDE_BOYS_CLAYHAVEN                              0x370
 #define FLAG_HIDE_BRINEYS_HOUSE_PEEKO                               0x371
 #define FLAG_HIDE_SLATEPORT_CITY_TEAM_AQUA                          0x372
 #define FLAG_HIDE_SLATEPORT_CITY_OCEANIC_MUSEUM_AQUA_GRUNTS         0x373
@@ -967,7 +967,7 @@
 #define FLAG_HIDE_LILYCOVE_HARBOR_FERRY_SAILOR                      0x38D
 #define FLAG_HIDE_SOUTHERN_ISLAND_EON_STONE                         0x38E
 #define FLAG_HIDE_SOUTHERN_ISLAND_UNCHOSEN_EON_DUO_MON              0x38F
-#define FLAG_HIDE_FALL_HARBOUR_WATTSON                             0x390
+#define FLAG_HIDE_MAT_MEGA_MANSION                             0x390
 #define FLAG_HIDE_MAUVILLE_GYM_WATTSON                              0x391
 #define FLAG_HIDE_ROUTE_121_TEAM_AQUA_GRUNTS                        0x392
 #define FLAG_UNKNOWN_0x393                                          0x393 // Set, however has no purpose.

@@ -233,10 +233,10 @@
     },
     {
       "type": "hidden_item",
-      "x": 71,
-      "y": 14,
+      "x": 56,
+      "y": 34,
       "elevation": 0,
-      "item": "ITEM_POKE_BALL",
+      "item": "ITEM_PSYCHIC_GEM",
       "flag": "FLAG_HIDDEN_ITEM_BREAKWATER_PORT_POKE_BALL"
     },
     {

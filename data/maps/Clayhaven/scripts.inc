@@ -91,47 +91,163 @@ Clayhaven_EventScript_Hiker::
 # 51 "data/maps/Clayhaven/scripts.pory"
 	lockall
 # 52 "data/maps/Clayhaven/scripts.pory"
-	msgbox Clayhaven_EventScript_Hiker_Text_0
+	faceplayer
 # 53 "data/maps/Clayhaven/scripts.pory"
+	msgbox Clayhaven_EventScript_Hiker_Text_0
+# 54 "data/maps/Clayhaven/scripts.pory"
 	releaseall
 	return
 
 
+ClayHaven_EventScript_Boy1::
 # 58 "data/maps/Clayhaven/scripts.pory"
-Movement_Clayhaven_Surprise:
+	lockall
 # 59 "data/maps/Clayhaven/scripts.pory"
+	faceplayer
+# 60 "data/maps/Clayhaven/scripts.pory"
+	compare VAR_ZORUA_QUEST_STATE, 5
+	goto_if_lt ClayHaven_EventScript_Boy1_2
+ClayHaven_EventScript_Boy1_1:
+# 76 "data/maps/Clayhaven/scripts.pory"
+	compare VAR_ZORUA_QUEST_STATE, 5
+	goto_if_ge ClayHaven_EventScript_Boy1_5
+ClayHaven_EventScript_Boy1_4:
+# 79 "data/maps/Clayhaven/scripts.pory"
+	releaseall
+	return
+
+ClayHaven_EventScript_Boy1_2:
+# 61 "data/maps/Clayhaven/scripts.pory"
+	msgbox ClayHaven_EventScript_Boy1_Text_0, MSGBOX_YESNO
+# 62 "data/maps/Clayhaven/scripts.pory"
+	compare VAR_RESULT, NO
+	goto_if_eq ClayHaven_EventScript_Boy1_8
+ClayHaven_EventScript_Boy1_7:
+# 65 "data/maps/Clayhaven/scripts.pory"
+	compare VAR_RESULT, YES
+	goto_if_eq ClayHaven_EventScript_Boy1_10
+	goto ClayHaven_EventScript_Boy1_1
+
+ClayHaven_EventScript_Boy1_5:
+# 77 "data/maps/Clayhaven/scripts.pory"
+	msgbox ClayHaven_EventScript_Boy1_Text_5
+	goto ClayHaven_EventScript_Boy1_4
+
+ClayHaven_EventScript_Boy1_8:
+# 63 "data/maps/Clayhaven/scripts.pory"
+	msgbox ClayHaven_EventScript_Boy1_Text_1
+	goto ClayHaven_EventScript_Boy1_7
+
+ClayHaven_EventScript_Boy1_10:
+# 66 "data/maps/Clayhaven/scripts.pory"
+	msgbox ClayHaven_EventScript_Boy1_Text_2
+# 67 "data/maps/Clayhaven/scripts.pory"
+	special ChoosePartyMon
+# 68 "data/maps/Clayhaven/scripts.pory"
+	compare VAR_RESULT, SPECIES_ZORUA
+	goto_if_eq ClayHaven_EventScript_Boy1_12
+	goto ClayHaven_EventScript_Boy1_1
+
+ClayHaven_EventScript_Boy1_12:
+# 69 "data/maps/Clayhaven/scripts.pory"
+	msgbox ClayHaven_EventScript_Boy1_Text_3
+# 70 "data/maps/Clayhaven/scripts.pory"
+	msgbox ClayHaven_EventScript_Boy1_Text_4, MSGBOX_DEFAULT
+# 71 "data/maps/Clayhaven/scripts.pory"
+	giveitem ITEM_CLEANSE_TAG
+# 72 "data/maps/Clayhaven/scripts.pory"
+	setvar VAR_ZORUA_QUEST_STATE, 5
+	goto ClayHaven_EventScript_Boy1_1
+
+
+ClayHaven_EventScript_Boy2::
+# 83 "data/maps/Clayhaven/scripts.pory"
+	lockall
+# 84 "data/maps/Clayhaven/scripts.pory"
+	faceplayer
+# 85 "data/maps/Clayhaven/scripts.pory"
+	compare VAR_ZORUA_QUEST_STATE, 5
+	goto_if_lt ClayHaven_EventScript_Boy2_2
+ClayHaven_EventScript_Boy2_1:
+# 88 "data/maps/Clayhaven/scripts.pory"
+	compare VAR_ZORUA_QUEST_STATE, 5
+	goto_if_eq ClayHaven_EventScript_Boy2_5
+ClayHaven_EventScript_Boy2_4:
+# 98 "data/maps/Clayhaven/scripts.pory"
+	compare VAR_ZORUA_QUEST_STATE, 6
+	goto_if_eq ClayHaven_EventScript_Boy2_8
+ClayHaven_EventScript_Boy2_7:
+# 101 "data/maps/Clayhaven/scripts.pory"
+	releaseall
+	return
+
+ClayHaven_EventScript_Boy2_2:
+# 86 "data/maps/Clayhaven/scripts.pory"
+	msgbox ClayHaven_EventScript_Boy2_Text_0
+	goto ClayHaven_EventScript_Boy2_1
+
+ClayHaven_EventScript_Boy2_5:
+# 89 "data/maps/Clayhaven/scripts.pory"
+	msgbox ClayHaven_EventScript_Boy2_Text_1
+# 90 "data/maps/Clayhaven/scripts.pory"
+	special ChoosePartyMon
+# 91 "data/maps/Clayhaven/scripts.pory"
+	compare VAR_RESULT, SPECIES_ZORUA
+	goto_if_eq ClayHaven_EventScript_Boy2_10
+	goto ClayHaven_EventScript_Boy2_4
+
+ClayHaven_EventScript_Boy2_8:
+# 99 "data/maps/Clayhaven/scripts.pory"
+	msgbox ClayHaven_EventScript_Boy2_Text_4
+	goto ClayHaven_EventScript_Boy2_7
+
+ClayHaven_EventScript_Boy2_10:
+# 92 "data/maps/Clayhaven/scripts.pory"
+	msgbox ClayHaven_EventScript_Boy2_Text_2
+# 93 "data/maps/Clayhaven/scripts.pory"
+	msgbox ClayHaven_EventScript_Boy2_Text_3, MSGBOX_DEFAULT
+# 94 "data/maps/Clayhaven/scripts.pory"
+	giveitem ITEM_TM57
+# 95 "data/maps/Clayhaven/scripts.pory"
+	setvar VAR_ZORUA_QUEST_STATE, 5
+	goto ClayHaven_EventScript_Boy2_4
+
+
+# 106 "data/maps/Clayhaven/scripts.pory"
+Movement_Clayhaven_Surprise:
+# 107 "data/maps/Clayhaven/scripts.pory"
 	emote_exclamation_mark
 	step_end
 
-# 62 "data/maps/Clayhaven/scripts.pory"
+# 110 "data/maps/Clayhaven/scripts.pory"
 Movement_Clayhaven_MartEmployeeComesDown:
-# 63 "data/maps/Clayhaven/scripts.pory"
+# 111 "data/maps/Clayhaven/scripts.pory"
 	walk_down
-# 64 "data/maps/Clayhaven/scripts.pory"
+# 112 "data/maps/Clayhaven/scripts.pory"
 	walk_down
-# 65 "data/maps/Clayhaven/scripts.pory"
+# 113 "data/maps/Clayhaven/scripts.pory"
 	walk_down
-# 66 "data/maps/Clayhaven/scripts.pory"
+# 114 "data/maps/Clayhaven/scripts.pory"
 	walk_down
-# 67 "data/maps/Clayhaven/scripts.pory"
+# 115 "data/maps/Clayhaven/scripts.pory"
 	walk_down
 	step_end
 
-# 70 "data/maps/Clayhaven/scripts.pory"
+# 118 "data/maps/Clayhaven/scripts.pory"
 Movement_Clayhaven_MartEmployeeLeaves:
-# 71 "data/maps/Clayhaven/scripts.pory"
+# 119 "data/maps/Clayhaven/scripts.pory"
 	walk_up
-# 72 "data/maps/Clayhaven/scripts.pory"
+# 120 "data/maps/Clayhaven/scripts.pory"
 	walk_up
-# 73 "data/maps/Clayhaven/scripts.pory"
+# 121 "data/maps/Clayhaven/scripts.pory"
 	walk_up
-# 74 "data/maps/Clayhaven/scripts.pory"
+# 122 "data/maps/Clayhaven/scripts.pory"
 	walk_up
-# 75 "data/maps/Clayhaven/scripts.pory"
+# 123 "data/maps/Clayhaven/scripts.pory"
 	walk_up
-# 76 "data/maps/Clayhaven/scripts.pory"
+# 124 "data/maps/Clayhaven/scripts.pory"
 	walk_up
-# 77 "data/maps/Clayhaven/scripts.pory"
+# 125 "data/maps/Clayhaven/scripts.pory"
 	walk_up
 	step_end
 
@@ -187,9 +303,64 @@ Clayhaven_BridgeMart_Employee_Text_6:
 	.string "Good luck!$"
 
 Clayhaven_EventScript_Hiker_Text_0:
-# 52 "data/maps/Clayhaven/scripts.pory"
+# 53 "data/maps/Clayhaven/scripts.pory"
 	.string "If you're ever unsure where to go follow\n"
 	.string "the padded down grass. It shows a\l"
 	.string "journey of a hundred other trainers\l"
 	.string "trying to become a champion and will\l"
 	.string "lead you to your next challenge.$"
+
+ClayHaven_EventScript_Boy1_Text_0:
+# 61 "data/maps/Clayhaven/scripts.pory"
+	.string "That was scary, did you see the monster\n"
+	.string "too?$"
+
+ClayHaven_EventScript_Boy1_Text_1:
+# 63 "data/maps/Clayhaven/scripts.pory"
+	.string "Wow you are lucky?$"
+
+ClayHaven_EventScript_Boy1_Text_2:
+# 66 "data/maps/Clayhaven/scripts.pory"
+	.string "Did you see what it looked like?$"
+
+ClayHaven_EventScript_Boy1_Text_3:
+# 69 "data/maps/Clayhaven/scripts.pory"
+	.string "YES THAT'S THE MONSTER!\l"
+	.string "Wow you're so strong to be able to\l"
+	.string "catch that.$"
+
+ClayHaven_EventScript_Boy1_Text_4:
+# 70 "data/maps/Clayhaven/scripts.pory"
+	.string "You should take one of these, it helps\n"
+	.string "protect you from monsters.$"
+
+ClayHaven_EventScript_Boy1_Text_5:
+# 77 "data/maps/Clayhaven/scripts.pory"
+	.string "When I'm older I won't be so scared of\n"
+	.string "the monsters in the hills.$"
+
+ClayHaven_EventScript_Boy2_Text_0:
+# 86 "data/maps/Clayhaven/scripts.pory"
+	.string "We almost died!$"
+
+ClayHaven_EventScript_Boy2_Text_1:
+# 89 "data/maps/Clayhaven/scripts.pory"
+	.string "That Pokemon you showed my friend\n"
+	.string "wasn't the monster, I saw one much\l"
+	.string "bigger and scarier!$"
+
+ClayHaven_EventScript_Boy2_Text_2:
+# 92 "data/maps/Clayhaven/scripts.pory"
+	.string "Wow yes! That one! It's soo big and\n"
+	.string "scary.$"
+
+ClayHaven_EventScript_Boy2_Text_3:
+# 93 "data/maps/Clayhaven/scripts.pory"
+	.string "It's not so scary when we are this\n"
+	.string "close, do you think you could teach it\l"
+	.string "this?$"
+
+ClayHaven_EventScript_Boy2_Text_4:
+# 99 "data/maps/Clayhaven/scripts.pory"
+	.string "You must be the strongest trainer in\n"
+	.string "the world.$"

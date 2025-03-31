@@ -60,9 +60,13 @@ static const u16 Craft_Recipes[][6] = {
     {0,             ITEM_SUPER_REPEL,  ITEM_SUPER_REPEL,  ITEM_SUPER_REPEL,         ITEM_MAX_REPEL,        2},
     {0,             0,                 ITEM_POKE_BALL,    ITEM_MAX_REPEL,           ITEM_SMOKE_BALL,       1},
     {0,             0,                 ITEM_ORAN_BERRY,   ITEM_ORAN_BERRY,          ITEM_BERRY_JUICE,      1},
-    {0,             0,                 ITEM_POTION,       ITEM_ORAN_BERRY,          ITEM_BERRY_JUICE,      1}
-
+    {0,             0,                 ITEM_POTION,       ITEM_ORAN_BERRY,          ITEM_BERRY_JUICE,      1},
+    {ITEM_BEDROCK,  ITEM_BEDROCK,      ITEM_SILK_SCARF,   ITEM_METAL_COAT,          ITEM_ASSAULT_VEST,     1}
 };
+
+//CRAFTING IDEAS
+//MULCHES MADE BY VARIOUS TIERS OF BERRIES
+
 
 // Here's some flags in case you want to lock away an item due to plot progression,
 // If you want less than three just use this handy dandy NO_FLAG

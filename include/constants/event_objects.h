@@ -248,11 +248,13 @@
 #define OBJ_EVENT_GFX_VENUSAUR                   244
 #define OBJ_EVENT_GFX_BLASTOISE                  245
 #define OBJ_EVENT_GFX_PYUKUMUKU                  246
+#define OBJ_EVENT_GFX_ZORUA                      247
+#define OBJ_EVENT_GFX_MEOWTH                     248
 
 // NOTE: The maximum amount of object events has been expanded from 255 to 65535.
 // Since dynamic graphics ids still require at least 16 free values, the actual limit
 // is 65519, but even considering follower Pokémon, this should be more than enough :)
-#define NUM_OBJ_EVENT_GFX                        247
+#define NUM_OBJ_EVENT_GFX                        249
 
 
 // These are dynamic object gfx ids.
@@ -388,7 +390,9 @@
 #define OBJ_EVENT_PAL_TAG_VENUSAUR                0x1127
 #define OBJ_EVENT_PAL_TAG_BLASTOISE               0x1128
 #define OBJ_EVENT_PAL_TAG_PYUKUMUKU               0x1129
-#define OBJ_EVENT_PAL_TAG_DYNAMIC                 0x112A
+#define OBJ_EVENT_PAL_TAG_ZORUA                   0x112A
+#define OBJ_EVENT_PAL_TAG_MEOWTH                  0x112B
+#define OBJ_EVENT_PAL_TAG_DYNAMIC                 0x112C
 
 #if OW_FOLLOWERS_POKEBALLS
 // Vanilla

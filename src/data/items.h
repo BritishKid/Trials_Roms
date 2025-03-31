@@ -11243,16 +11243,19 @@ const struct Item gItemsInfo[] =
         .secondaryId = MOVE_INCINERATE, // Todo
     },
 
-    [ITEM_TM57] =
+    [ITEM_TM57] = //dark pulse
     {
         .name = _("TM57"),
         .price = 3000,
-        .description = sQuestionMarksDesc, // Todo
+        .description = COMPOUND_STRING(
+            "The user releases\n"
+            "a horrible aura.\n"
+            "May cause fliching."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_NONE, // Todo
+        .secondaryId = MOVE_DARK_PULSE, // Todo
     },
 
     [ITEM_TM58] =
@@ -14628,9 +14631,24 @@ const struct Item gItemsInfo[] =
         .iconPalette = gItemIconPalette_FlamePlate,
     },
 
-    //custom megas
-
     
+    [ITEM_BEDROCK] =
+    {
+        .name = _("Bedrock"),
+        .price = (I_PRICE >= GEN_9) ? 1000 : 1000,
+        .holdEffect = HOLD_EFFECT_BEDROCK,
+        .holdEffectParam = 50,
+        .description = COMPOUND_STRING(
+            "Raises Sp. Def."),
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 80,
+        .iconPic = gItemIcon_HardStone,
+        .iconPalette = gItemIconPalette_HardStone,
+    },
+
+    //custom megas
 
     [ITEM_SANDACONDITE] =
     {

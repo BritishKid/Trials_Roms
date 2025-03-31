@@ -49,7 +49,55 @@ script Clayhaven_BridgeMart_Employee {
 
 script Clayhaven_EventScript_Hiker {
     lockall
+    faceplayer
     msgbox(format("If you're ever unsure where to go follow the padded down grass. It shows a journey of a hundred other trainers trying to become a champion and will lead you to your next challenge."))
+    releaseall
+}
+
+script ClayHaven_EventScript_Boy1 {
+    lockall
+    faceplayer
+    if(var(VAR_ZORUA_QUEST_STATE) < 5) {
+        msgbox(format("That was scary, did you see the monster too?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == NO) {
+            msgbox(format("Wow you are lucky?"))
+        }
+        if(var(VAR_RESULT) == YES) {
+            msgbox(format("Did you see what it looked like?"))
+            special(ChoosePartyMon)
+            if(var(VAR_RESULT) == SPECIES_ZORUA) {
+                msgbox(format("YES THAT'S THE MONSTER!\lWow you're so strong to be able to catch that."))
+                msgbox(format("You should take one of these, it helps protect you from monsters."), MSGBOX_DEFAULT)
+                giveitem(ITEM_CLEANSE_TAG)
+                setvar(VAR_ZORUA_QUEST_STATE, 5)
+            }
+        }
+    }
+    if(var(VAR_ZORUA_QUEST_STATE) >= 5) {
+        msgbox(format("When I'm older I won't be so scared of the monsters in the hills."))
+    }
+    releaseall
+}
+
+script ClayHaven_EventScript_Boy2 {
+    lockall
+    faceplayer
+    if(var(VAR_ZORUA_QUEST_STATE) < 5) {
+        msgbox(format("We almost died!"))
+    }
+    if(var(VAR_ZORUA_QUEST_STATE) == 5) {
+        msgbox(format("That Pokemon you showed my friend wasn't the monster, I saw one much bigger and scarier!"))
+        special(ChoosePartyMon)
+        if(var(VAR_RESULT) == SPECIES_ZORUA) {
+            msgbox(format("Wow yes! That one! It's soo big and scary."))
+            msgbox(format("It's not so scary when we are this close, do you think you could teach it this?"), MSGBOX_DEFAULT)
+            giveitem(ITEM_TM57)
+            setvar(VAR_ZORUA_QUEST_STATE, 5)
+        }
+    }
+    if(var(VAR_ZORUA_QUEST_STATE) == 6) {
+        msgbox(format("You must be the strongest trainer in the world."))
+    }
     releaseall
 }
 

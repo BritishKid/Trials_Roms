@@ -143,7 +143,7 @@
 #define MEGATOWER5F_TRAINERACE4                      137
 #define MEGATOWER5F_TRAINEREXPERT                      138
 #define MEGATOWER_RIVAL                   139
-#define TRAINER_WINSTON_3                   140
+#define MEGATOWER_MAT                   140
 #define TRAINER_WINSTON_4                   141
 #define TRAINER_WINSTON_5                   142
 #define TRAINER_STEVE_1                     143

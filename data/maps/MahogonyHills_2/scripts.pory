@@ -183,6 +183,15 @@ script StartLeafStoneBattle {
     dowildbattle
 }
 
+script MahoganyHill_GymEntrance_Trigger_ZoruaChase3 {
+    lockall
+    clearflag(FLAG_HIDE_ZORUA)
+    applymovement(10, Movement_ZoruaChase3_MahoganyHills)
+    waitmovement(10)
+    setvar(VAR_ZORUA_QUEST_STATE, 3)
+    releaseall
+}
+
 //Movement scripts
 movement Movement_Rival_To_Player_MahoganyHills2Right {
     walk_down
@@ -267,6 +276,21 @@ movement Movement_GrandsonLeavs {
     walk_down
     walk_down
     walk_down
+}
+
+movement Movement_ZoruaChase3_MahoganyHills {
+    walk_up
+    walk_up
+    walk_up
+    walk_up
+    walk_up
+    emote_exclamation_mark
+    walk_fast_down
+    walk_fast_down
+    walk_fast_down
+    walk_fast_down
+    walk_fast_down
+    walk_fast_down
 }
 
 //text script

@@ -152,6 +152,8 @@ SchoolHall_Mat_Beaten::
 	applymovement 1, Movement_GranitePeakSchool_MatMovesRooms
 # 79 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	waitmovement 1
+# 80 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
+	playse SE_DOOR
 # 81 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	removeobject 1
 # 82 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
@@ -161,7 +163,7 @@ SchoolHall_Mat_Beaten::
 # 84 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	setvar VAR_MAT_STATE, 1
 # 85 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
-	clearflag FLAG_HIDE_MAT_MEGA_MANSION
+	clearflag FLAG_HIDE_MAT_CORALPORT
 # 87 "data/maps/GranitePeakTown_SchoolHall/scripts.pory"
 	call Increase_Trainers_Beaten
 	return
